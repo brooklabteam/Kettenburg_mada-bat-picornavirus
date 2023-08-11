@@ -1,0 +1,24 @@
+﻿family,picorna,virus,species,type,num_genome
+Picornaviridae,1,Mischivirus,P. rufus,Full,1
+Picornaviridae,1,Kunsagivirus,E. dupreanum,Full,1
+Picornaviridae,1,Teschovirus,E. dupreanum,Full,1
+Picornaviridae,1,Teschovirus,R. madagascariensis,Partial,2
+Picornaviridae,1,Sapelovirus,E. dupreanum,Full,3
+Picornaviridae,1,Sapelovirus,E. dupreanum,Partial,2
+Picornaviridae,1,Sapelovirus,R. madagascariensis,Full,1
+Picornaviridae,1,Kobuvirus,E. dupreanum,Full,1
+Picornaviridae,1,Hepatovirus,E. dupreanum,Partial,1
+Picornaviridae,1,Bat picornavirus,R. madagascariensis,Full,2
+Picornaviridae,1,Bat picornavirus,R. madagascariensis,Partial,3
+Secoviridae,0,Nepovirus,R. madagascariensis,Full,1
+Secoviridae,0,Cheravirus,P. rufus,Partial,1
+Dicistroviridae,0,Cripavirus,E. dupreanum,Partial,1
+Dicistroviridae,0,Aparavirus,P. rufus,Partial,1
+Caliciviridae,0,Sapovirus,E. dupreanum,Full,1
+Caliciviridae,0,Sapovirus,E. dupreanum,Partial,1
+Caliciviridae,0,Sapovirus,R. madagascariensis,Partial,3
+Unclassified,0,Tetnovirus,P. rufus,Partial,1
+Unclassified,0,Felisavirus,P. rufus,Partial,1
+Unclassified,0,Felisavirus,E. dupreanum,Partial,1
+Unclassified,0,Picorna-like virus,P. rufus,Partial,3
+Unclassified,0,Picorna-like virus,E. dupreanum,Partial,1
