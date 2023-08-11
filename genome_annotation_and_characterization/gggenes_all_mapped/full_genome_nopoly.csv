@@ -1,0 +1,143 @@
+﻿molecule,start,end,gene,virus
+OQ818316,3842,3916,2A peptide,Mischivirus
+OQ818316,3917,4372,2B peptide,Mischivirus
+OQ818316,4373,5485,2C peptide,Mischivirus
+OQ818316,7817,7982,3'UTR,Mischivirus
+OQ818316,5501,5653,3A peptide,Mischivirus
+OQ818316,5693,5881,3B peptide,Mischivirus
+OQ818316,5891,6424,3C peptide,Mischivirus
+OQ818316,6434,7795,3D peptide,Mischivirus
+OQ818316,1,1135,5'UTR,Mischivirus
+OQ818316,1136,1312,L peptide,Mischivirus
+OQ818316,2975,3814,VP1 peptide,Mischivirus
+OQ818316,1535,2281,VP2 peptide,Mischivirus
+OQ818316,2318,2971,VP3 peptide,Mischivirus
+OQ818316,1313,1534,VP4 peptide,Mischivirus
+OQ818322,3807,4214,2A peptide,Kobuvirus
+OQ818322,4215,4709,2B peptide,Kobuvirus
+OQ818322,4710,5714,2C peptide,Kobuvirus
+OQ818322,8049,8320,3'UTR,Kobuvirus
+OQ818322,5715,5993,3A peptide,Kobuvirus
+OQ818322,5994,6071,3B peptide,Kobuvirus
+OQ818322,6072,6641,3C peptide,Kobuvirus
+OQ818322,6642,8045,3D peptide,Kobuvirus
+OQ818322,1,743,5'UTR,Kobuvirus
+OQ818322,744,1298,L peptide,Kobuvirus
+OQ818322,1299,2411,VP0 peptide,Kobuvirus
+OQ818322,3081,3806,VP1 peptide,Kobuvirus
+OQ818322,2412,3080,VP3 peptide,Kobuvirus
+OQ818325,3308,3949,2A peptide,Picornavirus
+OQ818328,3242,3883,2A peptide,Picornavirus
+OQ818325,3950,4273,2B peptide,Picornavirus
+OQ818328,3884,4207,2B peptide,Picornavirus
+OQ818325,4274,5266,2C peptide,Picornavirus
+OQ818328,4208,5200,2C peptide,Picornavirus
+OQ818328,7511,7614,3'UTR,Picornavirus
+OQ818325,5267,5569,3A peptide,Picornavirus
+OQ818328,5201,5503,3A peptide,Picornavirus
+OQ818325,5570,5638,3B peptide,Picornavirus
+OQ818328,5504,5572,3B peptide,Picornavirus
+OQ818325,5639,6187,3C peptide,Picornavirus
+OQ818328,5573,6121,3C peptide,Picornavirus
+OQ818325,6188,7280,3D peptide,Picornavirus
+OQ818328,6122,7507,3D peptide,Picornavirus
+OQ818325,1,517,5'UTR,Picornavirus
+OQ818328,1,532,5'UTR,Picornavirus
+OQ818325,518,763,L peptide,Picornavirus
+OQ818328,533,697,L peptide,Picornavirus
+OQ818325,2366,3298,VP1 peptide,Picornavirus
+OQ818328,2300,3232,VP1 peptide,Picornavirus
+OQ818328,2300,3232,VP1 peptide,Picornavirus
+OQ818325,965,1684,VP2 peptide,Picornavirus
+OQ818328,899,1618,VP2 peptide,Picornavirus
+OQ818328,899,1618,VP2 peptide,Picornavirus
+OQ818325,1685,2365,VP3 peptide,Picornavirus
+OQ818328,1619,2299,VP3 peptide,Picornavirus
+OQ818328,1619,2299,VP3 peptide,Picornavirus
+OQ818325,770,964,VP4 peptide,Picornavirus
+OQ818328,704,898,VP4 peptide,Picornavirus
+OQ818328,704,898,VP4 peptide,Picornavirus
+OQ818320,3195,3935,2A peptide,Sapelovirus
+OQ818321,3211,3990,2A peptide,Sapelovirus
+OQ818329,3319,3954,2A peptide,Sapelovirus
+OQ818320,3936,4280,2B peptide,Sapelovirus
+OQ818321,3991,4332,2B peptide,Sapelovirus
+OQ818329,3955,4296,2B peptide,Sapelovirus
+OQ818320,4281,5303,2C peptide,Sapelovirus
+OQ818321,4333,5349,2C peptide,Sapelovirus
+OQ818329,4297,5304,2C peptide,Sapelovirus
+OQ818320,7611,7685,3'UTR,Sapelovirus
+OQ818321,7657,7751,3'UTR,Sapelovirus
+OQ818329,7612,7714,3'UTR,Sapelovirus
+OQ818320,5304,5609,3A peptide,Sapelovirus
+OQ818321,5350,5655,3A peptide,Sapelovirus
+OQ818329,5305,5610,3A peptide,Sapelovirus
+OQ818320,5610,5675,3B peptide,Sapelovirus
+OQ818321,5656,5721,3B peptide,Sapelovirus
+OQ818329,5611,5676,3B peptide,Sapelovirus
+OQ818320,5676,6221,3C peptide,Sapelovirus
+OQ818321,5722,6267,3C peptide,Sapelovirus
+OQ818329,5677,6222,3C peptide,Sapelovirus
+OQ818320,6222,7607,3D peptide,Sapelovirus
+OQ818321,6268,7653,3D peptide,Sapelovirus
+OQ818329,6223,7608,3D peptide,Sapelovirus
+OQ818320,1,167,5'UTR,Sapelovirus
+OQ818321,1,414,5'UTR,Sapelovirus
+OQ818329,1,669,5'UTR,Sapelovirus
+OQ818320,168,680,L peptide,Sapelovirus
+OQ818321,415,816,L peptide,Sapelovirus
+OQ818329,670,918,L peptide,Sapelovirus
+OQ818320,2286,3185,VP1 peptide,Sapelovirus
+OQ818321,2335,3204,VP1 peptide,Sapelovirus
+OQ818329,2278,3270,VP1 peptide,Sapelovirus
+OQ818320,837,1580,VP2 peptide,Sapelovirus
+OQ818321,901,1644,VP2 peptide,Sapelovirus
+OQ818329,1231,1578,VP2 peptide,Sapelovirus
+OQ818320,1581,2279,VP3 peptide,Sapelovirus
+OQ818321,1645,2334,VP3 peptide,Sapelovirus
+OQ818329,1579,2277,VP3 peptide,Sapelovirus
+OQ818320,684,830,VP4 peptide,Sapelovirus
+OQ818321,829,894,VP4 peptide,Sapelovirus
+OQ818329,928,1218,VP4 peptide,Sapelovirus
+OQ818318,3245,3301,2A peptide,Teschovirus
+OQ818323,3338,3409,2A peptide,Teschovirus
+OQ818324,3426,3560,2A peptide,Teschovirus
+OQ818318,3302,3751,2B peptide,Teschovirus
+OQ818323,3410,3868,2B peptide,Teschovirus
+OQ818324,3594,3884,2B peptide,Teschovirus
+OQ818318,3752,4726,2C peptide,Teschovirus
+OQ818323,3869,4900,2C peptide,Teschovirus
+OQ818324,3885,4904,2C peptide,Teschovirus
+OQ818318,7073,7085,3'UTR,Teschovirus
+OQ818323,7208,7294,3'UTR,Teschovirus
+OQ818324,7224,7228,3'UTR,Teschovirus
+OQ818318,4727,5026,3A peptide,Teschovirus
+OQ818323,4907,5149,3A peptide,Teschovirus
+OQ818324,4923,5165,3A peptide,Teschovirus
+OQ818318,5036,5101,3B peptide,Teschovirus
+OQ818323,5150,5224,3B peptide,Teschovirus
+OQ818324,5166,5240,3B peptide,Teschovirus
+OQ818318,5108,5716,3C peptide,Teschovirus
+OQ818323,5231,5845,3C peptide,Teschovirus
+OQ818324,5247,5861,3C peptide,Teschovirus
+OQ818318,5717,7024,3D peptide,Teschovirus
+OQ818323,5846,7144,3D peptide,Teschovirus
+OQ818324,5862,7172,3D peptide,Teschovirus
+OQ818318,1,559,5'UTR,Teschovirus
+OQ818323,1,541,5'UTR,Teschovirus
+OQ818324,1,569,5'UTR,Teschovirus
+OQ818318,560,688,L peptide,Teschovirus
+OQ818323,542,748,L peptide,Teschovirus
+OQ818324,570,767,L peptide,Teschovirus
+OQ818318,2447,3244,VP1 peptide,Teschovirus
+OQ818323,2522,3337,VP1 peptide,Teschovirus
+OQ818324,2571,3425,VP1 peptide,Teschovirus
+OQ818318,962,1750,VP2 peptide,Teschovirus
+OQ818323,1055,1846,VP2 peptide,Teschovirus
+OQ818324,1032,1865,VP2 peptide,Teschovirus
+OQ818318,1751,2446,VP3 peptide,Teschovirus
+OQ818323,1853,2521,VP3 peptide,Teschovirus
+OQ818324,1875,2567,VP3 peptide,Teschovirus
+OQ818318,710,961,VP4 peptide,Teschovirus
+OQ818323,749,1033,VP4 peptide,Teschovirus
+OQ818324,768,1019,VP4 peptide,Teschovirus

@@ -1,0 +1,161 @@
+Name,Sequence Name,Type,Minimum,Maximum,Length
+2A peptide,OQ818316,mat_peptide,3842,3916,75
+2A peptide,OQ818318,mat_peptide,3245,3301,57
+2A peptide,OQ818320,mat_peptide,3195,3935,741
+2A peptide,OQ818321,mat_peptide,3211,3990,780
+2A peptide,OQ818322,mat_peptide,3807,4214,408
+2A peptide,OQ818323,mat_peptide,3338,3409,72
+2A peptide,OQ818324,mat_peptide,3426,3560,135
+2A peptide,OQ818325,mat_peptide,3308,3949,642
+2A peptide,OQ818328,mat_peptide,3242,3883,642
+2A peptide,OQ818329,mat_peptide,3319,3954,636
+2B peptide,OQ818316,mat_peptide,3917,4372,456
+2B peptide,OQ818318,mat_peptide,3302,3751,450
+2B peptide,OQ818320,mat_peptide,3936,4280,345
+2B peptide,OQ818321,mat_peptide,3991,4332,342
+2B peptide,OQ818322,mat_peptide,4215,4709,495
+2B peptide,OQ818323,mat_peptide,3410,3868,459
+2B peptide,OQ818324,mat_peptide,3594,3884,291
+2B peptide,OQ818325,mat_peptide,3950,4273,324
+2B peptide,OQ818328,mat_peptide,3884,4207,324
+2B peptide,OQ818329,mat_peptide,3955,4296,342
+2C peptide,OQ818316,mat_peptide,4373,5485,1113
+2C peptide,OQ818318,mat_peptide,3752,4726,975
+2C peptide,OQ818320,mat_peptide,4281,5303,1023
+2C peptide,OQ818321,mat_peptide,4333,5349,1017
+2C peptide,OQ818322,mat_peptide,4710,5714,1005
+2C peptide,OQ818323,mat_peptide,3869,4900,1032
+2C peptide,OQ818324,mat_peptide,3885,4904,1020
+2C peptide,OQ818325,mat_peptide,4274,5266,993
+2C peptide,OQ818328,mat_peptide,4208,5200,993
+2C peptide,OQ818329,mat_peptide,4297,5304,1008
+3'UTR,OQ818316,3'UTR,7817,>7982,>166
+3'UTR,OQ818317,3'UTR,7187,>7329,>143
+3'UTR,OQ818318,3'UTR,7073,>7085,>13
+3'UTR,OQ818320,3'UTR,7611,>7685,>75
+3'UTR,OQ818321,3'UTR,7657,>7751,>95
+3'UTR,OQ818322,3'UTR,8049,8320,272
+3'UTR,OQ818323,3'UTR,7208,>7294,>87
+3'UTR,OQ818324,3'UTR,7224,>7228,>5
+3'UTR,OQ818326,3'UTR,6093,>6332,>240
+3'UTR,OQ818327,3'UTR,3528,>3600,>73
+3'UTR,OQ818328,3'UTR,7511,>7614,>104
+3'UTR,OQ818329,3'UTR,7612,>7714,>103
+3A peptide,OQ818316,mat_peptide,5501,5653,153
+3A peptide,OQ818318,mat_peptide,4727,5026,300
+3A peptide,OQ818320,mat_peptide,5304,5609,306
+3A peptide,OQ818321,mat_peptide,5350,5655,306
+3A peptide,OQ818322,mat_peptide,5715,5993,279
+3A peptide,OQ818323,mat_peptide,4907,5149,243
+3A peptide,OQ818324,mat_peptide,4923,5165,243
+3A peptide,OQ818325,mat_peptide,5267,5569,303
+3A peptide,OQ818328,mat_peptide,5201,5503,303
+3A peptide,OQ818329,mat_peptide,5305,5610,306
+3B peptide,OQ818316,mat_peptide,5693,5881,189
+3B peptide,OQ818318,mat_peptide,5036,5101,66
+3B peptide,OQ818320,mat_peptide,5610,5675,66
+3B peptide,OQ818321,mat_peptide,5656,5721,66
+3B peptide,OQ818322,mat_peptide,5994,6071,78
+3B peptide,OQ818323,mat_peptide,5150,5224,75
+3B peptide,OQ818324,mat_peptide,5166,5240,75
+3B peptide,OQ818325,mat_peptide,5570,5638,69
+3B peptide,OQ818328,mat_peptide,5504,5572,69
+3B peptide,OQ818329,mat_peptide,5611,5676,66
+3C peptide,OQ818316,mat_peptide,5891,6424,534
+3C peptide,OQ818318,mat_peptide,5108,5716,609
+3C peptide,OQ818320,mat_peptide,5676,6221,546
+3C peptide,OQ818321,mat_peptide,5722,6267,546
+3C peptide,OQ818322,mat_peptide,6072,6641,570
+3C peptide,OQ818323,mat_peptide,5231,5845,615
+3C peptide,OQ818324,mat_peptide,5247,5861,615
+3C peptide,OQ818325,mat_peptide,5639,6187,549
+3C peptide,OQ818328,mat_peptide,5573,6121,549
+3C peptide,OQ818329,mat_peptide,5677,6222,546
+3D peptide,OQ818316,mat_peptide,6434,7795,1362
+3D peptide,OQ818318,mat_peptide,5717,7024,1308
+3D peptide,OQ818320,mat_peptide,6222,7607,1386
+3D peptide,OQ818321,mat_peptide,6268,7653,1386
+3D peptide,OQ818322,mat_peptide,6642,8045,1404
+3D peptide,OQ818323,mat_peptide,5846,7144,1299
+3D peptide,OQ818324,mat_peptide,5862,7172,1311
+3D peptide,OQ818325,mat_peptide,6188,>7280,>1093
+3D peptide,OQ818328,mat_peptide,6122,7507,1386
+3D peptide,OQ818329,mat_peptide,6223,7608,1386
+5'UTR,OQ818316,5'UTR,1,1135,1135
+5'UTR,OQ818317,5'UTR,1,529,529
+5'UTR,OQ818318,5'UTR,1,559,559
+5'UTR,OQ818319,5'UTR,1,368,368
+5'UTR,OQ818320,5'UTR,1,167,167
+5'UTR,OQ818321,5'UTR,1,414,414
+5'UTR,OQ818322,5'UTR,1,743,743
+5'UTR,OQ818323,5'UTR,1,541,541
+5'UTR,OQ818324,5'UTR,1,569,569
+5'UTR,OQ818325,5'UTR,1,517,517
+5'UTR,OQ818326,5'UTR,1,599,599
+5'UTR,OQ818327,5'UTR,1,215,215
+5'UTR,OQ818328,5'UTR,1,532,532
+5'UTR,OQ818329,5'UTR,1,669,669
+L peptide,OQ818316,mat_peptide,1136,1312,177
+L peptide,OQ818318,mat_peptide,560,688,129
+L peptide,OQ818320,mat_peptide,168,680,513
+L peptide,OQ818321,mat_peptide,415,816,402
+L peptide,OQ818322,mat_peptide,744,1298,555
+L peptide,OQ818323,mat_peptide,542,748,207
+L peptide,OQ818324,mat_peptide,570,767,198
+L peptide,OQ818325,mat_peptide,518,763,246
+L peptide,OQ818328,mat_peptide,533,697,165
+L peptide,OQ818329,mat_peptide,670,918,249
+polyprotein 1 CDS,OQ818326,CDS,600,6092,5493
+polyprotein 2 CDS,OQ818327,CDS,216,3527,3312
+polyprotein CDS,OQ818316,CDS,1136,7816,6681
+polyprotein CDS,OQ818317,CDS,530,7186,6657
+polyprotein CDS,OQ818318,CDS,560,7072,6513
+polyprotein CDS,OQ818319,CDS,369,5792,5424
+polyprotein CDS,OQ818320,CDS,168,7610,7443
+polyprotein CDS,OQ818321,CDS,415,7656,7242
+polyprotein CDS,OQ818322,CDS,744,8048,7305
+polyprotein CDS,OQ818323,CDS,542,7207,6666
+polyprotein CDS,OQ818324,CDS,570,7223,6654
+polyprotein CDS,OQ818325,CDS,518,>7280,>6763
+polyprotein CDS,OQ818328,CDS,533,7510,6978
+polyprotein CDS,OQ818329,CDS,670,7611,6942
+putative minor structural protein CDS,OQ818319,CDS,5824,>6378,>555
+VP0 peptide,OQ818322,mat_peptide,1299,2411,1113
+VP1 peptide,OQ818316,mat_peptide,2975,3814,840
+VP1 peptide,OQ818318,mat_peptide,2447,3244,798
+VP1 peptide,OQ818320,mat_peptide,2286,3185,900
+VP1 peptide,OQ818321,mat_peptide,2335,3204,870
+VP1 peptide,OQ818322,mat_peptide,3081,3806,726
+VP1 peptide,OQ818323,mat_peptide,2522,3337,816
+VP1 peptide,OQ818324,mat_peptide,2571,3425,855
+VP1 peptide,OQ818325,mat_peptide,2366,3298,933
+VP1 peptide,OQ818328,mat_peptide,2300,3232,933
+VP1 peptide,OQ818329,mat_peptide,2278,3270,993
+VP2 peptide,OQ818316,mat_peptide,1535,2281,747
+VP2 peptide,OQ818318,mat_peptide,962,1750,789
+VP2 peptide,OQ818320,mat_peptide,837,1580,744
+VP2 peptide,OQ818321,mat_peptide,901,1644,744
+VP2 peptide,OQ818323,mat_peptide,1055,1846,792
+VP2 peptide,OQ818324,mat_peptide,1032,1865,834
+VP2 peptide,OQ818325,mat_peptide,965,1684,720
+VP2 peptide,OQ818328,mat_peptide,899,1618,720
+VP2 peptide,OQ818329,mat_peptide,1231,1578,348
+VP3 peptide,OQ818316,mat_peptide,2318,2971,654
+VP3 peptide,OQ818318,mat_peptide,1751,2446,696
+VP3 peptide,OQ818320,mat_peptide,1581,2279,699
+VP3 peptide,OQ818321,mat_peptide,1645,2334,690
+VP3 peptide,OQ818322,mat_peptide,2412,3080,669
+VP3 peptide,OQ818323,mat_peptide,1853,2521,669
+VP3 peptide,OQ818324,mat_peptide,1875,2567,693
+VP3 peptide,OQ818325,mat_peptide,1685,2365,681
+VP3 peptide,OQ818328,mat_peptide,1619,2299,681
+VP3 peptide,OQ818329,mat_peptide,1579,2277,699
+VP4 peptide,OQ818316,mat_peptide,1313,1534,222
+VP4 peptide,OQ818318,mat_peptide,710,961,252
+VP4 peptide,OQ818320,mat_peptide,684,830,147
+VP4 peptide,OQ818321,mat_peptide,829,894,66
+VP4 peptide,OQ818323,mat_peptide,749,1033,285
+VP4 peptide,OQ818324,mat_peptide,768,1019,252
+VP4 peptide,OQ818325,mat_peptide,770,964,195
+VP4 peptide,OQ818328,mat_peptide,704,898,195
+VP4 peptide,OQ818329,mat_peptide,928,1218,291
