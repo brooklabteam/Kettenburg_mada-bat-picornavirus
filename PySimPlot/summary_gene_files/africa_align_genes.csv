@@ -1,0 +1,20 @@
+molecule,start,end,gene
+Felisavirus,1,5665,Non-structural polyprotein
+Felisavirus,5739,8738,Structural polyprotein
+Felisavirus,8739,9188,3'UTR
+Hepatovirus,15,775,5'UTR
+Hepatovirus,776,7986,Polyprotein
+Kobuvirus,1,743,5'UTR
+Kobuvirus,744,8048,Polyprotein
+Kobuvirus,8049,8320,3'UTR
+Kunsagivirus,1,531,5'UTR
+Kunsagivirus,532,7188,Polyprotein
+Kunsagivirus,7189,7333,3'UTR
+Mischivirus,1,1288,5'UTR
+Mischivirus,1289,8637,Polyprotein
+Mischivirus,8638,8886,3'UTR
+Sapovirus,1,7216,Polyprotein
+Sapovirus,7251,7759,Putative minor structural protein
+Sapelovirus,1,419,5'UTR
+Sapelovirus,420,7776,Polyprotein
+Sapelovirus,7777,7913,3'UTR

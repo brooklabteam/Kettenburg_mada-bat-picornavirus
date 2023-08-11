@@ -1,0 +1,34 @@
+molecule,start,end,gene,type
+Bat picornavirus,1,522,5'UTR,full
+Bat picornavirus,523,7835,Polyprotein,full
+Bat picornavirus,7836,8061,3'UTR,full
+Cheravirus,393,3386,Polyprotein,partial
+Felisavirus,6,5665,Non-structural polyprotein,partial
+Felisavirus,5739,8738,Structural polyprotein,partial
+Felisavirus,8739,9188,3'UTR,partial
+Hepatovirus,1,709,5'UTR,partial
+Hepatovirus,713,7408,Polyprotein,partial
+Hepatovirus,7409,7485,3'UTR,partial
+Kobuvirus,1,743,5'UTR,full
+Kobuvirus,744,8048,Polyprotein,full
+Kobuvirus,8049,8379,3'UTR,full
+Kunsagivirus,1,531,5'UTR,full
+Kunsagivirus,532,7188,Polyprotein,full
+Kunsagivirus,7189,7333,3'UTR,full
+Mischivirus,1,1251,5'UTR,full
+Mischivirus,1252,8382,Polyprotein,full
+Mischivirus,8383,8572,3'UTR,full
+Sapovirus,1,6840,Polyprotein,full
+Sapovirus,6875,7524,Putative minor structural protein,full
+Sapovirus,7525,7573,3'UTR,full
+Sapovirus,1,5033,Polyprotein,partial
+Sapovirus,5038,5407,Putative minor structural protein,partial
+Sapelovirus,1,419,5'UTR,full
+Sapelovirus,420,7779,Polyprotein,full
+Sapelovirus,7780,7936,3'UTR,full
+Sapelovirus,1,150,5'UTR,partial
+Sapelovirus,151,7593,Polyprotein,partial
+Sapelovirus,7594,7746,3'UTR,partial
+Teschovirus,21,605,5'UTR,full
+Teschovirus,606,7591,Polyprotein,full
+Teschovirus,7592,7695,3'UTR,full
