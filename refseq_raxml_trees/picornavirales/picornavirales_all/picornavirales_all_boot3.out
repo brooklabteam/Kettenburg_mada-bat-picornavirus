@@ -1,0 +1,56 @@
+ERROR: Unable to locate a modulefile for 'emacs/25.1'
+ERROR: Unable to locate a modulefile for 'python/3.6'
+ERROR: Unable to locate a modulefile for 'java/1.8.0_121'
+ERROR: Unable to locate a modulefile for 'cmake/3.15.1'
+
+RAxML-NG v. 1.1.0-master released on 22.06.2022 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz, 28 cores, 62 GB RAM
+
+RAxML-NG was called at 05-Aug-2023 16:01:56 as follows:
+
+raxml-ng-mpi --bootstrap --msa picornavirales_all_align.fasta --model GTR+G4 --prefix T5 --seed 4 --threads auto{12}
+
+Analysis options:
+  run mode: Bootstrapping
+  start tree(s): 
+  bootstrap replicates: max: 1000 + bootstopping (autoMRE, cutoff: 0.030000)
+  random seed: 4
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+WARNING: The model you specified on the command line (GTR+G4) will be ignored 
+         since the binary MSA file already contains a model definition.
+         If you want to change the model, please re-run RAxML-NG 
+         with the original PHYLIP/FASTA alignment and --redo option.
+
+[00:00:00] Loading binary alignment from file: T5.raxml.rba
+[00:00:00] Alignment comprises 416 taxa, 1 partitions and 42385 patterns
+
+Partition 0: noname
+Model: GTR+FO+G4m
+Alignment sites / patterns: 64887 / 42385
+Gaps: 87.67 %
+Invariant sites: 37.51 %
+
+
+Parallelization scheme autoconfig: 1 worker(s) x 12 thread(s)
+
+Error calling pthread_setaffinity_np: 22
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] NOTE: Resuming execution from checkpoint (logLH: -3429972.77, ML trees: 0, bootstraps: 10)
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 3533 / 56528
+[00:00:04] Data distribution: max. searches per worker: 990
+[00:00:04] Starting bootstrapping analysis with 1000 replicates.
+
+slurmstepd-midway2-0466: error: *** JOB 29446179 ON midway2-0466 CANCELLED AT 2023-08-07T04:02:08 DUE TO TIME LIMIT ***
