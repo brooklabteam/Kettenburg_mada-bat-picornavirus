@@ -1,0 +1,139 @@
+
+RAxML-NG v. 1.1.0-master released on 22.06.2022 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz, 28 cores, 62 GB RAM
+
+RAxML-NG was called at 02-Aug-2023 14:30:20 as follows:
+
+raxml-ng-mpi --bootstrap --msa picornavirales_all_align.fasta --model GTR+G4 --prefix T3 --seed 1 --threads auto{12}
+
+Analysis options:
+  run mode: Bootstrapping
+  start tree(s): 
+  bootstrap replicates: max: 1000 + bootstopping (autoMRE, cutoff: 0.030000)
+  random seed: 1
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+[00:00:01] Reading alignment from file: picornavirales_all_align.fasta
+[00:00:01] Loaded alignment with 416 taxa and 64887 sites
+
+Alignment comprises 1 partitions and 42385 patterns
+
+Partition 0: noname
+Model: GTR+FO+G4m
+Alignment sites / patterns: 64887 / 42385
+Gaps: 87.67 %
+Invariant sites: 37.51 %
+
+
+NOTE: Binary MSA file created: T3.raxml.rba
+
+Parallelization scheme autoconfig: 1 worker(s) x 12 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:02] Data distribution: max. partitions/sites/weight per thread: 1 / 3533 / 56528
+[00:00:04] Data distribution: max. searches per worker: 1000
+[00:00:04] Starting bootstrapping analysis with 1000 replicates.
+
+[01:25:57] Bootstrap tree #1, logLikelihood: -3350099.048256
+[02:55:16] Bootstrap tree #2, logLikelihood: -3458068.604190
+[04:20:34] Bootstrap tree #3, logLikelihood: -3415623.999471
+[05:47:43] Bootstrap tree #4, logLikelihood: -3405481.556389
+[07:16:26] Bootstrap tree #5, logLikelihood: -3367667.570970
+[08:29:16] Bootstrap tree #6, logLikelihood: -3409571.902704
+[09:41:20] Bootstrap tree #7, logLikelihood: -3423519.852092
+[10:56:16] Bootstrap tree #8, logLikelihood: -3411410.084363
+[12:27:59] Bootstrap tree #9, logLikelihood: -3447951.151238
+[13:57:03] Bootstrap tree #10, logLikelihood: -3384300.129500
+[15:20:03] Bootstrap tree #11, logLikelihood: -3429972.351864
+[16:38:50] Bootstrap tree #12, logLikelihood: -3389190.079825
+[17:57:03] Bootstrap tree #13, logLikelihood: -3428700.436645
+
+RAxML-NG v. 1.1.0-master released on 22.06.2022 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz, 28 cores, 62 GB RAM
+
+RAxML-NG was called at 05-Aug-2023 16:01:56 as follows:
+
+raxml-ng-mpi --bootstrap --msa picornavirales_all_align.fasta --model GTR+G4 --prefix T3 --seed 2 --threads auto{12}
+
+Analysis options:
+  run mode: Bootstrapping
+  start tree(s): 
+  bootstrap replicates: max: 1000 + bootstopping (autoMRE, cutoff: 0.030000)
+  random seed: 2
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+WARNING: The model you specified on the command line (GTR+G4) will be ignored 
+         since the binary MSA file already contains a model definition.
+         If you want to change the model, please re-run RAxML-NG 
+         with the original PHYLIP/FASTA alignment and --redo option.
+
+[00:00:01] Loading binary alignment from file: T3.raxml.rba
+[00:00:01] Alignment comprises 416 taxa, 1 partitions and 42385 patterns
+
+Partition 0: noname
+Model: GTR+FO+G4m
+Alignment sites / patterns: 64887 / 42385
+Gaps: 87.67 %
+Invariant sites: 37.51 %
+
+
+Parallelization scheme autoconfig: 1 worker(s) x 12 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:01] NOTE: Resuming execution from checkpoint (logLH: -3377244.65, ML trees: 0, bootstraps: 13)
+[00:00:01] Data distribution: max. partitions/sites/weight per thread: 1 / 3533 / 56528
+[00:00:03] Data distribution: max. searches per worker: 987
+[00:00:03] Starting bootstrapping analysis with 1000 replicates.
+
+[00:55:08] Bootstrap tree #14, logLikelihood: -3413469.222979
+[02:28:47] Bootstrap tree #15, logLikelihood: -3421206.957249
+[03:50:46] Bootstrap tree #16, logLikelihood: -3403070.118579
+[05:06:40] Bootstrap tree #17, logLikelihood: -3429626.450673
+[06:28:46] Bootstrap tree #18, logLikelihood: -3397897.408856
+[07:42:59] Bootstrap tree #19, logLikelihood: -3412795.176100
+[08:59:50] Bootstrap tree #20, logLikelihood: -3466914.112198
+[10:04:16] Bootstrap tree #21, logLikelihood: -3410810.473159
+[11:11:48] Bootstrap tree #22, logLikelihood: -3444280.905193
+[12:16:02] Bootstrap tree #23, logLikelihood: -3437259.866018
+[13:32:00] Bootstrap tree #24, logLikelihood: -3385696.677230
+[15:13:27] Bootstrap tree #25, logLikelihood: -3382317.284031
+[16:32:12] Bootstrap tree #26, logLikelihood: -3433038.460586
+[17:57:51] Bootstrap tree #27, logLikelihood: -3373932.113329
+[19:18:24] Bootstrap tree #28, logLikelihood: -3409389.167149
+[20:36:37] Bootstrap tree #29, logLikelihood: -3377383.925578
+[21:53:08] Bootstrap tree #30, logLikelihood: -3422407.755253
+[23:08:21] Bootstrap tree #31, logLikelihood: -3415410.077582
+[24:22:24] Bootstrap tree #32, logLikelihood: -3365291.199926
+[25:39:33] Bootstrap tree #33, logLikelihood: -3378461.832436
+[26:47:10] Bootstrap tree #34, logLikelihood: -3371642.920018
+[28:03:40] Bootstrap tree #35, logLikelihood: -3426876.785604
+[29:31:30] Bootstrap tree #36, logLikelihood: -3438197.621480
+[30:43:23] Bootstrap tree #37, logLikelihood: -3435571.261580
+[32:05:49] Bootstrap tree #38, logLikelihood: -3464409.957212
+[33:14:02] Bootstrap tree #39, logLikelihood: -3381034.521534
+[34:32:07] Bootstrap tree #40, logLikelihood: -3405413.457145
+[35:49:58] Bootstrap tree #41, logLikelihood: -3383289.258099
