@@ -391,3 +391,133 @@ raxml-ng-mpi --all --msa picornaviridae_partial_align.fasta --model GTR+G4 --pre
 
 ---
 
+9. Upon viewing the picornavirales and the picornaviridae trees, I decided to make additonal trees for each virus family that I believe the novel Madagascar sequences belong to. So I'll have a picornavirales, a picornaviridae, a secoviridae, a caliciviridae, and an iflaviridae tree. To get the refseq's for these, I followed the same instructions as above using the same outgroup. 
+
+Also following the same instructions as above and using the same outgroup, I decided to make a non-refseq picornavirales tree with only sequences from a bat host. Once I downloaded the sequences from NCBI virus, I put them into Geneious to check for duplicate sequences (they may be different viruses but if the sequences are super similar RAxmL and modeltest give me a hard time), and then removed them from the file before aligning. With the bat picornavirales, I tested a variety of different alignments and ended up choosing the following to use for bat picornavirales full reference sequences and bat picornavirales all reference sequences
+- bat picornavirales full reference sequences with mada sequences >3kb, as done in the picornavirales refseq tree
+- bat picornavirales all reference sequences with mada and reference sequences both over 3kb
+
+The commands I used in modeltest and RAxML are listed below. 
+
+ModelTest bash scripts: 
+
+Bat picornavirales full reference sequences all over 3kb
+```
+#!/bin/bash
+#SBATCH --job-name=bat_picorna_all
+#SBATCH --partition=broadwl
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --ntasks=8
+#SBATCH --time=36:00:00
+
+module load python
+conda activate /project2/cbrook/software/modeltest_env
+
+modeltest-ng -i bat_picornavirales_all_over_3kb_align.fasta -d nt -t ml -p 8
+```
+Best model: 
+Number of threads for RAxmL: 
+
+
+
+Bat picornavirales all reference sequences all over 3kb
+```
+#!/bin/bash
+#SBATCH --job-name=batpicorna_full
+#SBATCH --partition=broadwl
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --ntasks=8
+#SBATCH --time=36:00:00
+
+module load python
+conda activate /project2/cbrook/software/modeltest_env
+
+modeltest-ng -i bat_picornavirales_full_3kb_align.fasta -d nt -t ml -p 8
+```
+Best model: 
+Number of threads for RAxmL: 
+
+
+
+Caliciviridae refseq
+```
+#!/bin/bash
+#SBATCH --job-name=cal
+#SBATCH --partition=broadwl
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --ntasks=8
+#SBATCH --time=36:00:00
+
+module load python
+conda activate /project2/cbrook/software/modeltest_env
+
+modeltest-ng -i caliciviridae_refseq_align.fasta -d nt -t ml -p 8
+```
+Best model: 
+Number of threads for RAxmL: 
+
+
+
+Iflaviridae refseq
+```
+#!/bin/bash
+#SBATCH --job-name=ifla
+#SBATCH --partition=broadwl
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --ntasks=8
+#SBATCH --time=36:00:00
+
+module load python
+conda activate /project2/cbrook/software/modeltest_env
+
+modeltest-ng -i iflaviridae_refseq_align.fasta -d nt -t ml -p 8
+```
+Best model: 
+Number of threads for RAxmL: 
+
+
+
+Picornaviridae refseq
+```
+#!/bin/bash
+#SBATCH --job-name=picornaviridae_all
+#SBATCH --partition=broadwl
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --ntasks=8
+#SBATCH --time=36:00:00
+
+module load python
+conda activate /project2/cbrook/software/modeltest_env
+
+modeltest-ng -i picornaviridae_refseq_align.fasta -d nt -t ml -p 8
+```
+Best model: 
+Number of threads for RAxmL: 
+
+
+
+Secoviridae refseq
+```
+#!/bin/bash
+#SBATCH --job-name=seco
+#SBATCH --partition=broadwl
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --ntasks=8
+#SBATCH --time=36:00:00
+
+module load python
+conda activate /project2/cbrook/software/modeltest_env
+
+modeltest-ng -i secoviridae_refseq_align.fasta -d nt -t ml -p 8
+```
+Best model: 
+Number of threads for RAxmL: 
+
+
+
