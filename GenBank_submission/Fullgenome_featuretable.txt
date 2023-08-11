@@ -1,0 +1,365 @@
+>Feature AMB150 [organism=Pteropus rufus] Pteropus rufus icavirus, complete genome
+1136	7816	CDS
+			product		polyprotein
+			transl_table	1
+1136	7816	gene
+			gene		polyprotein
+1136	1312	mat_peptide
+			product		L peptide
+1313	1534	mat_peptide
+			product		VP4 peptide
+1535	2281	mat_peptide
+			product		VP2 peptide
+2318	2971	mat_peptide
+			product		VP3 peptide
+2975	3814	mat_peptide
+			product		VP1 peptide
+3842	3916	mat_peptide
+			product		2A peptide
+3917	4372	mat_peptide
+			product		2B peptide
+4373	5485	mat_peptide
+			product		2C peptide
+5501	5653	mat_peptide
+			product		3A peptide
+5693	5881	mat_peptide
+			product		3B peptide
+5891	6424	mat_peptide
+			product		3C peptide
+6434	7795	mat_peptide
+			product		3D peptide
+1	1135	5'UTR
+7817	>7982	3'UTR
+
+>Feature KEL148 [organism=Eidolon dupreanum] Eidolon dupreanum kunsagivirus, complete genome
+530	7186	CDS
+			product		polyprotein
+			transl_table	1
+530	7186	gene
+			gene		polyprotein
+1	529 	5'UTR
+7187	>7329	3'UTR
+
+>Feature KEL164 [organism=Eidolon dupreanum] Eidolon dupreanum teschovirus, complete genome
+560	7072	CDS
+			product		polyprotein
+			transl_table	1
+560	7072	gene
+			gene		polyprotein
+560	688	mat_peptide
+			product		L peptide
+710	961	mat_peptide
+			product		VP4 peptide
+962	1750	mat_peptide
+			product		VP2 peptide
+1751	2446	mat_peptide
+			product		VP3 peptide
+2447	3244	mat_peptide
+			product		VP1 peptide
+3245	3301	mat_peptide
+			product		2A peptide
+3302	3751	mat_peptide
+			product		2B peptide
+3752	4726	mat_peptide
+			product		2C peptide
+4727	5026	mat_peptide
+			product		3A peptide
+5036	5101	mat_peptide
+			product		3B peptide
+5108	5716	mat_peptide
+			product		3C peptide
+5717	7024	mat_peptide
+			product		3D peptide
+1	559	5'UTR
+7073	>7085	3'UTR
+
+>Feature KEL166 [organism=Eidolon dupreanum] Eidolon dupreanum sapovirus, complete genome
+369	5792	CDS
+			product		polyprotein
+			transl_table	1
+369	5792	gene
+			gene		polyprotein
+5824	>6378	mat_peptide
+			product		minor structural protein
+			transl_table	1
+1	368 	5'UTR
+
+>Feature KEL233 [organism=Eidolon dupreanum] Eidolon dupreanum sapelovirus, complete genome
+168	7610	CDS
+			product		polyprotein
+			transl_table	1
+168	7610	gene
+			gene		polyprotein
+168	680	mat_peptide
+			product		L peptide
+684	830	mat_peptide
+			product		VP4 peptide
+837	1580	mat_peptide
+			product		VP2 peptide
+1581	2279	mat_peptide
+			product		VP3 peptide
+2286	3185	mat_peptide
+			product		VP1 peptide
+3195	3935	mat_peptide
+			product		2A peptide
+3936	4280	mat_peptide
+			product		2B peptide
+4281	5303	mat_peptide
+			product		2C peptide
+5304	5609	mat_peptide
+			product		3A peptide
+5610	5675	mat_peptide
+			product		3B peptide
+5676	6221	mat_peptide
+			product		3C peptide
+6222	7607	mat_peptide
+			product		3D peptide
+1	167	5'UTR
+7611	>7685	3'UTR
+
+>Feature KEL272 [organism=Eidolon dupreanum] Eidolon dupreanum sapelovirus, complete genome
+415	7656	CDS
+			product		polyprotein
+			transl_table	1
+415	7656	gene
+			gene		polyprotein
+415	816	mat_peptide
+			product		L peptide
+829	894	mat_peptide
+			product		VP4 peptide
+901	1644	mat_peptide
+			product		VP2 peptide
+1645	2334	mat_peptide
+			product		VP3 peptide
+2335	3204	mat_peptide
+			product		VP1 peptide
+3211	3990	mat_peptide
+			product		2A peptide
+3991	4332	mat_peptide
+			product		2B peptide
+4333	5349	mat_peptide
+			product		2C peptide
+5350	5655	mat_peptide
+			product		3A peptide
+5656	5721	mat_peptide
+			product		3B peptide
+5722	6267	mat_peptide
+			product		3C peptide
+6268	7653	mat_peptide
+			product		3D peptide
+1	414	5'UTR
+7657	>7751	3'UTR
+
+>Feature MIZ190 [organism=Rousettus madagascariensis] Rousettus madagascariensis teschovirus, complete genome
+542	7207	CDS
+			product		polyprotein
+			transl_table	1
+542	7207	gene
+			gene		polyprotein
+542	748	mat_peptide
+			product		L peptide
+749	1033	mat_peptide
+			product		VP4 peptide
+1055	1846	mat_peptide
+			product		VP2 peptide
+1853	2521	mat_peptide
+			product		VP3 peptide
+2522	3337	mat_peptide
+			product		VP1 peptide
+3338	3409	mat_peptide
+			product		2A peptide
+3410	3868	mat_peptide
+			product		2B peptide
+3869	4900	mat_peptide
+			product		2C peptide
+4907	5149	mat_peptide
+			product		3A peptide
+5150	5224	mat_peptide
+			product		3B peptide
+5231	5845	mat_peptide
+			product		3C peptide
+5846	7144	mat_peptide
+			product		3D peptide
+1	541	5'UTR
+7208	>7294	3'UTR
+
+>Feature MIZ205 [organism=Rousettus madagascariensis] Rousettus madagascariensis teschovirus, complete genome
+570	7223	CDS
+			product		polyprotein
+			transl_table	1
+570	7223	gene
+			gene		polyprotein
+570	767	mat_peptide
+			product		L peptide
+768	1019	mat_peptide
+			product		VP4 peptide
+1032	1865	mat_peptide
+			product		VP2 peptide
+1875	2567	mat_peptide
+			product		VP3 peptide
+2571	3425	mat_peptide
+			product		VP1 peptide
+3426	3560	mat_peptide
+			product		2A peptide
+3594	3884	mat_peptide
+			product		2B peptide
+3885	4904	mat_peptide
+			product		2C peptide
+4923	5165	mat_peptide
+			product		3A peptide
+5166	5240	mat_peptide
+			product		3B peptide
+5247	5861	mat_peptide
+			product		3C peptide
+5862	7172	mat_peptide
+			product		3D peptide
+1	569	5'UTR
+7224	>7228	3'UTR
+
+>Feature MIZ214 [organism=Rousettus madagascariensis] Rousettus madagascariensis picornavirus, nearly complete genome
+518	>7280	CDS
+			product		polyprotein
+			transl_table	1
+518	>7280	gene
+			gene		polyprotein
+518	763	mat_peptide
+			product		L peptide
+770	964	mat_peptide
+			product		VP4 peptide
+965	1684	mat_peptide
+			product		VP2 peptide
+1685	2365	mat_peptide
+			product		VP3 peptide
+2366	3298	mat_peptide
+			product		VP1 peptide
+3308	3949	mat_peptide
+			product		2A peptide
+3950	4273	mat_peptide
+			product		2B peptide
+4274	5266	mat_peptide
+			product		2C peptide
+5267	5569	mat_peptide
+			product		3A peptide
+5570	5638	mat_peptide
+			product		3B peptide
+5639	6187	mat_peptide
+			product		3C peptide
+6188	>7280	mat_peptide
+			product		3D peptide
+1	517	5'UTR
+
+>Feature MIZ229_RNA1 [organism=Rousettus madagascariensis] Rousettus madagascariensis nepovirus, complete genome RNA1
+600	6092	CDS
+			product		polyprotein 1
+			transl_table	1
+600	6092	gene
+			gene		polyprotein 1
+1	599	5'UTR
+6093	>6332	3'UTR
+
+>Feature MIZ229_RNA2 [organism=Rousettus madagascariensis] Rousettus madagascariensis nepovirus, complete genome RNA2
+216	3527	CDS
+			product		polyprotein 2
+			transl_table	1
+216	3527	gene
+			gene		polyprotein 2
+1	215	5'UTR
+3528	>3600	3'UTR
+
+>Feature MIZ240 [organism=Rousettus madagascariensis] Rousettus madagascariensis picornavirus, complete genome
+533	7510	CDS
+			product		polyprotein
+			transl_table	1
+533	7510	gene
+			gene		polyprotein
+533	697	mat_peptide
+			product		L peptide
+704	898	mat_peptide
+			product		VP4 peptide
+899	1618	mat_peptide
+			product		VP2 peptide
+1619	2299	mat_peptide
+			product		VP3 peptide
+2300	3232	mat_peptide
+			product		VP1 peptide
+3242	3883	mat_peptide
+			product		2A peptide
+3884	4207	mat_peptide
+			product		2B peptide
+4208	5200	mat_peptide
+			product		2C peptide
+5201	5503	mat_peptide
+			product		3A peptide
+5504	5572	mat_peptide
+			product		3B peptide
+5573	6121	mat_peptide
+			product		3C peptide
+6122	7507	mat_peptide
+			product		3D peptide
+1	533	5'UTR
+7511	>7614	3'UTR
+
+>Feature MIZ243 [organism=Rousettus madagascariensis] Rousettus madagascariensis sapelovirus, complete genome
+670	7611	CDS
+			product		polyprotein
+			transl_table	1
+670	7611	gene
+			gene		polyprotein
+670	918	mat_peptide
+			product		L peptide
+928	1218	mat_peptide
+			product		VP4 peptide
+1231	1578	mat_peptide
+			product		VP2 peptide
+1579	2277	mat_peptide
+			product		VP3 peptide
+2278	3270	mat_peptide
+			product		VP1 peptide
+3319	3954	mat_peptide
+			product		2A peptide
+3955	4296	mat_peptide
+			product		2B peptide
+4297	5304	mat_peptide
+			product		2C peptide
+5305	5610	mat_peptide
+			product		3A peptide
+5611	5676	mat_peptide
+			product		3B peptide
+5677	6222	mat_peptide
+			product		3C peptide
+6223	7608	mat_peptide
+			product		3D peptide
+1	669	5'UTR
+7612	>7714	3'UTR
+
+>Feature KEL318 [organism=Eidolon dupreanum] Eidolon dupreanum kobuvirus, complete genome
+744	8048	CDS
+			product		polyprotein
+			transl_table	1
+744	8048	gene
+			gene		polyprotein
+744	1298	mat_peptide
+			product		L peptide
+1299	2411	mat_peptide
+			product		VP0 peptide
+2412	3080	mat_peptide
+			product		VP3 peptide
+3081	3806	mat_peptide
+			product		VP1 peptide
+3807	4214	mat_peptide
+			product		2A peptide
+4215	4709	mat_peptide
+			product		2B peptide
+4710	5714	mat_peptide
+			product		2C peptide
+5715	5993	mat_peptide
+			product		3A peptide
+5994	6071	mat_peptide
+			product		3B peptide
+6072	6641	mat_peptide
+			product		3C peptide
+6642	8045	mat_peptide
+			product		3D peptide
+1	743	5'UTR
+8049	8320	3'UTR
+

@@ -1,0 +1,15 @@
+Sequence_ID	Collected_by	Collection_date	Country	Isolation_source	Host
+AMB150	Ekipa Fanihy	16-Aug-18	Madagascar	Fecal swab	Pteropus rufus
+KEL148	Ekipa Fanihy	15-Feb-18	Madagascar	Fecal swab	Eidolon dupreanum
+KEL164	Ekipa Fanihy	15-Feb-18	Madagascar	Fecal swab	Eidolon dupreanum
+KEL166	Ekipa Fanihy	15-Feb-18	Madagascar	Fecal swab	Eidolon dupreanum
+KEL233	Ekipa Fanihy	27-Jul-18	Madagascar	Fecal swab	Eidolon dupreanum
+KEL272	Ekipa Fanihy	7-Jan-19	Madagascar	Fecal swab	Eidolon dupreanum
+MIZ190	Ekipa Fanihy	29-Jul-18	Madagascar	Fecal swab	Rousettus madagascariensis
+MIZ205	Ekipa Fanihy	29-Jul-18	Madagascar	Fecal swab	Rousettus madagascariensis
+MIZ214	Ekipa Fanihy	11-Sep-18	Madagascar	Fecal swab	Rousettus madagascariensis
+MIZ229_RNA1	Ekipa Fanihy	11-Sep-18	Madagascar	Fecal swab	Rousettus madagascariensis
+MIZ229_RNA2	Ekipa Fanihy	11-Sep-18	Madagascar	Fecal swab	Rousettus madagascariensis
+MIZ243	Ekipa Fanihy	12-Sep-18	Madagascar	Fecal swab	Rousettus madagascariensis
+KEL318	Ekipa Fanihy	23-Apr-19	Madagascar	Urine swab	Eidolon dupreanum
+MIZ240	Ekipa Fanihy	12-Sep-18	Madagascar	Fecal swab	Rousettus madagascariensis

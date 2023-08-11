@@ -1,0 +1,147 @@
+>Feature AMB122 [organism=Pteropus rufus] Pteropus rufus cheravirus, partial genome
+<1	3001	CDS
+			product		polyprotein
+			transl_table	1
+			codon_start	2
+<1	3001	gene
+			gene		polyprotein
+
+>Feature AMB134 [organism=Pteropus rufus] Pteropus rufus tetnovirus, partial genome
+1	4298	CDS
+			product		putative polyprotein
+			transl_table	1
+			codon_start	3
+1	4298	gene
+			gene		putative polyprotein
+4312	5043	misc_peptide
+			product		misc_peptide
+
+>Feature AMB137 [organism=Pteropus rufus] Pteropus rufus bee virus, partial genome
+<1	>2370	CDS
+			product		putative polyprotein
+			transl_table	1
+<1	>2370	gene
+			gene		putative polyprotein
+
+>Feature AMB139 [organism=Pteropus rufus] Pteropus rufus bee virus, partial genome
+98	1255	misc_peptide
+			product		misc_peptide
+1364	2880	CDS
+			product		putative polyprotein
+			transl_table	1
+			
+1364	2880	gene
+			gene		putative polyprotein
+
+>Feature AMB149 [organism=Pteropus rufus] Pteropus rufus picorna-like virus, partial genome
+<1	>1656	CDS
+			product		putative polyprotein
+			transl_table	1
+			codon_start	2
+<1	>1656	gene
+			gene		putative polyprotein
+
+>Feature AMB150 [organism=Pteropus rufus] Pteropus rufus felisavirus, partial genome
+6	5654	CDS
+			product		non-structural polyprotein
+			transl_table	1
+6	5654	gene
+			gene		non-structural polyprotein
+5726	>5787	misc_feature
+			product		misc_feature
+
+>Feature AMB160 [organism=Pteropus rufus] Pteropus rufus picorna-like virus, partial genome
+<1	5956	CDS
+			product		putative polyprotein
+			transl_table	1
+			codon_start	2
+<1	5956	gene
+			gene		putative polyprotein
+
+>Feature KEL148 [organism=Eidolon dupreanum] Eidolon dupreanum hepatovirus, partial genome
+706	>5785	CDS
+			product		putative polyprotein
+			transl_table	1
+706	>5785	gene
+			gene		putative polyprotein
+1	705	5'UTR
+
+>Feature KEL161 [organism=Eidolon dupreanum] Eidolon dupreanum cripavirus, partial genome
+<1	>1807	CDS
+			product		putative polyprotein
+			transl_table	1
+<1	>1807	gene
+			gene		putative polyprotein
+
+>Feature KEL164 [organism=Eidolon dupreanum] Eidolon dupreanum picorna-like virus, partial genome
+<1	861	misc_feature
+			product		misc_feature
+1092	2936	misc_feature
+			product		misc_feature
+2967	3632	misc_feature
+			product		misc_feature
+
+>Feature KEL207 [organism=Eidolon dupreanum] Eidolon dupreanum sapovirus, partial genome
+<1	>3232	CDS
+			product		polyprotein
+			transl_table	1
+<1	>3232	gene
+			gene		polyprotein
+
+>Feature KEL225 [organism=Eidolon dupreanum] Eidolon dupreanum felisavirus, partial genome
+<1	>3380	CDS
+			product		polyprotein
+			transl_table	1
+			codon_start	3
+<1	>3380	gene
+			gene		polyprotein
+
+>Feature KEL273 [organism=Eidolon dupreanum] Eidolon dupreanum sapelovirus, partial genome
+<1	>1177	CDS
+			product		polyprotein
+			transl_table	1
+			codon_start	2
+<1	>1177	gene
+			gene		polyprotein
+
+>Feature KEL275B [organism=Eidolon dupreanum] Eidolon dupreanum sapelovirus, partial genome
+<1	>1127	CDS
+			product		polyprotein
+			transl_table	1
+			codon_start	2
+<1	>1127	gene
+			gene		polyprotein
+
+>Feature KEL298 [organism=Eidolon dupreanum] Eidolon dupreanum sapelovirus, partial genome
+<1	>2134	CDS
+			product		polyprotein
+			transl_table	1
+<1	>2134	gene
+			gene		polyprotein
+
+>Feature MIZ179 [organism=Rousettus madagascariensis] Rousettus madagascariensis sapovirus, partial genome
+<1	>1043	CDS
+			product		polyprotein
+			transl_table	1
+			codon_start	2
+<1	>1043	gene
+			gene		polyprotein
+
+>Feature MIZ194 [organism=Rousettus madagascariensis] Rousettus madagascariensis bat picornavirus, partial genome
+<1	1004	misc_feature
+			product		misc_feature
+			
+>Feature MIZ219 [organism=Rousettus madagascariensis] Rousettus madagascariensis sapovirus, partial genome
+<1	>2171	CDS
+			product		polyprotein
+			transl_table	1
+			codon_start	2
+<1	>2171	gene
+			gene		polyprotein
+
+>Feature MIZ345 [organism=Rousettus madagascariensis] Rousettus madagascariensis sapovirus, partial genome
+<1	>2611	CDS
+			product		polyprotein
+			transl_table	1
+<1	>2611	gene
+			gene		polyprotein
