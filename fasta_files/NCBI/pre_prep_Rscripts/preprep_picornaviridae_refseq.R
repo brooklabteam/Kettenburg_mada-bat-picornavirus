@@ -5,8 +5,8 @@ library(dplyr)
 
 
 #set wd
-homewd = "/Users/gwenddolenkettenburg/Desktop/mada_bat_picornavirus"
-setwd(paste0(homewd, "/fasta_files/NCBI/"))
+homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus"
+setwd(paste0(homewd, "/fasta_files/NCBI/picornaviridae"))
 
 #load the dataset and query
 dat <- read.csv(file = "picornaviridae_refseq_metadata.csv", header = T, stringsAsFactors = F)
@@ -52,7 +52,7 @@ bat.picorna <- bat.picorna[!duplicated(bat.picorna$Accession),] #no duplicates
                    # Accession!="EF065513" &
                    # Accession!="KX574227")
 
-accession_num <- paste(c(bat.picorna$Accession), collapse = ",")
+accession_num <- paste(c(dat$Accession), collapse = ",")
 
 #now put this into your webbrowser to download
 text.for.NCBI <- paste0("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&rettype=fasta&retmode=text&id=",accession_num)
