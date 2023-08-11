@@ -1,0 +1,84 @@
+Accession,old_tip_label,Isolate,Species,Genus,Family,Country,Host,bat_Host,Collection_Date,novel
+NC_030886.1,NC_030886.1,GCCDC1 356,Rousettus bat coronavirus GCCDC1,Coronavirus,Coronaviridae,China,Rousettus leschenaulti,1,2018,0
+NC_001632.1,NC_001632.1,,Rice tungro spherical virus,Waikavirus,Secoviridae,USA,Oryza sativa,0,1992,0
+NC_003003.1,NC_003003.1,ME,Broad bean wilt virus 2,Fabavirus,Secoviridae,Singapore,Vicia faba,0,2000,0
+NC_003445.1,NC_003445.1,,Strawberry mottle virus,Sadwavirus,Secoviridae,Netherlands,Fragaria _ ananassa,0,2001,0
+NC_003446.1,NC_003446.1,,Strawberry mottle virus,Sadwavirus,Secoviridae,Netherlands,Fragaria _ ananassa,0,2001,0
+NC_003495.1,NC_003495.1,,Bean pod mottle virus,Comovirus,Secoviridae,United Kingdom,Secoviridae,0,2002,0
+NC_003496.1,NC_003496.1,,Bean pod mottle virus,Comovirus,Secoviridae,United Kingdom,Secoviridae,0,1996,0
+NC_003502.1,NC_003502.1,,Blackcurrant reversion virus,Nepovirus,Secoviridae,Finland,Ribes nigrum,0,1997,0
+NC_003509.1,NC_003509.1,,Blackcurrant reversion virus,Nepovirus,Secoviridae,Finland,Ribes nigrum,0,1997,0
+NC_003545.1,NC_003545.1,,Cowpea severe mosaic virus,Comovirus,Secoviridae,USA,Vigna unguiculata,0,2002,0
+NC_003549.1,NC_003549.1,,Cowpea mosaic virus,Comovirus,Secoviridae,USA,Vigna unguiculata,0,2002,0
+NC_003550.1,NC_003550.1,,Cowpea mosaic virus,Comovirus,Secoviridae,USA,Vigna unguiculata,0,2002,0
+NC_003615.1,NC_003615.1,,Grapevine fanleaf virus,Nepovirus,Secoviridae,France,Vitis,0,1989,0
+NC_003621.1,NC_003621.1,,Grapevine chrome mosaic virus,Nepovirus,Secoviridae,France,Vitis,0,1989,0
+NC_003622.1,NC_003622.1,,Grapevine chrome mosaic virus,Nepovirus,Secoviridae,France,Vitis,0,1989,0
+NC_003623.1,NC_003623.1,,Grapevine fanleaf virus,Nepovirus,Secoviridae,France,Vitis,0,1989,0
+NC_003626.1,NC_003626.1,,Maize chlorotic dwarf virus,Waikavirus,Secoviridae,USA,Zea mays,0,2002,0
+NC_003628.1,NC_003628.1,P121,Parsnip yellow fleck virus,Sequivirus,Secoviridae,United Kingdom,Pastinaca sativa,0,1993,0
+NC_003693.1,NC_003693.1,,Beet ringspot virus,Nepovirus,Secoviridae,USA,Solanum lycopersicum,0,2000,0
+NC_003694.1,NC_003694.1,,Beet ringspot virus,Nepovirus,Secoviridae,USA,Secoviridae,0,1986,0
+NC_003738.1,NC_003738.1,,Red clover mottle virus,Comovirus,Secoviridae,United Kingdom,Trifolium pratense,0,2002,0
+NC_003741.1,NC_003741.1,,Red clover mottle virus,Comovirus,Secoviridae,United Kingdom,Secoviridae,0,1992,0
+NC_003785.2,NC_003785.2,S-58,Satsuma dwarf virus,Sadwavirus,Secoviridae,USA,Satsuma mandarin,0,1999,0
+NC_003787.1,NC_003787.1,,Apple latent spherical virus,Cheravirus,Secoviridae,Japan,Malus domestica,0,2013,0
+NC_003791.1,NC_003791.1,,Cycas necrotic stunt virus,Nepovirus,Secoviridae,Japan,Cycas,0,2002,0
+NC_003799.1,NC_003799.1,Y-SqMV,Squash mosaic virus,Comovirus,Secoviridae,Japan,Cucurbita,0,2001,0
+NC_003839.2,NC_003839.2,,Tomato ringspot virus,Nepovirus,Secoviridae,USA,Solanum lycopersicum,0,1991,0
+NC_003840.1,NC_003840.1,,Tomato ringspot virus,Nepovirus,Secoviridae,USA,Solanum lycopersicum,0,2002,0
+NC_004439.1,NC_004439.1,MJ,Tomato black ring virus,Nepovirus,Secoviridae,Poland,Solanum lycopersicum,0,2002,0
+NC_005096.1,NC_005096.1,,Tobacco ringspot virus,Nepovirus,Secoviridae,USA,Nicotiana tabacum,0,2003,0
+NC_005097.1,NC_005097.1,,Tobacco ringspot virus,Nepovirus,Secoviridae,USA,Nicotiana tabacum,0,2003,0
+NC_005266.1,NC_005266.1,,Raspberry ringspot virus,Nepovirus,Secoviridae,Germnay,Vitis vinifera,0,2003,0
+NC_005289.1,NC_005289.1,,Broad bean wilt virus 1,Fabavirus,Secoviridae,USA,Fabaceae,0,2002,0
+NC_005290.1,NC_005290.1,,Broad bean wilt virus 1,Fabavirus,Secoviridae,USA,Fabaceae,0,2002,0
+NC_006056.1,NC_006056.1,NW,Arabis mosaic virus,Nepovirus,Secoviridae,Germany,Vitis vinifera,0,2004,0
+NC_006057.1,NC_006057.1,Neustadt an der Weinstrasse (NW),Arabis mosaic virus,Nepovirus,Secoviridae,Germany,Vitis,0,2003,0
+NC_006271.1,NC_006271.1,potato,Cherry rasp leaf virus,Cheravirus,Secoviridae,USA,Solanum tuberosum,0,2004,0
+NC_006964.1,NC_006964.1,NCGR MEN 454.001,Stralarivirus SLRSV,Stralarivirus,Secoviridae,USA,Fragaria _ ananassa,0,2001,0
+NC_006965.1,NC_006965.1,NCGR MEN 454.001,Stralarivirus SLRSV,Stralarivirus,Secoviridae,USA,Fragaria _ ananassa,0,2001,0
+NC_008182.1,NC_008182.1,BRDaV-1,Black raspberry necrosis virus,Sadwavirus,Secoviridae,USA,Rubus occidentalis,0,2005,0
+NC_009013.1,NC_009013.1,PRI-ToTV0301,Tomato torrado virus,Torradovirus,Secoviridae,Spain,Solanum lycopersicum,0,2003,0
+NC_010709.1,NC_010709.1,,Radish mosaic virus,Comovirus,Secoviridae,Japan,Raphanus sativus,0,2007,0
+NC_010987.1,NC_010987.1,PRI-TMarV0601,Tomato marchitez virus,Torradovirus,Secoviridae,Mexico,Solanum lycopersicum L.,0,2005,0
+NC_011190.1,NC_011190.1,GZ1,Gentian mosaic virus,Fabavirus,Secoviridae,China,Mikania micrantha H.B.K,0,2007,0
+NC_013075.1,NC_013075.1,,Tomato chocolate spot virus,Torradovirus,Secoviridae,Guatemala,Solanum lycopersicum,0,2009,0
+NC_013218.1,NC_013218.1,Toledo,Turnip ringspot virus,Comovirus,Secoviridae,USA,Brassica rapa subsp. Rapa,0,2009,0
+NC_015414.1,NC_015414.1,E395,Cherry leaf roll virus,Nepovirus,Secoviridae,Germany,Rheum,0,2011,0
+NC_015492.1,NC_015492.1,Serb1,Grapevine Bulgarian latent virus,Nepovirus,Secoviridae,Serbia,Vitis vinifera,0,2009,0
+NC_016443.1,NC_016443.1,KP2,Chocolate lily virus A,Sadwavirus,Secoviridae,Australia,Dichopogon strictus,0,2010,0
+NC_017939.1,NC_017939.1,N66,Grapevine deformation virus,Nepovirus,Secoviridae,Turkey,Vitis vinifera,0,2011,0
+NC_018383.1,NC_018383.1,A34,Grapevine Anatolian ringspot virus,Nepovirus,Secoviridae,Turkey,Vitis vinifera,0,2012,0
+NC_018384.1,NC_018384.1,,Grapevine Anatolian ringspot virus,Nepovirus,Secoviridae,Italy,Vitis,0,2003,0
+NC_020898.1,NC_020898.1,PV-0082,Arracacha virus B,Cheravirus,Secoviridae,Peru,Oxalis tuberosa,0,2012,0
+NC_022004.1,NC_022004.1,EV-11,Broad bean true mosaic virus,Comovirus,Secoviridae,Germany,Vicia faba,0,2010,0
+NC_022798.1,NC_022798.1,PRI-Ec,Potato black ringspot virus,Nepovirus,Secoviridae,United Kingdom,Solanum tuberosum,0,2013,0
+NC_023016.1,NC_023016.1,DSMZ PV-0454,Lamium mild mosaic virus,Fabavirus,Secoviridae,United Kingdom,Lamium album,0,1953,0
+NC_025479.2,NC_025479.2,CTV-1_RNA1_H6,Carrot torradovirus 1,Torradovirus,Secoviridae,United Kingdom,Daucus carota,0,2012,0
+NC_027915.1,NC_027915.1,CT1,Bellflower vein chlorosis virus,Waikavirus,Secoviridae,South Korea,Campanula takesimana,0,2014,0
+NC_027926.1,NC_027926.1,R,Tomato necrotic dwarf virus,Torradovirus,Secoviridae,USA,Solanum lycopersicum,0,1988,0
+NC_028139.1,NC_028139.1,Parana,Bean rugose mosaic virus,Comovirus,Secoviridae,Brazil,Glycine max,0,1905,0
+NC_029038.1,NC_029038.1,,Currant latent virus,Cheravirus,Secoviridae,Czech Republic,Ribes rubrum,0,2015,0
+NC_031766.1,NC_031766.1,goiana,Dioscorea mosaic associated virus,Sadwavirus,Secoviridae,Brazil,Dioscorea cayenensis subsp. rotundata,0,2015,0
+NC_032270.1,NC_032270.1,ND1,Soybean latent spherical virus,Nepovirus,Secoviridae,USA,Glycine max,0,2015,0
+NC_033492.1,NC_033492.1,Brats01,Petunia chlorotic mottle virus,Nepovirus,Secoviridae,USA,Petunia x hybrida,0,2014,0
+NC_035214.1,NC_035214.1,5317015,Lettuce necrotic leaf curl virus,Torradovirus,Secoviridae,Netherlands,Lactuca sativa,0,2011,0
+NC_035218.1,NC_035218.1,AD01,Motherwort yellow mottle virus,Torradovirus,Secoviridae,South Korea,Leonurus cardiaca,0,2012,0
+NC_035221.1,NC_035221.1,Su12-10,Squash chlorotic leaf spot virus,Torradovirus,Secoviridae,Sudan,Cucurbita moschata,0,2012,0
+NC_038320.1,NC_038320.1,,Carrot necrotic dieback virus,Sequivirus,Secoviridae,Germany,Daucus carota,0,2006,0
+NC_038760.1,NC_038760.1,Beijing,Cucurbit mild mosaic virus,Fabavirus,Secoviridae,China,Cucurbita,0,2008,0
+NC_038761.1,NC_038761.1,,Aeonium ringspot virus,Nepovirus,Secoviridae,Italy,Aeonium,0,2011,0
+NC_038762.1,NC_038762.1,,Aeonium ringspot virus,Nepovirus,Secoviridae,Italy,Aeonium,0,2011,0
+NC_038764.1,NC_038764.1,,Blueberry latent spherical virus,Nepovirus,Secoviridae,Japan,Vaccinium sect. Cyanococcus,0,2011,0
+NC_038765.1,NC_038765.1,,Melon mild mottle virus,Nepovirus,Secoviridae,Japan,Cucumis melo,0,2011,0
+NC_038767.1,NC_038767.1,zj,Mulberry mosaic leaf roll associated virus,Nepovirus,Secoviridae,China,Morus alba,0,2010,0
+NC_039073.1,NC_039073.1,NP,Grapevine fabavirus,Fabavirus,Secoviridae,USA,Vitis vinifera,0,2015,0
+NC_039077.1,NC_039077.1,8816-v1,Prunus virus F,Fabavirus,Secoviridae,USA,Prunus avium,0,2016,0
+NC_040399.1,NC_040399.1,B46,Nepovirus RCNA,Nepovirus,Secoviridae,Czech Republic,Trifolium pratense,0,2017,0
+NC_040417.1,NC_040417.1,UC,Potato virus U,Nepovirus,Secoviridae,Peru,Solanum tuberosum,0,1977,0
+NC_040586.1,NC_040586.1,SP2S,Waikavirus BnRV1,Waikavirus,Secoviridae,China,Brassica napus,0,2015,0
+NC_043447.1,NC_043447.1,Pasco-01,Potato virus B,Nepovirus,Secoviridae,Peru,Solanum tuberosum,0,2010,0
+NC_043684.1,NC_043684.1,AILV-V,Artichoke Italian latent virus,Nepovirus,Secoviridae,Bulgaria,Vitis,0,2016,0
+NC_012531.1,NC_012531.1,DM,Solenopsis invicta virus 3,Invictavirus,Solinviviridae,USA,Solenopsis invicta,0,2007,0
+NC_030651.1,NC_030651.1,Florida initial,Nylanderia fulva virus 1,Nyfulvavirus,Solinviviridae,USA,Nylanderia fulva,0,2011,0
