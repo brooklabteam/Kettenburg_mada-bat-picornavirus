@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=picornaviridae
+#SBATCH --job-name=ifla_boot2
 #SBATCH --partition=broadwl
-#SBATCH --output=picornaviridae.out
+#SBATCH --output=ifla_boot2.out
 #SBATCH --nodes=1
 #SBATCH --ntasks=9
 #SBATCH --ntasks-per-node=9
@@ -13,4 +13,4 @@ module load python/3.6
 module load java/1.8.0_121
 module load cmake/3.15.1
 
-raxml-ng-mpi --all --msa picornaviridae_refseq_align.fasta --model GTR+G4 --prefix T1  --seed 1 --threads auto{9} --bs-metric fbp,tbe
+raxml-ng-mpi --bootstrap --msa iflaviridae_refseq_align.fasta --model GTR+G4 --prefix T4  --seed 21 --threads auto{9}
