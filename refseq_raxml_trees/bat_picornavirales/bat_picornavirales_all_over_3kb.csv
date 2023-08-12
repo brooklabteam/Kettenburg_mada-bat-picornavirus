@@ -233,25 +233,25 @@ OQ363803.1,GZ/L172.18/2022,Bat picornavirus 10,,Picornaviridae,3482,China,Myotis
 OQ363805.1,GZ/L173.18/2022,Bat picornavirus 11,,Picornaviridae,3796,China,Myotis ricketti,,22-Aug,
 OQ363806.1,GZ/L175.18/2022,Bat picornavirus 1,,Picornaviridae,7743,China,Miniopterus schreibersii,,22-Aug,
 OQ709197.1,BtSaV/RlWD03,Bat sapovirus WD3,Sapovirus,Caliciviridae,6865,China,Rousettus leschenaultii,,2018,
-OQ818316,,,,,,,,,,
-OQ818317,,,,,,,,,,
-OQ818318,,,,,,,,,,
-OQ818319,,,,,,,,,,
-OQ818320,,,,,,,,,,
-OQ818321,,,,,,,,,,
-OQ818322,,,,,,,,,,
-OQ818323,,,,,,,,,,
-OQ818324,,,,,,,,,,
-OQ818325,,,,,,,,,,
-OQ818326,,,,,,,,,,
-OQ818327,,,,,,,,,,
-OQ818328,,,,,,,,,,
-OQ818329,,,,,,,,,,
-OQ818330,,,,,,,,,,
-OQ818331,,,,,,,,,,
-OQ818335,,,,,,,,,,
-OQ818336,,,,,,,,,,
-OQ818337,,,,,,,,,,
-OQ818339,,,,,,,,,,
-OQ818340,,,,,,,,,,
-OQ818341,,,,,,,,,,
+OQ818316,OQ818316,,Unclassified,Mischivirus,Picornaviridae,Madagascar,Pteropus rufus,1,2018,1
+OQ818317,OQ818317,,Unclassified,Kunsagivirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818318,OQ818318,,Unclassified,Teschovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818319,OQ818319,,Unclassified,Sapovirus,Caliciviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818320,OQ818320,,Unclassified,Sapelovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818321,OQ818321,,Unclassified,Sapelovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2019,1
+OQ818322,OQ818322,,Unclassified,Kobuvirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2019,1
+OQ818323,OQ818323,,Unclassified,Teschovirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818324,OQ818324,,Unclassified,Teschovirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818325,OQ818325,,Unclassified,Picornavirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818326,OQ818326,,Unclassified,Nepovirus,Secoviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818327,OQ818327,,Unclassified,Nepovirus,Secoviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818328,OQ818328,,Unclassified,Picornavirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818329,OQ818329,,Unclassified,Sapelovirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818330,OQ818330,,Unclassified,Cheravirus,Secoviridae,Madagascar,Pteropus rufus,1,2018,1
+OQ818331,OQ818331,,Unclassified,Tetnovirus,Unclassified,Madagascar,Pteropus rufus,1,2018,1
+OQ818335,OQ818335,,Unclassified,Felisavirus,Unclassified,Madagascar,Pteropus rufus,1,2018,1
+OQ818336,OQ818336,,Unclassified,Picorna-like virus,Unclassified,Madagascar,Pteropus rufus,1,2018,1
+OQ818337,OQ818337,,Unclassified,Hepatovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818339,OQ818339,,Unclassified,Picorna-like virus,Unclassified,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818340,OQ818340,,Unclassified,Sapovirus,Caliciviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818341,OQ818341,,Unclassified,Felisavirus,Unclassified,Madagascar,Eidolon dupreanum,1,2018,1
