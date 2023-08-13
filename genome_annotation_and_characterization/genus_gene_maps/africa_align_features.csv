@@ -1,15 +1,6 @@
 molecule,start,end,mid,gene
-Kobuvirus,744,1298,1021,L
-Kobuvirus,1299,2411,1855,VP0
-Kobuvirus,2412,3080,2746,VP3
-Kobuvirus,3081,3806,3443.5,VP1
-Kobuvirus,3807,4214,4010.5,2A
-Kobuvirus,4215,4709,4462,2B
-Kobuvirus,4710,5714,5212,2C
-Kobuvirus,5715,5993,5854,3A
-Kobuvirus,5994,6071,6150,3B
-Kobuvirus,6072,6641,6500,3C
-Kobuvirus,6642,8045,7100,3D
+Kobuvirus,723,1298,900,L
+Kobuvirus,1299,1853,1400,VP0
 Mischivirus,1289,1574,1380,L
 Mischivirus,1575,1801,1688,VP4
 Mischivirus,1802,2607,2204.5,VP2
@@ -22,30 +13,21 @@ Mischivirus,6142,6341,6241.5,3A
 Mischivirus,6426,6651,6600,3B
 Mischivirus,6661,7226,7000,3C
 Mischivirus,7248,8613,7930.5,3D
-Sapelovirus,420,838,650,L
-Sapelovirus,851,916,920,VP4
-Sapelovirus,923,1666,1650,VP2
-Sapelovirus,1667,2372,2300,VP3
-Sapelovirus,2373,3259,2900,VP1
-Sapelovirus,3266,4077,3671.5,2A
-Sapelovirus,4078,4422,4250,2B
-Sapelovirus,4423,5451,4937,2C
-Sapelovirus,5452,5763,5607.5,3A
-Sapelovirus,5764,5829,5900,3B
-Sapelovirus,5830,6376,6300,3C
-Sapelovirus,6377,7773,6950,3D
-Felisavirus,1,5665,2833,Non-structural polyprotein
-Felisavirus,5739,5802,4800,Structural polyprotein
-Hepatovirus,15,775,395,5'UTR
-Hepatovirus,776,6176,3476,Polyprotein
-Kobuvirus,1,743,372,5'UTR
-Kobuvirus,8049,8320,7800,3'UTR
+Sapelovirus1,808,1006,907,L
+Sapelovirus1,1016,1306,1161,VP4
+Sapelovirus1,1319,1666,1492.5,VP2
+Sapelovirus1,1667,1924,1795.5,VP3
+Sapelovirus2,5024,5451,5237.5,2C
+Sapelovirus2,5452,5763,5607.5,3A
+Sapelovirus2,5764,5808,5786,3B
+Felisavirus,1193,5236,2833,Non-structural polyprotein
+Hepatovirus,1173,1482,1327.5,VP2
+Hepatovirus,1483,1600,1541.5,VP3
 Kunsagivirus,1,531,266,5'UTR
 Kunsagivirus,532,7188,3860,Polyprotein
 Kunsagivirus,7189,7333,7000,3'UTR
 Mischivirus,1,1288,600,5'UTR
 Mischivirus,8638,8886,8500,3'UTR
-Sapovirus,1000,7216,2000,Polyprotein
-Sapovirus,7251,7759,6000,Putative minor structural protein
 Sapelovirus,1,419,250,5'UTR
 Sapelovirus,7777,7913,7600,3'UTR
+Sapovirus,2646,5704,4175,Polyprotein

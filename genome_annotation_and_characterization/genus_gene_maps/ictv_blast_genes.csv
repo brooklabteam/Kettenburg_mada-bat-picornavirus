@@ -16,10 +16,10 @@ Kunsagivirus,7954,8098,3'UTR,full
 Mischivirus,10,1513,5'UTR,full
 Mischivirus,1514,9195,Polyprotein,full
 Mischivirus,9243,9571,3'UTR,full
-Sapovirus,1,7216,Polyprotein,full
+Sapovirus,1127,1511,5'UTR,full
+Sapovirus,1512,7216,Polyprotein,full
 Sapovirus,7251,7905,Putative minor structural protein,full
-Sapovirus,1,7216,Polyprotein,partial
-Sapovirus,7251,7922,Putative minor structural protein,partial
+Sapovirus,3212,4326,Polyprotein,partial
 Sapelovirus,1,746,5'UTR,full
 Sapelovirus,747,8480,Polyprotein,full
 Sapelovirus,8481,8623,3'UTR,full
