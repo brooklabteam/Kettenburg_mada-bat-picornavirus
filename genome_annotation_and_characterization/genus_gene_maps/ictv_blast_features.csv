@@ -17,7 +17,6 @@ Cheravirus,436,3705,2070.5,Polyprotein,partial
 Felisavirus,1,5665,2833,Non-structural polyprotein,partial
 Felisavirus,5739,8738,7238.5,Structural polyprotein,partial
 Hepatovirus,1,960,480.5,5'UTR,partial
-Hepatovirus,981,6504,3742.5,Polyprotein,partial
 Kobuvirus,1,850,425.5,5'UTR,full
 Kobuvirus,8990,9318,8700,3'UTR,full
 Kobuvirus,851,1638,1244.5,L,full
@@ -32,7 +31,6 @@ Kobuvirus,6839,6950,7000,3B,full
 Kobuvirus,6951,7550,7550,3C,full
 Kobuvirus,7551,8975,8263,3D,full
 Kunsagivirus,1,619,310,5'UTR,full
-Kunsagivirus,620,7953,4286.5,Polyprotein,full
 Kunsagivirus,7954,8098,7500,3'UTR,full
 Mischivirus,10,1513,761.5,5'UTR,full
 Mischivirus,9243,9571,9000,3'UTR,full
@@ -62,9 +60,9 @@ Sapelovirus,6126,6454,6290,3A,full
 Sapelovirus,6455,6520,6600,3B,full
 Sapelovirus,6521,7066,7066,3C,full
 Sapelovirus,7067,8477,7772,3D,full
-Sapovirus,1127,1511,1200,5'UTR,full
+Sapovirus,1127,1511,1400,5'UTR,full
 Sapovirus,1512,7216,3608.5,Polyprotein,full
-Sapovirus,7251,7905,6700,Putative minor structural protein,full
+Sapovirus,7251,7905,6400,Putative minor structural protein,full
 Sapovirus,3212,4326,3700,Polyprotein,partial
 Teschovirus,21,601,311,5'UTR,full
 Teschovirus,7622,7725,7400,3'UTR,full
@@ -87,10 +85,10 @@ Kunsagivirus,2859,3928,3393.5,VP1,full
 Kunsagivirus,3947,4627,4287,2A,full
 Kunsagivirus,4675,5127,4901,2B,full
 Kunsagivirus,5128,5740,5434,2C,full
-Kunsagivirus,5741,5993,5867,3A,full
+Kunsagivirus,5741,5993,5740,3A,full
 Kunsagivirus,5994,6063,6028.5,3B,full
 Kunsagivirus,6064,6667,6365.5,3C,full
-Kunsagivirus,6668,7902,7285,3D,full
+Kunsagivirus,6668,7902,7000,3D,full
 Hepatovirus,984,1062,1023,VP4,partial
 Hepatovirus,1063,1729,1396,VP2,partial
 Hepatovirus,1730,2485,2107.5,VP3,partial
