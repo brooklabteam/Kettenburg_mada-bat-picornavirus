@@ -1234,11 +1234,52 @@ tescho_ictv_nt
 
 ##Now put the whole figure together
 supp_pysimplot<-plot_grid(chera_ictv,felisa_ictv,mischi_ictv_nt,bat_picorna,hep_ictv_nt, kobu_ictv_nt,
-                          kun_ictv_nt, mischi_ictv_nt,sapelo_full_ictv_nt,sapo_full_ictv,
+                          kun_ictv_nt,sapelo_full_ictv_nt,sapo_full_ictv,
                           tescho_ictv_nt, 
                           ncol=3,
                           labels="AUTO")
 supp_pysimplot
 
 ggsave("supplemental_pysimplot.pdf", width=40, height=40, units=c("in"))
+
+
+
+#Group by host
+
+#P rufus only
+pr_rm<-plot_grid(chera_ictv,felisa_ictv,mischi_ictv_nt, bat_picorna,
+              nrow=1, 
+              byrow = TRUE,
+              align = "hv", axis = "b",
+              labels=c("A", "", "", "B"))
+pr_rm
+pr_rm<-as.ggplot(pr_rm)
+
+#E. dupreanum only
+ed<-plot_grid(hep_ictv_nt,kobu_ictv_nt,kun_ictv_nt, sapo_full_ictv,
+              nrow=1, 
+              byrow = TRUE,
+              align = "hv", axis = "b",
+              labels=c("C","","",""))
+ed
+ed<-as.ggplot(ed)
+
+#multi host
+ed_rm<-plot_grid(sapelo_full_ictv_nt, tescho_ictv_nt, NULL, NULL,
+              nrow=1, 
+              byrow = TRUE,
+              align = "hv", axis = "b",
+              labels=c("D","","",""))
+ed_rm
+ed_rm<-as.ggplot(ed_rm)
+
+
+all<-plot_grid(pr_rm,ed,ed_rm, 
+               nrow=3, 
+               align = "hv", labels=c(""), 
+               rel_heights = c(1,1,1))
+all
+
+ggsave("supplemental_pysimplot_byhost.pdf", width=40, height=40, units=c("in"))
+
 
