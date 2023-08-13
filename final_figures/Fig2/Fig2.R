@@ -15,8 +15,8 @@ library(patchwork)
 #This is to make a figure of the representative PySimPlots with their matching genome plots
 
 ##First make the genome plots
-homewd="/Users/gwenddolenkettenburg/Desktop/mada-bat-picornavirus/genome_annotation_and_characterization/"
-setwd("~/Desktop/mada-bat-picornavirus/genome_annotation_and_characterization/genus_gene_maps")
+homewd="/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/genome_annotation_and_characterization/"
+setwd("~/Desktop/developer/mada-bat-picornavirus/genome_annotation_and_characterization/genus_gene_maps")
 
 #Load the gene data
 ictv <- read.csv("ictv_blast_genes.csv", header = T, stringsAsFactors = F)
@@ -70,6 +70,8 @@ ictv_teschovirus<-subset(ictv,molecule=="Teschovirus")
 
 ictv_batpicornavirus_pep<-subset(ictv_pep,molecule=="Bat picornavirus")
 ictv_kobuvirus_pep<-subset(ictv_pep,molecule=="Kobuvirus")
+ictv_kunsagivirus_pep<-subset(ictv_pep,molecule=="Kunsagivirus")
+ictv_hepatovirus_pep<-subset(ictv_pep,molecule=="Hepatovirus")
 ictv_mischivirus_pep<-subset(ictv_pep,molecule=="Mischivirus")
 ictv_sapelovirus_pep<-subset(ictv_pep,molecule=="Sapelovirus")
 ictv_sapelovirus_pep_full<-subset(ictv_sapelovirus_pep,type=="full")
@@ -178,10 +180,15 @@ ictv_hepato<-ggplot(ictv_hepatovirus, aes(xmin = start, xmax = end, y = molecule
   # geom_feature_label(data=ictv_hepatovirus_feat, aes(x=mid, y=molecule, label=gene),
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
+  geom_subgene_arrow(data = ictv_hepatovirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
+                                                                  xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                     arrowhead_width = grid::unit(3, "mm"),
+                     arrowhead_height = grid::unit(4, "mm"),
+                     arrow_body_height = grid::unit(4, "mm"))+
   geom_text(data=ictv_hepatovirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,6510),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,6550),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -231,6 +238,11 @@ ictv_kun<-ggplot(ictv_kunsagivirus, aes(xmin = start, xmax = end, y = molecule, 
   # geom_feature_label(data=ictv_kunsagivirus_feat, aes(x=mid, y=molecule, label=gene),
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
+  geom_subgene_arrow(data = ictv_kunsagivirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
+                                                              xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                     arrowhead_width = grid::unit(3, "mm"),
+                     arrowhead_height = grid::unit(4, "mm"),
+                     arrow_body_height = grid::unit(4, "mm"))+
   geom_text(data=ictv_kunsagivirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
@@ -317,7 +329,7 @@ ictv_sapo_full<-ggplot(ictv_sapovirus_full, aes(xmin = start, xmax = end, y = mo
   geom_text(data=ictv_sapovirus_full_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,8017),expand=c(0,0))+
+  scale_x_continuous(limits=c(1120,7910),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -341,7 +353,7 @@ ictv_sapo_partial<-ggplot(ictv_sapovirus_partial, aes(xmin = start, xmax = end, 
   geom_text(data=ictv_sapovirus_partial_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,8037),expand=c(0,0))+
+  scale_x_continuous(limits=c(3210,4400),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -386,7 +398,7 @@ ictv_tescho
 
 
 ##Now get the plots for the PySimPlot, just the ICTV_BLAST ones, there will be a saparate PDF file with the table of African bat picorna similarities
-setwd("~/Desktop/mada-bat-picornavirus/PySimPlot/ICTV_BLAST_pysimplot")
+setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/ICTV_BLAST_pysimplot")
 
 #Bat picornavirus 
 bat_picorna_ictv_aa_full <- read.csv(file = "bat_picorna_ictv_aa_full_alignment.csv", header = T, stringsAsFactors = F)
