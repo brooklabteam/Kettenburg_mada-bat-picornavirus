@@ -299,64 +299,6 @@ ictv_tescho
 ##Now get the plots for the PySimPlot, just the ICTV_BLAST ones, there will be a separate PDF file with the table of African bat picorna similarities
 setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/ICTV_BLAST_pysimplot")
 
-#Bat picornavirus 
-bat_picorna_ictv_aa_full <- read.csv(file = "bat_picorna_ictv_aa_full_alignment.csv", header = T, stringsAsFactors = F)
-head(bat_picorna_ictv_aa_full)
-
-#move to long
-long.sim_aa <- melt(bat_picorna_ictv_aa_full, id.vars = c("pointer"), measure.vars = c("OQ818328","HQ595340","HQ595342","HQ595344"))
-
-unique(long.sim_aa$variable)
-
-long.sim_aa$variable <- as.character(long.sim_aa$variable)
-
-names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
-
-long.sim_aa$accession[long.sim_aa$accession == "OQ818328"] <- "Rousettus madagascariensis picornavirus OQ818328"
-long.sim_aa$accession[long.sim_aa$accession == "HQ595340"] <- "Bat picornavirus 1 HQ595340"
-long.sim_aa$accession[long.sim_aa$accession == "HQ595342"] <- "Bat picornavirus 2 HQ595342"
-long.sim_aa$accession[long.sim_aa$accession == "HQ595344"] <- "Bat picornavirus 3 HQ595344"
-
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("Rousettus madagascariensis picornavirus OQ818328", "Bat picornavirus 1 HQ595340",
-                                                                  "Bat picornavirus 2 HQ595342","Bat picornavirus 3 HQ595344"))
-long.sim_aa$value[long.sim_aa$value<0] <- 0
-long.sim_aa$value <- long.sim_aa$value/100
-
-title<-expression(paste("Reference: ",italic("Rousettus madagascariensis picornavirus "), "OQ818325"))
-
-## Amino acid
-batpicorna_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
-  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
-        strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
-        legend.key.height= unit(3.5, 'mm'),
-        legend.key.width= unit(3.5, 'mm'),
-        legend.background =element_rect(fill = alpha("white", 0)),
-        axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
-  ggtitle(title)+
-  scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
-                     labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
-  #scale_x_continuous(expand=c(0,0))+
-  scale_y_continuous(limits=c(0,1), expand=c(0,0))
-
-batpicorna_ictv_aa
-
-#put gene map with PySimPlot
-bat_picorna_aa<-batpicorna_ictv_aa/ictv_batpicorna+plot_layout(nrow=2,  heights = c(2, 0.27))
-bat_picorna_aa
-
-bat_picorna_aa<-as.ggplot(bat_picorna_aa)
-bat_picorna_aa
-
-
 
 #Hepatovirus
 hepato_ictv_aa_partial <- read.csv(file = "hepato_ictv_aa_partial_alignment.csv", header = T, stringsAsFactors = F) #animo acid
