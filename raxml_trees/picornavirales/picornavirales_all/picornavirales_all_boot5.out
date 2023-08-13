@@ -1,0 +1,94 @@
+ERROR: Unable to locate a modulefile for 'emacs/25.1'
+ERROR: Unable to locate a modulefile for 'python/3.6'
+ERROR: Unable to locate a modulefile for 'java/1.8.0_121'
+ERROR: Unable to locate a modulefile for 'cmake/3.15.1'
+
+RAxML-NG v. 1.1.0-master released on 22.06.2022 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz, 28 cores, 62 GB RAM
+
+RAxML-NG was called at 05-Aug-2023 16:01:56 as follows:
+
+raxml-ng-mpi --bootstrap --msa picornavirales_all_align.fasta --model GTR+G4 --prefix T7 --seed 6 --threads auto{12}
+
+Analysis options:
+  run mode: Bootstrapping
+  start tree(s): 
+  bootstrap replicates: max: 1000 + bootstopping (autoMRE, cutoff: 0.030000)
+  random seed: 6
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+WARNING: The model you specified on the command line (GTR+G4) will be ignored 
+         since the binary MSA file already contains a model definition.
+         If you want to change the model, please re-run RAxML-NG 
+         with the original PHYLIP/FASTA alignment and --redo option.
+
+[00:00:00] Loading binary alignment from file: T7.raxml.rba
+[00:00:00] Alignment comprises 416 taxa, 1 partitions and 42385 patterns
+
+Partition 0: noname
+Model: GTR+FO+G4m
+Alignment sites / patterns: 64887 / 42385
+Gaps: 87.67 %
+Invariant sites: 37.51 %
+
+
+Parallelization scheme autoconfig: 1 worker(s) x 12 thread(s)
+
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] NOTE: Resuming execution from checkpoint (logLH: -3475803.71, ML trees: 0, bootstraps: 11)
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 3533 / 56528
+[00:00:02] Data distribution: max. searches per worker: 989
+[00:00:02] Starting bootstrapping analysis with 1000 replicates.
+
+[01:07:15] Bootstrap tree #12, logLikelihood: -3394704.347217
+[02:29:55] Bootstrap tree #13, logLikelihood: -3439340.719608
+[03:45:12] Bootstrap tree #14, logLikelihood: -3402979.137749
+[05:06:40] Bootstrap tree #15, logLikelihood: -3434128.286817
+[06:23:25] Bootstrap tree #16, logLikelihood: -3375279.165566
+[07:46:37] Bootstrap tree #17, logLikelihood: -3383766.127062
+[09:07:29] Bootstrap tree #18, logLikelihood: -3390520.860514
+[10:16:22] Bootstrap tree #19, logLikelihood: -3436435.789333
+[11:35:40] Bootstrap tree #20, logLikelihood: -3413609.915677
+[12:51:15] Bootstrap tree #21, logLikelihood: -3383035.005402
+[14:08:39] Bootstrap tree #22, logLikelihood: -3443976.675497
+[15:27:14] Bootstrap tree #23, logLikelihood: -3375669.726959
+[16:43:47] Bootstrap tree #24, logLikelihood: -3389905.490150
+[17:53:00] Bootstrap tree #25, logLikelihood: -3394795.153554
+[19:13:16] Bootstrap tree #26, logLikelihood: -3438844.425749
+[20:31:00] Bootstrap tree #27, logLikelihood: -3444993.381500
+[21:50:11] Bootstrap tree #28, logLikelihood: -3401395.880322
+[23:21:35] Bootstrap tree #29, logLikelihood: -3419925.547725
+[24:37:00] Bootstrap tree #30, logLikelihood: -3416576.468560
+[25:57:35] Bootstrap tree #31, logLikelihood: -3388660.805365
+[27:12:07] Bootstrap tree #32, logLikelihood: -3377986.285333
+[28:24:14] Bootstrap tree #33, logLikelihood: -3381199.510493
+[29:45:09] Bootstrap tree #34, logLikelihood: -3377494.291358
+[30:56:34] Bootstrap tree #35, logLikelihood: -3408803.009938
+[32:14:34] Bootstrap tree #36, logLikelihood: -3403893.195699
+[33:45:55] Bootstrap tree #37, logLikelihood: -3384367.137749
+[35:04:24] Bootstrap tree #38, logLikelihood: -3389058.143398
+slurmstepd-midway2-0396: error: *** JOB 29446181 ON midway2-0396 CANCELLED AT 2023-08-07T04:02:08 DUE TO TIME LIMIT ***
