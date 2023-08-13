@@ -398,6 +398,7 @@ Also following the same instructions as above and using the same outgroup, I dec
 - bat picornavirales all reference sequences with mada and reference sequences both over 3kb
 
 The commands I used in modeltest and RAxML are listed below. 
+---
 
 ModelTest bash scripts: 
 
@@ -416,8 +417,8 @@ conda activate /project2/cbrook/software/modeltest_env
 
 modeltest-ng -i bat_picornavirales_all_over_3kb_align.fasta -d nt -t ml -p 8
 ```
-Best model: 
-Number of threads for RAxmL: 
+Best model: GTR+G4 
+Number of threads for RAxmL:8
 
 
 
@@ -436,8 +437,8 @@ conda activate /project2/cbrook/software/modeltest_env
 
 modeltest-ng -i bat_picornavirales_full_3kb_align.fasta -d nt -t ml -p 8
 ```
-Best model: 
-Number of threads for RAxmL: 
+Best model: GTR+G4
+Number of threads for RAxmL:8
 
 
 
@@ -456,8 +457,8 @@ conda activate /project2/cbrook/software/modeltest_env
 
 modeltest-ng -i caliciviridae_refseq_align.fasta -d nt -t ml -p 8
 ```
-Best model: 
-Number of threads for RAxmL: 
+Best model: TVM+I+G4
+Number of threads for RAxmL: 8
 
 
 
@@ -476,8 +477,8 @@ conda activate /project2/cbrook/software/modeltest_env
 
 modeltest-ng -i iflaviridae_refseq_align.fasta -d nt -t ml -p 8
 ```
-Best model: 
-Number of threads for RAxmL: 
+Best model: GTR+G4
+Number of threads for RAxmL: 9
 
 
 
@@ -496,8 +497,8 @@ conda activate /project2/cbrook/software/modeltest_env
 
 modeltest-ng -i picornaviridae_refseq_align.fasta -d nt -t ml -p 8
 ```
-Best model: 
-Number of threads for RAxmL: 
+Best model: GTR+G4
+Number of threads for RAxmL: 9
 
 
 
@@ -516,8 +517,140 @@ conda activate /project2/cbrook/software/modeltest_env
 
 modeltest-ng -i secoviridae_refseq_align.fasta -d nt -t ml -p 8
 ```
-Best model: 
-Number of threads for RAxmL: 
+Best model: GTR+G4
+Number of threads for RAxmL: 8
 
 
+
+
+
+---
+Scripts for RAxML trees
+
+Bat picornavirales all over 3kb
+```
+#!/bin/bash
+#SBATCH --job-name=batpicorna_all
+#SBATCH --partition=broadwl
+#SBATCH --output=batpicorna_all.out
+#SBATCH --nodes=1
+#SBATCH --ntasks=8
+#SBATCH --ntasks-per-node=8
+#SBATCH --time=36:00:00
+
+module load vim/7.4
+module load emacs/25.1
+module load python/3.6
+module load java/1.8.0_121
+module load cmake/3.15.1
+
+raxml-ng-mpi --all --msa bat_picornavirales_all_over_3kb_align.fasta --model GTR+G4 --prefix T1  --seed 1 --threads auto{8} --bs-metric fbp,tbe
+```
+
+
+Bat picornavirales full
+```
+#!/bin/bash
+#SBATCH --job-name=picornavirales_all
+#SBATCH --partition=broadwl
+#SBATCH --output=picornavirales_all.out
+#SBATCH --nodes=1
+#SBATCH --ntasks=8
+#SBATCH --ntasks-per-node=8
+#SBATCH --time=36:00:00
+
+module load vim/7.4
+module load emacs/25.1
+module load python/3.6
+module load java/1.8.0_121
+module load cmake/3.15.1
+
+raxml-ng-mpi --all --msa bat_picornavirales_full_3kb_align.fasta --model GTR+G4 --prefix T1  --seed 1 --threads auto{8} --bs-metric fbp,tbe
+```
+
+
+Secoviridae refseq
+```
+#!/bin/bash
+#SBATCH --job-name=seco
+#SBATCH --partition=broadwl
+#SBATCH --output=seco.out
+#SBATCH --nodes=1
+#SBATCH --ntasks=8
+#SBATCH --ntasks-per-node=8
+#SBATCH --time=36:00:00
+
+module load vim/7.4
+module load emacs/25.1
+module load python/3.6
+module load java/1.8.0_121
+module load cmake/3.15.1
+
+raxml-ng-mpi --all --msa secoviridae_refseq_align.fasta --model GTR+G4 --prefix T1  --seed 1 --threads auto{8} --bs-metric fbp,tbe
+```
+
+
+Picornaviridae refseq
+```
+#!/bin/bash
+#SBATCH --job-name=picornaviridae
+#SBATCH --partition=broadwl
+#SBATCH --output=picornaviridae.out
+#SBATCH --nodes=1
+#SBATCH --ntasks=9
+#SBATCH --ntasks-per-node=9
+#SBATCH --time=36:00:00
+
+module load vim/7.4
+module load emacs/25.1
+module load python/3.6
+module load java/1.8.0_121
+module load cmake/3.15.1
+
+raxml-ng-mpi --all --msa picornaviridae_refseq_align.fasta --model GTR+G4 --prefix T1  --seed 1 --threads auto{9} --bs-metric fbp,tbe
+
+```
+
+
+Iflaviridae refseq
+```
+#!/bin/bash
+#SBATCH --job-name=ifla
+#SBATCH --partition=broadwl
+#SBATCH --output=ifla.out
+#SBATCH --nodes=1
+#SBATCH --ntasks=9
+#SBATCH --ntasks-per-node=9
+#SBATCH --time=36:00:00
+
+module load vim/7.4
+module load emacs/25.1
+module load python/3.6
+module load java/1.8.0_121
+module load cmake/3.15.1
+
+raxml-ng-mpi --all --msa iflaviridae_refseq_align.fasta --model GTR+G4 --prefix T1  --seed 1 --threads auto{9} --bs-metric fbp,tbe
+```
+
+
+Caliciviridae refseq
+```
+#!/bin/bash
+#SBATCH --job-name=cal
+#SBATCH --partition=broadwl
+#SBATCH --output=call.out
+#SBATCH --nodes=1
+#SBATCH --ntasks=8
+#SBATCH --ntasks-per-node=8
+#SBATCH --time=36:00:00
+
+module load vim/7.4
+module load emacs/25.1
+module load python/3.6
+module load java/1.8.0_121
+module load cmake/3.15.1
+
+raxml-ng-mpi --all --msa caliciviridae_refseq_align.fasta --model TVM+I+G4 --prefix T1  --seed 1 --threads auto{8} --bs-metric fbp,tbe
+```
+---
 
