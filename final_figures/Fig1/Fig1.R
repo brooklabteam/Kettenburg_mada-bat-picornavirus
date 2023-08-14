@@ -19,12 +19,13 @@ library(reshape)
 library(paletteer)
 library(ggh4x)
 library(cowplot)
+library(ggplotify)
 
 ##Part A: map
 
 # Set wd to data on this computer. Also ID homewd, assuming that 
 # Mada-GIS is cloned to the same series of sub-folders
-homewd = "/Users/gwenddolenkettenburg/Desktop/mada-bat-picornavirus" 
+homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
 #should be wherever "Mada_bat_picorna" is stored on your home computer
 #basewd = paste(strsplit(homewd, "/")[[1]][1:6], collapse = "/")
 #Cara had the above command as basewd but it did not work for me and kept going into the Mada_bat_picorna folder
@@ -239,7 +240,7 @@ p4
 
 
 ##Part B: summary heat map of types of picornavirales
-dat <- read.csv(file = paste0(homewd,"/metadata/summary_heatmap1.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(file = paste0(homewd,"/metadata/summary_demo_heatmap.csv"), header = T, stringsAsFactors = F)
 head(dat)
 names(dat)
 
@@ -381,12 +382,22 @@ final
 final<- plot_grid(p6,p7,p8,labels=c("","",""),rel_widths = c(1, 1,1), rel_heights = c(1, 1,1),ncol=3, align="hv", axis="b")
 final
 
-
-final2<- plot_grid(p4,final,leg,labels=c("A","B",""),rel_widths = c(1, 2,0.25), rel_heights = c(2, 1),ncol=3, align="hv", axis="b")
+final2<- plot_grid(p4,final,leg,labels=c("A","B",""),rel_widths = c(1, 2,0.25), rel_heights = c(2, 1),ncol=3, align="hv", axis="t")
 final2
 
 
 
+
+
+
+
+
+
+
+
+
+
+#Supplementary info
 
 ##Try making a heatmap of the sampling data like age and percent of each bat species positive
 homewd = "/Users/gwenddolenkettenburg/Desktop/mada-bat-picornavirus" 
