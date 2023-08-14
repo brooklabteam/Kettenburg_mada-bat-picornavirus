@@ -6,11 +6,14 @@ library(ape)
 library(ggnewscale)
 #install.packages('gdata')
 library(gdata)
+library(phylotools)
+library(phylobase)
+install.packages("plotTree")
 
-homewd= "/Users/gwenddolenkettenburg/Desktop/mada-bat-picornavirus/"
+homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
 
 ##Picornavirales all full and partial sequences >3kb
-setwd(paste0(homewd,"/refseq_raxml_trees/picornavirales_all"))
+setwd(paste0(homewd,"/raxml_trees/picornavirales/picornavirales_all"))
 
 #load the tree
 tree <-  read.tree("T10.raxml.supportFBP") 
@@ -194,9 +197,35 @@ shapez = c("Bat host" =  17, "Non-bat host" = 19)
 colz2 = c('1' =  "yellow", '0' = "white")
 
 
+add_support_labels<-function(node=NULL,support,
+                             cols=c("white","black"),cex=1.5){
+  scale<-c(min(support,na.rm=TRUE),1)
+  support<-(support-scale[1])/diff(scale)
+  pp<-get("last_plot.phylo",envir=.PlotPhyloEnv)
+  if(is.null(node)) node<-1:pp$Nnode+pp$Ntip
+  colfunc<-colorRamp(cols)
+  node_cols<-colfunc(support)/255
+  x<-pp$xx[node] 
+  y<-pp$yy[node]
+  for(i in 1:nrow(node_cols)){
+    if(!is.na(support[i]))
+      points(x[i],y[i],pch=21,cex=cex,
+             bg=rgb(node_cols[i,1],node_cols[i,2],node_cols[i,3]))
+  }
+  invisible(scale)
+}
+
+bs<-as.numeric(rooted.tree$node.label)
+bs
+
+bs[bs<0.75]<-0
+bs[intersect(which(bs>=0.75),which(bs<0.95))]<-0.5
+bs[bs>=0.95]<-1
+
+
 ##uncollapsed tree
 p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=bat_Host), size=3, show.legend = T) +
-  geom_nodelab(size=2,nudge_x = -.07, nudge_y = -.1) +
+  #geom_nodelab(size=2,nudge_x = -.07, nudge_y = -.1) +
   scale_fill_manual(values=colz) +
   scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
@@ -211,6 +240,19 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=
         legend.key.size = unit(0.2, "cm")) +
   xlim(c(0,8))
 p1
+
+p1.dat <- p1$data
+p1.dat$node_fill <- NA
+p1.dat$node_fill[(length(tree.dat$tip_label)+1):length(p1.dat$label)] <- as.numeric(p1.dat$label[(length(tree.dat$tip_label)+1):length(p1.dat$label)])#fill with label
+
+
+p1.1 <- p1  %<+% p1.dat + 
+  ggnewscale::new_scale_fill() + 
+  geom_nodepoint(aes(fill=node_fill), shape=21, color="black", size=1, stroke=.1, show.legend = F) + 
+  scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
+  
+p1.1
+
 
 ##Get the clade numbers so we can collapse unnnecesary clades
 ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
