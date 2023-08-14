@@ -24,25 +24,16 @@ Malagasy sequences included in PySimplot figure (ICTV+BLAST sequences)
 OQ818316	mischivirus
 OQ818317	kunsagivirus
 OQ818318	teschovirus
-OQ818319	sapovirus
 OQ818320	sapelovirus
 OQ818321	sapelovirus
 OQ818322	kobuvirus
 OQ818323	teschovirus
 OQ818324	teschovirus
-OQ818325	picornavirus
-OQ818328	picornavirus
 OQ818329	sapelovirus
-OQ818330	cheravirus
-OQ818335	felisavirus
 OQ818337	hepatovirus
-OQ818340	sapovirus
-OQ818341	felisavirus
 OQ818344	sapelovirus
-OQ818347	sapovirus
-OQ818348	sapovirus
 
-Malagasy sequences used in African bat comparison figure
+Malagasy sequences used in African bat comparison table
 OQ818337	hepatovirus
 OQ818316	mischivirus
 OQ818317	kunsagivirus
@@ -61,9 +52,9 @@ OQ818345	sapovirus
 OQ818347	sapovirus
 OQ818348	sapovirus
 
+All other sequences (the aa sequences not included in Fig 2 and all nt versions of the figures) will be included in a supplemental figure. There is also a supplemental figure of the african bat picornavirus pysimplots. 
 
 Alignment and distance matrix output from Geneious are in their respective labeled files within the master PySimPlot folder, and metadata/summary files are [here]()
-
 
 ---
 3. Following the template below, I made similarity plots:
