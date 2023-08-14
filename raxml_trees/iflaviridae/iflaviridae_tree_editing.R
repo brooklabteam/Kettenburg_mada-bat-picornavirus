@@ -12,41 +12,41 @@ library(phylobase)
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
 
 ##Picornavirales all full and partial sequences >3kb
-setwd(paste0(homewd,"/raxml_trees/picornavirales/picornavirales_all"))
+setwd(paste0(homewd,"/raxml_trees/secoviridae"))
 
 #load the tree
-tree <-  read.tree("T10.raxml.supportFBP") 
+tree <-  read.tree("T1.raxml.supportFBP") 
 
 rooted.tree <- root(tree, which(tree$tip.label == "NC_030886.1"))
 #take a quick look in base R
 plot(rooted.tree)
 
 #load tree data prepared from elsewhere
-dat <- read.csv(("picornavirales_all_metadata.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(("secoviridae_refseq_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
 
 #check that your metadata matches your tree data
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #416
-length(tree$tip.label) #416
+nrow(dat) #84
+length(tree$tip.label) #84
 
 #check subgroup names
-unique(dat$Family)
+unique(dat$Genus)
 
-colz = c("Caliciviridae" = "royalblue3",    "Picornaviridae"  = "turquoise1",   "Secoviridae"  = "goldenrod1",   "Dicistroviridae"   = "dodgerblue1" ,   "Iflaviridae" = "firebrick1" ,
-         "Polycipiviridae"  = "lightpink1" ,    "Marnaviridae"  = "hotpink1" ,  "Solinviviridae" = "lightskyblue" ,   "Coronaviridae"  = "black", "Unclassified"  = "darkorange1")
+colz = c("Waikavirus" = "royalblue3",    "Fabavirus"  = "turquoise1",   "Sadwavirus"  = "goldenrod1",   "Comovirus"   = "dodgerblue1" ,   "Nepovirus" = "firebrick1" ,
+         "Sequivirus"  = "lightpink1" ,    "Cheravirus"  = "hotpink1" ,  "Stralarivirus" = "lightskyblue" ,   "Coronavirus"  = "black", "Torradovirus"  = "darkorange1")
 
 #pick order for the labels
-dat$Family <- factor(dat$Family, levels = c("Dicistroviridae",    "Secoviridae",   "Marnaviridae",   "Picornaviridae",   "Solinviviridae",
-                                            "Caliciviridae",    "Iflaviridae",  "Coronaviridae",   "Polycipiviridae",  "Unclassified"))   
+dat$Genus <- factor(dat$Genus, levels = c("Waikavirus" ,  "Fabavirus",   "Sadwavirus",   "Comovirus",   "Nepovirus",
+                                          "Sequivirus",    "Cheravirus",  "Stralarivirus",  "Torradovirus",  "Coronavirus"))   
 
 dat$novel <- as.factor(dat$novel)
 
 
 #take a glance
-p <- ggtree(rooted.tree) %<+% dat + geom_tippoint(aes(color=Family)) +
+p <- ggtree(rooted.tree) %<+% dat + geom_tippoint(aes(color=Genus)) +
   geom_tiplab(size=2) + geom_nodelab(size=1) +
   scale_color_manual(values=colz) + theme(legend.position = "none", legend.title = element_blank())
 p #looks great
@@ -116,7 +116,7 @@ dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) &!is.na(dat$Host) & !is
 #first check if there are any
 dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)] #no
 # dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)]<- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)], "|",
-#                                                                                                        dat$Family[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)], "|",
+#                                                                                                        dat$Genus[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)], "|",
 #                                                                                                        #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) & is.na(dat$Country)], "|",
 #                                                                                                        #dat$Host[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)], "|",
 #                                                                                                        dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)], "|",
@@ -127,7 +127,7 @@ dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$Host) &!is.
 #Isolate + Country only
 dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)] #no
 # dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)] <- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)], "|", 
-#                                                                                                                 dat$Family[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)], "|", 
+#                                                                                                                 dat$Genus[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)], "|", 
 #                                                                                                           #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) & is.na(dat$Country)], "|", 
 #                                                                                                           dat$Host[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)], "|",
 #                                                                                                           #dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$Host) &!is.na(dat$Country)], "|",
@@ -141,7 +141,7 @@ dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is
 
 #replace
 # dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)]<- paste(dat$Accession[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)], "|", 
-#                                                                                                                 dat$Family[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)], "|", 
+#                                                                                                                 dat$Genus[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)], "|", 
 #                                                                                                                 dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)], "|", 
 #                                                                                                                 #dat$Host[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)], "|",
 #                                                                                                                 #dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$Host) &!is.na(dat$Country)], "|",
@@ -154,7 +154,7 @@ dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$Host) & is.
 #Isolate Host Country
 dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)] #none
 # dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)] <- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)], "|",
-#                                                                                                                 dat$Family[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)], "|",
+#                                                                                                                 dat$Genus[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)], "|",
 #                                                                                                                 #dat$Isolate[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)], "|",
 #                                                                                                                 #dat$Host[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)], "|",
 #                                                                                                                 #dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$Host) &!is.na(dat$Country)], "|",
@@ -177,7 +177,7 @@ tree.dat <- merge(tree.dat, dat, by = "old_tip_label", all.x = F, sort = F)
 names(tree.dat)
 
 tree.dat$tip_label <- tree.dat$new_label
-tree.dat <- dplyr::select(tree.dat, tip_label, Isolate, Host, bat_Host, Country, Collection_Date, Family, Genus, novel, old_tip_label)
+tree.dat <- dplyr::select(tree.dat, tip_label, Isolate, Host, bat_Host, Country, Collection_Date, Genus, Genus, novel, old_tip_label)
 
 rooted.tree$tip.label <- tree.dat$tip_label
 
@@ -197,24 +197,25 @@ colz2 = c('1' =  "yellow", '0' = "white")
 
 
 ##uncollapsed tree
-p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=bat_Host), size=3,stroke=0,show.legend = T) +
+p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=bat_Host), size=3,stroke=0,show.legend = T) +
   scale_fill_manual(values=colz) +
   scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=2) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Genus="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=2,  nudge_x=0.1) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
-  theme(legend.position = "none", 
+  theme(legend.position = "left", 
         legend.direction = "vertical",
-        legend.text = element_text(size=7), 
-        legend.key.size = unit(0.2, "cm")) +
+        legend.text = element_text(size=8), 
+        legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,8))
 
 p1
 
 #add node shapes to represent bootstrap values
+p0<-ggtree(rooted.tree)
 p0.dat <- p0$data
 p0.dat$Bootstrap <- NA
 Bootstrap<-p0.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p0.dat$label)] <- as.numeric(p0.dat$label[(length(tree.dat$tip_label)+1):length(p0.dat$label)])#fill with label
@@ -235,8 +236,6 @@ p1.1
 # p1.2<-p1.1%>%ggtree::rotate(node=570)
 # p1.2
 
-ggsave("uncollapsed_picornavirales.PDF", height=30, width=15, units=c("in"))
-
 ##Get the clade numbers so we can collapse unnnecesary clades
 ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
 
@@ -244,12 +243,12 @@ ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
 #collapsed tree
 
 #add clade labels
-p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=bat_Host), size=3,stroke=0,show.legend = T) +
+p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=bat_Host), size=3,stroke=0,show.legend = T) +
   scale_fill_manual(values=colz) +
   scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=2) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Genus="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=2,  nudge_x=0.1) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
@@ -258,77 +257,32 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=
         legend.text = element_text(size=8), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,8))+
-  geom_cladelabel(node = 776, label = "bold(Picornaviridae)",parse=T,hjust='center',offset=0.15, fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 808, label = "bold(Caliciviridae)",parse=T,hjust='center', offset=0.12,fontsize = 2, color="royalblue4") +
-  geom_cladelabel(node = 440, label = "bold(Picornaviridae)",parse=T,hjust='center', offset=0.15, fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 446, label = "bold(Picornaviridae)",parse=T,hjust='center', offset=0.15,fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 499, label = "bold(Caliciviridae)",parse=T,hjust='center', offset=0.1,fontsize = 2, color="royalblue4") +
-  geom_cladelabel(node = 496, label = "bold(Picornaviridae)",parse=T,hjust='center', offset=0.15, fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 492, label = "bold(Picornaviridae)",parse=T,hjust='center', offset=0.15, fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 466, label = "bold(Caliciviridae)",parse=T,hjust='center', offset=0.1,fontsize = 2, color="royalblue4") +
-  geom_cladelabel(node = 457, label = "bold(Picornaviridae)", parse=T,fontsize = 2,hjust='center', offset=0.15, color="turquoise4") +
-  geom_cladelabel(node = 475, label = "bold(Picornaviridae)",parse=T, fontsize = 2,hjust='center', offset=0.15, color="turquoise4") +
-  geom_cladelabel(node = 479, label = "bold(Picornaviridae)",parse=T, fontsize = 2,hjust='center', offset=0.15, color="turquoise4") +
-  geom_cladelabel(node = 743, label = "bold(Caliciviridae)",parse=T, fontsize = 2,hjust='center', offset=0.1, color="royalblue4") +
-  geom_cladelabel(node = 729, label = "bold(Secoviridae/Iflaviridae)",parse=T,hjust='center', offset=0.25,fontsize = 2, color="deeppink4") +
-  geom_cladelabel(node = 721, label = "bold(Marnaviridae/Picornaviridae/Iflaviridae)",parse=T,hjust='center', offset=0.45, fontsize = 2, color="deeppink4")+
-  geom_cladelabel(node = 533, label = "bold(Marnaviridae/Caliciviridae)",parse=T,hjust='center', offset=0.3, fontsize = 2,color="deeppink4") +
-  geom_cladelabel(node = 693, label = "bold(Unclassified)",parse=T, fontsize = 2,hjust='center', offset=0.1, color="deeppink4") +
-  geom_cladelabel(node = 668, label = "bold(Unclassified)",parse=T, fontsize = 2,hjust='center', offset=0.12, color="deeppink4") +
-  geom_cladelabel(node = 701, label = "bold(Unclassified)",parse=T, fontsize = 2,hjust='center', offset=0.12,color="deeppink4") +
-  geom_cladelabel(node = 716, label = "bold(Caliciviridae)",parse=T, fontsize = 2,hjust='center', offset=0.12,color="royalblue4") +
-  geom_cladelabel(node = 645, label = "bold(Dicistroviridae/Iflaviridae)",parse=T,hjust='center', offset=0.3, fontsize = 2, color="deeppink4")+
-  geom_cladelabel(node = 629, label = "bold(Secoviridae)",parse=T, fontsize = 2,hjust='center', offset=0.15, color="goldenrod4") +
-  geom_cladelabel(node = 624, label = "bold(Picornaviridae)",parse=T,hjust='center', offset=0.16, fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 602, label = "bold(Secoviridae)",parse=T, fontsize = 2,hjust='center', offset=0.15, color="goldenrod4") +
-  geom_cladelabel(node = 583, label = "bold(Secoviridae)", parse=T,fontsize = 2,hjust='center', offset=0.15, color="goldenrod4")+
-  geom_cladelabel(node = 574, label = "bold(Secoviridae)",parse=T, fontsize = 2,hjust='center', offset=0.15, color="goldenrod4") +
-  geom_cladelabel(node = 560, label = "bold(Secoviridae)",parse=T, fontsize = 2,hjust='center', offset=0.15, color="goldenrod4") +
-  geom_cladelabel(node = 572, label = "bold(Secoviridae)", parse=T,fontsize = 2,hjust='center', offset=0.15, color="goldenrod4") +
-  geom_cladelabel(node = 565, label = "bold(Secoviridae)",parse=T, fontsize = 2,hjust='center', offset=0.15, color="goldenrod4") +
-  geom_cladelabel(node = 567, label = "bold(Secoviridae)", parse=T,fontsize = 2,hjust='center', offset=0.17, color="goldenrod4")
+  geom_cladelabel(node = 132, label = "bold(Nepovirus)",parse=T,hjust='center',offset=0.3, fontsize = 2, color="firebrick3") +
+  geom_cladelabel(node = 114, label = "bold(Sadwavirus)",parse=T,hjust='center', offset=0.3,fontsize = 2, color="goldenrod4") +
+  geom_cladelabel(node = 160, label = "bold(Torradovirus)",parse=T,hjust='center', offset=0.3, fontsize = 2, color="darkorange3") +
+  geom_cladelabel(node = 156, label = "bold(Cheravirus)",parse=T,hjust='center', offset=0.3,fontsize = 2, color="hotpink3") +
+  geom_cladelabel(node = 154, label = "bold(Sequivirus)",parse=T,hjust='center', offset=0.3,fontsize = 2, color="lightpink3") +
+  geom_cladelabel(node = 87, label = "bold(Fabavirus)",parse=T,hjust='center', offset=0.3, fontsize = 2, color="turquoise4") +
+  geom_cladelabel(node = 94, label = "bold(Comovirus)",parse=T,hjust='center', offset=0.3, fontsize = 2, color="dodgerblue3")
 p2
 
 
 #collapse the labeled clades
-p3<-collapse(p2, 776)+geom_point2(aes(subset=(node==776)), size=3, shape=15, color="white")
-p4<-collapse(p3, 808)+geom_point2(aes(subset=(node==808)), size=3, shape=15, color="white")
-p5<-collapse(p4, 440)+geom_point2(aes(subset=(node==440)), size=3, shape=15, color="white")
-p6<-collapse(p5, 446)+geom_point2(aes(subset=(node==446)), size=3, shape=15, color="white")
-p7<-collapse(p6, 499)+geom_point2(aes(subset=(node==499)), size=3, shape=15, color="white")
-p8<-collapse(p7, 496)+geom_point2(aes(subset=(node==496)), size=3, shape=15, color="white")
-p9<-collapse(p8, 492)+geom_point2(aes(subset=(node==492)), size=3, shape=15, color="white")
-p10<-collapse(p9, 466)+geom_point2(aes(subset=(node==466)), size=3, shape=15, color="white")
-p11<-collapse(p10, 457)+geom_point2(aes(subset=(node==457)), size=3, shape=15, color="white")
-p12<-collapse(p11, 475)+geom_point2(aes(subset=(node==475)), size=3, shape=15, color="white")
-p13<-collapse(p12, 479)+geom_point2(aes(subset=(node==479)), size=3, shape=15, color="white")
-p14<-collapse(p13, 743)+geom_point2(aes(subset=(node==743)), size=3, shape=15, color="white")
-p15<-collapse(p14, 729)+geom_point2(aes(subset=(node==729)), size=3, shape=15, color="white")
-p16<-collapse(p15, 721)+geom_point2(aes(subset=(node==721)), size=3, shape=15, color="white")
-p17<-collapse(p16, 533)+geom_point2(aes(subset=(node==533)), size=3, shape=15, color="white")
-p18<-collapse(p17, 693)+geom_point2(aes(subset=(node==693)), size=3, shape=15, color="white")
-p19<-collapse(p18, 668)+geom_point2(aes(subset=(node==668)), size=3, shape=15, color="white")
-p20<-collapse(p19, 701)+geom_point2(aes(subset=(node==701)), size=3, shape=15, color="white")
-p21<-collapse(p20, 716)+geom_point2(aes(subset=(node==716)), size=3, shape=15, color="white")
-p22<-collapse(p21, 645)+geom_point2(aes(subset=(node==645)), size=3, shape=15, color="white")
-p23<-collapse(p22, 629)+geom_point2(aes(subset=(node==629)), size=3, shape=15, color="white")
-p24<-collapse(p23, 624)+geom_point2(aes(subset=(node==624)), size=3, shape=15, color="white")
-p25<-collapse(p24, 602)+geom_point2(aes(subset=(node==602)), size=3, shape=15, color="white")
-p26<-collapse(p25, 583)+geom_point2(aes(subset=(node==583)), size=3, shape=15, color="white")
-p27<-collapse(p26, 574)+geom_point2(aes(subset=(node==574)), size=3, shape=15, color="white")
-p28<-collapse(p27, 560)+geom_point2(aes(subset=(node==560)), size=3, shape=15, color="white")
-p29<-collapse(p28, 572)+geom_point2(aes(subset=(node==572)), size=3, shape=15, color="white")
-p30<-collapse(p29, 565)+geom_point2(aes(subset=(node==565)), size=3, shape=15, color="white")
-p31<-collapse(p30, 567)+geom_point2(aes(subset=(node==567)), size=3, shape=15, color="white")
-p31
-
+p3<-collapse(p2, 132)+geom_point2(aes(subset=(node==132)), size=3, shape=22, fill="firebrick1")
+p4<-collapse(p3, 114)+geom_point2(aes(subset=(node==114)), size=3, shape=22, fill="goldenrod1")
+p5<-collapse(p4, 160)+geom_point2(aes(subset=(node==160)), size=3, shape=22, fill="darkorange1")
+p6<-collapse(p5, 156)+geom_point2(aes(subset=(node==156)), size=3, shape=22, fill="hotpink1")
+p7<-collapse(p6, 154)+geom_point2(aes(subset=(node==154)), size=3, shape=22, fill="lightpink1")
+p8<-collapse(p7, 87)+geom_point2(aes(subset=(node==87)), size=3, shape=22, fill="turquoise1")
+p9<-collapse(p8, 94)+geom_point2(aes(subset=(node==94)), size=3, shape=22, fill="dodgerblue1")
+p9
 
 ##add bootstrap values to this tree
-p31.dat <- p31$data
-p31.dat$Bootstrap <- NA
-Bootstrap<-p31.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p31.dat$label)] <- as.numeric(p31.dat$label[(length(tree.dat$tip_label)+1):length(p0.dat$label)])#fill with label
+p9.dat <- p9$data
+p9.dat$Bootstrap <- NA
+Bootstrap<-p9.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p9.dat$label)] <- as.numeric(p9.dat$label[(length(tree.dat$tip_label)+1):length(p9.dat$label)])#fill with label
 
-p31.1 <- p31  %<+% p0.dat + 
+p9.1 <- p9  %<+% p9.dat + 
   ggnewscale::new_scale_fill() + 
   geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
@@ -338,44 +292,13 @@ p31.1 <- p31  %<+% p0.dat +
         legend.text = element_text(size=8),
         legend.title = element_text(size=8),
         legend.key.size = unit(0.3, "cm"))
-p31.1
-
-
-
-
-
+p9.1
 
 ##Clades to collapse
-#776 Picornaviridae: Enterovirus with some random iflavirus
-#808 Caliciviridae: Norovirus, vesivirus, calicivirus/sadwavirus, dicipivirus, iflavirus
-#440 Picornaviridae: cosavirus
-#446 picornaviridae: avisivirus, aalivirus, parechovirus, avihepatoivirus mainly avian picornaviridae
-#499 caliciviridae: norovirus, calicivirus, nebovirus, one bat sapovirus
-#496 unclassified picornaviridae
-#492 unclassified picornaviridae
-#466 caliciviridae: vesivirus, 3 random viruses
-#457 picornaviridae: cardiovirus, malagasivirus, orivirus, tremovirus, random sadwavirus
-#475 picornaviridae: limnipivirus, apthovirus, potamipivirus
-#479 picornaviridae: megrivirus, gallivirus, oscivirus, rosavirus
-#743 caliciviridae: lagosvirus, sapovirus, two random apthovirus
-#729: random secoviridae, iflaviridae
-#721 random marnaviridae, picornaviridae, iflaviridae
-#533 random marnaviridae and caliciviridae
-#693 random
-#668 random
-#701 unclassified
-#716 caliciviridae: aparavirus
-#645 dicistroviridae and iflaviridae mostly: iflavirus, dicistrovirus, cripavirus, centovirus, triatovirus
-#629 secoviridae: nepovirus, and some picornaviridae: megrivirus
-#624 unclassified picornaviridae with some iflavirus
-#602 mostly secoviridae nepovirus
-#583 secoviridae torradovirus
-#574 secoviridae: comovirus
-#560 secoviridae: nepovirus, one sogarnavirus
-#572 secoviridae: waikavirus
-#565: secoviridae and polycipiviridae
-#567: secoviridae: comovirus
-
-
-
-
+##132 Nepovirus
+#114 sadwavirus
+#160 Torradovirus
+#156 cheravirus
+#154 sequivirus
+#87 fabavirus
+#94 Comovirus
