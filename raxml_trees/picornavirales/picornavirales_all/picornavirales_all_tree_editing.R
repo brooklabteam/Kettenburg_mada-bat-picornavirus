@@ -197,7 +197,7 @@ colz2 = c('1' =  "yellow", '0' = "white")
 
 
 ##uncollapsed tree
-p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=bat_Host), size=3, show.legend = T) +
+p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=bat_Host), size=3,stroke=0,show.legend = T) +
   scale_fill_manual(values=colz) +
   scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
@@ -208,18 +208,17 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=
   geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
   theme(legend.position = "none", 
         legend.direction = "vertical",
-        legend.title = element_blank(),
         legend.text = element_text(size=7), 
         legend.key.size = unit(0.2, "cm")) +
   xlim(c(0,8))
 
 p1
 
-leg_family<-get_legend(p1)
-leg_family<-as.ggplot(leg_family)
-leg_family<-leg_family+theme(plot.margin = unit(c(0, 0, 0, 0), "cm"))
-leg_family<-as.ggplot(leg_family)
-leg_family
+# leg_family<-get_legend(p1)
+# leg_family<-as.ggplot(leg_family)
+# leg_family<-leg_family+theme(plot.margin = unit(c(0, 0, 0, 0), "cm"))
+# leg_family<-as.ggplot(leg_family)
+# leg_family
 
 #add node shapes to represent bootstrap values
 p0.dat <- p0$data
@@ -229,31 +228,37 @@ Bootstrap<-p0.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p0.dat$label)]
 #add bootstrap values to original plot
 p1.1 <- p1  %<+% p0.dat + 
   ggnewscale::new_scale_fill() + 
-  geom_nodepoint(aes(fill=Bootstrap), shape=21, color="black", size=1.5, stroke=.1, show.legend = T) + 
+  geom_nodepoint(aes(fill=Bootstrap), shape=21, stroke=0,size=1.5, show.legend = T) + 
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
-  guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
-  theme(legend.position = "none",
+  #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
+  theme(legend.position = "left",
         legend.direction = "vertical",
-        legend.text = element_text(size=7),
-        legend.title = element_text(size=7),
-        legend.key.size = unit(0.2, "cm"))
+        legend.text = element_text(size=8),
+        legend.title = element_text(size=8),
+        legend.key.size = unit(0.3, "cm"))
 p1.1
 
+# p1.2<-p1.1%>%ggtree::rotate(node=570)
+# p1.2
 
-leg_bootstrap<-get_legend(p1.1)
-leg_bootstrap<-as.ggplot(leg_bootstrap)
-leg_bootstrap
-leg_bootstrap<-leg_bootstrap+theme(plot.margin = unit(c(0, 0, 0, 0), "cm"))
-leg_bootstrap<-as.ggplot(leg_bootstrap)
-leg_bootstrap
+ggsave("uncollapsed_picornavirales.tiff", height=35, width=15, units=c("in"))
+
+# leg_bootstrap<-get_legend(p1.1)
+# leg_bootstrap<-as.ggplot(leg_bootstrap)
+# leg_bootstrap
+# leg_bootstrap<-leg_bootstrap+theme(plot.margin = unit(c(0, 0, 0, 0), "cm"))
+# leg_bootstrap<-as.ggplot(leg_bootstrap)
+# leg_bootstrap
+# 
+# legend<-plot_grid(leg_bootstrap,leg_family,NULL, ncol=1, rel_heights = c(4,1,4))
+# legend
+# 
+# final_uncollapsed<-plot_grid(legend,p1.1, rel_widths = c(0.10,1))
+# final_uncollapsed
 
 
-legend<-plot_grid(leg_bootstrap,leg_family,NULL, ncol=1, rel_heights = c(4,1,4))
-legend
 
 
-final_uncollapsed<-plot_grid(legend,p1.1, rel_widths = c(0.10,1))
-final_uncollapsed
 
 ##Get the clade numbers so we can collapse unnnecesary clades
 ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
