@@ -40,7 +40,7 @@ colz = c("Caliciviridae" = "royalblue3",    "Picornaviridae"  = "turquoise1",   
 
 #pick order for the labels
 dat$Family <- factor(dat$Family, levels = c("Dicistroviridae",    "Secoviridae",   "Marnaviridae",   "Picornaviridae",   "Solinviviridae",
-                                            "Caliciviridae",    "Iflaviridae",  "Coronaviridae",   "Polycipiviridae",  "Unclassified"))   
+                                            "Caliciviridae",    "Iflaviridae", "Polycipiviridae",  "Unclassified","Coronaviridae"))   
 
 dat$novel <- as.factor(dat$novel)
 
@@ -202,7 +202,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=
   scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=2) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=2, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
@@ -215,6 +215,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=
 p1
 
 #add node shapes to represent bootstrap values
+p0<-ggtree(rooted.tree)
 p0.dat <- p0$data
 p0.dat$Bootstrap <- NA
 Bootstrap<-p0.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p0.dat$label)] <- as.numeric(p0.dat$label[(length(tree.dat$tip_label)+1):length(p0.dat$label)])#fill with label
@@ -235,8 +236,6 @@ p1.1
 # p1.2<-p1.1%>%ggtree::rotate(node=570)
 # p1.2
 
-ggsave("uncollapsed_picornavirales.PDF", height=30, width=15, units=c("in"))
-
 ##Get the clade numbers so we can collapse unnnecesary clades
 ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
 
@@ -249,7 +248,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=
   scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=2) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=2, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
@@ -291,35 +290,35 @@ p2
 
 
 #collapse the labeled clades
-p3<-collapse(p2, 776)+geom_point2(aes(subset=(node==776)), size=3, shape=15, color="white")
-p4<-collapse(p3, 808)+geom_point2(aes(subset=(node==808)), size=3, shape=15, color="white")
-p5<-collapse(p4, 440)+geom_point2(aes(subset=(node==440)), size=3, shape=15, color="white")
-p6<-collapse(p5, 446)+geom_point2(aes(subset=(node==446)), size=3, shape=15, color="white")
-p7<-collapse(p6, 499)+geom_point2(aes(subset=(node==499)), size=3, shape=15, color="white")
-p8<-collapse(p7, 496)+geom_point2(aes(subset=(node==496)), size=3, shape=15, color="white")
-p9<-collapse(p8, 492)+geom_point2(aes(subset=(node==492)), size=3, shape=15, color="white")
-p10<-collapse(p9, 466)+geom_point2(aes(subset=(node==466)), size=3, shape=15, color="white")
-p11<-collapse(p10, 457)+geom_point2(aes(subset=(node==457)), size=3, shape=15, color="white")
-p12<-collapse(p11, 475)+geom_point2(aes(subset=(node==475)), size=3, shape=15, color="white")
-p13<-collapse(p12, 479)+geom_point2(aes(subset=(node==479)), size=3, shape=15, color="white")
-p14<-collapse(p13, 743)+geom_point2(aes(subset=(node==743)), size=3, shape=15, color="white")
-p15<-collapse(p14, 729)+geom_point2(aes(subset=(node==729)), size=3, shape=15, color="white")
-p16<-collapse(p15, 721)+geom_point2(aes(subset=(node==721)), size=3, shape=15, color="white")
-p17<-collapse(p16, 533)+geom_point2(aes(subset=(node==533)), size=3, shape=15, color="white")
-p18<-collapse(p17, 693)+geom_point2(aes(subset=(node==693)), size=3, shape=15, color="white")
-p19<-collapse(p18, 668)+geom_point2(aes(subset=(node==668)), size=3, shape=15, color="white")
-p20<-collapse(p19, 701)+geom_point2(aes(subset=(node==701)), size=3, shape=15, color="white")
-p21<-collapse(p20, 716)+geom_point2(aes(subset=(node==716)), size=3, shape=15, color="white")
-p22<-collapse(p21, 645)+geom_point2(aes(subset=(node==645)), size=3, shape=15, color="white")
-p23<-collapse(p22, 629)+geom_point2(aes(subset=(node==629)), size=3, shape=15, color="white")
-p24<-collapse(p23, 624)+geom_point2(aes(subset=(node==624)), size=3, shape=15, color="white")
-p25<-collapse(p24, 602)+geom_point2(aes(subset=(node==602)), size=3, shape=15, color="white")
-p26<-collapse(p25, 583)+geom_point2(aes(subset=(node==583)), size=3, shape=15, color="white")
-p27<-collapse(p26, 574)+geom_point2(aes(subset=(node==574)), size=3, shape=15, color="white")
-p28<-collapse(p27, 560)+geom_point2(aes(subset=(node==560)), size=3, shape=15, color="white")
-p29<-collapse(p28, 572)+geom_point2(aes(subset=(node==572)), size=3, shape=15, color="white")
-p30<-collapse(p29, 565)+geom_point2(aes(subset=(node==565)), size=3, shape=15, color="white")
-p31<-collapse(p30, 567)+geom_point2(aes(subset=(node==567)), size=3, shape=15, color="white")
+p3<-collapse(p2, 776)+geom_point2(aes(subset=(node==776)), size=3, shape=22, fill="turquoise1")
+p4<-collapse(p3, 808)+geom_point2(aes(subset=(node==808)), size=3, shape=22, fill="royalblue3")
+p5<-collapse(p4, 440)+geom_point2(aes(subset=(node==440)), size=3, shape=22, fill="turquoise1")
+p6<-collapse(p5, 446)+geom_point2(aes(subset=(node==446)), size=3, shape=22, fill="turquoise1")
+p7<-collapse(p6, 499)+geom_point2(aes(subset=(node==499)), size=3, shape=22, fill="royalblue3")
+p8<-collapse(p7, 496)+geom_point2(aes(subset=(node==496)), size=3, shape=22, fill="turquoise1")
+p9<-collapse(p8, 492)+geom_point2(aes(subset=(node==492)), size=3, shape=22, fill="turquoise1")
+p10<-collapse(p9, 466)+geom_point2(aes(subset=(node==466)), size=3, shape=22, fill="royalblue3")
+p11<-collapse(p10, 457)+geom_point2(aes(subset=(node==457)), size=3, shape=22, fill="turquoise1")
+p12<-collapse(p11, 475)+geom_point2(aes(subset=(node==475)), size=3, shape=22, fill="turquoise1")
+p13<-collapse(p12, 479)+geom_point2(aes(subset=(node==479)), size=3, shape=22, fill="turquoise1")
+p14<-collapse(p13, 743)+geom_point2(aes(subset=(node==743)), size=3, shape=22, fill="royalblue3")
+p15<-collapse(p14, 729)+geom_point2(aes(subset=(node==729)), size=3, shape=22, fill="deeppink4")
+p16<-collapse(p15, 721)+geom_point2(aes(subset=(node==721)), size=3, shape=22, fill="deeppink4")
+p17<-collapse(p16, 533)+geom_point2(aes(subset=(node==533)), size=3, shape=22, fill="deeppink4")
+p18<-collapse(p17, 693)+geom_point2(aes(subset=(node==693)), size=3, shape=22, fill="deeppink4")
+p19<-collapse(p18, 668)+geom_point2(aes(subset=(node==668)), size=3, shape=22, fill="deeppink4")
+p20<-collapse(p19, 701)+geom_point2(aes(subset=(node==701)), size=3, shape=22, fill="deeppink4")
+p21<-collapse(p20, 716)+geom_point2(aes(subset=(node==716)), size=3, shape=22, fill="royalblue3")
+p22<-collapse(p21, 645)+geom_point2(aes(subset=(node==645)), size=3, shape=22, fill="deeppink4")
+p23<-collapse(p22, 629)+geom_point2(aes(subset=(node==629)), size=3, shape=22, fill="goldenrod1")
+p24<-collapse(p23, 624)+geom_point2(aes(subset=(node==624)), size=3, shape=22, fill="turquoise1")
+p25<-collapse(p24, 602)+geom_point2(aes(subset=(node==602)), size=3, shape=22, fill="goldenrod1")
+p26<-collapse(p25, 583)+geom_point2(aes(subset=(node==583)), size=3, shape=22, fill="goldenrod1")
+p27<-collapse(p26, 574)+geom_point2(aes(subset=(node==574)), size=3, shape=22, fill="goldenrod1")
+p28<-collapse(p27, 560)+geom_point2(aes(subset=(node==560)), size=3, shape=22, fill="goldenrod1")
+p29<-collapse(p28, 572)+geom_point2(aes(subset=(node==572)), size=3, shape=22, fill="goldenrod1")
+p30<-collapse(p29, 565)+geom_point2(aes(subset=(node==565)), size=3, shape=22, fill="goldenrod1")
+p31<-collapse(p30, 567)+geom_point2(aes(subset=(node==567)), size=3, shape=22, fill="goldenrod1")
 p31
 
 
