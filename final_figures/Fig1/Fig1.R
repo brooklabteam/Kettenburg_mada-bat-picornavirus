@@ -269,6 +269,7 @@ p9 <- ggplot(dat, aes(x=species, y=virus)) +
   #              switch="y")+
   facet_nested(family+type~., scales="free", space="free",
                switch="y", nest_line = element_line(color="white"), solo_line = TRUE)+
+  geom_text(aes(label=num_genome))+
   labs(#title = expression("Diversity of" ~italic(Picornavirales) ~"sequences"),
     x = "",
     y= "",
@@ -276,6 +277,7 @@ p9 <- ggplot(dat, aes(x=species, y=virus)) +
     title="")+
   theme_linedraw()+
   scale_y_discrete(position="right")+
+  scale_x_discrete(position="top")+
   theme(plot.margin = margin(0, 0, 0, 0, "pt"),
         plot.background = element_blank(),
         panel.grid.major = element_blank(),
@@ -292,13 +294,14 @@ p9
 
 p6 <- ggplot(ED, aes(x=type, y=virus)) +
   geom_tile(aes(fill = cut(num_genome,breaks=0:3, labels=1:3))) +
-  scale_fill_manual(values=c("lightblue1","skyblue", "royalblue1")) +
+  scale_fill_manual(values=c("lightblue1","royalblue1")) +
   #scale_fill_viridis_c(option = "G", direction = -1) +
   #facet_wrap(~family, ncol=1,  scales = "free_y")+
   # facet_nested(family~., scales="free", space="free",
   #              switch="y")+
   facet_nested(family~., scales="free", space="free",
                switch="y", nest_line = element_line(color="white"), solo_line = TRUE)+
+  geom_text(aes(label=num_genome))+
   labs(#title = expression("Diversity of" ~italic(Picornavirales) ~"sequences"),
     x = "",
     y= "",
@@ -320,10 +323,11 @@ p6
 
 p7 <- ggplot(PR, aes(x=type, y=virus)) +
   geom_tile(aes(fill = cut(num_genome,breaks=0:3, labels=1:3))) +
-  scale_fill_manual(values=c("lightblue1","skyblue", "royalblue1")) +
+  scale_fill_manual(values=c("lightblue1","royalblue1")) +
   #scale_fill_viridis_c(option = "G", direction = -1) +
   facet_nested(family~., scales="free", space="free",
                switch="y", nest_line = element_line(color="white"), solo_line = TRUE)+
+  geom_text(aes(label=num_genome))+
   labs(#title = expression("Diversity of" ~italic(Picornavirales) ~"sequences"),
     x = "Genome type",
     y= "",
@@ -344,10 +348,11 @@ p7
 
 p8 <- ggplot(RM, aes(x=type, y=virus)) +
   geom_tile(aes(fill = cut(num_genome,breaks=0:3, labels=1:3))) +
-  scale_fill_manual(values=c("lightblue1","skyblue", "royalblue1")) +
+  scale_fill_manual(values=c("lightblue1","lightskyblue", "royalblue1")) +
   #scale_fill_viridis_c(option = "G", direction = -1) +
   facet_nested(family~., scales="free", space="free",
                switch="y", nest_line = element_line(color="white"), solo_line = TRUE)+
+  geom_text(aes(label=num_genome))+
   labs(#title = expression("Diversity of" ~italic(Picornavirales) ~"sequences"),
     x = "",
     y= "",
@@ -382,14 +387,8 @@ final
 final<- plot_grid(p6,p7,p8,labels=c("","",""),rel_widths = c(1, 1,1), rel_heights = c(1, 1,1),ncol=3, align="hv", axis="b")
 final
 
-final2<- plot_grid(p4,final,leg,labels=c("A","B",""),rel_widths = c(1, 2,0.25), rel_heights = c(2, 1),ncol=3, align="hv", axis="t")
+final2<- plot_grid(p4,final,leg,labels=c("","","C"),rel_widths = c(1, 2,0.25), rel_heights = c(2, 1),ncol=3, align="hv", axis="t")
 final2
-
-
-
-
-
-
 
 
 
