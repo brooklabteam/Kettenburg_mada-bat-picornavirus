@@ -8,7 +8,6 @@ library(ggnewscale)
 library(gdata)
 library(phylotools)
 library(phylobase)
-install.packages("plotTree")
 
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
 
@@ -197,62 +196,64 @@ shapez = c("Bat host" =  17, "Non-bat host" = 19)
 colz2 = c('1' =  "yellow", '0' = "white")
 
 
-add_support_labels<-function(node=NULL,support,
-                             cols=c("white","black"),cex=1.5){
-  scale<-c(min(support,na.rm=TRUE),1)
-  support<-(support-scale[1])/diff(scale)
-  pp<-get("last_plot.phylo",envir=.PlotPhyloEnv)
-  if(is.null(node)) node<-1:pp$Nnode+pp$Ntip
-  colfunc<-colorRamp(cols)
-  node_cols<-colfunc(support)/255
-  x<-pp$xx[node] 
-  y<-pp$yy[node]
-  for(i in 1:nrow(node_cols)){
-    if(!is.na(support[i]))
-      points(x[i],y[i],pch=21,cex=cex,
-             bg=rgb(node_cols[i,1],node_cols[i,2],node_cols[i,3]))
-  }
-  invisible(scale)
-}
-
-bs<-as.numeric(rooted.tree$node.label)
-bs
-
-bs[bs<0.75]<-0
-bs[intersect(which(bs>=0.75),which(bs<0.95))]<-0.5
-bs[bs>=0.95]<-1
-
-
 ##uncollapsed tree
 p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=bat_Host), size=3, show.legend = T) +
-  #geom_nodelab(size=2,nudge_x = -.07, nudge_y = -.1) +
   scale_fill_manual(values=colz) +
   scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
-  ggnewscale::new_scale_fill() +
-  geom_tiplab(aes(fill = novel), geom = "label", family="Helvetica", label.size = 0, alpha=.3, size=2, show.legend=FALSE) +#
+  new_scale_fill() +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=2) +
+  guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
-  theme(legend.position = "left", 
+  theme(legend.position = "none", 
         legend.direction = "vertical",
         legend.title = element_blank(),
         legend.text = element_text(size=7), 
         legend.key.size = unit(0.2, "cm")) +
   xlim(c(0,8))
+
 p1
 
-p1.dat <- p1$data
-p1.dat$node_fill <- NA
-p1.dat$node_fill[(length(tree.dat$tip_label)+1):length(p1.dat$label)] <- as.numeric(p1.dat$label[(length(tree.dat$tip_label)+1):length(p1.dat$label)])#fill with label
+leg_family<-get_legend(p1)
+leg_family<-as.ggplot(leg_family)
+leg_family<-leg_family+theme(plot.margin = unit(c(0, 0, 0, 0), "cm"))
+leg_family<-as.ggplot(leg_family)
+leg_family
 
+#add node shapes to represent bootstrap values
+p0.dat <- p0$data
+p0.dat$Bootstrap <- NA
+Bootstrap<-p0.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p0.dat$label)] <- as.numeric(p0.dat$label[(length(tree.dat$tip_label)+1):length(p0.dat$label)])#fill with label
 
-p1.1 <- p1  %<+% p1.dat + 
+#add bootstrap values to original plot
+p1.1 <- p1  %<+% p0.dat + 
   ggnewscale::new_scale_fill() + 
-  geom_nodepoint(aes(fill=node_fill), shape=21, color="black", size=1, stroke=.1, show.legend = F) + 
+  geom_nodepoint(aes(fill=Bootstrap), shape=21, color="black", size=1.5, stroke=.1, show.legend = T) + 
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
-  
+  guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
+  theme(legend.position = "none",
+        legend.direction = "vertical",
+        legend.text = element_text(size=7),
+        legend.title = element_text(size=7),
+        legend.key.size = unit(0.2, "cm"))
 p1.1
 
+
+leg_bootstrap<-get_legend(p1.1)
+leg_bootstrap<-as.ggplot(leg_bootstrap)
+leg_bootstrap
+leg_bootstrap<-leg_bootstrap+theme(plot.margin = unit(c(0, 0, 0, 0), "cm"))
+leg_bootstrap<-as.ggplot(leg_bootstrap)
+leg_bootstrap
+
+
+legend<-plot_grid(leg_bootstrap,leg_family,NULL, ncol=1, rel_heights = c(4,1,4))
+legend
+
+
+final_uncollapsed<-plot_grid(legend,p1.1, rel_widths = c(0.10,1))
+final_uncollapsed
 
 ##Get the clade numbers so we can collapse unnnecesary clades
 ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
