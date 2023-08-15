@@ -1,6 +1,5 @@
 molecule,start,end,mid,gene,type
 Bat picornavirus,10,586,298,5'UTR,full
-Bat picornavirus,8081,8315,7800,3'UTR,full
 Bat picornavirus,587,868,727.5,L,full
 Bat picornavirus,869,1066,967.5,VP4,full
 Bat picornavirus,1067,1820,1443.5,VP2,full
@@ -12,7 +11,7 @@ Bat picornavirus,4612,5619,5115.5,2C,full
 Bat picornavirus,5620,6031,5825.5,3A,full
 Bat picornavirus,6032,6100,6066,3B,full
 Bat picornavirus,6101,6649,6649,3C,full
-Bat picornavirus,6650,8077,7363.5,3D,full
+Bat picornavirus,6650,7730,7363.5,3D,full
 Cheravirus,436,3705,2070.5,Polyprotein,partial
 Felisavirus,637,1749,1193,Non-structural polyprotein,partial
 Hepatovirus,1,960,480.5,5'UTR,partial
