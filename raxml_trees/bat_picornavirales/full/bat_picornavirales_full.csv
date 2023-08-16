@@ -1,4 +1,4 @@
-Accession,Isolate,Species,Genus,Family,Length,Country,Host,bat_Host,Collection_Date,novel
+Accession,Isolate,Species,Genus,Family,Length,Country,source,Host,Collection_Date,novel
 HQ595340.1,,Bat picornavirus 1,Unclassified,Picornaviridae,7753,Hong Kong,Miniopterus pusillus,1,2008-12-19,0
 HQ595341.1,,Bat picornavirus 1,Unclassified,Picornaviridae,7641,Hong Kong,Miniopterus schreibersii,1,2008-10-17,0
 HQ595342.1,,Bat picornavirus 2,Unclassified,Picornaviridae,7693,Hong Kong,Miniopterus magnater,1,2005-09-06,0

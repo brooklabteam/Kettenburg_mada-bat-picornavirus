@@ -1,4 +1,4 @@
-Accession,old_tip_label,Isolate,Species,Genus,Family,Country,Host,bat_Host,Collection_Date,novel
+Accession,old_tip_label,Isolate,Species,Genus,Family,Country,source,Host,Collection_Date,novel
 NC_000940.1,NC_000940.1,,Sapporo virus,Sapovirus,Caliciviridae,USA,Sus scrofa,0,1999,0
 NC_001481.2,NC_001481.2,,Feline calicivirus,Vesivirus,Caliciviridae,USA,Felidae,0,2000,0
 NC_001543.1,NC_001543.1,,Rabbit hemorrhagic disease virus,Lagovirus,Caliciviridae,Germany,Oryctolagus,0,2000,0

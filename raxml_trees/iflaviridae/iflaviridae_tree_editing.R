@@ -12,7 +12,7 @@ library(phylobase)
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
 
 ##Picornavirales all full and partial sequences >3kb
-setwd(paste0(homewd,"/raxml_trees/secoviridae"))
+setwd(paste0(homewd,"/raxml_trees/iflaviridae"))
 
 #load the tree
 tree <-  read.tree("T1.raxml.supportFBP") 
@@ -22,25 +22,23 @@ rooted.tree <- root(tree, which(tree$tip.label == "NC_030886.1"))
 plot(rooted.tree)
 
 #load tree data prepared from elsewhere
-dat <- read.csv(("secoviridae_refseq_metadata.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(("iflaviridae_refseq_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
 
 #check that your metadata matches your tree data
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #84
-length(tree$tip.label) #84
+nrow(dat) #48
+length(tree$tip.label) #48
 
 #check subgroup names
 unique(dat$Genus)
 
-colz = c("Waikavirus" = "royalblue3",    "Fabavirus"  = "turquoise1",   "Sadwavirus"  = "goldenrod1",   "Comovirus"   = "dodgerblue1" ,   "Nepovirus" = "firebrick1" ,
-         "Sequivirus"  = "lightpink1" ,    "Cheravirus"  = "hotpink1" ,  "Stralarivirus" = "lightskyblue" ,   "Coronavirus"  = "black", "Torradovirus"  = "darkorange1")
+colz = c("Iflavirus" = "royalblue3",    "Felisavirus"  = "turquoise1",   "Picorna-like virus"  = "goldenrod1", "Unclassified"="hotpink1", "Coronavirus"  = "black")
 
 #pick order for the labels
-dat$Genus <- factor(dat$Genus, levels = c("Waikavirus" ,  "Fabavirus",   "Sadwavirus",   "Comovirus",   "Nepovirus",
-                                          "Sequivirus",    "Cheravirus",  "Stralarivirus",  "Torradovirus",  "Coronavirus"))   
+dat$Genus <- factor(dat$Genus, levels = c("Iflavirus" ,  "Picorna-like virus", "Felisavirus",  "Unclassified",  "Coronavirus"))   
 
 dat$novel <- as.factor(dat$novel)
 
@@ -62,8 +60,8 @@ dat$Isolate  #some are blank, so convert those to NA
 dat$Isolate[dat$Isolate==""] <- NA
 dat$Accession #all good
 
-dat$Host
-dat$Host[dat$Host==""] <- NA
+dat$source
+dat$source[dat$source==""] <- NA
 dat$Country #some are blank, so convert those to NA
 dat$Country[dat$Country==""] <- NA
 dat$Collection_Date #these are messy, some are years and some are full dates. I just want years, will manually fix
@@ -72,97 +70,97 @@ dat$Collection_Date #these are messy, some are years and some are full dates. I 
 #now, select the name based on what components are present for each sample
 
 #all components with values:
-dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) &!is.na(dat$Country)] <- paste(dat$Accession[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) &!is.na(dat$Country)], "|",
-                                                                                                           dat$Genus[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) &!is.na(dat$Country)], "|",
-                                                                                                           dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) &!is.na(dat$Country)], "|", 
-                                                                                                           dat$Host[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) &!is.na(dat$Country)], "|",
-                                                                                                           dat$Country[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) &!is.na(dat$Country)], "|",
-                                                                                                           dat$Collection_Date[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) &!is.na(dat$Country)])
+dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)] <- paste(dat$Accession[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
+                                                                                                           dat$Genus[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
+                                                                                                           dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|", 
+                                                                                                           dat$source[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
+                                                                                                           dat$Country[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
+                                                                                                           dat$Collection_Date[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)])
 
 #and if there is an NA just drop it
 
 #here NA in Isolate only:
-dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) &!is.na(dat$Country)] <- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) &!is.na(dat$Country)], "|", 
-                                                                                                          dat$Genus[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) &!is.na(dat$Country)], "|", 
-                                                                                                          #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) &!is.na(dat$Country)], "|", 
-                                                                                                          dat$Host[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) &!is.na(dat$Country)], "|",
-                                                                                                          dat$Country[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) &!is.na(dat$Country)], "|",
-                                                                                                          dat$Collection_Date[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) &!is.na(dat$Country)])
+dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)] <- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|", 
+                                                                                                          dat$Genus[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|", 
+                                                                                                          #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|", 
+                                                                                                          dat$source[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
+                                                                                                          dat$Country[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
+                                                                                                          dat$Collection_Date[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)])
 
-#and Host only:
-dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) &is.na(dat$Host) &!is.na(dat$Country)] <- paste(dat$Accession[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)], "|", 
-                                                                                                          dat$Genus[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)], "|", 
-                                                                                                          dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)], "|", 
-                                                                                                          #dat$Host[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)], "|",
-                                                                                                          dat$Country[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)], "|",
-                                                                                                          dat$Collection_Date[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)])
+#and source only:
+dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) &is.na(dat$source) &!is.na(dat$Country)] <- paste(dat$Accession[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|", 
+                                                                                                          dat$Genus[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|", 
+                                                                                                          dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|", 
+                                                                                                          #dat$source[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
+                                                                                                          dat$Country[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
+                                                                                                          dat$Collection_Date[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)])
 
 
 #and Country only
-dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) & is.na(dat$Country)] <- paste(dat$Accession[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) & is.na(dat$Country)], "|", 
-                                                                                                           dat$Genus[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) & is.na(dat$Country)], "|", 
-                                                                                                           dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) & is.na(dat$Country)], "|", 
-                                                                                                           dat$Host[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) & is.na(dat$Country)], "|",
-                                                                                                           #dat$Country[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) &!is.na(dat$Country)], "|",
-                                                                                                           dat$Collection_Date[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) & is.na(dat$Country)])
+dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)] <- paste(dat$Accession[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
+                                                                                                           dat$Genus[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
+                                                                                                           dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
+                                                                                                           dat$source[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|",
+                                                                                                           #dat$Country[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
+                                                                                                           dat$Collection_Date[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)])
 
 #and accession number only
 #check:
-dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) &!is.na(dat$Host) & !is.na(dat$Country)] #none with this condition
+dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) &!is.na(dat$source) & !is.na(dat$Country)] #none with this condition
 
 
 
-#now NA in Isolate + Host
+#now NA in Isolate + source
 #first check if there are any
-dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)] #no
-# dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)]<- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)], "|",
-#                                                                                                        dat$Genus[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)], "|",
-#                                                                                                        #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) & is.na(dat$Country)], "|",
-#                                                                                                        #dat$Host[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)], "|",
-#                                                                                                        dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)], "|",
-#                                                                                                        dat$Collection_Date[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) &!is.na(dat$Country)])
+dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)] #no
+# dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)]<- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
+#                                                                                                        dat$Genus[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
+#                                                                                                        #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|",
+#                                                                                                        #dat$source[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|",
+#                                                                                                        dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
+#                                                                                                        dat$Collection_Date[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)])
 #Isolate + accession only
-dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$Host) &!is.na(dat$Country)] #no
+dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) &!is.na(dat$Country)] #no
 
 #Isolate + Country only
-dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)] #no
-# dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)] <- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)], "|", 
-#                                                                                                                 dat$Genus[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)], "|", 
-#                                                                                                           #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$Host) & is.na(dat$Country)], "|", 
-#                                                                                                           dat$Host[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)], "|",
-#                                                                                                           #dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$Host) &!is.na(dat$Country)], "|",
-#                                                                                                           dat$Collection_Date[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)])
+dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)] #no
+# dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)] <- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|", 
+#                                                                                                                 dat$Genus[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|", 
+#                                                                                                           #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
+#                                                                                                           dat$source[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|",
+#                                                                                                           #dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) &!is.na(dat$Country)], "|",
+#                                                                                                           dat$Collection_Date[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)])
 
-#now look at the other 2-way NAs: accession + Host, accession + Country, Host+Country
-dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$Host) & !is.na(dat$Country)] #none
+#now look at the other 2-way NAs: accession + source, accession + Country, source+Country
+dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$source) & !is.na(dat$Country)] #none
 
-dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$Host) & is.na(dat$Country)] #none
-dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)] #none
+dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) & is.na(dat$Country)] #none
+dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)] #none
 
 #replace
-# dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)]<- paste(dat$Accession[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)], "|", 
-#                                                                                                                 dat$Genus[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)], "|", 
-#                                                                                                                 dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)], "|", 
-#                                                                                                                 #dat$Host[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)], "|",
-#                                                                                                                 #dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$Host) &!is.na(dat$Country)], "|",
-#                                                                                                                 dat$Collection_Date[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)])
+# dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)]<- paste(dat$Accession[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|", 
+#                                                                                                                 dat$Genus[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|", 
+#                                                                                                                 dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|", 
+#                                                                                                                 #dat$source[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|",
+#                                                                                                                 #dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) &!is.na(dat$Country)], "|",
+#                                                                                                                 dat$Collection_Date[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)])
 
-#and 3-way NAs: Isolate + accession + Host
-dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$Host) & !is.na(dat$Country)] #none
+#and 3-way NAs: Isolate + accession + source
+dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$source) & !is.na(dat$Country)] #none
 #Isolate + accession + Country
-dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$Host) & is.na(dat$Country)] #none
-#Isolate Host Country
-dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)] #none
-# dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)] <- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)], "|",
-#                                                                                                                 dat$Genus[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)], "|",
-#                                                                                                                 #dat$Isolate[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)], "|",
-#                                                                                                                 #dat$Host[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$Host) &is.na(dat$Country)], "|",
-#                                                                                                                 #dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$Host) &!is.na(dat$Country)], "|",
-#                                                                                                                 dat$Collection_Date[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)])
-# #accession Country Host
-dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)] #none
+dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) & is.na(dat$Country)] #none
+#Isolate source Country
+dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)] #none
+# dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)] <- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|",
+#                                                                                                                 dat$Genus[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|",
+#                                                                                                                 #dat$Isolate[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|",
+#                                                                                                                 #dat$source[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|",
+#                                                                                                                 #dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) &!is.na(dat$Country)], "|",
+#                                                                                                                 dat$Collection_Date[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)])
+# #accession Country source
+dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)] #none
 #and all four
-dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$Host) & is.na(dat$Country)] #none
+dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)] #none
 
 #look at dat$new_label
 dat$new_label #they all look great
@@ -177,7 +175,7 @@ tree.dat <- merge(tree.dat, dat, by = "old_tip_label", all.x = F, sort = F)
 names(tree.dat)
 
 tree.dat$tip_label <- tree.dat$new_label
-tree.dat <- dplyr::select(tree.dat, tip_label, Isolate, Host, bat_Host, Country, Collection_Date, Genus, Genus, novel, old_tip_label)
+tree.dat <- dplyr::select(tree.dat, tip_label, Isolate, Host, source, Country, Collection_Date, Genus, Genus, novel, old_tip_label)
 
 rooted.tree$tip.label <- tree.dat$tip_label
 
@@ -189,15 +187,14 @@ cbind(tree.dat$old_tip_label, rooted.tree$tip.label)
 #check out the labels
 tree.dat$tip_label#all look good
 
-tree.dat$bat_Host[tree.dat$bat_Host==0] <- "Non-bat host"
-tree.dat$bat_Host[tree.dat$bat_Host==1] <- "Bat host"
-tree.dat$bat_Host <- as.factor(tree.dat$bat_Host)
+tree.dat$Host[tree.dat$Host==0] <- "Non-bat host"
+tree.dat$Host[tree.dat$Host==1] <- "Bat host"
+tree.dat$Host <- as.factor(tree.dat$Host)
 shapez = c("Bat host" =  17, "Non-bat host" = 19)
 colz2 = c('1' =  "yellow", '0' = "white")
 
-
 ##uncollapsed tree
-p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=bat_Host), size=3,stroke=0,show.legend = T) +
+p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=Host), size=3,stroke=0,show.legend = T) +
   scale_fill_manual(values=colz) +
   scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +

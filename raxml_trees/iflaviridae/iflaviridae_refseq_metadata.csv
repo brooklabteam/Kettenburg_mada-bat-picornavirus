@@ -1,4 +1,4 @@
-Accession,old_tip_label,Isolate,Species,Genus,Family,Country,Host,bat_Host,Collection_Date,novel
+Accession,old_tip_label,Isolate,Species,Genus,Family,Country,source,Host,Collection_Date,novel
 NC_030886.1,NC_030886.1,GCCDC1 356,Rousettus bat coronavirus GCCDC1,Coronavirus,Coronaviridae,China,Rousettus leschenaulti,1,2018,0
 NC_002066.1,NC_002066.1,,Sacbrood virus,Iflavirus,Iflaviridae,USA,Apis,0,2000,0
 NC_003113.1,NC_003113.1,,Perina nuda virus,Iflavirus,Iflaviridae,China,Perina nuda,0,2000,0
