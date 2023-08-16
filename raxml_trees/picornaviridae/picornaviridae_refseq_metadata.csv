@@ -1,4 +1,4 @@
-Accession,old_tip_label,Isolate,Species,Genus,Country,Host,bat_Host,Collection_Date,novel
+Accession,old_tip_label,Isolate,Species,Genus,Country,source,Host,Collection_Date,novel
 NC_001366.1,NC_001366.1,,Cardiovirus B,Cardiovirus,United Kingdom,Rodentia,0,1990,0
 NC_001430.1,NC_001430.1,,Enterovirus D,Enterovirus,United Kingdom,Homo sapiens,0,1990,0
 NC_001472.1,NC_001472.1,,Enterovirus B,Enterovirus,United Kingdom,Homo sapiens,0,1987,0
