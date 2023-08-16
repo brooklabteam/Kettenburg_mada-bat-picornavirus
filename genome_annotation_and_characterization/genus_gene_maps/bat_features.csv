@@ -4,14 +4,14 @@ Bat picornavirus,1958,2654,2306,VP3,all
 Bat picornavirus,2655,3652,3153.5,VP1,all
 Bat picornavirus,3653,4366,4009.5,2A,all
 Bat picornavirus,4367,4725,4546,2B,all
-Bat picornavirus,4367,4725,4546,2C,all
+Bat picornavirus,4726,5723,5224.5,2C,all
 Bat picornavirus,5724,6149,5936.5,3A,all
 Bat picornavirus,6150,6218,6184,3B,all
 Bat picornavirus,6219,6771,6495,3C,all
 Bat picornavirus,6772,7930,7351,3D,all
 Felisavirus and Picorna-like virus,3646,11968,7807,Non-structural polyprotein,all
-Hepatovirus,818,896,857,VP4,all
-Hepatovirus,897,1563,1230,VP2,all
+Hepatovirus,818,896,890,VP4,all
+Hepatovirus,897,1563,1250,VP2,all
 Hepatovirus,1564,2319,1941.5,VP3,all
 Hepatovirus,2320,3256,2788,VP1,all
 Hepatovirus,3257,4068,3662.5,2A,all
@@ -42,16 +42,16 @@ Sapelovirus,5712,6066,5889,3A,all
 Sapelovirus,6067,6142,6104.5,3B,all
 Sapelovirus,6143,6689,6416,3C,all
 Sapelovirus,6690,8084,7387,3D,all
-Sapelovirus,8092,8194,8143,3'UTR,all
+Sapelovirus,8092,8194,7900,3'UTR,all
 Sapovirus,1057,6933,3995,Polyprotein,all
-Sapovirus,6997,7520,7258.5,Putative minor structural protein,all
+Sapovirus,6997,7520,6000,Putative minor structural protein,all
 Teschovirus,4389,4953,4671,2C,all
 Teschovirus,4954,5263,5108.5,3A,all
 Teschovirus,5273,5338,5305.5,3B,all
 Teschovirus,5345,5959,5652,3C,all
 Teschovirus,5960,7393,6676.5,3D,all
 Felisavirus,545,8939,4742,Non-structural polyprotein,full
-Hepatovirus,169,775,472,5'UTR,full
+Hepatovirus,169,775,390,5'UTR,full
 Hepatovirus,796,870,833,VP4,full
 Hepatovirus,871,1536,1203.5,VP2,full
 Hepatovirus,1537,2280,1908.5,VP3,full
@@ -71,11 +71,10 @@ Kunsagivirus,3736,4546,4141,VP1,full
 Kunsagivirus,4566,5318,4942,2A,full
 Kunsagivirus,5361,5848,5604.5,2B,full
 Kunsagivirus,5849,6441,6145,2C,full
-Kunsagivirus,6442,6682,6562,3A,full
+Kunsagivirus,6442,6682,6400,3A,full
 Kunsagivirus,6683,6742,6712.5,3B,full
 Kunsagivirus,6743,7330,7036.5,3C,full
 Kunsagivirus,7331,8705,8018,3D,full
-Kunsagivirus,8767,8818,8792.5,3'UTR,full
 Mischivirus,420,1509,964.5,5'UTR,full
 Mischivirus,1510,1837,1673.5,L,full
 Mischivirus,1838,2069,1953.5,VP4,full
@@ -90,7 +89,6 @@ Mischivirus,6652,6884,6768,3B,full
 Mischivirus,6894,7460,7177,3C,full
 Mischivirus,7470,8835,8152.5,3D,full
 Picorna-like virus,540,8846,4693,Polyprotein,full
-Sapelovirus,120,7971,4045.5,Polyprotein,full
 Sapelovirus,255,789,522,L,full
 Sapelovirus,793,939,866,VP4,full
 Sapelovirus,946,1718,1332,VP2,full
@@ -103,4 +101,4 @@ Sapelovirus,5641,5943,5792,3A,full
 Sapelovirus,5954,6022,5988,3B,full
 Sapelovirus,6023,6578,6300.5,3C,full
 Sapelovirus,6579,7968,7273.5,3D,full
-Sapelovirus,7972,8052,8012,3'UTR,full
+Sapelovirus,7972,8052,7800,3'UTR,full
