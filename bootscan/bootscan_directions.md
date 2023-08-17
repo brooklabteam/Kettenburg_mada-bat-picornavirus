@@ -17,6 +17,8 @@ Based on the quality of the alignments, and based on the length of the sequences
 - Sapovirus ICTV and some african sequences full
 - Teschovirus ICTV full
 
+Separately, I did some bootscan analyses based on the results from the pat picornavirales phylogenies, I made one with all bat picornavirales over 3kb and another with reference sequences all full viruses but all madagascar sequences still over 3kb.
+
 
 Alignment files from Geneious are in their respective labeled files within the master bootscan folder, and metadata/summary files are [here]()
 
