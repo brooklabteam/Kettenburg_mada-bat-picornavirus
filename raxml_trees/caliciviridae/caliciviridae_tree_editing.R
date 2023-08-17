@@ -11,7 +11,7 @@ library(phylobase)
 
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
 
-##Picornavirales all full and partial sequences >3kb
+##Caliciviridae all full and partial sequences >3kb
 setwd(paste0(homewd,"/raxml_trees/caliciviridae"))
 
 #load the tree
