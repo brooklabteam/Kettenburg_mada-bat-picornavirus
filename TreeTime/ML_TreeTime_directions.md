@@ -38,7 +38,7 @@ treetime --aln bat_picornavirales_all_over_3kb_align.fasta --tree bat_picornavir
 
 treetime --aln bat_picornavirales_all_over_3kb_align.fasta --tree bat_picornavirales_all_unrooted --dates bat_picornavirales_all_dates.csv --outdir bat_picornavirales_all_unrooted_out
 
-treetime --aln bat_picornavirales_all_over_3kb_align.fasta --tree bat_icornavirales_all_unrooted --dates bat_picornavirales_all_dates.csv --outdir bat_picornavirales_all_unrooted_skyline_out --coalescent skyline
+treetime --aln bat_picornavirales_all_over_3kb_align.fasta --tree bat_picornavirales_all_unrooted --dates bat_picornavirales_all_dates.csv --outdir bat_picornavirales_all_unrooted_skyline_out --coalescent skyline
 
 ```
 
