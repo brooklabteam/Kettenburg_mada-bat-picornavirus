@@ -1,8 +1,7 @@
 Building a maximum-likelihood TimeTree using RAxML output
 ---
 
-This tutorial outlines methods for building a maximum-likelihood time-scaled phylogenies described [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5758920/) with tutorials listed [here](https://github.com/neherlab/treetime). I will use the same tree files as done in building the ML trees. Each is in their own folder in the master folder [here](). I chose this method over BEAST as my picornavirales dataset would take an extremely long time to run. 
-
+This tutorial outlines methods for building a maximum-likelihood time-scaled phylogenies described [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5758920/) with tutorials listed [here](https://github.com/neherlab/treetime). I will use the same tree files as done in building the ML trees. Each is in their own folder in the master folder [here]().
 ---
 General instructions: 
 ___
