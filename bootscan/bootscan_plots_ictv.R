@@ -345,7 +345,7 @@ ictv_tescho
 
 
 ##Now get the plots for the bootscan
-setwd("~/Desktop/bootscan/output")
+setwd("~/Desktop/developer/mada-bat-picornavirus/bootscan/output_ictv")
 
 
 #Bat picornavirus 
@@ -519,10 +519,10 @@ title<-expression(paste("Reference: ",italic("Eidolon dupreanum hepatovirus "), 
 hepatovirus_ictv_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
-  annotate("point",x=1220, y=0.30, size=3, color="black")+
-  annotate("point",x=1300, y=0.45, size=3, color="black")+
-  annotate("point",x=2090, y=0.35, size=3, color="black")+
-  annotate("point",x=5270, y=0.30, size=3, color="black")+
+  # annotate("point",x=1220, y=0.30, size=3, color="black")+
+  # annotate("point",x=1300, y=0.45, size=3, color="black")+
+  # annotate("point",x=2090, y=0.35, size=3, color="black")+
+  # annotate("point",x=5270, y=0.30, size=3, color="black")+
   # geom_vline(xintercept=1220, linetype="dashed")+
   # geom_vline(xintercept=1300, linetype="dashed")+
   # geom_vline(xintercept=2090, linetype="dashed")+
@@ -655,7 +655,7 @@ title<-expression(paste("Reference: ",italic("Eidolon dupreanum kunsagivirus "),
 kunsagivirus_ictv_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
-  annotate("point",x=3230, y=0.57, size=3, color="black")+
+  #annotate("point",x=3230, y=0.57, size=3, color="black")+
   #geom_vline(xintercept=3230, linetype="dashed")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("%permuted trees")+xlab("Genome position")+
@@ -855,13 +855,13 @@ title<-expression(paste("Reference: ",italic("Eidolon dupreanum sapovirus "), "O
 
 sapovirus_ictv_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  annotate("point",x=2410, y=0.45, size=3, color="black")+
-  annotate("point",x=2520, y=0.42, size=3, color="black")+
-  annotate("point",x=2820, y=0.46, size=3, color="black")+
-  annotate("point",x=3740, y=0.47, size=3, color="black")+
-  annotate("point",x=4600, y=0.49, size=3, color="black")+
-  annotate("point",x=7180, y=0.4, size=3, color="black")+
-  annotate("point",x=7240, y=0.38, size=3, color="black")+
+  # annotate("point",x=2410, y=0.45, size=3, color="black")+
+  # annotate("point",x=2520, y=0.42, size=3, color="black")+
+  # annotate("point",x=2820, y=0.46, size=3, color="black")+
+  # annotate("point",x=3740, y=0.47, size=3, color="black")+
+  # annotate("point",x=4600, y=0.49, size=3, color="black")+
+  # annotate("point",x=7180, y=0.4, size=3, color="black")+
+  # annotate("point",x=7240, y=0.38, size=3, color="black")+
   geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
   #geom_vline(xintercept=2410, linetype="dashed")+
   #geom_vline(xintercept=2520, linetype="dashed")+
