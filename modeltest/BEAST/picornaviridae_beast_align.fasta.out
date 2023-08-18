@@ -1,0 +1,180 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        picornaviridae_beast_align.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            178
+  #sites:           27597
+  #patterns:        21847
+  Max. thread mem:  1915 MB
+
+Output:
+  Log:           picornaviridae_beast_align.fasta.log
+  Starting tree: picornaviridae_beast_align.fasta.tree
+  Results:       picornaviridae_beast_align.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/14
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9  -1319334.6532   2642370.9238         0.0000    0.9218
+       2  GTR+I+G4          10  -1319332.0078   2642375.8585         4.9346    0.0782
+       3  TVM+G4             8  -1319431.0114   2642553.4147       182.4908    0.0000
+       4  GTR+G4             9  -1319426.9532   2642555.5238       184.5999    0.0000
+       5  TPM2uf+I+G4        7  -1319599.5690   2642880.3044       509.3806    0.0000
+       6  TIM2+I+G4          8  -1319599.2675   2642889.9269       519.0031    0.0000
+       7  TPM2uf+G4          6  -1319693.9087   2643058.7584       687.8346    0.0000
+       8  TIM2+G4            7  -1319695.0575   2643071.2814       700.3575    0.0000
+       9  TIM3+I+G4          8  -1319814.3729   2643320.1376       949.2138    0.0000
+      10  TPM3uf+I+G4        7  -1319819.6762   2643320.5189       949.5951    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              TVM+I+G4
+lnL:                -1319334.6532
+Frequencies:        0.2541 0.2360 0.2236 0.2863
+Subst. Rates:       1.7005 3.6280 1.4513 1.3317 3.6280 1.0000 
+Inv. sites prop:    0.0211
+Gamma shape:        1.8932
+Score:              2642370.9238
+Weight:             0.9218
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.8579
+Alpha-P.Inv:        1.8933
+P.Inv-Alpha:        0.0211
+Frequencies:        0.2542 0.2359 0.2237 0.2862 
+
+Commands:
+  > phyml  -i picornaviridae_beast_align.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s picornaviridae_beast_align.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa picornaviridae_beast_align.fasta --model TVM+I+G4
+  > paup -s picornaviridae_beast_align.fasta
+  > iqtree -s picornaviridae_beast_align.fasta -m TVM+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10  -1319332.0078   2639390.0156         0.0000    0.8383
+       2  TVM+I+G4           9  -1319334.6532   2639393.3065         3.2908    0.1617
+       3  GTR+G4             9  -1319426.9532   2639577.9064       187.8908    0.0000
+       4  TVM+G4             8  -1319431.0114   2639584.0228       194.0071    0.0000
+       5  TPM2uf+I+G4        7  -1319599.5690   2639919.1380       529.1223    0.0000
+       6  TIM2+I+G4          8  -1319599.2675   2639920.5350       530.5194    0.0000
+       7  TPM2uf+G4          6  -1319693.9087   2640105.8174       715.8018    0.0000
+       8  TIM2+G4            7  -1319695.0575   2640110.1149       720.0993    0.0000
+       9  TIM3+I+G4          8  -1319814.3729   2640350.7457       960.7301    0.0000
+      10  TPM3uf+I+G4        7  -1319819.6762   2640359.3525       969.3368    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -1319332.0078
+Frequencies:        0.2552 0.2348 0.2250 0.2850
+Subst. Rates:       1.7049 3.5861 1.4533 1.3349 3.6795 1.0000 
+Inv. sites prop:    0.0211
+Gamma shape:        1.8944
+Score:              2639390.0156
+Weight:             0.8383
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.8579
+Alpha-P.Inv:        1.8942
+P.Inv-Alpha:        0.0211
+Frequencies:        0.2551 0.2350 0.2247 0.2852 
+
+Commands:
+  > phyml  -i picornaviridae_beast_align.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s picornaviridae_beast_align.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa picornaviridae_beast_align.fasta --model GTR+I+G4
+  > paup -s picornaviridae_beast_align.fasta
+  > iqtree -s picornaviridae_beast_align.fasta -m GTR+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10  -1319332.0078   2639399.0156         0.0000    0.8383
+       2  TVM+I+G4           9  -1319334.6532   2639402.3065         3.2908    0.1617
+       3  GTR+G4             9  -1319426.9532   2639586.9064       187.8908    0.0000
+       4  TVM+G4             8  -1319431.0114   2639593.0228       194.0071    0.0000
+       5  TPM2uf+I+G4        7  -1319599.5690   2639928.1380       529.1223    0.0000
+       6  TIM2+I+G4          8  -1319599.2675   2639929.5350       530.5194    0.0000
+       7  TPM2uf+G4          6  -1319693.9087   2640114.8174       715.8018    0.0000
+       8  TIM2+G4            7  -1319695.0575   2640119.1149       720.0993    0.0000
+       9  TIM3+I+G4          8  -1319814.3729   2640359.7457       960.7301    0.0000
+      10  TPM3uf+I+G4        7  -1319819.6762   2640368.3525       969.3368    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+I+G4
+lnL:                -1319332.0078
+Frequencies:        0.2552 0.2348 0.2250 0.2850
+Subst. Rates:       1.7049 3.5861 1.4533 1.3349 3.6795 1.0000 
+Inv. sites prop:    0.0211
+Gamma shape:        1.8944
+Score:              2639399.0156
+Weight:             0.8383
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.8579
+Alpha-P.Inv:        1.8942
+P.Inv-Alpha:        0.0211
+Frequencies:        0.2551 0.2350 0.2247 0.2852 
+
+Commands:
+  > phyml  -i picornaviridae_beast_align.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s picornaviridae_beast_align.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa picornaviridae_beast_align.fasta --model GTR+I+G4
+  > paup -s picornaviridae_beast_align.fasta
+  > iqtree -s picornaviridae_beast_align.fasta -m GTR+I+G4
+Done
