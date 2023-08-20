@@ -30,24 +30,11 @@ To prepare the .xml file, we used the following parameters in tab inputs at the 
 
 - Clock Model: following literature on other picornaviridae bayesian trees, I opted to use both a relaxed lognormal molecular clock and a strict molecular clock. Most papers use a relaxed clock, but some picornaviridae genera perform better under strict clocks, see [picornaviridae_bayesian_papers]() for my summaries of different papers.
 
-- Priors: We used a Bayesian Skyline Coalescent model for both relaxed and strict clocks. The clock rate prior was set based on the comparisons done in [Hicks et al 2011](), I set the number of substitutions to 1.60 × 10−3 ns/s/y (0.0016) which was the average of nonenterovirus rates, and all other priors were left at default values specified in BEAUti. Both xml files for the strict and relaxed molecular clocks are available in the folder [here]().
+- Priors: We used a Bayesian Skyline Coalescent model for both relaxed and strict clocks. The clock rate prior was set based on the comparisons done in [Hicks et al 2011](), I set the number of substitutions to 1.60 × 10−3 ns/s/y (0.0016) which was the average of non-enterovirus rates, and all other priors were left at default values specified in BEAUti. Both xml files for the strict and relaxed molecular clocks are available in the folder [here]().
 
 - MCMC:  We used an MCMC chain length of 100,000,000 iterations and set tracelog and treelog every 10,000 iterations, with a 10% burn-in. All other MCMC metrics were left at default.
 
 - Population Size: The Bayesian Skyline Coalescent model by default assumes that the population size of the dataset will change 5 times spaced evenly across the course of this sampling period. Because our available samples were limited and spanned a wide geographic area, we edited this parameter to permit only one population size. You can make this edit in BEAUti by clicking "View" in the top panel, selecting "Show Initialization panel" and then specifying the dimension of "bPopSizes" and "GroupSizes" both to be 1 instead of 5.
 
 
-
-
-```
-cd Desktop/developer/mada-bat-picornavirus/TreeTime/picornavirales
-
-treetime --aln picornavirales_all_align.fasta --tree picornavirales_all_rooted --dates picornavirales_all_treetime_date.csv --outdir picornavirales_all_rooted_out
-
-treetime --aln picornavirales_all_align.fasta --tree picornavirales_all_rooted --dates picornavirales_all_treetime_date.csv --outdir picornavirales_all_rooted_skyline_out --coalescent skyline
-
-treetime --aln picornavirales_all_align.fasta --tree picornavirales_all_unrooted --dates picornavirales_all_treetime_date.csv --outdir picornavirales_all_unrooted_out
-
-treetime --aln picornavirales_all_align.fasta --tree picornavirales_all_unrooted --dates picornavirales_all_treetime_date.csv --outdir picornavirales_all_unrooted_skyline_out --coalescent skyline
-
-```
+3. Visualizing the tree: The initial 10% of MCMC iterations were removed as burn-in. Parameter convergence was assessed visually using Tracer v1.6. Once verified, we used TreeAnnotator to average across the BEAST tree output, then visualized the resulting tree in R using the script [here]().
