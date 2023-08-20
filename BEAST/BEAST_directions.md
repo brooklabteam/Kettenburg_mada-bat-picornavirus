@@ -26,13 +26,13 @@ To prepare the .xml file, we used the following parameters in tab inputs at the 
 
 - Tip Dates: We used the date of sample collection as the "Tip Date." For any sample from GenBank which only listed year of collection, we set the tip date to July 15 of the year of collection. Each alignment was uploaded to BEAUti with sequence names arranged so as to easily decipher the date.
 
-- Site Model: Following output from ModelTest-NG, we selected a "Gamma Site Model" with Gamma Category 4 and estimated the proportion of invariate sites.
+- Site Model: Following output from ModelTest-NG, we selected a "Gamma Site Model" with Gamma category 4 and an estimated 0.001 for the proportion invariant.
 
-- Clock Model: We built comparative phylogenies using both a strict molecular clock and a relaxed exponential molecular clock, specified within a non-parameteric Bayesian Skyline Coalescent model, following previous approaches for bat coronvirus analyses (i.e. Lau et al. 2020.
+- Clock Model: following literature on other picornaviridae bayesian trees, I opted to use both a relaxed lognormal molecular clock and a strict molecular clock. Most papers use a relaxed clock, but some picornaviridae genera perform better under strict clocks, see [picornaviridae_bayesian_papers]() for my summaries of different papers.
 
-- Priors: We used a Bayesian Skyline Coalescent model. The clock rate prior was set to a lognormal distribution with a mean of 0.001, following published values for RNA viruses (Jenkins et al. 2014), and all other priors were left at default values specified in BEAUti. Both xml files for the strick and relaxed molecular clocks are available in the subfolder "3-BEAST-Nobeco" within the Fig4 folder.
+- Priors: We used a Bayesian Skyline Coalescent model for both relaxed and strict clocks. The clock rate prior was set based on the comparisons done in [Hicks et al 2011](), I set the number of substitutions to 1.60 × 10−3 ns/s/y (0.0016) which was the average of nonenterovirus rates, and all other priors were left at default values specified in BEAUti. Both xml files for the strict and relaxed molecular clocks are available in the folder [here]().
 
-- MCMC: We used an MCMC chain length of 700,000,000 iterations and set tracelog and treelog every 10,000 iterations. All other MCMC metrics were left at default.
+- MCMC:  We used an MCMC chain length of 100,000,000 iterations and set tracelog and treelog every 10,000 iterations, with a 10% burn-in. All other MCMC metrics were left at default.
 
 - Population Size: The Bayesian Skyline Coalescent model by default assumes that the population size of the dataset will change 5 times spaced evenly across the course of this sampling period. Because our available samples were limited and spanned a wide geographic area, we edited this parameter to permit only one population size. You can make this edit in BEAUti by clicking "View" in the top panel, selecting "Show Initialization panel" and then specifying the dimension of "bPopSizes" and "GroupSizes" both to be 1 instead of 5.
 
