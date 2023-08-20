@@ -1,0 +1,223 @@
+Physical cores: 14
+Logical cores:  28
+Memory:         62.2GB
+Extensions:     AVX
+
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: caliciviridae_beast_align.fasta.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        caliciviridae_beast_align.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            53
+  #sites:           12818
+  #patterns:        11247
+  Max. thread mem:  288 MB
+
+Output:
+  Log:           caliciviridae_beast_align.fasta.log
+  Starting tree: caliciviridae_beast_align.fasta.tree
+  Results:       caliciviridae_beast_align.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/14
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> modeltest-ng -i caliciviridae_beast_align.fasta -d nt -t ml -p 8 
+
+
+Partition 1/1
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:48:46
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9   -361848.4774    724756.3186         0.0000    0.9915
+       2  GTR+I+G4          10   -361848.5020    724765.8264         9.5078    0.0085
+       3  TPM2uf+I+G4        7   -361914.6022    724869.6510       113.3324    0.0000
+       4  TIM2+I+G4          8   -361914.5387    724878.9827       122.6641    0.0000
+       5  SYM+I+G4           7   -362049.6168    725139.6802       383.3616    0.0000
+       6  TVMef+I+G4         6   -362076.1082    725183.2045       426.8858    0.0000
+       7  TVM+G4             8   -362157.3379    725364.5809       608.2623    0.0000
+       8  GTR+G4             9   -362157.2432    725373.8502       617.5316    0.0000
+       9  TPM2uf+G4          6   -362224.9093    725480.8067       724.4880    0.0000
+      10  TIM2+G4            7   -362224.6354    725489.7173       733.3987    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              TVM+I+G4
+lnL:                -361848.4774
+Frequencies:        0.2373 0.2795 0.2427 0.2404
+Subst. Rates:       2.0227 3.8404 1.6143 1.1945 3.8404 1.0000 
+Inv. sites prop:    0.0220
+Gamma shape:        1.4559
+Score:              724756.3186
+Weight:             0.9915
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.1691
+Alpha-P.Inv:        1.4559
+P.Inv-Alpha:        0.0220
+Frequencies:        0.2373 0.2795 0.2427 0.2404 
+
+Commands:
+  > phyml  -i caliciviridae_beast_align.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s caliciviridae_beast_align.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa caliciviridae_beast_align.fasta --model TVM+I+G4
+  > paup -s caliciviridae_beast_align.fasta
+  > iqtree -s caliciviridae_beast_align.fasta -m TVM+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9   -361848.4774    723920.9548         0.0000    0.7359
+       2  GTR+I+G4          10   -361848.5020    723923.0040         2.0492    0.2641
+       3  TPM2uf+I+G4        7   -361914.6022    724049.2044       128.2496    0.0000
+       4  TIM2+I+G4          8   -361914.5387    724051.0775       130.1227    0.0000
+       5  SYM+I+G4           7   -362049.6168    724319.2336       398.2788    0.0000
+       6  TVMef+I+G4         6   -362076.1082    724370.2164       449.2617    0.0000
+       7  TVM+G4             8   -362157.3379    724536.6757       615.7209    0.0000
+       8  GTR+G4             9   -362157.2432    724538.4864       617.5316    0.0000
+       9  TPM2uf+G4          6   -362224.9093    724667.8186       746.8639    0.0000
+      10  TIM2+G4            7   -362224.6354    724669.2707       748.3159    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TVM+I+G4
+lnL:                -361848.4774
+Frequencies:        0.2373 0.2795 0.2427 0.2404
+Subst. Rates:       2.0227 3.8404 1.6143 1.1945 3.8404 1.0000 
+Inv. sites prop:    0.0220
+Gamma shape:        1.4559
+Score:              723920.9548
+Weight:             0.7359
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.1691
+Alpha-P.Inv:        1.4558
+P.Inv-Alpha:        0.0220
+Frequencies:        0.2374 0.2795 0.2427 0.2404 
+
+Commands:
+  > phyml  -i caliciviridae_beast_align.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s caliciviridae_beast_align.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa caliciviridae_beast_align.fasta --model TVM+I+G4
+  > paup -s caliciviridae_beast_align.fasta
+  > iqtree -s caliciviridae_beast_align.fasta -m TVM+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9   -361848.4774    723921.9548         0.0000    0.8212
+       2  GTR+I+G4          10   -361848.5020    723925.0040         3.0492    0.1788
+       3  TPM2uf+I+G4        7   -361914.6022    724050.2044       128.2496    0.0000
+       4  TIM2+I+G4          8   -361914.5387    724052.0775       130.1227    0.0000
+       5  SYM+I+G4           7   -362049.6168    724320.2336       398.2788    0.0000
+       6  TVMef+I+G4         6   -362076.1082    724371.2164       449.2617    0.0000
+       7  TVM+G4             8   -362157.3379    724537.6757       615.7209    0.0000
+       8  GTR+G4             9   -362157.2432    724539.4864       617.5316    0.0000
+       9  TPM2uf+G4          6   -362224.9093    724668.8186       746.8639    0.0000
+      10  TIM2+G4            7   -362224.6354    724670.2707       748.3159    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TVM+I+G4
+lnL:                -361848.4774
+Frequencies:        0.2373 0.2795 0.2427 0.2404
+Subst. Rates:       2.0227 3.8404 1.6143 1.1945 3.8404 1.0000 
+Inv. sites prop:    0.0220
+Gamma shape:        1.4559
+Score:              723921.9548
+Weight:             0.8212
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.1691
+Alpha-P.Inv:        1.4558
+P.Inv-Alpha:        0.0220
+Frequencies:        0.2374 0.2795 0.2427 0.2404 
+
+Commands:
+  > phyml  -i caliciviridae_beast_align.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s caliciviridae_beast_align.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa caliciviridae_beast_align.fasta --model TVM+I+G4
+  > paup -s caliciviridae_beast_align.fasta
+  > iqtree -s caliciviridae_beast_align.fasta -m TVM+I+G4
+
+There are 7 different topologies
+Topologies written to caliciviridae_beast_align.fasta.topos
+
+topo_id   models_count   bic_support   aic_support   aicc_support
+-----------------------------------------------------------------
+      1             40       1.00000       1.00000       1.00000
+      2              4       0.00000       0.00000       0.00000
+      3             21       0.00000       0.00000       0.00000
+      4              4       0.00000       0.00000       0.00000
+      5              2       0.00000       0.00000       0.00000
+      6             15       0.00000       0.00000       0.00000
+      7              2       0.00000       0.00000       0.00000
+
+extended majority-rule consensus: ((NC_044853_1998-07-15,((OQ818319_2018-02-15,(NC_044856_2011-07-06,NC_030793_2012-07-15)[1.00000])[1.00000],((NC_044046_2011-07-15,NC_043512_2008-01-10)[1.00000],(NC_045762_2010-07-15,(NC_039476_2016-12-12,(NC_029647_2010-12-15,(NC_044047_2007-07-15,(NC_039897_2007-07-15,NC_039477_2016-01-06)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_008580_2004-11-30,(NC_029646_2000-06-06,((NC_044932_2008-05-27,(NC_040674_2013-07-15,NC_033081_2015-07-31)[1.00000])[1.00000],(NC_002551_1996-11-01,(NC_044855_2016-05-11,NC_044854_2000-07-15)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((NC_043516_2011-07-15,((((NC_004064_2002-03-07,(NC_012699_2006-01-15,NC_001959_1993-08-09)[1.00000])[1.00000],((NC_006269_2004-07-23,(NC_029645_2006-07-15,(NC_027026_2012-07-15,NC_024031_2011-07-15)[1.00000])[1.00000])[1.00000],(NC_001543_2000-08-10,((NC_002615_1996-02-16,(NC_035675_2012-07-15,NC_011704_2007-05-15)[1.00000])[1.00000],(NC_010624_2003-02-17,NC_004542_2000-08-01)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(((NC_031324_2016-06-15,(NC_008311_2005-11-08,(NC_007916_2005-04-20,NC_004541_2000-11-14)[1.00000])[1.00000])[1.00000],(NC_019712_2007-06-15,((NC_034444_2016-11-09,NC_000940_1999-09-03)[1.00000],(NC_001481_2000-08-01,(NC_027122_2012-03-01,(NC_006554_2004-04-21,(NC_011050_2004-07-15,NC_006875_2003-08-20)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_033776_2014-01-15,(NC_044045_2007-07-15,NC_025676_1981-07-15)[1.00000])[1.00000])[1.00000])[1.00000],(NC_039475_2015-07-15,NC_024078_2012-10-15)[1.00000])[1.00000])[1.00000],(NC_040876_2015-12-17,NC_017936_2011-10-21)[1.00000])[1.00000]);
+strict consensus: (NC_000940_1999-09-03,NC_039475_2015-07-15,NC_024078_2012-10-15,NC_033776_2014-01-15,NC_040876_2015-12-17,NC_017936_2011-10-21,NC_008580_2004-11-30,NC_044853_1998-07-15,OQ818319_2018-02-15,NC_044856_2011-07-06,NC_030793_2012-07-15,NC_044046_2011-07-15,NC_043512_2008-01-10,NC_044047_2007-07-15,NC_045762_2010-07-15,NC_039476_2016-12-12,NC_039897_2007-07-15,NC_039477_2016-01-06,NC_029647_2010-12-15,NC_029646_2000-06-06,NC_044932_2008-05-27,NC_040674_2013-07-15,NC_033081_2015-07-31,NC_044855_2016-05-11,NC_044854_2000-07-15,NC_002551_1996-11-01,NC_043516_2011-07-15,NC_004064_2002-03-07,NC_012699_2006-01-15,NC_001959_1993-08-09,NC_027026_2012-07-15,NC_029645_2006-07-15,NC_024031_2011-07-15,NC_006269_2004-07-23,NC_035675_2012-07-15,NC_010624_2003-02-17,NC_004542_2000-08-01,NC_011704_2007-05-15,NC_002615_1996-02-16,NC_001543_2000-08-10,NC_044045_2007-07-15,NC_025676_1981-07-15,NC_019712_2007-06-15,NC_031324_2016-06-15,NC_008311_2005-11-08,NC_007916_2005-04-20,NC_004541_2000-11-14,NC_027122_2012-03-01,NC_011050_2004-07-15,NC_006875_2003-08-20,NC_006554_2004-04-21,NC_001481_2000-08-01,NC_034444_2016-11-09);
+
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC            TVM+I+G4   724756.3186        0.9915
+       AIC            TVM+I+G4   723920.9548        0.7359
+      AICc            TVM+I+G4   723921.9548        0.8212
+
+Execution results written to caliciviridae_beast_align.fasta.out
+Starting tree written to caliciviridae_beast_align.fasta.tree

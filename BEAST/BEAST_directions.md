@@ -20,7 +20,16 @@ Score:              2639390.0156
 Weight:             0.8383
 
 For caliciviridae refseq tree (53 full refseq genomes) with full genome novel malagasy sapovirus (1 genome)
-Best model: 
+Best model: TVM+I+G4
+
+lnL:                -361848.4774
+Frequencies:        0.2373 0.2795 0.2427 0.2404
+Subst. Rates:       2.0227 3.8404 1.6143 1.1945 3.8404 1.0000 
+Inv. sites prop:    0.0220
+Gamma shape:        1.4559
+Score:              723921.9548
+Weight:             0.8212
+
 
 
 2. Now that we have our aligned files, our metadata, and our substitution model, we can generate a .xml file in BEAUTi. Resources on picking models are [here](https://justinbagley.rbind.io/2016/10/11/setting-dna-substitution-models-beast/),[here](http://www.iqtree.org/doc/Substitution-Models). 
