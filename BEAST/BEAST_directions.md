@@ -19,6 +19,9 @@ Gamma shape:        1.8944
 Score:              2639390.0156
 Weight:             0.8383
 
+For caliciviridae refseq tree (53 full refseq genomes) with full genome novel malagasy sapovirus (1 genome)
+Best model: 
+
 
 2. Now that we have our aligned files, our metadata, and our substitution model, we can generate a .xml file in BEAUTi. Resources on picking models are [here](https://justinbagley.rbind.io/2016/10/11/setting-dna-substitution-models-beast/),[here](http://www.iqtree.org/doc/Substitution-Models). 
 
@@ -28,7 +31,7 @@ To prepare the .xml file, we used the following parameters in tab inputs at the 
 
 - Site Model: Following output from ModelTest-NG, we selected a "Gamma Site Model" with Gamma category 4 and an estimated 0.001 for the proportion invariant.
 
-- Clock Model: following literature on other picornaviridae bayesian trees, I opted to use both a relaxed lognormal molecular clock and a strict molecular clock. Most papers use a relaxed clock, but some picornaviridae genera perform better under strict clocks, see [picornaviridae_bayesian_papers]() for my summaries of different papers.
+- Clock Model: following literature on other picornaviridae bayesian trees, I opted to use both a relaxed lognormal molecular clock and a strict molecular clock. Most papers use a relaxed clock, but some picornaviridae genera perform better under strict clocks, see [bayesian_paper_refereces]() for my summaries of different papers.
 
 - Priors: We used a Bayesian Skyline Coalescent model for both relaxed and strict clocks. The clock rate prior was set based on the comparisons done in [Hicks et al 2011](), I set the number of substitutions to 1.60 × 10−3 ns/s/y (0.0016) which was the average of non-enterovirus rates, and all other priors were left at default values specified in BEAUti. Both xml files for the strict and relaxed molecular clocks are available in the folder [here]().
   Note: for Sapovirus the average substitution rate used in a caliciviridae refseq bayesian tree   was 0.00235, based on [Tohma et al. 2020]()
