@@ -38,7 +38,7 @@ To prepare the .xml file, we used the following parameters in tab inputs at the 
 
 - Tip Dates: We used the date of sample collection as the "Tip Date." For any sample from GenBank which only listed year of collection, we set the tip date to July 15 of the year of collection. Each alignment was uploaded to BEAUti with sequence names arranged so as to easily decipher the date.
 
-- Site Model: Following output from ModelTest-NG, we selected a "Gamma Site Model" with Gamma category 4 and an estimated 0.001 for the proportion invariant.
+- Site Model: Following output from ModelTest-NG, we selected a "Gamma Site Model" with Gamma category 4 and an estimated 0.001 for the proportion invariant. For caliciviridae, TVM is a less common model, so according to the blog post [here](https://justinbagley.rbind.io/2016/10/11/setting-dna-substitution-models-beast/) I left it as GTR but unchecked the AG rate operator. 
 
 - Clock Model: following literature on other picornaviridae bayesian trees, I opted to use both a relaxed lognormal molecular clock and a strict molecular clock. Most papers use a relaxed clock, but some picornaviridae genera perform better under strict clocks, see [bayesian_paper_refereces]() for my summaries of different papers.
 
