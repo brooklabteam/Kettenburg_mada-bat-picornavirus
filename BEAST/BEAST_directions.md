@@ -31,6 +31,7 @@ To prepare the .xml file, we used the following parameters in tab inputs at the 
 - Clock Model: following literature on other picornaviridae bayesian trees, I opted to use both a relaxed lognormal molecular clock and a strict molecular clock. Most papers use a relaxed clock, but some picornaviridae genera perform better under strict clocks, see [picornaviridae_bayesian_papers]() for my summaries of different papers.
 
 - Priors: We used a Bayesian Skyline Coalescent model for both relaxed and strict clocks. The clock rate prior was set based on the comparisons done in [Hicks et al 2011](), I set the number of substitutions to 1.60 × 10−3 ns/s/y (0.0016) which was the average of non-enterovirus rates, and all other priors were left at default values specified in BEAUti. Both xml files for the strict and relaxed molecular clocks are available in the folder [here]().
+  Note: for Sapovirus the average substitution rate used in a caliciviridae refseq bayesian tree   was 0.00235, based on [Tohma et al. 2020]()
 
 - MCMC:  We used an MCMC chain length of 100,000,000 iterations and set tracelog and treelog every 10,000 iterations, with a 10% burn-in. All other MCMC metrics were left at default.
 
