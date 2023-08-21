@@ -367,18 +367,9 @@ p8 <- ggplot(RM, aes(x=type, y=virus)) +
         plot.title = element_text(size=12, face="italic"), 
         axis.text.y = element_text(size=7,face="italic"),
         axis.text.x = element_text(),
-        legend.position="none",
+        legend.position=c(0.85,0.85),
         legend.margin = margin(c(0,0,0,0)))
 p8
-
-library(grid)
-leg<-get_legend(p8)
-leg<-as.ggplot(leg)
-
-
-final<-p6+p7+p8
-final
-
 
 ###Put stuff together
 
@@ -387,7 +378,7 @@ final
 final<- plot_grid(p6,p7,p8,labels=c("","",""),rel_widths = c(1, 1,1), rel_heights = c(1, 1,1),ncol=3, align="hv", axis="b")
 final
 
-final2<- plot_grid(p4,final,leg,labels=c("","","C"),rel_widths = c(1, 2,0.25), rel_heights = c(2, 1),ncol=3, align="hv", axis="t")
+final2<- plot_grid(p4,final,labels=c("A","B"),rel_widths = c(1, 1.5), rel_heights = c(1, 1),ncol=2, align="hv", axis="t", label_size = 23)
 final2
 
 
