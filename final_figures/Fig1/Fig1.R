@@ -111,8 +111,8 @@ p2b<-p1+geom_point(aes(x=longitude_e, y=latitude_s),color="black",size=1,data=co
   geom_text(data= coordinate,                       #### Labeling
             aes(x=longitude_e, y=latitude_s, label=label),
             fontface="italic",
-            color = "#1B262C", size=3,
-            nudge_x = c(4.5,2,5.5),
+            color = "#1B262C", size=4,
+            nudge_x = c(4.8,2.6,6),
             nudge_y = c(3,-4,-0.3),
             check_overlap = T)+
   annotation_scale(location = "bl", width_hint = 0.05) +    #scale
@@ -216,12 +216,12 @@ p4 <- p2b+
   theme_bw() +theme(panel.grid = element_blank(),
                     plot.title = element_text(color="black", size=12, face="bold"),
                     plot.margin = unit(c(-1,.5,-1.5,.1),"cm"),
-                    axis.title.x = element_text(color="black", size=12),
-                    axis.title.y = element_text(color="black", size=12),
+                    axis.title.x = element_text(color="black", size=10),
+                    axis.title.y = element_text(color="black", size=10),
                     legend.position=c(.8,.8),
                     legend.margin = margin(),
                     legend.title=element_blank(),
-                    legend.text = element_text(size = 7.5)) +
+                    legend.text = element_text(size = 9)) +
   scale_fill_manual(values=colz) +
   geom_scatterpie_legend(log10(c(10,100)/1.2),
                          x=54, y=-23.5, 
@@ -314,8 +314,8 @@ p6 <- ggplot(ED, aes(x=type, y=virus)) +
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         plot.title = element_text(size=12, face="italic"), 
-        axis.text.y = element_text(size=7,face="italic"),
-        axis.text.x = element_text(),
+        axis.text.y = element_text(size=9,face="italic"),
+        axis.text.x = element_text(size=9),
         legend.position = "none")
 p6
 
@@ -340,8 +340,8 @@ p7 <- ggplot(PR, aes(x=type, y=virus)) +
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         plot.title = element_text(size=12, face="italic"), 
-        axis.text.y = element_text(size=7,face="italic"),
-        axis.text.x = element_text(),
+        axis.text.y = element_text(size=9,face="italic"),
+        axis.text.x = element_text(size=9),
         legend.position="none")
 p7
 
@@ -365,9 +365,9 @@ p8 <- ggplot(RM, aes(x=type, y=virus)) +
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         plot.title = element_text(size=12, face="italic"), 
-        axis.text.y = element_text(size=7,face="italic"),
-        axis.text.x = element_text(),
-        legend.position=c(0.85,0.85),
+        axis.text.y = element_text(size=9,face="italic"),
+        axis.text.x = element_text(size=9),
+        legend.position=c(0.85,0.9),
         legend.margin = margin(c(0,0,0,0)))
 p8
 
@@ -378,7 +378,7 @@ p8
 final<- plot_grid(p6,p7,p8,labels=c("","",""),rel_widths = c(1, 1,1), rel_heights = c(1, 1,1),ncol=3, align="hv", axis="b")
 final
 
-final2<- plot_grid(p4,final,labels=c("A","B"),rel_widths = c(1, 1.5), rel_heights = c(1, 1),ncol=2, align="hv", axis="t", label_size = 23)
+final2<- plot_grid(p4,final,labels=c("A","B"),rel_widths = c(1, 1.8), rel_heights = c(3, 1),ncol=2, align="hv", axis="b", label_size = 23)
 final2
 
 
@@ -387,10 +387,10 @@ final2
 
 
 
-#Supplementary info
+#Supplementary info if needed
 
 ##Try making a heatmap of the sampling data like age and percent of each bat species positive
-homewd = "/Users/gwenddolenkettenburg/Desktop/mada-bat-picornavirus" 
+homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
 dat <- read.csv(file = paste0(homewd,"/metadata/demo_picornavirales_fecesurine_meta_2018_2019.csv"), header = T, stringsAsFactors = F)
 head(dat)
 names(dat)
@@ -551,5 +551,5 @@ final3<-plot_grid(p4,p10, labels=c("A","B"), ncol=1, align="hv", axis="r")
 final3
 
 
-final4 <- plot_grid(final3,final,leg,labels=c("","C",""),rel_widths = c(1, 2,0.25), rel_heights = c(2, 1),ncol=3, align="hv", axis="b")
+final4 <- plot_grid(final3,final,leg,labels=c("","C",""),rel_widths = c(1, 2,0.25), rel_heights = c(3, 1),ncol=3, align="hv", axis="b")
 final4
