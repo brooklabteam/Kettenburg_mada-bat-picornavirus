@@ -436,17 +436,19 @@ batpicorna_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, co
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_blank(),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold"), 
-        axis.text.x = element_blank(),
-        axis.ticks.x = element_blank()) +
+        plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -487,17 +489,17 @@ batpicorna_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, co
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "none", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="none", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055), 
                      labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
   #scale_x_continuous(expand=c(0,0))+
@@ -552,17 +554,19 @@ cheravirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, co
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_blank(),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold"),
-        axis.text.x.bottom = element_blank(),
-        axis.ticks.x = element_blank()) +
+        plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -665,17 +669,19 @@ felisavirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, c
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_blank(),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold"),
-        axis.text.x.bottom = element_blank(),
-        axis.ticks.x = element_blank()) +
+        plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -782,15 +788,19 @@ hepatovirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, c
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_blank(),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -849,15 +859,19 @@ kobuvirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, col
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_blank(),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -907,15 +921,19 @@ kunsagivirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, 
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_blank(),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -969,15 +987,19 @@ mischivirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, c
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_blank(),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -1033,15 +1055,19 @@ sapelovirus_full_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=val
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_blank(),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -1092,17 +1118,19 @@ sapovirus_full_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_blank(),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold"),
-        axis.text.x = element_blank(),
-        axis.ticks.x = element_blank()) +
+        plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -1141,15 +1169,17 @@ sapovirus_full_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "none", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
@@ -1204,15 +1234,17 @@ teschovirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, c
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7, ),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -1236,11 +1268,11 @@ tescho_ictv_nt
 supp_pysimplot<-plot_grid(chera_ictv,felisa_ictv,mischi_ictv_nt,bat_picorna,hep_ictv_nt, kobu_ictv_nt,
                           kun_ictv_nt,sapelo_full_ictv_nt,sapo_full_ictv,
                           tescho_ictv_nt, 
-                          ncol=3,
-                          labels="AUTO")
+                          ncol=4,
+                          labels="AUTO", label_size = 23, align = "hv", axis="b")
 supp_pysimplot
 
-ggsave("supplemental_pysimplot.pdf", width=40, height=40, units=c("in"))
+#ggsave("supplemental_pysimplot.pdf", width=50, height=40, units=c("in"), limitsize = FALSE)
 
 
 
@@ -1251,7 +1283,8 @@ pr_rm<-plot_grid(chera_ictv,felisa_ictv,mischi_ictv_nt, bat_picorna,
               nrow=1, 
               byrow = TRUE,
               align = "hv", axis = "b",
-              labels=c("A", "", "", "B"))
+              labels=c("A", "", "", "B"), 
+              rel_heights = c(1,1,1,1), label_size = 23)
 pr_rm
 pr_rm<-as.ggplot(pr_rm)
 
@@ -1260,7 +1293,7 @@ ed<-plot_grid(hep_ictv_nt,kobu_ictv_nt,kun_ictv_nt, sapo_full_ictv,
               nrow=1, 
               byrow = TRUE,
               align = "hv", axis = "b",
-              labels=c("C","","",""))
+              labels=c("C","","",""), label_size = 23)
 ed
 ed<-as.ggplot(ed)
 
@@ -1269,7 +1302,7 @@ ed_rm<-plot_grid(sapelo_full_ictv_nt, tescho_ictv_nt, NULL, NULL,
               nrow=1, 
               byrow = TRUE,
               align = "hv", axis = "b",
-              labels=c("D","","",""))
+              labels=c("D","","",""), label_size = 23)
 ed_rm
 ed_rm<-as.ggplot(ed_rm)
 
