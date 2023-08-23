@@ -341,15 +341,16 @@ hepatovirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, c
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -359,6 +360,7 @@ hepatovirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, c
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
 hepatovirus_ictv_aa
+
 
 #put gene map with PySimPlot
 hep_ictv_aa<-hepatovirus_ictv_aa/ictv_hepato+plot_layout(nrow=2,  heights = c(2, 0.27))
@@ -408,15 +410,16 @@ kobuvirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, col
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -466,15 +469,17 @@ kunsagivirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, 
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
