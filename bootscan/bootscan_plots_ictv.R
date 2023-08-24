@@ -347,6 +347,7 @@ ictv_tescho
 ##Now get the plots for the bootscan
 setwd("~/Desktop/developer/mada-bat-picornavirus/bootscan/output_ictv")
 
+colzpalette<-c("#8ECAE6","#219EBC","#023047","#FFB703","#FB8500","#E48B97","#B52B09","#A60067","#987B6F","#8FD694")
 
 #Bat picornavirus 
 bat_picorna_ictv_boot <- read.csv(file = "bat_picorna_ictv_bootscan.csv", header = T, stringsAsFactors = F)
@@ -376,22 +377,23 @@ title<-expression(paste("Reference: ",italic("Rousettus madagascariensis picorna
 
 batpicorna_ictv_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
         legend.text = element_text(face="italic", size = 7),
         legend.title = element_text(face="italic", size = 7),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold"), ) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+        plot.margin = unit(c(0,0.5,0.5,0), "cm"),
+        plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   # scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055), 
   #                    labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
@@ -444,22 +446,23 @@ title<-expression(paste("Reference: ",italic("Pteropus rufus cheravirus "), "RNA
 
 cheravirus_ictv_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
         legend.text = element_text(face="italic", size = 7),
         legend.title = element_text(face="italic", size = 7),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   # scale_x_continuous(breaks=c(0,1000/3.055,2000/3.055,3000/3.055), 
   #                    labels = c(0,1000, 2000,3000),expand=c(0,0))+
@@ -518,30 +521,23 @@ title<-expression(paste("Reference: ",italic("Eidolon dupreanum hepatovirus "), 
 
 hepatovirus_ictv_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
-  # annotate("point",x=1220, y=0.30, size=3, color="black")+
-  # annotate("point",x=1300, y=0.45, size=3, color="black")+
-  # annotate("point",x=2090, y=0.35, size=3, color="black")+
-  # annotate("point",x=5270, y=0.30, size=3, color="black")+
-  # geom_vline(xintercept=1220, linetype="dashed")+
-  # geom_vline(xintercept=1300, linetype="dashed")+
-  # geom_vline(xintercept=2090, linetype="dashed")+
-  # geom_vline(xintercept=5270, linetype="dashed")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
         legend.text = element_text(face="italic", size = 7),
         legend.title = element_text(face="italic", size = 7),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -593,22 +589,22 @@ title<-expression(paste("Reference: ",italic("Eidolon dupreanum kobuvirus "), "O
 
 kobuvirus_ictv_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
         legend.text = element_text(face="italic", size = 7),
         legend.title = element_text(face="italic", size = 7),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette)+
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -654,24 +650,23 @@ title<-expression(paste("Reference: ",italic("Eidolon dupreanum kunsagivirus "),
 
 kunsagivirus_ictv_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
-  #annotate("point",x=3230, y=0.57, size=3, color="black")+
-  #geom_vline(xintercept=3230, linetype="dashed")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("%permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
         legend.text = element_text(face="italic", size = 7),
         legend.title = element_text(face="italic", size = 7),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -721,22 +716,23 @@ title<-expression(paste("Reference: ",italic("Pteropus rufus mischivirus "), "OQ
 
 mischivirus_ictv_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
         legend.text = element_text(face="italic", size = 7),
         legend.title = element_text(face="italic", size = 7),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -786,22 +782,23 @@ title<-expression(paste("Reference: ",italic("Eidolon dupreanum sapelovirus "), 
 
 sapelovirus_ictv_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
         legend.text = element_text(face="italic", size = 7),
         legend.title = element_text(face="italic", size = 7),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -855,36 +852,23 @@ title<-expression(paste("Reference: ",italic("Eidolon dupreanum sapovirus "), "O
 
 sapovirus_ictv_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  # annotate("point",x=2410, y=0.45, size=3, color="black")+
-  # annotate("point",x=2520, y=0.42, size=3, color="black")+
-  # annotate("point",x=2820, y=0.46, size=3, color="black")+
-  # annotate("point",x=3740, y=0.47, size=3, color="black")+
-  # annotate("point",x=4600, y=0.49, size=3, color="black")+
-  # annotate("point",x=7180, y=0.4, size=3, color="black")+
-  # annotate("point",x=7240, y=0.38, size=3, color="black")+
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
-  #geom_vline(xintercept=2410, linetype="dashed")+
-  #geom_vline(xintercept=2520, linetype="dashed")+
-  #geom_vline(xintercept=2820, linetype="dashed")+
-  #geom_vline(xintercept=3740, linetype="dashed")+
-  #geom_vline(xintercept=4600, linetype="dashed")+
-  #geom_vline(xintercept=7180, linetype="dashed")+
-  #geom_vline(xintercept=7240, linetype="dashed")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
         legend.text = element_text(face="italic", size = 7),
         legend.title = element_text(face="italic", size = 7),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -935,22 +919,23 @@ title<-expression(paste("Reference: ",italic("Eidolon dupreanum teschovirus "), 
 
 teschovirus_ictv_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7, ),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 7),
         legend.title = element_text(face="italic", size = 7),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values = colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -963,8 +948,6 @@ tescho_boot
 
 tescho_boot<-as.ggplot(tescho_boot)
 tescho_boot
-
-
 
 
 ##Now put the whole figure together
@@ -980,7 +963,7 @@ bootscan<-plot_grid(batpicorna_boot,
                     sapo_ictv_boot,
                     tescho_boot,
                     ncol=3,
-                    labels="AUTO")
+                    labels="AUTO", label_size = 23)
 bootscan
 
 

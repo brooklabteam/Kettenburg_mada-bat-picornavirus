@@ -299,6 +299,8 @@ ictv_tescho
 ##Now get the plots for the PySimPlot, just the ICTV_BLAST ones, there will be a separate PDF file with the table of African bat picorna similarities
 setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/ICTV_BLAST_pysimplot")
 
+colzpalette<-c("#8ECAE6","#219EBC","#023047","#FFB703","#FB8500","#E48B97","#B52B09","#A60067","#987B6F","#8FD694")
+
 
 #Hepatovirus
 hepato_ictv_aa_partial <- read.csv(file = "hepato_ictv_aa_partial_alignment.csv", header = T, stringsAsFactors = F) #animo acid

@@ -287,6 +287,9 @@ bat_felispicornalike_feat<-subset(bat_feat,molecule=="Felisavirus and Picorna-li
 
 
 #all seq over 3kb
+
+colzpalette<-c("#8ECAE6","#219EBC","#023047","#FFB703","#FB8500","#E48B97","#B52B09","#A60067","#987B6F","#8FD694")
+
 felispicorna_all<-ggplot(bat_felispicornalike, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
   geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
                   arrowhead_height = grid::unit(4, "mm"),
