@@ -147,7 +147,7 @@ tree.dat$Host[tree.dat$Host==0] <- "Non-bat host"
 tree.dat$Host[tree.dat$Host==1] <- "Bat host"
 tree.dat$Host <- as.factor(tree.dat$Host)
 shapez = c("Bat host" =  17, "Non-bat host" = 19)
-colz2 = c('1' =  "yellow", '0' = "white")
+colzpalette = c('1' =  "yellow", '0' = "white")
 
 
 ##uncollapsed tree
@@ -158,7 +158,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=
   new_scale_fill() +
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
   guides(fill="none", shape="none")+#
-  scale_fill_manual(values=colz2) +
+  scale_fill_manual(values=colzpalette) +
   geom_treescale(fontsize=4, x=0,y=-1.5, linesize = .5) +
   theme(legend.margin = margin(),
         legend.position = "left", 
@@ -461,8 +461,8 @@ felisapicornalike_bat_all_boot <- ggplot(long.sim_nt) +
         plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   # scale_x_continuous(breaks=c(0,1000/3.055,2000/3.055,3000/3.055), 
   #                    labels = c(0,1000, 2000,3000),expand=c(0,0))+
@@ -532,8 +532,8 @@ hepatovirus_bat_all_boot <- ggplot(long.sim_nt) +
         plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -604,8 +604,8 @@ mischivirus_bat_all_boot <- ggplot(long.sim_nt) +
         plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -672,8 +672,8 @@ sapelovirus_bat_all_boot <- ggplot(long.sim_nt) +
         plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -688,16 +688,6 @@ sapelo_bat_all_boot<-as.ggplot(sapelo_bat_all_boot)
 sapelo_bat_all_boot
 
 #in Fig 3
-# bootscan_bat_fig<-plot_grid(felispicona_all_boot,
-#                             mischi_bat_all_boot,
-#                             sapelo_bat_all_boot,
-#                             hep_bat_all_boot,
-#                             ncol=1,
-#                             labels=c("B","C","D","E"),
-#                             align="hv",
-#                             axis="l", label_size = 23)
-# bootscan_bat_fig
-
 bootscan_bat_fig2<-plot_grid(felispicona_all_boot,
                             mischi_bat_all_boot,
                             sapelo_bat_all_boot,
@@ -707,7 +697,6 @@ bootscan_bat_fig2<-plot_grid(felispicona_all_boot,
                             align="hv",
                             axis="l", label_size = 23)
 bootscan_bat_fig2
-
 
 #Now plot the final figure
 Fig4<-plot_grid(batpicornavirales_tree,bootscan_bat_fig2,
@@ -720,6 +709,6 @@ Fig4<-plot_grid(batpicornavirales_tree,bootscan_bat_fig2,
 
 Fig4
 
-#ggsave("Fig4.pdf", width=40, height=40, units = c("in"))
+#ggsave("Fig4.pdf", width=21, height=15, units = c("in"))
 
 

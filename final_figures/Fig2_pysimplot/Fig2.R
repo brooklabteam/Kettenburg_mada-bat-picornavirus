@@ -354,8 +354,8 @@ hepatovirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, c
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055),
                      labels = c(0,2000, 4000,6000),expand=c(0,0))+
@@ -424,8 +424,8 @@ kobuvirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, col
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
                      labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
@@ -484,8 +484,8 @@ kunsagivirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, 
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
                      labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
@@ -548,8 +548,8 @@ mischivirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, c
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
                      labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
@@ -614,8 +614,8 @@ sapelovirus_full_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=val
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
                      labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
@@ -679,8 +679,8 @@ teschovirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, c
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
   ggtitle(title)+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
                      labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
