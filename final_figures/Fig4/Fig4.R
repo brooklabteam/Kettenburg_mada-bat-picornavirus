@@ -118,65 +118,6 @@ dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & 
                                                                                                              dat$source[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|",
                                                                                                              #dat$Country[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
                                                                                                              dat$Collection_Date[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)])
-
-#and accession number only
-# #check:
-# dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) &!is.na(dat$source) & !is.na(dat$Country)] #none with this condition
-# 
-# 
-# 
-# #now NA in Isolate + source
-# #first check if there are any
-# dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)] #no
-# # dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)]<- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
-# #                                                                                                        dat$Family[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
-# #                                                                                                        #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|",
-# #                                                                                                        #dat$source[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|",
-# #                                                                                                        dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
-# #                                                                                                        dat$Collection_Date[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)])
-# #Isolate + accession only
-# dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) &!is.na(dat$Country)] #no
-# 
-# #Isolate + Country only
-# dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)] #no
-# # dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)] <- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|", 
-# #                                                                                                                 dat$Family[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|", 
-# #                                                                                                           #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
-# #                                                                                                           dat$source[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|",
-# #                                                                                                           #dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) &!is.na(dat$Country)], "|",
-# #                                                                                                           dat$Collection_Date[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)])
-# 
-# #now look at the other 2-way NAs: accession + source, accession + Country, source+Country
-# dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$source) & !is.na(dat$Country)] #none
-# 
-# dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) & is.na(dat$Country)] #none
-# dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)] #none
-# 
-# #replace
-# # dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)]<- paste(dat$Accession[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|", 
-# #                                                                                                                 dat$Family[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|", 
-# #                                                                                                                 dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|", 
-# #                                                                                                                 #dat$source[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|",
-# #                                                                                                                 #dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) &!is.na(dat$Country)], "|",
-# #                                                                                                                 dat$Collection_Date[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)])
-# 
-# #and 3-way NAs: Isolate + accession + source
-# dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$source) & !is.na(dat$Country)] #none
-# #Isolate + accession + Country
-# dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) & is.na(dat$Country)] #none
-# #Isolate source Country
-# dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)] #none
-# # dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)] <- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|",
-# #                                                                                                                 dat$Family[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|",
-# #                                                                                                                 #dat$Isolate[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|",
-# #                                                                                                                 #dat$source[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|",
-# #                                                                                                                 #dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) &!is.na(dat$Country)], "|",
-# #                                                                                                                 dat$Collection_Date[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)])
-# # #accession Country source
-# dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)] #none
-# #and all four
-# dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)] #none
-
 #look at dat$new_label
 dat$new_label #they all look great
 
@@ -215,82 +156,42 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=
   scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=4, nudge_x=0.05) +
-  guides(fill="none")+#
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
+  guides(fill="none", shape="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-1.5, linesize = .5) +
-  theme(legend.position = "none", 
+  theme(legend.margin = margin(),
+        legend.position = "left", 
         legend.direction = "vertical",
         legend.text = element_text(size=8), 
         legend.key.size = unit(0.2, "cm"),
         plot.margin = unit(c(0, 0, 0, 0), "cm")) +
-  xlim(c(0,8))
+  xlim(c(0,20))
 
 p1
-
-#add node shapes to represent bootstrap values
-p0<-ggtree(rooted.tree)
-p0.dat <- p0$data
-p0.dat$Bootstrap <- NA
-Bootstrap<-p0.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p0.dat$label)] <- as.numeric(p0.dat$label[(length(tree.dat$tip_label)+1):length(p0.dat$label)])#fill with label
-
-#add bootstrap values to original plot
-p1.1 <- p1  %<+% p0.dat + 
-  ggnewscale::new_scale_fill() + 
-  geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
-  scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
-  guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
-  theme(legend.position = "left",
-        legend.direction = "vertical",
-        legend.text = element_text(size=8),
-        legend.title = element_text(size=8),
-        legend.key.size = unit(0.3, "cm"),
-        plot.margin = unit(c(0, 0, 0, 0), "cm"))
-p1.1
-
-# p1.2<-p1.1%>%ggtree::rotate(node=570)
-# p1.2
 
 ##Get the clade numbers so we can collapse unnnecesary clades
 ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
 
 
 #collapsed tree
-
-#add clade labels
-p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=Host), size=3,stroke=0,show.legend = T) +
-  scale_fill_manual(values=colz) +
-  scale_color_manual(values=colz)+
-  scale_shape_manual(values=shapez) +
-  new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=4, nudge_x=0.05) +
-  guides(fill="none")+#
-  scale_fill_manual(values=colz2) +
-  geom_treescale(fontsize=4, x=0,y=-1.5, linesize = .5) +
-  theme(legend.position = "none", 
-        legend.direction = "vertical",
-        legend.text = element_text(size=8), 
-        legend.key.size = unit(0.3, "cm"),
-        plot.margin = unit(c(0, 0, 0, 0), "cm")) +
-  xlim(c(0,8))+
-  geom_cladelabel(node = 353, label = "bold(Parechovirus/Scotophilus_kuhlii/Vietnam_clade)",parse=T,hjust='center',offset=1.5, fontsize = 4, color="turquoise4") +
-  geom_cladelabel(node = 384, label = "bold(Shanbavirus/Rhinolophus_sp./China_clade)",parse=T,hjust='center', offset=1.5,fontsize = 4, color="turquoise4") +
-  geom_cladelabel(node = 407, label = "bold(Shanbavirus/Miniopterus_shreibersii/Hungary_clade)",parse=T,hjust='center', offset=1.5, fontsize = 4, color="turquoise4") +
-  geom_cladelabel(node = 422, label = "bold(Kobuvirus/Scotophilus_kuhlii/Vietnam_clade)",parse=T,hjust='center', offset=1.5,fontsize = 4, color="turquoise4") +
-  geom_cladelabel(node = 315, label = "bold(Unclassified/Miniopterus_pusillus/Chian_clade)",parse=T,hjust='center', offset=1.5,fontsize = 4, color="turquoise4") +
-  geom_cladelabel(node = 461, label = "bold(Shanbavirus/Rhinolophus_sp./China_clade)",parse=T,hjust='center', offset=1.5, fontsize = 4, color="turquoise4") +
-  geom_cladelabel(node = 281, label = "bold(Unclassified/Scotophilus_kuhlii/Vietnam_clade)",parse=T,hjust='center', offset=1.5, fontsize = 4, color="turquoise4")
-p2
-
-
 #collapse the labeled clades
-p3<-collapse(p2, 353)+geom_point2(aes(subset=(node==353)), size=3, shape=22, fill="turquoise1")
+p3<-collapse(p1, 353)+geom_point2(aes(subset=(node==353)), size=3, shape=22, fill="turquoise1")
 p4<-collapse(p3, 384)+geom_point2(aes(subset=(node==384)), size=3, shape=22, fill="turquoise1")
 p5<-collapse(p4, 407)+geom_point2(aes(subset=(node==407)), size=3, shape=22, fill="turquoise1")
 p6<-collapse(p5, 422)+geom_point2(aes(subset=(node==422)), size=3, shape=22, fill="turquoise1")
 p7<-collapse(p6, 315)+geom_point2(aes(subset=(node==315)), size=3, shape=22, fill="turquoise1")
 p8<-collapse(p7, 461)+geom_point2(aes(subset=(node==461)), size=3, shape=22, fill="turquoise1")
 p9<-collapse(p8, 281)+geom_point2(aes(subset=(node==281)), size=3, shape=22, fill="turquoise1")
+p9
+
+p9<-p9+geom_cladelabel(node = 353, label = "Parechovirus/Scotophilus_kuhlii/Vietnam clade",offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 384, label = "Shanbavirus/Rhinolophus_sp./China clade", offset=0.1,fontsize = 3, color="black") +
+  geom_cladelabel(node = 407, label = "Shanbavirus/Miniopterus_shreibersii/Hungary clade", offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 422, label = "Kobuvirus/Scotophilus_kuhlii/Vietnam clade", offset=0.1,fontsize = 3, color="black") +
+  geom_cladelabel(node = 315, label = "Unclassified/Miniopterus_pusillus/Chian clade", offset=0.1,fontsize = 3, color="black") +
+  geom_cladelabel(node = 461, label = "Shanbavirus/Rhinolophus_sp./China clade", offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 281, label = "Unclassified/Scotophilus_kuhlii/Vietnam clade", offset=0.1, fontsize = 3, color="black")
 p9
 
 
@@ -316,7 +217,7 @@ batpicornavirales_tree
 
 
 
-#Now plot the bootscan and gene maps for part B
+ #Now plot the bootscan and gene maps for part B
 ##First make the genome plots
 homewd="/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/genome_annotation_and_characterization/"
 setwd("~/Desktop/developer/mada-bat-picornavirus/genome_annotation_and_characterization/genus_gene_maps")
@@ -498,7 +399,6 @@ bat_sapelo_all
 
 ##Now get the plots from bootscan
 
-#First all bat picornavirales over 3kb
 setwd("~/Desktop/developer/mada-bat-picornavirus/bootscan/output_bat/all")
 
 #Felisavirus
@@ -543,20 +443,21 @@ title<-expression(paste("Reference: ",italic("Pteropus rufus felisavirus "), " O
 
 felisapicornalike_bat_all_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
         legend.text = element_text(face="italic", size = 7),
         legend.title = element_text(face="italic", size = 7),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -568,7 +469,7 @@ felisapicornalike_bat_all_boot <- ggplot(long.sim_nt) +
 felisapicornalike_bat_all_boot
 
 #put gene map with PySimPlot
-felispicona_all_boot<-felisapicornalike_bat_all_boot/felispicorna_all+plot_layout(nrow=2,  heights = c(2, 0.30))
+felispicona_all_boot<-felisapicornalike_bat_all_boot/felispicorna_all+plot_layout(nrow=2,  heights = c(2, 0.4))
 felispicona_all_boot
 
 felispicona_all_boot<-as.ggplot(felispicona_all_boot)
@@ -613,20 +514,21 @@ title<-expression(paste("Reference: ",italic("Eidolon dupreanum hepatovirus "), 
 
 hepatovirus_bat_all_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
         legend.text = element_text(face="italic", size = 7),
         legend.title = element_text(face="italic", size = 7),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -637,7 +539,7 @@ hepatovirus_bat_all_boot
 
 
 #put gene map with PySimPlot
-hep_bat_all_boot<-hepatovirus_bat_all_boot/bat_hepato_all+plot_layout(nrow=2,  heights = c(2, 0.30))
+hep_bat_all_boot<-hepatovirus_bat_all_boot/bat_hepato_all+plot_layout(nrow=2,  heights = c(2, 0.4))
 hep_bat_all_boot
 
 hep_bat_all_boot<-as.ggplot(hep_bat_all_boot)
@@ -684,20 +586,21 @@ title<-expression(paste("Reference: ",italic("Pteropus rufus mischivirus "), "OQ
 
 mischivirus_bat_all_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
         legend.text = element_text(face="italic", size = 7),
         legend.title = element_text(face="italic", size = 7),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -707,7 +610,7 @@ mischivirus_bat_all_boot <- ggplot(long.sim_nt) +
 mischivirus_bat_all_boot
 
 #put gene map with PySimPlot
-mischi_bat_all_boot<-mischivirus_bat_all_boot/bat_mischi_all+plot_layout(nrow=2,  heights = c(2, 0.30))
+mischi_bat_all_boot<-mischivirus_bat_all_boot/bat_mischi_all+plot_layout(nrow=2,  heights = c(2, 0.4))
 mischi_bat_all_boot
 
 mischi_bat_all_boot<-as.ggplot(mischi_bat_all_boot)
@@ -751,20 +654,21 @@ title<-expression(paste("Reference: ",italic("Eidolon dupreanum sapelovirus "), 
 
 sapelovirus_bat_all_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
         legend.text = element_text(face="italic", size = 7),
         legend.title = element_text(face="italic", size = 7),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -774,34 +678,45 @@ sapelovirus_bat_all_boot <- ggplot(long.sim_nt) +
 sapelovirus_bat_all_boot
 
 #put gene map with PySimPlot
-sapelo_bat_all_boot<-sapelovirus_bat_all_boot/bat_sapelo_all+plot_layout(nrow=2,  heights = c(2, 0.30))
+sapelo_bat_all_boot<-sapelovirus_bat_all_boot/bat_sapelo_all+plot_layout(nrow=2,  heights = c(2, 0.4))
 sapelo_bat_all_boot
 
 sapelo_bat_all_boot<-as.ggplot(sapelo_bat_all_boot)
 sapelo_bat_all_boot
 
 #in Fig 3
-bootscan_bat_fig<-plot_grid(felispicona_all_boot,
+# bootscan_bat_fig<-plot_grid(felispicona_all_boot,
+#                             mischi_bat_all_boot,
+#                             sapelo_bat_all_boot,
+#                             hep_bat_all_boot,
+#                             ncol=1,
+#                             labels=c("B","C","D","E"),
+#                             align="hv",
+#                             axis="l", label_size = 23)
+# bootscan_bat_fig
+
+bootscan_bat_fig2<-plot_grid(felispicona_all_boot,
                             mischi_bat_all_boot,
                             sapelo_bat_all_boot,
                             hep_bat_all_boot,
-                            ncol=1,
-                            labels=c("B","","",""),
+                            ncol=2,
+                            labels=c("B","C","D","E"),
                             align="hv",
-                            axis="l")
-bootscan_bat_fig
-
+                            axis="l", label_size = 23)
+bootscan_bat_fig2
 
 
 #Now plot the final figure
-Fig4<-plot_grid(batpicornavirales_tree,bootscan_bat_fig,
+Fig4<-plot_grid(batpicornavirales_tree,bootscan_bat_fig2,
                 ncol=2,
                 align="hv", axis = "b",
                 rel_heights = c(1,0.1),
-                rel_widths = c(1,1),
+                rel_widths = c(1,1.3),
+                label_size = 23,
                 labels="A","")
+
 Fig4
 
-#ggsave("Fig4.PDF", width=40, height=40, units = c("in"))
+#ggsave("Fig4.pdf", width=40, height=40, units = c("in"))
 
 

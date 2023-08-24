@@ -5,13 +5,13 @@ Bat picornavirus,2655,3652,3153.5,VP1,all
 Bat picornavirus,3653,4366,4009.5,2A,all
 Bat picornavirus,4367,4725,4546,2B,all
 Bat picornavirus,4726,5723,5224.5,2C,all
-Bat picornavirus,5724,6149,5936.5,3A,all
+Bat picornavirus,5724,6149,5800,3A,all
 Bat picornavirus,6150,6218,6184,3B,all
 Bat picornavirus,6219,6771,6495,3C,all
 Bat picornavirus,6772,7930,7351,3D,all
 Felisavirus and Picorna-like virus,3646,11968,7807,Non-structural polyprotein,all
-Hepatovirus,818,896,890,VP4,all
-Hepatovirus,897,1563,1250,VP2,all
+Hepatovirus,818,896,950,VP4,all
+Hepatovirus,897,1563,1270,VP2,all
 Hepatovirus,1564,2319,1941.5,VP3,all
 Hepatovirus,2320,3256,2788,VP1,all
 Hepatovirus,3257,4068,3662.5,2A,all
@@ -21,14 +21,14 @@ Hepatovirus,5448,5772,5610,3A,all
 Hepatovirus,5773,5844,5808.5,3B,all
 Hepatovirus,5845,6362,6103.5,3C,all
 Mischivirus,1598,1829,1713.5,L,all
-Mischivirus,1830,2061,1945.5,VP4,all
+Mischivirus,1830,2061,1970,VP4,all
 Mischivirus,2061,2887,2474,VP2,all
 Mischivirus,2924,3599,3261.5,VP3,all
 Mischivirus,3603,4494,4048.5,VP1,all
 Mischivirus,4544,4695,4619.5,2A,all
 Mischivirus,4696,5196,4946,2B,all
 Mischivirus,5197,6372,5784.5,2C,all
-Mischivirus,6397,6558,6477.5,3A,all
+Mischivirus,6397,6558,6300,3A,all
 Mischivirus,6623,6859,6741,3B,all
 Mischivirus,6869,7444,7156.5,3C,all
 Mischivirus,7445,8815,8130,3D,all
@@ -38,7 +38,7 @@ Sapelovirus,2425,3403,2914,VP1,all
 Sapelovirus,3414,4240,3827,2A,all
 Sapelovirus,4241,4666,4453.5,2B,all
 Sapelovirus,4667,5711,5189,2C,all
-Sapelovirus,5712,6066,5889,3A,all
+Sapelovirus,5712,6066,5700,3A,all
 Sapelovirus,6067,6142,6104.5,3B,all
 Sapelovirus,6143,6689,6416,3C,all
 Sapelovirus,6690,8084,7387,3D,all
@@ -59,7 +59,7 @@ Hepatovirus,2281,2874,2577.5,VP1,full
 Hepatovirus,2875,3115,2995,2A,full
 Hepatovirus,3131,3410,3270.5,2B,full
 Hepatovirus,3411,4637,4024,2C,full
-Hepatovirus,4467,4832,4649.5,3A,full
+Hepatovirus,4467,4832,4500,3A,full
 Hepatovirus,4833,4913,4873,3B,full
 Hepatovirus,4920,5399,5159.5,3C,full
 Hepatovirus,5403,6168,5785.5,3D,full
