@@ -202,95 +202,25 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=
   scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=2, nudge_x=0.05) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
-  theme(legend.position = "none", 
+  theme(legend.margin = margin(),
+        legend.position = "left", 
         legend.direction = "vertical",
         legend.text = element_text(size=7), 
         legend.key.size = unit(0.2, "cm")) +
-  xlim(c(0,8))
+  xlim(c(0,14))
 
 p1
-
-#add node shapes to represent bootstrap values
-p0<-ggtree(rooted.tree)
-p0.dat <- p0$data
-p0.dat$Bootstrap <- NA
-Bootstrap<-p0.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p0.dat$label)] <- as.numeric(p0.dat$label[(length(tree.dat$tip_label)+1):length(p0.dat$label)])#fill with label
-
-#add bootstrap values to original plot
-p1.1 <- p1  %<+% p0.dat + 
-  ggnewscale::new_scale_fill() + 
-  geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
-  scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
-  #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
-  theme(legend.position = "left",
-        legend.direction = "vertical",
-        legend.text = element_text(size=8),
-        legend.title = element_text(size=8),
-        legend.key.size = unit(0.3, "cm"))
-p1.1
-
-# p1.2<-p1.1%>%ggtree::rotate(node=570)
-# p1.2
 
 ##Get the clade numbers so we can collapse unnnecesary clades
 ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
 
 
 #collapsed tree
-
-#add clade labels
-p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=Host), size=3,stroke=0,show.legend = T) +
-  scale_fill_manual(values=colz) +
-  scale_color_manual(values=colz)+
-  scale_shape_manual(values=shapez) +
-  new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=2, nudge_x=0.05) +
-  guides(fill="none")+#
-  scale_fill_manual(values=colz2) +
-  geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
-  theme(legend.position = "none", 
-        legend.direction = "vertical",
-        legend.text = element_text(size=8), 
-        legend.key.size = unit(0.3, "cm")) +
-  xlim(c(0,8))+
-  geom_cladelabel(node = 776, label = "bold(Picornaviridae)",parse=T,hjust='center',offset=0.15, fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 808, label = "bold(Caliciviridae)",parse=T,hjust='center', offset=0.12,fontsize = 2, color="royalblue4") +
-  geom_cladelabel(node = 440, label = "bold(Picornaviridae)",parse=T,hjust='center', offset=0.15, fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 446, label = "bold(Picornaviridae)",parse=T,hjust='center', offset=0.15,fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 499, label = "bold(Caliciviridae)",parse=T,hjust='center', offset=0.1,fontsize = 2, color="royalblue4") +
-  geom_cladelabel(node = 496, label = "bold(Picornaviridae)",parse=T,hjust='center', offset=0.15, fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 492, label = "bold(Picornaviridae)",parse=T,hjust='center', offset=0.15, fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 466, label = "bold(Caliciviridae)",parse=T,hjust='center', offset=0.1,fontsize = 2, color="royalblue4") +
-  geom_cladelabel(node = 457, label = "bold(Picornaviridae)", parse=T,fontsize = 2,hjust='center', offset=0.15, color="turquoise4") +
-  geom_cladelabel(node = 475, label = "bold(Picornaviridae)",parse=T, fontsize = 2,hjust='center', offset=0.15, color="turquoise4") +
-  geom_cladelabel(node = 479, label = "bold(Picornaviridae)",parse=T, fontsize = 2,hjust='center', offset=0.15, color="turquoise4") +
-  geom_cladelabel(node = 743, label = "bold(Caliciviridae)",parse=T, fontsize = 2,hjust='center', offset=0.1, color="royalblue4") +
-  geom_cladelabel(node = 729, label = "bold(Secoviridae/Iflaviridae)",parse=T,hjust='center', offset=0.25,fontsize = 2, color="deeppink4") +
-  geom_cladelabel(node = 721, label = "bold(Marnaviridae/Picornaviridae/Iflaviridae)",parse=T,hjust='center', offset=0.45, fontsize = 2, color="deeppink4")+
-  geom_cladelabel(node = 533, label = "bold(Marnaviridae/Caliciviridae)",parse=T,hjust='center', offset=0.3, fontsize = 2,color="deeppink4") +
-  geom_cladelabel(node = 693, label = "bold(Unclassified)",parse=T, fontsize = 2,hjust='center', offset=0.1, color="deeppink4") +
-  geom_cladelabel(node = 668, label = "bold(Unclassified)",parse=T, fontsize = 2,hjust='center', offset=0.12, color="deeppink4") +
-  geom_cladelabel(node = 701, label = "bold(Unclassified)",parse=T, fontsize = 2,hjust='center', offset=0.12,color="deeppink4") +
-  geom_cladelabel(node = 716, label = "bold(Caliciviridae)",parse=T, fontsize = 2,hjust='center', offset=0.12,color="royalblue4") +
-  geom_cladelabel(node = 645, label = "bold(Dicistroviridae/Iflaviridae)",parse=T,hjust='center', offset=0.3, fontsize = 2, color="deeppink4")+
-  geom_cladelabel(node = 629, label = "bold(Secoviridae)",parse=T, fontsize = 2,hjust='center', offset=0.15, color="goldenrod4") +
-  geom_cladelabel(node = 624, label = "bold(Picornaviridae)",parse=T,hjust='center', offset=0.16, fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 602, label = "bold(Secoviridae)",parse=T, fontsize = 2,hjust='center', offset=0.15, color="goldenrod4") +
-  geom_cladelabel(node = 583, label = "bold(Secoviridae)", parse=T,fontsize = 2,hjust='center', offset=0.15, color="goldenrod4")+
-  geom_cladelabel(node = 574, label = "bold(Secoviridae)",parse=T, fontsize = 2,hjust='center', offset=0.15, color="goldenrod4") +
-  geom_cladelabel(node = 560, label = "bold(Secoviridae)",parse=T, fontsize = 2,hjust='center', offset=0.15, color="goldenrod4") +
-  geom_cladelabel(node = 572, label = "bold(Secoviridae)", parse=T,fontsize = 2,hjust='center', offset=0.15, color="goldenrod4") +
-  geom_cladelabel(node = 565, label = "bold(Secoviridae)",parse=T, fontsize = 2,hjust='center', offset=0.15, color="goldenrod4") +
-  geom_cladelabel(node = 567, label = "bold(Secoviridae)", parse=T,fontsize = 2,hjust='center', offset=0.17, color="goldenrod4")
-p2
-
-
-#collapse the labeled clades
-p3<-collapse(p2, 776)+geom_point2(aes(subset=(node==776)), size=3, shape=22, fill="turquoise1")
+p3<-collapse(p1, 776)+geom_point2(aes(subset=(node==776)), size=3, shape=22, fill="turquoise1")
 p4<-collapse(p3, 808)+geom_point2(aes(subset=(node==808)), size=3, shape=22, fill="royalblue3")
 p5<-collapse(p4, 440)+geom_point2(aes(subset=(node==440)), size=3, shape=22, fill="turquoise1")
 p6<-collapse(p5, 446)+geom_point2(aes(subset=(node==446)), size=3, shape=22, fill="turquoise1")
@@ -321,22 +251,54 @@ p30<-collapse(p29, 565)+geom_point2(aes(subset=(node==565)), size=3, shape=22, f
 p31<-collapse(p30, 567)+geom_point2(aes(subset=(node==567)), size=3, shape=22, fill="goldenrod1")
 p31
 
+p31<-p31+geom_cladelabel(node = 776, label = "Picornaviridae clade",offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 808, label = "Caliciviridae clade", offset=0.1,fontsize = 3, color="black") +
+  geom_cladelabel(node = 440, label = "Picornaviridae clade", offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 446, label = "Picornaviridae clade", offset=0.1,fontsize = 3, color="black") +
+  geom_cladelabel(node = 499, label = "Caliciviridae clade", offset=0.1,fontsize = 3, color="black") +
+  geom_cladelabel(node = 496, label = "Picornaviridae clade", offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 492, label = "Picornaviridae clade", offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 466, label = "Caliciviridae clade", offset=0.1,fontsize = 3, color="black") +
+  geom_cladelabel(node = 457, label = "Picornaviridae clade",fontsize = 3, offset=0.1, color="black") +
+  geom_cladelabel(node = 475, label = "Picornaviridae clade", fontsize = 3, offset=0.1, color="black") +
+  geom_cladelabel(node = 479, label = "Picornaviridae clade", fontsize = 3, offset=0.1, color="black") +
+  geom_cladelabel(node = 743, label = "Caliciviridae clade", fontsize = 3, offset=0.1, color="black") +
+  geom_cladelabel(node = 729, label = "Secoviridae/Iflaviridae clade", offset=0.1,fontsize = 3, color="black") +
+  geom_cladelabel(node = 721, label = "Marnaviridae/Picornaviridae/Iflaviridae clade", offset=0.1, fontsize = 3, color="black")+
+  geom_cladelabel(node = 533, label = "Marnaviridae/Caliciviridae clade", offset=0.1, fontsize = 3,color="black") +
+  geom_cladelabel(node = 693, label = "Unclassified clade", fontsize = 3, offset=0.1, color="black") +
+  geom_cladelabel(node = 668, label = "Unclassified clade", fontsize = 3, offset=0.1, color="black") +
+  geom_cladelabel(node = 701, label = "Unclassified clade", fontsize = 3, offset=0.1,color="black") +
+  geom_cladelabel(node = 716, label = "Caliciviridae clade", fontsize = 3, offset=0.1,color="black") +
+  geom_cladelabel(node = 645, label = "Dicistroviridae/Iflaviridae clade", offset=0.1, fontsize = 3, color="black")+
+  geom_cladelabel(node = 629, label = "Secoviridae clade", fontsize = 3, offset=0.1, color="black") +
+  geom_cladelabel(node = 624, label = "Picornaviridae clade", offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 602, label = "Secoviridae clade", fontsize = 3, offset=0.1, color="black") +
+  geom_cladelabel(node = 583, label = "Secoviridae clade",fontsize = 3, offset=0.1, color="black")+
+  geom_cladelabel(node = 574, label = "Secoviridae clade", fontsize = 3, offset=0.1, color="black") +
+  geom_cladelabel(node = 560, label = "Secoviridae clade", fontsize = 3, offset=0.1, color="black") +
+  geom_cladelabel(node = 572, label = "Secoviridae clade",fontsize = 3, offset=0.1, color="black") +
+  geom_cladelabel(node = 565, label = "Secoviridae clade", fontsize = 3, offset=0.1, color="black") +
+  geom_cladelabel(node = 567, label = "Secoviridae clade",fontsize = 3, offset=0.1, color="black")
+p31
+
 
 ##add bootstrap values to this tree
 p31.dat <- p31$data
 p31.dat$Bootstrap <- NA
-Bootstrap<-p31.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p31.dat$label)] <- as.numeric(p31.dat$label[(length(tree.dat$tip_label)+1):length(p0.dat$label)])#fill with label
+Bootstrap<-p31.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p31.dat$label)] <- as.numeric(p31.dat$label[(length(tree.dat$tip_label)+1):length(p31.dat$label)])#fill with label
 
-p31.1 <- p31  %<+% p0.dat + 
+p31.1 <- p31  %<+% p31.dat + 
+  guides(fill="none")+
   ggnewscale::new_scale_fill() + 
   geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
-  #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
-  theme(legend.position = "left",
+  theme(legend.position = "left", legend.margin = margin(),
         legend.direction = "vertical",
         legend.text = element_text(size=8),
         legend.title = element_text(size=8),
-        legend.key.size = unit(0.3, "cm"))
+        legend.key.size = unit(0.3, "cm"),
+        plot.margin = unit(c(0, 0, 0, 0), "cm"))
 p31.1
 
 
