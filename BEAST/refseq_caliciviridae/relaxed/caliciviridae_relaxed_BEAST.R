@@ -10,7 +10,7 @@ library(lubridate)
 library(treeio)
 
 
-#make Bayesian timetree from caliciviridae strict molecular clock model
+#make Bayesian timetree from caliciviridae relaxed molecular clock model
 
 #first, read in the tree
 
@@ -22,10 +22,7 @@ tree <-  read.beast(file = paste0(homewd, "/BEAST/refseq_caliciviridae/relaxed/c
 
 treedat <- cbind.data.frame(tip_name = tree@phylo$tip.label)
 treedat$beast_name <-treedat$tip_name
-#tree <- read.annot.beast(file = paste0(homewd, "/Fig4/beast-out/AllNobeco/NobecoStrict/AvgNobecoStrictNexus.trees"))
 
-#tree$node.label <- round(tree$posterior,2)
-#treedat <- cbind.data.frame(tip_name = tree$tip.label)
 treedat$accession_num <- sapply(strsplit(treedat$tip_name, "_"), function(x) x[[1]])
 treedat$accession_num[treedat$accession_num=="NC"] <- c("NC_000940","NC_001481","NC_001543","NC_001959","NC_002551","NC_002615","NC_004064",
                                                         "NC_004541","NC_004542","NC_006269","NC_006554","NC_006875","NC_007916","NC_008311",
@@ -36,8 +33,6 @@ treedat$accession_num[treedat$accession_num=="NC"] <- c("NC_000940","NC_001481",
                                                         "NC_043516","NC_044045","NC_044046","NC_044047","NC_044853","NC_044854","NC_044855",
                                                         "NC_044856","NC_044932","NC_045762")
 treedat$accession_num[treedat$accession_num=="F"] <- c("OQ818319")
-
-#names(treedat)[names(treedat)=="tip_name"] <- "beast_name"
 
 #and load data of corresponding tree
 
@@ -89,10 +84,6 @@ tree@phylo$tip.label <- dat.plot$new_label
 dat.sub <- dplyr::select(dat.plot, new_label, Genus, Family, Collection_Date,Host, Country, source, Collection_Year, novel, Isolate, Species)
 head(dat.sub)
 
-# dat.sub$novel = "no"
-# dat.sub$novel[dat.sub$country=="Madagascar"] <- "yes"
-# 
-# colz2 = c('yes' =  "yellow", 'no' = "white")
 
 dat.sub$Host[dat.sub$Host==0] <- "Non-bat host"
 dat.sub$Host[dat.sub$Host==1] <- "Bat host"

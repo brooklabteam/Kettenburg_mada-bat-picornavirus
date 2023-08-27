@@ -10,49 +10,97 @@ library(lubridate)
 library(treeio)
 
 
-#make Bayesian timetree from caliciviridae strict molecular clock model
+#make Bayesian timetree from picornaviridae relaxed molecular clock model
 
 #first, read in the tree
 
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
 
-setwd(paste0(homewd, "/BEAST/refseq_caliciviridae/relaxed"))
+setwd(paste0(homewd, "/BEAST/refseq_picornaviridae/relaxed"))
 
-tree <-  read.beast(file = paste0(homewd, "/BEAST/refseq_caliciviridae/relaxed/caliciviridae_relaxed_mean_tree"))
+tree <-  read.beast(file = paste0(homewd, "/BEAST/refseq_picornaviridae/relaxed/picornsaviridae_relaxed_mean_tree"))
 
 treedat <- cbind.data.frame(tip_name = tree@phylo$tip.label)
 treedat$beast_name <-treedat$tip_name
-#tree <- read.annot.beast(file = paste0(homewd, "/Fig4/beast-out/AllNobeco/NobecoStrict/AvgNobecoStrictNexus.trees"))
 
-#tree$node.label <- round(tree$posterior,2)
-#treedat <- cbind.data.frame(tip_name = tree$tip.label)
+
 treedat$accession_num <- sapply(strsplit(treedat$tip_name, "_"), function(x) x[[1]])
-treedat$accession_num[treedat$accession_num=="NC"] <- c("NC_000940","NC_001481","NC_001543","NC_001959","NC_002551","NC_002615","NC_004064",
-                                                        "NC_004541","NC_004542","NC_006269","NC_006554","NC_006875","NC_007916","NC_008311",
-                                                        "NC_008580","NC_010624","NC_011050","NC_011704","NC_012699","NC_017936","NC_019712",
-                                                        "NC_024031","NC_024078","NC_025676","NC_027026","NC_027122","NC_029645","NC_029646",
-                                                        "NC_029647","NC_030793","NC_031324","NC_033081","NC_033776","NC_034444","NC_035675",
-                                                        "NC_039475","NC_039476","NC_039477","NC_039897","NC_040674","NC_040876","NC_043512",
-                                                        "NC_043516","NC_044045","NC_044046","NC_044047","NC_044853","NC_044854","NC_044855",
-                                                        "NC_044856","NC_044932","NC_045762")
-treedat$accession_num[treedat$accession_num=="F"] <- c("OQ818319")
+treedat$accession_num[treedat$accession_num=="NC"] <- c("NC_001366","NC_001430","NC_001472","NC_001479","NC_001489","NC_001490",
+                                                        "NC_001612","NC_001617","NC_001859","NC_001918","NC_002058","NC_003976",
+                                                        "NC_003983","NC_003985","NC_003987","NC_003988","NC_003990","NC_004421",
+                                                        "NC_004441","NC_004451","NC_006553","NC_008250","NC_008714","NC_009448",
+                                                        "NC_009891","NC_009996","NC_010354","NC_010415","NC_010810","NC_011349",
+                                                        "NC_011829","NC_012798","NC_012800","NC_012801","NC_012802","NC_012957",
+                                                        "NC_012986","NC_013695","NC_014411","NC_014412","NC_014413","NC_015626",
+                                                        "NC_015934","NC_015936","NC_015940","NC_015941","NC_016156", "NC_016403",
+                                                        "NC_016769","NC_016964","NC_018226","NC_018400","NC_018506","NC_018668",
+                                                        "NC_021178","NC_021201","NC_021220","NC_021482","NC_022332","NC_022802",
+                                                        "NC_023162","NC_023422","NC_023858","NC_023861","NC_023984","NC_023985",
+                                                        "NC_023987","NC_023988","NC_024070","NC_024073","NC_024120","NC_024765",
+                                                        "NC_024766","NC_024767","NC_024768","NC_024769","NC_024770","NC_025114",
+                                                        "NC_025432","NC_025474","NC_025675","NC_025890","NC_025961","NC_026249",
+                                                        "NC_026315","NC_026316","NC_026470","NC_026921","NC_027054","NC_027214",
+                                                        "NC_027818","NC_027918","NC_027919","NC_028363","NC_028364","NC_028365",
+                                                        "NC_028366","NC_028380","NC_028964","NC_028970","NC_028981","NC_029854",
+                                                        "NC_029905","NC_030454","NC_030843","NC_031105","NC_031106","NC_032126",
+                                                        "NC_033695","NC_033793","NC_033818","NC_033819","NC_033820","NC_034206",
+                                                        "NC_034245","NC_034267","NC_034381","NC_034385","NC_034453","NC_034617",
+                                                        "NC_034971","NC_035110","NC_035198","NC_035779","NC_036588","NC_037654",
+                                                        "NC_038303","NC_038304","NC_038305","NC_038306","NC_038307","NC_038308",
+                                                        "NC_038309","NC_038310","NC_038311","NC_038312","NC_038313","NC_038314",
+                                                        "NC_038315","NC_038316","NC_038317","NC_038318","NC_038319","NC_038878",
+                                                        "NC_038880","NC_038957","NC_038961","NC_038989","NC_039004","NC_039209",
+                                                        "NC_039210","NC_039212","NC_039235","NC_040605","NC_040611","NC_040642",
+                                                        "NC_040673","NC_040684","NC_043072","NC_043544","NC_055108","NC_055156",
+                                                        "NC_055159","NC_055160","NC_055161")
+treedat$accession_num[treedat$accession_num=="F"] <- c("OQ818316","OQ818317","OQ818318","OQ818320","OQ818321","OQ818322",
+                                                       "OQ818323","OQ818324","OQ818325","OQ818328","OQ818329","OQ818337")
+treedat$accession_num[treedat$accession_num=="F"] <- c("OP287812")
 
-#names(treedat)[names(treedat)=="tip_name"] <- "beast_name"
 
 #and load data of corresponding tree
 
-dat <- read.csv(file = "caliciviridae_beast_metadata.csv", header = T, stringsAsFactors = F)
+dat <- read.csv(file = "picornaviridae_beast_metadata.csv", header = T, stringsAsFactors = F)
 dat$Collection_Date <- as.Date(dat$Collection_Date)
 
 
-colz = c("Sapovirus" = "royalblue3",    "Vesivirus"  = "turquoise1",   "Lagovirus"  = "goldenrod1",   "Norovirus"   = "dodgerblue1" ,   "Calicivirus" = "firebrick1" ,
-         "Salovirus"  = "lightpink1" ,    "Bavovirus"  = "hotpink1" ,  "Minovirus" = "lightskyblue" ,   "Coronavirus"  = "black", "Recovirus"  = "darkorange1", 
-         "Nacovirus"="thistle3", "Nebovirus"="darkorchid4")
+ccolz = c("Cardiovirus" = "cadetblue1",    "Enterovirus"  = "cadetblue2",   "Hepatovirus"  = "cadetblue3",   
+          "Kobuvirus"   = "cadetblue4" ,   "Parechovirus" = "coral1" ,"Erbovirus"  = "coral3" ,    
+          "Teschovirus"  = "coral4" ,  "Sapelovirus" = "cyan1" ,   "Tremovirus"  = "cyan2" ,   
+          "Anativirus"   = "cyan3" ,"Avihepatovirus"  = "cyan4","Aquamavirus"  = "darkgoldenrod1",   
+          "Aphthovirus"  = "darkgoldenrod2" ,  "Senecavirus"  = "darkgoldenrod3" ,  "Cosavirus"  = "darkgoldenrod4",
+          "Salivirus"   = "deepskyblue1",    "Passerivirus"  = "deepskyblue2", "Oscivirus"   = "deepskyblue3" , 
+          "Unclassified picornavirus"= "deepskyblue4"  ,   "Mischivirus" = "darkorange","Pasivirus"   = "darkorange2"  ,  
+          "Gallivirus"   = "darkorange3" ,  "Limnipivirus"  = "darkorange4",  "Hunnivirus"   = "firebrick1",   
+          "Dicipivirus" = "firebrick2","Megrivirus"  = "firebrick3" ,   "Potamipivirus"  = "firebrick4", 
+          "Sakobuvirus"  = "lightblue1" ,  "Sicinivirus"  = "lightblue2" ,  "Aalivirus"  = "lightblue3",
+          "Mosavirus"  = "lightblue4" ,    "Rosavirus"  = "hotpink1" ,    "Avisivirus"   = "hotpink2",   
+          "Orivirus"   = "hotpink3" ,    "Crohivirus" = "hotpink4","Torchivirus" = "indianred1" ,   
+          "Bopivirus"  = "indianred3"  ,   "Malagasivirus" = "indianred4" , "Harkavirus"  = "pink1" ,   
+          "Ampivirus"  = "pink2" ,"Livupivirus" = "pink3" ,   "Kunsagivirus"  = "pink4",  
+          "Shanbavirus"  = "slateblue1" ,  "Rafivirus"   = "slateblue3",  "Coronavirus" ="black",  
+          "Poecivirus"  = "slateblue4" ,"Rabovirus"   = "maroon1",    "Tottorivirus"  = "maroon3" , 
+          "Ailurivirus" = "maroon4", "Madagascar bat kobuvirus" ="royalblue1", "Bat picornavirus"="royalblue3", "Picornavirus"="royalblue4")
 
 #pick order for the labels
-dat$Genus <- factor(dat$Genus, levels = c("Sapovirus" ,  "Vesivirus",   "Lagovirus",   "Norovirus",   "Calicivirus",
-                                          "Salovirus",    "Bavovirus",  "Minovirus",  "Recovirus", "Nacovirus", "Nebovirus", 
-                                          "Coronavirus"))   
+dat$Genus <- factor(dat$Genus, levels = c("Cardiovirus",    "Enterovirus",   "Hepatovirus",   
+                                          "Kobuvirus",   "Parechovirus","Erbovirus",    
+                                          "Teschovirus",  "Sapelovirus",   "Tremovirus",   
+                                          "Anativirus","Avihepatovirus","Aquamavirus",   
+                                          "Aphthovirus",  "Senecavirus",  "Cosavirus",
+                                          "Salivirus",    "Passerivirus", "Oscivirus", 
+                                          "Unclassified picornavirus",   "Mischivirus","Pasivirus",  
+                                          "Gallivirus",  "Limnipivirus",  "Hunnivirus",   
+                                          "Dicipivirus","Megrivirus",   "Potamipivirus", 
+                                          "Sakobuvirus",  "Sicinivirus",  "Aalivirus",
+                                          "Mosavirus",    "Rosavirus",    "Avisivirus",   
+                                          "Orivirus",    "Crohivirus","Torchivirus",   
+                                          "Bopivirus",   "Malagasivirus", "Harkavirus",   
+                                          "Ampivirus", "Livupivirus",   "Kunsagivirus",  
+                                          "Shanbavirus",  "Rafivirus", 
+                                          "Poecivirus", "Rabovirus",    "Tottorivirus", 
+                                          "Ailurivirus", "Madagascar bat kobuvirus", 
+                                          "Bat picornavirus", "Picornavirus","Coronavirus"))   
 
 dat$novel <- as.factor(dat$novel)
 
@@ -88,11 +136,6 @@ tree@phylo$tip.label <- dat.plot$new_label
 
 dat.sub <- dplyr::select(dat.plot, new_label, Genus, Family, Collection_Date,Host, Country, source, Collection_Year, novel, Isolate, Species)
 head(dat.sub)
-
-# dat.sub$novel = "no"
-# dat.sub$novel[dat.sub$country=="Madagascar"] <- "yes"
-# 
-# colz2 = c('yes' =  "yellow", 'no' = "white")
 
 dat.sub$Host[dat.sub$Host==0] <- "Non-bat host"
 dat.sub$Host[dat.sub$Host==1] <- "Bat host"
