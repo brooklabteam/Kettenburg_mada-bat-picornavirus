@@ -16,9 +16,9 @@ library(treeio)
 
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
 
-setwd(paste0(homewd, "/BEAST/refseq_caliciviridae/strict"))
+setwd(paste0(homewd, "/BEAST/refseq_caliciviridae/relaxed"))
 
-tree <-  read.beast(file = paste0(homewd, "/BEAST/refseq_caliciviridae/strict/caliciviridae_strict_mean_tree"))
+tree <-  read.beast(file = paste0(homewd, "/BEAST/refseq_caliciviridae/relaxed/caliciviridae_relaxed_mean_tree"))
 
 treedat <- cbind.data.frame(tip_name = tree@phylo$tip.label)
 treedat$beast_name <-treedat$tip_name
