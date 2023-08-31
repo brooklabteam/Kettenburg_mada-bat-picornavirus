@@ -309,7 +309,7 @@ p6 <- ggplot(ED, aes(x=type, y=virus)) +
     title="Eidolon dupreanum")+
   theme_linedraw()+
   scale_y_discrete(position="right")+
-  theme(plot.margin = margin(0, 0, 0, 0, "pt"),
+  theme(plot.margin = margin(0, 0, 0, 2),
         plot.background = element_blank(),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -430,7 +430,9 @@ unique(dat$any_picorna)
 
 #select columns of interest
 dat <- dplyr::select(dat,roost_site,bat_age_class,bat_sex, collection_date,
-                     species, sampleid, any_picorna, month, year, day_of_year,sampleid)
+                     species, sampleid, any_picorna, month, year, day_of_year)
+dem.dat<-dplyr::select(dat,roost_site,bat_age_class,bat_sex,
+                       species, sampleid, any_picorna)
 
 head(dat)
 unique(dat$roost_site)
@@ -442,18 +444,28 @@ dat$collection_date <- as.Date(dat$collection_date,format = "%m/%d/%y")
 dat$any_picorna <- as.numeric(dat$any_picorna)
 names(dat)[names(dat)=="bat_species"] <- "species"
 
+dem.dat$any_picorna <- as.numeric(dem.dat$any_picorna)
+names(dem.dat)[names(dem.dat)=="bat_species"] <- "species"
+
 #and make sure it is only 1 of the same sample type per each date
 dat.list <- dlply(dat, .(sampleid))
+dem.dat.list <- dlply(dem.dat, .(sampleid))
 
 #summarize into prevalence by species and epiwk
 dat.sum <- ddply(dat, .(species, month, bat_age_class, bat_sex), summarise, N=length(any_picorna), pos=sum(any_picorna))
+dem.dat.sum <- ddply(dem.dat, .(species, bat_age_class, bat_sex), summarise, N=length(any_picorna), pos=sum(any_picorna))
 
 #get negatives and prevalence
 dat.sum$neg= dat.sum$N-dat.sum$pos
 dat.sum$prevalence <- dat.sum$pos/dat.sum$N
 
+dem.dat.sum$neg= dem.dat.sum$N-dem.dat.sum$pos
+dem.dat.sum$prevalence <- dem.dat.sum$pos/dem.dat.sum$N
+
 #and confidence intervals on the prevalence
 CIs <- mapply(FUN=prop.test, x=as.list(dat.sum$pos), n=as.list(dat.sum$N), MoreArgs = list(alternative = "two.sided", conf.level = .95, correct=F), SIMPLIFY = F)
+CIs <- mapply(FUN=prop.test, x=as.list(dem.dat.sum$pos), n=as.list(dem.dat.sum$N), MoreArgs = list(alternative = "two.sided", conf.level = .95, correct=F), SIMPLIFY = F)
+
 
 #and extract the upper and lower CIs
 get.CIs <- function(df){
@@ -470,6 +482,8 @@ dat.sum$uci <- c(unlist(sapply(CIs, '[',2)))
 
 #simplify= the name of "host_genus_species" 
 names(dat.sum)[names(dat.sum)=="host_genus_species"] <- "species"
+names(dem.dat.sum)[names(dem.dat.sum)=="host_genus_species"] <- "species"
+
 
 #make the data into factors
 dat.sum$species<-factor(dat.sum$species, levels=c("Eidolon dupreanum", "Pteropus rufus", "Rousettus madagascariensis"))
@@ -477,46 +491,26 @@ dat.sum$bat_sex<-factor(dat.sum$bat_sex, levels=c("Male", "Female"))
 dat.sum$bat_age_class<-factor(dat.sum$bat_age_class, levels=c("J", "A"))
 dat.sum$month<-factor(dat.sum$month, levels=c("Jan", "Feb", "March", "April", "May", "June", "July", "August", "Sept",
                                               "Oct", "Nov", "Dec"))
+
+dem.dat.sum$species<-factor(dem.dat.sum$species, levels=c("Eidolon dupreanum", "Pteropus rufus", "Rousettus madagascariensis"))
+dem.dat.sum$bat_sex<-factor(dem.dat.sum$bat_sex, levels=c("Male", "Female"))
+dem.dat.sum$bat_age_class<-factor(dem.dat.sum$bat_age_class, levels=c("J", "A"))
+
 #dat.sum$any_picorna<-factor(dat.sum$any_picorna, levels=c("0", "1"))
 
 #subset some data
-ED<-subset(dat.sum, species=="Eidolon dupreanum")
-PR<-subset(dat.sum, species=="Pteropus rufus")
-RM<-subset(dat.sum, species=="Rousettus madagascariensis")
-picorna<-subset(dat.sum,any_picorna=="1")
-other<-subset(dat.sum,any_picorna=="0")
+ED1<-subset(dat.sum, species=="Eidolon dupreanum")
+PR1<-subset(dat.sum, species=="Pteropus rufus")
+RM1<-subset(dat.sum, species=="Rousettus madagascariensis")
 
+ED2<-subset(dem.dat.sum, species=="Eidolon dupreanum")
+PR2<-subset(dem.dat.sum, species=="Pteropus rufus")
+RM2<-subset(dem.dat.sum, species=="Rousettus madagascariensis")
 
-#facet by year 
-p10 <- ggplot(dat.sum, aes(x=species, y=bat_age_class, fill=pos)) +
-  geom_tile() +
-  #scale_fill_manual(values=c("lightblue1""royalblue1")) +
-  scale_fill_viridis_c(option = "F", direction = -1) +
-  #facet_wrap(~family, ncol=1,  scales = "free_y")+
-  # facet_nested(family~., scales="free", space="free",
-  #              switch="y")+
-  facet_nested(year+bat_sex~., scales="free", space="free",
-               switch="y", nest_line = element_line(color="white"), solo_line = TRUE)+
-  labs(#title = expression("Diversity of" ~italic(Picornavirales) ~"sequences"),
-    x = "",
-    y= "",
-    fill="Bats \n positive",
-    title="")+
-  theme_linedraw()+
-  scale_y_discrete(position="right")+
-  theme(plot.margin = margin(0, 0, 0, 0, "pt"),
-        plot.background = element_blank(),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        plot.title = element_text(size=12, face="italic"), 
-        axis.text.y = element_text(size=7,face="italic"),
-        axis.text.x = element_text(face="italic"),
-        legend.position = "right")
-p10
 
 
 #facet by month 
-p11 <- ggplot(dat.sum, aes(x=species, y=bat_age_class, fill=pos)) +
+p10 <- ggplot(dat.sum, aes(x=species, y=bat_age_class, fill=pos)) +
   geom_tile() +
   #scale_fill_manual(values=c("lightblue1""royalblue1")) +
   scale_fill_viridis_c(option = "F", direction = -1) +
@@ -540,6 +534,35 @@ p11 <- ggplot(dat.sum, aes(x=species, y=bat_age_class, fill=pos)) +
         axis.text.y = element_text(size=7,face="italic"),
         axis.text.x = element_text(face="italic"),
         legend.position = "right")
+p10
+
+
+#just demographic info
+p11 <- ggplot(dem.dat.sum, aes(x=bat_sex, y=bat_age_class, fill=pos)) +
+  geom_tile() +
+  #scale_fill_manual(values=c("lightblue1""royalblue1")) +
+  scale_fill_viridis_c(option = "F", direction = -1) +
+  facet_wrap(~species, ncol=3,  scales = "free_y")+
+  # facet_nested(family~., scales="free", space="free",
+  #              switch="y")+
+  # facet_nested(month+bat_sex~., scales="free", space="free",
+  #              switch="y", nest_line = element_line(color="white"), solo_line = TRUE)+
+  labs(#title = expression("Diversity of" ~italic(Picornavirales) ~"sequences"),
+    x = "",
+    y= "",
+    fill="Bats \n positive",
+    title="")+
+  theme_linedraw()+
+  scale_y_discrete(position="right")+
+  theme(plot.margin = margin(2, 0, 0, 0),
+        legend.margin = margin(),
+        plot.background = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        plot.title = element_text(size=12, face="italic"), 
+        axis.text.y = element_text(size=7,face="italic"),
+        axis.text.x = element_text(face="italic"),
+        legend.position = "bottom")
 p11
 
 
@@ -547,9 +570,12 @@ p11
 
 ##Version 2
 
-final3<-plot_grid(p4,p10, labels=c("A","B"), ncol=1, align="hv", axis="r")
+final<- plot_grid(p6,p7,p8,labels=c("C","",""), rel_widths = c(1, 1,1),hjust=1.5, rel_heights = c(1, 1,1),
+                  ncol=3, align="hv", axis="l", label_size=23)
+final
+
+final3<-plot_grid(p4,p11, labels = c("A", "B"), rel_widths = c(1,0.8),hjust=0.5, rel_heights = c(1,0.7), ncol=1, align="hv", axis="l", label_size=23)
 final3
 
-
-final4 <- plot_grid(final3,final,leg,labels=c("","C",""),rel_widths = c(1, 2,0.25), rel_heights = c(3, 1),ncol=3, align="hv", axis="b")
+final4<- plot_grid(NULL,final3,NULL,final,labels=c("","", "",""),rel_widths = c(0.1,1,0.1, 2), rel_heights = c(1,1,1, 0.8),ncol=4, align="hv", axis="b", label_size = 23)
 final4
