@@ -55,8 +55,6 @@ colz=c("5'UTR"="gold", "L"="royalblue","VP4"="paleturquoise3", "VP2"="skyblue1",
 
 #Subset ICTV data by virus
 ictv_batpicornavirus<-subset(ictv,molecule=="Bat picornavirus")
-ictv_cheravirus<-subset(ictv,molecule=="Cheravirus")
-ictv_felisavirus<-subset(ictv,molecule=="Felisavirus")
 ictv_hepatovirus<-subset(ictv,molecule=="Hepatovirus")
 ictv_kobuvirus<-subset(ictv,molecule=="Kobuvirus")
 ictv_kunsagivirus<-subset(ictv,molecule=="Kunsagivirus")
@@ -80,8 +78,6 @@ ictv_sapelovirus_pep_partial<-subset(ictv_sapelovirus_pep,type=="partial")
 ictv_teschovirus_pep<-subset(ictv_pep,molecule=="Teschovirus")
 
 ictv_batpicornavirus_feat<-subset(ictv_feat,molecule=="Bat picornavirus")
-ictv_cheravirus_feat<-subset(ictv_feat,molecule=="Cheravirus")
-ictv_felisavirus_feat<-subset(ictv_feat,molecule=="Felisavirus")
 ictv_hepatovirus_feat<-subset(ictv_feat,molecule=="Hepatovirus")
 ictv_kobuvirus_feat<-subset(ictv_feat,molecule=="Kobuvirus")
 ictv_kunsagivirus_feat<-subset(ictv_feat,molecule=="Kunsagivirus")
@@ -125,54 +121,6 @@ ictv_batpicorna<-ggplot(ictv_batpicornavirus, aes(xmin = start, xmax = end, y = 
         axis.line.x = element_blank())+
   xlab("Genome position") + ylab("")
 ictv_batpicorna
-
-
-ictv_chera<-ggplot(ictv_cheravirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
-  geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
-                  arrowhead_height = grid::unit(4, "mm"),
-                  arrow_body_height = grid::unit(4, "mm")) +
-  # geom_feature(data=ictv_cheravirus_feat, aes(x=mid, y=molecule),
-  #              feature_height = grid::unit(6,"mm"))+
-  # geom_feature_label(data=ictv_cheravirus_feat, aes(x=mid, y=molecule, label=gene),
-  #                    feature_height = grid::unit(6,"mm"),
-  #                    label_height = grid::unit(6,"mm"))+
-  geom_text(data=ictv_cheravirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
-  scale_fill_manual(values=colz)+
-  theme_genes()+
-  scale_x_continuous(limits=c(430,3710),expand=c(0,0))+
-  theme(legend.position = "none")+
-  theme(plot.margin = unit(c(0,0,0,0), "cm"),
-        axis.text.y = element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.text.x = element_blank(),
-        axis.title.x = element_blank(),
-        axis.line.x = element_blank())+
-  xlab("Genome position") + ylab("")
-ictv_chera
-
-
-ictv_felisa<-ggplot(ictv_felisavirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
-  geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
-                  arrowhead_height = grid::unit(4, "mm"),
-                  arrow_body_height = grid::unit(4, "mm")) +
-  # geom_feature(data=ictv_felisavirus_feat, aes(x=mid, y=molecule),
-  #              feature_height = grid::unit(6,"mm"))+
-  # geom_feature_label(data=ictv_felisavirus_feat, aes(x=mid, y=molecule, label=gene),
-  #                    feature_height = grid::unit(6,"mm"),
-  #                    label_height = grid::unit(6,"mm"))+
-  geom_text(data=ictv_felisavirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
-  scale_fill_manual(values=colz)+
-  theme_genes()+
-  scale_x_continuous(limits=c(624,1749),expand=c(0,0))+
-  theme(legend.position = "none")+
-  theme(plot.margin = unit(c(0,0,0,0), "cm"),
-        axis.text.y = element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.text.x = element_blank(),
-        axis.title.x = element_blank(),
-        axis.line.x = element_blank())+
-  xlab("Genome position") + ylab("")
-ictv_felisa
 
 
 ictv_hepato<-ggplot(ictv_hepatovirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
@@ -404,6 +352,8 @@ ictv_tescho
 
 ##Now get the plots for the PySimPlot, just the ICTV_BLAST ones, there will be a saparate PDF file with the table of African bat picorna similarities
 setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/ICTV_BLAST_pysimplot")
+
+colzpalette<-c("#8ECAE6","#219EBC","#023047","#FFB703","#FB8500","#E48B97","#B52B09","#A60067","#987B6F","#8FD694")
 
 #Bat picornavirus 
 bat_picorna_ictv_nt_full <- read.csv(file = "bat_picorna_ictv_nt_full_alignment.csv", header = T, stringsAsFactors = F)
