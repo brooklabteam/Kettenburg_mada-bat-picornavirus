@@ -67,9 +67,6 @@ bat_sapelovirus_full<-subset(bat_sapelovirus,type=="full")
 bat_sapelovirus_all<-subset(bat_sapelovirus,type=="all")
 bat_teschovirus<-subset(bat,molecule=="Teschovirus")
 bat_sapovirus<-subset(bat,molecule=="Sapovirus")
-bat_felispicornalike<-subset(bat,molecule=="Felisavirus and Picorna-like virus")
-bat_felisavirus<-subset(bat,molecule=="Felisavirus")
-bat_picornalike<-subset(bat,molecule=="Picorna-like virus")
 
 
 bat_batpicornavirus_pep<-subset(bat_pep,molecule=="Bat picornavirus")
@@ -99,10 +96,6 @@ bat_sapelovirus_full_feat<-subset(bat_sapelovirus_feat,type=="full")
 bat_sapelovirus_all_feat<-subset(bat_sapelovirus_feat,type=="all")
 bat_teschovirus_feat<-subset(bat_feat,molecule=="Teschovirus")
 bat_sapovirus_feat<-subset(bat_feat,molecule=="Sapovirus")
-bat_felispicornalike_feat<-subset(bat_feat,molecule=="Felisavirus and Picorna-like virus")
-bat_felisavirus_feat<-subset(bat_feat,molecule=="Felisavirus")
-bat_picornalike_feat<-subset(bat_feat,molecule=="Picorna-like virus")
-
 
 
 ##Now the bat gene maps
@@ -137,30 +130,6 @@ bat_batpicorna_all<-ggplot(bat_batpicornavirus, aes(xmin = start, xmax = end, y 
         axis.line.x = element_blank())+
   xlab("Genome position") + ylab("")
 bat_batpicorna_all
-
-
-felispicorna_all<-ggplot(bat_felispicornalike, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
-  geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
-                  arrowhead_height = grid::unit(4, "mm"),
-                  arrow_body_height = grid::unit(4, "mm")) +
-  # geom_feature(data=bat_hepatovirus_feat, aes(x=mid, y=molecule),
-  #              feature_height = grid::unit(6,"mm"))+
-  # geom_feature_label(data=bat_hepatovirus_feat, aes(x=mid, y=molecule, label=gene),
-  #                    feature_height = grid::unit(6,"mm"),
-  #                    label_height = grid::unit(6,"mm"))+
-  geom_text(data=bat_felispicornalike_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
-  scale_fill_manual(values=colz)+
-  theme_genes()+
-  scale_x_continuous(limits=c(3600,11970),expand=c(0,0))+
-  theme(legend.position = "none")+
-  theme(plot.margin = unit(c(0,0,0,0), "cm"),
-        axis.text.y = element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.text.x = element_blank(),
-        axis.title.x = element_blank(),
-        axis.line.x = element_blank())+
-  xlab("Genome position") + ylab("")
-felispicorna_all
 
 
 bat_hepato_all<-ggplot(bat_hepatovirus_all, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
@@ -305,30 +274,6 @@ bat_tescho_all
 
 
 ##now do all full reference genome maps
-bat_felis_full<-ggplot(bat_felisavirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
-  geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
-                  arrowhead_height = grid::unit(4, "mm"),
-                  arrow_body_height = grid::unit(4, "mm")) +
-  # geom_feature(data=bat_hepatovirus_feat, aes(x=mid, y=molecule),
-  #              feature_height = grid::unit(6,"mm"))+
-  # geom_feature_label(data=bat_hepatovirus_feat, aes(x=mid, y=molecule, label=gene),
-  #                    feature_height = grid::unit(6,"mm"),
-  #                    label_height = grid::unit(6,"mm"))+
-  geom_text(data=bat_felisavirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
-  scale_fill_manual(values=colz)+
-  theme_genes()+
-  scale_x_continuous(limits=c(540,8970),expand=c(0,0))+
-  theme(legend.position = "none")+
-  theme(plot.margin = unit(c(0,0,0,0), "cm"),
-        axis.text.y = element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.text.x = element_blank(),
-        axis.title.x = element_blank(),
-        axis.line.x = element_blank())+
-  xlab("Genome position") + ylab("")
-bat_felis_full
-
-
 bat_hepato_full<-ggplot(bat_hepatovirus_full, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
   geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
                   arrowhead_height = grid::unit(4, "mm"),
@@ -416,30 +361,6 @@ bat_mischi_full<-ggplot(bat_mischivirus_full, aes(xmin = start, xmax = end, y = 
 bat_mischi_full
 
 
-bat_picornalike_full<-ggplot(bat_picornalike, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
-  geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
-                  arrowhead_height = grid::unit(4, "mm"),
-                  arrow_body_height = grid::unit(4, "mm")) +
-  # geom_feature(data=bat_sapovirus_full_feat, aes(x=mid, y=molecule),
-  #              feature_height = grid::unit(6,"mm"))+
-  # geom_feature_label(data=bat_sapovirus_full_feat, aes(x=mid, y=molecule, label=gene),
-  #                    feature_height = grid::unit(6,"mm"),
-  #                    label_height = grid::unit(6,"mm"))+
-  geom_text(data=bat_picornalike_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
-  scale_fill_manual(values=colz)+
-  theme_genes()+
-  scale_x_continuous(limits=c(530,8860),expand=c(0,0))+
-  theme(legend.position = "none")+
-  theme(plot.margin = unit(c(0,0,0,0), "cm"),
-        axis.text.y = element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.text.x = element_blank(),
-        axis.title.x = element_blank(),
-        axis.line.x = element_blank())+
-  xlab("Genome position") + ylab("")
-bat_picornalike_full
-
-
 bat_sapelo_full<-ggplot(bat_sapelovirus_full, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
   geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
                   arrowhead_height = grid::unit(4, "mm"),
@@ -477,6 +398,8 @@ bat_sapelo_full
 #First all bat picornavirales over 3kb
 setwd("~/Desktop/developer/mada-bat-picornavirus/bootscan/output_bat/all")
 
+colzpalette<-c("#8ECAE6","#219EBC","#023047","#FFB703","#FB8500","#E48B97","#B52B09","#A60067","#987B6F","#8FD694")
+
 #Bat picornavirus 
 batpicorna_bat_boot <- read.csv(file = "batpicornavirus_boot.csv", header = T, stringsAsFactors = F)
 head(batpicorna_bat_boot)
@@ -512,22 +435,22 @@ title<-expression(paste("Reference: ",italic("Rousettus madagascariensis picorna
 
 batpicorna_bat_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold"), ) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+        plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
   ggtitle(title)+
   # scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055), 
   #                    labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
@@ -542,83 +465,6 @@ batpicorna_boot
 
 batpicorna_boot<-as.ggplot(batpicorna_boot)
 batpicorna_boot
-
-
-
-
-
-#Felisavirus
-felisa_picornalike_bat_boot <- read.csv(file = "felisa_picorna_like_boot.csv", header = T, stringsAsFactors = F) 
-head(felisa_picornalike_bat_boot)
-
-#move to long
-long.sim_nt <- melt(felisa_picornalike_bat_boot, id.vars = c("pointer"), measure.vars = c("OQ818339","OQ818341","HQ585111","OP880198","OQ363752","OQ363755",
-                                                                                          "OQ363761","MK468720"))
-
-unique(long.sim_nt$variable)
-
-long.sim_nt$variable <- as.character(long.sim_nt$variable)
-
-names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
-
-long.sim_nt$accession[long.sim_nt$accession == "OQ818339"] <- "Eidolon dupreanum picorna-like virus OQ818339"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818341"] <- "Eidolon dupreanum felisavirus OQ818341"
-long.sim_nt$accession[long.sim_nt$accession == "HQ585111"] <- "Eptesicus fuscus picorna-like virus HQ585111"
-long.sim_nt$accession[long.sim_nt$accession == "OP880198"] <- "Myotis brandtii picorna-like virus OP880198"
-long.sim_nt$accession[long.sim_nt$accession == "OQ363752"] <- "Miniopterus pusillus picornavirus OQ363752"
-long.sim_nt$accession[long.sim_nt$accession == "OQ363755"] <- "Miniopterus pusillus picornavirus OQ363755"
-long.sim_nt$accession[long.sim_nt$accession == "OQ363761"] <- "Miniopterus pusillus picornavirus OQ363761"
-long.sim_nt$accession[long.sim_nt$accession == "MK468720"] <- "Pteropus lylei picoravirales sp. MK468720"
-
-
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Eidolon dupreanum picorna-like virus OQ818339",
-                                                                  "Eidolon dupreanum felisavirus OQ818341",
-                                                                  "Eptesicus fuscus picorna-like virus HQ585111",
-                                                                  "Myotis brandtii picorna-like virus OP880198",
-                                                                  "Miniopterus pusillus picornavirus OQ363752",
-                                                                  "Miniopterus pusillus picornavirus OQ363755",
-                                                                  "Miniopterus pusillus picornavirus OQ363761",
-                                                                  "Pteropus lylei picoravirales sp. MK468720"))
-long.sim_nt$value[long.sim_nt$value<0] <- 0
-long.sim_nt$value <- long.sim_nt$value/100
-
-
-
-## Nucleotide
-title<-expression(paste("Reference: ",italic("Pteropus rufus felisavirus "), " OQ818335"))
-
-felisapicornalike_bat_all_boot <- ggplot(long.sim_nt) + 
-  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
-  theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
-  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
-        strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
-        legend.key.height= unit(3.5, 'mm'),
-        legend.key.width= unit(3.5, 'mm'),
-        legend.background =element_rect(fill = alpha("white", 0)),
-        axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
-  ggtitle(title)+
-  # scale_x_continuous(breaks=c(0,1000/3.055,2000/3.055,3000/3.055), 
-  #                    labels = c(0,1000, 2000,3000),expand=c(0,0))+
-  scale_x_continuous(expand=c(0,0))+
-  scale_y_continuous(limits=c(0,1), expand=c(0,0))
-
-felisapicornalike_bat_all_boot
-
-#put gene map with PySimPlot
-felispicona_all_boot<-felisapicornalike_bat_all_boot/felispicorna_all+plot_layout(nrow=2,  heights = c(2, 0.30))
-felispicona_all_boot
-
-felispicona_all_boot<-as.ggplot(felispicona_all_boot)
-felispicona_all_boot
 
 
 
@@ -659,22 +505,22 @@ title<-expression(paste("Reference: ",italic("Eidolon dupreanum hepatovirus "), 
 
 hepatovirus_bat_all_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -730,22 +576,22 @@ title<-expression(paste("Reference: ",italic("Pteropus rufus mischivirus "), "OQ
 
 mischivirus_bat_all_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -797,22 +643,22 @@ title<-expression(paste("Reference: ",italic("Eidolon dupreanum sapelovirus "), 
 
 sapelovirus_bat_all_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -866,22 +712,22 @@ title<-expression(paste("Reference: ",italic("Eidolon dupreanum sapovirus "), "O
 
 sapovirus_bat_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -931,17 +777,18 @@ teschovirus_bat_boot <- ggplot(long.sim_nt) +
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7, ),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -966,73 +813,6 @@ tescho_boot
 
 ##Now plot the bootscans using only full picornavirales as reference
 setwd("~/Desktop/developer/mada-bat-picornavirus/bootscan/output_bat/full")
-
-#Felisavirus
-felisavirus_bat_boot <- read.csv(file = "felisavirus_boot.csv", header = T, stringsAsFactors = F) 
-head(felisavirus_bat_boot)
-
-#move to long
-long.sim_nt <- melt(felisavirus_bat_boot, id.vars = c("pointer"), measure.vars = c("OQ363754","OQ363755","OQ363758","OQ363759","OQ363761"))
-
-unique(long.sim_nt$variable)
-
-long.sim_nt$variable <- as.character(long.sim_nt$variable)
-
-names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
-
-long.sim_nt$accession[long.sim_nt$accession == "OQ363754"] <- "Miniopterus pusillus picornavirus OQ363754"
-long.sim_nt$accession[long.sim_nt$accession == "OQ363755"] <- "Miniopterus pusillus picornavirus OQ363755"
-long.sim_nt$accession[long.sim_nt$accession == "OQ363758"] <- "Miniopterus pusillus picornavirus OQ363758"
-long.sim_nt$accession[long.sim_nt$accession == "OQ363759"] <- "Miniopterus pusillus picornavirus OQ363759"
-long.sim_nt$accession[long.sim_nt$accession == "OQ363761"] <- "Miniopterus pusillus picornavirus OQ363761"
-
-
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Miniopterus pusillus picornavirus OQ363754",
-                                                                  "Miniopterus pusillus picornavirus OQ363755",
-                                                                  "Miniopterus pusillus picornavirus OQ363758",
-                                                                  "Miniopterus pusillus picornavirus OQ363759",
-                                                                  "Miniopterus pusillus picornavirus OQ363761"))
-
-long.sim_nt$value[long.sim_nt$value<0] <- 0
-long.sim_nt$value <- long.sim_nt$value/100
-
-
-
-## Nucleotide
-title<-expression(paste("Reference: ",italic("Pteropus rufus felisavirus "), " OQ818335"))
-
-felisavirus_full_boot <- ggplot(long.sim_nt) + 
-  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  geom_hline(yintercept=0.30, linetype="dashed", color="lightgrey")+
-  theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
-  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
-        strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
-        legend.key.height= unit(3.5, 'mm'),
-        legend.key.width= unit(3.5, 'mm'),
-        legend.background =element_rect(fill = alpha("white", 0)),
-        axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
-  ggtitle(title)+
-  # scale_x_continuous(breaks=c(0,1000/3.055,2000/3.055,3000/3.055), 
-  #                    labels = c(0,1000, 2000,3000),expand=c(0,0))+
-  scale_x_continuous(expand=c(0,0))+
-  scale_y_continuous(limits=c(0,1), expand=c(0,0))
-
-felisavirus_full_boot
-
-#put gene map with PySimPlot
-felisa_full_boot<-felisavirus_full_boot/bat_felis_full+plot_layout(nrow=2,  heights = c(2, 0.30))
-felisa_full_boot
-
-felisa_full_boot<-as.ggplot(felisa_full_boot)
-felisa_full_boot
 
 
 #Hepatovirus
@@ -1069,17 +849,18 @@ hepatovirus_bat_full_boot <- ggplot(long.sim_nt) +
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -1132,17 +913,18 @@ kunsagivirus_bat_full_boot <- ggplot(long.sim_nt) +
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -1192,17 +974,18 @@ mischivirus_bat_full_boot <- ggplot(long.sim_nt) +
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -1260,16 +1043,18 @@ sapelovirus_bat_full_boot <- ggplot(long.sim_nt) +
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
-        legend.position = "top", legend.direction = "horizontal",# legend.box = "vertical",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
+        legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
   ggtitle(title)+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
@@ -1291,25 +1076,23 @@ sapelo_bat_full_boot
 
 #all bootscan together: all bat picornavirales
 bootscan_batall<-plot_grid(batpicorna_boot,
-                           felispicona_all_boot,
                            hep_bat_all_boot,
                            mischi_bat_all_boot,
                            sapelo_bat_all_boot,
                            sapo_bat_boot,
                            tescho_boot,
                     ncol=3,
-                    labels="AUTO")
+                    labels="AUTO",  label_size = 23, align = "hv", axis="b")
 bootscan_batall
 
 
 #all bootscan together: full bat picornavirales reference
-bootscan_batfull<-plot_grid(felisa_full_boot,
-                           hep_bat_full_boot,
+bootscan_batfull<-plot_grid(hep_bat_full_boot,
                            kun_bat_full_boot,
                            mischi_bat_full_boot,
                            sapelo_bat_full_boot,
-                           ncol=3,
-                           labels="AUTO")
+                           ncol=2,
+                           labels="AUTO",  label_size = 23, align = "hv", axis="b")
 bootscan_batfull
 
 
@@ -1317,24 +1100,22 @@ bootscan_batfull
 
 
 #in Fig 3
-bootscan_bat_fig<-plot_grid(felispicona_all_boot,
-                            mischi_bat_all_boot,
+bootscan_bat_fig<-plot_grid(mischi_bat_all_boot,
                             sapelo_bat_all_boot,
                             hep_bat_all_boot,
-                        nrow=2,
-                        labels="AUTO")
+                        nrow=1,
+                        labels="AUTO",  label_size = 23, align = "hv", axis="b")
 bootscan_bat_fig
 
 
 #excluded from Fig 3 
 bootscan_bat_supp<-plot_grid(batpicorna_boot,
                              sapo_bat_boot,
-                             felisa_full_boot,
                              kun_bat_full_boot,
                              mischi_bat_full_boot,
                              sapelo_bat_full_boot,
                              hep_bat_full_boot,
                          ncol=3,
-                         labels="AUTO")
+                         labels="AUTO",  label_size = 23, align = "hv", axis="b")
 bootscan_bat_supp
 

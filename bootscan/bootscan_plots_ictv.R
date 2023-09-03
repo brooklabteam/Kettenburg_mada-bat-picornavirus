@@ -55,7 +55,6 @@ colz=c("5'UTR"="gold", "L"="royalblue","VP4"="paleturquoise3", "VP2"="skyblue1",
 
 #Subset ICTV data by virus
 ictv_batpicornavirus<-subset(ictv,molecule=="Bat picornavirus")
-ictv_cheravirus<-subset(ictv,molecule=="Cheravirus")
 ictv_hepatovirus<-subset(ictv,molecule=="Hepatovirus")
 ictv_kobuvirus<-subset(ictv,molecule=="Kobuvirus")
 ictv_kunsagivirus<-subset(ictv,molecule=="Kunsagivirus")
@@ -76,7 +75,6 @@ ictv_sapelovirus_pep_full<-subset(ictv_sapelovirus_pep,type=="full")
 ictv_teschovirus_pep<-subset(ictv_pep,molecule=="Teschovirus")
 
 ictv_batpicornavirus_feat<-subset(ictv_feat,molecule=="Bat picornavirus")
-ictv_cheravirus_feat<-subset(ictv_feat,molecule=="Cheravirus")
 ictv_hepatovirus_feat<-subset(ictv_feat,molecule=="Hepatovirus")
 ictv_kobuvirus_feat<-subset(ictv_feat,molecule=="Kobuvirus")
 ictv_kunsagivirus_feat<-subset(ictv_feat,molecule=="Kunsagivirus")
@@ -117,30 +115,6 @@ ictv_batpicorna<-ggplot(ictv_batpicornavirus, aes(xmin = start, xmax = end, y = 
         axis.line.x = element_blank())+
   xlab("Genome position") + ylab("")
 ictv_batpicorna
-
-
-ictv_chera<-ggplot(ictv_cheravirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
-  geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
-                  arrowhead_height = grid::unit(4, "mm"),
-                  arrow_body_height = grid::unit(4, "mm")) +
-  # geom_feature(data=ictv_hepatovirus_feat, aes(x=mid, y=molecule),
-  #              feature_height = grid::unit(6,"mm"))+
-  # geom_feature_label(data=ictv_hepatovirus_feat, aes(x=mid, y=molecule, label=gene),
-  #                    feature_height = grid::unit(6,"mm"),
-  #                    label_height = grid::unit(6,"mm"))+
-  geom_text(data=ictv_cheravirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
-  scale_fill_manual(values=colz)+
-  theme_genes()+
-  scale_x_continuous(limits=c(400,3740),expand=c(0,0))+
-  theme(legend.position = "none")+
-  theme(plot.margin = unit(c(0,0,0,0), "cm"),
-        axis.text.y = element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.text.x = element_blank(),
-        axis.title.x = element_blank(),
-        axis.line.x = element_blank())+
-  xlab("Genome position") + ylab("")
-ictv_chera
 
 
 ictv_hepato<-ggplot(ictv_hepatovirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
@@ -408,77 +382,6 @@ batpicorna_boot
 
 batpicorna_boot<-as.ggplot(batpicorna_boot)
 batpicorna_boot
-
-
-
-
-#Cheravirus RNA2
-cheravirus_ictv_boot <- read.csv(file = "chera_ictv_bootscan.csv", header = T, stringsAsFactors = F) 
-head(cheravirus_ictv_boot)
-
-#move to long
-long.sim_nt <- melt(cheravirus_ictv_boot, id.vars = c("pointer"), measure.vars = c("AB030941","AJ621358","KT692953","DQ143875","MK153132","MW582786"))
-
-unique(long.sim_nt$variable)
-
-long.sim_nt$variable <- as.character(long.sim_nt$variable)
-
-names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
-
-long.sim_nt$accession[long.sim_nt$accession == "AB030941"] <- "Cheravirus mali AB030941"
-long.sim_nt$accession[long.sim_nt$accession == "AJ621358"] <- "Cheravirus avii AJ621358"
-long.sim_nt$accession[long.sim_nt$accession == "KT692953"] <- "Cheravirus ribis KT692953"
-long.sim_nt$accession[long.sim_nt$accession == "DQ143875"] <- "Cheravirus pruni DQ143875"
-long.sim_nt$accession[long.sim_nt$accession == "MK153132"] <- "Arracacha virus B MK153132"
-long.sim_nt$accession[long.sim_nt$accession == "MW582786"] <- "Cheravirus arracaciae MW582786"
-
-
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Cheravirus mali AB030941", "Cheravirus avii AJ621358",
-                                                                  "Cheravirus ribis KT692953","Cheravirus pruni DQ143875",
-                                                                  "Arracacha virus B MK153132","Cheravirus arracaciae MW582786"))
-long.sim_nt$value[long.sim_nt$value<0] <- 0
-long.sim_nt$value <- long.sim_nt$value/100
-
-
-
-## Nucleotide
-title<-expression(paste("Reference: ",italic("Pteropus rufus cheravirus "), "RNA2 OQ818330"))
-
-cheravirus_ictv_boot <- ggplot(long.sim_nt) + 
-  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
-  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
-        strip.background = element_rect(fill="white"), 
-        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
-        legend.justification = "left",
-        legend.text = element_text(face="italic", size = 7),
-        legend.title = element_text(face="italic", size = 7),
-        legend.key.height= unit(3.5, 'mm'),
-        legend.key.width= unit(3.5, 'mm'),
-        legend.background =element_rect(fill = alpha("white", 0)),
-        axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,0.5,0), "cm"),
-        plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
-  scale_color_manual(values=colzpalette) + 
-  #scale_fill_distiller()+
-  ggtitle(title)+
-  # scale_x_continuous(breaks=c(0,1000/3.055,2000/3.055,3000/3.055), 
-  #                    labels = c(0,1000, 2000,3000),expand=c(0,0))+
-  scale_x_continuous(expand=c(0,0))+
-  scale_y_continuous(limits=c(0,1), expand=c(0,0))
-
-cheravirus_ictv_boot
-
-#put gene map with PySimPlot
-chera_boot<-cheravirus_ictv_boot/ictv_chera+plot_layout(nrow=2,  heights = c(2, 0.30))
-chera_boot
-
-chera_boot<-as.ggplot(chera_boot)
-chera_boot
-
-
 
 
 
@@ -955,7 +858,6 @@ tescho_boot
 #all bootscan together
 bootscan<-plot_grid(batpicorna_boot,
                     mischi_ictv_boot,
-                    chera_boot,
                     hep_ictv_boot,
                     kobu_ictv_boot,
                     kun_ictv_boot,
