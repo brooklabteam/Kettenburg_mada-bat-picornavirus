@@ -1,0 +1,41 @@
+Accession,Isolate,Species,Genus,Family,Length,Nuc_Completeness,Country,Host,Collection_Date
+MW856467.1,G20_067,Bat calicivirus,,Caliciviridae,1833,partial,Cameroon,,2018-01-01
+MW856468.1,G20_068,Bat calicivirus,,Caliciviridae,1218,partial,Cameroon,,2018-09-01
+NC_033776.1,Bat-SaV/Limbe65/CAM/2014,Bat sapovirus,Sapovirus,Caliciviridae,7475,complete,Cameroon,Eidolon helvum,14-Jan
+MZ291972.1,G20_110,Caliciviridae sp.,,Caliciviridae,1833,partial,Cameroon,,2020-01-01
+MZ291973.1,20_111,Caliciviridae sp.,,Caliciviridae,1328,partial,Cameroon,,2019-04-01
+MZ291974.1,G20_112,Caliciviridae sp.,,Caliciviridae,1026,partial,Cameroon,,2018-09-01
+MW118115.1,Ghana/2019/isolate15-19,Rabbit hemorrhagic disease virus,Lagovirus,Caliciviridae,7473,complete,Ghana,Oryctolagus cuniculus,2019
+MZ913390.1,Jedaida_1/TUN/2019,Rabbit hemorrhagic disease virus,Lagovirus,Caliciviridae,7362,partial,Tunisia,Oryctolagus cuniculus,19-Dec
+MZ913392.1,Monastir_1/TUN/2018,Rabbit hemorrhagic disease virus,Lagovirus,Caliciviridae,7364,partial,Tunisia,Oryctolagus cuniculus,18-Oct
+MZ913393.1,Rabbit_1512/TUN/2020,Rabbit hemorrhagic disease virus,Lagovirus,Caliciviridae,7364,partial,Tunisia,Oryctolagus cuniculus,20-Jul
+MW123059.1,RT5-1,Rabbit hemorrhagic disease virus,Lagovirus,Caliciviridae,6976,partial,Nigeria,Oryctolagus cuniculus,
+MK629981.1,Tn1_2016,Rabbit hemorrhagic disease virus,Lagovirus,Caliciviridae,1740,partial,Tunisia,Oryctolagus cuniculus,2016
+MK629982.1,Tn7_2015,Rabbit hemorrhagic disease virus,Lagovirus,Caliciviridae,1740,partial,Tunisia,Oryctolagus cuniculus,2015
+MK629985.1,Tn4_2017,Rabbit hemorrhagic disease virus,Lagovirus,Caliciviridae,1740,partial,Tunisia,Oryctolagus cuniculus,2017
+MH159170.1,A17-62,Rabbit hemorrhagic disease virus,Lagovirus,Caliciviridae,7369,partial,Morocco,Oryctolagus cuniculus,17-Apr
+HE963222.1,,Rabbit hemorrhagic disease virus,Lagovirus,Caliciviridae,1740,partial,Egypt,Oryctolagus cuniculus,06-Sep
+AJ303106.2,00-Reu,Rabbit hemorrhagic disease virus,Lagovirus,Caliciviridae,1740,partial,Reunion,Oryctolagus cuniculus,
+MH933793.1,HumanSaV/CMR/Lysoka-HP4/2014,Sapovirus sp.,Sapovirus,Caliciviridae,7451,partial,Cameroon,Homo sapiens,2014
+MG692435.1,ETH_P5_2016,Sapovirus sp.,Sapovirus,Caliciviridae,6507,partial,Ethiopia,Homo sapiens,16-Apr
+OM105025.1,BSF2,Sapporo virus,Sapovirus,Caliciviridae,7290,partial,South Africa,Sus scrofa domesticus,21-Mar
+MN794218.1,T003,Sapporo virus,Sapovirus,Caliciviridae,7419,partial,Tunisia,Homo sapiens,1976-06-20
+MH922771.1,,Sapporo virus,Sapovirus,Caliciviridae,7435,partial,Kenya,Homo sapiens,2008-02-23
+MH922772.1,,Sapporo virus,Sapovirus,Caliciviridae,7204,partial,Kenya,Homo sapiens,2005-07-01
+MH922774.1,,Sapporo virus,Sapovirus,Caliciviridae,7382,partial,Kenya,Homo sapiens,2006-02-08
+KJ858686.1,IJC04,Sapporo virus,Sapovirus,Caliciviridae,7320,partial,Democratic Republic of the Congo,Pan troglodytes troglodytes,2011
+KC962463.1,GP2_Apr08_1416,Sapporo virus,Sapovirus,Caliciviridae,1093,partial,South Africa,Homo sapiens,08-Apr
+KP784695.1,GII/Hu/ZAF/2012/GII.P4_GII.4/Empangeni/9693,Norwalk virus,Norovirus,Caliciviridae,7570,complete,South Africa,Homo sapiens,2012
+KR904232.1,Bushbuckridge 12257,Norwalk virus,Norovirus,Caliciviridae,1107,partial,South Africa,Homo sapiens,2013-09-17
+KC962453.2,,Norwalk virus,Norovirus,Caliciviridae,7567,partial,South Africa,Homo sapiens,10-Jul
+HQ008054.1,Hu/GII.4/2405/2008/ZAF,Norwalk virus,Norovirus,Caliciviridae,1623,partial,South Africa,Homo sapiens,2008-05-22
+MW305582.1,T055,Norwalk virus,Norovirus,Caliciviridae,7446,partial,Tunisia,Homo sapiens,1977-07-15
+MW305583.1,T091,Norwalk virus,Norovirus,Caliciviridae,7506,partial,Tunisia,Homo sapiens,1976-09-30
+KU182476.1,,Norwalk virus,Norovirus,Caliciviridae,1623,partial,Tunisia,,2002
+KM056394.1,,Norwalk virus,Norovirus,Caliciviridae,1647,partial,Tunisia,Homo sapiens,2012
+EU916955.1,,Norwalk virus,Norovirus,Caliciviridae,1623,partial,Tunisia,Homo sapiens,2004-02-13
+EU916956.1,,Norwalk virus,Norovirus,Caliciviridae,1623,partial,Tunisia,Homo sapiens,2007-04-06
+EU916957.1,,Norwalk virus,Norovirus,Caliciviridae,1623,partial,Tunisia,Homo sapiens,2003-10-17
+JN699046.1,,Norwalk virus,Norovirus,Caliciviridae,1632,partial,Uganda,Homo sapiens,1975-09-15
+JN699047.1,,Norwalk virus,Norovirus,Caliciviridae,1635,partial,Uganda,Homo sapiens,1976-03-22
+NC_030886.1,GCCDC1 356,Rousettus bat coronavirus GCCDC1,Coronavirus,Coronaviridae,,,China,Rousettus leschenaulti,2018

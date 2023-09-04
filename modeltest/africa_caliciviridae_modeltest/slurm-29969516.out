@@ -1,0 +1,347 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+                             _      _ _            _      _   _  _____ 
+                            | |    | | |          | |    | \ | |/ ____|
+         _ __ ___   ___   __| | ___| | |_ ___  ___| |_   |  \| | |  __ 
+        | '_ ` _ \ / _ \ / _` |/ _ \ | __/ _ \/ __| __|  | . ` | | |_ |
+        | | | | | | (_) | (_| |  __/ | ||  __/\__ \ |_   | |\  | |__| |
+        |_| |_| |_|\___/ \__,_|\___|_|\__\___||___/\__|  |_| \_|\_____|
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7 released on 17.03.2021 by The Exelixis Lab.
+Written by Diego Darriba.
+Contributors: Tomas Flouri, Alexey Kozlov, Benoit Morel, David Posada, 
+              Alexandros Stamatakis.
+Latest version: https://github.com/ddarriba/modeltest
+--------------------------------------------------------------------------------
+
+Physical cores: 14
+Logical cores:  28
+Memory:         62.2GB
+Extensions:     AVX
+
+WARNING: Partition DATA: Sequences MW856467.1 and MZ291972.1 are identical
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: africa_caliciviridae_over1kb_align.fasta.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        africa_caliciviridae_over1kb_align.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            44
+  #sites:           30760
+  #patterns:        8937
+  Max. thread mem:  189 MB
+
+Output:
+  Log:           africa_caliciviridae_over1kb_align.fasta.log
+  Starting tree: africa_caliciviridae_over1kb_align.fasta.tree
+  Results:       africa_caliciviridae_over1kb_align.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/14
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> modeltest-ng -i africa_caliciviridae_over1kb_align.fasta -d nt -t ml -p 8 
+
+
+Partition 1/1
+
+    5/88   TIM2+I+G4      0h:02:42   0h:02:42         -155833.4352  2.4072  0.0216
+    2/88   GTR+I+G4       0h:03:14   0h:03:14         -155795.8467  2.4303  0.0216
+    9/88   TPM1uf+I+G4    0h:03:20   0h:03:20         -155908.1030  2.2856  0.0216
+    4/88   TIM3+I+G4      0h:03:20   0h:03:20         -155868.0704  2.4250  0.0216
+    7/88   TPM3uf+I+G4    0h:03:31   0h:03:31         -155885.0632  2.4201  0.0216
+    3/88   TVM+I+G4       0h:03:32   0h:03:32         -155812.8294  2.4295  0.0216
+    6/88   TIM1+I+G4      0h:03:34   0h:03:34         -155889.8733  2.3782  0.0216
+    8/88   TrN+I+G4       0h:03:35   0h:03:35         -155899.1065  2.4016  0.0216
+   10/88   TPM2uf+I+G4    0h:03:17   0h:05:59         -155851.9266  2.4033  0.0216
+   15/88   TIM1ef+I+G4    0h:02:32   0h:06:04         -155985.6993  2.2928  0.0216
+   16/88   TIM3ef+I+G4    0h:02:45   0h:06:19         -155985.5023  2.4064  0.0216
+   17/88   F81+I+G4       0h:02:45   0h:06:20         -159677.8102  3.0670  0.0215
+   13/88   HKY+I+G4       0h:03:12   0h:06:32         -155917.3252  2.3717  0.0216
+   11/88   SYM+I+G4       0h:03:19   0h:06:33         -155875.2312  2.4048  0.0216
+   12/88   TVMef+I+G4     0h:03:16   0h:06:36         -155906.5401  2.4025  0.0216
+   14/88   TIM2ef+I+G4    0h:03:15   0h:06:46         -155890.6999  2.2882  0.0216
+   21/88   TrNef+I+G4     0h:02:44   0h:09:04         -155994.3345  2.2885  0.0216
+   23/88   JC+I+G4        0h:02:32   0h:09:05         -159782.2188  3.0670  0.0215
+   18/88   TPM3+I+G4      0h:03:15   0h:09:14         -156018.2393  2.4039  0.0216
+   19/88   TPM2+I+G4      0h:03:15   0h:09:19         -155922.3451  2.2838  0.0216
+   26/88   TIM3+G4        0h:00:31   0h:09:35         -155855.2453  2.0643       -
+   22/88   K80+I+G4       0h:03:13   0h:09:45         -156027.3906  2.3714  0.0216
+   28/88   TIM1+G4        0h:00:33   0h:09:47         -155879.0102  2.0643       -
+   29/88   TPM3uf+G4      0h:00:29   0h:09:48         -155871.7023  2.0643       -
+   20/88   TPM1+I+G4      0h:03:29   0h:09:48         -156018.6855  2.2907  0.0216
+   24/88   GTR+G4         0h:03:21   0h:09:57         -155776.1323  2.0643       -
+   30/88   TrN+G4         0h:00:31   0h:10:06         -155887.8500  2.0643       -
+   31/88   TPM1uf+G4      0h:00:28   0h:10:13         -155896.6173  2.0643       -
+   34/88   TVMef+G4       0h:00:34   0h:10:22         -155895.8450  2.0643       -
+   25/88   TVM+G4         0h:03:37   0h:10:23         -155792.6024  2.0643       -
+   35/88   HKY+G4         0h:00:26   0h:10:23         -155905.6179  2.0643       -
+   36/88   TIM2ef+G4      0h:00:29   0h:10:35         -155881.6229  2.0643       -
+   37/88   TIM1ef+G4      0h:00:28   0h:10:41         -155976.4631  2.0643       -
+   38/88   TIM3ef+G4      0h:00:30   0h:10:52         -155975.3201  2.0643       -
+   40/88   TPM3+G4        0h:00:30   0h:10:53         -156007.1848  2.0643       -
+   41/88   TPM2+G4        0h:00:33   0h:11:08         -155912.3082  2.0643       -
+   42/88   TPM1+G4        0h:00:30   0h:11:11         -156008.4741  2.0643       -
+   44/88   K80+G4         0h:00:24   0h:11:17         -156017.0169  2.0643       -
+   43/88   TrNef+G4       0h:00:29   0h:11:21         -155984.9797  2.0643       -
+   27/88   TIM2+G4        0h:02:47   0h:11:52         -155814.5192  2.0643       -
+   47/88   TVM+I          0h:01:12   0h:12:29         -156759.9534       -  0.0323
+   46/88   GTR+I          0h:01:18   0h:12:29         -156739.4705       -  0.0320
+   39/88   F81+G4         0h:02:08   0h:12:31         -159663.0459  2.6101       -
+   48/88   TIM3+I         0h:01:11   0h:12:32         -156818.1182       -  0.0324
+   49/88   TIM2+I         0h:00:52   0h:12:44         -156788.9974       -  0.0326
+   32/88   TPM2uf+G4      0h:03:01   0h:12:48         -155832.3940  2.0643       -
+   33/88   SYM+G4         0h:03:01   0h:12:49         -155856.6943  2.0643       -
+   45/88   JC+G4          0h:01:49   0h:12:57         -159767.9551  2.6198       -
+   52/88   TrN+I          0h:00:50   0h:13:21         -156860.6851       -  0.0331
+   50/88   TIM1+I         0h:01:03   0h:13:32         -156849.7278       -  0.0331
+   54/88   TPM2uf+I       0h:00:53   0h:13:37         -156811.9290       -  0.0330
+   53/88   TPM1uf+I       0h:01:09   0h:13:41         -156873.2155       -  0.0333
+   56/88   TVMef+I        0h:00:54   0h:13:43         -156867.1202       -  0.0330
+   55/88   SYM+I          0h:01:00   0h:13:48         -156833.1823       -  0.0326
+   51/88   TPM3uf+I       0h:01:21   0h:13:50         -156839.2329       -  0.0326
+   57/88   HKY+I          0h:01:12   0h:14:09         -156884.3054       -  0.0334
+   59/88   TIM1ef+I       0h:00:50   0h:14:22         -156947.7250       -  0.0334
+   60/88   TIM3ef+I       0h:00:50   0h:14:27         -156941.1912       -  0.0331
+   61/88   F81+I          0h:00:49   0h:14:30         -160371.5577       -  0.0312
+   62/88   TPM3+I         0h:00:54   0h:14:37         -156976.3647       -  0.0334
+   64/88   TPM1+I         0h:00:49   0h:14:39         -156982.9776       -  0.0336
+   58/88   TIM2ef+I       0h:01:19   0h:14:40         -156856.8086       -  0.0330
+   63/88   TPM2+I         0h:00:55   0h:14:43         -156890.8789       -  0.0332
+   69/88   TVM            0h:00:14   0h:14:51         -157015.4518       -       -
+   70/88   TIM3           0h:00:12   0h:14:51         -157076.8701       -       -
+   71/88   TIM2           0h:00:14   0h:14:54         -157053.2760       -       -
+   72/88   TIM1           0h:00:13   0h:14:56         -157118.7318       -       -
+   65/88   TrNef+I        0h:00:53   0h:15:02         -156957.9668       -  0.0334
+   74/88   TrN            0h:00:11   0h:15:02         -157129.8657       -       -
+   73/88   TPM3uf         0h:00:12   0h:15:03         -157098.9094       -       -
+   75/88   TPM1uf         0h:00:11   0h:15:05         -157142.8377       -       -
+   76/88   TPM2uf         0h:00:15   0h:15:11         -157076.7442       -       -
+   66/88   K80+I          0h:00:49   0h:15:11         -156993.2034       -  0.0336
+   79/88   HKY            0h:00:11   0h:15:14         -157154.0853       -       -
+   68/88   GTR            0h:00:48   0h:15:18         -156991.5472       -       -
+   80/88   TIM2ef         0h:00:14   0h:15:19         -157126.6519       -       -
+   78/88   TVMef          0h:00:22   0h:15:24         -157132.3378       -       -
+   84/88   TPM3           0h:00:14   0h:15:32         -157244.9801       -       -
+   82/88   TIM3ef         0h:00:21   0h:15:32         -157209.4705       -       -
+   85/88   TPM2           0h:00:13   0h:15:32         -157160.4084       -       -
+   81/88   TIM1ef         0h:00:22   0h:15:33         -157220.9454       -       -
+   83/88   F81            0h:00:21   0h:15:35         -160612.1089       -       -
+   86/88   TPM1           0h:00:11   0h:15:35         -157256.8093       -       -
+   67/88   JC+I           0h:01:11   0h:15:38         -160471.9847       -  0.0313
+   89/88   JC             0h:00:19   0h:15:51         -160715.8737       -       -
+   88/88   K80            0h:00:19   0h:15:51         -157266.3650       -       -
+   87/88   TrNef          0h:00:19   0h:15:51         -157231.1275       -       -
+   77/88   SYM            0h:01:33   0h:16:35         -157095.7692       -       -
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:16:35
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9   -155776.1323    312523.6579         0.0000    1.0000
+       2  TVM+G4             8   -155792.6024    312546.2640        22.6060    0.0000
+       3  GTR+I+G4          10   -155795.8467    312573.4205        49.7626    0.0000
+       4  TIM2+G4            7   -155814.5192    312579.7636        56.1057    0.0000
+       5  TVM+I+G4           9   -155812.8294    312597.0521        73.3942    0.0000
+       6  TPM2uf+G4          6   -155832.3940    312605.1792        81.5213    0.0000
+       7  TIM2+I+G4          8   -155833.4352    312627.9295       104.2716    0.0000
+       8  SYM+G4             6   -155856.6943    312653.7799       130.1220    0.0000
+       9  TPM2uf+I+G4        7   -155851.9266    312654.5786       130.9207    0.0000
+      10  TIM3+G4            7   -155855.2453    312661.2159       137.5580    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              GTR+G4
+lnL:                -155776.1323
+Frequencies:        0.2560 0.2357 0.2401 0.2683
+Subst. Rates:       1.8181 4.5093 1.2606 1.1257 5.2478 1.0000 
+Inv. sites prop:    -
+Gamma shape:        2.0643
+Score:              312523.6579
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              1.0000
+Gamma-Inv:          0.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              2.0643
+Alpha-P.Inv:        2.4303
+P.Inv-Alpha:        0.0216
+Frequencies:        0.2560 0.2357 0.2401 0.2683 
+
+Commands:
+  > phyml  -i africa_caliciviridae_over1kb_align.fasta -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s africa_caliciviridae_over1kb_align.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa africa_caliciviridae_over1kb_align.fasta --model GTR+G4
+  > paup -s africa_caliciviridae_over1kb_align.fasta
+  > iqtree -s africa_caliciviridae_over1kb_align.fasta -m GTR+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9   -155776.1323    311740.2647         0.0000    1.0000
+       2  TVM+G4             8   -155792.6024    311771.2047        30.9400    0.0000
+       3  GTR+I+G4          10   -155795.8467    311781.6933        41.4286    0.0000
+       4  TIM2+G4            7   -155814.5192    311813.0383        72.7736    0.0000
+       5  TVM+I+G4           9   -155812.8294    311813.6589        73.3942    0.0000
+       6  TPM2uf+G4          6   -155832.3940    311846.7879       106.5232    0.0000
+       7  TIM2+I+G4          8   -155833.4352    311852.8703       112.6056    0.0000
+       8  TPM2uf+I+G4        7   -155851.9266    311887.8533       147.5886    0.0000
+       9  TIM3+G4            7   -155855.2453    311894.4907       154.2260    0.0000
+      10  SYM+G4             6   -155856.6943    311895.3886       155.1239    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+G4
+lnL:                -155776.1323
+Frequencies:        0.2560 0.2357 0.2401 0.2683
+Subst. Rates:       1.8181 4.5093 1.2606 1.1257 5.2478 1.0000 
+Inv. sites prop:    -
+Gamma shape:        2.0643
+Score:              311740.2647
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              1.0000
+Gamma-Inv:          0.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              2.0643
+Alpha-P.Inv:        2.4303
+P.Inv-Alpha:        0.0216
+Frequencies:        0.2560 0.2357 0.2401 0.2683 
+
+Commands:
+  > phyml  -i africa_caliciviridae_over1kb_align.fasta -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s africa_caliciviridae_over1kb_align.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa africa_caliciviridae_over1kb_align.fasta --model GTR+G4
+  > paup -s africa_caliciviridae_over1kb_align.fasta
+  > iqtree -s africa_caliciviridae_over1kb_align.fasta -m GTR+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9   -155776.1323    311740.2647         0.0000    1.0000
+       2  TVM+G4             8   -155792.6024    311771.2047        30.9400    0.0000
+       3  GTR+I+G4          10   -155795.8467    311781.6933        41.4286    0.0000
+       4  TIM2+G4            7   -155814.5192    311813.0383        72.7736    0.0000
+       5  TVM+I+G4           9   -155812.8294    311813.6589        73.3942    0.0000
+       6  TPM2uf+G4          6   -155832.3940    311846.7879       106.5232    0.0000
+       7  TIM2+I+G4          8   -155833.4352    311852.8703       112.6056    0.0000
+       8  TPM2uf+I+G4        7   -155851.9266    311887.8533       147.5886    0.0000
+       9  TIM3+G4            7   -155855.2453    311894.4907       154.2260    0.0000
+      10  SYM+G4             6   -155856.6943    311895.3886       155.1239    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+G4
+lnL:                -155776.1323
+Frequencies:        0.2560 0.2357 0.2401 0.2683
+Subst. Rates:       1.8181 4.5093 1.2606 1.1257 5.2478 1.0000 
+Inv. sites prop:    -
+Gamma shape:        2.0643
+Score:              311740.2647
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              1.0000
+Gamma-Inv:          0.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              2.0643
+Alpha-P.Inv:        2.4303
+P.Inv-Alpha:        0.0216
+Frequencies:        0.2560 0.2357 0.2401 0.2683 
+
+Commands:
+  > phyml  -i africa_caliciviridae_over1kb_align.fasta -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s africa_caliciviridae_over1kb_align.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa africa_caliciviridae_over1kb_align.fasta --model GTR+G4
+  > paup -s africa_caliciviridae_over1kb_align.fasta
+  > iqtree -s africa_caliciviridae_over1kb_align.fasta -m GTR+G4
+
+There are 9 different topologies
+Topologies written to africa_caliciviridae_over1kb_align.fasta.topos
+
+topo_id   models_count   bic_support   aic_support   aicc_support
+-----------------------------------------------------------------
+      1             25       1.00000       1.00000       1.00000
+      3             23       0.00000       0.00000       0.00000
+      2              4       0.00000       0.00000       0.00000
+      4             15       0.00000       0.00000       0.00000
+      5              6       0.00000       0.00000       0.00000
+      6              1       0.00000       0.00000       0.00000
+      7              1       0.00000       0.00000       0.00000
+      8             12       0.00000       0.00000       0.00000
+      9              1       0.00000       0.00000       0.00000
+
+extended majority-rule consensus: (((OQ818319,(((KM056394.1,(JN699047.1,JN699046.1)[1.00000])[1.00000],(MW305582.1,(KR904232.1,(MW305583.1,((KU182476.1,(EU916955.1,(EU916957.1,EU916956.1)[1.00000])[1.00000])[1.00000],(KP784695.1,(HQ008054.1,KC962453.2)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(MZ291973.1,(OQ818345,((NC_030886.1,MZ291974.1)[1.00000],(OQ818348,OQ818347)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((NC_033776.1,((AJ303106.2,HE963222.1)[1.00000],((MH159170.1,((MZ913392.1,MK629981.1)[1.00000],(MK629985.1,(MK629982.1,(MZ913393.1,MZ913390.1)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(MW123059.1,MW118115.1)[1.00000])[1.00000])[1.00000])[1.00000],(OM105025.1,(KJ858686.1,((KC962463.1,(MH922774.1,MH933793.1)[1.00000])[1.00000],(MG692435.1,(MN794218.1,(MH922772.1,MH922771.1)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],MW856468.1,(MZ291972.1,MW856467.1)[1.00000]);
+strict consensus: (MW856467.1,KM056394.1,JN699047.1,JN699046.1,OQ818319,MW305582.1,MW305583.1,KR904232.1,EU916957.1,EU916956.1,EU916955.1,KU182476.1,HQ008054.1,KC962453.2,KP784695.1,OQ818345,OQ818348,OQ818347,NC_030886.1,MZ291974.1,MZ291973.1,AJ303106.2,HE963222.1,MH159170.1,MZ913392.1,MK629982.1,MK629985.1,MK629981.1,MZ913393.1,MZ913390.1,MW123059.1,MW118115.1,OM105025.1,KJ858686.1,KC962463.1,MH922772.1,MH922771.1,MN794218.1,MG692435.1,MH922774.1,MH933793.1,NC_033776.1,MW856468.1,MZ291972.1);
+
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC              GTR+G4   312523.6579        1.0000
+       AIC              GTR+G4   311740.2647        1.0000
+      AICc              GTR+G4   311740.2647        1.0000
+
+Execution results written to africa_caliciviridae_over1kb_align.fasta.out
+Starting tree written to africa_caliciviridae_over1kb_align.fasta.tree
