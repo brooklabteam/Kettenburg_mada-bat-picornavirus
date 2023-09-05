@@ -1,0 +1,180 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        africa_picornaviridae_over1kb_align.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            456
+  #sites:           37621
+  #patterns:        16397
+  Max. thread mem:  3697 MB
+
+Output:
+  Log:           africa_picornaviridae_over1kb_align.fasta.log
+  Starting tree: africa_picornaviridae_over1kb_align.fasta.tree
+  Results:       africa_picornaviridae_over1kb_align.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/14
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10  -1177188.8639   2364059.6848         0.0000    1.0000
+       2  TVM+I+G4           9  -1177327.8349   2364327.0914       267.4066    0.0000
+       3  GTR+G4             9  -1177341.4918   2364354.4053       294.7205    0.0000
+       4  TIM2+G4            7  -1177367.1061   2364384.5632       324.8784    0.0000
+       5  TPM2uf+I+G4        7  -1177386.6595   2364423.6699       363.9851    0.0000
+       6  TIM2+I+G4          8  -1177433.2635   2364527.4133       467.7285    0.0000
+       7  TVM+G4             8  -1178173.5884   2366008.0630      1948.3782    0.0000
+       8  TPM2uf+G4          6  -1178237.6702   2366115.1560      2055.4712    0.0000
+       9  TIM3+G4            7  -1178320.1556   2366290.6622      2230.9774    0.0000
+      10  TPM3uf+I+G4        7  -1178326.8502   2366304.0514      2244.3667    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -1177188.8639
+Frequencies:        0.2650 0.2383 0.2175 0.2793
+Subst. Rates:       1.8274 5.5037 1.7322 1.2085 6.8853 1.0000 
+Inv. sites prop:    0.0218
+Gamma shape:        0.9946
+Score:              2364059.6848
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.0000
+Alpha-P.Inv:        0.9946
+P.Inv-Alpha:        0.0218
+Frequencies:        0.2650 0.2383 0.2175 0.2793 
+
+Commands:
+  > phyml  -i africa_picornaviridae_over1kb_align.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s africa_picornaviridae_over1kb_align.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa africa_picornaviridae_over1kb_align.fasta --model GTR+I+G4
+  > paup -s africa_picornaviridae_over1kb_align.fasta
+  > iqtree -s africa_picornaviridae_over1kb_align.fasta -m GTR+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10  -1177188.8639   2356215.7278         0.0000    1.0000
+       2  TVM+I+G4           9  -1177327.8349   2356491.6698       275.9420    0.0000
+       3  GTR+G4             9  -1177341.4918   2356518.9836       303.2558    0.0000
+       4  TIM2+G4            7  -1177367.1061   2356566.2122       350.4843    0.0000
+       5  TPM2uf+I+G4        7  -1177386.6595   2356605.3189       389.5911    0.0000
+       6  TIM2+I+G4          8  -1177433.2635   2356700.5270       484.7992    0.0000
+       7  TVM+G4             8  -1178173.5884   2358181.1767      1965.4489    0.0000
+       8  TPM2uf+G4          6  -1178237.6702   2358305.3403      2089.6125    0.0000
+       9  TIM3+G4            7  -1178320.1556   2358472.3112      2256.5834    0.0000
+      10  TPM3uf+I+G4        7  -1178326.8502   2358485.7004      2269.9726    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -1177188.8639
+Frequencies:        0.2650 0.2383 0.2175 0.2793
+Subst. Rates:       1.8274 5.5037 1.7322 1.2085 6.8853 1.0000 
+Inv. sites prop:    0.0218
+Gamma shape:        0.9946
+Score:              2356215.7278
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.0000
+Alpha-P.Inv:        0.9946
+P.Inv-Alpha:        0.0218
+Frequencies:        0.2650 0.2383 0.2175 0.2793 
+
+Commands:
+  > phyml  -i africa_picornaviridae_over1kb_align.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s africa_picornaviridae_over1kb_align.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa africa_picornaviridae_over1kb_align.fasta --model GTR+I+G4
+  > paup -s africa_picornaviridae_over1kb_align.fasta
+  > iqtree -s africa_picornaviridae_over1kb_align.fasta -m GTR+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10  -1177188.8639   2356261.7278         0.0000    1.0000
+       2  TVM+I+G4           9  -1177327.8349   2356536.6698       274.9420    0.0000
+       3  GTR+G4             9  -1177341.4918   2356563.9836       302.2558    0.0000
+       4  TIM2+G4            7  -1177367.1061   2356611.2122       349.4843    0.0000
+       5  TPM2uf+I+G4        7  -1177386.6595   2356650.3189       388.5911    0.0000
+       6  TIM2+I+G4          8  -1177433.2635   2356745.5270       483.7992    0.0000
+       7  TVM+G4             8  -1178173.5884   2358226.1767      1964.4489    0.0000
+       8  TPM2uf+G4          6  -1178237.6702   2358350.3403      2088.6125    0.0000
+       9  TIM3+G4            7  -1178320.1556   2358517.3112      2255.5834    0.0000
+      10  TPM3uf+I+G4        7  -1178326.8502   2358530.7004      2268.9726    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+I+G4
+lnL:                -1177188.8639
+Frequencies:        0.2650 0.2383 0.2175 0.2793
+Subst. Rates:       1.8274 5.5037 1.7322 1.2085 6.8853 1.0000 
+Inv. sites prop:    0.0218
+Gamma shape:        0.9946
+Score:              2356261.7278
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.0000
+Alpha-P.Inv:        0.9946
+P.Inv-Alpha:        0.0218
+Frequencies:        0.2650 0.2383 0.2175 0.2793 
+
+Commands:
+  > phyml  -i africa_picornaviridae_over1kb_align.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s africa_picornaviridae_over1kb_align.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa africa_picornaviridae_over1kb_align.fasta --model GTR+I+G4
+  > paup -s africa_picornaviridae_over1kb_align.fasta
+  > iqtree -s africa_picornaviridae_over1kb_align.fasta -m GTR+I+G4
+Done
