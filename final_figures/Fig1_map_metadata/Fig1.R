@@ -579,3 +579,6 @@ final3
 
 final4<- plot_grid(NULL,final3,NULL,final,labels=c("","", "",""),rel_widths = c(0.1,1,0.1, 2), rel_heights = c(1,1,1, 0.8),ncol=4, align="hv", axis="b", label_size = 23)
 final4
+
+
+#export landscape PDF inches 20x9 inches
