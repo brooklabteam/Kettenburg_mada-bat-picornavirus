@@ -1,0 +1,63 @@
+ERROR: Unable to locate a modulefile for 'emacs/25.1'
+ERROR: Unable to locate a modulefile for 'python/3.6'
+ERROR: Unable to locate a modulefile for 'java/1.8.0_121'
+ERROR: Unable to locate a modulefile for 'cmake/3.15.1'
+
+RAxML-NG v. 1.1.0-master released on 22.06.2022 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz, 28 cores, 62 GB RAM
+
+RAxML-NG was called at 06-Sep-2023 23:36:14 as follows:
+
+raxml-ng-mpi --bootstrap --msa africa_picornaviridae_over1kb_align.fasta --model GTR+I+G4 --prefix T3 --seed 3 --threads auto{8}
+
+Analysis options:
+  run mode: Bootstrapping
+  start tree(s): 
+  bootstrap replicates: max: 1000 + bootstopping (autoMRE, cutoff: 0.030000)
+  random seed: 3
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+WARNING: The model you specified on the command line (GTR+I+G4) will be ignored 
+         since the binary MSA file already contains a model definition.
+         If you want to change the model, please re-run RAxML-NG 
+         with the original PHYLIP/FASTA alignment and --redo option.
+
+[00:00:02] Loading binary alignment from file: T3.raxml.rba
+[00:00:02] Alignment comprises 456 taxa, 1 partitions and 16396 patterns
+
+Partition 0: noname
+Model: GTR+FO+I+G4m
+Alignment sites / patterns: 37273 / 16396
+Gaps: 84.39 %
+Invariant sites: 56.60 %
+
+
+Parallelization scheme autoconfig: 1 worker(s) x 8 thread(s)
+
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Error calling pthread_setaffinity_np: 22
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:02] NOTE: Resuming execution from checkpoint (logLH: -1841283.47, ML trees: 0, bootstraps: 69)
+[00:00:02] Data distribution: max. partitions/sites/weight per thread: 1 / 2050 / 32800
+[00:00:04] Data distribution: max. searches per worker: 931
+[00:00:04] Starting bootstrapping analysis with 1000 replicates.
+
+slurmstepd-midway2-0301: error: *** JOB 30001794 ON midway2-0301 CANCELLED AT 2023-09-06T23:40:30 ***

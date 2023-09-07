@@ -13,4 +13,4 @@ module load python/3.6
 module load java/1.8.0_121
 module load cmake/3.15.1
 
-raxml-ng-mpi --all --msa bat_picornavirales_all_over_3kb_align.fasta --model GTR+G4 --prefix T1  --seed 1 --threads auto{8} --bs-metric fbp,tbe
+raxml-ng-mpi --all --msa bat_picornavirales_all_over3kb_align.fasta --model GTR+G4 --prefix T1  --seed 1 --threads auto{8} --bs-metric fbp,tbe

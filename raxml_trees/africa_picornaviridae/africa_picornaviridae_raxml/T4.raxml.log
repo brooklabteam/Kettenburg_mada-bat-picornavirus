@@ -1,0 +1,134 @@
+
+RAxML-NG v. 1.1.0-master released on 22.06.2022 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz, 28 cores, 62 GB RAM
+
+RAxML-NG was called at 06-Sep-2023 09:43:00 as follows:
+
+raxml-ng-mpi --bootstrap --msa africa_picornaviridae_over1kb_align.fasta --model GTR+I+G4 --prefix T4 --seed 52 --threads auto{8}
+
+Analysis options:
+  run mode: Bootstrapping
+  start tree(s): 
+  bootstrap replicates: max: 1000 + bootstopping (autoMRE, cutoff: 0.030000)
+  random seed: 52
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+[00:00:00] Reading alignment from file: africa_picornaviridae_over1kb_align.fasta
+[00:00:01] Loaded alignment with 456 taxa and 37621 sites
+
+WARNING: Fully undetermined columns found: 348
+
+WARNING: Sequences ON596331.1 and ON596332.1 are exactly identical!
+WARNING: Sequences LT719066.1 and LT719065.1 are exactly identical!
+WARNING: Duplicate sequences found: 2
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /home/gkettenburg/africa_picornaviridae_raxml/T4.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 16396 patterns
+
+Partition 0: noname
+Model: GTR+FO+I+G4m
+Alignment sites / patterns: 37273 / 16396
+Gaps: 84.39 %
+Invariant sites: 56.60 %
+
+
+NOTE: Binary MSA file created: T4.raxml.rba
+
+Parallelization scheme autoconfig: 1 worker(s) x 8 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:01] Data distribution: max. partitions/sites/weight per thread: 1 / 2050 / 32800
+[00:00:02] Data distribution: max. searches per worker: 1000
+[00:00:02] Starting bootstrapping analysis with 1000 replicates.
+
+[00:33:31] Bootstrap tree #1, logLikelihood: -1161466.918381
+[01:11:35] Bootstrap tree #2, logLikelihood: -1163073.031178
+[01:36:31] Bootstrap tree #3, logLikelihood: -1174248.936293
+[02:07:16] Bootstrap tree #4, logLikelihood: -1188383.440037
+[02:32:41] Bootstrap tree #5, logLikelihood: -1168301.292332
+[03:00:58] Bootstrap tree #6, logLikelihood: -1178285.474483
+[03:22:37] Bootstrap tree #7, logLikelihood: -1161339.202639
+[04:00:25] Bootstrap tree #8, logLikelihood: -1209683.773333
+[04:49:46] Bootstrap tree #9, logLikelihood: -1189167.380174
+[05:26:47] Bootstrap tree #10, logLikelihood: -1171985.865193
+[06:00:31] Bootstrap tree #11, logLikelihood: -1171822.602179
+[06:28:18] Bootstrap tree #12, logLikelihood: -1154326.769004
+[06:57:35] Bootstrap tree #13, logLikelihood: -1179215.216690
+[07:28:55] Bootstrap tree #14, logLikelihood: -1180900.274620
+[08:03:38] Bootstrap tree #15, logLikelihood: -1182719.440176
+[08:29:52] Bootstrap tree #16, logLikelihood: -1156784.573458
+[08:58:58] Bootstrap tree #17, logLikelihood: -1177984.936728
+[09:27:17] Bootstrap tree #18, logLikelihood: -1171384.887870
+[09:57:34] Bootstrap tree #19, logLikelihood: -1159827.806302
+[10:23:34] Bootstrap tree #20, logLikelihood: -1181052.317778
+[10:50:18] Bootstrap tree #21, logLikelihood: -1171360.868597
+[11:13:37] Bootstrap tree #22, logLikelihood: -1188210.917684
+[11:49:08] Bootstrap tree #23, logLikelihood: -1181592.409199
+[12:14:29] Bootstrap tree #24, logLikelihood: -1167903.765118
+[12:50:19] Bootstrap tree #25, logLikelihood: -1188718.079300
+[13:16:58] Bootstrap tree #26, logLikelihood: -1176743.884768
+[13:42:36] Bootstrap tree #27, logLikelihood: -1185218.226446
+
+RAxML-NG v. 1.1.0-master released on 22.06.2022 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz, 28 cores, 62 GB RAM
+
+RAxML-NG was called at 06-Sep-2023 23:37:14 as follows:
+
+raxml-ng-mpi --bootstrap --msa africa_picornaviridae_over1kb_align.fasta --model GTR+I+G4 --prefix T4 --seed 526 --threads auto{8}
+
+Analysis options:
+  run mode: Bootstrapping
+  start tree(s): 
+  bootstrap replicates: max: 1000 + bootstopping (autoMRE, cutoff: 0.030000)
+  random seed: 526
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+WARNING: The model you specified on the command line (GTR+I+G4) will be ignored 
+         since the binary MSA file already contains a model definition.
+         If you want to change the model, please re-run RAxML-NG 
+         with the original PHYLIP/FASTA alignment and --redo option.
+
+[00:00:01] Loading binary alignment from file: T4.raxml.rba
+[00:00:02] Alignment comprises 456 taxa, 1 partitions and 16396 patterns
+
+Partition 0: noname
+Model: GTR+FO+I+G4m
+Alignment sites / patterns: 37273 / 16396
+Gaps: 84.39 %
+Invariant sites: 56.60 %
+
+
+Parallelization scheme autoconfig: 1 worker(s) x 8 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:02] NOTE: Resuming execution from checkpoint (logLH: -1187644.65, ML trees: 0, bootstraps: 27)
+[00:00:02] Data distribution: max. partitions/sites/weight per thread: 1 / 2050 / 32800
+[00:00:03] Data distribution: max. searches per worker: 973
+[00:00:03] Starting bootstrapping analysis with 1000 replicates.
+
