@@ -1,4 +1,4 @@
-Accession,Isolate,Species,Genus,Family,Country,Host,bat_Host,Collection_Date,novel
+Accession,Isolate,Species,Genus,Family,Country,source,Host,Collection_Date,novel
 MW856467.1,G20_067,Bat calicivirus,Unclassified,Caliciviridae,Cameroon,Shellfish,0,2018,0
 MW856468.1,G20_068,Bat calicivirus,Unclassified,Caliciviridae,Cameroon,Shellfish,0,2018,0
 NC_033776.1,Bat-SaV/Limbe65/CAM/2014,Bat sapovirus,Sapovirus,Caliciviridae,Cameroon,Eidolon helvum,1,2014,0
