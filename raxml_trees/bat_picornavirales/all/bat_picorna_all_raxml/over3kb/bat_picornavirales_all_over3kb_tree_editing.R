@@ -11,8 +11,8 @@ library(phylobase)
 
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
 
-##Picornavirales all full and partial sequences >3kb
-setwd(paste0(homewd,"/raxml_trees/bat_picornavirales/all"))
+##Picornavirales all bat sequences over 3kb, all novel sequences in picornaviridae and caliciviridae oer 3kb
+setwd(paste0(homewd,"/raxml_trees/bat_picornavirales/all/bat_picorna_all_raxml/over3kb"))
 
 #load the tree
 tree <-  read.tree("T10.raxml.supportFBP") 
@@ -22,24 +22,24 @@ rooted.tree <- root(tree, which(tree$tip.label == "NC_030886.1"))
 plot(rooted.tree)
 
 #load tree data prepared from elsewhere
-dat <- read.csv(("bat_picornavirales_all_over_3kb.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(("bat_picornavirales_all_over3kb_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
 
 #check that your metadata matches your tree data
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #256
-length(tree$tip.label) #256
+nrow(dat) #248
+length(tree$tip.label) #248
 
 #check subgroup names
 unique(dat$Family)
 
-colz = c("Caliciviridae" = "royalblue3",    "Picornaviridae"  = "turquoise1",   "Secoviridae"  = "goldenrod1",
+colz = c("Caliciviridae" = "royalblue3",    "Picornaviridae"  = "turquoise1",
          "Coronaviridae"  = "black", "Unclassified"  = "darkorange1")
 
 #pick order for the labels
-dat$Family <- factor(dat$Family, levels = c("Secoviridae","Picornaviridae",
+dat$Family <- factor(dat$Family, levels = c("Picornaviridae",
                                             "Caliciviridae", "Unclassified","Coronaviridae")) 
 
 dat$novel <- as.factor(dat$novel)
@@ -106,63 +106,6 @@ dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & 
                                                                                                            #dat$Country[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
                                                                                                            dat$Collection_Date[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)])
 
-#and accession number only
-# #check:
-# dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) &!is.na(dat$source) & !is.na(dat$Country)] #none with this condition
-# 
-# 
-# 
-# #now NA in Isolate + source
-# #first check if there are any
-# dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)] #no
-# # dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)]<- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
-# #                                                                                                        dat$Family[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
-# #                                                                                                        #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|",
-# #                                                                                                        #dat$source[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|",
-# #                                                                                                        dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
-# #                                                                                                        dat$Collection_Date[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)])
-# #Isolate + accession only
-# dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) &!is.na(dat$Country)] #no
-# 
-# #Isolate + Country only
-# dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)] #no
-# # dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)] <- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|", 
-# #                                                                                                                 dat$Family[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|", 
-# #                                                                                                           #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
-# #                                                                                                           dat$source[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|",
-# #                                                                                                           #dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) &!is.na(dat$Country)], "|",
-# #                                                                                                           dat$Collection_Date[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)])
-# 
-# #now look at the other 2-way NAs: accession + source, accession + Country, source+Country
-# dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$source) & !is.na(dat$Country)] #none
-# 
-# dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) & is.na(dat$Country)] #none
-# dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)] #none
-# 
-# #replace
-# # dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)]<- paste(dat$Accession[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|", 
-# #                                                                                                                 dat$Family[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|", 
-# #                                                                                                                 dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|", 
-# #                                                                                                                 #dat$source[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|",
-# #                                                                                                                 #dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) &!is.na(dat$Country)], "|",
-# #                                                                                                                 dat$Collection_Date[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)])
-# 
-# #and 3-way NAs: Isolate + accession + source
-# dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$source) & !is.na(dat$Country)] #none
-# #Isolate + accession + Country
-# dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) & is.na(dat$Country)] #none
-# #Isolate source Country
-# dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)] #none
-# # dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)] <- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|",
-# #                                                                                                                 dat$Family[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|",
-# #                                                                                                                 #dat$Isolate[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)], "|",
-# #                                                                                                                 #dat$source[is.na(dat$Isolate) & !is.na(dat$Accession) & !is.na(dat$source) &is.na(dat$Country)], "|",
-# #                                                                                                                 #dat$Country[is.na(dat$Isolate) & is.na(dat$Accession) & !is.na(dat$source) &!is.na(dat$Country)], "|",
-# #                                                                                                                 dat$Collection_Date[is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)])
-# # #accession Country source
-# dat$new_label[!is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)] #none
-# #and all four
-# dat$new_label[is.na(dat$Isolate) & is.na(dat$Accession) & is.na(dat$source) & is.na(dat$Country)] #none
 
 #look at dat$new_label
 dat$new_label #they all look great
@@ -233,9 +176,6 @@ p1.1 <- p1  %<+% p0.dat +
         legend.key.size = unit(0.3, "cm"))
 p1.1
 
-# p1.2<-p1.1%>%ggtree::rotate(node=570)
-# p1.2
-
 ##Get the clade numbers so we can collapse unnnecesary clades
 ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
 
@@ -248,7 +188,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=
   scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=2, nudge_x=0.05) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
@@ -256,25 +196,26 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=
         legend.direction = "vertical",
         legend.text = element_text(size=8), 
         legend.key.size = unit(0.3, "cm")) +
-  xlim(c(0,8))+
-  geom_cladelabel(node = 353, label = "bold(Parechovirus/Scotophilus_kuhlii/Vietnam_clade)",parse=T,hjust='center',offset=0.85, fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 384, label = "bold(Shanbavirus/Rhinolophus_sp./China_clade)",parse=T,hjust='center', offset=0.8,fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 407, label = "bold(Shanbavirus/Miniopterus_shreibersii/Hungary_clade)",parse=T,hjust='center', offset=0.85, fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 422, label = "bold(Kobuvirus/Scotophilus_kuhlii/Vietnam_clade)",parse=T,hjust='center', offset=0.8,fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 315, label = "bold(Unclassified/Miniopterus_pusillus/Chian_clade)",parse=T,hjust='center', offset=0.8,fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 461, label = "bold(Shanbavirus/Rhinolophus_sp./China_clade)",parse=T,hjust='center', offset=0.8, fontsize = 2, color="turquoise4") +
-  geom_cladelabel(node = 281, label = "bold(Unclassified/Scotophilus_kuhlii/Vietnam_clade)",parse=T,hjust='center', offset=0.8, fontsize = 2, color="turquoise4")
+  xlim(c(0,10))+
+  geom_cladelabel(node = 425, label = "Unclassified Picornaviridae/Scotophilus kuhlii/Vietnam clade",offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 420, label = "Unclassified Picornaviridae/Miniopterus/Hong Kong clade",offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 396, label = "Unclassified Picornaviridae/Miniopterus pusillus/China clade",offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 345, label = "Unclassified Picornaviridae/Miniopterus pusillus/China clade",offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 274, label = "Parechovirus/Scotophilus kuhlii/Vietnam clade",offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 390, label = "Shanbavirus/Rhinolophus/China clade",offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 304, label = "Kobuvirus/Scotophilus kuhlii/Vietnam clade",offset=0.1, fontsize = 3, color="black")
+  
 p2
 
 
 #collapse the labeled clades
-p3<-collapse(p2, 353)+geom_point2(aes(subset=(node==353)), size=3, shape=22, fill="turquoise1")
-p4<-collapse(p3, 384)+geom_point2(aes(subset=(node==384)), size=3, shape=22, fill="turquoise1")
-p5<-collapse(p4, 407)+geom_point2(aes(subset=(node==407)), size=3, shape=22, fill="turquoise1")
-p6<-collapse(p5, 422)+geom_point2(aes(subset=(node==422)), size=3, shape=22, fill="turquoise1")
-p7<-collapse(p6, 315)+geom_point2(aes(subset=(node==315)), size=3, shape=22, fill="turquoise1")
-p8<-collapse(p7, 461)+geom_point2(aes(subset=(node==461)), size=3, shape=22, fill="turquoise1")
-p9<-collapse(p8, 281)+geom_point2(aes(subset=(node==281)), size=3, shape=22, fill="turquoise1")
+p3<-collapse(p2, 425)+geom_point2(aes(subset=(node==425)), size=3, shape=22, fill="turquoise1")
+p4<-collapse(p3, 420)+geom_point2(aes(subset=(node==420)), size=3, shape=22, fill="turquoise1")
+p5<-collapse(p4, 396)+geom_point2(aes(subset=(node==396)), size=3, shape=22, fill="turquoise1")
+p6<-collapse(p5, 345)+geom_point2(aes(subset=(node==345)), size=3, shape=22, fill="turquoise1")
+p7<-collapse(p6, 274)+geom_point2(aes(subset=(node==274)), size=3, shape=22, fill="turquoise1")
+p8<-collapse(p7, 390)+geom_point2(aes(subset=(node==390)), size=3, shape=22, fill="turquoise1")
+p9<-collapse(p8, 304)+geom_point2(aes(subset=(node==304)), size=3, shape=22, fill="turquoise1")
 p9
 
 
@@ -294,20 +235,5 @@ p9.1 <- p9  %<+% p9.dat +
         legend.title = element_text(size=8),
         legend.key.size = unit(0.3, "cm"))
 p9.1
-
-
-
-
-
-
-##Clades to collapse
-#353 Scotophilus kuhlii Picornaviridae parechovirus Vietnam
-#384 Rhinolophus sp. Shanbavirus China Picornaviridae
-#407 Shanbavirus picornaviridae miniopterus shreibersii Hungary
-#422 Kobuvirus picornaviridae Scotophilus kuhlii Vietnam
-#315 Unclassified picornaviridae Miniopterus pusillus China
-#461 Shanbavirus picornaviridae Rhinolophus sp. China
-#281 Scotophilus kuhlii Picornaviridae Vietnam
-
 
 
