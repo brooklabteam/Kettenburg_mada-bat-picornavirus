@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=batpic_all_p1_tree
+#SBATCH --job-name=bat_full_tree
 #SBATCH --partition=broadwl
-#SBATCH --output=batpic_all_p1_tree.out
+#SBATCH --output=bat_full_tree.out
 #SBATCH --nodes=1
 #SBATCH --ntasks=
 #SBATCH --ntasks-per-node=
@@ -13,4 +13,4 @@ module load python/3.6
 module load java/1.8.0_121
 module load cmake/3.15.1
 
-raxml-ng-mpi --msa .fasta --model --prefix T2  --seed 1 --threads auto{}
+raxml-ng-mpi --msa .fasta --model  --prefix T12  --seed 1 --threads auto{}
