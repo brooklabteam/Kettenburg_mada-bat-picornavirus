@@ -1,0 +1,180 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        bat_picornavirales_all_P2P3_align.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            210
+  #sites:           37397
+  #patterns:        16292
+  Max. thread mem:  1686 MB
+
+Output:
+  Log:           bat_picornavirales_all_P2P3_align.fasta.log
+  Starting tree: bat_picornavirales_all_P2P3_align.fasta.tree
+  Results:       bat_picornavirales_all_P2P3_align.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/14
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9   -849975.8944   1704437.2900         0.0000    1.0000
+       2  GTR+I+G4          10   -850178.7835   1704853.5977       416.3076    0.0000
+       3  TVM+G4             8   -850211.8343   1704898.6406       461.3506    0.0000
+       4  TVM+I+G4           9   -850243.4332   1704972.3677       535.0776    0.0000
+       5  TIM2+G4            7   -850305.8035   1705076.0495       638.7595    0.0000
+       6  TIM2+I+G4          8   -850327.0967   1705129.1653       691.8753    0.0000
+       7  TPM2uf+G4          6   -850359.8122   1705173.5377       736.2477    0.0000
+       8  TPM2uf+I+G4        7   -850384.0360   1705232.5146       795.2246    0.0000
+       9  TPM3uf+G4          6   -850790.5556   1706035.0245      1597.7344    0.0000
+      10  TIM3+G4            7   -850904.1166   1706272.6758      1835.3858    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              GTR+G4
+lnL:                -849975.8944
+Frequencies:        0.2586 0.2290 0.2304 0.2819
+Subst. Rates:       1.9062 3.8194 1.6205 1.2840 4.3754 1.0000 
+Inv. sites prop:    -
+Gamma shape:        2.0643
+Score:              1704437.2900
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              1.0000
+Gamma-Inv:          0.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              2.0643
+Alpha-P.Inv:        2.0706
+P.Inv-Alpha:        0.0219
+Frequencies:        0.2586 0.2290 0.2304 0.2819 
+
+Commands:
+  > phyml  -i bat_picornavirales_all_P2P3_align.fasta -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s bat_picornavirales_all_P2P3_align.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa bat_picornavirales_all_P2P3_align.fasta --model GTR+G4
+  > paup -s bat_picornavirales_all_P2P3_align.fasta
+  > iqtree -s bat_picornavirales_all_P2P3_align.fasta -m GTR+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9   -849975.8944   1700803.7887         0.0000    1.0000
+       2  GTR+I+G4          10   -850178.7835   1701211.5670       407.7783    0.0000
+       3  TVM+G4             8   -850211.8343   1701273.6687       469.8799    0.0000
+       4  TVM+I+G4           9   -850243.4332   1701338.8664       535.0776    0.0000
+       5  TIM2+G4            7   -850305.8035   1701459.6069       655.8182    0.0000
+       6  TIM2+I+G4          8   -850327.0967   1701504.1933       700.4046    0.0000
+       7  TPM2uf+G4          6   -850359.8122   1701565.6245       761.8357    0.0000
+       8  TPM2uf+I+G4        7   -850384.0360   1701616.0720       812.2832    0.0000
+       9  TPM3uf+G4          6   -850790.5556   1702427.1112      1623.3225    0.0000
+      10  TIM3+G4            7   -850904.1166   1702656.2332      1852.4445    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+G4
+lnL:                -849975.8944
+Frequencies:        0.2586 0.2290 0.2304 0.2819
+Subst. Rates:       1.9062 3.8194 1.6205 1.2840 4.3754 1.0000 
+Inv. sites prop:    -
+Gamma shape:        2.0643
+Score:              1700803.7887
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              1.0000
+Gamma-Inv:          0.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              2.0643
+Alpha-P.Inv:        2.0706
+P.Inv-Alpha:        0.0219
+Frequencies:        0.2586 0.2290 0.2304 0.2819 
+
+Commands:
+  > phyml  -i bat_picornavirales_all_P2P3_align.fasta -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s bat_picornavirales_all_P2P3_align.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa bat_picornavirales_all_P2P3_align.fasta --model GTR+G4
+  > paup -s bat_picornavirales_all_P2P3_align.fasta
+  > iqtree -s bat_picornavirales_all_P2P3_align.fasta -m GTR+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9   -849975.8944   1700812.7887         0.0000    1.0000
+       2  GTR+I+G4          10   -850178.7835   1701220.5670       407.7783    0.0000
+       3  TVM+G4             8   -850211.8343   1701282.6687       469.8799    0.0000
+       4  TVM+I+G4           9   -850243.4332   1701347.8664       535.0776    0.0000
+       5  TIM2+G4            7   -850305.8035   1701468.6069       655.8182    0.0000
+       6  TIM2+I+G4          8   -850327.0967   1701513.1933       700.4046    0.0000
+       7  TPM2uf+G4          6   -850359.8122   1701574.6245       761.8357    0.0000
+       8  TPM2uf+I+G4        7   -850384.0360   1701625.0720       812.2832    0.0000
+       9  TPM3uf+G4          6   -850790.5556   1702436.1112      1623.3225    0.0000
+      10  TIM3+G4            7   -850904.1166   1702665.2332      1852.4445    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+G4
+lnL:                -849975.8944
+Frequencies:        0.2586 0.2290 0.2304 0.2819
+Subst. Rates:       1.9062 3.8194 1.6205 1.2840 4.3754 1.0000 
+Inv. sites prop:    -
+Gamma shape:        2.0643
+Score:              1700812.7887
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              1.0000
+Gamma-Inv:          0.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              2.0643
+Alpha-P.Inv:        2.0706
+P.Inv-Alpha:        0.0219
+Frequencies:        0.2586 0.2290 0.2304 0.2819 
+
+Commands:
+  > phyml  -i bat_picornavirales_all_P2P3_align.fasta -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s bat_picornavirales_all_P2P3_align.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa bat_picornavirales_all_P2P3_align.fasta --model GTR+G4
+  > paup -s bat_picornavirales_all_P2P3_align.fasta
+  > iqtree -s bat_picornavirales_all_P2P3_align.fasta -m GTR+G4
+Done

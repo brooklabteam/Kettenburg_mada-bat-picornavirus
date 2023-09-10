@@ -13,4 +13,4 @@ module load python/3.6
 module load java/1.8.0_121
 module load cmake/3.15.1
 
-raxml-ng-mpi --bootstrap --msa .fasta --model  --prefix T4  --seed 4 --threads auto{}
+raxml-ng-mpi --bootstrap --msa picornavirales_refseq_P2P3_align.fasta --model  --prefix T4  --seed 4 --threads auto{}
