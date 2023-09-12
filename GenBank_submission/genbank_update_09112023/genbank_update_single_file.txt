@@ -1,0 +1,433 @@
+>Feature gb|OQ818316.1|
+1	1135	5'UTR
+1136	7816	CDS
+			product	polyprotein
+			protein_id	gb|WIW43211.1|
+1136	1312	mat_peptide
+			product L peptide
+1313	2263	mat_peptide
+			product VP0 peptide
+2264	3061	mat_peptide
+			product VP3 peptide
+3062	3823	mat_peptide
+			product VP1 peptide
+3824	3916	mat_peptide
+			product 2A peptide
+3917	4372	mat_peptide
+			product 2B peptide
+4373	5407	mat_peptide
+			product 2C peptide
+5408	5731	mat_peptide
+			product 3A peptide
+5732	5866	mat_peptide
+			product 3B peptide
+5867	6550	mat_peptide
+			product 3C peptide
+6551	7795	mat_peptide
+			product 3D peptide
+7817	>7982	3'UTR
+
+>Feature gb|OQ818317.1|
+1	529	5'UTR
+530	7186	CDS
+			product	polyprotein
+			protein_id	gb|WIW43212.1|
+530	1426	mat_peptide
+			product VP0 peptide
+1427	2110	mat_peptide
+			product VP3 peptide
+2111	2824	mat_peptide
+			product VP1 peptide
+2825	3100	mat_peptide
+			product 2A peptide
+3101	3418	mat_peptide
+			product 2B peptide
+3419	4636	mat_peptide
+			product 2C peptide
+4637	5023	mat_peptide
+			product 3A peptide
+5024	5095	mat_peptide
+			product	3B peptide
+5096	5656	mat_peptide
+			product 3C peptide
+5657	7147	mat_peptide
+			product	3D peptide
+7187	>7329	3'UTR
+
+>Feature gb|OQ818318.1|
+1	559	5'UTR
+560	7072	CDS
+			product	polyprotein
+			protein_id	gb|WIW43213.1|
+560	688 	mat_peptide
+			product L peptide
+689	894	mat_peptide
+			product VP4 peptide
+895	1750	mat_peptide
+			product VP2 peptide
+1751	2446	mat_peptide
+			product VP3 peptide
+2447	3244	mat_peptide
+			product VP1 peptide
+3245	3301	mat_peptide
+			product 2A peptide
+3302	3751	mat_peptide
+			product 2B peptide
+3752	4726	mat_peptide
+			product 2C peptide
+4727	5026	mat_peptide
+			product 3A peptide
+5027	5101	mat_peptide
+			product 3B peptide
+5102	5716	mat_peptide
+			product 3C peptide
+5717	7057	mat_peptide
+			product 3D peptide
+7073	>7085	3'UTR
+
+>Feature gb|OQ818319.1|
+<1	5792	CDS
+			product	polyprotein
+			protein_id	gb|WIW43214.1|
+<1	980	mat_peptide
+			product	Helicase
+981	1823	mat_peptide
+			product NS4
+1824	2159	mat_peptide
+			product Vpg
+2160	4194	mat_peptide
+			product Pro-Pol
+4195	5795	mat_peptide
+			product	VP1
+5824	>6378	CDS
+			product	putative minor structural protein
+			protein_id	gb|WIW43215.1|
+5824	>6378	mat_peptide
+			product	VP2
+
+>Feature gb|OQ818320.1|
+1	167	5'UTR
+168	7610	CDS
+			product	polyprotein
+			protein_id	gb|WIW43216.1|
+168	722	mat_peptide
+			product L peptide
+723	875	mat_peptide
+			product VP4 peptide
+876	1580	mat_peptide
+			product VP2 peptide
+1581	2300	mat_peptide
+			product VP3 peptide
+2301	3194	mat_peptide
+			product VP1 peptide
+3195	3935	mat_peptide
+			product	2A peptide
+3936	4280	mat_peptide
+			product 2B peptide
+4281	5303	mat_peptide
+			product 2C peptide
+5304	5609	mat_peptide
+			product 3A peptide
+5610	5675	mat_peptide
+			product 3B peptide
+5676	6221	mat_peptide
+			product 3C peptide
+6222	7607	mat_peptide
+			product 3D peptide
+7611	>7685	3'UTR
+
+>Feature gb|OQ818321.1|
+1	414	5'UTR
+415	7656	CDS
+			product	polyprotein
+			protein_id	gb|WIW43217.1|
+415	786	mat_peptide
+			product L peptide
+787	939	mat_peptide
+			product VP4 peptide
+940	1644	mat_peptide
+			product	VP2 peptide
+1645	2340	mat_peptide
+			product VP3 peptide
+2341	3249	mat_peptide
+			product VP1 peptide
+3250	3990	mat_peptide
+			product 2A peptide
+3991	4332	mat_peptide
+			product	2B peptide
+4333	5349	mat_peptide
+			product 2C peptide
+5350	5655	mat_peptide
+			product 3A peptide
+5656	5721	mat_peptide
+			product 3B peptide
+5722	6267	mat_peptide
+			product 3C peptide
+6268	7653	mat_peptide
+			product 3D peptide
+7657	>7751	3'UTR
+
+>Feature gb|OQ818323.1|
+1	541	5'UTR
+542	7207	CDS
+			product	polyprotein
+			protein_id	gb|WIW43219.1|
+542	748	mat_peptide
+			product L peptide
+749	1000	mat_peptide
+			product VP4 peptide
+1001	1825	mat_peptide
+			product	VP2 peptide
+1826	2521	mat_peptide
+			product VP3 peptide
+2522	3337	mat_peptide
+			product	VP1 peptide
+3338	3409	mat_peptide
+			product 2A peptide
+3410	3868	mat_peptide
+			product 2B peptide
+3869	4843	mat_peptide
+			product 2C peptide
+4844	5149	mat_peptide
+			product 3A peptide
+5150	5224	mat_peptide
+			product 3B peptide
+5225	5845	mat_peptide
+			product 3C peptide
+5846	7189	mat_peptide
+			product 3D peptide
+7208	>7294	3'UTR
+
+>Feature gb|OQ818324.1|
+1	569	5'UTR
+570	7223	CDS
+			product	polyprotein
+			protein_id	gb|WIW43220.1|
+570	920	mat_peptide
+			product L peptide
+921	1289	mat_peptide
+			product VP4 peptide
+1290	2144	mat_peptide
+			product VP2 peptide
+2145	2606	mat_peptide
+			product VP3 peptide
+2607	3359	mat_peptide
+			product VP1 peptide
+3360	3425	mat_peptide
+			product 2A peptide
+3426	3884	mat_peptide
+			product 2B peptide
+3885	4859	mat_peptide
+			product 2C peptide
+4860	5165	mat_peptide
+			product 3A peptide
+5166	5240	mat_peptide
+			product 3B peptide
+5241	5861	mat_peptide
+			product 3C peptide
+5862	7205	mat_peptide
+			product 3D peptide
+
+>Feature gb|OQ818325.1|
+1	517	5'UTR
+518	>7280	CDS
+			product	polyprotein
+			protein_id	gb|WIW43221.1|
+518	769	mat_peptide
+			product L peptide
+770	964	mat_peptide
+			product VP4 peptide
+965	1684	mat_peptide
+			product VP2 peptide
+1685	2365	mat_peptide
+			product	VP3 peptide
+2366	3298	mat_peptide
+			product VP1 peptide
+3299	3949	mat_peptide
+			product 2A peptide
+3950	4273	mat_peptide
+			product 2B peptide
+4274	5266	mat_peptide
+			product 2C peptide
+5267	5569	mat_peptide
+			product 3A peptide
+5570	5638	mat_peptide
+			product 3B peptide
+5639	6187	mat_peptide
+			product 3C peptide
+6188	>7280	mat_peptide
+			product 3D peptide
+
+>Feature gb|OQ818328.1|
+1	532	5'UTR
+533	7510	CDS
+			product	polyprotein
+			protein_id	gb|WIW43224.1|
+533	703	mat_peptide
+			product L peptide
+704	898	mat_peptide
+			product VP4 peptide
+899	1618	mat_peptide
+			product VP2 peptide
+1619	2299	mat_peptide
+			product VP3 peptide
+2300	3232	mat_peptide
+			product VP1 peptide
+3233	3883	mat_peptide
+			product 2A peptide
+3884	4207	mat_peptide
+			product 2B peptide
+4208	5200	mat_peptide
+			product 2C peptide
+5201	5503	mat_peptide
+			product 3A peptide
+5504	5572	mat_peptide
+			product 3B peptide
+5573	6121	mat_peptide
+			product 3C peptide
+6122	7507	mat_peptide
+			product 3D peptide
+7511	>7614	3'UTR
+
+>Feature gb|OQ818329.1|
+1	348	5'UTR
+670	7611	CDS
+			product	polyprotein
+			protein_id	gb|WIW43225.1|
+349	720	mat_peptide
+			product L peptide
+721	873	mat_peptide
+			product VP4 peptide
+874	1578	mat_peptide
+			product VP2 peptide
+1579	2283	mat_peptide
+			product VP3 peptide
+2284	3252	mat_peptide
+			product VP1 peptide
+3253	3954	mat_peptide
+			product 2A peptide
+3955	4296	mat_peptide
+			product 2B peptide
+4297	5304	mat_peptide
+			product 2C peptide
+5305	5610	mat_peptide
+			product 3A peptide
+5611	5676	mat_peptide
+			product 3B peptide
+5677	6222	mat_peptide
+			product 3C peptide
+6223	7608	mat_peptide
+			product 3D peptide
+7612	>7714	3'UTR
+
+>Feature gb|OQ818337.1|
+1	705	5'UTR
+706	>5785	CDS
+			product	putative polyprotein
+			protein_id	gb|WIW43235.1|
+706	777	mat_peptide
+			product VP4 peptide
+778	1443	mat_peptide
+			product VP2 peptide
+1444	2181	mat_peptide
+			product VP3 peptide
+2182	2943	mat_peptide
+			product	VP1 and 2A-like peptides
+2944	3213	mat_peptide
+			product	2B peptide
+3214	3948	mat_peptide
+			product 2C peptide
+3949	4957	mat_peptide
+			product 3A peptide
+4948	5259	mat_peptide
+			product 3B peptide
+5260	>5785	mat_peptide
+			product 3C peptide
+
+>Feature gb|OQ818340.1|
+<1	>3232	CDS
+			product	polyprotein
+			protein_id	gb|WIW43237.1|
+<1	1161	mat_peptide
+			product Helicase
+1162	2004	mat_peptide
+			product	NS4
+2005	2340	mat_peptide
+			product Vpg
+2341	>3232	mat_peptide
+			product Pro-Pol
+
+>Feature gb|OQ818342.1|
+<1	>1177	CDS
+			product	polyprotein
+			codon_start	2
+			protein_id	gb|WIW43239.1|
+<1	826 	mat_peptide
+			product 2C peptide
+827	1132	mat_peptide
+			product	3A peptide
+1133	>1177	mat_peptide
+			product 3B peptide
+
+>Feature gb|OQ818343.1|
+<1	>1127	CDS
+			product	polyprotein
+			codon_start	2
+			protein_id	gb|WIW43240.1|
+<1	16	mat_peptide
+			product	L peptide
+17	169	mat_peptide
+			product	VP4 peptide
+170	874	mat_peptide
+			product VP2 peptide
+875	>1127	mat_peptide
+			product VP3 peptide
+>Feature gb|OQ818344.1|
+<1	>2134	CDS
+			product	polyprotein
+			protein_id	gb|WIW43241.1|
+<1	432	mat_peptide
+			product 2C peptide
+433	738	mat_peptide
+			product	3A peptide
+739	804	mat_peptide
+			product	3B peptide
+805	1350	mat_peptide
+			product	3C peptide
+1351	>2134	mat_peptide
+			product	3D peptide
+
+>Feature gb|OQ818345.1|
+<1	>1043	CDS
+			product	polyprotein
+			codon_start	2
+			protein_id	gb|WIW43242.1|
+<1	34	mat_peptide
+			product	Pro-Pol
+35	>1043	mat_peptide
+			product VP1
+
+>Feature gb|OQ818347.1|
+<1	>2171	CDS
+			product	polyprotein
+			codon_start	2
+			protein_id	gb|WIW43243.1|
+<1	268	mat_peptide
+			product	NS4
+269	601	mat_peptide
+			product	Vpg
+602	>2172	mat_peptide
+			product Pro-Pol
+
+>Feature gb|OQ818348.1|
+<1	>2611	CDS
+			product	polyprotein
+			protein_id	gb|WIW43244.1|
+<1	153	mat_peptide
+			product Helicase
+154	807	mat_peptide
+			product NS4
+808	1080	mat_peptide
+			product Vpg
+1081	>2611	mat_peptide
+			product Pro-Pol
