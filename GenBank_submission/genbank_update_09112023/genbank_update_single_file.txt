@@ -61,9 +61,9 @@
 			protein_id	gb|WIW43213.1|
 560	688 	mat_peptide
 			product L peptide
-689	894	mat_peptide
+689	895	mat_peptide
 			product VP4 peptide
-895	1750	mat_peptide
+896	1750	mat_peptide
 			product VP2 peptide
 1751	2446	mat_peptide
 			product VP3 peptide
@@ -89,19 +89,23 @@
 <1	5792	CDS
 			product	polyprotein
 			protein_id	gb|WIW43214.1|
+			codon_start	3
 <1	980	mat_peptide
 			product	Helicase
 981	1823	mat_peptide
 			product NS4
 1824	2159	mat_peptide
 			product Vpg
-2160	4194	mat_peptide
+2160	4193	mat_peptide
 			product Pro-Pol
-4195	5795	mat_peptide
+4194	5789	mat_peptide
 			product	VP1
+5793	5823	misc_feature
+			product intergenic region
 5824	>6378	CDS
 			product	putative minor structural protein
 			protein_id	gb|WIW43215.1|
+			codon_start	1
 5824	>6378	mat_peptide
 			product	VP2
 
@@ -291,7 +295,7 @@
 
 >Feature gb|OQ818329.1|
 1	348	5'UTR
-670	7611	CDS
+349	7611	CDS
 			product	polyprotein
 			protein_id	gb|WIW43225.1|
 349	720	mat_peptide
@@ -337,7 +341,7 @@
 			product	2B peptide
 3214	3948	mat_peptide
 			product 2C peptide
-3949	4957	mat_peptide
+3949	4947	mat_peptide
 			product 3A peptide
 4948	5259	mat_peptide
 			product 3B peptide
@@ -410,13 +414,13 @@
 >Feature gb|OQ818347.1|
 <1	>2171	CDS
 			product	polyprotein
-			codon_start	2
 			protein_id	gb|WIW43243.1|
+			codon_start	2
 <1	268	mat_peptide
 			product	NS4
 269	601	mat_peptide
 			product	Vpg
-602	>2172	mat_peptide
+602	>2171	mat_peptide
 			product Pro-Pol
 
 >Feature gb|OQ818348.1|
