@@ -16,9 +16,8 @@ You may have to update your version of Python if you have a Mac M1 chip
 I have an excel sheet summarizing the comparisons I picked for PySimPlot similarity analysis and pairwise BLAST comparisons [here]().
 
 I want to make a figure of the following: 
-- Pairwise comparison with each respective virus's top aa BLAST hit (noit going into figure, may use distance matrix in a figure)
-- Representative sequences for species defined in ICTV and the top BLAST hit (going into figure)
-- A matching virus genus if it has been found in the Africa/SWIO region in a bat...want to show how similar/different these Malagasy bat viruses are those to the picornaviruses found in African bats (either a table or a distance matrix will be used in the final figure)
+- Representative sequences for species defined in ICTV and the top BLAST hit (going into PySimPlot figure)
+- A matching virus genus if it has been found in the Africa/SWIO region in a bat...want to show how similar/different these Malagasy bat viruses are those to the picornaviruses found in African bats (a table as a figure)
 
 Malagasy sequences included in PySimplot figure (ICTV+BLAST sequences)
 OQ818316	mischivirus
