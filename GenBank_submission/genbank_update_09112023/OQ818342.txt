@@ -1,0 +1,11 @@
+>Feature gb|OQ818342.1|
+<1	>1177	CDS
+			product	polyprotein
+			codon_start	2
+			protein_id	gb|WIW43239.1|
+<1	826 	mat_peptide
+			product 2C peptide
+827	1132	mat_peptide
+			product	3A peptide
+1133	>1177	mat_peptide
+			product 3B peptide

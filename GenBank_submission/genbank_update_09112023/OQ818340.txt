@@ -1,0 +1,12 @@
+>Feature gb|OQ818340.1|
+<1	>3232	CDS
+			product	polyprotein
+			protein_id	gb|WIW43237.1|
+<1	1161	mat_peptide
+			product Helicase
+1162	2004	mat_peptide
+			product	NS4
+2005	2340	mat_peptide
+			product Vpg
+2341	>3232	mat_peptide
+			product Pro-Pol

@@ -1,0 +1,20 @@
+>Feature gb|OQ818319.1|
+<1	5792	CDS
+			product	polyprotein
+			protein_id	gb|WIW43214.1|
+<1	980	mat_peptide
+			product	Helicase
+981	1823	mat_peptide
+			product NS4
+1824	2159	mat_peptide
+			product Vpg
+2160	4194	mat_peptide
+			product Pro-Pol
+4195	5795	mat_peptide
+			product	VP1
+5824	>6378	CDS
+			product	putative minor structural protein
+			protein_id	gb|WIW43215.1|
+5824	>6378	mat_peptide
+			product	VP2
+

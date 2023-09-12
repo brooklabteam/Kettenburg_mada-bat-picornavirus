@@ -1,0 +1,11 @@
+>Feature gb|OQ818347.1|
+<1	>2171	CDS
+			product	polyprotein
+			codon_start	2
+			protein_id	gb|WIW43243.1|
+<1	268	mat_peptide
+			product	NS4
+269	601	mat_peptide
+			product	Vpg
+602	>2172	mat_peptide
+			product Pro-Pol

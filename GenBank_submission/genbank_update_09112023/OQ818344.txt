@@ -1,0 +1,14 @@
+>Feature gb|OQ818344.1|
+<1	>2134	CDS
+			product	polyprotein
+			protein_id	gb|WIW43241.1|
+<1	432	mat_peptide
+			product 2C peptide
+433	738	mat_peptide
+			product	3A peptide
+739	804	mat_peptide
+			product	3B peptide
+805	1350	mat_peptide
+			product	3C peptide
+1351	>2134	mat_peptide
+			product	3D peptide

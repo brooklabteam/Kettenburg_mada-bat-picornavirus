@@ -1,0 +1,30 @@
+>Feature gb|OQ818325.1|
+1	517	5'UTR
+518	>7280	CDS
+			product	polyprotein
+			protein_id	gb|WIW43221.1|
+518	769	mat_peptide
+			product L peptide
+770	964	mat_peptide
+			product VP4 peptide
+965	1684	mat_peptide
+			product VP2 peptide
+1685	2365	mat_peptide
+			product	VP3 peptide
+2366	3298	mat_peptide
+			product VP1 peptide
+3299	3949	mat_peptide
+			product 2A peptide
+3950	4273	mat_peptide
+			product 2B peptide
+4274	5266	mat_peptide
+			product 2C peptide
+5267	5569	mat_peptide
+			product 3A peptide
+5570	5638	mat_peptide
+			product 3B peptide
+5639	6187	mat_peptide
+			product 3C peptide
+6188	>7280	mat_peptide
+			product 3D peptide
+
