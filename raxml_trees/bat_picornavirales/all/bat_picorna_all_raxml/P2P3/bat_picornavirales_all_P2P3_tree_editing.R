@@ -11,26 +11,26 @@ library(phylobase)
 
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
 
-##Picornavirales all bat sequences over 3kb, all novel sequences in picornaviridae and caliciviridae
-setwd(paste0(homewd,"/raxml_trees/bat_picornavirales/all/bat_picorna_all_raxml/over1kb"))
+##Picornavirales all bat sequences with alignment centered around P2P3 region
+setwd(paste0(homewd,"/raxml_trees/bat_picornavirales/all/bat_picorna_all_raxml/P2P3"))
 
 #load the tree
-tree <-  read.tree("T10.raxml.supportFBP") 
+tree <-  read.tree("T1.raxml.supportFBP") 
 
 rooted.tree <- root(tree, which(tree$tip.label == "NC_030886.1"))
 #take a quick look in base R
 plot(rooted.tree)
 
 #load tree data prepared from elsewhere
-dat <- read.csv(("bat_picornavirales_all_over1kb_metadata.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(("bat_picornavirales_all_P2P3_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
 
 #check that your metadata matches your tree data
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #255
-length(tree$tip.label) #255
+nrow(dat) #210
+length(tree$tip.label) #210
 
 #check subgroup names
 unique(dat$Family)
@@ -89,23 +89,6 @@ dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!i
                                                                                                           dat$Country[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
                                                                                                           dat$Collection_Date[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)])
 
-#and source only:
-dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) &is.na(dat$source) &!is.na(dat$Country)] <- paste(dat$Accession[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|", 
-                                                                                                          dat$Genus[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|", 
-                                                                                                          dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|", 
-                                                                                                          #dat$source[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                          dat$Country[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                          dat$Collection_Date[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)])
-
-
-#and Country only
-dat$new_label[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)] <- paste(dat$Accession[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
-                                                                                                           dat$Genus[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
-                                                                                                           dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
-                                                                                                           dat$source[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|",
-                                                                                                           #dat$Country[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                           dat$Collection_Date[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)])
-
 
 #look at dat$new_label
 dat$new_label #they all look great
@@ -153,7 +136,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=
         legend.direction = "vertical",
         legend.text = element_text(size=7), 
         legend.key.size = unit(0.2, "cm")) +
-  xlim(c(0,8))
+  xlim(c(0,14))
 
 p1
 
@@ -176,6 +159,10 @@ p1.1 <- p1  %<+% p0.dat +
         legend.key.size = unit(0.3, "cm"))
 p1.1
 
+
+#export collapsed 20x10 inch portrait PDF
+
+
 ##Get the clade numbers so we can collapse unnnecesary clades
 ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
 
@@ -197,23 +184,23 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=
         legend.text = element_text(size=8), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,8))+
-  geom_cladelabel(node = 449, label = "Unclassified Picornaviridae/Scotophilus kuhlii/Vietnam clade",offset=0.1, fontsize = 3, color="black") +
-  geom_cladelabel(node = 444, label = "Unclassified Picornaviridae/Miniopterus/Hong Kong clade",offset=0.1, fontsize = 3, color="black") +
-  geom_cladelabel(node = 396, label = "Unclassified Picornaviridae/Miniopterus pusillus/China clade",offset=0.1, fontsize = 3, color="black") +
-  geom_cladelabel(node = 302, label = "Parechovirus/Scotophilus kuhlii/Vietnam clade",offset=0.1, fontsize = 3, color="black") +
-  geom_cladelabel(node = 333, label = "Shanbavirus/Rhinolophus/China clade",offset=0.1, fontsize = 3, color="black") +
-  geom_cladelabel(node = 352, label = "Kobuvirus/Scotophilus kuhlii/Vietnam clade",offset=0.1, fontsize = 3, color="black")
+  geom_cladelabel(node = 324, label = "Unclassified Picornaviridae/Scotophilus kuhlii/Vietnam clade",offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 225, label = "Unclassified Picornaviridae/Miniopterus/Hong Kong clade",offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 258, label = "Unclassified Picornaviridae/Miniopterus pusillus/China clade",offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 359, label = "Unclassified Picornaviridae/Miniopterus pusillus/China clade",offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 228, label = "Parechovirus/Scotophilus kuhlii/Vietnam clade",offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 293, label = "Kobuvirus/Scotophilus kuhlii/Vietnam clade",offset=0.1, fontsize = 3, color="black")
   
 p2
 
 
 #collapse the labeled clades
-p3<-collapse(p2, 449)+geom_point2(aes(subset=(node==449)), size=3, shape=22, fill="turquoise1")
-p4<-collapse(p3, 444)+geom_point2(aes(subset=(node==444)), size=3, shape=22, fill="turquoise1")
-p5<-collapse(p4, 396)+geom_point2(aes(subset=(node==396)), size=3, shape=22, fill="turquoise1")
-p6<-collapse(p5, 302)+geom_point2(aes(subset=(node==302)), size=3, shape=22, fill="turquoise1")
-p7<-collapse(p6, 333)+geom_point2(aes(subset=(node==333)), size=3, shape=22, fill="turquoise1")
-p9<-collapse(p7, 352)+geom_point2(aes(subset=(node==352)), size=3, shape=22, fill="turquoise1")
+p3<-collapse(p2, 324)+geom_point2(aes(subset=(node==324)), size=3, shape=22, fill="turquoise1")
+p4<-collapse(p3, 225)+geom_point2(aes(subset=(node==225)), size=3, shape=22, fill="turquoise1")
+p5<-collapse(p4, 258)+geom_point2(aes(subset=(node==258)), size=3, shape=22, fill="turquoise1")
+p6<-collapse(p5, 359)+geom_point2(aes(subset=(node==359)), size=3, shape=22, fill="turquoise1")
+p7<-collapse(p6, 228)+geom_point2(aes(subset=(node==228)), size=3, shape=22, fill="turquoise1")
+p9<-collapse(p7, 293)+geom_point2(aes(subset=(node==293)), size=3, shape=22, fill="turquoise1")
 p9
 
 
@@ -234,4 +221,5 @@ p9.1 <- p9  %<+% p9.dat +
         legend.key.size = unit(0.3, "cm"))
 p9.1
 
+#export collapsed 15x15 inch PDF landscape 
 

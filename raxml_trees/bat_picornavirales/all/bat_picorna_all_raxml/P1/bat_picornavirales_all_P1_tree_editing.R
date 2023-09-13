@@ -11,26 +11,26 @@ library(phylobase)
 
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
 
-##Picornavirales all bat sequences over 3kb, all novel sequences in picornaviridae and caliciviridae
-setwd(paste0(homewd,"/raxml_trees/bat_picornavirales/all/bat_picorna_all_raxml/over1kb"))
+##Picornavirales all bat sequences with alignment centered around P1 genomic region
+setwd(paste0(homewd,"/raxml_trees/bat_picornavirales/all/bat_picorna_all_raxml/P1"))
 
 #load the tree
-tree <-  read.tree("T10.raxml.supportFBP") 
+tree <-  read.tree("T1.raxml.supportFBP") 
 
 rooted.tree <- root(tree, which(tree$tip.label == "NC_030886.1"))
 #take a quick look in base R
 plot(rooted.tree)
 
 #load tree data prepared from elsewhere
-dat <- read.csv(("bat_picornavirales_all_over1kb_metadata.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(("bat_picornavirales_all_P1_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
 
 #check that your metadata matches your tree data
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #255
-length(tree$tip.label) #255
+nrow(dat) #228
+length(tree$tip.label) #228
 
 #check subgroup names
 unique(dat$Family)
@@ -140,7 +140,7 @@ colz2 = c('1' =  "yellow", '0' = "white")
 
 
 ##uncollapsed tree
-p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=Host), size=3,stroke=0,show.legend = T) +
+p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=Host), size=2,stroke=0,show.legend = T) +
   scale_fill_manual(values=colz) +
   scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
@@ -153,7 +153,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=
         legend.direction = "vertical",
         legend.text = element_text(size=7), 
         legend.key.size = unit(0.2, "cm")) +
-  xlim(c(0,8))
+  xlim(c(0,14))
 
 p1
 

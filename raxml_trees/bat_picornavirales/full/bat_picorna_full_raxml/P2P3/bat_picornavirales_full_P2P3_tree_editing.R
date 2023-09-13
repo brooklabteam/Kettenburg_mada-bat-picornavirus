@@ -11,8 +11,8 @@ library(phylobase)
 
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
 
-##Picornavirales full refseq bat sequences over 3kb, all novel sequences in picornaviridae and caliciviridae
-setwd(paste0(homewd,"/raxml_trees/bat_picornavirales/full/bat_picorna_full_raxml/over1kb"))
+##Picornavirales full refseq bat sequences with alignment centered around P2P3 region
+setwd(paste0(homewd,"/raxml_trees/bat_picornavirales/full/bat_picorna_full_raxml/P2P3"))
 
 #load the tree
 tree <-  read.tree("T11.raxml.supportFBP") 
@@ -22,15 +22,15 @@ rooted.tree <- root(tree, which(tree$tip.label == "NC_030886.1"))
 plot(rooted.tree)
 
 #load tree data prepared from elsewhere
-dat <- read.csv(("bat_picornavirales_full_over1kb_metadata.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(("bat_picornavirales_full_P2P3_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
 
 #check that your metadata matches your tree data
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #73
-length(tree$tip.label) #73
+nrow(dat) #72
+length(tree$tip.label) #72
 
 #check subgroup names
 unique(dat$Family)
@@ -153,7 +153,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Family, shape=
         legend.direction = "vertical",
         legend.text = element_text(size=7), 
         legend.key.size = unit(0.2, "cm")) +
-  xlim(c(0,8))
+  xlim(c(0,14))
 
 p1
 
@@ -175,4 +175,8 @@ p1.1 <- p1  %<+% p0.dat +
         legend.title = element_text(size=8),
         legend.key.size = unit(0.3, "cm"))
 p1.1
+
+#since tree is small I did not collapse the tree
+
+#export 10x7 inches portrait PDF
 
