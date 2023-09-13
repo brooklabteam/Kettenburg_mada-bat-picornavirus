@@ -253,7 +253,7 @@ p12.dat <- p12$data
 p12.dat$Bootstrap <- NA
 Bootstrap<-p12.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p12.dat$label)] <- as.numeric(p12.dat$label[(length(tree.dat$tip_label)+1):length(p12.dat$label)])#fill with label
 
-picornaviridae <- p12  %<+% p12.dat + 
+p12.1 <- p12  %<+% p12.dat + 
   ggnewscale::new_scale_fill() + 
   geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
@@ -263,7 +263,7 @@ picornaviridae <- p12  %<+% p12.dat +
         legend.text = element_text(size=8),
         legend.title = element_text(size=8),
         legend.key.size = unit(0.3, "cm"))
-picornaviridae
+p12.1
 
 
 
@@ -464,7 +464,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=H
   scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Genus="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3,  nudge_x=0.1) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Genus="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=2,  nudge_x=0.1) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
@@ -472,7 +472,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=H
         legend.direction = "vertical",
         legend.text = element_text(size=8), 
         legend.key.size = unit(0.3, "cm")) +
-  xlim(c(0,14))
+  xlim(c(0,8))
 
 p1
 
@@ -483,7 +483,7 @@ p0.dat$Bootstrap <- NA
 Bootstrap<-p0.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p0.dat$label)] <- as.numeric(p0.dat$label[(length(tree.dat$tip_label)+1):length(p0.dat$label)])#fill with label
 
 #add bootstrap values to original plot
-caliciviridae <- p1  %<+% p0.dat + 
+p1.1 <- p1  %<+% p0.dat + 
   ggnewscale::new_scale_fill() + 
   geom_nodepoint(aes(fill=Bootstrap, show.legend = F), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
@@ -493,15 +493,21 @@ caliciviridae <- p1  %<+% p0.dat +
         legend.text = element_text(size=8),
         legend.title = element_text(size=8),
         legend.key.size = unit(0.3, "cm"))
-caliciviridae
+p1.1
+
+
+
+
+
+
 
 
 
 ##Make the figure
-fig3<-plot_grid(picornaviridae,caliciviridae, ncol=2, rel_widths = c(1.2,1), 
+supp<-plot_grid(iflaviridae,secoviridae, ncol=2, rel_widths = c(1.2,1), 
                 rel_heights = c(1,1),labels = "AUTO",
                 align="hv", axis="b", label_size = 23)
-fig3
+supp
 
-#export 20x12 inch landscape PDF
+#export 20x12 inch landscape
 
