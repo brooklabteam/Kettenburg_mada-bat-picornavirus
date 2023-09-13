@@ -12,8 +12,8 @@ library(phylobase)
 
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
 
-##Picornaviridae sequences from African region over 1kb reference sequences and all novel picornaviridae sequences
-setwd(paste0(homewd,"/raxml_trees/africa_picornaviridae/africa_picornaviridae_raxml"))
+##Picornaviridae sequences from African region with alignment centered around P1 genomic region
+setwd(paste0(homewd,"/raxml_trees/africa_picornaviridae/africa_picornaviridae_raxml/P1"))
 
 #load the tree
 tree <-  read.tree("T10.raxml.supportFBP") 
@@ -23,18 +23,15 @@ rooted.tree <- root(tree, which(tree$tip.label == "NC_030886.1"))
 plot(rooted.tree)
 
 #load tree data prepared from elsewhere
-dat <- read.csv(("africa_picornaviridae_metadata.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(("africa_picornaviridae_P1_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
 
 #check that your metadata matches your tree data
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #456
-length(tree$tip.label) #456
-
-##left novel sapovirused in the alignment by accident
-rooted.tree<-drop.tip(rooted.tree, "OQ818340")
+nrow(dat) #403
+length(tree$tip.label) #403
 
 #check subgroup names
 unique(dat$Genus)
@@ -187,7 +184,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=H
         legend.direction = "vertical",
         legend.text = element_text(size=7), 
         legend.key.size = unit(0.2, "cm")) +
-  xlim(c(0,8))
+  xlim(c(0,14))
 
 p1
 
@@ -210,6 +207,9 @@ p1.1 <- p1  %<+% p0.dat +
         legend.key.size = unit(0.3, "cm"))
 p1.1
 
+#export uncollapsed 30x10inch portrait PDF
+
+
 ##Get the clade numbers so we can collapse unnnecesary clades
 ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
 
@@ -231,40 +231,24 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=H
         legend.text = element_text(size=8), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,14))+
-  geom_cladelabel(node = 791, label = "Apthovirus/Bos taurus clade",offset=0.1, fontsize = 3, color="black") +
-  geom_cladelabel(node = 873, label = "Apthovirus/Bos taurus clade",offset=0.1, fontsize = 3, color="black") +
-  geom_cladelabel(node = 885, label = "Apthovirus/Bos taurus clade",offset=0.1, fontsize = 3, color="black") +
-  geom_cladelabel(node = 890, label = "Apthovirus/Bos taurus clade",offset=0.1, fontsize = 3, color="black") +
-  geom_cladelabel(node = 776, label = "Apthovirus/Bos taurus clade",offset=0.1, fontsize = 3, color="black") +
-  geom_cladelabel(node = 681, label = "Apthovirus/Bos taurus clade",offset=0.1, fontsize = 3, color="black") +
-  geom_cladelabel(node = 502, label = "Enterovirus/Human and non-human primate clade",offset=0.1, fontsize = 3, color="black") +
-  geom_cladelabel(node = 466, label = "Enterovirus/Human and non-human primate clade",offset=0.1, fontsize = 3, color="black") +
-  geom_cladelabel(node = 535, label = "Enterovirus/Human clade",offset=0.1, fontsize = 3, color="black") +
-  geom_cladelabel(node = 584, label = "Enterovirus/Human and non-human primate clade",offset=0.1, fontsize = 3, color="black")
+  geom_cladelabel(node = 616, label = "Apthovirus/Cattle clade",offset=0.1, fontsize = 3, color="black") +
+  geom_cladelabel(node = 477, label = "Enterovirus/Human and non-human primate clade",offset=0.1, fontsize = 3, color="black")
 p2
 
 
 
 #collapse the labeled clades
-p3<-collapse(p2, 791)+geom_point2(aes(subset=(node==791)), size=3, shape=22, fill="darkgoldenrod2")
-p4<-collapse(p3, 873)+geom_point2(aes(subset=(node==873)), size=3, shape=22, fill="darkgoldenrod2")
-p5<-collapse(p4, 885)+geom_point2(aes(subset=(node==885)), size=3, shape=22, fill="darkgoldenrod2")
-p6<-collapse(p5, 890)+geom_point2(aes(subset=(node==890)), size=3, shape=22, fill="darkgoldenrod2")
-p7<-collapse(p6, 776)+geom_point2(aes(subset=(node==776)), size=3, shape=22, fill="darkgoldenrod2")
-p8<-collapse(p7, 681)+geom_point2(aes(subset=(node==681)), size=3, shape=22, fill="darkgoldenrod2")
-p9<-collapse(p8, 502)+geom_point2(aes(subset=(node==502)), size=3, shape=22, fill="cadetblue2")
-p10<-collapse(p9, 466)+geom_point2(aes(subset=(node==466)), size=3, shape=22, fill="cadetblue2")
-p11<-collapse(p10, 535)+geom_point2(aes(subset=(node==535)), size=3, shape=22, fill="cadetblue2")
-p12<-collapse(p11, 584)+geom_point2(aes(subset=(node==584)), size=3, shape=22, fill="cadetblue2")
-p12
+p3<-collapse(p2, 616)+geom_point2(aes(subset=(node==616)), size=3, shape=22, fill="darkgoldenrod2")
+p7<-collapse(p3, 477)+geom_point2(aes(subset=(node==477)), size=3, shape=22, fill="cadetblue2")
+p7
 
 
 ##add bootstrap values to this tree
-p12.dat <- p12$data
-p12.dat$Bootstrap <- NA
-Bootstrap<-p12.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p12.dat$label)] <- as.numeric(p12.dat$label[(length(tree.dat$tip_label)+1):length(p12.dat$label)])#fill with label
+p7.dat <- p7$data
+p7.dat$Bootstrap <- NA
+Bootstrap<-p7.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p7.dat$label)] <- as.numeric(p7.dat$label[(length(tree.dat$tip_label)+1):length(p7.dat$label)])#fill with label
 
-p12.1 <- p12  %<+% p12.dat + 
+p7.1 <- p7  %<+% p7.dat + 
   ggnewscale::new_scale_fill() + 
   geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
@@ -274,5 +258,8 @@ p12.1 <- p12  %<+% p12.dat +
         legend.text = element_text(size=8),
         legend.title = element_text(size=8),
         legend.key.size = unit(0.3, "cm"))
-p12.1
+p7.1
+
+
+#export collapsed 15x10 inch landscape PDF
 
