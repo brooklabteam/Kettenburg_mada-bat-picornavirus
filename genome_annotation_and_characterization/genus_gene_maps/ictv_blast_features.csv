@@ -1,22 +1,45 @@
 molecule,start,end,mid,gene,type
-Bat picornavirus,10,586,298,5'UTR,full
-Bat picornavirus,587,868,727.5,L,full
-Bat picornavirus,869,1066,967.5,VP4,full
-Bat picornavirus,1067,1820,1443.5,VP2,full
-Bat picornavirus,1821,2528,2174.5,VP3,full
-Bat picornavirus,2529,3511,3020,VP1,full
-Bat picornavirus,3512,4249,3880.5,2A,full
-Bat picornavirus,4250,4611,4430.5,2B,full
-Bat picornavirus,4612,5619,5115.5,2C,full
-Bat picornavirus,5620,6031,5825.5,3A,full
-Bat picornavirus,6032,6100,6066,3B,full
-Bat picornavirus,6101,6649,6649,3C,full
-Bat picornavirus,6650,7730,7363.5,3D,full
-Cheravirus,436,3705,2070.5,Polyprotein,partial
-Felisavirus,637,1749,1193,Non-structural polyprotein,partial
-Hepatovirus,1,960,480.5,5'UTR,partial
-Kobuvirus,1,850,425.5,5'UTR,full
-Kobuvirus,8990,9318,8700,3'UTR,full
+Bat picornavirus,1,521,521,5'UTR,full
+Bat picornavirus,7907,8133,7907,3'UTR,full
+Cheravirus,406,3593,1999.5,Polyprotein,partial
+Felisavirus,1,5665,1000,Non-structural polyprotein,partial
+Felisavirus,5739,8738,6000,Structural polyprotein,partial
+Felisavirus,8739,9188,8739,3'UTR,partial
+Hepatovirus,1,903,600,5'UTR,partial
+Kobuvirus,1,850,850,5'UTR,full
+Kobuvirus,8990,9318,8990,3'UTR,full
+Kunsagivirus,1,612,612,5'UTR,full
+Kunsagivirus,7804,7946,7804,3'UTR,full
+Mischivirus,1,1519,1519,5'UTR,full
+Mischivirus,1520,8744,5132,Polyprotein,full
+Mischivirus,8745,8930,8745,3'UTR,full
+Sapelovirus,1,498,498,5'UTR,full
+Sapelovirus,8244,8318,8244,3'UTR,full
+Sapelovirus,1,746,746,5'UTR,partial
+Sapelovirus,8481,8623,8481,3'UTR,partial
+Teschovirus,1,578,578,5'UTR,full
+Teschovirus,7384,7396,7384,3'UTR,full
+Bat picornavirus,521,835,678,L,full
+Bat picornavirus,836,1033,934.5,VP4,full
+Bat picornavirus,1034,1777,1405.5,VP2,full
+Bat picornavirus,1778,2479,2128.5,VP3,full
+Bat picornavirus,2480,3415,2947.5,VP1,full
+Bat picornavirus,3416,4114,3765,2A,full
+Bat picornavirus,4115,4465,4290,2B,full
+Bat picornavirus,4466,5461,4963.5,2C,full
+Bat picornavirus,5462,5860,5661,3A,full
+Bat picornavirus,5861,5929,5895,3B,full
+Bat picornavirus,5930,6478,6204,3C,full
+Bat picornavirus,6479,7610,7044.5,3D,full
+Hepatovirus,904,982,943,VP4,full
+Hepatovirus,983,1648,1400,VP2,full
+Hepatovirus,1649,2413,2031,VP3,full
+Hepatovirus,2414,3175,2794.5,VP1/2A,full
+Hepatovirus,3176,3484,3330,2B,full
+Hepatovirus,3485,4405,3945,2C,full
+Hepatovirus,4406,5410,4500,3A,full
+Hepatovirus,5411,5770,5590.5,3B,full
+Hepatovirus,5771,6299,6035,3C,full
 Kobuvirus,851,1638,1244.5,L,full
 Kobuvirus,1639,2814,2226.5,VP0,full
 Kobuvirus,2815,3491,3153,VP3,full
@@ -25,75 +48,62 @@ Kobuvirus,4396,4871,4633.5,2A,full
 Kobuvirus,4872,5499,5185.5,2B,full
 Kobuvirus,5500,6539,6019.5,2C,full
 Kobuvirus,6540,6838,6689,3A,full
-Kobuvirus,6839,6950,7000,3B,full
-Kobuvirus,6951,7550,7550,3C,full
+Kobuvirus,6839,6950,6894.5,3B,full
+Kobuvirus,6951,7550,7250.5,3C,full
 Kobuvirus,7551,8975,8263,3D,full
-Kunsagivirus,1,619,310,5'UTR,full
-Kunsagivirus,7954,8098,7500,3'UTR,full
-Mischivirus,10,1513,761.5,5'UTR,full
-Mischivirus,9243,9571,9000,3'UTR,full
-Mischivirus,1514,1865,1689.5,L,full
-Mischivirus,1866,2093,1979.5,VP4,full
-Mischivirus,2094,2987,2540.5,VP2,full
-Mischivirus,2988,3701,3344.5,VP3,full
-Mischivirus,3702,4638,4170,VP1,full
-Mischivirus,4639,4812,4725.5,2A,full
-Mischivirus,4813,5375,5094,2B,full
-Mischivirus,5376,6595,5985.5,2C,full
-Mischivirus,6596,6954,6775,3A,full
-Mischivirus,6955,7014,7100,3B,full
-Mischivirus,7015,7705,7705,3C,full
-Mischivirus,7706,9192,8449,3D,full
-Sapelovirus,1,746,373.5,5'UTR,full
-Sapelovirus,8481,8623,8200,3'UTR,full
-Sapelovirus,747,1205,976,L,full
-Sapelovirus,1128,1283,1205.5,VP4,full
-Sapelovirus,1290,2047,1668.5,VP2,full
-Sapelovirus,2048,2803,2425.5,VP3,full
-Sapelovirus,2804,3752,3278,VP1,full
-Sapelovirus,3763,4618,4190.5,2A,full
-Sapelovirus,4619,5068,4843.5,2B,full
-Sapelovirus,5069,6125,5597,2C,full
-Sapelovirus,6126,6454,6290,3A,full
-Sapelovirus,6455,6520,6600,3B,full
-Sapelovirus,6521,7066,7066,3C,full
-Sapelovirus,7067,8477,7772,3D,full
-Sapovirus,1127,1511,1400,5'UTR,full
-Sapovirus,1512,7216,3608.5,Polyprotein,full
-Sapovirus,7251,7905,6400,Putative minor structural protein,full
-Sapovirus,3212,4326,3700,Polyprotein,partial
-Teschovirus,21,601,311,5'UTR,full
-Teschovirus,7622,7725,7400,3'UTR,full
-Teschovirus,602,877,739.5,L,full
-Teschovirus,878,1171,1024.5,VP4,full
-Teschovirus,1172,2012,1592,VP2,full
-Teschovirus,2013,2758,2385.5,VP3,full
-Teschovirus,2759,3627,3193,VP1,full
-Teschovirus,3628,3699,3663.5,2A,full
-Teschovirus,3700,4196,3948,2B,full
-Teschovirus,4197,5237,4717,2C,full
-Teschovirus,5244,5495,5369.5,3A,full
-Teschovirus,5496,5572,5600,3B,full
-Teschovirus,5579,6233,6233,3C,full
-Teschovirus,6234,7545,6889.5,3D,full
-Kunsagivirus,620,981,800.5,L,full
-Kunsagivirus,988,2405,1696.5,VP0,full
-Kunsagivirus,2436,2846,2641,VP3,full
-Kunsagivirus,2859,3928,3393.5,VP1,full
-Kunsagivirus,3947,4627,4287,2A,full
-Kunsagivirus,4675,5127,4901,2B,full
-Kunsagivirus,5128,5740,5434,2C,full
-Kunsagivirus,5741,5993,5740,3A,full
-Kunsagivirus,5994,6063,6028.5,3B,full
-Kunsagivirus,6064,6667,6365.5,3C,full
-Kunsagivirus,6668,7902,7000,3D,full
-Hepatovirus,984,1062,1023,VP4,partial
-Hepatovirus,1063,1729,1396,VP2,partial
-Hepatovirus,1730,2485,2107.5,VP3,partial
-Hepatovirus,2486,3422,2954,VP1,partial
-Hepatovirus,3423,4234,3828.5,2A,partial
-Hepatovirus,4235,4584,4409.5,2B,partial
-Hepatovirus,4585,5613,5099,2C,partial
-Hepatovirus,5614,5938,5776,3A,partial
-Hepatovirus,5939,6010,5974.5,3B,partial
-Hepatovirus,6011,6528,6269.5,3C,partial
+Kunsagivirus,613,1593,1103,VP0,full
+Kunsagivirus,1594,2277,1935.5,VP3,full
+Kunsagivirus,2278,3061,2669.5,VP1,full
+Kunsagivirus,3062,3577,3319.5,2A,full
+Kunsagivirus,3578,3911,3744.5,2B,full
+Kunsagivirus,3912,5135,4523.5,2C,full
+Kunsagivirus,5136,5561,5348.5,3A,full
+Kunsagivirus,5562,5633,5597.5,3B,full
+Kunsagivirus,5634,6267,5950.5,3C,full
+Kunsagivirus,6268,7764,7016,3D,full
+Mischivirus,1520,1751,1635.5,L,full
+Mischivirus,1752,2891,2321.5,VP0,full
+Mischivirus,2892,3704,3298,VP3,full
+Mischivirus,3705,4493,4099,VP1,full
+Mischivirus,4494,4622,4558,2A,full
+Mischivirus,4623,5102,4862.5,2B,full
+Mischivirus,5103,6165,5634,2C,full
+Mischivirus,6166,6593,6379.5,3A,full
+Mischivirus,6594,6764,6679,3B,full
+Mischivirus,6765,7478,7121.5,3C,full
+Mischivirus,7479,8723,8101,3D,full
+Sapelovirus,499,1142,820.5,L,full
+Sapelovirus,1143,1295,1219,VP4,full
+Sapelovirus,1296,2009,1652.5,VP2,full
+Sapelovirus,2010,2729,2369.5,VP3,full
+Sapelovirus,2730,3656,3193,VP1,full
+Sapelovirus,3657,4506,4081.5,2A,full
+Sapelovirus,4507,4989,4748,2B,full
+Sapelovirus,4899,5924,5411.5,2C,full
+Sapelovirus,5925,6230,6077.5,3A,full
+Sapelovirus,6231,6296,6263.5,3B,full
+Sapelovirus,6297,6842,6569.5,3C,full
+Sapelovirus,6843,8240,7541.5,3D,full
+Sapelovirus,5451,5882,5666.5,2C,partial
+Sapelovirus,5883,6188,6035.5,3A,partial
+Sapelovirus,6189,6254,6221.5,3B,partial
+Sapelovirus,6255,6800,6527.5,3C,partial
+Sapelovirus,6801,7596,7198.5,3D,partial
+Teschovirus,579,840,709.5,L,full
+Teschovirus,841,1053,947,VP4,full
+Teschovirus,1054,1941,1497.5,VP2,full
+Teschovirus,1948,2682,2315,VP3,full
+Teschovirus,2683,3525,3104,VP1,full
+Teschovirus,3526,3582,3554,2A,full
+Teschovirus,3583,4044,3813.5,2B,full
+Teschovirus,4045,5019,4532,2C,full
+Teschovirus,5020,5325,5172.5,3A,full
+Teschovirus,5326,5400,5363,3B,full
+Teschovirus,5401,6021,5711,3C,full
+Teschovirus,6022,7368,6695,3D,full
+Sapovirus,1062,2053,1557.5,Helicase,full
+Sapovirus,2054,2897,2475.5,NS4,full
+Sapovirus,2898,3251,3074.5,Vpg,full
+Sapovirus,3252,5297,4274.5,Pro-Pol,full
+Sapovirus,5298,6963,6130.5,VP1,full
+Sapovirus,7001,7645,7323,VP2,full
