@@ -1,4 +1,4 @@
-rm(list=ls())
+rm(list=ls()) 
 
 library(ggplot2)
 library(ggtree)
@@ -235,8 +235,12 @@ p1.1 <- p1  %<+% p0.dat +
         legend.key.size = unit(0.3, "cm"))
 p1.1
 
-# p1.2<-p1.1%>%ggtree::rotate(node=570)
-# p1.2
-
 ##Get the clade numbers so we can collapse unnnecesary clades
-ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
+#ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
+
+#tree is small enough that I will not collapse clades
+
+#export 10x5 inches PDF landscape
+
+
+
