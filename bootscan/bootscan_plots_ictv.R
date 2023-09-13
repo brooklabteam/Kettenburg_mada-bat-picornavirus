@@ -20,31 +20,32 @@ homewd="/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/geno
 setwd("~/Desktop/developer/mada-bat-picornavirus/genome_annotation_and_characterization/genus_gene_maps")
 
 #Load the gene data
+#Load the gene data
 ictv <- read.csv("ictv_blast_genes.csv", header = T, stringsAsFactors = F)
 ictv$gene<-factor(ictv$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP0", "VP3",
-                                        "VP1", "2A", "2B", "2C", "3A", "3B",
-                                        "3C", "3D", "Polyprotein", "Putative polyprotein", "Putative minor structural protein", "Non-structural polyprotein",
+                                        "VP1","VP1/2A", "2A", "2B", "2C", "3A", "3B",
+                                        "3C", "3D", "Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Putative polyprotein", "Putative minor structural protein", "Non-structural polyprotein",
                                         "Hypothetical protein", "Similar to structural polyprotein", "Structural polyprotein",
                                         "Similar to putative polyprotein", "Similar to polyprotein","3'UTR"))
 #Load the peptide files
 ictv_pep <- read.csv("ictv_blast_peptides.csv", header = T, stringsAsFactors = F)
 ictv_pep$gene<-factor(ictv_pep$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP0", "VP3",
-                                                "VP1", "2A", "2B", "2C", "3A", "3B",
-                                                "3C", "3D", "Polyprotein", "Putative polyprotein", "Putative minor structural protein", "Non-structural polyprotein",
+                                                "VP1","VP1/2A", "2A", "2B", "2C", "3A", "3B",
+                                                "3C", "3D", "Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Putative polyprotein", "Putative minor structural protein", "Non-structural polyprotein",
                                                 "Hypothetical protein", "Similar to structural polyprotein", "Structural polyprotein",
                                                 "Similar to putative polyprotein", "Similar to polyprotein","3'UTR"))
 #Load the feature file in case its needed
 ictv_feat <- read.csv("ictv_blast_features.csv", header = T, stringsAsFactors = F)
 ictv_feat$gene<-factor(ictv_feat$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP0", "VP3",
-                                                  "VP1", "2A", "2B", "2C", "3A", "3B",
-                                                  "3C", "3D", "Polyprotein", "Putative polyprotein", "Putative minor structural protein", "Non-structural polyprotein",
+                                                  "VP1","VP1/2A", "2A", "2B", "2C", "3A", "3B",
+                                                  "3C", "3D", "Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Putative polyprotein", "Putative minor structural protein", "Non-structural polyprotein",
                                                   "Hypothetical protein", "Similar to structural polyprotein", "Structural polyprotein",
                                                   "Similar to putative polyprotein", "Similar to polyprotein","3'UTR"))
 
 #Pick colors for genes
 colz=c("5'UTR"="gold", "L"="royalblue","VP4"="paleturquoise3", "VP2"="skyblue1", "VP0"="royalblue4", "VP3"="steelblue1",
-       "VP1"="cadetblue1", "2A"="palevioletred1", "2B"="red4", "2C"="palevioletred3", "3A"="tomato2", "3B"="plum",
-       "3C"="rosybrown1", "3D"="pink2", 
+       "VP1"="cadetblue1", "VP1/2A"="cadetblue1", "2A"="orange1", "2B"="sienna2", "2C"="darkorange1", "3A"="palevioletred1", "3B"="plum",
+       "3C"="rosybrown1", "3D"="pink2", "Helicase"="darkseagreen1","NS4"="darkolivegreen1","Vpg"="seagreen1","Pro-Pol"="palegreen2",
        "Polyprotein"="azure3","Putative polyprotein"="mediumorchid1", "Non-structural polyprotein"="mediumorchid4", 
        "Putative minor structural protein" ="slateblue3", "Structural polyprotein"="lightgoldenrod1",
        "Hypothetical protein"="darkslategrey", "Similar to structural polyprotein"="mediumpurple1", "Similar to putative polyprotein"="mediumpurple3", 
@@ -61,17 +62,23 @@ ictv_kunsagivirus<-subset(ictv,molecule=="Kunsagivirus")
 ictv_mischivirus<-subset(ictv,molecule=="Mischivirus")
 ictv_sapovirus<-subset(ictv,molecule=="Sapovirus")
 ictv_sapovirus_full<-subset(ictv_sapovirus,type=="full")
+ictv_sapovirus_partial<-subset(ictv_sapovirus,type=="partial")
 ictv_sapelovirus<-subset(ictv,molecule=="Sapelovirus")
 ictv_sapelovirus_full<-subset(ictv_sapelovirus,type=="full")
+ictv_sapelovirus_partial<-subset(ictv_sapelovirus,type=="partial")
 ictv_teschovirus<-subset(ictv,molecule=="Teschovirus")
 
 ictv_batpicornavirus_pep<-subset(ictv_pep,molecule=="Bat picornavirus")
+ictv_hepatovirus_pep<-subset(ictv_pep, molecule=="Hepatovirus")
 ictv_kobuvirus_pep<-subset(ictv_pep,molecule=="Kobuvirus")
 ictv_kunsagivirus_pep<-subset(ictv_pep,molecule=="Kunsagivirus")
-ictv_hepatovirus_pep<-subset(ictv_pep,molecule=="Hepatovirus")
 ictv_mischivirus_pep<-subset(ictv_pep,molecule=="Mischivirus")
+ictv_sapovirus_pep<-subset(ictv_pep, molecule=="Sapovirus")
+ictv_sapovirus_full_pep<-subset(ictv_sapovirus_pep,type=="full")
+ictv_sapovirus_partial_pep<-subset(ictv_sapovirus_pep,type=="partial")
 ictv_sapelovirus_pep<-subset(ictv_pep,molecule=="Sapelovirus")
 ictv_sapelovirus_pep_full<-subset(ictv_sapelovirus_pep,type=="full")
+ictv_sapelovirus_pep_partial<-subset(ictv_sapelovirus_pep,type=="partial")
 ictv_teschovirus_pep<-subset(ictv_pep,molecule=="Teschovirus")
 
 ictv_batpicornavirus_feat<-subset(ictv_feat,molecule=="Bat picornavirus")
@@ -81,13 +88,13 @@ ictv_kunsagivirus_feat<-subset(ictv_feat,molecule=="Kunsagivirus")
 ictv_mischivirus_feat<-subset(ictv_feat,molecule=="Mischivirus")
 ictv_sapovirus_feat<-subset(ictv_feat,molecule=="Sapovirus")
 ictv_sapovirus_full_feat<-subset(ictv_sapovirus_feat,type=="full")
+ictv_sapovirus_partial_feat<-subset(ictv_sapovirus_feat,type=="partial")
 ictv_sapelovirus_feat<-subset(ictv_feat,molecule=="Sapelovirus")
 ictv_sapelovirus_full_feat<-subset(ictv_sapelovirus_feat,type=="full")
+ictv_sapelovirus_feat_partial<-subset(ictv_sapelovirus_feat,type=="partial")
 ictv_teschovirus_feat<-subset(ictv_feat,molecule=="Teschovirus")
 
-
-
-##Now the ICTV gene maps
+#plot ictv and blast plots
 ictv_batpicorna<-ggplot(ictv_batpicornavirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
   geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
                   arrowhead_height = grid::unit(4, "mm"),
@@ -98,14 +105,14 @@ ictv_batpicorna<-ggplot(ictv_batpicornavirus, aes(xmin = start, xmax = end, y = 
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_batpicornavirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                              xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                                  xsubmin=from, xsubmax=to), color="black", alpha=.7,
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
   geom_text(data=ictv_batpicornavirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,7800),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,8200),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -115,7 +122,6 @@ ictv_batpicorna<-ggplot(ictv_batpicornavirus, aes(xmin = start, xmax = end, y = 
         axis.line.x = element_blank())+
   xlab("Genome position") + ylab("")
 ictv_batpicorna
-
 
 ictv_hepato<-ggplot(ictv_hepatovirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
   geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
@@ -127,14 +133,14 @@ ictv_hepato<-ggplot(ictv_hepatovirus, aes(xmin = start, xmax = end, y = molecule
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_hepatovirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                                  xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                              xsubmin=from, xsubmax=to), color="black", alpha=.7,
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
   geom_text(data=ictv_hepatovirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,6550),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,6300),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -185,14 +191,14 @@ ictv_kun<-ggplot(ictv_kunsagivirus, aes(xmin = start, xmax = end, y = molecule, 
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_kunsagivirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                              xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                               xsubmin=from, xsubmax=to), color="black", alpha=.7,
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
   geom_text(data=ictv_kunsagivirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,8098),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,7950),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -221,7 +227,7 @@ ictv_mischi<-ggplot(ictv_mischivirus, aes(xmin = start, xmax = end, y = molecule
   geom_text(data=ictv_mischivirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,9572),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,9000),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -250,7 +256,7 @@ ictv_sapelo_full<-ggplot(ictv_sapelovirus_full, aes(xmin = start, xmax = end, y 
   geom_text(data=ictv_sapelovirus_full_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,8652),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,8350),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -260,30 +266,6 @@ ictv_sapelo_full<-ggplot(ictv_sapelovirus_full, aes(xmin = start, xmax = end, y 
         axis.line.x = element_blank())+
   xlab("Genome position") + ylab("")
 ictv_sapelo_full
-
-
-ictv_sapo_full<-ggplot(ictv_sapovirus_full, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
-  geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
-                  arrowhead_height = grid::unit(4, "mm"),
-                  arrow_body_height = grid::unit(4, "mm")) +
-  # geom_feature(data=ictv_sapovirus_full_feat, aes(x=mid, y=molecule),
-  #              feature_height = grid::unit(6,"mm"))+
-  # geom_feature_label(data=ictv_sapovirus_full_feat, aes(x=mid, y=molecule, label=gene),
-  #                    feature_height = grid::unit(6,"mm"),
-  #                    label_height = grid::unit(6,"mm"))+
-  geom_text(data=ictv_sapovirus_full_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
-  scale_fill_manual(values=colz)+
-  theme_genes()+
-  scale_x_continuous(limits=c(1120,7910),expand=c(0,0))+
-  theme(legend.position = "none")+
-  theme(plot.margin = unit(c(0,0,0,0), "cm"),
-        axis.text.y = element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.text.x = element_blank(),
-        axis.title.x = element_blank(),
-        axis.line.x = element_blank())+
-  xlab("Genome position") + ylab("")
-ictv_sapo_full
 
 
 ictv_tescho<-ggplot(ictv_teschovirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
@@ -303,7 +285,7 @@ ictv_tescho<-ggplot(ictv_teschovirus, aes(xmin = start, xmax = end, y = molecule
   geom_text(data=ictv_teschovirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,7725),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,7400),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -315,6 +297,33 @@ ictv_tescho<-ggplot(ictv_teschovirus, aes(xmin = start, xmax = end, y = molecule
 ictv_tescho
 
 
+ictv_sapo_full<-ggplot(ictv_sapovirus_full, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
+  geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
+                  arrowhead_height = grid::unit(4, "mm"),
+                  arrow_body_height = grid::unit(4, "mm")) +
+  # geom_feature(data=ictv_sapovirus_full_feat, aes(x=mid, y=molecule),
+  #              feature_height = grid::unit(6,"mm"))+
+  # geom_feature_label(data=ictv_sapovirus_full_feat, aes(x=mid, y=molecule, label=gene),
+  #                    feature_height = grid::unit(6,"mm"),
+  #                    label_height = grid::unit(6,"mm"))+
+  geom_subgene_arrow(data = ictv_sapovirus_full_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
+                                                                 xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                     arrowhead_width = grid::unit(3, "mm"),
+                     arrowhead_height = grid::unit(4, "mm"),
+                     arrow_body_height = grid::unit(4, "mm"))+
+  geom_text(data=ictv_sapovirus_full_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
+  scale_fill_manual(values=colz)+
+  theme_genes()+
+  scale_x_continuous(limits=c(1000,7700),expand=c(0,0))+
+  theme(legend.position = "none")+
+  theme(plot.margin = unit(c(0,0,0,0), "cm"),
+        axis.text.y = element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.x = element_blank(),
+        axis.title.x = element_blank(),
+        axis.line.x = element_blank())+
+  xlab("Genome position") + ylab("")
+ictv_sapo_full
 
 
 
@@ -786,9 +795,6 @@ sapo_ictv_boot<-as.ggplot(sapo_ictv_boot)
 sapo_ictv_boot
 
 
-
-
-
 #Teschovirus
 teschovirus_ictv_boot <- read.csv(file = "tescho_ictv_bootscan.csv", header = T, stringsAsFactors = F) #Nucleotide
 head(teschovirus_ictv_boot)
@@ -869,23 +875,16 @@ bootscan<-plot_grid(batpicorna_boot,
 bootscan
 
 
-#in Fig 3
+#export landscape 25x25 inch PDF
+
+
+#select bootscans with recombination pressure observed
 bootscan_fig<-plot_grid(hep_ictv_boot,
                         kun_ictv_boot, 
                         sapo_ictv_boot,
                         nrow=1,
-                        labels="AUTO")
+                        labels="AUTO", label_size = 23)
 bootscan_fig
 
-
-#excluded from Fig 3 
-bootscan_supp<-plot_grid(batpicorna_boot,
-                         chera_boot,
-                         mischi_ictv_boot,
-                         kobu_ictv_boot,
-                         sapelo_ictv_boot,
-                         tescho_boot,
-                         ncol=3,
-                         labels="AUTO")
-bootscan_supp
+#export 8x25 inch PDF landscape
 
