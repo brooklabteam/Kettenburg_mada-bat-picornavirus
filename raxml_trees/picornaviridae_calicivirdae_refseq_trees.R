@@ -240,12 +240,12 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=H
   geom_cladelabel(node = 213, label = "Avisivirus", offset=0.3, fontsize=3, color="black") +
   geom_cladelabel(node = 216, label = "Limnipivirus/Potamipivirus", offset=0.3,fontsize=3, color="black") +
   geom_cladelabel(node = 205, label = "Parechovirus/Shanbavirus/Avihepatovirus", offset=0.3,fontsize=3, color="black") +
-  geom_cladelabel(node = 336, label = "Ampivirus", offset=0.3, fontsize=3, color="pink2") +
+  geom_cladelabel(node = 336, label = "Ampivirus", offset=0.3, fontsize=3, color="black") +
   geom_cladelabel(node = 190, label = "Malagasivirus/Tottorivirus/Hunnivirus", offset=0.3, fontsize=3, color="black") +
   geom_cladelabel(node = 188, label = "Mosavirus", offset=0.3,fontsize=3, color="black") +
   geom_cladelabel(node = 185, label = "Cosavirus", fontsize=3, offset=0.3, color="black") +
   geom_cladelabel(node = 342, label = "Megrivirus/Ailurivirus",fontsize=3, offset=0.3, color="black") +
-  geom_cladelabel(node = 346, label = "Cardiovirus",fontsize=3, offset=0.3, color="4") +
+  geom_cladelabel(node = 346, label = "Cardiovirus",fontsize=3, offset=0.3, color="black") +
   geom_cladelabel(node = 354, label = "Cardiovirus/Senecavirus",fontsize=3, offset=0.3, color="black") +
   geom_cladelabel(node = 351, label = "Apthovirus", offset=0.3,fontsize=3, color="black") +
   geom_cladelabel(node = 353, label = "Bopivirus/Erbovirus", offset=0.3, fontsize=3, color="black")+
