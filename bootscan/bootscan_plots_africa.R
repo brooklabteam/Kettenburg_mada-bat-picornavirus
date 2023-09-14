@@ -339,7 +339,7 @@ africa_batpicorna_bootscan <- read.csv(file = "africa_batpicorna_bootscan.csv", 
 head(africa_batpicorna_bootscan)
 
 #move to long
-long.sim_nt <- melt(africa_batpicorna_bootscan, id.vars = c("pointer"), measure.vars = c("OQ818328","OQ818346","JX437642","KF040078", "KF040079"))
+long.sim_nt <- melt(africa_batpicorna_bootscan, id.vars = c("pointer"), measure.vars = c("OQ818325","OQ818346","JX437642","KF040078", "KF040079"))
 
 unique(long.sim_nt$variable)
 
@@ -347,20 +347,20 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "OQ818328"] <- "Rousettus madagascariensis picornavirus OQ818328"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818325"] <- "Rousettus madagascariensis picornavirus OQ818325"
 long.sim_nt$accession[long.sim_nt$accession == "OQ818346"] <- "Rousettus madagascariensis picornavirus OQ818346"
 long.sim_nt$accession[long.sim_nt$accession == "JX437642"] <- "Homo sapiens enterovirus JX437642"
 long.sim_nt$accession[long.sim_nt$accession == "KF040078"] <- "Pan troglodytes enterovirus KF040078"
 long.sim_nt$accession[long.sim_nt$accession == "KF040079"] <- "Pan troglodytes enterovirus KF040079"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Rousettus madagascariensis picornavirus OQ818328", "Rousettus madagascariensis picornavirus OQ818346",
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Rousettus madagascariensis picornavirus OQ818325", "Rousettus madagascariensis picornavirus OQ818346",
                                                                   "Homo sapiens enterovirus JX437642","Pan troglodytes enterovirus KF040078",
                                                                   "Pan troglodytes enterovirus KF040079"))
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Bootscan 
-title<-expression(paste("Reference: ",italic("Rousettus madagascariensis picornavirus "), "OQ818325"))
+title<-expression(paste("Reference: ",italic("Rousettus madagascariensis picornavirus "), "OQ818328"))
 
 batpicorna_africa_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
