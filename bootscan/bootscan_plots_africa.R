@@ -739,9 +739,6 @@ tescho_boot
 
 
 
-
-
-
 ##Now put the whole figure together
 
 #all bootscan together: all bat picornavirales
@@ -755,3 +752,4 @@ fig<-plot_grid(batpicorna_boot,
                     labels="AUTO",  label_size = 23, align = "hv", axis="b")
 fig
 
+#export 15x25 inch PDF landscape
