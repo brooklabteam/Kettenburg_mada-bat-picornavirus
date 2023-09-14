@@ -339,7 +339,11 @@ africa_batpicorna_bootscan <- read.csv(file = "africa_batpicorna_bootscan.csv", 
 head(africa_batpicorna_bootscan)
 
 #move to long
+<<<<<<< HEAD
 long.sim_nt <- melt(africa_batpicorna_bootscan, id.vars = c("pointer"), measure.vars = c("OQ818325","OQ818346","JX437642","KF040078", "KF040079"))
+=======
+long.sim_nt <- melt(africa_batpicorna_bootscan, id.vars = c("pointer"), measure.vars = c("OQ818328","OQ818346","JX437642","KF040078", "KF040079"))
+>>>>>>> 9364165a04abfb7d56432b0b72b93f158f095f2c
 
 unique(long.sim_nt$variable)
 
@@ -347,20 +351,32 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
+<<<<<<< HEAD
 long.sim_nt$accession[long.sim_nt$accession == "OQ818325"] <- "Rousettus madagascariensis picornavirus OQ818325"
+=======
+long.sim_nt$accession[long.sim_nt$accession == "OQ818328"] <- "Rousettus madagascariensis picornavirus OQ818328"
+>>>>>>> 9364165a04abfb7d56432b0b72b93f158f095f2c
 long.sim_nt$accession[long.sim_nt$accession == "OQ818346"] <- "Rousettus madagascariensis picornavirus OQ818346"
 long.sim_nt$accession[long.sim_nt$accession == "JX437642"] <- "Homo sapiens enterovirus JX437642"
 long.sim_nt$accession[long.sim_nt$accession == "KF040078"] <- "Pan troglodytes enterovirus KF040078"
 long.sim_nt$accession[long.sim_nt$accession == "KF040079"] <- "Pan troglodytes enterovirus KF040079"
 
+<<<<<<< HEAD
 long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Rousettus madagascariensis picornavirus OQ818325", "Rousettus madagascariensis picornavirus OQ818346",
+=======
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Rousettus madagascariensis picornavirus OQ818328", "Rousettus madagascariensis picornavirus OQ818346",
+>>>>>>> 9364165a04abfb7d56432b0b72b93f158f095f2c
                                                                   "Homo sapiens enterovirus JX437642","Pan troglodytes enterovirus KF040078",
                                                                   "Pan troglodytes enterovirus KF040079"))
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Bootscan 
+<<<<<<< HEAD
 title<-expression(paste("Reference: ",italic("Rousettus madagascariensis picornavirus "), "OQ818328"))
+=======
+title<-expression(paste("Reference: ",italic("Rousettus madagascariensis picornavirus "), "OQ818325"))
+>>>>>>> 9364165a04abfb7d56432b0b72b93f158f095f2c
 
 batpicorna_africa_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -739,10 +755,20 @@ tescho_boot
 
 
 
+<<<<<<< HEAD
 ##Now put the whole figure together
 
 #all bootscan together: all bat picornavirales
 fig<-plot_grid(batpicorna_boot,
+=======
+
+
+
+##Now put the whole figure together
+
+#all bootscan together: all bat picornavirales
+bootscan_batall<-plot_grid(batpicorna_boot,
+>>>>>>> 9364165a04abfb7d56432b0b72b93f158f095f2c
                            hep_bat_all_boot,
                            mischi_bat_all_boot,
                            sapelo_bat_all_boot,
@@ -750,6 +776,45 @@ fig<-plot_grid(batpicorna_boot,
                            tescho_boot,
                     ncol=3,
                     labels="AUTO",  label_size = 23, align = "hv", axis="b")
+<<<<<<< HEAD
 fig
 
 #export 15x25 inch PDF landscape
+=======
+bootscan_batall
+
+
+#all bootscan together: full bat picornavirales reference
+bootscan_batfull<-plot_grid(hep_bat_full_boot,
+                           kun_bat_full_boot,
+                           mischi_bat_full_boot,
+                           sapelo_bat_full_boot,
+                           ncol=2,
+                           labels="AUTO",  label_size = 23, align = "hv", axis="b")
+bootscan_batfull
+
+
+
+
+
+#in Fig 3
+bootscan_bat_fig<-plot_grid(mischi_bat_all_boot,
+                            sapelo_bat_all_boot,
+                            hep_bat_all_boot,
+                        nrow=1,
+                        labels="AUTO",  label_size = 23, align = "hv", axis="b")
+bootscan_bat_fig
+
+
+#excluded from Fig 3 
+bootscan_bat_supp<-plot_grid(batpicorna_boot,
+                             sapo_bat_boot,
+                             kun_bat_full_boot,
+                             mischi_bat_full_boot,
+                             sapelo_bat_full_boot,
+                             hep_bat_full_boot,
+                         ncol=3,
+                         labels="AUTO",  label_size = 23, align = "hv", axis="b")
+bootscan_bat_supp
+
+>>>>>>> 9364165a04abfb7d56432b0b72b93f158f095f2c
