@@ -20,7 +20,6 @@ homewd="/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/geno
 setwd("~/Desktop/developer/mada-bat-picornavirus/genome_annotation_and_characterization/genus_gene_maps")
 
 #Load the gene data
-#Load the gene data
 ictv <- read.csv("ictv_blast_genes_trimmed.csv", header = T, stringsAsFactors = F)
 ictv$gene<-factor(ictv$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP0", "VP3",
                                         "VP1","VP1/2A", "2A", "2B", "2C", "3A", "3B",
@@ -104,7 +103,7 @@ ictv_sapelovirus_feat_p2<-subset(ictv_sapelovirus_feat,type=="p2")
 ictv_teschovirus_feat<-subset(ictv_feat,molecule=="Teschovirus")
 
 #plot ictv and blast plots
-ictv_batpicorna<-ggplot(ictv_batpicornavirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
+ictv_batpicorna_all<-ggplot(ictv_batpicornavirus_all, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
   geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
                   arrowhead_height = grid::unit(4, "mm"),
                   arrow_body_height = grid::unit(4, "mm")) +
@@ -113,15 +112,15 @@ ictv_batpicorna<-ggplot(ictv_batpicornavirus, aes(xmin = start, xmax = end, y = 
   # geom_feature_label(data=ictv_hepatovirus_feat, aes(x=mid, y=molecule, label=gene),
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
-  geom_subgene_arrow(data = ictv_batpicornavirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
+  geom_subgene_arrow(data = ictv_batpicornavirus_all_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
                                                                   xsubmin=from, xsubmax=to), color="black", alpha=.7,
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
-  geom_text(data=ictv_batpicornavirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
+  geom_text(data=ictv_batpicornavirus_all_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
-  scale_x_continuous(limits=c(4540,5670),expand=c(0,0))+
+  scale_x_continuous(limits=c(4545,5605),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -130,7 +129,37 @@ ictv_batpicorna<-ggplot(ictv_batpicornavirus, aes(xmin = start, xmax = end, y = 
         axis.title.x = element_blank(),
         axis.line.x = element_blank())+
   xlab("Genome position") + ylab("")
-ictv_batpicorna
+ictv_batpicorna_all
+
+
+ictv_batpicorna_full<-ggplot(ictv_batpicornavirus_full, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
+  geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
+                  arrowhead_height = grid::unit(4, "mm"),
+                  arrow_body_height = grid::unit(4, "mm")) +
+  # geom_feature(data=ictv_hepatovirus_feat, aes(x=mid, y=molecule),
+  #              feature_height = grid::unit(6,"mm"))+
+  # geom_feature_label(data=ictv_hepatovirus_feat, aes(x=mid, y=molecule, label=gene),
+  #                    feature_height = grid::unit(6,"mm"),
+  #                    label_height = grid::unit(6,"mm"))+
+  geom_subgene_arrow(data = ictv_batpicornavirus_full_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
+                                                                      xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                     arrowhead_width = grid::unit(3, "mm"),
+                     arrowhead_height = grid::unit(4, "mm"),
+                     arrow_body_height = grid::unit(4, "mm"))+
+  geom_text(data=ictv_batpicornavirus_all_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
+  scale_fill_manual(values=colz)+
+  theme_genes()+
+  scale_x_continuous(limits=c(1,7700),expand=c(0,0))+
+  theme(legend.position = "none")+
+  theme(plot.margin = unit(c(0,0,0,0), "cm"),
+        axis.text.y = element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.x = element_blank(),
+        axis.title.x = element_blank(),
+        axis.line.x = element_blank())+
+  xlab("Genome position") + ylab("")
+ictv_batpicorna_full
+
 
 ictv_hepato<-ggplot(ictv_hepatovirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
   geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
@@ -149,7 +178,7 @@ ictv_hepato<-ggplot(ictv_hepatovirus, aes(xmin = start, xmax = end, y = molecule
   geom_text(data=ictv_hepatovirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,6380),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,6250),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -207,7 +236,7 @@ ictv_kun<-ggplot(ictv_kunsagivirus, aes(xmin = start, xmax = end, y = molecule, 
   geom_text(data=ictv_kunsagivirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,8300),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,8650),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -236,7 +265,7 @@ ictv_mischi<-ggplot(ictv_mischivirus, aes(xmin = start, xmax = end, y = molecule
   geom_text(data=ictv_mischivirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,9350),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,9000),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -265,7 +294,7 @@ ictv_sapelo_full<-ggplot(ictv_sapelovirus_full, aes(xmin = start, xmax = end, y 
   geom_text(data=ictv_sapelovirus_full_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,8150),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,7900),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -275,6 +304,65 @@ ictv_sapelo_full<-ggplot(ictv_sapelovirus_full, aes(xmin = start, xmax = end, y 
         axis.line.x = element_blank())+
   xlab("Genome position") + ylab("")
 ictv_sapelo_full
+
+
+ictv_sapelo_p1<-ggplot(ictv_sapelovirus_p1, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
+  geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
+                  arrowhead_height = grid::unit(4, "mm"),
+                  arrow_body_height = grid::unit(4, "mm")) +
+  # geom_feature(data=ictv_sapelovirus_feat, aes(x=mid, y=molecule),
+  #              feature_height = grid::unit(6,"mm"))+
+  # geom_feature_label(data=ictv_sapelovirus_feat, aes(x=mid, y=molecule, label=gene),
+  #                    feature_height = grid::unit(6,"mm"),
+  #                    label_height = grid::unit(6,"mm"))+
+  geom_subgene_arrow(data = ictv_sapelovirus_pep_p1, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
+                                                                   xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                     arrowhead_width = grid::unit(3, "mm"),
+                     arrowhead_height = grid::unit(4, "mm"),
+                     arrow_body_height = grid::unit(4, "mm"))+
+  geom_text(data=ictv_sapelovirus_feat_p1,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
+  scale_fill_manual(values=colz)+
+  theme_genes()+
+  scale_x_continuous(limits=c(810,1975),expand=c(0,0))+
+  theme(legend.position = "none")+
+  theme(plot.margin = unit(c(0,0,0,0), "cm"),
+        axis.text.y = element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.x = element_blank(),
+        axis.title.x = element_blank(),
+        axis.line.x = element_blank())+
+  xlab("Genome position") + ylab("")
+ictv_sapelo_p1
+
+
+ictv_sapelo_p2<-ggplot(ictv_sapelovirus_p2, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
+  geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
+                  arrowhead_height = grid::unit(4, "mm"),
+                  arrow_body_height = grid::unit(4, "mm")) +
+  # geom_feature(data=ictv_sapelovirus_feat, aes(x=mid, y=molecule),
+  #              feature_height = grid::unit(6,"mm"))+
+  # geom_feature_label(data=ictv_sapelovirus_feat, aes(x=mid, y=molecule, label=gene),
+  #                    feature_height = grid::unit(6,"mm"),
+  #                    label_height = grid::unit(6,"mm"))+
+  geom_subgene_arrow(data = ictv_sapelovirus_pep_p2, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
+                                                                 xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                     arrowhead_width = grid::unit(3, "mm"),
+                     arrowhead_height = grid::unit(4, "mm"),
+                     arrow_body_height = grid::unit(4, "mm"))+
+  geom_text(data=ictv_sapelovirus_feat_p2,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
+  scale_fill_manual(values=colz)+
+  theme_genes()+
+  scale_x_continuous(limits=c(5030,5860),expand=c(0,0))+
+  theme(legend.position = "none")+
+  theme(plot.margin = unit(c(0,0,0,0), "cm"),
+        axis.text.y = element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.x = element_blank(),
+        axis.title.x = element_blank(),
+        axis.line.x = element_blank())+
+  xlab("Genome position") + ylab("")
+ictv_sapelo_p2
+
 
 
 ictv_tescho<-ggplot(ictv_teschovirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
@@ -294,7 +382,7 @@ ictv_tescho<-ggplot(ictv_teschovirus, aes(xmin = start, xmax = end, y = molecule
   geom_text(data=ictv_teschovirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,8950),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,7450),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -304,6 +392,35 @@ ictv_tescho<-ggplot(ictv_teschovirus, aes(xmin = start, xmax = end, y = molecule
         axis.line.x = element_blank())+
   xlab("Genome position") + ylab("")
 ictv_tescho
+
+
+ictv_sapo_all<-ggplot(ictv_sapovirus_all, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
+  geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
+                  arrowhead_height = grid::unit(4, "mm"),
+                  arrow_body_height = grid::unit(4, "mm")) +
+  # geom_feature(data=ictv_sapovirus_full_feat, aes(x=mid, y=molecule),
+  #              feature_height = grid::unit(6,"mm"))+
+  # geom_feature_label(data=ictv_sapovirus_full_feat, aes(x=mid, y=molecule, label=gene),
+  #                    feature_height = grid::unit(6,"mm"),
+  #                    label_height = grid::unit(6,"mm"))+
+  geom_subgene_arrow(data = ictv_sapovirus_all_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
+                                                                 xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                     arrowhead_width = grid::unit(3, "mm"),
+                     arrowhead_height = grid::unit(4, "mm"),
+                     arrow_body_height = grid::unit(4, "mm"))+
+  geom_text(data=ictv_sapovirus_all_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
+  scale_fill_manual(values=colz)+
+  theme_genes()+
+  scale_x_continuous(limits=c(2700,4290),expand=c(0,0))+
+  theme(legend.position = "none")+
+  theme(plot.margin = unit(c(0,0,0,0), "cm"),
+        axis.text.y = element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.x = element_blank(),
+        axis.title.x = element_blank(),
+        axis.line.x = element_blank())+
+  xlab("Genome position") + ylab("")
+ictv_sapo_all
 
 
 ictv_sapo_full<-ggplot(ictv_sapovirus_full, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
@@ -323,7 +440,7 @@ ictv_sapo_full<-ggplot(ictv_sapovirus_full, aes(xmin = start, xmax = end, y = mo
   geom_text(data=ictv_sapovirus_full_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz)+
   theme_genes()+
-  scale_x_continuous(limits=c(2700,4350),expand=c(0,0))+
+  scale_x_continuous(limits=c(700,7950),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
