@@ -1,0 +1,10 @@
+molecule,start,end,gene,type
+Eidolon,1,476,5'UTR,full
+Eidolon,477,10386,Polyprotein,full
+Eidolon,10387,10583,3'UTR,full
+Eidolon,1194,2732,Polyprotein,p1
+Pteropus,889,5170,Polyprotein,all
+Rousettus,5366,6495,Polyprotein,all
+Rousettus,1,815,5'UTR,full
+Rousettus,816,8705,Polyprotein,full
+Rousettus,8706,8845,3'UTR,full
