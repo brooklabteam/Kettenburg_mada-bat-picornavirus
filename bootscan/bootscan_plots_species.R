@@ -24,21 +24,21 @@ setwd("~/Desktop/developer/mada-bat-picornavirus/genome_annotation_and_character
 ictv <- read.csv("ictv_blast_genes_trimmed.csv", header = T, stringsAsFactors = F)
 ictv$gene<-factor(ictv$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP0", "VP3",
                                         "VP1","VP1/2A", "2A", "2B", "2C", "3A", "3B",
-                                        "3C", "3D", "Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Putative polyprotein", "Minor structural protein", "Non-structural polyprotein",
+                                        "3C", "3D", "Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Putative polyprotein", "Putative minor structural protein", "Non-structural polyprotein",
                                         "Hypothetical protein", "Similar to structural polyprotein", "Structural polyprotein",
                                         "Similar to putative polyprotein", "Similar to polyprotein","3'UTR"))
 #Load the peptide files
 ictv_pep <- read.csv("ictv_blast_peptides_trimmed.csv", header = T, stringsAsFactors = F)
 ictv_pep$gene<-factor(ictv_pep$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP0", "VP3",
                                                 "VP1","VP1/2A", "2A", "2B", "2C", "3A", "3B",
-                                                "3C", "3D", "Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Putative polyprotein", "Minor structural protein", "Non-structural polyprotein",
+                                                "3C", "3D", "Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Putative polyprotein", "Putative minor structural protein", "Non-structural polyprotein",
                                                 "Hypothetical protein", "Similar to structural polyprotein", "Structural polyprotein",
                                                 "Similar to putative polyprotein", "Similar to polyprotein","3'UTR"))
 #Load the feature file in case its needed
 ictv_feat <- read.csv("ictv_blast_features_trimmed.csv", header = T, stringsAsFactors = F)
 ictv_feat$gene<-factor(ictv_feat$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP0", "VP3",
                                                   "VP1","VP1/2A", "2A", "2B", "2C", "3A", "3B",
-                                                  "3C", "3D", "Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Putative polyprotein", "Minor structural protein", "Non-structural polyprotein",
+                                                  "3C", "3D", "Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Putative polyprotein", "Putative minor structural protein", "Non-structural polyprotein",
                                                   "Hypothetical protein", "Similar to structural polyprotein", "Structural polyprotein",
                                                   "Similar to putative polyprotein", "Similar to polyprotein","3'UTR"))
 
@@ -47,7 +47,7 @@ colz=c("5'UTR"="gold", "L"="royalblue","VP4"="paleturquoise3", "VP2"="skyblue1",
        "VP1"="cadetblue1", "VP1/2A"="cadetblue1", "2A"="orange1", "2B"="sienna2", "2C"="darkorange1", "3A"="palevioletred1", "3B"="plum",
        "3C"="rosybrown1", "3D"="pink2", "Helicase"="darkseagreen1","NS4"="darkolivegreen1","Vpg"="seagreen1","Pro-Pol"="palegreen2",
        "Polyprotein"="azure3","Putative polyprotein"="mediumorchid1", "Non-structural polyprotein"="mediumorchid4", 
-       "Minor structural protein" ="slateblue3", "Structural polyprotein"="lightgoldenrod1",
+       "Putative minor structural protein" ="slateblue3", "Structural polyprotein"="lightgoldenrod1",
        "Hypothetical protein"="darkslategrey", "Similar to structural polyprotein"="mediumpurple1", "Similar to putative polyprotein"="mediumpurple3", 
        "Similar to polyprotein"="mediumpurple4","3'UTR"="yellow")
 
@@ -56,51 +56,42 @@ colz=c("5'UTR"="gold", "L"="royalblue","VP4"="paleturquoise3", "VP2"="skyblue1",
 
 #Subset ICTV data by virus
 ictv_batpicornavirus<-subset(ictv,molecule=="Bat picornavirus")
-ictv_batpicornavirus_full<-subset(ictv_batpicornavirus,type=="full")
-ictv_batpicornavirus_all<-subset(ictv_batpicornavirus,type=="all")
 ictv_hepatovirus<-subset(ictv,molecule=="Hepatovirus")
 ictv_kobuvirus<-subset(ictv,molecule=="Kobuvirus")
 ictv_kunsagivirus<-subset(ictv,molecule=="Kunsagivirus")
 ictv_mischivirus<-subset(ictv,molecule=="Mischivirus")
 ictv_sapovirus<-subset(ictv,molecule=="Sapovirus")
 ictv_sapovirus_full<-subset(ictv_sapovirus,type=="full")
-ictv_sapovirus_all<-subset(ictv_sapovirus,type=="all")
+ictv_sapovirus_partial<-subset(ictv_sapovirus,type=="partial")
 ictv_sapelovirus<-subset(ictv,molecule=="Sapelovirus")
 ictv_sapelovirus_full<-subset(ictv_sapelovirus,type=="full")
-ictv_sapelovirus_p1<-subset(ictv_sapelovirus,type=="p1")
-ictv_sapelovirus_p2<-subset(ictv_sapelovirus,type=="p2")
+ictv_sapelovirus_partial<-subset(ictv_sapelovirus,type=="partial")
 ictv_teschovirus<-subset(ictv,molecule=="Teschovirus")
 
 ictv_batpicornavirus_pep<-subset(ictv_pep,molecule=="Bat picornavirus")
-ictv_batpicornavirus_full_pep<-subset(ictv_batpicornavirus_pep,type=="full")
-ictv_batpicornavirus_all_pep<-subset(ictv_batpicornavirus_pep,type=="all")
 ictv_hepatovirus_pep<-subset(ictv_pep, molecule=="Hepatovirus")
 ictv_kobuvirus_pep<-subset(ictv_pep,molecule=="Kobuvirus")
 ictv_kunsagivirus_pep<-subset(ictv_pep,molecule=="Kunsagivirus")
 ictv_mischivirus_pep<-subset(ictv_pep,molecule=="Mischivirus")
 ictv_sapovirus_pep<-subset(ictv_pep, molecule=="Sapovirus")
 ictv_sapovirus_full_pep<-subset(ictv_sapovirus_pep,type=="full")
-ictv_sapovirus_all_pep<-subset(ictv_sapovirus_pep,type=="all")
+ictv_sapovirus_partial_pep<-subset(ictv_sapovirus_pep,type=="partial")
 ictv_sapelovirus_pep<-subset(ictv_pep,molecule=="Sapelovirus")
 ictv_sapelovirus_pep_full<-subset(ictv_sapelovirus_pep,type=="full")
-ictv_sapelovirus_pep_p1<-subset(ictv_sapelovirus_pep,type=="p1")
-ictv_sapelovirus_pep_p2<-subset(ictv_sapelovirus_pep,type=="p2")
+ictv_sapelovirus_pep_partial<-subset(ictv_sapelovirus_pep,type=="partial")
 ictv_teschovirus_pep<-subset(ictv_pep,molecule=="Teschovirus")
 
 ictv_batpicornavirus_feat<-subset(ictv_feat,molecule=="Bat picornavirus")
-ictv_batpicornavirus_full_feat<-subset(ictv_batpicornavirus_feat,type=="full")
-ictv_batpicornavirus_all_feat<-subset(ictv_batpicornavirus_feat,type=="all")
 ictv_hepatovirus_feat<-subset(ictv_feat,molecule=="Hepatovirus")
 ictv_kobuvirus_feat<-subset(ictv_feat,molecule=="Kobuvirus")
 ictv_kunsagivirus_feat<-subset(ictv_feat,molecule=="Kunsagivirus")
 ictv_mischivirus_feat<-subset(ictv_feat,molecule=="Mischivirus")
 ictv_sapovirus_feat<-subset(ictv_feat,molecule=="Sapovirus")
 ictv_sapovirus_full_feat<-subset(ictv_sapovirus_feat,type=="full")
-ictv_sapovirus_all_feat<-subset(ictv_sapovirus_feat,type=="all")
+ictv_sapovirus_partial_feat<-subset(ictv_sapovirus_feat,type=="partial")
 ictv_sapelovirus_feat<-subset(ictv_feat,molecule=="Sapelovirus")
 ictv_sapelovirus_full_feat<-subset(ictv_sapelovirus_feat,type=="full")
-ictv_sapelovirus_feat_p1<-subset(ictv_sapelovirus_feat,type=="p1")
-ictv_sapelovirus_feat_p2<-subset(ictv_sapelovirus_feat,type=="p2")
+ictv_sapelovirus_feat_partial<-subset(ictv_sapelovirus_feat,type=="partial")
 ictv_teschovirus_feat<-subset(ictv_feat,molecule=="Teschovirus")
 
 #plot ictv and blast plots
