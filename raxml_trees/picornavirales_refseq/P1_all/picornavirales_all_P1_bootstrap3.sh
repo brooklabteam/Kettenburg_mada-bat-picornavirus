@@ -3,8 +3,8 @@
 #SBATCH --partition=broadwl
 #SBATCH --output=picall_ref_p1_boot3.out
 #SBATCH --nodes=1
-#SBATCH --ntasks=
-#SBATCH --ntasks-per-node=
+#SBATCH --ntasks=12
+#SBATCH --ntasks-per-node=12
 #SBATCH --time=36:00:00
 
 module load vim/7.4
@@ -13,4 +13,4 @@ module load python/3.6
 module load java/1.8.0_121
 module load cmake/3.15.1
 
-raxml-ng-mpi --bootstrap --msa .fasta --model  --prefix T5  --seed 5 --threads auto{}
+raxml-ng-mpi --bootstrap --msa picornavirales_all_P1.fasta --model GTR+G4 --prefix T5  --seed 5 --threads auto{12}
