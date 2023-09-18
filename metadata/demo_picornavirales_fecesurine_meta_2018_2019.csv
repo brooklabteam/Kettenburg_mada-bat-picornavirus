@@ -1,25 +1,4 @@
 ﻿sampleid,any_picorna,roost_site,latitude_s,longitude_e,collection_date,month,day_of_year,year,sampling_session,species,bat_sex,recap,bat_age_class,young_of_year,specific_roost_site
-AMB15,0,Ambakoana,-18.513,48.1665,11/18/2013,11,317,2013-2017,3,Pteropus rufus,male,,J,no,Ambakoana
-AMB8,0,Ambakoana,-18.513,48.1665,11/16/2013,11,315,2013-2017,3,Pteropus rufus,female,308,NL,NA,Ambakoana
-AMB61,0,Ambakoana,-18.513,48.1665,12/9/2014,12,343,2013-2017,17,Pteropus rufus,male,469,A,NA,Ambakoana
-MAH1,0,Ambakoana,-18.513,48.1665,7/13/2014,7,194,2013-2017,8,Pteropus rufus,female,409,NL,NA,Mahabo
-MAH10,0,Ambakoana,-18.513,48.1665,7/16/2014,7,197,2013-2017,8,Pteropus rufus,male,419,A,NA,Mahabo
-MAH11,0,Ambakoana,-18.513,48.1665,7/18/2014,7,199,2013-2017,8,Pteropus rufus,male,420,A,NA,Mahabo
-MAH12,0,Ambakoana,-18.513,48.1665,7/18/2014,7,199,2013-2017,8,Pteropus rufus,female,421,NL,NA,Mahabo
-MAH3,0,Ambakoana,-18.513,48.1665,7/13/2014,7,194,2013-2017,8,Pteropus rufus,male,411,J,NA,Mahabo
-MAH4,0,Ambakoana,-18.513,48.1665,7/13/2014,7,194,2013-2017,8,Pteropus rufus,female,412,NL,NA,Mahabo
-MAH6,0,Ambakoana,-18.513,48.1665,7/13/2014,7,194,2013-2017,8,Pteropus rufus,female,414,NL,NA,Mahabo
-MAH7,0,Ambakoana,-18.513,48.1665,7/13/2014,7,194,2013-2017,8,Pteropus rufus,male,415,A,NA,Mahabo
-AMB76,0,Ambakoana,-18.513,48.1665,3/22/2015,3,81,2013-2017,21,Pteropus rufus,male,480,A,NA,Ambakoana
-AMB80,0,Ambakoana,-18.513,48.1665,5/11/2015,5,131,2013-2017,27,Pteropus rufus,male,483,A,NA,Ambakoana
-MAK12,0,Ambakoana,-18.513,48.1665,7/12/2015,7,193,2013-2017,32,Pteropus rufus,male,499,A,NA,Makira
-MAK13,0,Ambakoana,-18.513,48.1665,7/14/2015,7,195,2013-2017,8,Pteropus rufus,male,1301,A,NA,Makira
-MARO66,0,Ambakoana,-18.513,48.1665,3/11/2015,3,70,2013-2017,21,Pteropus rufus,male,369,A,NA,Marovitsika
-MARO7,0,Ambakoana,-18.513,48.1665,3/13/2015,3,72,2013-2017,21,Pteropus rufus,female,305,L,NA,Marovitsika
-MARO79,0,Ambakoana,-18.513,48.1665,5/17/2015,5,137,2013-2017,28,Pteropus rufus,male,488,J,NA,Marovitsika
-MARO8,0,Ambakoana,-18.513,48.1665,5/17/2015,5,137,2013-2017,28,Pteropus rufus,male,,J,NA,Marovitsika
-AMB106,0,Ambakoana,-18.513,48.1665,1/19/2016,1,19,2013-2017,35,Pteropus rufus,male,1320,A,NA,Ambakoana
-AMB116,0,Ambakoana,-18.513,48.1665,1/21/2016,1,21,2013-2017,35,Pteropus rufus,male,1328,A,NA,Ambakoana
 AMB122,1,Ambakoana,-18.513,48.1665,2/23/2018,2,54,2018,62,Pteropus rufus,male,442,A,no,Ambakoana
 AMB123,0,Ambakoana,-18.513,48.1665,2/23/2018,2,54,2018,62,Pteropus rufus,male,500,A,no,Ambakoana
 AMB124,0,Ambakoana,-18.513,48.1665,2/23/2018,2,54,2018,62,Pteropus rufus,female,1333,NL,yes,Ambakoana
