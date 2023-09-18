@@ -646,6 +646,67 @@ hep_bat_all_boot
 
 
 
+
+#kunsagivirus
+africa_kun_bootscan <- read.csv(file = "africa_kun_bootscan.csv", header = T, stringsAsFactors = F) #animo acid
+head(africa_kun_bootscan)
+
+#move to long
+long.sim_nt <- melt(africa_kun_bootscan, id.vars = c("pointer"), measure.vars = c("NC_033818",
+                                                                                     "NC_034206","HF677705"))
+unique(long.sim_nt$variable)
+
+long.sim_nt$variable <- as.character(long.sim_nt$variable)
+
+names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
+
+long.sim_nt$accession[long.sim_nt$accession == "NC_033818"] <- "Eidolon helvum kunsagivirus NC_033818"
+long.sim_nt$accession[long.sim_nt$accession == "NC_034206"] <- "Papio cynocephalus kunsagivirus NC_034206"
+long.sim_nt$accession[long.sim_nt$accession == "HF677705"] <- "Hylomyscus parechovirus HF677705"
+
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Eidolon helvum kunsagivirus NC_033818",
+                                                                  "Papio cynocephalus kunsagivirus NC_034206",
+                                                                  "Hylomyscus parechovirus HF677705"))
+long.sim_nt$value[long.sim_nt$value<0] <- 0
+long.sim_nt$value <- long.sim_nt$value/100
+
+## Nucleotide
+title<-expression(paste("Reference: ",italic("Eidolon dupreanum kunsagivirus "), "OQ818317"))
+
+kunsagivirus_bat_all_boot <- ggplot(long.sim_nt) + 
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+  theme(panel.background = element_rect("white"),
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
+  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
+        strip.background = element_rect(fill="white"), 
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
+        legend.key.height= unit(3.5, 'mm'),
+        legend.key.width= unit(3.5, 'mm'),
+        legend.background =element_rect(fill = alpha("white", 0)),
+        axis.text = element_text(size=12), axis.title = element_text(size=12),
+        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
+  ggtitle(title)+
+  scale_x_continuous(expand=c(0,0))+
+  scale_y_continuous(limits=c(0,1), expand=c(0,0))
+
+kunsagivirus_bat_all_boot
+
+
+#put gene map with PySimPlot
+kun_bat_all_boot<-kunsagivirus_bat_all_boot/ictv_kun+plot_layout(nrow=2,  heights = c(2, 0.30))
+kun_bat_all_boot
+
+kun_bat_all_boot<-as.ggplot(kun_bat_all_boot)
+kun_bat_all_boot
+
+
+
 #mischivirus
 africa_mischi_bootscan <- read.csv(file = "africa_mischi_bootscan.csv", header = T, stringsAsFactors = F) #Nucleotide
 head(africa_mischi_bootscan)
@@ -1098,10 +1159,10 @@ tescho_boot
 bootscan_all<-plot_grid(batpicorna_full_boot,
                         batpicorna_all_boot,
                            hep_bat_all_boot,
+                           kun_bat_all_boot,
                            mischi_bat_all_boot,
                            sapelo_bat_full_boot,
                            sapelo_bat_p1_boot,
-                           sapelo_bat_p2_boot,
                            sapo_full_boot,
                            sapo_all_boot,
                            tescho_boot,
@@ -1109,7 +1170,7 @@ bootscan_all<-plot_grid(batpicorna_full_boot,
                     labels="AUTO",  label_size = 23, align = "hv", axis="b")
 bootscan_all
 
-#export 15x40 inch PDF landscape
+#export 16x40 inch PDF landscape
 
 #fig for paper
 fig<-plot_grid(batpicorna_full_boot, 
