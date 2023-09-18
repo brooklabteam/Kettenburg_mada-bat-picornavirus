@@ -1,0 +1,21 @@
+rm(list=ls())
+
+library(ggplot2)
+library(ggtree)
+library(ape)
+library(ggnewscale)
+#install.packages('gdata')
+library(gdata)
+library(phylotools)
+library(phylobase)
+library(cowplot)
+library(gggenes)
+library(gridExtra)
+library(grid)
+library(plyr)
+library(dplyr)
+library(reshape2)
+library(patchwork)
+library(ggplotify)
+
+###packages loaded
