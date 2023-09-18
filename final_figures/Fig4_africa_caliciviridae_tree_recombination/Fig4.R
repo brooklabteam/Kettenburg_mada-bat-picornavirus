@@ -498,7 +498,7 @@ sapo_full_boot
 
 #Put figure together
 
-bootscan<-plot_grid(sapo_full_boot,sapo_full_boot,
+bootscan<-plot_grid(sapo_full_boot,sapo_all_boot,
                     ncol=1,
                     labels=c("B","C"),  label_size = 23, align = "hv", axis="b")
 bootscan
@@ -511,6 +511,6 @@ Fig4<-plot_grid(caliciviridae,bootscan,
                 labels=c("A",""),  label_size = 23, align = "hv", axis="b")
 Fig4
   
-#export 
+#export 20x15inch PDF landscape
 
 
