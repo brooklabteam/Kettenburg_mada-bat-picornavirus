@@ -1,0 +1,89 @@
+#
+#model:
+#
+#<?xml version="1.0" encoding="UTF-8" standalone="no"?><input id="posterior" spec="beast.core.util.CompoundDistribution">
+#    <distribution id="prior" spec="beast.core.util.CompoundDistribution">
+#        <distribution id="BayesianSkyline.t:picornaviridae_beast_align" spec="beast.evolution.tree.coalescent.BayesianSkyline">
+#            <parameter id="bPopSizes.t:picornaviridae_beast_align" lower="0.0" name="popSizes" spec="beast.core.parameter.RealParameter">380.0</parameter>
+#            <groupSizes id="bGroupSizes.t:picornaviridae_beast_align" spec="beast.core.parameter.IntegerParameter">1</groupSizes>
+#            <treeIntervals id="BSPTreeIntervals.t:picornaviridae_beast_align" spec="beast.evolution.tree.coalescent.TreeIntervals">
+#                <tree id="Tree.t:picornaviridae_beast_align" spec="beast.evolution.tree.Tree">
+#                    <trait dateFormat="yyyy-M-dd" id="dateTrait.t:picornaviridae_beast_align" spec="beast.evolution.tree.TraitSet" traitname="date" value="OQ818316_2018-08-16=2018-08-16,NC_012798_2007-08-05=2007-08-05,NC_012802_2011-05-08=2011-05-08,NC_023984_1994-03-22=1994-03-22,NC_012801_2011-05-08=2011-05-08,NC_025961_2008-11-12=2008-11-12,NC_012800_2011-05-08=2011-05-08,NC_034385_2001-09-16=2001-09-16,NC_009448_2006-07-21=2006-07-21,NC_010810_2001-07-08=2001-07-08,NC_035198_2007-01-11=2007-01-11,NC_055161_2018-07-27=2018-07-27,NC_024120_2012-10-15=2012-10-15,NC_033793_2012-01-13=2012-01-13,NC_034381_2001-05-16=2001-05-16,NC_043072_2007-01-10=2007-01-10,NC_038957_2009-01-11=2009-01-11,NC_008250_2005-09-29=2005-09-29,NC_038961_2016-04-27=2016-04-27,NC_023985_2010-10-12=2010-10-12,NC_038319_2007-01-06=2007-01-06,NC_024767_2010-10-08=2010-10-08,NC_028970_2007-01-13=2007-01-13,NC_038304_2010-12-17=2010-12-17,NC_003985_1998-12-02=1998-12-02,NC_009891_2009-06-07=2009-06-07,NC_039004_2003-01-15=2003-01-15,NC_025474_2005-01-12=2005-01-12,NC_015940_2008-12-19=2008-12-19,NC_015941_2009-06-05=2009-06-05,NC_018226_2011-10-21=2011-10-21,OQ818318_2018-02-15=2018-02-15,OQ818323_2018-07-29=2018-07-29,OQ818324_2018-07-29=2018-07-29,NC_018668_2004-01-10=2004-01-10,NC_025675_2007-01-12=2007-01-12,NC_026315_2001-04-14=2001-04-14,NC_026316_2007-01-12=2007-01-12,OQ818320_2018-07-27=2018-07-27,NC_033820_2012-01-13=2012-01-13,OQ818321_2019-01-07=2019-01-07,OQ818329_2018-09-12=2018-09-12,NC_003987_2008-07-01=2008-07-01,NC_004451_2001-11-30=2001-11-30,NC_033819_2012-01-13=2012-01-13,OQ818325_2018-09-11=2018-09-11,OQ818328_2018-09-12=2018-09-12,NC_038989_2001-09-15=2001-09-15,NC_001430_2009-09-04=2009-09-04,NC_038308_2007-02-27=2007-02-27,NC_001472_2007-01-21=2007-01-21,NC_038307_2010-01-03=2010-01-03,NC_010415_2000-12-06=2000-12-06,NC_013695_2009-06-22=2009-06-22,NC_024073_2008-10-29=2008-10-29,NC_001612_1994-01-31=1994-01-31,NC_030454_2009-09-13=2009-09-13,NC_038306_2018-08-24=2018-08-24,NC_002058_1980-07-01=1980-07-01,NC_004441_2001-03-23=2001-03-23,NC_034267_2012-01-10=2012-01-10,NC_037654_2009-01-08=2009-01-08,NC_001490_1984-07-01=1984-07-01,NC_038312_2007-01-14=2007-01-14,NC_001859_1997-12-09=1997-12-09,NC_008714_2003-07-29=2003-07-29,NC_021220_2005-06-14=2005-06-14,NC_033695_2001-01-14=2001-01-14,NC_029854_2007-01-15=2007-01-15,NC_038310_2011-10-08=2011-10-08,NC_003988_1999-11-04=1999-11-04,NC_038309_2002-03-13=2002-03-13,NC_029905_2016-01-25=2016-01-25,NC_001617_2009-04-04=2009-04-04,NC_038311_2006-04-19=2006-04-19,NC_009996_2007-04-27=2007-04-27,NC_038878_2007-01-10=2007-01-10,NC_006553_2003-01-04=2003-01-04,NC_040605_2004-01-15=2004-01-15,NC_055156_2007-01-15=2007-01-15,NC_016403_2007-01-10=2007-01-10,NC_015934_2009-12-08=2009-12-08,NC_055160_2007-01-15=2007-01-15,NC_016156_2007-08-24=2007-08-24,NC_001489_1987-08-05=1987-08-05,NC_028363_1988-07-01=1988-07-01,NC_038315_2007-01-10=2007-01-10,NC_027818_2014-11-25=2014-11-25,NC_028365_2007-01-14=2007-01-14,NC_028366_2007-01-10=2007-01-10,NC_028981_2001-01-12=2001-01-12,NC_038316_2007-01-11=2007-01-11,NC_038313_2007-01-04=2007-01-04,NC_028364_2007-01-12=2007-01-12,NC_038314_2007-01-12=2007-01-12,NC_016964_2007-01-08=2007-01-08,NC_023987_2011-07-15=2011-07-15,NC_038318_2018-08-24=2018-08-24,NC_055159_2014-08-15=2014-08-15,NC_003990_1997-12-17=1997-12-17,NC_015626_2007-01-04=2007-01-04,NC_014412_2001-11-07=2001-11-07,NC_014413_2001-11-07=2001-11-07,NC_001479_2000-08-01=2000-08-01,NC_010354_2007-10-19=2007-10-19,NC_039210_2007-01-11=2007-01-11,NC_040611_2004-01-17=2004-01-17,NC_003976_2000-12-13=2000-12-13,NC_035779_2014-09-22=2014-09-22,NC_034453_2017-01-20=2017-01-20,NC_023988_2009-07-15=2009-07-15,NC_043544_2016-07-18=2016-07-18,NC_040642_2007-02-16=2007-02-16,NC_040673_2007-01-13=2007-01-13,NC_021482_2002-05-13=2002-05-13,NC_034617_2009-01-15=2009-01-15,NC_032126_2007-01-13=2007-01-13,NC_040684_2007-02-16=2007-02-16,NC_055108_2003-01-09=2003-01-09,OQ818322_2019-04-23=2019-04-23,OP287812_2018-07-27=2018-07-27,NC_001918_1998-01-07=1998-01-07,NC_015936_2007-01-10=2007-01-10,NC_034971_2007-01-11=2007-01-11,NC_004421_2005-08-02=2005-08-02,NC_011829_2007-01-07=2007-01-07,NC_016769_2006-07-11=2006-07-11,NC_027054_2007-01-12=2007-01-12,NC_023422_2007-01-12=2007-01-12,NC_027918_2014-06-15=2014-06-15,NC_027919_2011-01-14=2011-01-14,NC_012957_2004-01-07=2004-01-07,NC_012986_2002-10-16=2002-10-16,NC_025114_2007-01-11=2007-01-11,NC_014411_2007-07-16=2007-07-16,NC_022802_2012-12-15=2012-12-15,NC_023861_2010-09-13=2010-09-13,NC_024765_2003-01-09=2003-01-09,NC_028380_2015-02-15=2015-02-15,NC_038317_2007-01-11=2007-01-11,NC_018400_2007-01-10=2007-01-10,NC_024770_2010-09-16=2010-09-16,NC_028964_2007-01-13=2007-01-13,NC_021201_2007-11-10=2007-11-10,NC_023858_2010-04-13=2010-04-13,NC_024768_2010-10-08=2010-10-08,NC_024769_2010-10-08=2010-10-08,NC_039235_2005-02-17=2005-02-17,NC_024766_2010-10-08=2010-10-08,NC_025432_2004-01-11=2004-01-11,OQ818317_2018-02-15=2018-02-15,NC_033818_2012-01-13=2012-01-13,NC_034206_2016-03-13=2016-03-13,NC_024070_2012-01-11=2012-01-11,NC_038880_2007-01-11=2007-01-11,NC_031105_2009-03-24=2009-03-24,NC_031106_2016-06-15=2016-06-15,NC_001366_1990-09-13=1990-09-13,NC_011349_2006-05-16=2006-05-16,NC_038305_2006-04-19=2006-04-19,NC_026470_2007-01-13=2007-01-13,NC_003983_1996-03-25=1996-03-25,NC_026249_2007-01-13=2007-01-13,NC_039209_1965-07-01=1965-07-01,NC_034245_2014-04-20=2014-04-20,NC_038303_2010-01-10=2010-01-10,NC_022332_2006-11-13=2006-11-13,NC_023162_1953-07-01=1953-07-01,NC_039212_2007-01-12=2007-01-12,NC_030843_2004-01-11=2004-01-11,NC_018506_2003-11-15=2003-11-15,NC_036588_2007-01-13=2007-01-13,NC_021178_2007-01-07=2007-01-07,NC_026921_2009-02-14=2009-02-14,NC_025890_1981-07-01=1981-07-01,NC_027214_2003-01-12=2003-01-12,NC_035110_2007-10-14=2007-10-14">
+#                        <taxa id="TaxonSet.picornaviridae_beast_align" spec="beast.evolution.alignment.TaxonSet">
+#                        </taxa>
+#                    </trait>
+#                    <taxonset idref="TaxonSet.picornaviridae_beast_align"/>
+#                </tree>
+#            </treeIntervals>
+#        </distribution>
+#        <distribution id="MarkovChainedPopSizes.t:picornaviridae_beast_align" jeffreys="true" parameter="@bPopSizes.t:picornaviridae_beast_align" spec="beast.math.distributions.MarkovChainDistribution"/>
+#        <prior id="ClockPrior.c:picornaviridae_beast_align" name="distribution">
+#            <parameter id="clockRate.c:picornaviridae_beast_align" name="x" spec="beast.core.parameter.RealParameter">0.0016</parameter>
+#            <LogNormal id="LogNormalDistributionModel.0" name="distr">
+#                <parameter estimate="false" id="RealParameter.13" name="M" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#                <parameter estimate="false" id="RealParameter.14" lower="0.0" name="S" spec="beast.core.parameter.RealParameter" upper="5.0">1.25</parameter>
+#            </LogNormal>
+#        </prior>
+#        <prior id="FrequenciesPrior.s:picornaviridae_beast_align" name="distribution">
+#            <parameter dimension="4" id="freqParameter.s:picornaviridae_beast_align" lower="0.0" name="x" spec="beast.core.parameter.RealParameter" upper="1.0">0.25</parameter>
+#            <Uniform id="Uniform.3" name="distr"/>
+#        </prior>
+#        <prior id="GammaShapePrior.s:picornaviridae_beast_align" name="distribution">
+#            <parameter id="gammaShape.s:picornaviridae_beast_align" name="x" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#            <Exponential id="Exponential.0" name="distr">
+#                <parameter estimate="false" id="RealParameter.0" name="mean" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#            </Exponential>
+#        </prior>
+#        <prior id="RateACPrior.s:picornaviridae_beast_align" name="distribution">
+#            <parameter id="rateAC.s:picornaviridae_beast_align" lower="0.0" name="x" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#            <Gamma id="Gamma.0" name="distr">
+#                <parameter estimate="false" id="RealParameter.1" name="alpha" spec="beast.core.parameter.RealParameter">0.05</parameter>
+#                <parameter estimate="false" id="RealParameter.2" name="beta" spec="beast.core.parameter.RealParameter">10.0</parameter>
+#            </Gamma>
+#        </prior>
+#        <prior id="RateAGPrior.s:picornaviridae_beast_align" name="distribution">
+#            <parameter id="rateAG.s:picornaviridae_beast_align" lower="0.0" name="x" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#            <Gamma id="Gamma.1" name="distr">
+#                <parameter estimate="false" id="RealParameter.3" name="alpha" spec="beast.core.parameter.RealParameter">0.05</parameter>
+#                <parameter estimate="false" id="RealParameter.4" name="beta" spec="beast.core.parameter.RealParameter">20.0</parameter>
+#            </Gamma>
+#        </prior>
+#        <prior id="RateATPrior.s:picornaviridae_beast_align" name="distribution">
+#            <parameter id="rateAT.s:picornaviridae_beast_align" lower="0.0" name="x" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#            <Gamma id="Gamma.2" name="distr">
+#                <parameter estimate="false" id="RealParameter.5" name="alpha" spec="beast.core.parameter.RealParameter">0.05</parameter>
+#                <parameter estimate="false" id="RealParameter.6" name="beta" spec="beast.core.parameter.RealParameter">10.0</parameter>
+#            </Gamma>
+#        </prior>
+#        <prior id="RateCGPrior.s:picornaviridae_beast_align" name="distribution">
+#            <parameter id="rateCG.s:picornaviridae_beast_align" lower="0.0" name="x" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#            <Gamma id="Gamma.3" name="distr">
+#                <parameter estimate="false" id="RealParameter.7" name="alpha" spec="beast.core.parameter.RealParameter">0.05</parameter>
+#                <parameter estimate="false" id="RealParameter.8" name="beta" spec="beast.core.parameter.RealParameter">10.0</parameter>
+#            </Gamma>
+#        </prior>
+#        <prior id="RateGTPrior.s:picornaviridae_beast_align" name="distribution">
+#            <parameter id="rateGT.s:picornaviridae_beast_align" lower="0.0" name="x" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#            <Gamma id="Gamma.5" name="distr">
+#                <parameter estimate="false" id="RealParameter.11" name="alpha" spec="beast.core.parameter.RealParameter">0.05</parameter>
+#                <parameter estimate="false" id="RealParameter.12" name="beta" spec="beast.core.parameter.RealParameter">10.0</parameter>
+#            </Gamma>
+#        </prior>
+#    </distribution>
+#    <distribution id="likelihood" spec="beast.core.util.CompoundDistribution" useThreads="true">
+#        <distribution data="@picornaviridae_beast_align" id="treeLikelihood.picornaviridae_beast_align" spec="beast.evolution.likelihood.ThreadedTreeLikelihood" tree="@Tree.t:picornaviridae_beast_align">
+#            <siteModel gammaCategoryCount="4" id="SiteModel.s:picornaviridae_beast_align" shape="@gammaShape.s:picornaviridae_beast_align" spec="beast.evolution.sitemodel.SiteModel">
+#                <parameter estimate="false" id="mutationRate.s:picornaviridae_beast_align" name="mutationRate" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#                <parameter estimate="false" id="proportionInvariant.s:picornaviridae_beast_align" lower="0.0" name="proportionInvariant" spec="beast.core.parameter.RealParameter" upper="1.0">0.001</parameter>
+#                <substModel id="gtr.s:picornaviridae_beast_align" rateAC="@rateAC.s:picornaviridae_beast_align" rateAG="@rateAG.s:picornaviridae_beast_align" rateAT="@rateAT.s:picornaviridae_beast_align" rateCG="@rateCG.s:picornaviridae_beast_align" rateGT="@rateGT.s:picornaviridae_beast_align" spec="beast.evolution.substitutionmodel.GTR">
+#                    <parameter estimate="false" id="rateCT.s:picornaviridae_beast_align" lower="0.0" name="rateCT" spec="beast.core.parameter.RealParameter">1.0</parameter>
+#                    <frequencies frequencies="@freqParameter.s:picornaviridae_beast_align" id="estimatedFreqs.s:picornaviridae_beast_align" spec="beast.evolution.substitutionmodel.Frequencies"/>
+#                </substModel>
+#            </siteModel>
+#            <branchRateModel clock.rate="@clockRate.c:picornaviridae_beast_align" id="StrictClock.c:picornaviridae_beast_align" spec="beast.evolution.branchratemodel.StrictClockModel"/>
+#        </distribution>
+#    </distribution>
+#</input>
+#
+Sample	posterior	likelihood	prior	treeLikelihood	TreeHeight	clockRate	gammaShape	freqParameter.1	freqParameter.2	freqParameter.3	freqParameter.4	rateAC	rateAG	rateAT	rateCG	rateGT	BayesianSkyline	bPopSizes	bGroupSizes
+0	-4629282.9532816475	-4628220.130977445	-1062.8223042017985	-4628220.130977445	66.66444012246178	0.0016	1.0	0.25	0.25	0.25	0.25	1.0	1.0	1.0	1.0	1.0	-1027.6747661067582	342.42756617408054	176
