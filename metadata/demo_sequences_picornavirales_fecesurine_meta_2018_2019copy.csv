@@ -1,5 +1,36 @@
 ﻿sampleid,any_picorna,virus,type,family,roost_site,latitude_s,longitude_e,collection_date,month,day_of_year,year,sampling_session,species,bat_sex,recap,bat_age_class,young_of_year,specific_roost_site
+AMB137,1,aparavirus,partial,iflaviridae,Ambakoana,-18.513,48.1665,3/1/2018,3,60,2018,40,Pteropus rufus,female,1346,J,yes,Ambakoana
+MIZ194,1,bat picornavirus,partial,picornaviridae,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,female,M36,NL,no,Maromizaha
+MIZ214,1,bat picornavirus,full,picornaviridae,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,male,M57,A,no,Maromizaha
+MIZ240,1,bat picornavirus,full,picornaviridae,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,male,M83,A,no,Maromizaha
 AMB122,1,cheravirus,partial,secoviridae,Ambakoana,-18.513,48.1665,2/23/2018,2,54,2018,62,Pteropus rufus,male,442,A,no,Ambakoana
+KEL161,1,cripavirus,partial,iflaviridae,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,male,1081,A,no,AngavoKely
+AMB150,1,felisavirus,partial,iflaviridae,Ambakoana,-18.513,48.1665,8/6/2018,8,218,2018,48,Pteropus rufus,male,1360,A,no,Ambakoana
+KEL225,1,felisavirus,partial,iflaviridae,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanum,male,977,A,no,AngavoKely
+KEL148,1,hepatovirus,partial,picornaviridae,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,male,1093,A,no,AngavoKely
+KEL318,1,kobuvirus,full,picornaviridae,AngavoKely,-18.9327,47.7578,4/23/2019,4,113,2019,66,Eidolon dupreanum,female,1673,NL,NA,AngavoKely
+KEL148,1,kunsagivirus,full,picornaviridae,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,male,1093,A,no,AngavoKely
+AMB150,1,mischivirus,full,picornaviridae,Ambakoana,-18.513,48.1665,8/6/2018,8,218,2018,48,Pteropus rufus,male,1360,A,no,Ambakoana
+MIZ229,1,nepovirus,full,secoviridae,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,female,M72,NL,no,Maromizaha
+AMB139,1,picorna-like virus,partial,unclassified,Ambakoana,-18.513,48.1665,3/1/2018,3,60,2018,40,Pteropus rufus,male,1348,A,no,Ambakoana
+AMB149,1,picorna-like virus,partial,unclassified,Ambakoana,-18.513,48.1665,8/5/2018,8,217,2018,48,Pteropus rufus,female,1359,NL,no,Ambakoana
+AMB160,1,picorna-like virus,partial,unclassified,Ambakoana,-18.513,48.1665,1/7/2019,1,7,2019,56,Pteropus rufus,female,1376,A,no,Ambakoana
+KEL164,0,picorna-like virus,partial,unclassified,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,female,1078,J,yes,AngavoKely
+KEL233,1,sapelovirus,full,picornaviridae,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanum,male,984,A,no,Angavokely_Edup
+KEL272,1,sapelovirus,full,picornaviridae,AngavoKely,-18.9327,47.7578,1/7/2019,1,7,2019,56,Eidolon dupreanum,male,1620,A,no,Angavokely_Edup
+KEL273,1,sapelovirus,partial,picornaviridae,AngavoKely,-18.9327,47.7578,1/7/2019,1,7,2019,56,Eidolon dupreanum,male,977,A,no,Angavokely_Edup
+KEL275B,1,sapelovirus,partial,picornaviridae,AngavoKely,-18.9327,47.7578,3/14/2019,3,73,2019,63,Eidolon dupreanum,female,388,NL,no,AngavoKely
+KEL298,1,sapelovirus,partial,picornaviridae,AngavoKely,-18.9327,47.7578,2/6/2019,2,37,2019,60,Eidolon dupreanum,male,1645,A,no,AngavoKely
+MIZ243,1,sapelovirus,full,picornaviridae,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,male,M86,J,yes,Maromizaha
+KEL166,1,sapovirus,full,caliciviridae,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,female,1075,J,yes,AngavoKely
+KEL207,1,sapovirus,partial,caliciviridae,AngavoKely,-18.9327,47.7578,4/9/2018,4,99,2018,42,Eidolon dupreanum,female,1029,NL,no,AngavoKely
+MIZ179,1,sapovirus,partial,caliciviridae,Maromizaha,-18.9623,48.4525,4/14/2018,4,104,2018,43,Rousettus madagascariensis,male,,A,no,Maromizaha
+MIZ219,1,sapovirus,partial,caliciviridae,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,male,M62,A,no,Maromizaha
+MIZ345,1,sapovirus,partial,caliciviridae,Maromizaha,-18.9623,48.4525,1/31/2019,1,31,2019,59,Rousettus madagascariensis,female,,J,,Maromizaha
+KEL164,0,teschovirus,full,picornaviridae,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,female,1078,J,yes,AngavoKely
+MIZ190,1,teschovirus,full,picornaviridae,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,male,M32,A,no,Maromizaha
+MIZ205,1,teschovirus,full,picornaviridae,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,male,M47,A,no,Maromizaha
+AMB134,1,tetnovirus,partial,unclassified,Ambakoana,-18.513,48.1665,3/1/2018,3,60,2018,40,Pteropus rufus,male,1343,A,no,Ambakoana
 AMB123,0,,,,Ambakoana,-18.513,48.1665,2/23/2018,2,54,2018,62,Pteropus rufus,male,500,A,no,Ambakoana
 AMB124,0,,,,Ambakoana,-18.513,48.1665,2/23/2018,2,54,2018,62,Pteropus rufus,female,1333,NL,yes,Ambakoana
 AMB126,0,,,,Ambakoana,-18.513,48.1665,2/24/2018,2,55,2018,62,Pteropus rufus,male,1335,A,no,Ambakoana
@@ -10,11 +41,8 @@ AMB130,0,,,,Ambakoana,-18.513,48.1665,2/26/2018,2,57,2018,40,Pteropus rufus,fema
 AMB131,0,,,,Ambakoana,-18.513,48.1665,2/27/2018,2,58,2018,40,Pteropus rufus,female,1340,NL,no,Ambakoana
 AMB132,0,,,,Ambakoana,-18.513,48.1665,2/28/2018,2,59,2018,40,Pteropus rufus,male,1341,A,no,Ambakoana
 AMB133,0,,,,Ambakoana,-18.513,48.1665,2/28/2018,2,59,2018,40,Pteropus rufus,male,1342,J,yes,Ambakoana
-AMB134,1,tetnovirus,partial,unclassified,Ambakoana,-18.513,48.1665,3/1/2018,3,60,2018,40,Pteropus rufus,male,1343,A,no,Ambakoana
 AMB135,0,,,,Ambakoana,-18.513,48.1665,3/1/2018,3,60,2018,40,Pteropus rufus,male,1344,A,no,Ambakoana
-AMB137,1,aparavirus,partial,iflaviridae,Ambakoana,-18.513,48.1665,3/1/2018,3,60,2018,40,Pteropus rufus,female,1346,J,yes,Ambakoana
 AMB138,0,,,,Ambakoana,-18.513,48.1665,3/1/2018,3,60,2018,40,Pteropus rufus,male,1347,A,no,Ambakoana
-AMB139,1,picorna-like virus,partial,unclassified,Ambakoana,-18.513,48.1665,3/1/2018,3,60,2018,40,Pteropus rufus,male,1348,A,no,Ambakoana
 AMB140,0,,,,Ambakoana,-18.513,48.1665,4/16/2018,4,106,2018,44,Pteropus rufus,female,1349,J,yes,Ambakoana
 AMB141,0,,,,Ambakoana,-18.513,48.1665,4/16/2018,4,106,2018,44,Pteropus rufus,male,1350,A,no,Ambakoana
 AMB142,0,,,,Ambakoana,-18.513,48.1665,4/17/2018,4,107,2018,44,Pteropus rufus,male,1351,J,yes,Ambakoana
@@ -23,8 +51,6 @@ AMB144,0,,,,Ambakoana,-18.513,48.1665,4/17/2018,4,107,2018,44,Pteropus rufus,mal
 AMB145,0,,,,Ambakoana,-18.513,48.1665,4/18/2018,4,108,2018,44,Pteropus rufus,male,1354,A,no,Ambakoana
 AMB146,0,,,,Ambakoana,-18.513,48.1665,4/19/2018,4,109,2018,44,Pteropus rufus,male,1355,J,yes,Ambakoana
 AMB147,0,,,,Ambakoana,-18.513,48.1665,4/21/2018,4,111,2018,44,Pteropus rufus,male,1356,A,no,Ambakoana
-AMB149,1,picorna-like virus,partial,unclassified,Ambakoana,-18.513,48.1665,8/5/2018,8,217,2018,48,Pteropus rufus,female,1359,NL,no,Ambakoana
-AMB150,1,mischivirus,full,picornaviridae,Ambakoana,-18.513,48.1665,8/6/2018,8,218,2018,48,Pteropus rufus,male,1360,A,no,Ambakoana
 AMB151,0,,,,Ambakoana,-18.513,48.1665,8/7/2018,8,219,2018,48,Pteropus rufus,male,1361,A,no,Ambakoana
 AMB152,0,,,,Ambakoana,-18.513,48.1665,8/7/2018,8,219,2018,48,Pteropus rufus,male,1362,A,no,Ambakoana
 AMB153,0,,,,Ambakoana,-18.513,48.1665,8/7/2018,8,219,2018,48,Pteropus rufus,male,1363,J,yes,Ambakoana
@@ -34,7 +60,6 @@ AMB156,0,,,,Ambakoana,-18.513,48.1665,12/21/2018,12,355,2018,54,Pteropus rufus,f
 AMB157,0,,,,Ambakoana,-18.513,48.1665,12/24/2018,12,358,2018,54,Pteropus rufus,male,1373,A,no,Ambakoana
 AMB158,0,,,,Ambakoana,-18.513,48.1665,9/9/2018,9,253,2018,49,Pteropus rufus,male,1374,A,no,Ambakoana
 AMB159,0,,,,Ambakoana,-18.513,48.1665,1/6/2019,1,6,2019,56,Pteropus rufus,female,1375,A,no,Ambakoana
-AMB160,1,picorna-like virus,partial,unclassified,Ambakoana,-18.513,48.1665,1/7/2019,1,7,2019,56,Pteropus rufus,female,1376,A,no,Ambakoana
 AMB162,0,,,,Ambakoana,-18.513,48.1665,2/14/2019,2,45,2018,61,Pteropus rufus,male,1358,A,no,Ambakoana
 AMB165,0,,,,Ambakoana,-18.513,48.1665,3/22/2019,3,81,2019,64,Pteropus rufus,male,1380,A,no,Ambakoana
 AMB170,0,,,,Ambakoana,-18.513,48.1665,3/27/2019,3,86,2019,64,Pteropus rufus,male,1385,J,yes,Ambakoana
@@ -81,7 +106,6 @@ ANGB161,0,,,,AngavoKely,-18.9327,47.7578,9/9/2018,9,253,2018,49,Eidolon dupreanu
 ANGB163,0,,,,AngavoKely,-18.9327,47.7578,9/9/2018,9,253,2018,49,Eidolon dupreanum,male,1018,A,no,AngavoBe
 KEL140,0,,,,AngavoKely,-18.9327,47.7578,9/9/2018,9,253,2018,49,Eidolon dupreanum,male,944,A,NA,AngavoKely
 KEL141,0,,,,AngavoKely,-18.9327,47.7578,9/9/2018,9,253,2018,49,Eidolon dupreanum,female,945,NL,NA,AngavoKely
-KEL148,1,kunsagivirus,full,picornaviridae,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,male,1093,A,no,AngavoKely
 KEL149,0,,,,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,female,1094,NL,no,AngavoKely
 KEL150,0,,,,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,female,1092,NL,no,AngavoKely
 KEL151,0,,,,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,female,1091,NL,no,AngavoKely
@@ -94,12 +118,9 @@ KEL157,0,,,,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum
 KEL158,0,,,,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,female,1084,J,yes,AngavoKely
 KEL159,0,,,,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,male,1083,J,yes,AngavoKely
 KEL160,0,,,,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,female,1082,NL,no,AngavoKely
-KEL161,1,cripavirus,partial,iflaviridae,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,male,1081,A,no,AngavoKely
 KEL162,0,,,,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,female,1080,NL,no,AngavoKely
 KEL163,0,,,,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,female,1079,NL,no,AngavoKely
-KEL164,0,teschovirus,full,picornaviridae,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,female,1078,J,yes,AngavoKely
 KEL165,0,,,,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,female,1077,NL,no,AngavoKely
-KEL166,1,sapovirus,full,caliciviridae,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,female,1075,J,yes,AngavoKely
 KEL167,0,,,,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,female,1074,NL,no,AngavoKely
 KEL168,0,,,,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,female,1073,NL,no,AngavoKely
 KEL169,0,,,,AngavoKely,-18.9327,47.7578,2/15/2018,2,46,2018,61,Eidolon dupreanum,male,1072,J,yes,AngavoKely
@@ -140,7 +161,6 @@ KEL203,0,,,,AngavoKely,-18.9327,47.7578,4/9/2018,4,99,2018,42,Eidolon dupreanum,
 KEL204,0,,,,AngavoKely,-18.9327,47.7578,4/10/2018,4,100,2018,42,Eidolon dupreanum,female,1032,NL,no,AngavoKely
 KEL205,0,,,,AngavoKely,-18.9327,47.7578,4/10/2018,4,100,2018,42,Eidolon dupreanum,female,1031,NL,no,AngavoKely
 KEL206,0,,,,AngavoKely,-18.9327,47.7578,4/10/2018,4,100,2018,42,Eidolon dupreanum,female,1030,J,yes,AngavoKely
-KEL207,1,sapovirus,partial,caliciviridae,AngavoKely,-18.9327,47.7578,4/9/2018,4,99,2018,42,Eidolon dupreanum,female,1029,NL,no,AngavoKely
 KEL208,0,,,,AngavoKely,-18.9327,47.7578,4/10/2018,4,100,2018,42,Eidolon dupreanum,female,799,NL,no,AngavoKely
 KEL209,0,,,,AngavoKely,-18.9327,47.7578,4/10/2018,4,100,2018,42,Eidolon dupreanum,female,1028,NL,no,AngavoKely
 KEL210,0,,,,AngavoKely,-18.9327,47.7578,4/10/2018,4,100,2018,42,Eidolon dupreanum,female,1027,NL,no,AngavoKely
@@ -157,7 +177,6 @@ KEL221,0,,,,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanu
 KEL222,0,,,,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanum,female,974,NL,no,AngavoKely
 KEL223,0,,,,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanum,male,975,A,no,AngavoKely
 KEL224,0,,,,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanum,male,9.56E+14,A,no,AngavoKely
-KEL225,1,felisavirus,partial,iflaviridae,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanum,male,977,A,no,AngavoKely
 KEL226,0,,,,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanum,male,9.56E+14,A,no,AngavoKely
 KEL227,0,,,,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanum,female,978,NL,no,AngavoKely
 KEL228,0,,,,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanum,female,979,J,yes,AngavoKely
@@ -165,7 +184,6 @@ KEL229,0,,,,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanu
 KEL230,0,,,,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanum,male,981,A,no,AngavoKely
 KEL231,0,,,,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanum,male,9.56E+14,A,no,AngavoKely
 KEL232,0,,,,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanum,male,983,A,no,AngavoKely
-KEL233,1,sapelovirus,full,picornaviridae,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanum,male,984,A,no,Angavokely_Edup
 KEL234,0,,,,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanum,male,985,A,no,AngavoKely
 KEL235,0,,,,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanum,male,986,A,no,AngavoKely
 KEL236,0,,,,AngavoKely,-18.9327,47.7578,7/27/2018,7,208,2018,46,Eidolon dupreanum,male,987,J,yes,AngavoKely
@@ -194,12 +212,9 @@ KEL268,0,,,,AngavoKely,-18.9327,47.7578,1/6/2019,1,6,2019,56,Eidolon dupreanum,m
 KEL269,0,,,,AngavoKely,-18.9327,47.7578,1/6/2019,1,6,2019,56,Eidolon dupreanum,male,332,A,no,AngavoKely
 KEL270,0,,,,AngavoKely,-18.9327,47.7578,1/6/2019,1,6,2019,56,Eidolon dupreanum,female,1605,NL,no,AngavoKely
 KEL271,0,,,,AngavoKely,-18.9327,47.7578,1/6/2019,1,6,2019,56,Eidolon dupreanum,female,,NL,no,AngavoKely
-KEL272,1,sapelovirus,full,picornaviridae,AngavoKely,-18.9327,47.7578,1/7/2019,1,7,2019,56,Eidolon dupreanum,male,1620,A,no,Angavokely_Edup
 KEL272B,0,,,,AngavoKely,-18.9327,47.7578,3/14/2019,3,73,2019,63,Eidolon dupreanum,female,393,NL,no,AngavoKely
-KEL273,1,sapelovirus,partial,picornaviridae,AngavoKely,-18.9327,47.7578,1/7/2019,1,7,2019,56,Eidolon dupreanum,male,977,A,no,Angavokely_Edup
 KEL274,0,,,,AngavoKely,-18.9327,47.7578,1/7/2019,1,7,2019,56,Eidolon dupreanum,female,1603,NL,no,AngavoKely
 KEL275,0,,,,AngavoKely,-18.9327,47.7578,1/7/2019,1,7,2019,56,Eidolon dupreanum,male,9.56E+14,A,no,AngavoKely
-KEL275B,1,sapelovirus,partial,picornaviridae,AngavoKely,-18.9327,47.7578,3/14/2019,3,73,2019,63,Eidolon dupreanum,female,388,NL,no,AngavoKely
 KEL278,0,,,,AngavoKely,-18.9327,47.7578,2/5/2019,2,36,2019,60,Eidolon dupreanum,male,1608,A,no,AngavoKely
 KEL278B,0,,,,AngavoKely,-18.9327,47.7578,3/14/2019,3,73,2019,63,Eidolon dupreanum,female,399,NL,no,AngavoKely
 KEL279,0,,,,AngavoKely,-18.9327,47.7578,2/5/2019,2,36,2019,60,Eidolon dupreanum,male,1630,A,no,AngavoKely
@@ -218,7 +233,6 @@ KEL291B,0,,,,AngavoKely,-18.9327,47.7578,3/15/2019,3,74,2019,63,Eidolon dupreanu
 KEL293,0,,,,AngavoKely,-18.9327,47.7578,2/6/2019,2,37,2019,60,Eidolon dupreanum,male,1024,A,no,AngavoKely
 KEL295,0,,,,AngavoKely,-18.9327,47.7578,2/6/2019,2,37,2019,60,Eidolon dupreanum,male,1626,A,no,AngavoKely
 KEL296,0,,,,AngavoKely,-18.9327,47.7578,2/6/2019,2,37,2019,60,Eidolon dupreanum,female,1644,A,no,AngavoKely
-KEL298,1,sapelovirus,partial,picornaviridae,AngavoKely,-18.9327,47.7578,2/6/2019,2,37,2019,60,Eidolon dupreanum,male,1645,A,no,AngavoKely
 KEL299,0,,,,AngavoKely,-18.9327,47.7578,2/6/2019,2,37,2019,60,Eidolon dupreanum,male,1607,A,no,AngavoKely
 KEL299B,0,,,,AngavoKely,-18.9327,47.7578,3/15/2019,3,74,2019,63,Eidolon dupreanum,female,1003,NL,no,AngavoKely
 KEL305,0,,,,AngavoKely,-18.9327,47.7578,4/23/2019,4,113,2019,66,Eidolon dupreanum,female,1638,NL,NA,AngavoKely
@@ -228,7 +242,6 @@ KEL310,0,,,,AngavoKely,-18.9327,47.7578,4/23/2019,4,113,2019,66,Eidolon dupreanu
 KEL312,0,,,,AngavoKely,-18.9327,47.7578,4/23/2019,4,113,2019,66,Eidolon dupreanum,male,1639,A,NA,AngavoKely
 KEL315,0,,,,AngavoKely,-18.9327,47.7578,4/23/2019,4,113,2019,66,Eidolon dupreanum,female,1670,NL,NA,AngavoKely
 KEL317,0,,,,AngavoKely,-18.9327,47.7578,4/23/2019,4,113,2019,66,Eidolon dupreanum,male,1672,A,NA,AngavoKely
-KEL318,1,kobuvirus,full,picornaviridae,AngavoKely,-18.9327,47.7578,4/23/2019,4,113,2019,66,Eidolon dupreanum,female,1673,NL,NA,AngavoKely
 KEL322,0,,,,AngavoKely,-18.9327,47.7578,4/23/2019,4,113,2019,66,Eidolon dupreanum,female,1647,NL,NA,AngavoKely
 KEL334,0,,,,AngavoKely,-18.9327,47.7578,4/23/2019,4,113,2019,66,Eidolon dupreanum,female,1628,NL,NA,AngavoKely
 MARO43,0,,,,Ambakoana,-18.513,48.1665,9/1/2014,9,244,2018,10,Pteropus rufus,female,436,NL,NA,Marovitsika
@@ -272,7 +285,6 @@ MIZ175,0,,,,Maromizaha,-18.9623,48.4525,4/13/2018,4,103,2018,43,Rousettus madaga
 MIZ176,0,,,,Maromizaha,-18.9623,48.4525,4/13/2018,4,103,2018,43,Rousettus madagascariensis,male,,J,yes,Maromizaha
 MIZ177,0,,,,Maromizaha,-18.9623,48.4525,4/13/2018,4,103,2018,43,Rousettus madagascariensis,female,,NL,no,Maromizaha
 MIZ178,0,,,,Maromizaha,-18.9623,48.4525,4/14/2018,4,104,2018,43,Rousettus madagascariensis,male,,A,no,Maromizaha
-MIZ179,1,sapovirus,partial,caliciviridae,Maromizaha,-18.9623,48.4525,4/14/2018,4,104,2018,43,Rousettus madagascariensis,male,,A,no,Maromizaha
 MIZ180,0,,,,Maromizaha,-18.9623,48.4525,4/14/2018,4,104,2018,43,Rousettus madagascariensis,male,,A,no,Maromizaha
 MIZ181,0,,,,Maromizaha,-18.9623,48.4525,4/14/2018,4,104,2018,43,Rousettus madagascariensis,male,,A,no,Maromizaha
 MIZ183,0,,,,Maromizaha,-18.9623,48.4525,4/14/2018,4,104,2018,43,Rousettus madagascariensis,male,,A,no,Maromizaha
@@ -281,10 +293,8 @@ MIZ185,0,,,,Maromizaha,-18.9623,48.4525,4/14/2018,4,104,2018,43,Rousettus madaga
 MIZ186,0,,,,Maromizaha,-18.9623,48.4525,4/14/2018,4,104,2018,43,Rousettus madagascariensis,male,,A,no,Maromizaha
 MIZ188,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,male,M30,A,no,Maromizaha
 MIZ189,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,female,M31,NL,no,Maromizaha
-MIZ190,1,teschovirus,full,picornaviridae,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,male,M32,A,no,Maromizaha
 MIZ192,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,female,M34,NL,no,Maromizaha
 MIZ193,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,female,M35,J,yes,Maromizaha
-MIZ194,1,bat picornavirus,partial,picornaviridae,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,female,M36,NL,no,Maromizaha
 MIZ195,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,female,M37,NL,no,Maromizaha
 MIZ196,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,male,M38,A,no,Maromizaha
 MIZ197,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,female,M39,NL,no,Maromizaha
@@ -295,7 +305,6 @@ MIZ201,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madaga
 MIZ202,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,female,M44,NL,no,Maromizaha
 MIZ203,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,female,M45,NL,no,Maromizaha
 MIZ204,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,male,M46,A,no,Maromizaha
-MIZ205,1,teschovirus,full,picornaviridae,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,male,M47,A,no,Maromizaha
 MIZ206,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,male,M48,A,no,Maromizaha
 MIZ207,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,female,M49,NL,no,Maromizaha
 MIZ208,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,male,M50,A,no,Maromizaha
@@ -304,10 +313,8 @@ MIZ210,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madaga
 MIZ211,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,male,M53,A,no,Maromizaha
 MIZ212,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,female,M54,NL,no,Maromizaha
 MIZ213,0,,,,Maromizaha,-18.9623,48.4525,7/29/2018,7,210,2018,47,Rousettus madagascariensis,male,M56,A,no,Maromizaha
-MIZ214,1,bat picornavirus,full,picornaviridae,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,male,M57,A,no,Maromizaha
 MIZ215,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,male,M58,A,no,Maromizaha
 MIZ218,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,male,M61,A,no,Maromizaha
-MIZ219,1,sapovirus,partial,caliciviridae,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,male,M62,A,no,Maromizaha
 MIZ220,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,male,M63,A,no,Maromizaha
 MIZ221,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,male,M64,A,no,Maromizaha
 MIZ222,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,female,M65,NL,no,Maromizaha
@@ -316,7 +323,6 @@ MIZ225,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madaga
 MIZ226,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,male,M69,A,no,Maromizaha
 MIZ227,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,female,M70,P,no,Maromizaha
 MIZ228,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,female,M71,P,no,Maromizaha
-MIZ229,1,nepovirus,full,secoviridae,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,female,M72,NL,no,Maromizaha
 MIZ230,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,male,M73,A,no,Maromizaha
 MIZ231,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,female,M74,J,yes,Maromizaha
 MIZ232,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,female,M75,J,yes,Maromizaha
@@ -326,9 +332,7 @@ MIZ235,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madaga
 MIZ236,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,female,M79,NL,no,Maromizaha
 MIZ238,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,female,M81,NL,no,Maromizaha
 MIZ239,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,male,M82,A,no,Maromizaha
-MIZ240,1,bat picornavirus,full,picornaviridae,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,male,M83,A,no,Maromizaha
 MIZ242,0,,,,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,male,M85,A,no,Maromizaha
-MIZ243,1,sapelovirus,full,picornaviridae,Maromizaha,-18.9623,48.4525,9/11/2018,9,254,2018,50,Rousettus madagascariensis,male,M86,J,yes,Maromizaha
 MIZ260,0,,,,Maromizaha,-18.9623,48.4525,12/21/2018,12,355,2018,53,Rousettus madagascariensis,male,M98,A,no,Maromizaha
 MIZ261,0,,,,Maromizaha,-18.9623,48.4525,12/21/2018,12,355,2018,53,Rousettus madagascariensis,female,M99,L,no,Maromizaha
 MIZ262,0,,,,Maromizaha,-18.9623,48.4525,12/21/2018,12,355,2018,53,Rousettus madagascariensis,female,M100,L,no,Maromizaha
@@ -359,7 +363,6 @@ MIZ322,0,,,,Maromizaha,-18.9623,48.4525,1/4/2019,1,4,2019,55,Rousettus madagasca
 MIZ338,0,,,,Maromizaha,-18.9623,48.4525,1/31/2019,1,31,2019,59,Rousettus madagascariensis,female,2080,L,,Maromizaha
 MIZ340,0,,,,Maromizaha,-18.9623,48.4525,1/31/2019,1,31,2019,59,Rousettus madagascariensis,female,2041,L,,Maromizaha
 MIZ342,0,,,,Maromizaha,-18.9623,48.4525,1/31/2019,1,31,2019,59,Rousettus madagascariensis,female,2059,L,,Maromizaha
-MIZ345,1,sapovirus,partial,caliciviridae,Maromizaha,-18.9623,48.4525,1/31/2019,1,31,2019,59,Rousettus madagascariensis,female,,J,,Maromizaha
 MIZ351,0,,,,Maromizaha,-18.9623,48.4525,2/1/2019,2,32,2019,59,Rousettus madagascariensis,female,1780,L,,Maromizaha
 MIZ352,0,,,,Maromizaha,-18.9623,48.4525,2/1/2019,2,32,2019,59,Rousettus madagascariensis,male,1778,A,,Maromizaha
 MIZ355,0,,,,Maromizaha,-18.9623,48.4525,2/1/2019,2,32,2019,59,Rousettus madagascariensis,female,1703,NL,,Maromizaha
