@@ -138,41 +138,41 @@ plot(family, shade=TRUE)
 
 
 #cbind pos neg exploration
-all<-gam(cbind(pos,neg)~s(day_of_year, bs="cc"), data=dat, family = binomial)
+all<-gam(cbind(pos,neg)~s(day_of_year, bs="cc", k=7), data=dat, family = binomial)
 all
 summary(all)
 plot(all)
 #not sig
 
-species<-gam(cbind(pos,neg)~s(day_of_year, by=species, bs="cc"), data=dat, family = binomial)
+species<-gam(cbind(pos,neg)~s(day_of_year, by=species, bs="cc", k=7), data=dat, family = binomial)
 species
 summary(species)
 plot(species)
 #RM and PR sig
 
-virus<-gam(cbind(pos,neg)~s(day_of_year, by=virus, bs="cc"), data=dat, family = binomial)
+virus<-gam(cbind(pos,neg)~s(day_of_year, by=virus, bs="cc", k=7), data=dat, family = binomial)
 virus
 summary(virus)
 plot(virus)
 #none sig
 
-family<-gam(cbind(pos,neg)~s(day_of_year, by=family, bs="cc"), data=dat, family = binomial)
+family<-gam(cbind(pos,neg)~s(day_of_year, by=family, bs="cc", k=7), data=dat, family = binomial)
 family
 summary(family)
 plot(family)
 #not sig
 
-sex<-gam(cbind(pos,neg)~s(day_of_year, by=bat_sex, bs="cc"), data=dat, family = binomial)
+sex<-gam(cbind(pos,neg)~s(day_of_year, by=bat_sex, bs="cc", k=7), data=dat, family = binomial)
 sex
 summary(sex)
 plot(sex)
 #male sig
 
-age<-gam(cbind(pos,neg)~s(day_of_year, by=bat_age_class, bs="cc"), data=dat, family = binomial)
+age<-gam(cbind(pos,neg)~s(day_of_year, by=bat_age_class, bs="cc", k=7), data=dat, family = binomial)
 age
 summary(age)
 plot(age)
-#not sig, adult is 0.08 so close?
+#not sig
 
 
 
@@ -187,10 +187,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 allpos<-ggplot(dat)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -205,9 +205,9 @@ ED<-subset(dat, species=="Eidolon dupreanum")
 RM<-subset(dat, species=="Rousettus madagascariensis")
 PR<-subset(dat, species=="Pteropus rufus")
 
-EDgam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc"), data=ED, family = binomial)
-RMgam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc"), data=RM, family = binomial)
-PRgam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc"), data=PR, family = binomial)
+EDgam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc", k=7), data=ED, family = binomial)
+RMgam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc", k=7), data=RM, family = binomial)
+PRgam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc", k=7), data=PR, family = binomial)
 
 #eidolon
 pred.df=cbind.data.frame(day_of_year=1:365)
@@ -217,10 +217,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 edup<-ggplot(ED)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -239,10 +239,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 pruf<-ggplot(PR)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -261,10 +261,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 rmad<-ggplot(RM)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -281,13 +281,13 @@ species
 #subset age and sex
 Adult<-subset(dat, bat_age_class=="A")
 Juv<-subset(dat, bat_age_class=="J")
-Adultgam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc"), data=Adult, family = binomial)
-Juvgam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc"), data=Juv, family = binomial)
+Adultgam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc", k=7), data=Adult, family = binomial)
+Juvgam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc", k=7), data=Juv, family = binomial)
 
 Fem<-subset(dat, bat_sex=="Female")
 Male<-subset(dat, bat_sex=="Male")
-Femgam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc"), data=Fem, family = binomial)
-Malegam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc"), data=Male, family = binomial)
+Femgam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc", k=7), data=Fem, family = binomial)
+Malegam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc", k=7), data=Male, family = binomial)
 
 
 #females
@@ -298,10 +298,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 females<-ggplot(Fem)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -319,10 +319,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 males<-ggplot(Male)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -339,10 +339,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 adults<-ggplot(Adult)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -360,10 +360,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 juveniles<-ggplot(Juv)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -384,7 +384,7 @@ seco<-subset(dat, family=="secoviridae")
 ifla<-subset(dat, family=="iflaviridae")
 un<-subset(dat, family=="unclassified")
 
-picornagam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc", k=8), data=picorna, family = binomial)
+picornagam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc", k=7), data=picorna, family = binomial)
 caligam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc", k=5), data=cali, family = binomial)
 ungam<-gam(cbind(pos,neg)~s(day_of_year, bs="cc", k=4), data=un, family = binomial)
 
@@ -396,10 +396,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 picornaviridae<-ggplot(picorna)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -416,10 +416,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 caliciviridae<-ggplot(cali)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -436,10 +436,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 unclassified<-ggplot(un)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -525,38 +525,37 @@ dat2$year<-factor(dat2$year, levels=c("2018","2019"))
 
 
 #individual predictors of pos neg status exploration
-all<-gam(pos~s(day_of_year, bs="cc")+s(year,bs="re"), data=dat2, family = binomial)
+all<-gam(pos~s(day_of_year, bs="cc", k=7)+s(year,bs="re"), data=dat2, family = binomial)
 all
 summary(all)
 plot(all)
-
 #not sig, no effect of year
 
-species<-gam(pos~s(day_of_year,by=species, bs="cc")+s(year,bs="re"), data=dat2, family = binomial)
+species<-gam(pos~s(day_of_year,by=species, bs="cc", k=7)+s(year,bs="re"), data=dat2, family = binomial)
 species
 summary(species)
 plot(species)
 #RM and PR sig, no effect of year
 
-virus<-gam(pos~s(day_of_year,by=virus, bs="cc")+s(year,bs="re"), data=dat2, family = binomial)
+virus<-gam(pos~s(day_of_year,by=virus, bs="cc", k=7)+s(year,bs="re"), data=dat2, family = binomial)
 virus
 summary(virus)
 plot(virus)
 #none sig, no effect of year
 
-family<-gam(pos~s(day_of_year, by=family, bs="cc")+s(year,bs="re"), data=dat2, family = binomial)
+family<-gam(pos~s(day_of_year, by=family, bs="cc", k=7)+s(year,bs="re"), data=dat2, family = binomial)
 family
 summary(family)
 plot(family)
 #not sig, no effect of year
 
-sex<-gam(pos~s(day_of_year, by=bat_sex, bs="cc")+s(year,bs="re"), data=dat2, family = binomial)
+sex<-gam(pos~s(day_of_year, by=bat_sex, bs="cc", k=7)+s(year,bs="re"), data=dat2, family = binomial)
 sex
 summary(sex)
 plot(sex)
 #male sig, no effect of year
 
-age<-gam(pos~s(day_of_year, by=bat_age_class,bs="cc")+s(year,bs="re"), data=dat2, family=binomial)
+age<-gam(pos~s(day_of_year, by=bat_age_class,bs="cc", k=7)+s(year,bs="re"), data=dat2, family=binomial)
 age
 summary(age)
 plot(age)
@@ -578,10 +577,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 allpos<-ggplot(dat2)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -596,9 +595,9 @@ ED<-subset(dat2, species=="Eidolon dupreanum")
 RM<-subset(dat2, species=="Rousettus madagascariensis")
 PR<-subset(dat2, species=="Pteropus rufus")
 
-EDgam<-gam(pos~s(day_of_year,bs="cc")+s(year,bs="re"), data=ED, family = binomial)
-RMgam<-gam(pos~s(day_of_year, bs="cc")+s(year,bs="re"), data=RM, family = binomial)
-PRgam<-gam(pos~s(day_of_year, bs="cc")+s(year,bs="re"), data=PR, family = binomial)
+EDgam<-gam(pos~s(day_of_year,bs="cc", k=7)+s(year,bs="re"), data=ED, family = binomial)
+RMgam<-gam(pos~s(day_of_year, bs="cc", k=7)+s(year,bs="re"), data=RM, family = binomial)
+PRgam<-gam(pos~s(day_of_year, bs="cc", k=7)+s(year,bs="re"), data=PR, family = binomial)
 
 #eidolon
 pred.df=cbind.data.frame(day_of_year=1:365, year=2019)
@@ -608,10 +607,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 edup<-ggplot(ED)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -630,10 +629,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 pruf<-ggplot(PR)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -652,10 +651,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 rmad<-ggplot(RM)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -672,13 +671,13 @@ species
 #subset age and sex
 Adult<-subset(dat2, bat_age_class=="A")
 Juv<-subset(dat2, bat_age_class=="J")
-Adultgam<-gam(pos~s(day_of_year,bs="cc")+s(year,bs="re"), data=Adult, family=binomial)
-Juvgam<-gam(pos~s(day_of_year, bs="cc")+s(year,bs="re"), data=Juv, family=binomial)
+Adultgam<-gam(pos~s(day_of_year,bs="cc", k=7)+s(year,bs="re"), data=Adult, family=binomial)
+Juvgam<-gam(pos~s(day_of_year, bs="cc", k=7)+s(year,bs="re"), data=Juv, family=binomial)
 
 Fem<-subset(dat2, bat_sex=="Female")
 Male<-subset(dat2, bat_sex=="Male")
-Femgam<-gam(pos~s(day_of_year,bs="cc")+s(year,bs="re"), data=Fem, family=binomial)
-Malegam<-gam(pos~s(day_of_year,bs="cc")+s(year,bs="re"), data=Male, family=binomial)
+Femgam<-gam(pos~s(day_of_year,bs="cc", k=7)+s(year,bs="re"), data=Fem, family=binomial)
+Malegam<-gam(pos~s(day_of_year,bs="cc", k=7)+s(year,bs="re"), data=Male, family=binomial)
 
 
 #females
@@ -689,10 +688,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 females<-ggplot(Fem)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -710,10 +709,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 males<-ggplot(Male)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -731,10 +730,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 adults<-ggplot(Adult)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -752,10 +751,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 juveniles<-ggplot(Juv)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -766,7 +765,7 @@ juveniles
 
 
 #plot next to each other for analysis
-sexage<-plot_grid(females, males,adults, juveniles, nrow=2)
+sexage<-plot_grid(females, males,adults, juveniles, nrow=2, labels = "AUTO", label_size = 23)
 sexage
 
 
@@ -1119,7 +1118,7 @@ seco<-subset(dat2, family=="secoviridae")
 ifla<-subset(dat2, family=="iflaviridae")
 un<-subset(dat2, family=="unclassified")
 
-picornagam<-gam(pos~s(day_of_year, bs="cc", k=8)+s(year,bs="re"), data=picorna, family = binomial)
+picornagam<-gam(pos~s(day_of_year, bs="cc", k=7)+s(year,bs="re"), data=picorna, family = binomial)
 caligam<-gam(pos~s(day_of_year, bs="cc", k=5)+s(year,bs="re"), data=cali, family = binomial)
 ungam<-gam(pos~s(day_of_year, bs="cc", k=4)+s(year,bs="re"), data=un, family = binomial)
 
@@ -1131,10 +1130,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 picornaviridae<-ggplot(picorna)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -1151,10 +1150,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 caliciviridae<-ggplot(cali)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -1171,10 +1170,10 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 
 unclassified<-ggplot(un)+
-  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lightsteelblue1", alpha=0.5)+
-  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="thistle1", alpha=0.05)+
-  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
-  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="olivedrab1", alpha=0.01)+
+  geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
+  geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
+  geom_rect(aes(xmin=314, xmax=365, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
+  geom_rect(aes(xmin=1, xmax=31, ymin=-Inf, ymax=Inf),fill="paleturquoise1", alpha=0.1)+
   theme_classic()+ylab("Prevalence")+xlab("Day of year")+
   geom_line(data=pred.df, aes(x=day_of_year, y=predicted_count), size=1) +
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
@@ -1186,4 +1185,6 @@ unclassified
 #plot together
 families<-plot_grid(picornaviridae,caliciviridae,unclassified, nrow=1)
 families
+
+
 
