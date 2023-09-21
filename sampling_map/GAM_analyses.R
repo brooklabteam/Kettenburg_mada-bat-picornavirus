@@ -185,6 +185,7 @@ pred.df$predicted_count<-predict.gam(all, newdata=pred.df, type = "response", se
 pred.df$predicted_count_se <- predict.gam(all, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 allpos<-ggplot(dat)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -215,6 +216,7 @@ pred.df$predicted_count<-predict.gam(EDgam, newdata=pred.df, type = "response", 
 pred.df$predicted_count_se <- predict.gam(EDgam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 edup<-ggplot(ED)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -237,6 +239,7 @@ pred.df$predicted_count<-predict.gam(PRgam, newdata=pred.df, type = "response", 
 pred.df$predicted_count_se <- predict.gam(PRgam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 pruf<-ggplot(PR)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -259,6 +262,7 @@ pred.df$predicted_count<-predict.gam(RMgam, newdata=pred.df, type = "response", 
 pred.df$predicted_count_se <- predict.gam(RMgam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 rmad<-ggplot(RM)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -296,6 +300,7 @@ pred.df$predicted_count<-predict.gam(Femgam, newdata=pred.df, type = "response",
 pred.df$predicted_count_se <- predict.gam(Femgam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 females<-ggplot(Fem)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -317,6 +322,7 @@ pred.df$predicted_count<-predict.gam(Malegam, newdata=pred.df, type = "response"
 pred.df$predicted_count_se <- predict.gam(Malegam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 males<-ggplot(Male)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -337,6 +343,7 @@ pred.df$predicted_count<-predict.gam(Adultgam, newdata=pred.df, type = "response
 pred.df$predicted_count_se <- predict.gam(Adultgam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 adults<-ggplot(Adult)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -358,6 +365,7 @@ pred.df$predicted_count<-predict.gam(Juvgam, newdata=pred.df, type = "response",
 pred.df$predicted_count_se <- predict.gam(Juvgam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 juveniles<-ggplot(Juv)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -394,6 +402,7 @@ pred.df$predicted_count<-predict.gam(picornagam, newdata=pred.df, type = "respon
 pred.df$predicted_count_se <- predict.gam(picornagam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 picornaviridae<-ggplot(picorna)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -414,6 +423,7 @@ pred.df$predicted_count<-predict.gam(caligam, newdata=pred.df, type = "response"
 pred.df$predicted_count_se <- predict.gam(caligam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 caliciviridae<-ggplot(cali)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -434,6 +444,7 @@ pred.df$predicted_count<-predict.gam(ungam, newdata=pred.df, type = "response", 
 pred.df$predicted_count_se <- predict.gam(ungam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 unclassified<-ggplot(un)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -575,6 +586,7 @@ pred.df$predicted_count<-predict.gam(all, newdata=pred.df, type = "response", se
 pred.df$predicted_count_se <- predict.gam(all, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 allpos<-ggplot(dat2)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -605,6 +617,7 @@ pred.df$predicted_count<-predict.gam(EDgam, newdata=pred.df, type = "response", 
 pred.df$predicted_count_se <- predict.gam(EDgam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 edup<-ggplot(ED)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -627,6 +640,7 @@ pred.df$predicted_count<-predict.gam(PRgam, newdata=pred.df, type = "response", 
 pred.df$predicted_count_se <- predict.gam(PRgam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 pruf<-ggplot(PR)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -649,6 +663,7 @@ pred.df$predicted_count<-predict.gam(RMgam, newdata=pred.df, type = "response", 
 pred.df$predicted_count_se <- predict.gam(RMgam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 rmad<-ggplot(RM)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -686,6 +701,7 @@ pred.df$predicted_count<-predict.gam(Femgam, newdata=pred.df, type = "response",
 pred.df$predicted_count_se <- predict.gam(Femgam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 females<-ggplot(Fem)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -707,6 +723,7 @@ pred.df$predicted_count<-predict.gam(Malegam, newdata=pred.df, type = "response"
 pred.df$predicted_count_se <- predict.gam(Malegam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 males<-ggplot(Male)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -728,6 +745,7 @@ pred.df$predicted_count<-predict.gam(Adultgam, newdata=pred.df, type = "response
 pred.df$predicted_count_se <- predict.gam(Adultgam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 adults<-ggplot(Adult)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -749,6 +767,7 @@ pred.df$predicted_count<-predict.gam(Juvgam, newdata=pred.df, type = "response",
 pred.df$predicted_count_se <- predict.gam(Juvgam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 juveniles<-ggplot(Juv)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -765,7 +784,7 @@ juveniles
 
 
 #plot next to each other for analysis
-sexage<-plot_grid(females, males,adults, juveniles, nrow=2, labels = "AUTO", label_size = 23)
+sexage<-plot_grid(females, males,adults, juveniles, nrow=2)
 sexage
 
 
@@ -1128,6 +1147,7 @@ pred.df$predicted_count<-predict.gam(picornagam, newdata=pred.df, type = "respon
 pred.df$predicted_count_se <- predict.gam(picornagam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 picornaviridae<-ggplot(picorna)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -1148,6 +1168,7 @@ pred.df$predicted_count<-predict.gam(caligam, newdata=pred.df, type = "response"
 pred.df$predicted_count_se <- predict.gam(caligam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 caliciviridae<-ggplot(cali)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
@@ -1168,6 +1189,7 @@ pred.df$predicted_count<-predict.gam(ungam, newdata=pred.df, type = "response", 
 pred.df$predicted_count_se <- predict.gam(ungam, newdata=pred.df,type = "response",se.fit = T)$se
 pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_count_se
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
+pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
 unclassified<-ggplot(un)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
