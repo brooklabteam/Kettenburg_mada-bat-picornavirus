@@ -152,7 +152,7 @@ allpos<-ggplot(dat2)+
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
   theme(axis.text.x = element_text(size=10), axis.text.y = element_text(size=10),axis.title.y = element_text(size=10),axis.title.x = element_text(size=10))+
   scale_x_continuous(breaks=c(0,100,200,300), labels=c("0", "100", "200", "300"))+
-  ggtitle("Picornavirales prevalence over time")
+  ggtitle("Picornavirales prevalence over time, p=0.113")
 
 allpos
 
@@ -173,7 +173,7 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
-title<-expression(paste(italic("Eidolon dupreanum")))
+title<-expression(paste(italic("Eidolon dupreanum, "), "p=0.714"))
 edup<-ggplot(ED)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
   geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
@@ -197,7 +197,7 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
-title<-expression(paste(italic("Pteropus rufus")))
+title<-expression(paste(italic("Pteropus rufus, "), "p=0.034*"))
 pruf<-ggplot(PR)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
   geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
@@ -221,7 +221,7 @@ pred.df$predicted_count_lci <- pred.df$predicted_count -1.96*pred.df$predicted_c
 pred.df$predicted_count_uci <- pred.df$predicted_count +1.96*pred.df$predicted_count_se
 pred.df$predicted_count_lci[pred.df$predicted_count_lci <0] <- 0
 
-title<-expression(paste(italic("Rousettus madagascariensis")))
+title<-expression(paste(italic("Rousettus madagascariensis, "), "p=0.006**"))
 rmad<-ggplot(RM)+
   geom_rect(aes(xmin=152, xmax=244, ymin=-Inf, ymax=Inf),fill="lemonchiffon2", alpha=0.5)+
   geom_rect(aes(xmin=217, xmax=314, ymin=-Inf, ymax=Inf),fill="#CCCCFF", alpha=0.02)+
@@ -271,7 +271,7 @@ females<-ggplot(Fem)+
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
   theme(axis.text.x = element_text(size=10), axis.text.y = element_text(size=10),axis.title.y = element_text(size=10),axis.title.x = element_text(size=10))+
   scale_x_continuous(breaks=c(0,100,200,300), labels=c("0", "100", "200", "300"))+
-  ggtitle("Females")
+  ggtitle("Females, p=0.782")
 females
 
 
@@ -293,7 +293,7 @@ males<-ggplot(Male)+
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
   theme(axis.text.x = element_text(size=10), axis.text.y = element_text(size=10),axis.title.y = element_text(size=10),axis.title.x = element_text(size=10))+
   scale_x_continuous(breaks=c(0,100,200,300), labels=c("0", "100", "200", "300"))+
-  ggtitle("Males")
+  ggtitle("Males, p=0.026*")
 males
 
 
@@ -315,7 +315,7 @@ adults<-ggplot(Adult)+
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
   theme(axis.text.x = element_text(size=10), axis.text.y = element_text(size=10),axis.title.y = element_text(size=10),axis.title.x = element_text(size=10))+
   scale_x_continuous(breaks=c(0,100,200,300), labels=c("0", "100", "200", "300"))+
-  ggtitle("Adults")
+  ggtitle("Adults, p=0.090")
 adults
 
 
@@ -337,7 +337,7 @@ juveniles<-ggplot(Juv)+
   geom_ribbon(data=pred.df, aes(x=day_of_year, ymin=predicted_count_lci, ymax=predicted_count_uci), alpha=.3)+
   theme(axis.text.x = element_text(size=10), axis.text.y = element_text(size=10),axis.title.y = element_text(size=10),axis.title.x = element_text(size=10))+
   scale_x_continuous(breaks=c(0,100,200,300), labels=c("0", "100", "200", "300"))+
-  ggtitle("Juveniles")
+  ggtitle("Juveniles, p=0.761")
 juveniles
 
 
@@ -346,3 +346,4 @@ Fig2<-plot_grid(females, males,adults, juveniles, nrow=2, labels="AUTO", label_s
 Fig2
 
 #export 10x8inch landscape PDF for Fig 2
+
