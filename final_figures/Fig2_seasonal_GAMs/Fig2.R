@@ -90,7 +90,10 @@ dat2$year<-factor(dat2$year, levels=c("2018","2019"))
 
 
 #individual predictors of pos neg status exploration
-all<-gam(pos~s(day_of_year, bs="cc", k=7)+s(year,bs="re"), data=dat2, family = binomial)
+all<-gam(pos~s(day_of_year,by=bat_sex, bs="cc", k=7)+
+           s(day_of_year,by=bat_age_class, bs="cc", k=7)+
+           s(day_of_year,by=species, bs="cc", k=7)+
+           s(year,bs="re"), data=dat2, family = binomial)
 all
 summary(all)
 plot(all)
