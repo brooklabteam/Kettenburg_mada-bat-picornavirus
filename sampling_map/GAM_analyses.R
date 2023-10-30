@@ -104,6 +104,31 @@ edup<-subset(dat2, species=="Eidolon dupreanum")
 rmad<-subset(dat2, species=="Rousettus madagascariensis")
 pruf<-subset(dat2, species=="Pteropus rufus")
 
+edupgam<-gam(cbind(pos,neg)~s(day_of_year,by=bat_sex, bs="cc", k=7)+
+           s(day_of_year,by=bat_age_class, bs="cc", k=7)+
+           s(year,bs="re"), data=edup, family = binomial)
+edupgam
+summary(edupgam)
+plot(edupgam)
+# none sig
+
+rmadgam<-gam(cbind(pos,neg)~s(day_of_year,by=bat_sex, bs="cc", k=7)+
+               s(day_of_year,by=bat_age_class, bs="cc", k=7)+
+               s(year,bs="re"), data=rmad, family = binomial)
+rmadgam
+summary(rmadgam)
+plot(rmadgam)
+# none sig
+
+prufgam<-gam(cbind(pos,neg)~s(day_of_year,by=bat_sex, bs="cc", k=7)+
+               s(day_of_year,by=bat_age_class, bs="cc", k=7)+
+               s(year,bs="re"), data=pruf, family = binomial)
+prufgam
+summary(prufgam)
+plot(prufgam)
+# none sig
+
+
 #breakdown species by sex
 edup_male<-subset(edup, bat_sex=="Male")
 rmad_male<-subset(rmad, bat_sex=="Male")
