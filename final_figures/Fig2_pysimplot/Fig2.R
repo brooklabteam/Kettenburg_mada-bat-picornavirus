@@ -350,7 +350,7 @@ hepatovirus_ictv_aa
 
 
 #put gene map with PySimPlot
-hep_ictv_aa<-hepatovirus_ictv_aa/ictv_hepato+plot_layout(nrow=2,  heights = c(2, 0.27))
+hep_ictv_aa<-hepatovirus_ictv_aa/ictv_hepato+plot_layout(nrow=2,  heights = c(1, 0.3))
 hep_ictv_aa
 
 hep_ictv_aa<-as.ggplot(hep_ictv_aa)
@@ -422,7 +422,7 @@ kobuvirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, col
 kobuvirus_ictv_aa
 
 #put gene map with PySimPlot
-kobu_ictv_aa<-kobuvirus_ictv_aa/ictv_kobu+plot_layout(nrow=2,  heights = c(2, 0.27))
+kobu_ictv_aa<-kobuvirus_ictv_aa/ictv_kobu+plot_layout(nrow=2,  heights = c(1, 0.3))
 kobu_ictv_aa
 
 kobu_ictv_aa<-as.ggplot(kobu_ictv_aa)
@@ -485,7 +485,7 @@ kunsagivirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, 
 kunsagivirus_ictv_aa
 
 #put gene map with PySimPlot
-kun_ictv_aa<-kunsagivirus_ictv_aa/ictv_kun+plot_layout(nrow=2,  heights = c(2, 0.27))
+kun_ictv_aa<-kunsagivirus_ictv_aa/ictv_kun+plot_layout(nrow=2,  heights = c(1, 0.3))
 kun_ictv_aa
 
 kun_ictv_aa<-as.ggplot(kun_ictv_aa)
@@ -551,7 +551,7 @@ mischivirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, c
 mischivirus_ictv_aa
 
 #put gene map with PySimPlot
-mischi_ictv_aa<-mischivirus_ictv_aa/ictv_mischi+plot_layout(nrow=2,  heights = c(2, 0.27))
+mischi_ictv_aa<-mischivirus_ictv_aa/ictv_mischi+plot_layout(nrow=2,  heights = c(1, 0.3))
 mischi_ictv_aa
 
 mischi_ictv_aa<-as.ggplot(mischi_ictv_aa)
@@ -619,7 +619,7 @@ sapelovirus_full_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=val
 sapelovirus_full_ictv_aa
 
 #put gene map with PySimPlot
-sapelo_full_ictv_aa<-sapelovirus_full_ictv_aa/ictv_sapelo_full+plot_layout(nrow=2,  heights = c(2, 0.27))
+sapelo_full_ictv_aa<-sapelovirus_full_ictv_aa/ictv_sapelo_full+plot_layout(nrow=2,  heights = c(1, 0.3))
 sapelo_full_ictv_aa
 
 sapelo_full_ictv_aa<-as.ggplot(sapelo_full_ictv_aa)
@@ -686,7 +686,7 @@ teschovirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, c
 teschovirus_ictv_aa
 
 #put gene map with PySimPlot
-tescho_ictv_aa<-teschovirus_ictv_aa/ictv_tescho+plot_layout(nrow=2,  heights = c(2, 0.27))
+tescho_ictv_aa<-teschovirus_ictv_aa/ictv_tescho+plot_layout(nrow=2,  heights = c(1, 0.3))
 tescho_ictv_aa
 
 tescho_ictv_aa<-as.ggplot(tescho_ictv_aa)
