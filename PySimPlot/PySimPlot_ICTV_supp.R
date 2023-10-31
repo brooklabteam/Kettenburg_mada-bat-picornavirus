@@ -330,7 +330,7 @@ ictv_sapo_full
 setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/ICTV_BLAST_pysimplot")
 
 #colzpalette<-c("#8ECAE6","#219EBC","#023047","#FFB703","#FB8500","#E48B97","#B52B09","#A60067","#987B6F","#8FD694")
-colzpalette<-c("tomato1","gray46","gray1","slategray3")
+colzpalette<-c("firebrick2","gray46","gray1","slategray3")
 
 
 #Bat picornavirus 
@@ -450,7 +450,7 @@ bat_picorna
 hepato_ictv_nt_partial <- read.csv(file = "hepato_ictv_nt_partial_alignment.csv", header = T, stringsAsFactors = F) #animo acid
 head(hepato_ictv_nt_partial)
 
-colzpalette<-c("gray1","gray46","gray71","slategray4","slategray3","slategray2","slategray1","tomato1","snow3")
+colzpalette<-c("gray1","gray46","gray71","slategray4","slategray3","slategray2","slategray1","firebrick2","snow3")
 
 #move to long
 long.sim_nt <- melt(hepato_ictv_nt_partial, id.vars = c("pointer"), measure.vars = c("HPA","KR703607","KT452637","KT452658",
@@ -524,7 +524,7 @@ hep_ictv_nt
 kobuvirus_nt_ictv <- read.csv(file = "kobu_ictv_nt_full_alignment.csv", header = T, stringsAsFactors = F) #nucleotide
 head(kobuvirus_nt_ictv)
 
-colzpalette<-c("gray1","gray46","gray71","slategray4","slategray3","slategray1","tomato1")
+colzpalette<-c("gray1","gray46","gray71","slategray4","slategray3","slategray1","firebrick2")
 
 #move to long
 long.sim_nt <- melt(kobuvirus_nt_ictv, id.vars = c("pointer"), measure.vars = c("AB040749","AB084788",
@@ -595,7 +595,7 @@ kobu_ictv_nt
 kunsagivirus_nt_ictv <- read.csv(file = "kun_ictv_nt_full_alignment.csv", header = T, stringsAsFactors = F) #nucleotide
 head(kunsagivirus_nt_ictv)
 
-colzpalette<-c("gray1","tomato1","gray71")
+colzpalette<-c("gray1","firebrick2","gray71")
 
 #move to long
 long.sim_nt <- melt(kunsagivirus_nt_ictv, id.vars = c("pointer"), measure.vars = c("KC935379","KX644936",
@@ -658,7 +658,7 @@ kun_ictv_nt
 mischivirus_nt_ictv <- read.csv(file = "mischi_ictv_nt_full_alignment.csv", header = T, stringsAsFactors = F) #nucleotide
 head(mischivirus_nt_ictv)
 
-colzpalette<-c("gray1","gray71","tomato1","slategray4","slategray3")
+colzpalette<-c("gray1","gray71","firebrick2","slategray4","slategray3")
 
 #move to long
 long.sim_nt <- melt(mischivirus_nt_ictv, id.vars = c("pointer"), measure.vars = c("JQ814851","KP054273",
@@ -726,7 +726,7 @@ mischi_ictv_nt
 sapelovirus_full_nt_ictv <- read.csv(file = "sapelo_ictv_nt_full_alignment.csv", header = T, stringsAsFactors = F) #nucleotide
 head(sapelovirus_full_nt_ictv)
 
-colzpalette<-c("gray1","gray56","gray","slategray4","tomato1")
+colzpalette<-c("gray1","gray56","gray","slategray4","firebrick2")
 
 #move to long
 long.sim_nt <- melt(sapelovirus_full_nt_ictv, id.vars = c("pointer"), measure.vars = c("OQ818321","OQ818329","AF406813","AY064708",
@@ -796,7 +796,7 @@ sapelo_full_ictv_nt
 sapovirus_full_nt_ictv <- read.csv(file = "sapo_ictv_nt_full_alignment_trimmed.csv", header = T, stringsAsFactors = F) #nucleotide
 head(sapovirus_full_nt_ictv)
 
-colzpalette<-c("gray1","tomato1")
+colzpalette<-c("gray1","firebrick2")
 
 #move to long
 long.sim_nt <- melt(sapovirus_full_nt_ictv, id.vars = c("pointer"), measure.vars = c("HM002617","KX759623"))
@@ -910,7 +910,7 @@ sapo_full_ictv
 teschovirus_nt_ictv <- read.csv(file = "tescho_ictv_nt_full_alignment.csv", header = T, stringsAsFactors = F) #nucleotide
 head(teschovirus_nt_ictv)
 
-colzpalette<-c("gray1","tomato1","gray","slategray4","gray56")
+colzpalette<-c("gray1","firebrick2","gray","slategray4","gray56")
 
 #move to long
 long.sim_nt <- melt(teschovirus_nt_ictv, id.vars = c("pointer"), measure.vars = c("OQ818323","OQ818324","LC386158","MG875515","MT295502"))

@@ -283,7 +283,7 @@ ictv_tescho
 setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/ICTV_BLAST_pysimplot")
 
 #colzpalette<-c("#8ECAE6","#219EBC","#023047","#FFB703","#FB8500","#E48B97","#B52B09","#A60067","#987B6F","#8FD694")
-colzpalette<-c("gray1","gray46","gray71","slategray4","slategray3","slategray2","slategray1","tomato1","snow3")
+colzpalette<-c("gray1","gray46","gray71","slategray4","slategray3","slategray2","slategray1","firebrick2","snow3")
 
 
 #Hepatovirus
@@ -362,7 +362,7 @@ hep_ictv_aa
 kobuvirus_aa_ictv <- read.csv(file = "kobu_ictv_aa_full_alignment.csv", header = T, stringsAsFactors = F) #Amino acid
 head(kobuvirus_aa_ictv)
 
-colzpalette<-c("gray1","gray46","gray71","slategray4","slategray3","slategray1","tomato1")
+colzpalette<-c("gray1","gray46","gray71","slategray4","slategray3","slategray1","firebrick2")
 
 
 #move to long
@@ -433,7 +433,7 @@ kobu_ictv_aa
 kunsagivirus_aa_ictv <- read.csv(file = "kun_ictv_aa_full_alignment.csv", header = T, stringsAsFactors = F) #Amino acid
 head(kunsagivirus_aa_ictv)
 
-colzpalette<-c("gray1","tomato1","gray71")
+colzpalette<-c("gray1","firebrick2","gray71")
 
 
 #move to long
@@ -496,7 +496,7 @@ kun_ictv_aa
 mischivirus_aa_ictv <- read.csv(file = "mischi_ictv_aa_full_alignment.csv", header = T, stringsAsFactors = F) #Amino acid
 head(mischivirus_aa_ictv)
 
-colzpalette<-c("gray1","gray71","tomato1","slategray4","slategray3")
+colzpalette<-c("gray1","gray71","firebrick2","slategray4","slategray3")
 
 #move to long
 long.sim_aa <- melt(mischivirus_aa_ictv, id.vars = c("pointer"), measure.vars = c("JQ814851","KP054273",
@@ -563,7 +563,7 @@ mischi_ictv_aa
 sapelovirus_full_aa_ictv <- read.csv(file = "sapelo_ictv_aa_full_alignment.csv", header = T, stringsAsFactors = F) #Amino acid
 head(sapelovirus_full_aa_ictv)
 
-colzpalette<-c("gray1","gray56","gray","slategray4","tomato1")
+colzpalette<-c("gray1","gray56","gray","slategray4","firebrick2")
 
 #move to long
 long.sim_aa <- melt(sapelovirus_full_aa_ictv, id.vars = c("pointer"), measure.vars = c("OQ818321","OQ818329","AF406813","AY064708",
@@ -630,7 +630,7 @@ sapelo_full_ictv_aa
 teschovirus_aa_ictv <- read.csv(file = "tescho_ictv_aa_full_alignment.csv", header = T, stringsAsFactors = F) #Amino acid
 head(teschovirus_aa_ictv)
 
-colzpalette<-c("gray1","tomato1","gray","slategray4","gray56")
+colzpalette<-c("gray1","firebrick2","gray","slategray4","gray56")
 
 #move to long
 long.sim_aa <- melt(teschovirus_aa_ictv, id.vars = c("pointer"), measure.vars = c("OQ818323","OQ818324","LC386158","MG875515","MT295502"))
