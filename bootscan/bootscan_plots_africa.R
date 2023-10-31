@@ -458,7 +458,7 @@ ictv_sapo_full
 #First all bat picornavirales over 3kb
 setwd("~/Desktop/developer/mada-bat-picornavirus/bootscan/output_africa")
 
-colzpalette<-c("darkorange1","deepskyblue","goldenrod1","red3","lightpink1","slateblue1", "plum1")
+colzpalette<-c("gray40","seagreen3","slateblue2", "tomato1") 
 
 #Bat picornavirus all
 africa_batpicorna_all_bootscan <- read.csv(file = "africa_batpicorna_all_bootscan.csv", header = T, stringsAsFactors = F)
@@ -514,7 +514,7 @@ batpicorna_africa_all_boot <- ggplot(long.sim_nt) +
 batpicorna_africa_all_boot
 
 #put gene map with PySimPlot
-batpicorna_all_boot<-batpicorna_africa_all_boot/ictv_batpicorna_all+plot_layout(nrow=2,  heights = c(2, 0.30))
+batpicorna_all_boot<-batpicorna_africa_all_boot/ictv_batpicorna_all+plot_layout(nrow=2,  heights = c(1, 0.30))
 batpicorna_all_boot
 
 batpicorna_all_boot<-as.ggplot(batpicorna_all_boot)
@@ -575,7 +575,7 @@ batpicorna_africa_full_boot <- ggplot(long.sim_nt) +
 batpicorna_africa_full_boot
 
 #put gene map with PySimPlot
-batpicorna_full_boot<-batpicorna_africa_full_boot/ictv_batpicorna_full+plot_layout(nrow=2,  heights = c(2, 0.30))
+batpicorna_full_boot<-batpicorna_africa_full_boot/ictv_batpicorna_full+plot_layout(nrow=2,  heights = c(1, 0.30))
 batpicorna_full_boot
 
 batpicorna_full_boot<-as.ggplot(batpicorna_full_boot)
@@ -638,7 +638,7 @@ hepatovirus_bat_all_boot
 
 
 #put gene map with PySimPlot
-hep_bat_all_boot<-hepatovirus_bat_all_boot/ictv_hepato+plot_layout(nrow=2,  heights = c(2, 0.30))
+hep_bat_all_boot<-hepatovirus_bat_all_boot/ictv_hepato+plot_layout(nrow=2,  heights = c(1, 0.30))
 hep_bat_all_boot
 
 hep_bat_all_boot<-as.ggplot(hep_bat_all_boot)
@@ -699,7 +699,7 @@ kunsagivirus_bat_all_boot
 
 
 #put gene map with PySimPlot
-kun_bat_all_boot<-kunsagivirus_bat_all_boot/ictv_kun+plot_layout(nrow=2,  heights = c(2, 0.30))
+kun_bat_all_boot<-kunsagivirus_bat_all_boot/ictv_kun+plot_layout(nrow=2,  heights = c(1, 0.30))
 kun_bat_all_boot
 
 kun_bat_all_boot<-as.ggplot(kun_bat_all_boot)
@@ -760,7 +760,7 @@ mischivirus_bat_all_boot <- ggplot(long.sim_nt) +
 mischivirus_bat_all_boot
 
 #put gene map with PySimPlot
-mischi_bat_all_boot<-mischivirus_bat_all_boot/ictv_mischi+plot_layout(nrow=2,  heights = c(2, 0.30))
+mischi_bat_all_boot<-mischivirus_bat_all_boot/ictv_mischi+plot_layout(nrow=2,  heights = c(1, 0.30))
 mischi_bat_all_boot
 
 mischi_bat_all_boot<-as.ggplot(mischi_bat_all_boot)
@@ -821,7 +821,7 @@ sapelovirus_bat_full_boot <- ggplot(long.sim_nt) +
 sapelovirus_bat_full_boot
 
 #put gene map with PySimPlot
-sapelo_bat_full_boot<-sapelovirus_bat_full_boot/ictv_sapelo_full+plot_layout(nrow=2,  heights = c(2, 0.30))
+sapelo_bat_full_boot<-sapelovirus_bat_full_boot/ictv_sapelo_full+plot_layout(nrow=2,  heights = c(1, 0.30))
 sapelo_bat_full_boot
 
 sapelo_bat_full_boot<-as.ggplot(sapelo_bat_full_boot)
@@ -829,6 +829,8 @@ sapelo_bat_full_boot
 
 
 #Sapelovirus p2
+colzpalette<-c("gray40","seagreen3","slateblue2", "tomato1", "goldenrod1", "black") 
+
 africa_sapelo_p1_bootscan <- read.csv(file = "africa_sapelo_p1_bootscan.csv", header = T, stringsAsFactors = F) #Nucleotide
 head(africa_sapelo_p1_bootscan)
 
@@ -887,7 +889,7 @@ sapelovirus_bat_p1_boot <- ggplot(long.sim_nt) +
 sapelovirus_bat_p1_boot
 
 #put gene map with PySimPlot
-sapelo_bat_p1_boot<-sapelovirus_bat_p1_boot/ictv_sapelo_p1+plot_layout(nrow=2,  heights = c(2, 0.30))
+sapelo_bat_p1_boot<-sapelovirus_bat_p1_boot/ictv_sapelo_p1+plot_layout(nrow=2,  heights = c(1, 0.30))
 sapelo_bat_p1_boot
 
 sapelo_bat_p1_boot<-as.ggplot(sapelo_bat_p1_boot)
@@ -896,6 +898,8 @@ sapelo_bat_p1_boot
 
 
 #Sapelovirus p2
+colzpalette<-c("gray40","seagreen3","slateblue2", "tomato1", "goldenrod1", "black", "orchid") 
+
 africa_sapelo_p2_bootscan <- read.csv(file = "africa_sapelo_p2_bootscan.csv", header = T, stringsAsFactors = F) #Nucleotide
 head(africa_sapelo_p2_bootscan)
 
@@ -1022,7 +1026,7 @@ sapovirus_all_bat_boot <- ggplot(long.sim_nt) +
 sapovirus_all_bat_boot
 
 #put gene map with PySimPlot
-sapo_all_boot<-sapovirus_all_bat_boot/ictv_sapo_all+plot_layout(nrow=2,  heights = c(2, 0.30))
+sapo_all_boot<-sapovirus_all_bat_boot/ictv_sapo_all+plot_layout(nrow=2,  heights = c(1, 0.30))
 sapo_all_boot
 
 sapo_all_boot<-as.ggplot(sapo_all_boot)
@@ -1083,7 +1087,7 @@ sapovirus_full_bat_boot <- ggplot(long.sim_nt) +
 sapovirus_full_bat_boot
 
 #put gene map with PySimPlot
-sapo_full_boot<-sapovirus_full_bat_boot/ictv_sapo_full+plot_layout(nrow=2,  heights = c(2, 0.30))
+sapo_full_boot<-sapovirus_full_bat_boot/ictv_sapo_full+plot_layout(nrow=2,  heights = c(1, 0.30))
 sapo_full_boot
 
 sapo_full_boot<-as.ggplot(sapo_full_boot)
@@ -1145,7 +1149,7 @@ teschovirus_bat_boot <- ggplot(long.sim_nt) +
 teschovirus_bat_boot
 
 #put gene map with PySimPlot
-tescho_boot<-teschovirus_bat_boot/ictv_tescho+plot_layout(nrow=2,  heights = c(2, 0.30))
+tescho_boot<-teschovirus_bat_boot/ictv_tescho+plot_layout(nrow=2,  heights = c(1, 0.30))
 tescho_boot
 
 tescho_boot<-as.ggplot(tescho_boot)
@@ -1166,24 +1170,9 @@ bootscan_all<-plot_grid(batpicorna_full_boot,
                            sapo_full_boot,
                            sapo_all_boot,
                            tescho_boot,
-                    ncol=5,
+                    ncol=4,
                     labels="AUTO",  label_size = 23, align = "hv", axis="b")
 bootscan_all
 
-#export 16x40 inch PDF landscape
+#export 13x30 inch PDF landscape
 
-#fig for paper
-fig<-plot_grid(batpicorna_full_boot, 
-               hep_bat_all_boot,
-               mischi_bat_all_boot,
-               sapelo_bat_p1_boot,
-               sapo_full_boot,
-               tescho_boot,
-               ncol=3,
-               labels="AUTO",  label_size = 23, align = "hv", axis="b")
-fig
-
-
-
-
-#export 15x25 inch PDF landscape
