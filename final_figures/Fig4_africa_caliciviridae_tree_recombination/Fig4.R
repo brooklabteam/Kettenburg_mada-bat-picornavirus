@@ -211,18 +211,18 @@ colz2 = c('1' =  "yellow", '0' = "white")
 
 
 ##uncollapsed tree
-p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=Host), size=3,stroke=0,show.legend = T) +
+p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=Host), size=4,stroke=0,show.legend = T) +
   scale_fill_manual(values=colz) +
   scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Genus="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3,  nudge_x=0.1) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Genus="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=4,  nudge_x=0.1) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
   theme(legend.position = "left", 
         legend.direction = "vertical",
-        legend.text = element_text(size=8), 
+        legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,14))
 
@@ -239,10 +239,11 @@ caliciviridae <- p1  %<+% p0.dat +
   ggnewscale::new_scale_fill() + 
   geom_nodepoint(aes(fill=Bootstrap, show.legend = F), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
+  guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
   theme(legend.position = "left",
         legend.direction = "vertical",
-        legend.text = element_text(size=8),
-        legend.title = element_text(size=8),
+        legend.text = element_text(size=12),
+        legend.title = element_text(size=12),
         legend.key.size = unit(0.3, "cm"))
 caliciviridae
 
@@ -368,7 +369,8 @@ ictv_sapo_full
 #First all bat picornavirales over 3kb
 setwd("~/Desktop/developer/mada-bat-picornavirus/bootscan/output_africa")
 
-colzpalette<-c("darkorange1","deepskyblue","goldenrod1","red3","lightpink1","slateblue1", "plum1")
+#colzpalette<-c("darkorange1","deepskyblue","goldenrod1","red3","lightpink1","slateblue1", "plum1")
+colzpalette<-c("black","orchid4","orchid2", "skyblue1", "goldenrod1", "dodgerblue4")
 
 #Sapovirus all
 africa_caliciviridae_all_bootscan <- read.csv(file = "africa_caliciviridae_all_bootscan.csv", header = T, stringsAsFactors = F) #Nucleotide
@@ -428,7 +430,7 @@ sapovirus_all_bat_boot <- ggplot(long.sim_nt) +
 sapovirus_all_bat_boot
 
 #put gene map with PySimPlot
-sapo_all_boot<-sapovirus_all_bat_boot/ictv_sapo_all+plot_layout(nrow=2,  heights = c(2, 0.30))
+sapo_all_boot<-sapovirus_all_bat_boot/ictv_sapo_all+plot_layout(nrow=2,  heights = c(1, 0.30))
 sapo_all_boot
 
 sapo_all_boot<-as.ggplot(sapo_all_boot)
@@ -440,6 +442,8 @@ sapo_all_boot
 #Sapovirus full
 africa_caliciviridae_full_bootscan <- read.csv(file = "africa_caliciviridae_full_bootscan.csv", header = T, stringsAsFactors = F) #Nucleotide
 head(africa_caliciviridae_full_bootscan)
+
+colzpalette<-c("black","goldenrod1", "skyblue1")
 
 #move to long
 long.sim_nt <- melt(africa_caliciviridae_full_bootscan, id.vars = c("pointer"), measure.vars = c("JN699046",
@@ -489,7 +493,7 @@ sapovirus_full_bat_boot <- ggplot(long.sim_nt) +
 sapovirus_full_bat_boot
 
 #put gene map with PySimPlot
-sapo_full_boot<-sapovirus_full_bat_boot/ictv_sapo_full+plot_layout(nrow=2,  heights = c(2, 0.30))
+sapo_full_boot<-sapovirus_full_bat_boot/ictv_sapo_full+plot_layout(nrow=2,  heights = c(1, 0.30))
 sapo_full_boot
 
 sapo_full_boot<-as.ggplot(sapo_full_boot)
@@ -507,10 +511,10 @@ bootscan
 
 #add the tree side by side
 Fig4<-plot_grid(caliciviridae,bootscan,
-                ncol=2,rel_heights = c(1,1), rel_widths = c(1,1),
+                ncol=2,rel_heights = c(1,1), rel_widths = c(2,1.3),
                 labels=c("A",""),  label_size = 23, align = "hv", axis="b")
 Fig4
   
-#export 20x15inch PDF landscape
+#export 20x10inch PDF landscape
 
 
