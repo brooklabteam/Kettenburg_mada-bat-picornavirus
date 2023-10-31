@@ -376,7 +376,7 @@ batpicorna_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, co
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
+  guides(colour = guide_legend(nrow = 4))+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -438,7 +438,7 @@ batpicorna_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, co
 batpicorna_ictv_aa
 
 #put gene map with PySimPlot
-bat_picorna<-batpicorna_ictv_nt/batpicorna_ictv_aa/ictv_batpicorna+plot_layout(nrow=3,  heights = c(2,2, 0.27))
+bat_picorna<-batpicorna_ictv_nt/batpicorna_ictv_aa/ictv_batpicorna+plot_layout(nrow=3,  heights = c(0.5,0.5, 0.3))
 bat_picorna
 
 bat_picorna<-as.ggplot(bat_picorna)
@@ -499,7 +499,7 @@ hepatovirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, c
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
+  guides(colour = guide_legend(nrow = 5))+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -512,7 +512,7 @@ hepatovirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, c
 hepatovirus_ictv_nt
 
 #put gene map with PySimPlot
-hep_ictv_nt<-hepatovirus_ictv_nt/ictv_hepato+plot_layout(nrow=2,  heights = c(2, 0.27))
+hep_ictv_nt<-hepatovirus_ictv_nt/ictv_hepato+plot_layout(nrow=2,  heights = c(1, 0.3))
 hep_ictv_nt
 
 hep_ictv_nt<-as.ggplot(hep_ictv_nt)
@@ -571,7 +571,7 @@ kobuvirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, col
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
+  guides(colour = guide_legend(nrow = 4))+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -584,7 +584,7 @@ kobuvirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, col
 kobuvirus_ictv_nt
 
 #put gene map with PySimPlot
-kobu_ictv_nt<-kobuvirus_ictv_nt/ictv_kobu+plot_layout(nrow=2,  heights = c(2, 0.27))
+kobu_ictv_nt<-kobuvirus_ictv_nt/ictv_kobu+plot_layout(nrow=2,  heights = c(1, 0.3))
 kobu_ictv_nt
 
 kobu_ictv_nt<-as.ggplot(kobu_ictv_nt)
@@ -647,7 +647,7 @@ kunsagivirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, 
 kunsagivirus_ictv_nt
 
 #put gene map with PySimPlot
-kun_ictv_nt<-kunsagivirus_ictv_nt/ictv_kun+plot_layout(nrow=2,  heights = c(2, 0.27))
+kun_ictv_nt<-kunsagivirus_ictv_nt/ictv_kun+plot_layout(nrow=2,  heights = c(1, 0.3))
 kun_ictv_nt
 
 kun_ictv_nt<-as.ggplot(kun_ictv_nt)
@@ -714,7 +714,7 @@ mischivirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, c
 mischivirus_ictv_nt
 
 #put gene map with PySimPlot
-mischi_ictv_nt<-mischivirus_ictv_nt/ictv_mischi+plot_layout(nrow=2,  heights = c(2, 0.27))
+mischi_ictv_nt<-mischivirus_ictv_nt/ictv_mischi+plot_layout(nrow=2,  heights = c(1, 0.3))
 mischi_ictv_nt
 
 mischi_ictv_nt<-as.ggplot(mischi_ictv_nt)
@@ -770,7 +770,7 @@ sapelovirus_full_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=val
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
+  guides(colour = guide_legend(nrow = 5))+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -783,7 +783,7 @@ sapelovirus_full_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=val
 sapelovirus_full_ictv_nt
 
 #put gene map with PySimPlot
-sapelo_full_ictv_nt<-sapelovirus_full_ictv_nt/ictv_sapelo_full+plot_layout(nrow=2,  heights = c(2, 0.27))
+sapelo_full_ictv_nt<-sapelovirus_full_ictv_nt/ictv_sapelo_full+plot_layout(nrow=2,  heights = c(1, 0.3))
 sapelo_full_ictv_nt
 
 sapelo_full_ictv_nt<-as.ggplot(sapelo_full_ictv_nt)
@@ -898,7 +898,7 @@ sapovirus_full_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value
 sapovirus_full_ictv_aa
 
 #put gene map with PySimPlot
-sapo_full_ictv<-sapovirus_full_ictv_nt/sapovirus_full_ictv_aa/ictv_sapo_full+plot_layout(nrow=3,  heights = c(2,2, 0.27))
+sapo_full_ictv<-sapovirus_full_ictv_nt/sapovirus_full_ictv_aa/ictv_sapo_full+plot_layout(nrow=3,  heights = c(0.5,0.5, 0.3))
 sapo_full_ictv
 
 sapo_full_ictv<-as.ggplot(sapo_full_ictv)
@@ -954,7 +954,7 @@ teschovirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, c
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
+  guides(colour = guide_legend(nrow = 5))+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -967,7 +967,7 @@ teschovirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, c
 teschovirus_ictv_nt
 
 #put gene map with PySimPlot
-tescho_ictv_nt<-teschovirus_ictv_nt/ictv_tescho+plot_layout(nrow=2,  heights = c(2, 0.27))
+tescho_ictv_nt<-teschovirus_ictv_nt/ictv_tescho+plot_layout(nrow=2,  heights = c(1, 0.3))
 tescho_ictv_nt
 
 tescho_ictv_nt<-as.ggplot(tescho_ictv_nt)
@@ -983,4 +983,5 @@ supp_pysimplot<-plot_grid(mischi_ictv_nt,bat_picorna,hep_ictv_nt, kobu_ictv_nt,
                           labels="AUTO", label_size = 23, align = "hv", axis="b")
 supp_pysimplot
 
-#Export landscape 35x20 inches PDF
+#Export landscape 27x12 inches PDF
+
