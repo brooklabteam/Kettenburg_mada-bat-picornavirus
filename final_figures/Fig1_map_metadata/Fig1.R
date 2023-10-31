@@ -44,12 +44,12 @@ class(orotl_shp)
 ###import and configuration
 
 p1<-ggplot() +  
-  geom_sf(color = "coral1", fill = "coral1",data = orotl_shp)+
+  geom_sf(color = "coral4", fill = "coral1",data = orotl_shp)+
   coord_sf(xlim = c(42, 60), ylim = c(-26, -11.5), expand = FALSE)+
   theme_bw()+
   theme(plot.margin = unit(c(-1,.5,-1.5,.1),"cm"))+
   xlab("Longitude") + ylab("Latitude") 
-#print(p1)
+print(p1)
 
 
 #import picorna data
@@ -120,7 +120,7 @@ p2b<-p1+geom_point(aes(x=longitude_e, y=latitude_s),color="black",size=1,data=co
                          pad_x = unit(0.03, "cm"), 
                          pad_y = unit(0.2, "cm"),        
                          style = north_arrow_fancy_orienteering)+
-  geom_text_repel(segment.colour="black")+
+  #geom_text_repel(segment.colour="black")+
   theme_bw() +theme(panel.grid = element_blank(), 
                     plot.title = element_text(color="black", size=12, face="bold"),
                     plot.margin = unit(c(-1,.5,-1.5,.1),"cm"),
@@ -381,8 +381,7 @@ final
 final2<- plot_grid(p4,final,labels=c("A","B"),rel_widths = c(1, 1.8), rel_heights = c(3, 1),ncol=2, align="hv", axis="b", label_size = 23)
 final2
 
-
-
+# export figure 1 20x7.5 inch landscape PDF
 
 
 
