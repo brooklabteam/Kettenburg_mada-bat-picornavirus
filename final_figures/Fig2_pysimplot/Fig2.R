@@ -45,10 +45,18 @@ ictv_feat$gene<-factor(ictv_feat$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP
 colz=c("5'UTR"="gold", "L"="royalblue","VP4"="paleturquoise3", "VP2"="skyblue1", "VP0"="royalblue4", "VP3"="steelblue1",
        "VP1"="cadetblue1", "VP1/2A"="cadetblue1", "2A"="orange1", "2B"="sienna2", "2C"="darkorange1", "3A"="palevioletred1", "3B"="plum",
        "3C"="rosybrown1", "3D"="pink2", "Helicase"="darkseagreen1","NS4"="darkolivegreen1","Vpg"="seagreen1","Pro-Pol"="palegreen2",
-       "Polyprotein"="azure3","Putative polyprotein"="mediumorchid1", "Non-structural polyprotein"="mediumorchid4", 
+       "Polyprotein"="azure3","Putative polyprotein"="mediumorchid1", "Non-structural polyprotein"="mediumorchid4",
        "Putative minor structural protein" ="slateblue3", "Structural polyprotein"="lightgoldenrod1",
-       "Hypothetical protein"="darkslategrey", "Similar to structural polyprotein"="mediumpurple1", "Similar to putative polyprotein"="mediumpurple3", 
+       "Hypothetical protein"="darkslategrey", "Similar to structural polyprotein"="mediumpurple1", "Similar to putative polyprotein"="mediumpurple3",
        "Similar to polyprotein"="mediumpurple4","3'UTR"="yellow")
+
+# colz=c("5'UTR"="gold", "L"="gray1","VP4"="gray31", "VP2"="gray48", "VP0"="gray73", "VP3"="gray82",
+#        "VP1"="gray100", "VP1/2A"="gray100", "2A"="olivedrab4", "2B"="olivedrab3", "2C"="olivedrab1", "3A"="darkseagreen4", "3B"="darkseagreen3",
+#        "3C"="darkseagreen1", "3D"="darkseagreen", "Helicase"="gray1","NS4"="gray34","Vpg"="gray59","Pro-Pol"="gray80",
+#        "Polyprotein"="azure3","Putative polyprotein"="thistle1", "Non-structural polyprotein"="thistle2", 
+#        "Putative minor structural protein" ="thistle3", "Structural polyprotein"="thistle4",
+#        "Hypothetical protein"="slategray4", "Similar to structural polyprotein"="slategray3", "Similar to putative polyprotein"="slategray2", 
+#        "Similar to polyprotein"="slategray1","3'UTR"="yellow")
 
 
 #Plot ICTV and BLAST together plots
@@ -274,7 +282,8 @@ ictv_tescho
 ##Now get the plots for the PySimPlot, just the ICTV_BLAST ones, there will be a separate PDF file with the table of African bat picorna similarities
 setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/ICTV_BLAST_pysimplot")
 
-colzpalette<-c("#8ECAE6","#219EBC","#023047","#FFB703","#FB8500","#E48B97","#B52B09","#A60067","#987B6F","#8FD694")
+#colzpalette<-c("#8ECAE6","#219EBC","#023047","#FFB703","#FB8500","#E48B97","#B52B09","#A60067","#987B6F","#8FD694")
+colzpalette<-c("gray1","gray46","gray71","slategray4","slategray3","slategray2","slategray1","tomato1","snow3")
 
 
 #Hepatovirus
@@ -353,6 +362,9 @@ hep_ictv_aa
 kobuvirus_aa_ictv <- read.csv(file = "kobu_ictv_aa_full_alignment.csv", header = T, stringsAsFactors = F) #Amino acid
 head(kobuvirus_aa_ictv)
 
+colzpalette<-c("gray1","gray46","gray71","slategray4","slategray3","slategray1","tomato1")
+
+
 #move to long
 long.sim_aa <- melt(kobuvirus_aa_ictv, id.vars = c("pointer"), measure.vars = c("AB040749","AB084788",
                                                                                 "EU787450","KJ641686",
@@ -421,6 +433,9 @@ kobu_ictv_aa
 kunsagivirus_aa_ictv <- read.csv(file = "kun_ictv_aa_full_alignment.csv", header = T, stringsAsFactors = F) #Amino acid
 head(kunsagivirus_aa_ictv)
 
+colzpalette<-c("gray1","tomato1","gray71")
+
+
 #move to long
 long.sim_aa <- melt(kunsagivirus_aa_ictv, id.vars = c("pointer"), measure.vars = c("KC935379","KX644936",
                                                                                    "KY670597"))
@@ -480,6 +495,8 @@ kun_ictv_aa
 #Mischivirus
 mischivirus_aa_ictv <- read.csv(file = "mischi_ictv_aa_full_alignment.csv", header = T, stringsAsFactors = F) #Amino acid
 head(mischivirus_aa_ictv)
+
+colzpalette<-c("gray1","gray71","tomato1","slategray4","slategray3")
 
 #move to long
 long.sim_aa <- melt(mischivirus_aa_ictv, id.vars = c("pointer"), measure.vars = c("JQ814851","KP054273",
@@ -546,6 +563,8 @@ mischi_ictv_aa
 sapelovirus_full_aa_ictv <- read.csv(file = "sapelo_ictv_aa_full_alignment.csv", header = T, stringsAsFactors = F) #Amino acid
 head(sapelovirus_full_aa_ictv)
 
+colzpalette<-c("gray1","gray56","gray","slategray4","tomato1")
+
 #move to long
 long.sim_aa <- melt(sapelovirus_full_aa_ictv, id.vars = c("pointer"), measure.vars = c("OQ818321","OQ818329","AF406813","AY064708",
                                                                                        "NC_033820"))
@@ -610,6 +629,8 @@ sapelo_full_ictv_aa
 #Teschovirus
 teschovirus_aa_ictv <- read.csv(file = "tescho_ictv_aa_full_alignment.csv", header = T, stringsAsFactors = F) #Amino acid
 head(teschovirus_aa_ictv)
+
+colzpalette<-c("gray1","tomato1","gray","slategray4","gray56")
 
 #move to long
 long.sim_aa <- melt(teschovirus_aa_ictv, id.vars = c("pointer"), measure.vars = c("OQ818323","OQ818324","LC386158","MG875515","MT295502"))
@@ -682,5 +703,5 @@ fig2<-plot_grid(mischi_ictv_aa,hep_ictv_aa,kobu_ictv_aa,kun_ictv_aa,
 fig2
 
 
-#export 15x25 landscape PDF
+#export 13x23 landscape PDF
 
