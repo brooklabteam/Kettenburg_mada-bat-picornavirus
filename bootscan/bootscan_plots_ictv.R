@@ -330,7 +330,7 @@ ictv_sapo_full
 ##Now get the plots for the bootscan
 setwd("~/Desktop/developer/mada-bat-picornavirus/bootscan/output_ictv")
 
-colzpalette<-c("#8ECAE6","#219EBC","#023047","#FFB703","#FB8500","#E48B97","#B52B09","#A60067","#987B6F","#8FD694")
+colzpalette<-c("gray40","seagreen3","slateblue2", "tomato1") 
 
 #Bat picornavirus 
 bat_picorna_ictv_boot <- read.csv(file = "bat_picorna_ictv_bootscan.csv", header = T, stringsAsFactors = F)
@@ -374,7 +374,7 @@ batpicorna_ictv_boot <- ggplot(long.sim_nt) +
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
+  guides(colour = guide_legend(nrow = 4))+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
@@ -386,7 +386,7 @@ batpicorna_ictv_boot <- ggplot(long.sim_nt) +
 batpicorna_ictv_boot
 
 #put gene map with PySimPlot
-batpicorna_boot<-batpicorna_ictv_boot/ictv_batpicorna+plot_layout(nrow=2,  heights = c(2, 0.30))
+batpicorna_boot<-batpicorna_ictv_boot/ictv_batpicorna+plot_layout(nrow=2,  heights = c(1, 0.30))
 batpicorna_boot
 
 batpicorna_boot<-as.ggplot(batpicorna_boot)
@@ -398,6 +398,8 @@ batpicorna_boot
 #Hepatovirus
 hepato_ictv_boot <- read.csv(file = "hepato_ictv_bootscan.csv", header = T, stringsAsFactors = F) #animo acid
 head(hepato_ictv_boot)
+
+colzpalette<-c("gray40","seagreen3","slateblue2", "tomato1", "goldenrod1", "black", "orchid2", "dodgerblue4", "olivedrab3") 
 
 #move to long
 long.sim_nt <- melt(hepato_ictv_boot, id.vars = c("pointer"), measure.vars = c("HPA","KR703607","KT452637","KT452658",
@@ -447,7 +449,7 @@ hepatovirus_ictv_boot <- ggplot(long.sim_nt) +
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
+  guides(colour = guide_legend(nrow = 5))+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
@@ -458,7 +460,7 @@ hepatovirus_ictv_boot
 
 
 #put gene map with PySimPlot
-hep_ictv_boot<-hepatovirus_ictv_boot/ictv_hepato+plot_layout(nrow=2,  heights = c(2, 0.30))
+hep_ictv_boot<-hepatovirus_ictv_boot/ictv_hepato+plot_layout(nrow=2,  heights = c(1, 0.30))
 hep_ictv_boot
 
 hep_ictv_boot<-as.ggplot(hep_ictv_boot)
@@ -469,6 +471,8 @@ hep_ictv_boot
 #kobuvirus
 kobuvirus_ictv_boot <- read.csv(file = "kobu_ictv_bootscan.csv", header = T, stringsAsFactors = F) #Nucleotide
 head(kobuvirus_ictv_boot)
+
+colzpalette<-c("gray40","seagreen3","slateblue2", "tomato1", "goldenrod1", "black", "orchid2", "dodgerblue4", "olivedrab3") 
 
 #move to long
 long.sim_nt <- melt(kobuvirus_ictv_boot, id.vars = c("pointer"), measure.vars = c("AB040749","AB084788",
@@ -524,7 +528,7 @@ kobuvirus_ictv_boot <- ggplot(long.sim_nt) +
 kobuvirus_ictv_boot
 
 #put gene map with PySimPlot
-kobu_ictv_boot<-kobuvirus_ictv_boot/ictv_kobu+plot_layout(nrow=2,  heights = c(2, 0.30))
+kobu_ictv_boot<-kobuvirus_ictv_boot/ictv_kobu+plot_layout(nrow=2,  heights = c(1, 0.30))
 kobu_ictv_boot
 
 kobu_ictv_bppt<-as.ggplot(kobu_ictv_boot)
@@ -587,7 +591,7 @@ kunsagivirus_ictv_boot
 
 
 #put gene map with PySimPlot
-kun_ictv_boot<-kunsagivirus_ictv_boot/ictv_kun+plot_layout(nrow=2,  heights = c(2, 0.30))
+kun_ictv_boot<-kunsagivirus_ictv_boot/ictv_kun+plot_layout(nrow=2,  heights = c(1, 0.30))
 kun_ictv_boot
 
 kun_ictv_boot<-as.ggplot(kun_ictv_boot)
@@ -652,7 +656,7 @@ mischivirus_ictv_boot <- ggplot(long.sim_nt) +
 mischivirus_ictv_boot
 
 #put gene map with PySimPlot
-mischi_ictv_boot<-mischivirus_ictv_boot/ictv_mischi+plot_layout(nrow=2,  heights = c(2, 0.30))
+mischi_ictv_boot<-mischivirus_ictv_boot/ictv_mischi+plot_layout(nrow=2,  heights = c(1, 0.30))
 mischi_ictv_boot
 
 mischi_ictv_boot<-as.ggplot(mischi_ictv_boot)
@@ -708,7 +712,7 @@ sapelovirus_ictv_boot <- ggplot(long.sim_nt) +
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
+  guides(colour = guide_legend(nrow = 5))+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
@@ -718,7 +722,7 @@ sapelovirus_ictv_boot <- ggplot(long.sim_nt) +
 sapelovirus_ictv_boot
 
 #put gene map with PySimPlot
-sapelo_ictv_boot<-sapelovirus_ictv_boot/ictv_sapelo_full+plot_layout(nrow=2,  heights = c(2, 0.30))
+sapelo_ictv_boot<-sapelovirus_ictv_boot/ictv_sapelo_full+plot_layout(nrow=2,  heights = c(1, 0.30))
 sapelo_ictv_boot
 
 sapelo_ictv_boot<-as.ggplot(sapelo_ictv_boot)
@@ -778,7 +782,7 @@ sapovirus_ictv_boot <- ggplot(long.sim_nt) +
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,0.5,0), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
+  guides(colour = guide_legend(nrow = 6))+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
@@ -788,7 +792,7 @@ sapovirus_ictv_boot <- ggplot(long.sim_nt) +
 sapovirus_ictv_boot
 
 #put gene map with PySimPlot
-sapo_ictv_boot<-sapovirus_ictv_boot/ictv_sapo_full+plot_layout(nrow=2,  heights = c(2, 0.30))
+sapo_ictv_boot<-sapovirus_ictv_boot/ictv_sapo_full+plot_layout(nrow=2,  heights = c(1, 0.30))
 sapo_ictv_boot
 
 sapo_ictv_boot<-as.ggplot(sapo_ictv_boot)
