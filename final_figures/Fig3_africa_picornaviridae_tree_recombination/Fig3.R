@@ -539,7 +539,7 @@ ictv_tescho
 setwd("~/Desktop/developer/mada-bat-picornavirus/bootscan/output_africa")
 
 #colzpalette<-c("darkorange1","deepskyblue","goldenrod1","red3","lightpink1","slateblue1", "plum1")
-colzpalette<-c("black","goldenrod1","skyblue1") 
+colzpalette<-c("gray40","seagreen3","slateblue2") 
 
 #Bat picornavirus full
 africa_batpicorna_full_bootscan <- read.csv(file = "africa_batpicorna_full_bootscan.csv", header = T, stringsAsFactors = F)
@@ -606,7 +606,7 @@ batpicorna_full_boot
 africa_hepato_bootscan <- read.csv(file = "africa_hepato_bootscan.csv", header = T, stringsAsFactors = F) #animo acid
 head(africa_hepato_bootscan)
 
-colzpalette<-c("black","goldenrod1","orchid2", "skyblue1")
+colzpalette<-c("gray40","seagreen3","slateblue2", "tomato1") 
 
 #move to long
 long.sim_nt <- melt(africa_hepato_bootscan, id.vars = c("pointer"), measure.vars = c("KT452729",
@@ -672,7 +672,7 @@ hep_bat_all_boot
 africa_kun_bootscan <- read.csv(file = "africa_kun_bootscan.csv", header = T, stringsAsFactors = F) #animo acid
 head(africa_kun_bootscan)
 
-colzpalette<-c("black","goldenrod1","skyblue1")
+colzpalette<-c("gray40","seagreen3","slateblue2") 
 
 #move to long
 long.sim_nt <- melt(africa_kun_bootscan, id.vars = c("pointer"), measure.vars = c("NC_033818",
@@ -734,7 +734,7 @@ kun_bat_all_boot
 africa_mischi_bootscan <- read.csv(file = "africa_mischi_bootscan.csv", header = T, stringsAsFactors = F) #Nucleotide
 head(africa_mischi_bootscan)
 
-colzpalette<-c("black","goldenrod1", "skyblue1")
+colzpalette<-c("gray40","seagreen3","slateblue2") 
 
 #move to long
 long.sim_nt <- melt(africa_mischi_bootscan, id.vars = c("pointer"), measure.vars = c("JN867757",
@@ -797,7 +797,7 @@ mischi_bat_all_boot
 africa_sapelo_p1_bootscan <- read.csv(file = "africa_sapelo_p1_bootscan.csv", header = T, stringsAsFactors = F) #Nucleotide
 head(africa_sapelo_p1_bootscan)
 
-colzpalette<-c("black","goldenrod1","orchid2", "skyblue1", "orchid4", "dodgerblue4")
+colzpalette<-c("gray40","seagreen3","slateblue2", "tomato1", "goldenrod1", "black") 
 
 #move to long
 long.sim_nt <- melt(africa_sapelo_p1_bootscan, id.vars = c("pointer"), measure.vars = c("OQ818321","OQ818329","NC_033820",
@@ -865,7 +865,8 @@ sapelo_bat_p1_boot
 africa_tescho_bootscan <- read.csv(file = "africa_tescho_bootscan.csv", header = T, stringsAsFactors = F) #Nucleotide
 head(africa_tescho_bootscan)
 
-colzpalette<-c("black","goldenrod1","orchid2", "skyblue1")
+
+colzpalette<-c("gray40","seagreen3","slateblue2", "tomato1") 
 
 #move to long
 long.sim_nt <- melt(africa_tescho_bootscan, id.vars = c("pointer"), measure.vars = c("OQ818318","OQ818324","OM966657","OM105029"))

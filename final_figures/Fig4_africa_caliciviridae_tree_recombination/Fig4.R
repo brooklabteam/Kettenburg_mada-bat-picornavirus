@@ -370,7 +370,7 @@ ictv_sapo_full
 setwd("~/Desktop/developer/mada-bat-picornavirus/bootscan/output_africa")
 
 #colzpalette<-c("darkorange1","deepskyblue","goldenrod1","red3","lightpink1","slateblue1", "plum1")
-colzpalette<-c("black","orchid4","orchid2", "skyblue1", "goldenrod1", "dodgerblue4")
+colzpalette<-c("black","orchid4","orchid2", "orange2", "firebrick1", "orange4")
 
 #Sapovirus all
 africa_caliciviridae_all_bootscan <- read.csv(file = "africa_caliciviridae_all_bootscan.csv", header = T, stringsAsFactors = F) #Nucleotide
@@ -443,7 +443,7 @@ sapo_all_boot
 africa_caliciviridae_full_bootscan <- read.csv(file = "africa_caliciviridae_full_bootscan.csv", header = T, stringsAsFactors = F) #Nucleotide
 head(africa_caliciviridae_full_bootscan)
 
-colzpalette<-c("black","goldenrod1", "skyblue1")
+colzpalette<-c("black","orchid2", "firebrick1")
 
 #move to long
 long.sim_nt <- melt(africa_caliciviridae_full_bootscan, id.vars = c("pointer"), measure.vars = c("JN699046",
