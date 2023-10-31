@@ -182,18 +182,18 @@ colz2 = c('1' =  "yellow", '0' = "white")
 
 
 ##uncollapsed tree
-p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=Host), size=3,stroke=0,show.legend = T) +
+p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=Host), size=4,stroke=0,show.legend = T) +
   scale_fill_manual(values=colz) +
   scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=2, nudge_x=0.05) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=4, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
   theme(legend.position = "none", 
         legend.direction = "vertical",
-        legend.text = element_text(size=7), 
+        legend.text = element_text(size=8), 
         legend.key.size = unit(0.2, "cm")) +
   xlim(c(0,14))
 
@@ -213,13 +213,11 @@ p1.1 <- p1  %<+% p0.dat +
   #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
   theme(legend.position = "left",
         legend.direction = "vertical",
-        legend.text = element_text(size=8),
-        legend.title = element_text(size=8),
+        legend.text = element_text(size=12),
+        legend.title = element_text(size=12),
         legend.key.size = unit(0.3, "cm"))
 p1.1
 
-
-#Export uncollapsed 30x10 portrait PDF
 
 
 ##Get the clade numbers so we can collapse unnnecesary clades
@@ -229,31 +227,32 @@ ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
 #collapsed tree
 
 #add clade labels
-p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=Host), size=3,stroke=0,show.legend = T) +
+p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=Host), size=4,stroke=0,show.legend = T) +
   scale_fill_manual(values=colz) +
   scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=4, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
   theme(legend.position = "none", 
         legend.direction = "vertical",
-        legend.text = element_text(size=8), 
+        legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,14))+
-  geom_cladelabel(node = 395, label = "Apthovirus/Bos taurus clade",offset=0.1, fontsize = 3, color="black") +
-  geom_cladelabel(node = 594, label = "Enterovirus/Human and non-human primate clade",offset=0.1, fontsize = 3, color="black")
+  geom_cladelabel(node = 395, label = "Apthovirus/Bos taurus clade",offset=0.1, fontsize = 4, color="black") +
+  geom_cladelabel(node = 594, label = "Enterovirus/Human and non-human primate clade",offset=0.1, fontsize =4, color="black")+
+  geom_cladelabel(node = 709, label = "Apthovirus/Bos taurus clade",offset=0.1, fontsize = 4, color="black")
 p2
 
 
-
 #collapse the labeled clades
-p3<-collapse(p2, 395)+geom_point2(aes(subset=(node==395)), size=3, shape=22, fill="darkgoldenrod2")
-p12<-collapse(p3, 594)+geom_point2(aes(subset=(node==594)), size=3, shape=22, fill="cadetblue2")
-p12
+p3<-collapse(p2, 395)+geom_point2(aes(subset=(node==395)), size=4, shape=22, fill="darkgoldenrod2")
+p4<-collapse(p3, 594)+geom_point2(aes(subset=(node==594)), size=4, shape=22, fill="cadetblue2")
+p12<-collapse(p4, 709)+geom_point2(aes(subset=(node==709)), size=4, shape=22, fill="darkgoldenrod2")
 
+p12
 
 ##add bootstrap values to this tree
 p12.dat <- p12$data
@@ -267,8 +266,8 @@ picornaviridae <- p12  %<+% p12.dat +
   #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
   theme(legend.position = "left",
         legend.direction = "vertical",
-        legend.text = element_text(size=8),
-        legend.title = element_text(size=8),
+        legend.text = element_text(size=12),
+        legend.title = element_text(size=12),
         legend.key.size = unit(0.3, "cm"))
 picornaviridae
 
@@ -536,10 +535,11 @@ ictv_tescho
 
 ##Now get the plots from bootscan
 
-#First all bat picornavirales over 3kb
+#First all bat picornavirales over 3kb  
 setwd("~/Desktop/developer/mada-bat-picornavirus/bootscan/output_africa")
 
-colzpalette<-c("darkorange1","deepskyblue","goldenrod1","red3","lightpink1","slateblue1", "plum1")
+#colzpalette<-c("darkorange1","deepskyblue","goldenrod1","red3","lightpink1","slateblue1", "plum1")
+colzpalette<-c("black","goldenrod1","skyblue1") 
 
 #Bat picornavirus full
 africa_batpicorna_full_bootscan <- read.csv(file = "africa_batpicorna_full_bootscan.csv", header = T, stringsAsFactors = F)
@@ -594,7 +594,7 @@ batpicorna_africa_full_boot <- ggplot(long.sim_nt) +
 batpicorna_africa_full_boot
 
 #put gene map with PySimPlot
-batpicorna_full_boot<-batpicorna_africa_full_boot/ictv_batpicorna_full+plot_layout(nrow=2,  heights = c(2, 0.30))
+batpicorna_full_boot<-batpicorna_africa_full_boot/ictv_batpicorna_full+plot_layout(nrow=2,  heights = c(1, 0.30))
 batpicorna_full_boot
 
 batpicorna_full_boot<-as.ggplot(batpicorna_full_boot)
@@ -605,6 +605,8 @@ batpicorna_full_boot
 #Hepatovirus
 africa_hepato_bootscan <- read.csv(file = "africa_hepato_bootscan.csv", header = T, stringsAsFactors = F) #animo acid
 head(africa_hepato_bootscan)
+
+colzpalette<-c("black","goldenrod1","orchid2", "skyblue1")
 
 #move to long
 long.sim_nt <- melt(africa_hepato_bootscan, id.vars = c("pointer"), measure.vars = c("KT452729",
@@ -657,7 +659,7 @@ hepatovirus_bat_all_boot
 
 
 #put gene map with PySimPlot
-hep_bat_all_boot<-hepatovirus_bat_all_boot/ictv_hepato+plot_layout(nrow=2,  heights = c(2, 0.30))
+hep_bat_all_boot<-hepatovirus_bat_all_boot/ictv_hepato+plot_layout(nrow=2,  heights = c(1, 0.30))
 hep_bat_all_boot
 
 hep_bat_all_boot<-as.ggplot(hep_bat_all_boot)
@@ -669,6 +671,8 @@ hep_bat_all_boot
 #kunsagivirus
 africa_kun_bootscan <- read.csv(file = "africa_kun_bootscan.csv", header = T, stringsAsFactors = F) #animo acid
 head(africa_kun_bootscan)
+
+colzpalette<-c("black","goldenrod1","skyblue1")
 
 #move to long
 long.sim_nt <- melt(africa_kun_bootscan, id.vars = c("pointer"), measure.vars = c("NC_033818",
@@ -718,7 +722,7 @@ kunsagivirus_bat_all_boot
 
 
 #put gene map with PySimPlot
-kun_bat_all_boot<-kunsagivirus_bat_all_boot/ictv_kun+plot_layout(nrow=2,  heights = c(2, 0.30))
+kun_bat_all_boot<-kunsagivirus_bat_all_boot/ictv_kun+plot_layout(nrow=2,  heights = c(1, 0.30))
 kun_bat_all_boot
 
 kun_bat_all_boot<-as.ggplot(kun_bat_all_boot)
@@ -729,6 +733,8 @@ kun_bat_all_boot
 #mischivirus
 africa_mischi_bootscan <- read.csv(file = "africa_mischi_bootscan.csv", header = T, stringsAsFactors = F) #Nucleotide
 head(africa_mischi_bootscan)
+
+colzpalette<-c("black","goldenrod1", "skyblue1")
 
 #move to long
 long.sim_nt <- melt(africa_mischi_bootscan, id.vars = c("pointer"), measure.vars = c("JN867757",
@@ -779,7 +785,7 @@ mischivirus_bat_all_boot <- ggplot(long.sim_nt) +
 mischivirus_bat_all_boot
 
 #put gene map with PySimPlot
-mischi_bat_all_boot<-mischivirus_bat_all_boot/ictv_mischi+plot_layout(nrow=2,  heights = c(2, 0.30))
+mischi_bat_all_boot<-mischivirus_bat_all_boot/ictv_mischi+plot_layout(nrow=2,  heights = c(1, 0.30))
 mischi_bat_all_boot
 
 mischi_bat_all_boot<-as.ggplot(mischi_bat_all_boot)
@@ -790,6 +796,8 @@ mischi_bat_all_boot
 #Sapelovirus p1
 africa_sapelo_p1_bootscan <- read.csv(file = "africa_sapelo_p1_bootscan.csv", header = T, stringsAsFactors = F) #Nucleotide
 head(africa_sapelo_p1_bootscan)
+
+colzpalette<-c("black","goldenrod1","orchid2", "skyblue1", "orchid4", "dodgerblue4")
 
 #move to long
 long.sim_nt <- melt(africa_sapelo_p1_bootscan, id.vars = c("pointer"), measure.vars = c("OQ818321","OQ818329","NC_033820",
@@ -846,7 +854,7 @@ sapelovirus_bat_p1_boot <- ggplot(long.sim_nt) +
 sapelovirus_bat_p1_boot
 
 #put gene map with PySimPlot
-sapelo_bat_p1_boot<-sapelovirus_bat_p1_boot/ictv_sapelo_p1+plot_layout(nrow=2,  heights = c(2, 0.30))
+sapelo_bat_p1_boot<-sapelovirus_bat_p1_boot/ictv_sapelo_p1+plot_layout(nrow=2,  heights = c(1, 0.30))
 sapelo_bat_p1_boot
 
 sapelo_bat_p1_boot<-as.ggplot(sapelo_bat_p1_boot)
@@ -856,6 +864,8 @@ sapelo_bat_p1_boot
 #Teschovirus
 africa_tescho_bootscan <- read.csv(file = "africa_tescho_bootscan.csv", header = T, stringsAsFactors = F) #Nucleotide
 head(africa_tescho_bootscan)
+
+colzpalette<-c("black","goldenrod1","orchid2", "skyblue1")
 
 #move to long
 long.sim_nt <- melt(africa_tescho_bootscan, id.vars = c("pointer"), measure.vars = c("OQ818318","OQ818324","OM966657","OM105029"))
@@ -907,7 +917,7 @@ teschovirus_bat_boot <- ggplot(long.sim_nt) +
 teschovirus_bat_boot
 
 #put gene map with PySimPlot
-tescho_boot<-teschovirus_bat_boot/ictv_tescho+plot_layout(nrow=2,  heights = c(2, 0.30))
+tescho_boot<-teschovirus_bat_boot/ictv_tescho+plot_layout(nrow=2,  heights = c(1, 0.30))
 tescho_boot
 
 tescho_boot<-as.ggplot(tescho_boot)
@@ -933,6 +943,6 @@ fig3<-plot_grid(picornaviridae,bootscan,
                 labels=c("A",""),  label_size = 23, align = "hv", axis="b")
 fig3
 
-#export 27x19inch PDF landscape
+#export 26.5x13inch PDF landscape
 
 
