@@ -320,7 +320,7 @@ long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
 ## Amino acid
-title<-expression(paste("Reference: ",italic("Eidolon dupreanum hepatovirus "), "OQ818337"))
+title<-expression(paste("Reference: Eidolon hepatovirus"))
 
 hepatovirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
@@ -393,7 +393,7 @@ long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
 ## Amino acid
-title<-expression(paste("Reference: ",italic("Eidolon dupreanum kobuvirus "), "OQ818322"))
+title<-expression(paste("Reference: Eidolon dupreanum kobuvirus KEL318"))
 
 kobuvirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
@@ -456,7 +456,7 @@ long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
 ## Amino acid
-title<-expression(paste("Reference: ",italic("Eidolon dupreanum kunsagivirus "), "OQ818317"))
+title<-expression(paste("Reference: Eidolon kunsagivirus"))
 
 kunsagivirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
@@ -522,7 +522,7 @@ long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
 ## Amino acid
-title<-expression(paste("Reference: ",italic("Pteropus rufus mischivirus "), "OQ818316"))
+title<-expression(paste("Reference: Pteropus mischivirus"))
 
 mischivirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
@@ -575,14 +575,14 @@ long.sim_aa$variable <- as.character(long.sim_aa$variable)
 
 names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
 
-long.sim_aa$accession[long.sim_aa$accession == "OQ818321"] <- "Eidolon dupreanum sapelovirus OQ818321"
-long.sim_aa$accession[long.sim_aa$accession == "OQ818329"] <- "Rousettus madagascariensis sapelovirus OQ818329"
+long.sim_aa$accession[long.sim_aa$accession == "OQ818321"] <- "Eidolon sapelovirus KEL272"
+long.sim_aa$accession[long.sim_aa$accession == "OQ818329"] <- "Rousettus sapelovirus"
 long.sim_aa$accession[long.sim_aa$accession == "AF406813"] <- "Sapelovirus A AF406813"
 long.sim_aa$accession[long.sim_aa$accession == "AY064708"] <- "Sapelovirus B AY064708"
 long.sim_aa$accession[long.sim_aa$accession == "NC_033820"] <- "Eidolon helvum sapelovirus NC_033820"
 
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("Eidolon dupreanum sapelovirus OQ818321",
-                                                                  "Rousettus madagascariensis sapelovirus OQ818329",
+long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("Eidolon sapelovirus KEL272",
+                                                                  "Rousettus sapelovirus",
                                                                   "Sapelovirus A AF406813","Sapelovirus B AY064708",
                                                                   "Eidolon helvum sapelovirus NC_033820"))
 #and plot
@@ -590,7 +590,7 @@ long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
 ## Amino acid
-title<-expression(paste("Reference: ",italic("Eidolon dupreanum sapelovirus "), "OQ818320"))
+title<-expression(paste("Reference: Eidolon sapelovirus KEL233"))
 
 sapelovirus_full_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
@@ -641,14 +641,14 @@ long.sim_aa$variable <- as.character(long.sim_aa$variable)
 
 names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
 
-long.sim_aa$accession[long.sim_aa$accession == "OQ818323"] <- "Rousettus madagascariensis teschovirus OQ818323"
-long.sim_aa$accession[long.sim_aa$accession == "OQ818324"] <- "Rousettus madagascariensis teschovirus OQ818324"
+long.sim_aa$accession[long.sim_aa$accession == "OQ818323"] <- "Rousettus teschovirus MIZ190"
+long.sim_aa$accession[long.sim_aa$accession == "OQ818324"] <- "Rousettus teschovirus MIZ205"
 long.sim_aa$accession[long.sim_aa$accession == "LC386158"] <- "Teschovirus A LC386158"
 long.sim_aa$accession[long.sim_aa$accession == "MG875515"] <- "Teschovirus B MG875515"
 long.sim_aa$accession[long.sim_aa$accession == "MT295502"] <- "Teschovirus A6 MT295502"
 
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("Rousettus madagascariensis teschovirus OQ818323",
-                                                                  "Rousettus madagascariensis teschovirus OQ818324",
+long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("Rousettus teschovirus MIZ190",
+                                                                  "Rousettus teschovirus MIZ205",
                                                                   "Teschovirus A LC386158",
                                                                   "Teschovirus B MG875515",
                                                                   "Teschovirus A6 MT295502"))
@@ -657,7 +657,7 @@ long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
 ## Amino acid
-title<-expression(paste("Reference: ",italic("Eidolon dupreanum teschovirus "), "OQ818318"))
+title<-expression(paste("Reference: Eidolon teschovirus KEL164"))
 
 teschovirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
