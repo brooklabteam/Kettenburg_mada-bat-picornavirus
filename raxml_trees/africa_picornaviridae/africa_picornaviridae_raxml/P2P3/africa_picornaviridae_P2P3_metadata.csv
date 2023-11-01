@@ -3,8 +3,8 @@ AY644670.1,,Hepatovirus A,Hepatovirus,Picornaviridae,Sierra Leone,Homo sapiens,0
 DQ902712.1,CIV2003-10603,Enterovirus B,Enterovirus,Picornaviridae,Cote d'Ivoire,Homo sapiens,0,2006,0
 DQ916376.1,E210,Enterovirus D,Enterovirus,Picornaviridae,Egypt,Homo sapiens,0,2006,0
 EF015019.1,,Enterovirus C,Enterovirus,Picornaviridae,South Africa,Homo sapiens,0,2006,0
-EF127241.1,,Enterovirus A,Enterovirus,Picornaviridae,Democratic Republic of the Congo,Homo sapiens,0,2006,0
-EF127249.1,,Enterovirus D,Enterovirus,Picornaviridae,Democratic Republic of the Congo,Homo sapiens,0,2006,0
+EF127241.1,,Enterovirus A,Enterovirus,Picornaviridae,DRC,Homo sapiens,0,2006,0
+EF127249.1,,Enterovirus D,Enterovirus,Picornaviridae,DRC,Homo sapiens,0,2006,0
 EF611987.1,O/Uganda/2006,Foot-and-mouth disease virus,Aphthovirus,Picornaviridae,Uganda,Bos taurus,0,2006,0
 FJ461344.1,Kumi District,Foot-and-mouth disease virus,Aphthovirus,Picornaviridae,Uganda,Bos taurus,0,2002,0
 HF677705.1,,Parechovirus C,Parechovirus,Picornaviridae,Central African Republic,Hylomyscus,0,1972,0
@@ -96,7 +96,7 @@ KM068051.1,B103,Aichivirus A,Kobuvirus,Picornaviridae,Tanzania,Crocuta crocuta,0
 KM268897.1,KEN/1/2004,Foot-and-mouth disease virus,Aphthovirus,Picornaviridae,Kenya,Bos taurus,0,2004,0
 KM268899.1,TAN/22/2012,Foot-and-mouth disease virus,Aphthovirus,Picornaviridae,Tanzania,Bos taurus,0,2012,0
 KM268901.1,ZIM/6/91,Foot-and-mouth disease virus,Aphthovirus,Picornaviridae,Zimbabwe,Bos taurus,0,1991,0
-KM273013.1,Mar-38,Enterovirus B,Enterovirus,Picornaviridae,Democratic Republic of the Congo,Homo sapiens,0,2014,0
+KM273013.1,Mar-38,Enterovirus B,Enterovirus,Picornaviridae,DRC,Homo sapiens,0,2014,0
 KM273014.1,05-May,Enterovirus C,Enterovirus,Picornaviridae,Djibouti,Homo sapiens,0,2014,0
 KM667941.1,BEV/Egypt/2014,Enterovirus E,Enterovirus,Picornaviridae,Egypt,Bos taurus,0,2014,0
 KM880096.1,,Enterovirus C,Enterovirus,Picornaviridae,Burundi,Homo sapiens,0,2010,0
@@ -289,7 +289,7 @@ NC_012957.1,,Salivirus A,Salivirus,Picornaviridae,Nigeria,Homo sapiens,0,2007,0
 NC_024070.1,,Rosavirus A,Rosavirus,Picornaviridae,Gambia,Homo sapiens,0,2008,0
 NC_024073.1,CPML_8109/08,Enterovirus sp.,Enterovirus,Picornaviridae,Cameroon,Mandrillus sphinx,0,2008,0
 NC_025474.1,,Crohivirus A,Crohivirus,Picornaviridae,Zambia,Crocidura hirta,0,2012,0
-NC_026470.1,PREDICT-06105,Mischivirus C,Mischivirus,Picornaviridae,Democratic Republic of the Congo,Macronycteris gigas,1,2013,0
+NC_026470.1,PREDICT-06105,Mischivirus C,Mischivirus,Picornaviridae,DRC,Macronycteris gigas,1,2013,0
 NC_028366.1,M32Eidhel2010,Hepatovirus H,Hepatovirus,Picornaviridae,Ghana,Eidolon helvum,1,2010,0
 NC_030886.1,GCCDC1 356,Rousettus bat coronavirus GCCDC1,Coronavirus,Coronaviridae,China,Rousettus leschenaulti,1,2018,0
 NC_033818.1,,Kunsagivirus B,Kunsagivirus,Picornaviridae,Cameroon,Eidolon helvum,1,2013,0
