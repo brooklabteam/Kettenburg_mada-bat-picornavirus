@@ -49,11 +49,11 @@ unique(dat$Genus)
 
 colz = c("Sapovirus" = "royalblue3",    "Vesivirus"  = "turquoise1",   "Lagovirus"  = "goldenrod1",   "Norovirus"   = "dodgerblue1" ,   "Calicivirus" = "firebrick1" ,
          "Salovirus"  = "lightpink1" ,    "Bavovirus"  = "hotpink1" ,  "Minovirus" = "lightskyblue" ,   "Coronavirus"  = "black", "Recovirus"  = "darkorange1", 
-         "Nacovirus"="thistle3", "Nebovirus"="darkorchid4", "Unclassified"="darkorchid4")
+         "Nacovirus"="thistle3", "Nebovirus"="darkorchid2", "Saplivirus"="sienna", "Unclassified"="darkorchid4")
 
 #pick order for the labels
 dat$Genus <- factor(dat$Genus, levels = c("Sapovirus" ,  "Vesivirus",   "Lagovirus",   "Norovirus",   "Calicivirus",
-                                          "Salovirus",    "Bavovirus",  "Minovirus",  "Recovirus", "Nacovirus", "Nebovirus","Unclassified", 
+                                          "Salovirus",    "Bavovirus",  "Minovirus",  "Recovirus", "Nacovirus", "Nebovirus", "Saplivirus" ,"Unclassified", 
                                           "Coronavirus"))   
 
 dat$novel <- as.factor(dat$novel)

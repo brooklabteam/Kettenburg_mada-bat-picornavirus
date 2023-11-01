@@ -342,16 +342,16 @@ OR075000.1,b6,Enterovirus B,Enterovirus,Picornaviridae,Nigeria,Homo sapiens,0,20
 OR350266.1,F14,African cichlid picornavirus,Unclassified,Picornaviridae,Zambia,Neolamprologus caudopunctatus,0,2014,0
 OQ818316,,Unclassified,Mischivirus,Picornaviridae,Madagascar,Pteropus rufus,1,2018,1
 OQ818317,,Unclassified,Kunsagivirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2018,1
-OQ818318,,Unclassified,Teschovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2018,1
-OQ818320,,Unclassified,Sapelovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2018,1
-OQ818321,,Unclassified,Sapelovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2019,1
-OQ818322,,Unclassified,Kobuvirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2019,1
-OQ818323,,Unclassified,Teschovirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
-OQ818324,,Unclassified,Teschovirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
-OQ818325,,Unclassified,Picornavirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
-OQ818328,,Unclassified,Picornavirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818318,KEL164,Unclassified,Teschovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818320,KEL233,Unclassified,Sapelovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818321,KEL272,Unclassified,Sapelovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2019,1
+OQ818322,KEL318,Unclassified,Kobuvirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2019,1
+OQ818323,MIZ190,Unclassified,Teschovirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818324,MIZ205,Unclassified,Teschovirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818325,MIZ214,Unclassified,Roupivirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818328,MIZ240,Unclassified,Roupivirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
 OQ818329,,Unclassified,Sapelovirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
 OQ818337,,Unclassified,Hepatovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2018,1
-OQ818342,,Unclassified,Sapelovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2019,1
-OQ818344,,Unclassified,Sapelovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2019,1
-OQ818346,,Unclassified,Picornavirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818342,KEL273,Unclassified,Sapelovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2019,1
+OQ818344,KEL298,Unclassified,Sapelovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2019,1
+OQ818346,MIZ194,Unclassified,Roupivirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1

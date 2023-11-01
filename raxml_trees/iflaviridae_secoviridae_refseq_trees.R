@@ -39,10 +39,10 @@ length(tree$tip.label) #48
 #check subgroup names
 unique(dat$Genus)
 
-colz = c("Iflavirus" = "royalblue3",    "Felisavirus"  = "turquoise1",   "Picorna-like virus"  = "goldenrod1", "Unclassified"="hotpink1", "Coronavirus"  = "black")
+colz = c("Iflavirus" = "royalblue3",    "Felisavirus"  = "turquoise1",   "Picorna-like virus"  = "goldenrod1", "Iflivirus"="tomato1","Unclassified"="hotpink1", "Coronavirus"  = "black")
 
 #pick order for the labels
-dat$Genus <- factor(dat$Genus, levels = c("Iflavirus" ,  "Picorna-like virus", "Felisavirus",  "Unclassified",  "Coronavirus"))   
+dat$Genus <- factor(dat$Genus, levels = c("Iflavirus" ,  "Picorna-like virus", "Felisavirus", "Iflivirus", "Unclassified",  "Coronavirus"))   
 
 dat$novel <- as.factor(dat$novel)
 
@@ -214,7 +214,7 @@ iflaviridae <- p23  %<+% p23.dat +
   ggnewscale::new_scale_fill() + 
   geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
-  #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
+  guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
   theme(legend.position = "left",
         legend.direction = "vertical",
         legend.text = element_text(size=12),

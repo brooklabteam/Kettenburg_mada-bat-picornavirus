@@ -55,7 +55,8 @@ colz = c("Cardiovirus" = "cadetblue1",    "Enterovirus"  = "cadetblue2",   "Hepa
          "Ampivirus"  = "pink2" ,"Livupivirus" = "pink3" ,   "Kunsagivirus"  = "pink4",  
          "Shanbavirus"  = "slateblue1" ,  "Rafivirus"   = "slateblue3",  "Coronavirus" ="black",  
          "Poecivirus"  = "slateblue4" ,"Rabovirus"   = "maroon1",    "Tottorivirus"  = "maroon3" , 
-         "Ailurivirus" = "maroon4", "Madagascar bat kobuvirus" ="royalblue1", "Bat picornavirus"="royalblue3", "Picornavirus"="royalblue4")
+         "Ailurivirus" = "maroon4", "Madagascar bat kobuvirus" ="royalblue1", "Bat picornavirus"="royalblue3", 
+         "Picornavirus"="royalblue4", "Roupivirus"="gold")
 
 #pick order for the labels
 dat$Genus <- factor(dat$Genus, levels = c("Cardiovirus",    "Enterovirus",   "Hepatovirus",   
@@ -75,7 +76,8 @@ dat$Genus <- factor(dat$Genus, levels = c("Cardiovirus",    "Enterovirus",   "He
                                           "Shanbavirus",  "Rafivirus", 
                                           "Poecivirus", "Rabovirus",    "Tottorivirus", 
                                           "Ailurivirus", "Madagascar bat kobuvirus", 
-                                          "Bat picornavirus", "Picornavirus","Coronavirus"))   
+                                          "Bat picornavirus", "Picornavirus", "Roupivirus",
+                                          "Coronavirus"))   
 
 dat$novel <- as.factor(dat$novel)
 
@@ -332,12 +334,12 @@ unique(dat$Genus)
 
 colz = c("Sapovirus" = "royalblue3",    "Vesivirus"  = "turquoise1",   "Lagovirus"  = "goldenrod1",   "Norovirus"   = "dodgerblue1" ,   "Calicivirus" = "firebrick1" ,
          "Salovirus"  = "lightpink1" ,    "Bavovirus"  = "hotpink1" ,  "Minovirus" = "lightskyblue" ,   "Coronavirus"  = "black", "Recovirus"  = "darkorange1", 
-         "Nacovirus"="thistle3", "Nebovirus"="darkorchid4", "Unclassified"="darkorchid4")
+         "Nacovirus"="thistle3", "Nebovirus"="darkorchid2", "Saplivirus"="sienna", "Unclassified"="darkorchid4")
 
 #pick order for the labels
 dat$Genus <- factor(dat$Genus, levels = c("Sapovirus" ,  "Vesivirus",   "Lagovirus",   "Norovirus",   "Calicivirus",
-                                          "Salovirus",    "Bavovirus",  "Minovirus",  "Recovirus", "Nacovirus", "Nebovirus","Unclassified", 
-                                          "Coronavirus"))   
+                                          "Salovirus",    "Bavovirus",  "Minovirus",  "Recovirus", "Nacovirus", "Nebovirus", "Saplivirus" ,"Unclassified", 
+                                          "Coronavirus"))
 
 dat$novel <- as.factor(dat$novel)
 

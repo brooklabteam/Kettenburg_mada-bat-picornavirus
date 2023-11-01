@@ -37,7 +37,7 @@ MZ913393.1,Rabbit_1512/TUN/2020,Rabbit hemorrhagic disease virus,Lagovirus,Calic
 NC_030886.1,GCCDC1 356,Rousettus bat coronavirus GCCDC1,Coronavirus,Coronaviridae,China,Rousettus leschenaulti,0,2018,0
 NC_033776.1,Bat-SaV/Limbe65/CAM/2014,Bat sapovirus,Sapovirus,Caliciviridae,Cameroon,Eidolon helvum,1,2014,0
 OM105025.1,BSF2,Sapporo virus,Sapovirus,Caliciviridae,South Africa,Sus scrofa domesticus,0,2021,0
-OQ818319,,Unclassified,Sapovirus,Caliciviridae,Madagascar,Eidolon dupreanum,1,2018,1
-OQ818345,,Unclassified,Sapovirus,Caliciviridae,Madagascar,Rousettus madagascariensis,1,2018,1
-OQ818347,,Unclassified,Sapovirus,Caliciviridae,Madagascar,Rousettus madagascariensis,1,2018,1
-OQ818348,,Unclassified,Sapovirus,Caliciviridae,Madagascar,Rousettus madagascariensis,1,2019,1
+OQ818319,KEL166,Unclassified,Saplivirus,Caliciviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818345,MIZ179,Unclassified,Saplivirus,Caliciviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818347,,Unclassified,Saplivirus,Caliciviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818348,MIZ345,Unclassified,Saplivirus,Caliciviridae,Madagascar,Rousettus madagascariensis,1,2019,1
