@@ -230,6 +230,7 @@ p4 <- p2b+
 
 p4
 
+p4.1<-as.ggplot(p4)
 
 
 
@@ -314,8 +315,9 @@ p6 <- ggplot(ED, aes(x=type, y=virus)) +
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         plot.title = element_text(size=12, face="italic"), 
-        axis.text.y = element_text(size=9,face="italic"),
+        axis.text.y = element_text(size=10,face="italic"),
         axis.text.x = element_text(size=9),
+        strip.text = element_text(size=10),
         legend.position = "none")
 p6
 
@@ -340,8 +342,9 @@ p7 <- ggplot(PR, aes(x=type, y=virus)) +
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         plot.title = element_text(size=12, face="italic"), 
-        axis.text.y = element_text(size=9,face="italic"),
+        axis.text.y = element_text(size=10,face="italic"),
         axis.text.x = element_text(size=9),
+        strip.text = element_text(size=10),
         legend.position="none")
 p7
 
@@ -367,6 +370,7 @@ p8 <- ggplot(RM, aes(x=type, y=virus)) +
         plot.title = element_text(size=12, face="italic"), 
         axis.text.y = element_text(size=9,face="italic"),
         axis.text.x = element_text(size=9),
+        strip.text = element_text(size=10),
         legend.position=c(0.85,0.9),
         legend.margin = margin(c(0,0,0,0)))
 p8
@@ -377,11 +381,28 @@ p8
 
 final<- plot_grid(p6,p7,p8,labels=c("","",""),rel_widths = c(1, 1,1), rel_heights = c(1, 1,1),ncol=3, align="hv", axis="b")
 final
+final<-as.ggplot(final)
 
-final2<- plot_grid(p4,final,labels=c("A","B"),rel_widths = c(1, 1.8), rel_heights = c(3, 1),ncol=2, align="hv", axis="b", label_size = 23)
+final2<- plot_grid(p4.1,NULL,final,labels=c("A","B",""),rel_widths = c(0.8,0.1, 1), rel_heights = c(1,1, 1),ncol=3, align="hv", axis="b", label_size = 23)
 final2
 
 # export figure 1 20x7.5 inch landscape PDF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
