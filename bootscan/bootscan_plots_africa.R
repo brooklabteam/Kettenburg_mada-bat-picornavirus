@@ -473,19 +473,19 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "OQ818325"] <- "Rousettus madagascariensis picornavirus OQ818325"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818346"] <- "Rousettus madagascariensis picornavirus OQ818346"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818325"] <- "Rousettus roupivirus MIZ214"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818346"] <- "Rousettus roupivirus MIZ194"
 long.sim_nt$accession[long.sim_nt$accession == "JX437642"] <- "Homo sapiens enterovirus JX437642"
 long.sim_nt$accession[long.sim_nt$accession == "KF040078"] <- "Pan troglodytes enterovirus KF040078"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Rousettus madagascariensis picornavirus OQ818325", 
-                                                                  "Rousettus madagascariensis picornavirus OQ818346",
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Rousettus roupivirus MIZ214", 
+                                                                  "Rousettus roupivirus MIZ194",
                                                                   "Homo sapiens enterovirus JX437642","Pan troglodytes enterovirus KF040078"))
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Bootscan 
-title<-expression(paste("Reference: ",italic("Rousettus madagascariensis picornavirus "), "OQ818328"))
+title<-expression(paste("Reference: Rousettus roupivirus MIZ240"))
 
 batpicorna_africa_all_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -535,18 +535,18 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "OQ818325"] <- "Rousettus madagascariensis picornavirus OQ818325"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818325"] <- "Rousettus roupivirus MIZ214"
 long.sim_nt$accession[long.sim_nt$accession == "JX437642"] <- "Homo sapiens enterovirus JX437642"
 long.sim_nt$accession[long.sim_nt$accession == "KF040078"] <- "Pan troglodytes enterovirus KF040078"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Rousettus madagascariensis picornavirus OQ818325", 
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Rousettus roupivirus MIZ214", 
                                                                   "Homo sapiens enterovirus JX437642",
                                                                   "Pan troglodytes enterovirus KF040078"))
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Bootscan 
-title<-expression(paste("Reference: ",italic("Rousettus madagascariensis picornavirus "), "OQ818328"))
+title<-expression(paste("Reference: Rousettus roupivirus MIZ240"))
 
 batpicorna_africa_full_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -610,7 +610,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: ",italic("Eidolon dupreanum hepatovirus "), "OQ818337"))
+title<-expression(paste("Reference: Eidolon hepatovirus"))
 
 hepatovirus_bat_all_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -671,7 +671,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: ",italic("Eidolon dupreanum kunsagivirus "), "OQ818317"))
+title<-expression(paste("Reference: Eidolon kunsagivirus"))
 
 kunsagivirus_bat_all_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -733,7 +733,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: ",italic("Pteropus rufus mischivirus "), "OQ818316"))
+title<-expression(paste("Reference: Pteropus mischivirus"))
 
 mischivirus_bat_all_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -782,19 +782,19 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "OQ818321"] <- "Eidolon dupreanum sapelovirus OQ818321"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818329"] <- "Rousettus madagascariensis sapelovirus OQ818329"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818321"] <- "Eidolon sapelovirus KEL272"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818329"] <- "Rousettus sapelovirus"
 long.sim_nt$accession[long.sim_nt$accession == "NC_033820"] <- "Eidolon helvum sapelovirus NC_033820"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Eidolon dupreanum sapelovirus OQ818321",
-                                                                  "Rousettus madagascariensis sapelovirus OQ818329",
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Eidolon sapelovirus KEL272",
+                                                                  "Rousettus sapelovirus",
                                                                   "Eidolon helvum sapelovirus NC_033820"))
 #and plot
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: ",italic("Eidolon dupreanum sapelovirus "), "OQ818320"))
+title<-expression(paste("Reference: Eidolon sapelovirus KEL233"))
 
 sapelovirus_bat_full_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -844,17 +844,17 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "OQ818321"] <- "Eidolon dupreanum sapelovirus OQ818321"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818329"] <- "Rousettus madagascariensis sapelovirus OQ818329"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818321"] <- "Eidolon sapelovirus KEL272"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818329"] <- "Rousettus sapelovirus"
 long.sim_nt$accession[long.sim_nt$accession == "NC_033820"] <- "Eidolon helvum sapelovirus NC_033820"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818343"] <- "Eidolon dupreanum sapelovirus OQ818343"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818343"] <- "Eidolon sapelovirus KEL275B"
 long.sim_nt$accession[long.sim_nt$accession == "LC508226"] <- "Porcine sapelovirus LC508226"
 long.sim_nt$accession[long.sim_nt$accession == "OM104039"] <- "Porcine sapelovirus OM104039"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Eidolon dupreanum sapelovirus OQ818321",
-                                                                  "Rousettus madagascariensis sapelovirus OQ818329",
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Eidolon sapelovirus KEL272",
+                                                                  "Rousettus sapelovirus",
                                                                   "Eidolon helvum sapelovirus NC_033820",
-                                                                  "Eidolon dupreanum sapelovirus OQ818343",
+                                                                  "Eidolon sapelovirus KEL275B",
                                                                   "Porcine sapelovirus LC508226",
                                                                   "Porcine sapelovirus OM104039"))
 #and plot
@@ -862,7 +862,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: ",italic("Eidolon dupreanum sapelovirus "), "OQ818320"))
+title<-expression(paste("Reference: Eidolon sapelovirus KEL233"))
 
 sapelovirus_bat_p1_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -872,8 +872,7 @@ sapelovirus_bat_p1_boot <- ggplot(long.sim_nt) +
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
-        legend.title = element_text(face="italic", size = 8),
+        #
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
@@ -913,19 +912,19 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "OQ818321"] <- "Eidolon dupreanum sapelovirus OQ818321"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818329"] <- "Rousettus madagascariensis sapelovirus OQ818329"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818321"] <- "Eidolon sapelovirus KEL272"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818329"] <- "Rousettus sapelovirus"
 long.sim_nt$accession[long.sim_nt$accession == "NC_033820"] <- "Eidolon helvum sapelovirus NC_033820"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818344"] <- "Eidolon dupreanum sapelovirus OQ818344"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818342"] <- "Eidolon dupreanum sapelovirus OQ818342"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818344"] <- "Eidolon sapelovirus KEL298"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818342"] <- "Eidolon sapelovirus KEL273"
 long.sim_nt$accession[long.sim_nt$accession == "LC508226"] <- "Porcine sapelovirus LC508226"
 long.sim_nt$accession[long.sim_nt$accession == "OM104039"] <- "Porcine sapelovirus OM104039"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Eidolon dupreanum sapelovirus OQ818321",
-                                                                  "Rousettus madagascariensis sapelovirus OQ818329",
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Eidolon sapelovirus KEL272",
+                                                                  "Rousettus sapelovirus",
                                                                   "Eidolon helvum sapelovirus NC_033820",
-                                                                  "Eidolon dupreanum sapelovirus OQ818344",
-                                                                  "Eidolon dupreanum sapelovirus OQ818342",
+                                                                  "Eidolon sapelovirus KEL298",
+                                                                  "Eidolon sapelovirus KEL273",
                                                                   "Porcine sapelovirus LC508226",
                                                                   "Porcine sapelovirus OM104039"))
 #and plot
@@ -933,7 +932,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: ",italic("Eidolon dupreanum sapelovirus "), "OQ818320"))
+title<-expression(paste("Reference: Eidolon sapelovirus KEL233"))
 
 sapelovirus_bat_p2_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -982,24 +981,24 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "OQ818340"] <- "Eidolon dupreanum sapovirus OQ818340"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818345"] <- "Rousettus madagascariensis sapovirus OQ818345"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818347"] <- "Rousettus madagascariensis sapovirus OQ818347"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818348"] <- "Rousettus madagascariensis sapovirus OQ818348"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818340"] <- "Eidolon saplivirus KEL207"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818345"] <- "Rousettus saplivirus MIZ179"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818347"] <- "Rousettus saplivirus MIZ219"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818348"] <- "Rousettus saplivirus MIZ345"
 long.sim_nt$accession[long.sim_nt$accession == "NC_033776"] <- "Eidolon helvum sapovirus NC_033776"
 long.sim_nt$accession[long.sim_nt$accession == "OM105025"] <- "Shellfish unclassified caliciviridae OM105025"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Eidolon dupreanum sapovirus OQ818340",
-                                                                  "Rousettus madagascariensis sapovirus OQ818345",
-                                                                  "Rousettus madagascariensis sapovirus OQ818347",
-                                                                  "Rousettus madagascariensis sapovirus OQ818348",
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Eidolon saplivirus KEL207",
+                                                                  "Rousettus saplivirus MIZ179",
+                                                                  "Rousettus saplivirus MIZ219",
+                                                                  "Rousettus saplivirus MIZ345",
                                                                   "Eidolon helvum sapovirus NC_033776",
                                                                   "Shellfish unclassified caliciviridae OM105025"))
 #and plot
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: ",italic("Eidolon dupreanum sapovirus "), "OQ818319"))
+title<-expression(paste("Reference: Eidolon saplivirus KEL166"))
 
 sapovirus_all_bat_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -1060,7 +1059,7 @@ long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Human norovir
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: ",italic("Eidolon dupreanum sapovirus "), "OQ818319"))
+title<-expression(paste("Reference: Eidolon saplivirus KEL166"))
 
 sapovirus_full_bat_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -1108,21 +1107,21 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "OQ818318"] <- "Eidolon dupreanum teschovirus OQ818318"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818324"] <- "Rousettus madagascariensis teschovirus OQ818324"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818318"] <- "Eidolon teschovirus KEL164"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818324"] <- "Rousettus teschovirus MIZ205"
 long.sim_nt$accession[long.sim_nt$accession == "OM966657"] <- "Sus scrofa teschovirus OM966657"
 long.sim_nt$accession[long.sim_nt$accession == "OM105029"] <- "Sus scrofa teschovirus OM105029"
 
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Eidolon dupreanum teschovirus OQ818318",
-                                                                  "Rousettus madagascariensis teschovirus OQ818324",
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Eidolon teschovirus KEL164",
+                                                                  "Rousettus teschovirus MIZ205",
                                                                   "Sus scrofa teschovirus OM966657",
                                                                   "Sus scrofa teschovirus OM105029"))
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: ",italic("Rousettus madagascariensis teschovirus "), "OQ818323"))
+title<-expression(paste("Reference: Rousettus teschovirus MIZ190"))
 
 teschovirus_bat_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
