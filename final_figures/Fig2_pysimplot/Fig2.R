@@ -42,21 +42,21 @@ ictv_feat$gene<-factor(ictv_feat$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP
                                                   "Similar to putative polyprotein", "Similar to polyprotein","3'UTR"))
 
 #Pick colors for genes
-colz=c("5'UTR"="gold", "L"="royalblue","VP4"="paleturquoise3", "VP2"="skyblue1", "VP0"="royalblue4", "VP3"="steelblue1",
-       "VP1"="cadetblue1", "VP1/2A"="cadetblue1", "2A"="orange1", "2B"="sienna2", "2C"="darkorange1", "3A"="palevioletred1", "3B"="plum",
-       "3C"="rosybrown1", "3D"="pink2", "Helicase"="darkseagreen1","NS4"="darkolivegreen1","Vpg"="seagreen1","Pro-Pol"="palegreen2",
-       "Polyprotein"="azure3","Putative polyprotein"="mediumorchid1", "Non-structural polyprotein"="mediumorchid4",
-       "Putative minor structural protein" ="slateblue3", "Structural polyprotein"="lightgoldenrod1",
-       "Hypothetical protein"="darkslategrey", "Similar to structural polyprotein"="mediumpurple1", "Similar to putative polyprotein"="mediumpurple3",
-       "Similar to polyprotein"="mediumpurple4","3'UTR"="yellow")
+# colz=c("5'UTR"="gold", "L"="royalblue","VP4"="paleturquoise3", "VP2"="skyblue1", "VP0"="royalblue4", "VP3"="steelblue1",
+#        "VP1"="cadetblue1", "VP1/2A"="cadetblue1", "2A"="orange1", "2B"="sienna2", "2C"="darkorange1", "3A"="palevioletred1", "3B"="plum",
+#        "3C"="rosybrown1", "3D"="pink2", "Helicase"="darkseagreen1","NS4"="darkolivegreen1","Vpg"="seagreen1","Pro-Pol"="palegreen2",
+#        "Polyprotein"="azure3","Putative polyprotein"="mediumorchid1", "Non-structural polyprotein"="mediumorchid4",
+#        "Putative minor structural protein" ="slateblue3", "Structural polyprotein"="lightgoldenrod1",
+#        "Hypothetical protein"="darkslategrey", "Similar to structural polyprotein"="mediumpurple1", "Similar to putative polyprotein"="mediumpurple3",
+#        "Similar to polyprotein"="mediumpurple4","3'UTR"="yellow")
 
-# colz=c("5'UTR"="gold", "L"="gray1","VP4"="gray31", "VP2"="gray48", "VP0"="gray73", "VP3"="gray82",
-#        "VP1"="gray100", "VP1/2A"="gray100", "2A"="olivedrab4", "2B"="olivedrab3", "2C"="olivedrab1", "3A"="darkseagreen4", "3B"="darkseagreen3",
-#        "3C"="darkseagreen1", "3D"="darkseagreen", "Helicase"="gray1","NS4"="gray34","Vpg"="gray59","Pro-Pol"="gray80",
-#        "Polyprotein"="azure3","Putative polyprotein"="thistle1", "Non-structural polyprotein"="thistle2", 
-#        "Putative minor structural protein" ="thistle3", "Structural polyprotein"="thistle4",
-#        "Hypothetical protein"="slategray4", "Similar to structural polyprotein"="slategray3", "Similar to putative polyprotein"="slategray2", 
-#        "Similar to polyprotein"="slategray1","3'UTR"="yellow")
+colz=c("5'UTR"="grey", "L"="white","VP4"="white", "VP2"="white", "VP0"="white", "VP3"="white",
+       "VP1"="white", "VP1/2A"="white", "2A"="white", "2B"="white", "2C"="white", "3A"="white", "3B"="white",
+       "3C"="white", "3D"="white", "Helicase"="white","NS4"="white","Vpg"="white","Pro-Pol"="white",
+       "Polyprotein"="black","Putative polyprotein"="black", "Non-structural polyprotein"="black",
+       "Putative minor structural protein" ="white", "Structural polyprotein"="black",
+       "Hypothetical protein"="white", "Similar to structural polyprotein"="black", "Similar to putative polyprotein"="black",
+       "Similar to polyprotein"="black","3'UTR"="grey")
 
 
 #Plot ICTV and BLAST together plots
@@ -112,7 +112,7 @@ ictv_hepato<-ggplot(ictv_hepatovirus, aes(xmin = start, xmax = end, y = molecule
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_hepatovirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                                  xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                                  xsubmin=from, xsubmax=to), color="black",
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
@@ -141,7 +141,7 @@ ictv_kobu<-ggplot(ictv_kobuvirus, aes(xmin = start, xmax = end, y = molecule, fi
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_kobuvirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                            xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                            xsubmin=from, xsubmax=to), color="black",
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
@@ -170,7 +170,7 @@ ictv_kun<-ggplot(ictv_kunsagivirus, aes(xmin = start, xmax = end, y = molecule, 
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_kunsagivirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                              xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                              xsubmin=from, xsubmax=to), color="black",
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
@@ -199,7 +199,7 @@ ictv_mischi<-ggplot(ictv_mischivirus, aes(xmin = start, xmax = end, y = molecule
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_mischivirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                              xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                              xsubmin=from, xsubmax=to), color="black",
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
@@ -228,7 +228,7 @@ ictv_sapelo_full<-ggplot(ictv_sapelovirus_full, aes(xmin = start, xmax = end, y 
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_sapelovirus_pep_full, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                                   xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                                   xsubmin=from, xsubmax=to), color="black",
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
@@ -257,7 +257,7 @@ ictv_tescho<-ggplot(ictv_teschovirus, aes(xmin = start, xmax = end, y = molecule
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_teschovirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                              xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                              xsubmin=from, xsubmax=to), color="black",
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
@@ -282,8 +282,7 @@ ictv_tescho
 ##Now get the plots for the PySimPlot, just the ICTV_BLAST ones, there will be a separate PDF file with the table of African bat picorna similarities
 setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/ICTV_BLAST_pysimplot")
 
-#colzpalette<-c("#8ECAE6","#219EBC","#023047","#FFB703","#FB8500","#E48B97","#B52B09","#A60067","#987B6F","#8FD694")
-colzpalette<-c("gray1","gray46","gray71","slategray4","slategray3","slategray2","slategray1","firebrick2","snow3")
+colzpalette<-c("coral1","cyan3","hotpink1","gold2","orange2","dodgerblue2","firebrick1","darkorchid3","skyblue1")
 
 
 #Hepatovirus
@@ -362,9 +361,6 @@ hep_ictv_aa
 kobuvirus_aa_ictv <- read.csv(file = "kobu_ictv_aa_full_alignment.csv", header = T, stringsAsFactors = F) #Amino acid
 head(kobuvirus_aa_ictv)
 
-colzpalette<-c("gray1","gray46","gray71","slategray4","slategray3","slategray1","firebrick2")
-
-
 #move to long
 long.sim_aa <- melt(kobuvirus_aa_ictv, id.vars = c("pointer"), measure.vars = c("AB040749","AB084788",
                                                                                 "EU787450","KJ641686",
@@ -432,9 +428,6 @@ kobu_ictv_aa
 #kunsagivirus
 kunsagivirus_aa_ictv <- read.csv(file = "kun_ictv_aa_full_alignment.csv", header = T, stringsAsFactors = F) #Amino acid
 head(kunsagivirus_aa_ictv)
-
-colzpalette<-c("gray1","firebrick2","gray71")
-
 
 #move to long
 long.sim_aa <- melt(kunsagivirus_aa_ictv, id.vars = c("pointer"), measure.vars = c("KC935379","KX644936",
