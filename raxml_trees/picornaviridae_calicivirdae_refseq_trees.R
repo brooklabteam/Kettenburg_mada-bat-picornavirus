@@ -39,24 +39,24 @@ length(tree$tip.label) #356
 
 #check subgroup names
 unique(dat$Genus)
-colz = c("Cardiovirus" = "cadetblue1",    "Enterovirus"  = "cadetblue2",   "Hepatovirus"  = "cadetblue3",   
-         "Kobuvirus"   = "cadetblue4" ,   "Parechovirus" = "coral1" ,"Erbovirus"  = "coral3" ,    
-         "Teschovirus"  = "coral4" ,  "Sapelovirus" = "cyan1" ,   "Tremovirus"  = "cyan2" ,   
-         "Anativirus"   = "cyan3" ,"Avihepatovirus"  = "cyan4","Aquamavirus"  = "darkgoldenrod1",   
-         "Aphthovirus"  = "darkgoldenrod2" ,  "Senecavirus"  = "darkgoldenrod3" ,  "Cosavirus"  = "darkgoldenrod4",
-         "Salivirus"   = "deepskyblue1",    "Passerivirus"  = "deepskyblue2", "Oscivirus"   = "deepskyblue3" , 
-         "Unclassified picornavirus"= "deepskyblue4"  ,   "Mischivirus" = "darkorange","Pasivirus"   = "darkorange2"  ,  
-         "Gallivirus"   = "darkorange3" ,  "Limnipivirus"  = "darkorange4",  "Hunnivirus"   = "firebrick1",   
-         "Dicipivirus" = "firebrick2","Megrivirus"  = "firebrick3" ,   "Potamipivirus"  = "firebrick4", 
-         "Sakobuvirus"  = "lightblue1" ,  "Sicinivirus"  = "lightblue2" ,  "Aalivirus"  = "lightblue3",
-         "Mosavirus"  = "lightblue4" ,    "Rosavirus"  = "hotpink1" ,    "Avisivirus"   = "hotpink2",   
-         "Orivirus"   = "hotpink3" ,    "Crohivirus" = "hotpink4","Torchivirus" = "indianred1" ,   
-         "Bopivirus"  = "indianred3"  ,   "Malagasivirus" = "indianred4" , "Harkavirus"  = "pink1" ,   
-         "Ampivirus"  = "pink2" ,"Livupivirus" = "pink3" ,   "Kunsagivirus"  = "pink4",  
-         "Shanbavirus"  = "slateblue1" ,  "Rafivirus"   = "slateblue3",  "Coronavirus" ="black",  
-         "Poecivirus"  = "slateblue4" ,"Rabovirus"   = "maroon1",    "Tottorivirus"  = "maroon3" , 
-         "Ailurivirus" = "maroon4", "Madagascar bat kobuvirus" ="royalblue1", "Bat picornavirus"="royalblue3", 
-         "Picornavirus"="royalblue4", "Roupivirus"="gold")
+# colz = c("Cardiovirus" = "cadetblue1",    "Enterovirus"  = "cadetblue2",   "Hepatovirus"  = "cadetblue3",   
+#          "Kobuvirus"   = "cadetblue4" ,   "Parechovirus" = "coral1" ,"Erbovirus"  = "coral3" ,    
+#          "Teschovirus"  = "coral4" ,  "Sapelovirus" = "cyan1" ,   "Tremovirus"  = "cyan2" ,   
+#          "Anativirus"   = "cyan3" ,"Avihepatovirus"  = "cyan4","Aquamavirus"  = "darkgoldenrod1",   
+#          "Aphthovirus"  = "darkgoldenrod2" ,  "Senecavirus"  = "darkgoldenrod3" ,  "Cosavirus"  = "darkgoldenrod4",
+#          "Salivirus"   = "deepskyblue1",    "Passerivirus"  = "deepskyblue2", "Oscivirus"   = "deepskyblue3" , 
+#          "Unclassified picornavirus"= "deepskyblue4"  ,   "Mischivirus" = "darkorange","Pasivirus"   = "darkorange2"  ,  
+#          "Gallivirus"   = "darkorange3" ,  "Limnipivirus"  = "darkorange4",  "Hunnivirus"   = "firebrick1",   
+#          "Dicipivirus" = "firebrick2","Megrivirus"  = "firebrick3" ,   "Potamipivirus"  = "firebrick4", 
+#          "Sakobuvirus"  = "lightblue1" ,  "Sicinivirus"  = "lightblue2" ,  "Aalivirus"  = "lightblue3",
+#          "Mosavirus"  = "lightblue4" ,    "Rosavirus"  = "hotpink1" ,    "Avisivirus"   = "hotpink2",   
+#          "Orivirus"   = "hotpink3" ,    "Crohivirus" = "hotpink4","Torchivirus" = "indianred1" ,   
+#          "Bopivirus"  = "indianred3"  ,   "Malagasivirus" = "indianred4" , "Harkavirus"  = "pink1" ,   
+#          "Ampivirus"  = "pink2" ,"Livupivirus" = "pink3" ,   "Kunsagivirus"  = "pink4",  
+#          "Shanbavirus"  = "slateblue1" ,  "Rafivirus"   = "slateblue3",  "Coronavirus" ="black",  
+#          "Poecivirus"  = "slateblue4" ,"Rabovirus"   = "maroon1",    "Tottorivirus"  = "maroon3" , 
+#          "Ailurivirus" = "maroon4", "Madagascar bat kobuvirus" ="royalblue1", "Bat picornavirus"="royalblue3", 
+#          "Picornavirus"="royalblue4", "Roupivirus"="gold")
 
 #pick order for the labels
 dat$Genus <- factor(dat$Genus, levels = c("Cardiovirus",    "Enterovirus",   "Hepatovirus",   
@@ -84,8 +84,7 @@ dat$novel <- as.factor(dat$novel)
 
 #take a glance
 p <- ggtree(rooted.tree) %<+% dat + geom_tippoint(aes(color=Genus)) +
-  geom_tiplab(size=2) + geom_nodelab(size=1) +
-  scale_color_manual(values=colz) + theme(legend.position = "none", legend.title = element_blank())
+  geom_tiplab(size=2) + geom_nodelab(size=1)+ theme(legend.position = "none", legend.title = element_blank())
 p #looks great
 
 #now get new tip labels
@@ -178,8 +177,8 @@ colz2 = c('1' =  "yellow", '0' = "white")
 
 ##uncollapsed tree
 p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=Host), size=4,stroke=0,show.legend = T) +
-  scale_fill_manual(values=colz) +
-  scale_color_manual(values=colz)+
+  # scale_fill_manual(values=colz) +
+  # scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
   guides(colour = guide_legend(ncol = 1))+
@@ -224,8 +223,8 @@ ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
 
 #add clade labels
 p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=Host), size=4,stroke=0,show.legend = T) +
-  scale_fill_manual(values=colz) +
-  scale_color_manual(values=colz)+
+  # scale_fill_manual(values=colz) +
+  # scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   guides(colour = guide_legend(ncol = 1))+
   new_scale_fill() +
@@ -263,27 +262,27 @@ p2
 
 
 #collapse the labeled clades
-p3<-collapse(p2, 261)+geom_point2(aes(subset=(node==261)), size=4, shape=22, fill="cadetblue2")
-p4<-collapse(p3, 235)+geom_point2(aes(subset=(node==235)), size=4, shape=22, fill="cadetblue3")
-p5<-collapse(p4, 213)+geom_point2(aes(subset=(node==213)), size=4, shape=22, fill="hotpink2")
-p6<-collapse(p5, 216)+geom_point2(aes(subset=(node==216)), size=4, shape=22, fill="deeppink4")
-p7<-collapse(p6, 205)+geom_point2(aes(subset=(node==205)), size=4, shape=22, fill="deeppink4")
-p8<-collapse(p7, 336)+geom_point2(aes(subset=(node==336)), size=4, shape=22, fill="pink2")
-p9<-collapse(p8, 190)+geom_point2(aes(subset=(node==190)), size=4, shape=22, fill="deeppink4")
-p10<-collapse(p9, 188)+geom_point2(aes(subset=(node==188)), size=4, shape=22, fill="lightblue4")
-p11<-collapse(p10, 185)+geom_point2(aes(subset=(node==185)), size=4, shape=22, fill="darkgoldenrod4")
-p12<-collapse(p11, 342)+geom_point2(aes(subset=(node==342)), size=4, shape=22, fill="deeppink4")
-p13<-collapse(p12, 346)+geom_point2(aes(subset=(node==346)), size=4, shape=22, fill="cadetblue1")
-p14<-collapse(p13, 354)+geom_point2(aes(subset=(node==354)), size=4, shape=22, fill="deeppink4")
-p15<-collapse(p14, 351)+geom_point2(aes(subset=(node==351)), size=4, shape=22, fill="darkgoldenrod2")
-p16<-collapse(p15, 353)+geom_point2(aes(subset=(node==353)), size=4, shape=22, fill="deeppink4")
-p17<-collapse(p16, 333)+geom_point2(aes(subset=(node==333)), size=4, shape=22, fill="hotpink1")
-p18<-collapse(p17, 332)+geom_point2(aes(subset=(node==332)), size=4, shape=22, fill="deeppink4")
-p19<-collapse(p18, 326)+geom_point2(aes(subset=(node==326)), size=4, shape=22, fill="deeppink4")
-p20<-collapse(p19, 323)+geom_point2(aes(subset=(node==323)), size=4, shape=22, fill="deeppink4")
-p21<-collapse(p20, 295)+geom_point2(aes(subset=(node==295)), size=4, shape=22, fill="deeppink4")
-p22<-collapse(p21, 303)+geom_point2(aes(subset=(node==303)), size=4, shape=22, fill="deeppink4")
-p23<-collapse(p22, 320)+geom_point2(aes(subset=(node==320)), size=4, shape=22, fill="deeppink4")
+p3<-collapse(p2, 261)+geom_point2(aes(subset=(node==261)), size=4, shape=22, fill="white")
+p4<-collapse(p3, 235)+geom_point2(aes(subset=(node==235)), size=4, shape=22, fill="white")
+p5<-collapse(p4, 213)+geom_point2(aes(subset=(node==213)), size=4, shape=22, fill="white")
+p6<-collapse(p5, 216)+geom_point2(aes(subset=(node==216)), size=4, shape=22, fill="white")
+p7<-collapse(p6, 205)+geom_point2(aes(subset=(node==205)), size=4, shape=22, fill="white")
+p8<-collapse(p7, 336)+geom_point2(aes(subset=(node==336)), size=4, shape=22, fill="white")
+p9<-collapse(p8, 190)+geom_point2(aes(subset=(node==190)), size=4, shape=22, fill="white")
+p10<-collapse(p9, 188)+geom_point2(aes(subset=(node==188)), size=4, shape=22, fill="white")
+p11<-collapse(p10, 185)+geom_point2(aes(subset=(node==185)), size=4, shape=22, fill="white")
+p12<-collapse(p11, 342)+geom_point2(aes(subset=(node==342)), size=4, shape=22, fill="white")
+p13<-collapse(p12, 346)+geom_point2(aes(subset=(node==346)), size=4, shape=22, fill="white")
+p14<-collapse(p13, 354)+geom_point2(aes(subset=(node==354)), size=4, shape=22, fill="white")
+p15<-collapse(p14, 351)+geom_point2(aes(subset=(node==351)), size=4, shape=22, fill="white")
+p16<-collapse(p15, 353)+geom_point2(aes(subset=(node==353)), size=4, shape=22, fill="white")
+p17<-collapse(p16, 333)+geom_point2(aes(subset=(node==333)), size=4, shape=22, fill="white")
+p18<-collapse(p17, 332)+geom_point2(aes(subset=(node==332)), size=4, shape=22, fill="white")
+p19<-collapse(p18, 326)+geom_point2(aes(subset=(node==326)), size=4, shape=22, fill="white")
+p20<-collapse(p19, 323)+geom_point2(aes(subset=(node==323)), size=4, shape=22, fill="white")
+p21<-collapse(p20, 295)+geom_point2(aes(subset=(node==295)), size=4, shape=22, fill="white")
+p22<-collapse(p21, 303)+geom_point2(aes(subset=(node==303)), size=4, shape=22, fill="white")
+p23<-collapse(p22, 320)+geom_point2(aes(subset=(node==320)), size=4, shape=22, fill="white")
 p23
 
 
@@ -332,9 +331,9 @@ length(tree$tip.label) #58
 #check subgroup names
 unique(dat$Genus)
 
-colz = c("Sapovirus" = "royalblue3",    "Vesivirus"  = "turquoise1",   "Lagovirus"  = "goldenrod1",   "Norovirus"   = "dodgerblue1" ,   "Calicivirus" = "firebrick1" ,
-         "Salovirus"  = "lightpink1" ,    "Bavovirus"  = "hotpink1" ,  "Minovirus" = "lightskyblue" ,   "Coronavirus"  = "black", "Recovirus"  = "darkorange1", 
-         "Nacovirus"="thistle3", "Nebovirus"="darkorchid2", "Saplivirus"="sienna", "Unclassified"="darkorchid4")
+# colz = c("Sapovirus" = "royalblue3",    "Vesivirus"  = "turquoise1",   "Lagovirus"  = "goldenrod1",   "Norovirus"   = "dodgerblue1" ,   "Calicivirus" = "firebrick1" ,
+#          "Salovirus"  = "lightpink1" ,    "Bavovirus"  = "hotpink1" ,  "Minovirus" = "lightskyblue" ,   "Coronavirus"  = "black", "Recovirus"  = "darkorange1", 
+#          "Nacovirus"="thistle3", "Nebovirus"="darkorchid2", "Saplivirus"="sienna", "Unclassified"="darkorchid4")
 
 #pick order for the labels
 dat$Genus <- factor(dat$Genus, levels = c("Sapovirus" ,  "Vesivirus",   "Lagovirus",   "Norovirus",   "Calicivirus",
@@ -346,8 +345,7 @@ dat$novel <- as.factor(dat$novel)
 
 #take a glance
 p <- ggtree(rooted.tree) %<+% dat + geom_tippoint(aes(color=Genus)) +
-  geom_tiplab(size=2) + geom_nodelab(size=1) +
-  scale_color_manual(values=colz) + theme(legend.position = "none", legend.title = element_blank())
+  geom_tiplab(size=2) + geom_nodelab(size=1)  + theme(legend.position = "none", legend.title = element_blank())
 p #looks great
 
 #now get new tip labels
@@ -497,8 +495,8 @@ colz2 = c('1' =  "yellow", '0' = "white")
 
 ##uncollapsed tree
 p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=Host), size=4,stroke=0,show.legend = T) +
-  scale_fill_manual(values=colz) +
-  scale_color_manual(values=colz)+
+  # scale_fill_manual(values=colz) +
+  # scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Genus="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=4,  nudge_x=0.1) +

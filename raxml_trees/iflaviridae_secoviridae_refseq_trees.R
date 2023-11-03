@@ -39,7 +39,7 @@ length(tree$tip.label) #48
 #check subgroup names
 unique(dat$Genus)
 
-colz = c("Iflavirus" = "royalblue3",    "Felisavirus"  = "turquoise1",   "Picorna-like virus"  = "goldenrod1", "Iflivirus"="tomato1","Unclassified"="hotpink1", "Coronavirus"  = "black")
+#colz = c("Iflavirus" = "royalblue3",    "Felisavirus"  = "turquoise1",   "Picorna-like virus"  = "goldenrod1", "Iflivirus"="tomato1","Unclassified"="hotpink1", "Coronavirus"  = "black")
 
 #pick order for the labels
 dat$Genus <- factor(dat$Genus, levels = c("Iflavirus" ,  "Picorna-like virus", "Felisavirus", "Iflivirus", "Unclassified",  "Coronavirus"))   
@@ -49,8 +49,7 @@ dat$novel <- as.factor(dat$novel)
 
 #take a glance
 p <- ggtree(rooted.tree) %<+% dat + geom_tippoint(aes(color=Genus)) +
-  geom_tiplab(size=2) + geom_nodelab(size=1) +
-  scale_color_manual(values=colz) + theme(legend.position = "none", legend.title = element_blank())
+  geom_tiplab(size=2) + geom_nodelab(size=1)  + theme(legend.position = "none", legend.title = element_blank())
 p #looks great
 
 #now get new tip labels
@@ -143,8 +142,8 @@ colz2 = c('1' =  "yellow", '0' = "white")
 
 ##uncollapsed tree
 p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=Host), size=4,stroke=0,show.legend = T) +
-  scale_fill_manual(values=colz) +
-  scale_color_manual(values=colz)+
+  # scale_fill_manual(values=colz) +
+  # scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
   guides(colour = guide_legend(ncol = 1))+
@@ -167,50 +166,7 @@ p0.dat$Bootstrap <- NA
 Bootstrap<-p0.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p0.dat$label)] <- as.numeric(p0.dat$label[(length(tree.dat$tip_label)+1):length(p0.dat$label)])#fill with label
 
 #add bootstrap values to original plot
-p1.1 <- p1  %<+% p0.dat + 
-  ggnewscale::new_scale_fill() + 
-  geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
-  scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
-  #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
-  theme(legend.position = "left",
-        legend.direction = "vertical",
-        legend.text = element_text(size=12),
-        legend.title = element_text(size=12),
-        legend.key.size = unit(0.3, "cm"))
-p1.1
-
-
-##Get the clade numbers so we can collapse unnnecesary clades
-ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
-
-
-#collapsed tree
-
-#add clade labels
-p23 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=Host), size=4,stroke=0,show.legend = T) +
-  scale_fill_manual(values=colz) +
-  scale_color_manual(values=colz)+
-  scale_shape_manual(values=shapez) +
-  guides(colour = guide_legend(ncol = 1))+
-  new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Genus="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=4, nudge_x=0.05) +
-  guides(fill="none")+#
-  scale_fill_manual(values=colz2) +
-  geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
-  theme(legend.position = "none", 
-        legend.direction = "vertical",
-        legend.text = element_text(size=12), 
-        legend.key.size = unit(0.3, "cm")) +
-  xlim(c(0,14))
-p23
-
-
-##add bootstrap values to this tree
-p23.dat <- p23$data
-p23.dat$Bootstrap <- NA
-Bootstrap<-p23.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p23.dat$label)] <- as.numeric(p23.dat$label[(length(tree.dat$tip_label)+1):length(p23.dat$label)])#fill with label
-
-iflaviridae <- p23  %<+% p23.dat + 
+iflaviridae <- p1  %<+% p0.dat + 
   ggnewscale::new_scale_fill() + 
   geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
@@ -221,8 +177,6 @@ iflaviridae <- p23  %<+% p23.dat +
         legend.title = element_text(size=12),
         legend.key.size = unit(0.3, "cm"))
 iflaviridae
-
-
 
 
 
@@ -252,8 +206,8 @@ length(tree$tip.label) #84
 #check subgroup names
 unique(dat$Genus)
 
-colz = c("Waikavirus" = "royalblue3",    "Fabavirus"  = "turquoise1",   "Sadwavirus"  = "goldenrod1",   "Comovirus"   = "dodgerblue1" ,   "Nepovirus" = "firebrick1" ,
-         "Sequivirus"  = "lightpink1" ,    "Cheravirus"  = "hotpink1" ,  "Stralarivirus" = "lightskyblue" ,   "Coronavirus"  = "black", "Torradovirus"  = "darkorange1")
+#colz = c("Waikavirus" = "royalblue3",    "Fabavirus"  = "turquoise1",   "Sadwavirus"  = "goldenrod1",   "Comovirus"   = "dodgerblue1" ,   "Nepovirus" = "firebrick1" ,
+         #"Sequivirus"  = "lightpink1" ,    "Cheravirus"  = "hotpink1" ,  "Stralarivirus" = "lightskyblue" ,   "Coronavirus"  = "black", "Torradovirus"  = "darkorange1")
 
 #pick order for the labels
 dat$Genus <- factor(dat$Genus, levels = c("Waikavirus" ,  "Fabavirus",   "Sadwavirus",   "Comovirus",   "Nepovirus",
@@ -264,8 +218,7 @@ dat$novel <- as.factor(dat$novel)
 
 #take a glance
 p <- ggtree(rooted.tree) %<+% dat + geom_tippoint(aes(color=Genus)) +
-  geom_tiplab(size=2) + geom_nodelab(size=1) +
-  scale_color_manual(values=colz) + theme(legend.position = "none", legend.title = element_blank())
+  geom_tiplab(size=2) + geom_nodelab(size=1) +theme(legend.position = "none", legend.title = element_blank())
 p #looks great
 
 #now get new tip labels
@@ -415,8 +368,8 @@ colz2 = c('1' =  "yellow", '0' = "white")
 
 ##uncollapsed tree
 p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=Host), size=4,stroke=0,show.legend = T) +
-  scale_fill_manual(values=colz) +
-  scale_color_manual(values=colz)+
+  # scale_fill_manual(values=colz) +
+  # scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Genus="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=4,  nudge_x=0.1) +
