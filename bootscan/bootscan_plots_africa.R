@@ -458,7 +458,7 @@ ictv_sapo_full
 #First all bat picornavirales over 3kb
 setwd("~/Desktop/developer/mada-bat-picornavirus/bootscan/output_africa")
 
-colzpalette<-c("coral1","cyan3","hotpink1","yellow","orange2","dodgerblue2","firebrick1","darkorchid3","skyblue1")
+colzpalette<-c("coral1","cyan3","hotpink1","gold","orange3","dodgerblue2","firebrick1","darkorchid3","skyblue1")
 
 #Bat picornavirus all
 africa_batpicorna_all_bootscan <- read.csv(file = "africa_batpicorna_all_bootscan.csv", header = T, stringsAsFactors = F)
