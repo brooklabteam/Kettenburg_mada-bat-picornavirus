@@ -80,6 +80,6 @@ NC_040417.1,NC_040417.1,UC,Potato virus U,Nepovirus,Secoviridae,Peru,Solanum tub
 NC_040586.1,NC_040586.1,SP2S,Waikavirus BnRV1,Waikavirus,Secoviridae,China,Brassica napus,0,2015,0
 NC_043447.1,NC_043447.1,Pasco-01,Potato virus B,Nepovirus,Secoviridae,Peru,Solanum tuberosum,0,2010,0
 NC_043684.1,NC_043684.1,AILV-V,Artichoke Italian latent virus,Nepovirus,Secoviridae,Bulgaria,Vitis,0,2016,0
-OQ818326,OQ818326,,Unclassified,Nepovirus,Secoviridae,Madagascar,Rousettus madagascariensis,1,2018,1
-OQ818327,OQ818327,,Unclassified,Nepovirus,Secoviridae,Madagascar,Rousettus madagascariensis,1,2018,1
-OQ818330,OQ818330,,Unclassified,Cheravirus,Secoviridae,Madagascar,Pteropus rufus,1,2018,1
+OQ818326,OQ818326,MIZ229,Unclassified,Nepovirus,Secoviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818327,OQ818327,MIZ229,Unclassified,Nepovirus,Secoviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818330,OQ818330,AMB122,Unclassified,Cheravirus,Secoviridae,Madagascar,Pteropus rufus,1,2018,1

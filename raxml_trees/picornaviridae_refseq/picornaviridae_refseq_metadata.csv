@@ -166,8 +166,8 @@ NC_055160.1,NC_055160.1,MPV/NYC/2014/M005/0074,Rabovirus D,Rabovirus,USA,Mus mus
 NC_055161.1,NC_055161.1,,Ailurivirus A,Ailurivirus,China,Ailuropoda melanoleuca,0,2015,0
 OP287812.1,OP287812.1,,Madagascar bat kobuvirus,Madagascar bat kobuvirus,Madagascar,Eidolon dupreanum,1,2018,0
 NC_030886.1,NC_030886.1,GCCDC1 356,Rousettus bat coronavirus GCCDC1,Coronavirus,China,Rousettus leschenaulti,1,2018,0
-OQ818316,OQ818316,,Unclassified,Mischivirus,Madagascar,Pteropus rufus,1,2018,1
-OQ818317,OQ818317,,Unclassified,Kunsagivirus,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818316,OQ818316,AMB150,Unclassified,Mischivirus,Madagascar,Pteropus rufus,1,2018,1
+OQ818317,OQ818317,KEL148,Unclassified,Kunsagivirus,Madagascar,Eidolon dupreanum,1,2018,1
 OQ818318,OQ818318,KEL164,Unclassified,Teschovirus,Madagascar,Eidolon dupreanum,1,2018,1
 OQ818320,OQ818320,KEL233,Unclassified,Sapelovirus,Madagascar,Eidolon dupreanum,1,2018,1
 OQ818321,OQ818321,KEL272,Unclassified,Sapelovirus,Madagascar,Eidolon dupreanum,1,2019,1
@@ -176,5 +176,5 @@ OQ818323,OQ818323,MIZ190,Unclassified,Teschovirus,Madagascar,Rousettus madagasca
 OQ818324,OQ818324,MIZ205,Unclassified,Teschovirus,Madagascar,Rousettus madagascariensis,1,2018,1
 OQ818325,OQ818325,MIZ214,Unclassified,Roupivirus,Madagascar,Rousettus madagascariensis,1,2018,1
 OQ818328,OQ818328,MIZ240,Unclassified,Roupivirus,Madagascar,Rousettus madagascariensis,1,2018,1
-OQ818329,OQ818329,,Unclassified,Sapelovirus,Madagascar,Rousettus madagascariensis,1,2018,1
-OQ818337,OQ818337,,Unclassified,Hepatovirus,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818329,OQ818329,MIZ243,Unclassified,Sapelovirus,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818337,OQ818337,KEL148,Unclassified,Hepatovirus,Madagascar,Eidolon dupreanum,1,2018,1

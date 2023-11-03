@@ -44,6 +44,6 @@ NC_040675.1,NC_040675.1,,Nesidiocoris tenuis iflavirus 1,Iflavirus,Iflaviridae,C
 NC_040716.1,NC_040716.1,,Culex Iflavi-like virus 4,Unclassified,Iflaviridae,USA,Culex,0,2016,0
 NC_040724.1,NC_040724.1,,Psammotettix alienus iflavirus 1,Iflavirus,Iflaviridae,China,Psammotettix alienus,0,2017,0
 NC_040832.1,NC_040832.1,,Culex Iflavi-like virus 4,Unclassified,Iflaviridae,USA,Culex,0,2016,0
-OQ818335,OQ818335,,Unclassified,Felisavirus,Iflaviridae,Madagascar,Pteropus rufus,1,2018,1
-OQ818339,OQ818339,,Unclassified,Iflivirus,Iflaviridae,Madagascar,Eidolon dupreanum,1,2018,1
-OQ818341,OQ818341,,Unclassified,Felisavirus,Iflaviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818335,OQ818335,AMB150,Unclassified,Felisavirus,Iflaviridae,Madagascar,Pteropus rufus,1,2018,1
+OQ818339,OQ818339,KEL164,Unclassified,Iflivirus,Iflaviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818341,OQ818341,KEL225,Unclassified,Felisavirus,Iflaviridae,Madagascar,Eidolon dupreanum,1,2018,1

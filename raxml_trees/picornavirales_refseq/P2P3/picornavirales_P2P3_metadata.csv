@@ -393,33 +393,33 @@ NC_055161.1,,Ailurivirus A,Ailurivirus,Picornaviridae,China,Ailuropoda melanoleu
 OP287812.1,,Madagascar bat kobuvirus,Kobuvirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2018,0
 NC_040798.1,SC,Nephila clavipes virus 1,Unclassified,Unclassified,USA,Nephila clavipes,0,2013,0
 NC_011829.1,swine/S-1-HUN/2007/Hungary,Porcine kobuvirus,Kobuvirus,Picornaviridae,Hungary,Sus scrofa domesticus,0,2007,0
-OQ818316,,,,,,,,,1
-OQ818317,,,,,,,,,1
-OQ818318,,,,,,,,,1
-OQ818319,,,,,,,,,1
-OQ818320,,,,,,,,,1
-OQ818321,,,,,,,,,1
-OQ818322,,,,,,,,,1
-OQ818323,,,,,,,,,1
-OQ818324,,,,,,,,,1
-OQ818325,,,,,,,,,1
-OQ818326,,,,,,,,,1
-OQ818327,,,,,,,,,1
-OQ818328,,,,,,,,,1
-OQ818329,,,,,,,,,1
-OQ818330,,,,,,,,,1
-OQ818331,,,,,,,,,1
-OQ818332,,,,,,,,,1
-OQ818333,,,,,,,,,1
-OQ818334,,,,,,,,,1
-OQ818335,,,,,,,,,
-OQ818336,,,,,,,,,
-OQ818337,,,,,,,,,
-OQ818339,,,,,,,,,
-OQ818340,,,,,,,,,
-OQ818341,,,,,,,,,
-OQ818344,,,,,,,,,
-OQ818345,,,,,,,,,
-OQ818346,,,,,,,,,
-OQ818347,,,,,,,,,
-OQ818348,,,,,,,,,
+OQ818316,AMB150,Unclassified,Mischivirus,Picornaviridae,Madagascar,Pteropus rufus,1,2018,1
+OQ818317,KEL148,Unclassified,Kunsagivirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818318,KEL164,Unclassified,Teschovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818319,KEL166,Unclassified,Saplivirus,Caliciviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818320,KEL233,Unclassified,Sapelovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818321,KEL272,Unclassified,Sapelovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2019,1
+OQ818322,KEL318,Unclassified,Kobuvirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2019,1
+OQ818323,MIZ190,Unclassified,Teschovirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818324,MIZ205,Unclassified,Teschovirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818325,MIZ214,Unclassified,Roupivirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818326,MIZ229,Unclassified,Nepovirus,Secoviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818327,MIZ229,Unclassified,Nepovirus,Secoviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818328,MIZ240,Unclassified,Roupivirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818329,MIZ243,Unclassified,Sapelovirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818330,AMB122,Unclassified,Cheravirus,Secoviridae,Madagascar,Pteropus rufus,1,2018,1
+OQ818331,AMB134,Unclassified,Tetnovirus,Unclassified,Madagascar,Pteropus rufus,1,2018,1
+OQ818332,AMB137,Unclassified,Bee virus,Unclassified,Madagascar,Pteropus rufus,1,2018,1
+OQ818333,AMB139,Unclassified,Rondlivirus,Unclassified,Madagascar,Pteropus rufus,1,2018,1
+OQ818334,AMB149,Unclassified,Bee virus,Unclassified,Madagascar,Pteropus rufus,1,2018,1
+OQ818335,AMB150,Unclassified,Felisavirus,Iflaviridae,Madagascar,Pteropus rufus,1,2018,1
+OQ818336,AMB160,Unclassified,Bee virus,Unclassified,Madagascar,Pteropus rufus,1,2019,1
+OQ818337,KEL148,Unclassified,Hepatovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818339,KEL164,Unclassified,Iflivirus,Iflaviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818340,KEL207,Unclassified,Saplivirus,Caliciviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818341,KEL225,Unclassified,Felisavirus,Iflaviridae,Madagascar,Eidolon dupreanum,1,2018,1
+OQ818343,KEL275B,Unclassified,Sapelovirus,Picornaviridae,Madagascar,Eidolon dupreanum,1,2019,1
+OQ818345,KEL194,Unclassified,Saplivirus,Caliciviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818346,MIZ194,Unclassified,Roupivirus,Picornaviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818347,MIZ219,Unclassified,Saplivirus,Caliciviridae,Madagascar,Rousettus madagascariensis,1,2018,1
+OQ818348,MIZ345,Unclassified,Saplivirus,Caliciviridae,Madagascar,Rousettus madagascariensis,1,2019,1
