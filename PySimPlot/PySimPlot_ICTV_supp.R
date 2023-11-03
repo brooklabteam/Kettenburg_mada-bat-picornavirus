@@ -43,14 +43,13 @@ ictv_feat$gene<-factor(ictv_feat$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP
                                                   "Similar to putative polyprotein", "Similar to polyprotein","3'UTR"))
 
 #Pick colors for genes
-colz=c("5'UTR"="gold", "L"="royalblue","VP4"="paleturquoise3", "VP2"="skyblue1", "VP0"="royalblue4", "VP3"="steelblue1",
-       "VP1"="cadetblue1", "VP1/2A"="cadetblue1", "2A"="orange1", "2B"="sienna2", "2C"="darkorange1", "3A"="palevioletred1", "3B"="plum",
-       "3C"="rosybrown1", "3D"="pink2", "Helicase"="darkseagreen1","NS4"="darkolivegreen1","Vpg"="seagreen1","Pro-Pol"="palegreen2",
-       "Polyprotein"="azure3","Putative polyprotein"="mediumorchid1", "Non-structural polyprotein"="mediumorchid4", 
-       "Putative minor structural protein" ="slateblue3", "Structural polyprotein"="lightgoldenrod1",
-       "Hypothetical protein"="darkslategrey", "Similar to structural polyprotein"="mediumpurple1", "Similar to putative polyprotein"="mediumpurple3", 
-       "Similar to polyprotein"="mediumpurple4","3'UTR"="yellow")
-
+colz=c("5'UTR"="grey", "L"="white","VP4"="white", "VP2"="white", "VP0"="white", "VP3"="white",
+       "VP1"="white", "VP1/2A"="white", "2A"="white", "2B"="white", "2C"="white", "3A"="white", "3B"="white",
+       "3C"="white", "3D"="white", "Helicase"="white","NS4"="white","Vpg"="white","Pro-Pol"="white",
+       "Polyprotein"="black","Putative polyprotein"="black", "Non-structural polyprotein"="black",
+       "Putative minor structural protein" ="white", "Structural polyprotein"="black",
+       "Hypothetical protein"="white", "Similar to structural polyprotein"="black", "Similar to putative polyprotein"="black",
+       "Similar to polyprotein"="black","3'UTR"="grey")
 
 #Plot ICTV and BLAST together plots
 
@@ -105,7 +104,7 @@ ictv_batpicorna<-ggplot(ictv_batpicornavirus, aes(xmin = start, xmax = end, y = 
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_batpicornavirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                              xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                              xsubmin=from, xsubmax=to), color="black",
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
@@ -133,7 +132,7 @@ ictv_hepato<-ggplot(ictv_hepatovirus, aes(xmin = start, xmax = end, y = molecule
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_hepatovirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                              xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                              xsubmin=from, xsubmax=to), color="black",
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
@@ -162,7 +161,7 @@ ictv_kobu<-ggplot(ictv_kobuvirus, aes(xmin = start, xmax = end, y = molecule, fi
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_kobuvirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                            xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                            xsubmin=from, xsubmax=to), color="black",
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
@@ -191,7 +190,7 @@ ictv_kun<-ggplot(ictv_kunsagivirus, aes(xmin = start, xmax = end, y = molecule, 
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_kunsagivirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                               xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                               xsubmin=from, xsubmax=to), color="black",
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
@@ -220,7 +219,7 @@ ictv_mischi<-ggplot(ictv_mischivirus, aes(xmin = start, xmax = end, y = molecule
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_mischivirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                              xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                              xsubmin=from, xsubmax=to), color="black",
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
@@ -249,7 +248,7 @@ ictv_sapelo_full<-ggplot(ictv_sapelovirus_full, aes(xmin = start, xmax = end, y 
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_sapelovirus_pep_full, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                                   xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                                   xsubmin=from, xsubmax=to), color="black",
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
@@ -278,7 +277,7 @@ ictv_tescho<-ggplot(ictv_teschovirus, aes(xmin = start, xmax = end, y = molecule
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_teschovirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                              xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                              xsubmin=from, xsubmax=to), color="black",
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
@@ -307,7 +306,7 @@ ictv_sapo_full<-ggplot(ictv_sapovirus_full, aes(xmin = start, xmax = end, y = mo
   #                    feature_height = grid::unit(6,"mm"),
   #                    label_height = grid::unit(6,"mm"))+
   geom_subgene_arrow(data = ictv_sapovirus_full_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                              xsubmin=from, xsubmax=to), color="black", alpha=.7,
+                                                              xsubmin=from, xsubmax=to), color="black",
                      arrowhead_width = grid::unit(3, "mm"),
                      arrowhead_height = grid::unit(4, "mm"),
                      arrow_body_height = grid::unit(4, "mm"))+
@@ -330,8 +329,7 @@ ictv_sapo_full
 setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/ICTV_BLAST_pysimplot")
 
 #colzpalette<-c("#8ECAE6","#219EBC","#023047","#FFB703","#FB8500","#E48B97","#B52B09","#A60067","#987B6F","#8FD694")
-colzpalette<-c("firebrick2","gray46","gray1","slategray3")
-
+colzpalette<-c("coral1","cyan3","hotpink1","yellow","orange2","dodgerblue2","firebrick1","darkorchid3","skyblue1")
 
 #Bat picornavirus 
 bat_picorna_ictv_nt_full <- read.csv(file = "bat_picorna_ictv_nt_full_alignment.csv", header = T, stringsAsFactors = F)
@@ -346,17 +344,17 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "OQ818328"] <- "Rousettus roupivirus MIZ240"
-long.sim_nt$accession[long.sim_nt$accession == "HQ595340"] <- "Bat picornavirus 1 HQ595340"
-long.sim_nt$accession[long.sim_nt$accession == "HQ595342"] <- "Bat picornavirus 2 HQ595342"
-long.sim_nt$accession[long.sim_nt$accession == "HQ595344"] <- "Bat picornavirus 3 HQ595344"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818328"] <- "R. madagascariensis roupivirus MIZ240"
+long.sim_nt$accession[long.sim_nt$accession == "HQ595340"] <- "Bat picornavirus 1: HQ595340"
+long.sim_nt$accession[long.sim_nt$accession == "HQ595342"] <- "Bat picornavirus 2: HQ595342"
+long.sim_nt$accession[long.sim_nt$accession == "HQ595344"] <- "Bat picornavirus 3: HQ595344"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Rousettus roupivirus MIZ240", "Bat picornavirus 1 HQ595340",
-                                                                  "Bat picornavirus 2 HQ595342","Bat picornavirus 3 HQ595344"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("R. madagascariensis roupivirus MIZ240", "Bat picornavirus 1: HQ595340",
+                                                                  "Bat picornavirus 2: HQ595342","Bat picornavirus 3: HQ595344"))
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
-title<-expression(paste("Reference: Rousettus roupivirus MIZ214"))
+title<-expression(paste("Reference: R. madagascariensis roupivirus MIZ214"))
 
 ## Nucleotide
 batpicorna_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -367,7 +365,7 @@ batpicorna_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, co
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
         legend.text = element_text(face="italic", size = 8),
-        legend.title = element_text(face="italic", size = 8),
+        #legend.title = element_text(face="italic", size = 8),
         axis.text.x = element_blank(),
         axis.ticks.x = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
@@ -400,17 +398,17 @@ long.sim_aa$variable <- as.character(long.sim_aa$variable)
 
 names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
 
-long.sim_aa$accession[long.sim_aa$accession == "OQ818328"] <- "Rousettus roupivirus MIZ240"
-long.sim_aa$accession[long.sim_aa$accession == "HQ595340"] <- "Bat picornavirus 1 HQ595340"
-long.sim_aa$accession[long.sim_aa$accession == "HQ595342"] <- "Bat picornavirus 2 HQ595342"
-long.sim_aa$accession[long.sim_aa$accession == "HQ595344"] <- "Bat picornavirus 3 HQ595344"
+long.sim_aa$accession[long.sim_aa$accession == "OQ818328"] <- "R. madagascariensis roupivirus MIZ240"
+long.sim_aa$accession[long.sim_aa$accession == "HQ595340"] <- "Bat picornavirus 1: HQ595340"
+long.sim_aa$accession[long.sim_aa$accession == "HQ595342"] <- "Bat picornavirus 2: HQ595342"
+long.sim_aa$accession[long.sim_aa$accession == "HQ595344"] <- "Bat picornavirus 3: HQ595344"
 
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("Rousettus roupivirus MIZ240", "Bat picornavirus 1 HQ595340",
-                                                                  "Bat picornavirus 2 HQ595342","Bat picornavirus 3 HQ595344"))
+long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("R. madagascariensis roupivirus MIZ240", "Bat picornavirus 1: HQ595340",
+                                                                  "Bat picornavirus 2: HQ595342","Bat picornavirus 3: HQ595344"))
 long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
-title<-expression(paste("Reference: Rousettus roupivirus MIZ214"))
+title<-expression(paste("Reference: R. madagascariensis roupivirus MIZ214"))
 
 ## Nucleotide
 batpicorna_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -421,7 +419,7 @@ batpicorna_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, co
         legend.position="none", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
         legend.text = element_text(face="italic", size = 8),
-        legend.title = element_text(face="italic", size = 8),
+        #legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
@@ -450,8 +448,6 @@ bat_picorna
 hepato_ictv_nt_partial <- read.csv(file = "hepato_ictv_nt_partial_alignment.csv", header = T, stringsAsFactors = F) #animo acid
 head(hepato_ictv_nt_partial)
 
-colzpalette<-c("gray1","gray46","gray71","slategray4","slategray3","slategray2","slategray1","firebrick2","snow3")
-
 #move to long
 long.sim_nt <- melt(hepato_ictv_nt_partial, id.vars = c("pointer"), measure.vars = c("HPA","KR703607","KT452637","KT452658",
                                                                                      "KT452685","KT452714","KT452730", "KT452735",
@@ -462,27 +458,27 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "HPA"] <- "Hepatovirus A HPA"
-long.sim_nt$accession[long.sim_nt$accession == "KR703607"] <- "Hepatovirus B KR703607"
-long.sim_nt$accession[long.sim_nt$accession == "KT452637"] <- "Hepatovirus D KT452637"
-long.sim_nt$accession[long.sim_nt$accession == "KT452658"] <- "Hepatovirus I KT452658"
-long.sim_nt$accession[long.sim_nt$accession == "KT452685"] <- "Hepatovirus F KT452685"
-long.sim_nt$accession[long.sim_nt$accession == "KT452714"] <- "Hepatovirus H KT452714"
-long.sim_nt$accession[long.sim_nt$accession == "KT452730"] <- "Hepatovirus G KT452730"
-long.sim_nt$accession[long.sim_nt$accession == "KT452735"] <- "Hepatovirus E KT452735"
-long.sim_nt$accession[long.sim_nt$accession == "KT452742"] <- "Hepatovirus C KT452742"
+long.sim_nt$accession[long.sim_nt$accession == "HPA"] <- "Hepatovirus A: HPA"
+long.sim_nt$accession[long.sim_nt$accession == "KR703607"] <- "Hepatovirus B: KR703607"
+long.sim_nt$accession[long.sim_nt$accession == "KT452637"] <- "Hepatovirus D: KT452637"
+long.sim_nt$accession[long.sim_nt$accession == "KT452658"] <- "Hepatovirus I: KT452658"
+long.sim_nt$accession[long.sim_nt$accession == "KT452685"] <- "Hepatovirus F: KT452685"
+long.sim_nt$accession[long.sim_nt$accession == "KT452714"] <- "Hepatovirus H: KT452714"
+long.sim_nt$accession[long.sim_nt$accession == "KT452730"] <- "Hepatovirus G: KT452730"
+long.sim_nt$accession[long.sim_nt$accession == "KT452735"] <- "Hepatovirus E: KT452735"
+long.sim_nt$accession[long.sim_nt$accession == "KT452742"] <- "Hepatovirus C: KT452742"
 
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Hepatovirus A HPA", "Hepatovirus B KR703607",
-                                                                  "Hepatovirus C KT452742","Hepatovirus D KT452637",
-                                                                  "Hepatovirus E KT452735","Hepatovirus F KT452685",
-                                                                  "Hepatovirus G KT452730", "Hepatovirus H KT452714",
-                                                                  "Hepatovirus I KT452658"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Hepatovirus A: HPA", "Hepatovirus B: KR703607",
+                                                                  "Hepatovirus C: KT452742","Hepatovirus D: KT452637",
+                                                                  "Hepatovirus E: KT452735","Hepatovirus F: KT452685",
+                                                                  "Hepatovirus G: KT452730", "Hepatovirus H: KT452714",
+                                                                  "Hepatovirus I: KT452658"))
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: Eidolon hepatovirus"))
+title<-expression(paste("Reference: E. dupreanum hepatovirus KEL148"))
 
 hepatovirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
@@ -492,7 +488,7 @@ hepatovirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, c
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
         legend.text = element_text(face="italic", size = 8),
-        legend.title = element_text(face="italic", size = 8),
+        #legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
@@ -524,8 +520,6 @@ hep_ictv_nt
 kobuvirus_nt_ictv <- read.csv(file = "kobu_ictv_nt_full_alignment.csv", header = T, stringsAsFactors = F) #nucleotide
 head(kobuvirus_nt_ictv)
 
-colzpalette<-c("gray1","gray46","gray71","slategray4","slategray3","slategray1","firebrick2")
-
 #move to long
 long.sim_nt <- melt(kobuvirus_nt_ictv, id.vars = c("pointer"), measure.vars = c("AB040749","AB084788",
                                                                                 "EU787450","KJ641686",
@@ -537,24 +531,24 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "AB040749"] <- "Aichivirus A AB040749"
-long.sim_nt$accession[long.sim_nt$accession == "AB084788"] <- "Aichivirus B AB084788"
-long.sim_nt$accession[long.sim_nt$accession == "EU787450"] <- "Aichivirus C EU787450"
-long.sim_nt$accession[long.sim_nt$accession == "KJ641686"] <- "Aichivirus F KJ641686"
-long.sim_nt$accession[long.sim_nt$accession == "KT325853"] <- "Aichivirus E KT325853"
-long.sim_nt$accession[long.sim_nt$accession == "LC055961"] <- "Aichivirus D LC055961"
-long.sim_nt$accession[long.sim_nt$accession == "OP287812"] <- "Eidolon dupreanum kobuvirus OP287812"
+long.sim_nt$accession[long.sim_nt$accession == "AB040749"] <- "Aichivirus A: AB040749"
+long.sim_nt$accession[long.sim_nt$accession == "AB084788"] <- "Aichivirus B: AB084788"
+long.sim_nt$accession[long.sim_nt$accession == "EU787450"] <- "Aichivirus C: EU787450"
+long.sim_nt$accession[long.sim_nt$accession == "KJ641686"] <- "Aichivirus F: KJ641686"
+long.sim_nt$accession[long.sim_nt$accession == "KT325853"] <- "Aichivirus E: KT325853"
+long.sim_nt$accession[long.sim_nt$accession == "LC055961"] <- "Aichivirus D: LC055961"
+long.sim_nt$accession[long.sim_nt$accession == "OP287812"] <- "Eidolon dupreanum kobuvirus: OP287812"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Aichivirus A AB040749", "Aichivirus B AB084788",
-                                                                  "Aichivirus C EU787450","Aichivirus D LC055961",
-                                                                  "Aichivirus E KT325853","Aichivirus F KJ641686",
-                                                                  "Eidolon dupreanum kobuvirus OP287812"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Aichivirus A: AB040749", "Aichivirus B: AB084788",
+                                                                  "Aichivirus C: EU787450","Aichivirus D: LC055961",
+                                                                  "Aichivirus E: KT325853","Aichivirus F: KJ641686",
+                                                                  "Eidolon dupreanum kobuvirus: OP287812"))
 #and plot
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: Eidolon dupreanum kobuvirus MIZ318"))
+title<-expression(paste("Reference: E. dupreanum kobuvirus MIZ318"))
 
 kobuvirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
@@ -564,7 +558,7 @@ kobuvirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, col
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
         legend.text = element_text(face="italic", size = 8),
-        legend.title = element_text(face="italic", size = 8),
+        #legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
@@ -595,8 +589,6 @@ kobu_ictv_nt
 kunsagivirus_nt_ictv <- read.csv(file = "kun_ictv_nt_full_alignment.csv", header = T, stringsAsFactors = F) #nucleotide
 head(kunsagivirus_nt_ictv)
 
-colzpalette<-c("gray1","firebrick2","gray71")
-
 #move to long
 long.sim_nt <- melt(kunsagivirus_nt_ictv, id.vars = c("pointer"), measure.vars = c("KC935379","KX644936",
                                                                                    "KY670597"))
@@ -606,18 +598,18 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "KC935379"] <- "Kunsagivirus A KC935379"
-long.sim_nt$accession[long.sim_nt$accession == "KX644936"] <- "Kunsagivirus B KX644936"
-long.sim_nt$accession[long.sim_nt$accession == "KY670597"] <- "Kunsagivirus C KY670597"
+long.sim_nt$accession[long.sim_nt$accession == "KC935379"] <- "Kunsagivirus A: KC935379"
+long.sim_nt$accession[long.sim_nt$accession == "KX644936"] <- "Kunsagivirus B: KX644936"
+long.sim_nt$accession[long.sim_nt$accession == "KY670597"] <- "Kunsagivirus C: KY670597"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Kunsagivirus A KC935379", "Kunsagivirus B KX644936",
-                                                                  "Kunsagivirus C KY670597"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Kunsagivirus A: KC935379", "Kunsagivirus B: KX644936",
+                                                                  "Kunsagivirus C: KY670597"))
 #and plot
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: Eidolon kunsagivirus"))
+title<-expression(paste("Reference: E. dupreanum kunsagivirus KEL148"))
 
 kunsagivirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
@@ -627,7 +619,7 @@ kunsagivirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
         legend.text = element_text(face="italic", size = 8),
-        legend.title = element_text(face="italic", size = 8),
+        #legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
@@ -658,8 +650,6 @@ kun_ictv_nt
 mischivirus_nt_ictv <- read.csv(file = "mischi_ictv_nt_full_alignment.csv", header = T, stringsAsFactors = F) #nucleotide
 head(mischivirus_nt_ictv)
 
-colzpalette<-c("gray1","gray71","firebrick2","slategray4","slategray3")
-
 #move to long
 long.sim_nt <- melt(mischivirus_nt_ictv, id.vars = c("pointer"), measure.vars = c("JQ814851","KP054273",
                                                                                   "KP100644","KY512802",
@@ -670,21 +660,21 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "JQ814851"] <- "Mischivirus A JQ814851"
-long.sim_nt$accession[long.sim_nt$accession == "KP054273"] <- "Mischivirus B KP054273"
-long.sim_nt$accession[long.sim_nt$accession == "KP100644"] <- "Mischivirus C KP100644"
-long.sim_nt$accession[long.sim_nt$accession == "KY512802"] <- "Mischivirus D KY512802"
-long.sim_nt$accession[long.sim_nt$accession == "MF352410"] <- "Mischivirus E MF352410"
+long.sim_nt$accession[long.sim_nt$accession == "JQ814851"] <- "Mischivirus A: JQ814851"
+long.sim_nt$accession[long.sim_nt$accession == "KP054273"] <- "Mischivirus B: KP054273"
+long.sim_nt$accession[long.sim_nt$accession == "KP100644"] <- "Mischivirus C: KP100644"
+long.sim_nt$accession[long.sim_nt$accession == "KY512802"] <- "Mischivirus D: KY512802"
+long.sim_nt$accession[long.sim_nt$accession == "MF352410"] <- "Mischivirus E: MF352410"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Mischivirus A JQ814851", "Mischivirus B KP054273",
-                                                                  "Mischivirus C KP100644", "Mischivirus D KY512802",
-                                                                  "Mischivirus E MF352410"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Mischivirus A: JQ814851", "Mischivirus B: KP054273",
+                                                                  "Mischivirus C: KP100644", "Mischivirus D: KY512802",
+                                                                  "Mischivirus E: MF352410"))
 #and plot
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: Pteropus mischivirus"))
+title<-expression(paste("Reference: P. rufus mischivirus AMB150"))
 
 mischivirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
@@ -694,7 +684,7 @@ mischivirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, c
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
         legend.text = element_text(face="italic", size = 8),
-        legend.title = element_text(face="italic", size = 8),
+        #legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
@@ -726,8 +716,6 @@ mischi_ictv_nt
 sapelovirus_full_nt_ictv <- read.csv(file = "sapelo_ictv_nt_full_alignment.csv", header = T, stringsAsFactors = F) #nucleotide
 head(sapelovirus_full_nt_ictv)
 
-colzpalette<-c("gray1","gray56","gray","slategray4","firebrick2")
-
 #move to long
 long.sim_nt <- melt(sapelovirus_full_nt_ictv, id.vars = c("pointer"), measure.vars = c("OQ818321","OQ818329","AF406813","AY064708",
                                                                                        "NC_033820"))
@@ -738,22 +726,22 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "OQ818321"] <- "Eidolon sapelovirus KEL272"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818329"] <- "Rousettus sapelovirus"
-long.sim_nt$accession[long.sim_nt$accession == "AF406813"] <- "Sapelovirus A AF406813"
-long.sim_nt$accession[long.sim_nt$accession == "AY064708"] <- "Sapelovirus B AY064708"
-long.sim_nt$accession[long.sim_nt$accession == "NC_033820"] <- "Eidolon helvum sapelovirus NC_033820"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818321"] <- "E. dupreanum sapelovirus KEL272"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818329"] <- "R. madagascariensis sapelovirus MIZ243"
+long.sim_nt$accession[long.sim_nt$accession == "AF406813"] <- "Sapelovirus A: AF406813"
+long.sim_nt$accession[long.sim_nt$accession == "AY064708"] <- "Sapelovirus B: AY064708"
+long.sim_nt$accession[long.sim_nt$accession == "NC_033820"] <- "Eidolon helvum sapelovirus: NC_033820"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Eidolon sapelovirus KEL272",
-                                                                  "Rousettus sapelovirus",
-                                                                  "Sapelovirus A AF406813","Sapelovirus B AY064708",
-                                                                  "Eidolon helvum sapelovirus NC_033820"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum sapelovirus KEL272",
+                                                                  "R. madagascariensis sapelovirus MIZ243",
+                                                                  "Sapelovirus A: AF406813","Sapelovirus B: AY064708",
+                                                                  "Eidolon helvum sapelovirus: NC_033820"))
 #and plot
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: Eidolon sapelovirus KEL233"))
+title<-expression(paste("Reference: E. dupreanum sapelovirus KEL233"))
 
 sapelovirus_full_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
@@ -763,7 +751,7 @@ sapelovirus_full_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=val
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
         legend.text = element_text(face="italic", size = 8),
-        legend.title = element_text(face="italic", size = 8),
+        #legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
@@ -796,8 +784,6 @@ sapelo_full_ictv_nt
 sapovirus_full_nt_ictv <- read.csv(file = "sapo_ictv_nt_full_alignment_trimmed.csv", header = T, stringsAsFactors = F) #nucleotide
 head(sapovirus_full_nt_ictv)
 
-colzpalette<-c("gray1","firebrick2")
-
 #move to long
 long.sim_nt <- melt(sapovirus_full_nt_ictv, id.vars = c("pointer"), measure.vars = c("HM002617","KX759623"))
 
@@ -807,17 +793,17 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "HM002617"] <- "Sapporo virus HM002617"
-long.sim_nt$accession[long.sim_nt$accession == "KX759623"] <- "Bat sapovirus KX759623"
+long.sim_nt$accession[long.sim_nt$accession == "HM002617"] <- "Sapporo virus: HM002617"
+long.sim_nt$accession[long.sim_nt$accession == "KX759623"] <- "Bat sapovirus: KX759623"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Sapporo virus HM002617", "Bat sapovirus KX759623"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Sapporo virus: HM002617", "Bat sapovirus: KX759623"))
 
 #and plot
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: Eidolon saplivirus KEL166"))
+title<-expression(paste("E. dupreanum saplivirus KEL166"))
 
 sapovirus_full_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
@@ -829,7 +815,7 @@ sapovirus_full_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value
         axis.text.x = element_blank(),
         axis.ticks.x = element_blank(),
         legend.text = element_text(face="italic", size = 8),
-        legend.title = element_text(face="italic", size = 8),
+        #legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
@@ -861,10 +847,10 @@ long.sim_aa$variable <- as.character(long.sim_aa$variable)
 
 names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
 
-long.sim_aa$accession[long.sim_aa$accession == "HM002617"] <- "Sapporo virus HM002617"
-long.sim_aa$accession[long.sim_aa$accession == "KX759623"] <- "Bat sapovirus KX759623"
+long.sim_aa$accession[long.sim_aa$accession == "HM002617"] <- "Sapporo virus: HM002617"
+long.sim_aa$accession[long.sim_aa$accession == "KX759623"] <- "Bat sapovirus: KX759623"
 
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("Sapporo virus HM002617", "Bat sapovirus KX759623"))
+long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("Sapporo virus: HM002617", "Bat sapovirus: KX759623"))
 
 #and plot
 long.sim_aa$value[long.sim_aa$value<0] <- 0
@@ -879,7 +865,7 @@ sapovirus_full_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value
         legend.position="none", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
         legend.text = element_text(face="italic", size = 8),
-        legend.title = element_text(face="italic", size = 8),
+        #legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
@@ -910,8 +896,6 @@ sapo_full_ictv
 teschovirus_nt_ictv <- read.csv(file = "tescho_ictv_nt_full_alignment.csv", header = T, stringsAsFactors = F) #nucleotide
 head(teschovirus_nt_ictv)
 
-colzpalette<-c("gray1","firebrick2","gray","slategray4","gray56")
-
 #move to long
 long.sim_nt <- melt(teschovirus_nt_ictv, id.vars = c("pointer"), measure.vars = c("OQ818323","OQ818324","LC386158","MG875515","MT295502"))
 
@@ -921,23 +905,23 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "OQ818323"] <- "Rousettus teschovirus MIZ190"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818324"] <- "Rousettus teschovirus MIZ205"
-long.sim_nt$accession[long.sim_nt$accession == "LC386158"] <- "Teschovirus A LC386158"
-long.sim_nt$accession[long.sim_nt$accession == "MG875515"] <- "Teschovirus B MG875515"
-long.sim_nt$accession[long.sim_nt$accession == "MT295502"] <- "Teschovirus A6 MT295502"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818323"] <- "R. madagascariensis teschovirus MIZ190"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818324"] <- "R. madagascariensis teschovirus MIZ205"
+long.sim_nt$accession[long.sim_nt$accession == "LC386158"] <- "Teschovirus A: LC386158"
+long.sim_nt$accession[long.sim_nt$accession == "MG875515"] <- "Teschovirus B: MG875515"
+long.sim_nt$accession[long.sim_nt$accession == "MT295502"] <- "Teschovirus A6: MT295502"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Rousettus teschovirus MIZ190",
-                                                                  "Rousettus teschovirus MIZ205",
-                                                                  "Teschovirus A LC386158",
-                                                                  "Teschovirus B MG875515",
-                                                                  "Teschovirus A6 MT295502"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("R. madagascariensis teschovirus MIZ190",
+                                                                  "R. madagascariensis teschovirus MIZ205",
+                                                                  "Teschovirus A: LC386158",
+                                                                  "Teschovirus B: MG875515",
+                                                                  "Teschovirus A6: MT295502"))
 #and plot
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: Eidolon teschovirus KEL164"))
+title<-expression(paste("Reference: E. dupreanum teschovirus KEL164"))
 
 teschovirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
@@ -947,7 +931,7 @@ teschovirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, c
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
         legend.text = element_text(face="italic", size = 8),
-        legend.title = element_text(face="italic", size = 8),
+        #legend.title = element_text(face="italic", size = 8),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
