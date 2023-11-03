@@ -46,24 +46,24 @@ length(tree$tip.label) #356
 
 #check subgroup names
 unique(dat$Genus)
-colz = c("Cardiovirus" = "cadetblue1",    "Enterovirus"  = "cadetblue2",   "Hepatovirus"  = "cadetblue3",   
-         "Kobuvirus"   = "cadetblue4" ,   "Parechovirus" = "coral1" ,"Erbovirus"  = "coral3" ,    
-         "Teschovirus"  = "coral4" ,  "Sapelovirus" = "cyan1" ,   "Tremovirus"  = "cyan2" ,   
-         "Anativirus"   = "cyan3" ,"Avihepatovirus"  = "cyan4","Aquamavirus"  = "darkgoldenrod1",   
-         "Aphthovirus"  = "darkgoldenrod2" ,  "Senecavirus"  = "darkgoldenrod3" ,  "Cosavirus"  = "darkgoldenrod4",
-         "Salivirus"   = "deepskyblue1",    "Passerivirus"  = "deepskyblue2", "Oscivirus"   = "deepskyblue3" , 
-         "Unclassified picornavirus"= "deepskyblue4"  ,   "Mischivirus" = "darkorange","Pasivirus"   = "darkorange2"  ,  
-         "Gallivirus"   = "darkorange3" ,  "Limnipivirus"  = "darkorange4",  "Hunnivirus"   = "firebrick1",   
-         "Dicipivirus" = "firebrick2","Megrivirus"  = "firebrick3" ,   "Potamipivirus"  = "firebrick4", 
-         "Sakobuvirus"  = "lightblue1" ,  "Sicinivirus"  = "lightblue2" ,  "Aalivirus"  = "lightblue3",
-         "Mosavirus"  = "lightblue4" ,    "Rosavirus"  = "hotpink1" ,    "Avisivirus"   = "hotpink2",   
-         "Orivirus"   = "hotpink3" ,    "Crohivirus" = "hotpink4","Torchivirus" = "indianred1" ,   
-         "Bopivirus"  = "indianred3"  ,   "Malagasivirus" = "indianred4" , "Harkavirus"  = "pink1" ,   
-         "Ampivirus"  = "pink2" ,"Livupivirus" = "pink3" ,   "Kunsagivirus"  = "pink4",  
-         "Shanbavirus"  = "slateblue1" ,  "Rafivirus"   = "slateblue3",  "Coronavirus" ="black",  
-         "Poecivirus"  = "slateblue4" ,"Rabovirus"   = "maroon1",    "Tottorivirus"  = "maroon3" , 
-         "Ailurivirus" = "maroon4", "Madagascar bat kobuvirus" ="royalblue1", "Bat picornavirus"="royalblue3", 
-         "Picornavirus"="royalblue4", "Roupivirus"="gold")
+# colz = c("Cardiovirus" = "cadetblue1",    "Enterovirus"  = "cadetblue2",   "Hepatovirus"  = "cadetblue3",   
+#          "Kobuvirus"   = "cadetblue4" ,   "Parechovirus" = "coral1" ,"Erbovirus"  = "coral3" ,    
+#          "Teschovirus"  = "coral4" ,  "Sapelovirus" = "cyan1" ,   "Tremovirus"  = "cyan2" ,   
+#          "Anativirus"   = "cyan3" ,"Avihepatovirus"  = "cyan4","Aquamavirus"  = "darkgoldenrod1",   
+#          "Aphthovirus"  = "darkgoldenrod2" ,  "Senecavirus"  = "darkgoldenrod3" ,  "Cosavirus"  = "darkgoldenrod4",
+#          "Salivirus"   = "deepskyblue1",    "Passerivirus"  = "deepskyblue2", "Oscivirus"   = "deepskyblue3" , 
+#          "Unclassified picornavirus"= "deepskyblue4"  ,   "Mischivirus" = "darkorange","Pasivirus"   = "darkorange2"  ,  
+#          "Gallivirus"   = "darkorange3" ,  "Limnipivirus"  = "darkorange4",  "Hunnivirus"   = "firebrick1",   
+#          "Dicipivirus" = "firebrick2","Megrivirus"  = "firebrick3" ,   "Potamipivirus"  = "firebrick4", 
+#          "Sakobuvirus"  = "lightblue1" ,  "Sicinivirus"  = "lightblue2" ,  "Aalivirus"  = "lightblue3",
+#          "Mosavirus"  = "lightblue4" ,    "Rosavirus"  = "hotpink1" ,    "Avisivirus"   = "hotpink2",   
+#          "Orivirus"   = "hotpink3" ,    "Crohivirus" = "hotpink4","Torchivirus" = "indianred1" ,   
+#          "Bopivirus"  = "indianred3"  ,   "Malagasivirus" = "indianred4" , "Harkavirus"  = "pink1" ,   
+#          "Ampivirus"  = "pink2" ,"Livupivirus" = "pink3" ,   "Kunsagivirus"  = "pink4",  
+#          "Shanbavirus"  = "slateblue1" ,  "Rafivirus"   = "slateblue3",  "Coronavirus" ="black",  
+#          "Poecivirus"  = "slateblue4" ,"Rabovirus"   = "maroon1",    "Tottorivirus"  = "maroon3" , 
+#          "Ailurivirus" = "maroon4", "Madagascar bat kobuvirus" ="royalblue1", "Bat picornavirus"="royalblue3", 
+#          "Picornavirus"="royalblue4", "Roupivirus"="gold")
 
 #pick order for the labels
 dat$Genus <- factor(dat$Genus, levels = c("Cardiovirus",    "Enterovirus",   "Hepatovirus",   
@@ -84,6 +84,7 @@ dat$Genus <- factor(dat$Genus, levels = c("Cardiovirus",    "Enterovirus",   "He
                                           "Poecivirus", "Rabovirus",    "Tottorivirus", 
                                           "Ailurivirus", "Madagascar bat kobuvirus", 
                                           "Bat picornavirus", "Picornavirus", "Roupivirus",
+                                          "Unclassified",
                                           "Coronavirus"))  
 
 dat$novel <- as.factor(dat$novel)
@@ -91,8 +92,7 @@ dat$novel <- as.factor(dat$novel)
 
 #take a glance
 p <- ggtree(rooted.tree) %<+% dat + geom_tippoint(aes(color=Genus)) +
-  geom_tiplab(size=2) + geom_nodelab(size=1) +
-  scale_color_manual(values=colz) + theme(legend.position = "none", legend.title = element_blank())
+  geom_tiplab(size=2) + geom_nodelab(size=1) + theme(legend.position = "none", legend.title = element_blank())
 p #looks great
 
 #now get new tip labels
@@ -185,8 +185,8 @@ colz2 = c('1' =  "yellow", '0' = "white")
 
 ##uncollapsed tree
 p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=Host), size=4,stroke=0,show.legend = T) +
-  scale_fill_manual(values=colz) +
-  scale_color_manual(values=colz)+
+  # scale_fill_manual(values=colz) +
+  # scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=4, nudge_x=0.05) +
@@ -230,8 +230,8 @@ ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
 
 #add clade labels
 p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=Host), size=4,stroke=0,show.legend = T) +
-  scale_fill_manual(values=colz) +
-  scale_color_manual(values=colz)+
+  # scale_fill_manual(values=colz) +
+  # scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=4, nudge_x=0.05) +
@@ -250,9 +250,9 @@ p2
 
 
 #collapse the labeled clades
-p3<-collapse(p2, 395)+geom_point2(aes(subset=(node==395)), size=4, shape=22, fill="darkgoldenrod2")
-p4<-collapse(p3, 594)+geom_point2(aes(subset=(node==594)), size=4, shape=22, fill="cadetblue2")
-p12<-collapse(p4, 709)+geom_point2(aes(subset=(node==709)), size=4, shape=22, fill="darkgoldenrod2")
+p3<-collapse(p2, 395)+geom_point2(aes(subset=(node==395)), size=4, shape=22, fill="white")
+p4<-collapse(p3, 594)+geom_point2(aes(subset=(node==594)), size=4, shape=22, fill="white")
+p12<-collapse(p4, 709)+geom_point2(aes(subset=(node==709)), size=4, shape=22, fill="white")
 
 p12
 
@@ -265,13 +265,14 @@ picornaviridae <- p12  %<+% p12.dat +
   ggnewscale::new_scale_fill() + 
   geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
-  #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
+  guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
   theme(legend.position = "left",
         legend.direction = "vertical",
         legend.text = element_text(size=12),
         legend.title = element_text(size=12),
-        legend.key.size = unit(0.3, "cm"))
+        legend.key.size = unit(0.3, "cm"))+
+  geom_cladelabel(node = 395, label = "Apthovirus/Bos taurus clade",offset=0.1, fontsize = 4, color="black") +
 picornaviridae
 
 
-# export 13x13inch PDF
+# export 13x13.5 landscape inch PDF
