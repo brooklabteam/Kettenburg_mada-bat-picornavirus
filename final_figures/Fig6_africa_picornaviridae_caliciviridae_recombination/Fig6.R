@@ -346,7 +346,7 @@ ictv_sapo_full
 #First all bat picornavirales over 3kb  
 setwd("~/Desktop/developer/mada-bat-picornavirus/bootscan/output_africa")
 
-colzpalette<-c("coral1","cyan3","hotpink1","yellow","orange2","dodgerblue2","firebrick1","darkorchid3","skyblue1")
+colzpalette<-c("coral1","cyan3","hotpink1","gold","orange3","dodgerblue2","firebrick1","darkorchid3","skyblue1")
 
 #Bat picornavirus full
 africa_batpicorna_full_bootscan <- read.csv(file = "africa_batpicorna_full_bootscan.csv", header = T, stringsAsFactors = F)
@@ -855,21 +855,26 @@ bootscan_pic<-plot_grid(mischi_bat_all_boot,
                     kun_bat_all_boot,
                     sapelo_bat_p1_boot,
                     ncol=2,
-                    labels=c("A","B","C","D","E","F"),  label_size = 23, align = "hv", axis="b")
+                    labels=c("A","B","C","D","E","F"),  label_size = 23, align = "hv", axis="b")+
+  theme(panel.border = element_rect(colour = "black", fill=NA, linewidth=2))
+bootscan_pic
 bootscan_pic<-as.ggplot(bootscan_pic)
+bootscan
 
 
 bootscan_cal<-plot_grid(sapo_full_boot,sapo_all_boot,NULL,
                     ncol=1,
-                    labels=c("G","H",""),  label_size = 23, align = "hv", axis="b")
+                    labels=c("G","H",""),  label_size = 23, align = "hv", axis="b")+
+  theme(panel.border = element_rect(colour = "black", fill=NA, linewidth=2))
+bootscan_cal
 bootscan_cal<-as.ggplot(bootscan_cal)
 
 
 ##Now put the whole figure together
 
 #put tree side by side
-recombination<-plot_grid(bootscan_pic,NULL,bootscan_cal,
-                ncol=3,rel_heights = c(1,1,1), rel_widths = c(1,0.1,0.5),
+recombination<-plot_grid(bootscan_pic,bootscan_cal,
+                ncol=2,rel_heights = c(1,1), rel_widths = c(1,0.5),
                 labels=c("",""),  label_size = 23, align = "v", axis="t")
 recombination
 

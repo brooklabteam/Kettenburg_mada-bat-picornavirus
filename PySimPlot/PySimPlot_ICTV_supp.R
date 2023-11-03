@@ -329,7 +329,7 @@ ictv_sapo_full
 setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/ICTV_BLAST_pysimplot")
 
 #colzpalette<-c("#8ECAE6","#219EBC","#023047","#FFB703","#FB8500","#E48B97","#B52B09","#A60067","#987B6F","#8FD694")
-colzpalette<-c("coral1","cyan3","hotpink1","yellow","orange2","dodgerblue2","firebrick1","darkorchid3","skyblue1")
+colzpalette<-c("coral1","cyan3","hotpink1","gold","orange3","dodgerblue2","firebrick1","darkorchid3","skyblue1")
 
 #Bat picornavirus 
 bat_picorna_ictv_nt_full <- read.csv(file = "bat_picorna_ictv_nt_full_alignment.csv", header = T, stringsAsFactors = F)
@@ -379,68 +379,19 @@ batpicorna_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, co
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
-  # scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055), 
-  #                    labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
-  scale_x_continuous(expand=c(0,0))+
-  scale_y_continuous(limits=c(0,1), expand=c(0,0))
-
-batpicorna_ictv_nt
-
-bat_picorna_ictv_aa_full <- read.csv(file = "bat_picorna_ictv_aa_full_alignment.csv", header = T, stringsAsFactors = F)
-head(bat_picorna_ictv_aa_full)
-
-#move to long
-long.sim_aa <- melt(bat_picorna_ictv_aa_full, id.vars = c("pointer"), measure.vars = c("OQ818328","HQ595340","HQ595342","HQ595344"))
-
-unique(long.sim_aa$variable)
-
-long.sim_aa$variable <- as.character(long.sim_aa$variable)
-
-names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
-
-long.sim_aa$accession[long.sim_aa$accession == "OQ818328"] <- "R. madagascariensis roupivirus MIZ240"
-long.sim_aa$accession[long.sim_aa$accession == "HQ595340"] <- "Bat picornavirus 1: HQ595340"
-long.sim_aa$accession[long.sim_aa$accession == "HQ595342"] <- "Bat picornavirus 2: HQ595342"
-long.sim_aa$accession[long.sim_aa$accession == "HQ595344"] <- "Bat picornavirus 3: HQ595344"
-
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("R. madagascariensis roupivirus MIZ240", "Bat picornavirus 1: HQ595340",
-                                                                  "Bat picornavirus 2: HQ595342","Bat picornavirus 3: HQ595344"))
-long.sim_aa$value[long.sim_aa$value<0] <- 0
-long.sim_aa$value <- long.sim_aa$value/100
-
-title<-expression(paste("Reference: R. madagascariensis roupivirus MIZ214"))
-
-## Nucleotide
-batpicorna_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
-  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
-        strip.background = element_rect(fill="white"), 
-        legend.position="none", legend.direction = "horizontal",legend.margin=margin(),
-        legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
-        #legend.title = element_text(face="italic", size = 8),
-        legend.key.height= unit(3.5, 'mm'),
-        legend.key.width= unit(3.5, 'mm'),
-        legend.background =element_rect(fill = alpha("white", 0)),
-        axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
-  scale_color_manual(values=colzpalette) + 
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055), 
                      labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
   #scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
-batpicorna_ictv_aa
+batpicorna_ictv_nt
 
 #put gene map with PySimPlot
-bat_picorna<-batpicorna_ictv_nt/batpicorna_ictv_aa/ictv_batpicorna+plot_layout(nrow=3,  heights = c(0.5,0.5, 0.3))
-bat_picorna
+bat_picorna_nt<-batpicorna_ictv_nt/ictv_batpicorna+plot_layout(nrow=2,  heights = c(1, 0.3))
+bat_picorna_nt
 
-bat_picorna<-as.ggplot(bat_picorna)
-bat_picorna
+bat_picorna_nt<-as.ggplot(bat_picorna_nt)
+bat_picorna_nt
 
 
 
@@ -559,6 +510,9 @@ kobuvirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, col
         legend.justification = "left",
         legend.text = element_text(face="italic", size = 8),
         #legend.title = element_text(face="italic", size = 8),
+        axis.title.x = element_blank(),
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
         legend.background =element_rect(fill = alpha("white", 0)),
@@ -577,12 +531,72 @@ kobuvirus_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, col
 
 kobuvirus_ictv_nt
 
-#put gene map with PySimPlot
-kobu_ictv_nt<-kobuvirus_ictv_nt/ictv_kobu+plot_layout(nrow=2,  heights = c(1, 0.3))
-kobu_ictv_nt
+kobuvirus_aa_ictv <- read.csv(file = "kobu_ictv_aa_full_alignment.csv", header = T, stringsAsFactors = F) #Amino acid
+head(kobuvirus_aa_ictv)
 
-kobu_ictv_nt<-as.ggplot(kobu_ictv_nt)
-kobu_ictv_nt
+#move to long
+long.sim_aa <- melt(kobuvirus_aa_ictv, id.vars = c("pointer"), measure.vars = c("AB040749","AB084788",
+                                                                                "EU787450","KJ641686",
+                                                                                "KT325853","LC055961",
+                                                                                "OP287812"))
+unique(long.sim_aa$variable)
+
+long.sim_aa$variable <- as.character(long.sim_aa$variable)
+
+names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
+
+long.sim_aa$accession[long.sim_aa$accession == "AB040749"] <- "Aichivirus A: AB040749"
+long.sim_aa$accession[long.sim_aa$accession == "AB084788"] <- "Aichivirus B: AB084788"
+long.sim_aa$accession[long.sim_aa$accession == "EU787450"] <- "Aichivirus C: EU787450"
+long.sim_aa$accession[long.sim_aa$accession == "KJ641686"] <- "Aichivirus F: KJ641686"
+long.sim_aa$accession[long.sim_aa$accession == "KT325853"] <- "Aichivirus E: KT325853"
+long.sim_aa$accession[long.sim_aa$accession == "LC055961"] <- "Aichivirus D: LC055961"
+long.sim_aa$accession[long.sim_aa$accession == "OP287812"] <- "Eidolon dupreanum kobuvirus: OP287812"
+
+long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("Aichivirus A: AB040749", "Aichivirus B: AB084788",
+                                                                  "Aichivirus C: EU787450","Aichivirus D: LC055961",
+                                                                  "Aichivirus E: KT325853","Aichivirus F: KJ641686",
+                                                                  "Eidolon dupreanum kobuvirus: OP287812"))
+#and plot
+long.sim_aa$value[long.sim_aa$value<0] <- 0
+long.sim_aa$value <- long.sim_aa$value/100
+
+## Amino acid
+title<-expression(paste("Reference: Eidolon dupreanum kobuvirus KEL318"))
+
+kobuvirus_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+  theme(panel.background = element_rect("white"),
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
+  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
+        strip.background = element_rect(fill="white"), 
+        legend.position="none", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        # legend.title = element_text(face="italic", size = 8),
+        legend.key.height= unit(3.5, 'mm'),
+        legend.key.width= unit(3.5, 'mm'),
+        legend.background =element_rect(fill = alpha("white", 0)),
+        axis.text = element_text(size=12), axis.title = element_text(size=12),
+        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
+  #scale_fill_distiller()+
+  #ggtitle(title)+
+  scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
+                     labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
+  #scale_x_continuous(expand=c(0,0))+
+  scale_y_continuous(limits=c(0,1), expand=c(0,0))
+
+kobuvirus_ictv_aa
+
+#put gene map with PySimPlot
+kobu_ictv<-kobuvirus_ictv_nt/kobuvirus_ictv_aa/ictv_kobu+plot_layout(nrow=3,  heights = c(0.5,0.5, 0.3))
+kobu_ictv
+
+kobu_ictv<-as.ggplot(kobu_ictv)
+kobu_ictv
+
 
 
 #kunsagivirus
@@ -779,119 +793,6 @@ sapelo_full_ictv_nt
 
 
 
-
-#Sapovirus full
-sapovirus_full_nt_ictv <- read.csv(file = "sapo_ictv_nt_full_alignment_trimmed.csv", header = T, stringsAsFactors = F) #nucleotide
-head(sapovirus_full_nt_ictv)
-
-#move to long
-long.sim_nt <- melt(sapovirus_full_nt_ictv, id.vars = c("pointer"), measure.vars = c("HM002617","KX759623"))
-
-unique(long.sim_nt$variable)
-
-long.sim_nt$variable <- as.character(long.sim_nt$variable)
-
-names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
-
-long.sim_nt$accession[long.sim_nt$accession == "HM002617"] <- "Sapporo virus: HM002617"
-long.sim_nt$accession[long.sim_nt$accession == "KX759623"] <- "Bat sapovirus: KX759623"
-
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Sapporo virus: HM002617", "Bat sapovirus: KX759623"))
-
-#and plot
-long.sim_nt$value[long.sim_nt$value<0] <- 0
-long.sim_nt$value <- long.sim_nt$value/100
-
-## Nucleotide
-title<-expression(paste("E. dupreanum saplivirus KEL166"))
-
-sapovirus_full_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("")+
-  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
-        strip.background = element_rect(fill="white"), 
-        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
-        legend.justification = "left",
-        axis.text.x = element_blank(),
-        axis.ticks.x = element_blank(),
-        legend.text = element_text(face="italic", size = 8),
-        #legend.title = element_text(face="italic", size = 8),
-        legend.key.height= unit(3.5, 'mm'),
-        legend.key.width= unit(3.5, 'mm'),
-        legend.background =element_rect(fill = alpha("white", 0)),
-        axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
-  scale_color_manual(values=colzpalette) + 
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
-  ggtitle(title)+
-  # scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055), 
-  #                    labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
-  scale_x_continuous(expand=c(0,0))+
-  scale_y_continuous(limits=c(0,1), expand=c(0,0))
-
-sapovirus_full_ictv_nt
-
-
-sapovirus_full_aa_ictv <- read.csv(file = "sapo_ictv_aa_full_alignment_trimmed.csv", header = T, stringsAsFactors = F) #Amino acid
-head(sapovirus_full_aa_ictv)
-
-#move to long
-long.sim_aa <- melt(sapovirus_full_aa_ictv, id.vars = c("pointer"), measure.vars = c("HM002617","KX759623"))
-
-unique(long.sim_aa$variable)
-
-long.sim_aa$variable <- as.character(long.sim_aa$variable)
-
-names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
-
-long.sim_aa$accession[long.sim_aa$accession == "HM002617"] <- "Sapporo virus: HM002617"
-long.sim_aa$accession[long.sim_aa$accession == "KX759623"] <- "Bat sapovirus: KX759623"
-
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("Sapporo virus: HM002617", "Bat sapovirus: KX759623"))
-
-#and plot
-long.sim_aa$value[long.sim_aa$value<0] <- 0
-long.sim_aa$value <- long.sim_aa$value/100
-
-## Amino acid
-sapovirus_full_ictv_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
-  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
-        strip.background = element_rect(fill="white"), 
-        legend.position="none", legend.direction = "horizontal",legend.margin=margin(),
-        legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
-        #legend.title = element_text(face="italic", size = 8),
-        legend.key.height= unit(3.5, 'mm'),
-        legend.key.width= unit(3.5, 'mm'),
-        legend.background =element_rect(fill = alpha("white", 0)),
-        axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
-  scale_color_manual(values=colzpalette) + 
-  #scale_color_manual(values=colz2) + 
-  scale_fill_distiller()+
-  scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
-                     labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
-  #scale_x_continuous(expand=c(0,0))+
-  scale_y_continuous(limits=c(0,1), expand=c(0,0))
-
-sapovirus_full_ictv_aa
-
-#put gene map with PySimPlot
-sapo_full_ictv<-sapovirus_full_ictv_nt/sapovirus_full_ictv_aa/ictv_sapo_full+plot_layout(nrow=3,  heights = c(0.5,0.5, 0.3))
-sapo_full_ictv
-
-sapo_full_ictv<-as.ggplot(sapo_full_ictv)
-sapo_full_ictv
-
-
-
 #Teschovirus
 teschovirus_nt_ictv <- read.csv(file = "tescho_ictv_nt_full_alignment.csv", header = T, stringsAsFactors = F) #nucleotide
 head(teschovirus_nt_ictv)
@@ -960,8 +861,8 @@ tescho_ictv_nt
 
 
 ##Now put the whole figure together
-supp_pysimplot<-plot_grid(mischi_ictv_nt,bat_picorna,hep_ictv_nt, kobu_ictv_nt,
-                          kun_ictv_nt,sapelo_full_ictv_nt,sapo_full_ictv,
+supp_pysimplot<-plot_grid(mischi_ictv_nt,bat_picorna_nt,hep_ictv_nt, kobu_ictv,
+                          kun_ictv_nt,sapelo_full_ictv_nt,
                           tescho_ictv_nt, 
                           ncol=4,
                           labels="AUTO", label_size = 23, align = "hv", axis="b")
