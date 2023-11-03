@@ -47,9 +47,9 @@ length(tree$tip.label) #44
 #check subgroup names
 unique(dat$Genus)
 
-colz = c("Sapovirus" = "royalblue3",    "Vesivirus"  = "turquoise1",   "Lagovirus"  = "goldenrod1",   "Norovirus"   = "dodgerblue1" ,   "Calicivirus" = "firebrick1" ,
-         "Salovirus"  = "lightpink1" ,    "Bavovirus"  = "hotpink1" ,  "Minovirus" = "lightskyblue" ,   "Coronavirus"  = "black", "Recovirus"  = "darkorange1", 
-         "Nacovirus"="thistle3", "Nebovirus"="darkorchid2", "Saplivirus"="sienna", "Unclassified"="darkorchid4")
+# colz = c("Sapovirus" = "royalblue3",    "Vesivirus"  = "turquoise1",   "Lagovirus"  = "goldenrod1",   "Norovirus"   = "dodgerblue1" ,   "Calicivirus" = "firebrick1" ,
+#          "Salovirus"  = "lightpink1" ,    "Bavovirus"  = "hotpink1" ,  "Minovirus" = "lightskyblue" ,   "Coronavirus"  = "black", "Recovirus"  = "darkorange1", 
+#          "Nacovirus"="thistle3", "Nebovirus"="darkorchid2", "Saplivirus"="sienna", "Unclassified"="darkorchid4")
 
 #pick order for the labels
 dat$Genus <- factor(dat$Genus, levels = c("Sapovirus" ,  "Vesivirus",   "Lagovirus",   "Norovirus",   "Calicivirus",
@@ -62,7 +62,7 @@ dat$novel <- as.factor(dat$novel)
 #take a glance
 p <- ggtree(rooted.tree) %<+% dat + geom_tippoint(aes(color=Genus)) +
   geom_tiplab(size=2) + geom_nodelab(size=1) +
-  scale_color_manual(values=colz) + theme(legend.position = "none", legend.title = element_blank())
+  theme(legend.position = "none", legend.title = element_blank())
 p #looks great
 
 #now get new tip labels
@@ -212,8 +212,8 @@ colz2 = c('1' =  "yellow", '0' = "white")
 
 ##uncollapsed tree
 p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=Host), size=4,stroke=0,show.legend = T) +
-  scale_fill_manual(values=colz) +
-  scale_color_manual(values=colz)+
+  # scale_fill_manual(values=colz) +
+  # scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Genus="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=4,  nudge_x=0.1) +
@@ -247,4 +247,4 @@ caliciviridae <- p1  %<+% p0.dat +
         legend.key.size = unit(0.3, "cm"))
 caliciviridae
 
-#export 10x13 landscape pdf
+#export 10x12 landscape pdf
