@@ -854,30 +854,21 @@ bootscan_pic<-plot_grid(mischi_bat_all_boot,
                     hep_bat_all_boot,
                     kun_bat_all_boot,
                     sapelo_bat_p1_boot,
-                    ncol=2,
-                    labels=c("A","B","C","D","E","F"),  label_size = 23, align = "hv", axis="b")+
-  theme(panel.border = element_rect(colour = "black", fill=NA, linewidth=2))
+                    ncol=3,
+                    labels=c("A","B","C","D","E","F"),  label_size = 23, align = "hv", axis="b")
 bootscan_pic
 bootscan_pic<-as.ggplot(bootscan_pic)
-bootscan
+
+#export picornaviridae fig as Fig 6 20x10 inch landscape pdf
 
 
-bootscan_cal<-plot_grid(sapo_full_boot,sapo_all_boot,NULL,
-                    ncol=1,
-                    labels=c("G","H",""),  label_size = 23, align = "hv", axis="b")+
-  theme(panel.border = element_rect(colour = "black", fill=NA, linewidth=2))
+bootscan_cal<-plot_grid(sapo_full_boot,sapo_all_boot,
+                    ncol=2,
+                    labels=c("A","B"),  label_size = 23, align = "hv", axis="b")
 bootscan_cal
 bootscan_cal<-as.ggplot(bootscan_cal)
 
 
-##Now put the whole figure together
-
-#put tree side by side
-recombination<-plot_grid(bootscan_pic,bootscan_cal,
-                ncol=2,rel_heights = c(1,1), rel_widths = c(1,0.5),
-                labels=c("",""),  label_size = 23, align = "v", axis="t")
-recombination
-
-#export 26.5x13inch PDF landscape
+#export caliciviridae as fig 7 5x14 inch PDF land
 
 
