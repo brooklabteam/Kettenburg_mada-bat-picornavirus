@@ -329,7 +329,8 @@ ictv_sapo_full
 setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/ICTV_BLAST_pysimplot")
 
 #colzpalette<-c("#8ECAE6","#219EBC","#023047","#FFB703","#FB8500","#E48B97","#B52B09","#A60067","#987B6F","#8FD694")
-colzpalette<-c("coral1","cyan3","hotpink1","gold","orange3","dodgerblue2","firebrick1","darkorchid3","skyblue1")
+colzpalette<-c("coral1","cyan3","gold","hotpink","firebrick1","dodgerblue2","orange3","darkorchid3","skyblue1")
+
 
 #Bat picornavirus 
 bat_picorna_ictv_nt_full <- read.csv(file = "bat_picorna_ictv_nt_full_alignment.csv", header = T, stringsAsFactors = F)
@@ -864,9 +865,9 @@ tescho_ictv_nt
 supp_pysimplot<-plot_grid(mischi_ictv_nt,bat_picorna_nt,hep_ictv_nt, kobu_ictv,
                           kun_ictv_nt,sapelo_full_ictv_nt,
                           tescho_ictv_nt, 
-                          ncol=4,
+                          ncol=3,
                           labels="AUTO", label_size = 23, align = "hv", axis="b")
 supp_pysimplot
 
-#Export landscape 27x12 inches PDF
+#Export portrait 20x15 inches PDF
 

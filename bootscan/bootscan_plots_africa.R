@@ -1165,7 +1165,7 @@ bootscan_all<-plot_grid(batpicorna_full_boot,
                            sapo_full_boot,
                            sapo_all_boot,
                            tescho_boot,
-                    ncol=4,
+                    ncol=3,
                     labels="AUTO",  label_size = 23, align = "hv", axis="b")
 bootscan_all
 
