@@ -16,35 +16,9 @@ library(ggh4x)
 homewd="/Users/gwenddolenkettenburg/Desktop/mada-bat-picornavirus/read_mapping/"
 setwd(paste0(homewd))
 
-##first do full genomes
-dat <- read.csv(file = "fullgenome_coverage.csv", header = T, stringsAsFactors = F) #load data
-dat$virus<-factor(dat$virus, levels=c("Mischivirus", "Kobuvirus", "Kunsagivirus", "Nepovirus", "Roupivirus", "Sapelovirus",
-                                      "Saplivirus", "Teschovirus")) ##pick order to display
-dat$virus<-factor(dat$species, levels=c("Pteropus rufus", "Eidolon dupreanum", "Rousettus madagascariensis")) ##pick order to display
-
-##subset the data into different viruses
-Mischivirus<-subset(dat, virus=="Mischivirus")
-kobuvirus<-subset(dat, virus=="Kobuvirus")
-kunsagivirus<-subset(dat, virus=="Kunsagivirus")
-nepovirus<-subset(dat, virus=="Nepovirus")
-nepovirusRNA1<-subset(nepovirus, accession=="OQ818326: Nepovirus RNA 1")
-nepovirusRNA2<-subset(nepovirus, accession=="OQ818327: Nepovirus RNA 2")
-Roupivirus<-subset(dat, virus=="Roupivirus")
-Roupivirus1<-subset(Roupivirus, accession=="OQ818325: Roupivirus")
-Roupivirus2<-subset(Roupivirus, accession=="OQ818328: Roupivirus")
-sapelovirus<-subset(dat, virus=="Sapelovirus")
-sapelovirus1<-subset(sapelovirus, accession=="OQ818329: Sapelovirus")
-sapelovirus2<-subset(sapelovirus, accession=="OQ818320: Sapelovirus")
-sapelovirus3<-subset(sapelovirus, accession=="OQ818321: Sapelovirus")
-Saplivirus<-subset(dat, virus=="Saplivirus")
-teschovirus<-subset(dat, virus=="Teschovirus")
-teschovirus1<-subset(teschovirus, accession=="OQ818323: Teschovirus")
-teschovirus2<-subset(teschovirus, accession=="OQ818324: Teschovirus")
-
-
 dat <- read.csv(file= "allgenome_coverage.csv", header = T, stringsAsFactors = F) #load data
 dat$virus<-factor(dat$virus, levels=c("Mischivirus", "Kobuvirus", "Kunsagivirus", "Nepovirus", "Roupivirus", "Sapelovirus",
-                                      "Saplivirus", "Teschovirus")) ##pick order to display
+                                      "Sapovirus", "Teschovirus")) ##pick order to display
 dat$species<-factor(dat$species, levels=c("Pteropus rufus", "Eidolon dupreanum", "Rousettus madagascariensis")) ##pick order to display
 dat$type<-factor(dat$type, levels=c("full", "partial"))
 
@@ -243,5 +217,5 @@ rm_p
 partial<-plot_grid(pr_p, ed_p,rm_p, ncol=3, labels =c("A","B","C"),label_size=23, align="hv", axis="l")
 partial
 
-#export 15x13inch PDF landscape
+#export 18x13inch PDF landscape
 

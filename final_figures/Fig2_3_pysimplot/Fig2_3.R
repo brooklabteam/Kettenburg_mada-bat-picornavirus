@@ -749,7 +749,7 @@ long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Sapporo virus
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
-title<-expression(paste("E. dupreanum saplivirus KEL166"))
+title<-expression(paste("E. dupreanum sapovirus KEL166"))
 
 sapovirus_full_ictv_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
@@ -836,7 +836,7 @@ sapo_full_ictv
 sapo_full_ictv<-as.ggplot(sapo_full_ictv)
 sapo_full_ictv
 
-#export 6x8 landscape PDF for saplivirus only figure 3
+#export 6x8 landscape PDF for sapovirus only figure 3
 
 
 ##Now put the whole figure together

@@ -736,24 +736,24 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "OQ818340"] <- "E. dupreanum saplivirus KEL207"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818345"] <- "R. madagascariensis saplivirus MIZ179"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818347"] <- "R. madagascariensis saplivirus MIZ219"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818348"] <- "R. madagascariensis saplivirus MIZ345"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818340"] <- "E. dupreanum sapovirus KEL207"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818345"] <- "R. madagascariensis sapovirus MIZ179"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818347"] <- "R. madagascariensis sapovirus MIZ219"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818348"] <- "R. madagascariensis sapovirus MIZ345"
 long.sim_nt$accession[long.sim_nt$accession == "NC_033776"] <- "Eidolon helvum sapovirus: NC_033776"
 long.sim_nt$accession[long.sim_nt$accession == "OM105025"] <- "Shellfish unclassified caliciviridae: OM105025"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum saplivirus KEL207",
-                                                                  "R. madagascariensis saplivirus MIZ179",
-                                                                  "R. madagascariensis saplivirus MIZ219",
-                                                                  "R. madagascariensis saplivirus MIZ345",
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum sapovirus KEL207",
+                                                                  "R. madagascariensis sapovirus MIZ179",
+                                                                  "R. madagascariensis sapovirus MIZ219",
+                                                                  "R. madagascariensis sapovirus MIZ345",
                                                                   "Eidolon helvum sapovirus: NC_033776",
                                                                   "Shellfish unclassified caliciviridae: OM105025"))
 #and plot
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: E. dupreanum saplivirus KEL166"))
+title<-expression(paste("Reference: E. dupreanum sapovirus KEL166"))
 
 sapovirus_all_bat_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -814,7 +814,7 @@ long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Human norovir
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## Nucleotide
-title<-expression(paste("Reference: E. dupreanum saplivirus KEL166"))
+title<-expression(paste("Reference: E. dupreanum sapovirus KEL166"))
 
 sapovirus_full_bat_boot <- ggplot(long.sim_nt) + 
   geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -850,16 +850,14 @@ sapo_full_boot
 #Put figure together
 bootscan_pic<-plot_grid(mischi_bat_all_boot,
                     batpicorna_full_boot,
-                    tescho_boot,
                     hep_bat_all_boot,
-                    kun_bat_all_boot,
                     sapelo_bat_p1_boot,
-                    ncol=3,
-                    labels=c("A","B","C","D","E","F"),  label_size = 23, align = "hv", axis="b")
+                    ncol=2,
+                    labels=c("A","B","C","D"),  label_size = 23, align = "hv", axis="b")
 bootscan_pic
 bootscan_pic<-as.ggplot(bootscan_pic)
 
-#export picornaviridae fig as Fig 6 20x10 inch landscape pdf
+#export picornaviridae fig as Fig 6 15x10 inch landscape pdf
 
 
 bootscan_cal<-plot_grid(sapo_full_boot,sapo_all_boot,
