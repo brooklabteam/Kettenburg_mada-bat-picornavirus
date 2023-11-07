@@ -1155,12 +1155,11 @@ tescho_boot
 
 
 #all bootscan together for supplementary: 
-bootscan_all<-plot_grid(kun_bat_all_boot,
-                        tescho_boot,
+bootscan_all<-plot_grid(tescho_boot,
                            sapelo_bat_full_boot,
                     nrow=1,
                     labels="AUTO",  label_size = 23, align = "hv", axis="b")
 bootscan_all
 
-#export 20x5 inch PDF landscape
+#export 10x5 inch PDF landscape
 

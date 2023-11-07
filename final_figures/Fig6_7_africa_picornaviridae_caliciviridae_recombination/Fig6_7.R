@@ -108,6 +108,34 @@ ictv_sapovirus_full_feat<-subset(ictv_sapovirus_feat,type=="full")
 ictv_sapovirus_all_feat<-subset(ictv_sapovirus_feat,type=="all")
 
 #plot ictv and blast plots
+ictv_batpicorna_all<-ggplot(ictv_batpicornavirus_all, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
+  geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
+                  arrowhead_height = grid::unit(4, "mm"),
+                  arrow_body_height = grid::unit(4, "mm")) +
+  # geom_feature(data=ictv_hepatovirus_feat, aes(x=mid, y=molecule),
+  #              feature_height = grid::unit(6,"mm"))+
+  # geom_feature_label(data=ictv_hepatovirus_feat, aes(x=mid, y=molecule, label=gene),
+  #                    feature_height = grid::unit(6,"mm"),
+  #                    label_height = grid::unit(6,"mm"))+
+  geom_subgene_arrow(data = ictv_batpicornavirus_all_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
+                                                                      xsubmin=from, xsubmax=to), color="black",
+                     arrowhead_width = grid::unit(3, "mm"),
+                     arrowhead_height = grid::unit(4, "mm"),
+                     arrow_body_height = grid::unit(4, "mm"))+
+  geom_text(data=ictv_batpicornavirus_all_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
+  scale_fill_manual(values=colz)+
+  theme_genes()+
+  scale_x_continuous(limits=c(4545,5605),expand=c(0,0))+
+  theme(legend.position = "none")+
+  theme(plot.margin = unit(c(0,0,0,0), "cm"),
+        axis.text.y = element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.x = element_blank(),
+        axis.title.x = element_blank(),
+        axis.line.x = element_blank())+
+  xlab("Genome position") + ylab("")
+ictv_batpicorna_all
+
 ictv_batpicorna_full<-ggplot(ictv_batpicornavirus_full, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
   geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
                   arrowhead_height = grid::unit(4, "mm"),
@@ -407,7 +435,65 @@ batpicorna_full_boot
 batpicorna_full_boot<-as.ggplot(batpicorna_full_boot)
 batpicorna_full_boot
 
+#Bat picornavirus all
+africa_batpicorna_all_bootscan <- read.csv(file = "africa_batpicorna_all_bootscan.csv", header = T, stringsAsFactors = F)
+head(africa_batpicorna_all_bootscan)
 
+#move to long
+long.sim_nt <- melt(africa_batpicorna_all_bootscan, id.vars = c("pointer"), measure.vars = c("OQ818325","OQ818346","JX437642","KF040078"))
+
+unique(long.sim_nt$variable)
+
+long.sim_nt$variable <- as.character(long.sim_nt$variable)
+
+names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
+
+long.sim_nt$accession[long.sim_nt$accession == "OQ818325"] <- "R. madagascariensis roupivirus MIZ214"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818346"] <- "R. madagascariensis roupivirus MIZ194"
+long.sim_nt$accession[long.sim_nt$accession == "JX437642"] <- "Homo sapiens enterovirus: JX437642"
+long.sim_nt$accession[long.sim_nt$accession == "KF040078"] <- "Pan troglodytes enterovirus: KF040078"
+
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("R. madagascariensis roupivirus MIZ214", 
+                                                                  "R. madagascariensis roupivirus MIZ194",
+                                                                  "Homo sapiens enterovirus: JX437642","Pan troglodytes enterovirus: KF040078"))
+long.sim_nt$value[long.sim_nt$value<0] <- 0
+long.sim_nt$value <- long.sim_nt$value/100
+
+## Bootscan 
+title<-expression(paste("Reference: . madagascariensis roupivirus MIZ240"))
+
+batpicorna_africa_all_boot <- ggplot(long.sim_nt) + 
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+  theme(panel.background = element_rect("white"),
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% permuted trees")+xlab("Genome position")+
+  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
+        strip.background = element_rect(fill="white"), 
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_text(face="italic", size = 8),
+        legend.key.height= unit(3.5, 'mm'),
+        legend.key.width= unit(3.5, 'mm'),
+        legend.background =element_rect(fill = alpha("white", 0)),
+        axis.text = element_text(size=12), axis.title = element_text(size=12),
+        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
+  ggtitle(title)+
+  # scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055), 
+  #                    labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
+  scale_x_continuous(expand=c(0,0))+
+  scale_y_continuous(limits=c(0,1), expand=c(0,0))
+
+batpicorna_africa_all_boot
+
+#put gene map with PySimPlot
+batpicorna_all_boot<-batpicorna_africa_all_boot/ictv_batpicorna_all+plot_layout(nrow=2,  heights = c(1, 0.30))
+batpicorna_all_boot
+
+batpicorna_all_boot<-as.ggplot(batpicorna_all_boot)
+batpicorna_all_boot
 
 #Hepatovirus
 africa_hepato_bootscan <- read.csv(file = "africa_hepato_bootscan.csv", header = T, stringsAsFactors = F) #animo acid
@@ -850,10 +936,12 @@ sapo_full_boot
 #Put figure together
 bootscan_pic<-plot_grid(mischi_bat_all_boot,
                     batpicorna_full_boot,
+                    batpicorna_all_boot,
                     hep_bat_all_boot,
                     sapelo_bat_p1_boot,
-                    ncol=2,
-                    labels=c("A","B","C","D"),  label_size = 23, align = "hv", axis="b")
+                    kun_bat_all_boot,
+                    ncol=3,
+                    labels=c("A","B","C","D", "E", "F"),  label_size = 23, align = "hv", axis="b")
 bootscan_pic
 bootscan_pic<-as.ggplot(bootscan_pic)
 
