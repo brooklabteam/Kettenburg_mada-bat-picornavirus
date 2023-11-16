@@ -97,7 +97,7 @@ all<-gam(cbind(pos,neg)~s(day_of_year,by=bat_sex, bs="cc", k=7)+
 all
 summary(all)
 plot(all)
-#with all factors together, there is significance in random effect of year, and only e. dupreanum are significant at 0.0310
+#Looks like R. mada is the only significant thing at p=0.0310
 
 #Look at breakdown of demographic factors, first subset the data by species
 edup<-subset(dat2, species=="Eidolon dupreanum")
@@ -110,7 +110,7 @@ edupgam<-gam(cbind(pos,neg)~s(day_of_year,by=bat_sex, bs="cc", k=7)+
 edupgam
 summary(edupgam)
 plot(edupgam)
-# none sig
+# none sig, but male looks like there's a pattern
 
 rmadgam<-gam(cbind(pos,neg)~s(day_of_year,by=bat_sex, bs="cc", k=7)+
                s(day_of_year,by=bat_age_class, bs="cc", k=7)+
@@ -173,7 +173,7 @@ pruf_un<-subset(pruf, family=="unclassified")
 #check out individual predictors of positivity now with the new datasets
 ##sub out the factors you're interested in "virus, family, etc" and the datasets
 test<-gam(cbind(pos,neg)~s(day_of_year, bs="cc", k=7)+
-           s(year,bs="re"), data=edup_female_a, family = binomial)
+           s(year,bs="re"), data=rmad_male, family = binomial)
 test
 summary(test)
 plot(test)
