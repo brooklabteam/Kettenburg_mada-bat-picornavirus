@@ -311,7 +311,5 @@ cat picornavirales_unique_contigs_tissue_protein.txt | awk -F\_ '{print $1}' | s
 
 Double checked every contig by using BLAST online for both nt and aa identities, then checked read depth through CZID by clicking on each sample ID, then downloading the R1 and R2 files at the very bottom in the results folder (they are called step nonhost Fastq), pairing, then mapping reads to the contig. 
 
-The following results that came out of this analysis are in the spreadsheet [here]() 
-
-The folder which has these results is [here]()
+Those contigs with low read support were not used for further analysis. I then separated the contigs into picornaviridae/caliciviridae and other picornavirales, then subset into full and partial sequences. All sample info and contigs sequences are found in the folder [here]().
 
