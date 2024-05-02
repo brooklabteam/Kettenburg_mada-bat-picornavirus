@@ -1,0 +1,25 @@
+acc. num.	organism
+OQ818316	Pteropus rufus mischivirus
+OQ818318	Eidolon dupreanum teschovirus 1
+OQ818319	Eidolon dupreanum sapovirus 1
+OQ818320	Eidolon dupreanum sapelovirus 1
+OQ818321	Eidolon dupreanum sapelovirus 2	
+OQ818323	Rousettus madagascariensis teschovirus 1
+OQ818324	Rousettus madagascariensis teschovirus 2
+OQ818325	Rousettus madagascariensis picornavirus 1
+OQ818328	Rousettus madagascariensis picornavirus 1
+OQ818329	Rousettus madagascariensis sapelovirus 1
+OQ818333	Pteropus rufus picorna-like virus 1
+OQ818334	Pteropus rufus picorna-like virus 2
+OQ818335	Pteropus rufus felisavirus 1
+OQ818336	Pteropus rufus picorna-like virus 3	
+OQ818339	Eidolon dupreanum picorna-like virus 1
+OQ818340	Eidolon dupreanum sapovirus 2
+OQ818341	Eidolon dupreanum felisavirus 2
+OQ818342	Eidolon dupreanum sapelovirus 1
+OQ818343	Eidolon dupreanum sapelovirus 1
+OQ818344	Eidolon dupreanum sapelovirus 1
+OQ818345	Rousettus madagascariensis sapovirus 1
+OQ818346	Rousettus madagascariensis picornavirus 2
+OQ818347	Rousettus madagascariensis sapovirus 2
+OQ818348	Rousettus madagascariensis sapovirus 3
