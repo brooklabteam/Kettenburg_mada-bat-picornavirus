@@ -1,21 +1,19 @@
 >Feature ANG22 [organism=Eidolon dupreanum kobuvirus] Eidolon dupreanum kobuvirus, genomic sequence
+1	406	5'UTR
 407	>1286	CDS
 			product		polyprotein
 			transl_table	1
-407	>1286	gene
-			gene		polyprotein
+			codon_start	1
 407	961	mat_peptide
 			product		L peptide
 962	>1286	mat_peptide
 			product		VP0 peptide
-1	406	5'UTR
 
 >Feature ANG141 [organism=Eidolon dupreanum kobuvirus 2] Eidolon dupreanum kobuvirus 2, genomic sequence
 <1	>1285	CDS
 			product		polyprotein
 			transl_table	1
-<1	>1285	gene
-			gene		polyprotein
+			codon_start	1
 <1	888	mat_peptide
 			product		VP0 peptide
 889	>1285	mat_peptide
@@ -26,8 +24,6 @@
 			product		polyprotein
 			transl_table	1
 			codon_start	3
-<1	>2837	gene
-			gene		polyprotein
 <1	35	mat_peptide
 			product		VP0 peptide
 36	704	mat_peptide
@@ -45,8 +41,7 @@
 <1	>1742	CDS
 			product		polyprotein
 			transl_table	1
-<1	>1742	gene
-			gene		polyprotein
+			codon_start	1
 <1	138	mat_peptide
 			product		2C peptide
 139	417	mat_peptide
@@ -59,33 +54,31 @@
 			product		3D peptide
 
 >Feature ANGB110.3 [organism=Eidolon dupreanum kobuvirus] Eidolon dupreanum kobuvirus, genomic sequence
+1	675	5'UTR
 676	>1028	CDS
 			product		polyprotein
 			transl_table	1
-676	>1028	gene
-			gene		polyprotein
+			codon_start	1
 676	>1028	mat_peptide
 			product		L peptide
-1	675	5'UTR
 
 >Feature ANGB121 [organism=Eidolon dupreanum kobuvirus] Eidolon dupreanum kobuvirus, genomic sequence
+1	277	5'UTR
 278	>1872	CDS
 			product		polyprotein
 			transl_table	1
-278	>1872	gene
-			gene		polyprotein
+			codon_start	1
 278	832	mat_peptide
 			product		L peptide
 833	>1872	mat_peptide
 			product		VP0 peptide
-1	277	5'UTR
 
 >Feature KEL72 [organism=Eidolon dupreanum hepatovirus] Eidolon dupreanum hepatovirus, genomic sequence
+1	607	5'UTR
 608	>7285	CDS
 			product		polyprotein
 			transl_table	1
-608	>7285	gene
-			gene		polyprotein
+			codon_start	1
 608	679	mat_peptide
 			product		VP4 peptide
 680	1345	mat_peptide
@@ -108,14 +101,13 @@
 			product		3C peptide
 5825	>7285	mat_peptide
 			product		3D peptide
-1	607	5'UTR
 
 >Feature KEL86 [organism=Eidolon dupreanum kobuvirus] Eidolon dupreanum kobuvirus, complete genome
+1	684	5'UTR
 685	7989	CDS
 			product		polyprotein
 			transl_table	1
-685	7989	gene
-			gene		polyprotein
+			codon_start	1
 685	1239	mat_peptide
 			product		L peptide
 1240	2352	mat_peptide
@@ -138,15 +130,14 @@
 			product		3C peptide
 6583	7986	mat_peptide
 			product		3D peptide
-1	684	5'UTR
 7990	8228	3'UTR
 
 >Feature KEL148.1 [organism=Eidolon dupreanum hepatovirus] Eidolon dupreanum hepatovirus, genomic sequence
+1	705	5'UTR
 706	>7337	CDS
 			product		polyprotein
 			transl_table	1
-706	>7337	gene
-			gene		polyprotein
+			codon_start	1
 706	777	mat_peptide
 			product		VP4 peptide
 778	1443	mat_peptide
@@ -169,14 +160,12 @@
 			product		3C peptide
 5923	>7337	mat_peptide
 			product		3D peptide
-1	705	5'UTR
 
 >Feature KEL148.2 [organism=Eidolon dupreanum hepatovirus]  Eidolon dupreanum hepatovirus, genomic sequence
 <1	>1559	CDS
 			product		polyprotein
 			transl_table	1
-<1	>1559	gene
-			gene		polyprotein
+			codon_start	1
 <1	144	mat_peptide
 			product		3C peptide
 145	>1559	mat_peptide
@@ -187,14 +176,6 @@
 			product		polyprotein
 			transl_table	1
 			codon_start	2
-<1	6778	gene
-			gene		polyprotein
-6810	7404	CDS
-			product		minor structural protein
-			transl_table	1
-			codon_start	1
-6810	7404	gene
-			gene		minor structural protein
 <1	697	mat_peptide
 			product		NS1 and NS2
 698	1966	mat_peptide
@@ -207,6 +188,10 @@
 			product		Pro-Pol
 5180	6775	mat_peptide
 			product		VP1
+6810	7404	CDS
+			product		minor structural protein
+			transl_table	1
+			codon_start	1
 6810	7401	mat_peptide
 			product		VP2
 7405	>7432	3'UTR
@@ -216,16 +201,12 @@
 			product		polyprotein
 			transl_table	1
 			codon_start	1
-<1	1446	gene
-			gene		polyprotein
+<1	1446	mat_peptide
+			product		VP1
 1479	>2012	CDS
 			product		minor structural protein
 			transl_table	1
 			codon_start	1
-1479	>2012	gene
-			gene		minor structural protein
-<1	1446	mat_peptide
-			product		VP1
 1479	>2012	mat_peptide
 			product		VP2
 
@@ -234,8 +215,6 @@
 			product		polyprotein
 			transl_table	1
 			codon_start	3
-<1	>1694	gene
-			gene		polyprotein
 <1	800	mat_peptide
 			product		Pro-Pol
 801	>1694	mat_peptide
@@ -246,8 +225,6 @@
 			product		polyprotein
 			transl_table	1
 			codon_start	2
-<1	>1717	gene
-			gene		polyprotein
 <1	85	mat_peptide
 			product		VP3 peptide
 86	994	mat_peptide
@@ -259,8 +236,7 @@
 <1	>1244	CDS
 			product		polyprotein
 			transl_table	1
-<1	>1244	gene
-			gene		polyprotein
+			codon_start	1
 <1	486	mat_peptide
 			product		2C peptide
 487	792	mat_peptide
@@ -274,8 +250,7 @@
 <1	>1165	CDS
 			product		polyprotein
 			transl_table	1
-<1	>1165	gene
-			gene		polyprotein
+			codon_start	1
 <1	747	mat_peptide
 			product		2C peptide
 748	1053	mat_peptide
@@ -289,8 +264,7 @@
 <1	>1111	CDS
 			product		polyprotein
 			transl_table	1
-<1	>1111	gene
-			gene		polyprotein
+			codon_start	1
 <1	216	mat_peptide
 			product		2A peptide
 217	561	mat_peptide
@@ -302,8 +276,7 @@
 <1	>1924	CDS
 			product		polyprotein
 			transl_table	1
-<1	>1924	gene
-			gene		polyprotein
+			codon_start	1
 <1	228	mat_peptide
 			product		VP2 peptide
 229	948	mat_peptide
@@ -318,8 +291,6 @@
 			product		polyprotein
 			transl_table	1
 			codon_start	3
-<1	3482	gene
-			gene		polyprotein
 <1	185	mat_peptide
 			product		2B peptide
 186	1160	mat_peptide
@@ -338,19 +309,18 @@
 <1	>1200	CDS
 			product		polyprotein
 			transl_table	1
-<1	>1200	gene
-			gene		polyprotein
+			codon_start	1
 <1	642	mat_peptide
 			product		Helicase
 643	>1200	mat_peptide
 			product		NS4
 
 >Feature MIZ405.1 [organism=Rousettus madagascariensis picornavirus 3] Rousettus madagascariensis picornavirus 3, complete genome
+1	324	5'UTR
 325	7386	CDS
 			product		polyprotein
 			transl_table	1
-325	7386	gene
-			gene		polyprotein
+			codon_start	1
 325	573	mat_peptide
 			product		L peptide
 574	771	mat_peptide
@@ -375,7 +345,6 @@
 			product		3C peptide
 5998	7383	mat_peptide
 			product		3D peptide
-1	324	5'UTR
 7387	7513	3'UTR
 
 >Feature MIZ405.2 [organism=Rousettus madagascariensis sapovirus 2] Rousettus madagascariensis sapovirus 2, genomic sequence
@@ -383,8 +352,6 @@
 			product		polyprotein
 			transl_table	1
 			codon_start	3
-<1	>2961	gene
-			gene		polyprotein
 <1	359	mat_peptide
 			product		NS4
 360	698	mat_peptide
@@ -395,11 +362,11 @@
 			product		VP1
 
 >Feature MIZ405.3 [organism=Rousettus madagascariensis picornavirus 3] Rousettus madagascariensis picornavirus 3, genomic sequence
+1	429	5'UTR
 430	>2410	CDS
 			product		polyprotein
 			transl_table	1
-430	>2410	gene
-			gene		polyprotein
+			codon_start	1
 430	612	mat_peptide
 			product		L peptide
 613	807	mat_peptide
@@ -410,14 +377,12 @@
 			product		VP3 peptide
 2209	>2410	mat_peptide
 			product		VP1 peptide
-1	429	5'UTR
 
 >Feature MIZ405.4 [organism=Rousettus madagascariensis picornavirus 3] Rousettus madagascariensis picornavirus 3, genomic sequence
 <1	>2384	CDS
 			product		polyprotein
 			transl_table	1
-<1	>2384	gene
-			gene		polyprotein
+			codon_start	1
 <1	696	mat_peptide
 			product		VP1 peptide
 697	1347	mat_peptide
@@ -432,8 +397,6 @@
 			product		polyprotein
 			transl_table	1
 			codon_start	2
-<1	>1884	gene
-			gene		polyprotein
 <1	43	mat_peptide
 			product		NS4
 44	382	mat_peptide
@@ -445,8 +408,7 @@
 <1	>1266	CDS
 			product		polyprotein
 			transl_table	1
-<1	>1266	gene
-			gene		polyprotein
+			codon_start	1
 <1	867	mat_peptide
 			product		Helicase
 868	>1266	mat_peptide
@@ -456,8 +418,7 @@
 <1	>1160	CDS
 			product		polyprotein
 			transl_table	1
-<1	>1160	gene
-			gene		polyprotein
+			codon_start	1
 <1	183	mat_peptide
 			product		2C peptide
 184	486	mat_peptide
@@ -474,8 +435,6 @@
 			product		polyprotein
 			transl_table	1
 			codon_start	3
-<1	>1146	gene
-			gene		polyprotein
 <1	>1146	mat_peptide
 			product		VP1
 
@@ -484,16 +443,12 @@
 			product		polyprotein
 			transl_table	1
 			codon_start	1
-<1	360	gene
-			gene		polyprotein
+<1	357	mat_peptide
+			product		VP1
 397	945	CDS
 			product		minor structural protein
 			transl_table	1
 			codon_start	1
-397	945	gene
-			gene		minor structural protein
-<1	357	mat_peptide
-			product		VP1
 397	942	mat_peptide
 			product		VP2
 946	>1013	3'UTR
