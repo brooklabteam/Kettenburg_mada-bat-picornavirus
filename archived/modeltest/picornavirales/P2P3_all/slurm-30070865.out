@@ -1,0 +1,97 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+                             _      _ _            _      _   _  _____ 
+                            | |    | | |          | |    | \ | |/ ____|
+         _ __ ___   ___   __| | ___| | |_ ___  ___| |_   |  \| | |  __ 
+        | '_ ` _ \ / _ \ / _` |/ _ \ | __/ _ \/ __| __|  | . ` | | |_ |
+        | | | | | | (_) | (_| |  __/ | ||  __/\__ \ |_   | |\  | |__| |
+        |_| |_| |_|\___/ \__,_|\___|_|\__\___||___/\__|  |_| \_|\_____|
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7 released on 17.03.2021 by The Exelixis Lab.
+Written by Diego Darriba.
+Contributors: Tomas Flouri, Alexey Kozlov, Benoit Morel, David Posada, 
+              Alexandros Stamatakis.
+Latest version: https://github.com/ddarriba/modeltest
+--------------------------------------------------------------------------------
+
+Physical cores: 14
+Logical cores:  28
+Memory:         62.2GB
+Extensions:     AVX
+
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: picornavirales_all_P2.fasta.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        picornavirales_all_P2.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            423
+  #sites:           60932
+  #patterns:        40858
+  Max. thread mem:  353 MB
+
+Output:
+  Log:           picornavirales_all_P2.fasta.log
+  Starting tree: picornavirales_all_P2.fasta.tree
+  Results:       picornavirales_all_P2.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/14
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> modeltest-ng -i picornavirales_all_P2.fasta -d nt -t ml -p 8 
+
+
+Partition 1/1
+
+    9/88   TPM1uf+I+G4    15h:21:20  15h:21:39       -3445878.6656  8.0648  0.0219
+    3/88   TVM+I+G4       15h:36:13  15h:36:32       -3444364.0378  8.2604  0.0213
+    2/88   GTR+I+G4       17h:18:47  17h:19:06       -3444348.4007  8.2604  0.0213
+    4/88   TIM3+I+G4      17h:27:11  17h:27:30       -3445071.7598  8.1510  0.0215
+    7/88   TPM3uf+I+G4    17h:41:40  17h:41:59       -3487498.5563  1.0000  0.0220
+    8/88   TrN+I+G4       18h:32:38  18h:32:57       -3445893.2531  8.0743  0.0213
+    6/88   TIM1+I+G4      18h:54:38  18h:54:57       -3445866.9454  8.0170  0.0217
+    5/88   TIM2+I+G4      21h:13:44  21h:14:03       -3445180.3322  8.0866  0.0214
+   14/88   TIM2ef+I+G4    16h:10:25  33h:52:24       -3492652.5204  1.0000  0.0216
+slurmstepd-midway2-0237: error: *** JOB 30070865 ON midway2-0237 CANCELLED AT 2023-09-11T22:51:32 DUE TO TIME LIMIT ***

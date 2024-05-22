@@ -1,0 +1,34 @@
+﻿accession Bioproject Biosample SRA coverage,accession,CZID,sampleID,virus,reads_mapped,notes
+OQ818316 PRJNA954539 SAMN34150129 SRR24138173,OQ818316,RR034B_029_NODE_84,AMB150,"Pteropus rufus icavirus, complete genome",,Reverse complement pulled from BLAST
+OQ818317 PRJNA954539 SAMN34150177 SRR24138312,OQ818317,RR034B_079_NODE_3,KEL148,"Eidolon dupreanum kunsagivirus, complete genome",,
+OQ818318 PRJNA954539 SAMN34150192 SRR24138254,OQ818318,RR034B_094_NODE_3,KEL164,"Eidolon dupreanum teschovirus, complete genome",,Reverse complement pulled from BLAST
+OQ818319 PRJNA954539 SAMN34150194 SRR24138251,OQ818319,RR034B_096_NODE_2,KEL166,"Eidolon dupreanum sapovirus, complete genome",,Reverse complement pulled from BLAST
+OQ818320 PRJNA954539 SAMN34150256 SRR24138361,OQ818320,RR034B_163_NODE_204,KEL233,"Eidolon dupreanum sapelovirus, complete genome",,
+OQ818321 PRJNA954539 SAMN34150281 SRR24138228,OQ818321,RR034B_189_NODE_1,KEL272,"Eidolon dupreanum sapelovirus, complete genome",,
+OQ818322 PRJNA837298 SAMN28494084 SRX15403569,OQ818322,RR034B_422_NODE_1,KEL318,"Eidolon dupreanum kobuvirus, complete genome",,
+OQ818323 PRJNA954539 SAMN34150332 SRR24138218,OQ818323,RR034B_244_NODE_40,MIZ190,"Rousettus madagascariensis teschovirus, complete genome",,Reverse complement pulled from BLAST
+OQ818324 PRJNA954539 SAMN34150346 SRR24138333,OQ818324,RR034B_259_NODE_68,MIZ205,"Rousettus madagascariensis teschovirus, complete genome",,Reverse complement pulled from BLAST
+OQ818325 PRJNA954539 SAMN34150355 SRR24138281,OQ818325,RR034B_268_NODE_77,MIZ214,"Rousettus madagascariensis picornavirus, nearly complete genome",,
+OQ818326 PRJNA954539 SAMN34150319 SRR24138187,OQ818326,RR034B_279_NODE_8,MIZ229_RNA1,"Rousettus madagascariensis nepovirus, complete genome RNA1",,Reverse complement pulled from BLAST
+OQ818327 PRJNA954539 SAMN34150319 SRR24138187,OQ818327,RR034B_279_NODE_16,MIZ229_RNA2,"Rousettus madagascariensis nepovirus, complete genome RNA2",,
+OQ818328 PRJNA954539 SAMN34150375 SRR24138325,OQ818328,RR034B_288_NODE_100,MIZ240,"Rousettus madagascariensis picornavirus, complete genome",,Reverse complement pulled from BLAST
+OQ818329 PRJNA954539 SAMN34150377 SRR24138171,OQ818329,RR034B_290_NODE_2,MIZ243,"Rousettus madagascariensis sapelovirus, complete genome",,Reverse complement pulled from BLAST
+OQ818330 PRJNA954539 SAMN34150104 SRR24138373,OQ818330,RR034B_002_NODE_4,AMB122,"Pteropus rufus cheravirus, partial genome",,Reverse complement pulled from BLAST
+OQ818331 PRJNA954539 SAMN34150115 SRR24138144,OQ818331,RR034B_014_NODE_22,AMB134,"Pteropus rufus tetnovirus, partial genome",,Reverse complement pulled from BLAST
+OQ818332 PRJNA954539 SAMN34150117 SRR24138297,OQ818332,RR034B_016_NODE_39,AMB137,"Pteropus rufus bee virus, partial genome",,
+OQ818333 PRJNA954539 SAMN34150119 SRR24138364,OQ818333,RR034B_018_NODE_5,AMB139,"Pteropus rufus picorna-like virus, partial genome",,
+OQ818334 PRJNA954539 SAMN34150128 SRR24138336,OQ818334,RR034B_028_NODE_1050,AMB149,"Pteropus rufus picorna-like virus, partial genome",,Reverse complement pulled from BLAST
+OQ818335 PRJNA954539 SAMN34150129 SRR24138173,OQ818335,RR034B_029_NODE_116,AMB150,"Pteropus rufus felisavirus, partial genome",,Reverse complement pulled from BLAST
+OQ818336 PRJNA837298 SAMN28493973 SRX15403738,OQ818336,RR034B_308_NODE_1,AMB160,"Pteropus rufus picorna-like virus, partial genome",,
+OQ818337 PRJNA954539 SAMN34150177 SRR24138312,OQ818337,RR034B_079_NODE_4,KEL148,"Eidolon dupreanum hepatovirus, partial genome",,Reverse complement pulled from BLAST
+OQ818338 PRJNA837298 SAMN28494000 SRX15403719,OQ818338,RR034B_338_NODE_17,KEL161,"Eidolon dupreanum cripavirus, partial genome",,
+OQ818339 PRJNA954539 SAMN34150192 SRR24138254,OQ818339,RR034B_094_NODE_56,KEL164,"Eidolon dupreanum picorna-like virus, partial genome",,Reverse complement pulled from BLAST
+OQ818340 PRJNA954539 SAMN34150231 SRR24138365,OQ818340,RR034B_137_NODE_352,KEL207,"Eidolon dupreanum sapovirus, partial genome",,Reverse complement pulled from BLAST
+OQ818341 PRJNA954539 SAMN34150248 SRR24138240,OQ818341,RR034B_155_NODE_2,KEL225,"Eidolon dupreanum felisavirus, partial genome",,Reverse complement pulled from BLAST
+OQ818342 PRJNA954539 SAMN34150282 SRR24138227,OQ818342,RR034B_190_NODE_884,KEL273,"Eidolon dupreanum sapelovirus, partial genome",,
+OQ818343 PRJNA837298 SAMN28494055 SRX15403597,OQ818343,RR034B_393_NODE_55,KEL275B,"Eidolon dupreanum sapelovirus, partial genome",,
+OQ818344 PRJNA837298 SAMN28494074 SRX15403558,OQ818344,RR034B_412_NODE_6,KEL298,"Eidolon dupreanum sapelovirus, partial genome",,
+OQ818345 PRJNA954539 SAMN34150323 SRR24138183,OQ818345,RR034B_233_NODE_1161,MIZ179,"Rousettus madagascariensis sapovirus, partial genome",,
+OQ818346 PRJNA954539 SAMN34150335 SRR24138214,OQ818346,RR034B_248_NODE_215,MIZ194,"Rousettus madagascariensis bat picornavirus, partial genome",,Reverse complement pulled from BLAST
+OQ818347 PRJNA954539 SAMN34150358 SRR24138278,OQ818347,RR034B_271_NODE_34,MIZ219,"Rousettus madagascariensis sapovirus, partial genome",,Reverse complement pulled from BLAST
+OQ818348 PRJNA837298 SAMN28494141 SRX15403670,OQ818348,RR034B_481_NODE_12,MIZ345,"Rousettus madagascariensis sapovirus, partial genome",,Reverse complement pulled from BLAST

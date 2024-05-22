@@ -1,0 +1,44 @@
+
+RAxML-NG v. 1.1.0-master released on 22.06.2022 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz, 28 cores, 251 GB RAM
+
+RAxML-NG was called at 13-Sep-2023 12:04:13 as follows:
+
+raxml-ng-mpi --bsconverge --bs-trees allbootstraps2 --prefix T00 --seed 2 --threads 2 --bs-cutoff 0.03
+
+Analysis options:
+  run mode: A posteriori bootstrap convergence test
+  start tree(s): 
+  random seed: 2
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (2 threads), thread pinning: ON
+
+Reading bootstrap trees from file: allbootstraps2
+Loaded 418 trees with 403 taxa.
+
+Performing bootstrap convergence assessment using autoMRE criterion
+
+ # trees        avg WRF       avg WRF in %       # perms: wrf <= 3.00 %     converged?  
+      50        934.429              4.672                            0        NO
+     100       1335.148              3.338                          297        NO
+     150       1567.839              2.613                          806        NO
+     200       1859.485              2.324                          916        NO
+     250       1996.742              1.997                          974        NO
+     300       2118.315              1.765                          986        NO
+     350       2412.962              1.724                          991        YES
+Bootstopping test converged after 350 trees
+
+
+Execution log saved to: /home/gkettenburg/RAxML_tree/africa_picornaviridae_raxml/P1/T00.raxml.log
+
+Analysis started: 13-Sep-2023 12:04:13 / finished: 13-Sep-2023 12:04:26
+
+Elapsed time: 13.345 seconds
+
+Consumed energy: 0.440 Wh
+

@@ -1,0 +1,57 @@
+
+RAxML-NG v. 1.2.0 released on 09.05.2023 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Apple M2, 8 cores, 8 GB RAM
+
+RAxML-NG was called at 17-Sep-2023 23:02:14 as follows:
+
+raxml-ng --parse --msa picornavirales_all_P1.fasta --model GTR+G4 --prefix T100
+
+Analysis options:
+  run mode: Alignment parsing and compression
+  start tree(s): 
+  random seed: 1695009734
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: SSE3
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+[00:00:00] Reading alignment from file: picornavirales_all_P1.fasta
+[00:00:00] Loaded alignment with 424 taxa and 59132 sites
+
+Alignment comprises 1 partitions and 40391 patterns
+
+Partition 0: noname
+Model: GTR+FO+G4m
+Alignment sites / patterns: 59132 / 40391
+Gaps: 86.66 %
+Invariant sites: 34.32 %
+
+
+NOTE: Binary MSA file created: T100.raxml.rba
+
+
+* Estimated memory requirements                : 4172 MB
+
+* Recommended number of threads / MPI processes: 12
+
+Please note that numbers given above are rough estimates only. 
+Actual memory consumption and parallel performance on your system may differ!
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/modeltest/picornavirales/P1_all/T100.raxml.log
+
+Analysis started: 17-Sep-2023 23:02:14 / finished: 17-Sep-2023 23:02:14
+
+Elapsed time: 0.426 seconds
+
