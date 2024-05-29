@@ -1,27 +1,29 @@
 Accession,Organism_Name,Isolate,Species,Genus,Country,Host,Collection_Date
-JQ975417.1,teschovirus A4,10BJ02,Teschovirus A,Teschovirus,China,Sus scrofa,2010
-JN859128.2,Teschovirus A,CC25,Teschovirus A,Teschovirus,Spain,Sus scrofa,2006
-NC_003985.1,Teschovirus A,F65,Teschovirus A,Teschovirus,,,
-KC757344.1,teschovirus A8,Fuyu/2009/2,Teschovirus A,Teschovirus,China,Sus scrofa,2009
-OL944705.1,Teschovirus A,HeNZ1,Teschovirus A,Teschovirus,China,Sus scrofa,2020-06-04
-MG755212.1,Teschovirus A,HNMY,Teschovirus A,Teschovirus,China,Sus scrofa,2015-02-20
-NC_075980.1,Teschovirus A,HuN41,Teschovirus A,Teschovirus,China,Sus scrofa,17-Oct
-KJ881010.1,Teschovirus A,SH1,Teschovirus A,Teschovirus,China,Sus scrofa,2010
+LC386154.1,Porcine teschovirus 15,,Porcine teschovirus 15,Teschovirus,Japan,Sus scrofa,2015-11-05
 LC386155.1,Porcine teschovirus 15,,Porcine teschovirus 15,Teschovirus,Japan,Sus scrofa,2015-11-05
 LC386156.1,Porcine teschovirus 15,,Porcine teschovirus 15,Teschovirus,Japan,Sus scrofa,2016-11-29
+LC386157.1,Porcine teschovirus 15,,Porcine teschovirus 15,Teschovirus,Japan,Sus scrofa,2016-11-29
+LC386158.1,Porcine teschovirus 16,,Porcine teschovirus 16,Teschovirus,Japan,Sus scrofa,2015-11-06
+NC_075980.1,Teschovirus A,HuN41,Teschovirus A,Teschovirus,China,Sus scrofa,17-Oct
+NC_003985.1,Teschovirus A,F65,Teschovirus A,Teschovirus,,,
+MW824925.1,Teschovirus A,,Teschovirus A,Teschovirus,Germany,Sus scrofa,20-Jun
+OL944705.1,Teschovirus A,HeNZ1,Teschovirus A,Teschovirus,China,Sus scrofa,2020-06-04
+MN853134.1,Teschovirus A,,Teschovirus A,Teschovirus,China,Sus scrofa,2016
+MN807750.1,Teschovirus A,,Teschovirus A,Teschovirus,Hungary,Sus scrofa domesticus,13-Jan
+MG755212.1,Teschovirus A,HNMY,Teschovirus A,Teschovirus,China,Sus scrofa,2015-02-20
+KX686489.1,Teschovirus A,HNMY,Teschovirus A,Teschovirus,China,Sus scrofa,
+KU297677.1,Teschovirus A,,Teschovirus A,Teschovirus,China,Sus scrofa,13-Mar
+KR018369.1,Teschovirus A,,Teschovirus A,Teschovirus,China,Sus scrofa,12-Jun
+KJ881010.1,Teschovirus A,SH1,Teschovirus A,Teschovirus,China,Sus scrofa,2010
 KC667562.1,Teschovirus A,,Teschovirus A,Teschovirus,Dominican Republic,Sus scrofa,2013-01-17
 KC667563.1,Teschovirus A,,Teschovirus A,Teschovirus,Dominican Republic,Sus scrofa,2013-01-17
-GQ914053.2,Teschovirus A,,Teschovirus A,Teschovirus,Haiti,Sus scrofa,2008
-LC386157.1,Porcine teschovirus 15,,Porcine teschovirus 15,Teschovirus,Japan,Sus scrofa,2016-11-29
-LC386154.1,Porcine teschovirus 15,,Porcine teschovirus 15,Teschovirus,Japan,Sus scrofa,2015-11-05
-JN710381.1,teschovirus A8,,Teschovirus A,Teschovirus,,,
 JQ429405.1,Teschovirus A,,Teschovirus A,Teschovirus,Hungary,Sus scrofa,11-Apr
-MW824925.1,Teschovirus A,,Teschovirus A,Teschovirus,Germany,Sus scrofa,20-Jun
-MN853134.1,Teschovirus A,,Teschovirus A,Teschovirus,China,Sus scrofa,2016
-MF967586.1,teschovirus A1,,Teschovirus A,Teschovirus,China,Sus scrofa,2016-09-04
+JN859128.2,Teschovirus A,CC25,Teschovirus A,Teschovirus,Spain,Sus scrofa,2006
+GQ914053.2,Teschovirus A,,Teschovirus A,Teschovirus,Haiti,Sus scrofa,2008
 LC386152.1,teschovirus A1,,Teschovirus A,Teschovirus,Japan,Sus scrofa,2016-11-25
-KU297677.1,Teschovirus A,,Teschovirus A,Teschovirus,China,Sus scrofa,13-Mar
 LC386153.1,teschovirus A1,,Teschovirus A,Teschovirus,Japan,Sus scrofa,2016-11-25
-KR018369.1,Teschovirus A,,Teschovirus A,Teschovirus,China,Sus scrofa,12-Jun
-MN807750.1,Teschovirus A,,Teschovirus A,Teschovirus,Hungary,Sus scrofa domesticus,13-Jan
-LC386158.1,Porcine teschovirus 16,,Porcine teschovirus 16,Teschovirus,Japan,Sus scrofa,2015-11-06
+MF967586.1,teschovirus A1,,Teschovirus A,Teschovirus,China,Sus scrofa,2016-09-04
+JQ975417.1,teschovirus A4,10BJ02,Teschovirus A,Teschovirus,China,Sus scrofa,2010
+KC757344.1,teschovirus A8,Fuyu/2009/2,Teschovirus A,Teschovirus,China,Sus scrofa,2009
+JN710381.1,teschovirus A8,,Teschovirus A,Teschovirus,,,
+NC_001547.1,Sindbis virus,,Sindbis virus,Alphavirus,USA,Cell culture,1981

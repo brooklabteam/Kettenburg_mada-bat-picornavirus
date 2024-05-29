@@ -4,88 +4,49 @@ Building a phylogenetic tree in RAxML
 This tutorial outlines methods for building a maximum-likelihood phylogenetic tree using the program RAxML.
 
 ---
-Full genome trees for picornaviridae and picornavirales: 
+Full genome trees for picornaviridae and caliciviridae: 
 ___
-1. I first went to NCBI virus [here](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/) and selected the following results for each corresponding tree (I downloaded full RefSeq only) : 
-- Picornaviridae taxid 12058
-- Unclassified picornaviridae taxid 478825
-- Picornavirales taxid 464095
-- Unclassified picornavirales taxid 675074
+1. I first went to NCBI virus [here](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/) and selected the following results for each corresponding tree (I downloaded full genomes only) : 
+- Picornaviridae taxid 12058 - RefSeq sequences only
+- Unclassified picornaviridae taxid 478825 - RefSeq sequences only
+- Caliciviridae taxid 11974 - RefSeq sequences only
+- Unclassified caliciviridae taxid 179239 - RefSeq sequences only
+- Kobuvirus taxid 194960
+- Unclassified kobuvirus taxid 655314
+- Sapelovirus taxid 686982
+- Unclassified sapelovirus taxid 1073966
+- Teschovirus taxid 118139
+- Unclassified teschovirus taxid 2004714
+- Mischivirus taxid 1511778
+- Kunsagivirus taxid 1755589
+- Sapovirus taxid 95341
+- Unclassified sapovirus taxid 371833
+- Cardiovirus taxid 12103
+- Unclassified cardiovirus taxid 434308
+- Hepatovirus taxid 12091
+- Unclassified hepatovirus taxid 1714618
+
 
 For each picorna genus, I downloaded a .csv file which I processed in the attached R scripts [here]() to meet the following criteria: 
 - For RefSeq full genome tree: all RefSeq genome picornas with a bat host, all RefSeq genome picorna reference sequences with a non-bat host, and all RefSeq genome unclassified picornas that grouped with the picorna genera with a bat host.
 
+-For all other full genome trees, I just downloaded full nucleotide sequences (which may include RefSeq sequences) and repeated the same criteria.
+
 I then removed any duplicates and any records which were entered twice with two accession numbers after having been reviewed to reference status. The unique records were downloaded into a  folder on my home computer in bulk from NCBI using the following code loaded into my web browser (produced from the Rscripts linked [here]()):
 
+For all trees I used an outgroup of Sindbis virus accession NC_001547.1 since it's also short in length and not within Picornavirales
 ---
 
-2. Next I added our Madagascar picornas from IDSeq (Project RR034B1_feces_603 and RR034B2_urine_wholeblood_novaseq_752) and put in their respective folders. These are the sample names: 
+2. Next I added our Madagascar bat sequences using the following accession numbers corresponding to each genome.
 
 Full genomes: 
-OQ818316
-OQ818317
-OQ818318
-OQ818319
-OQ818320
-OQ818321
-OQ818322
-OQ818323
-OQ818324
-OQ818325
-OQ818326
-OQ818327
-OQ818328
-OQ818329
 
 Partial genomes: 
-OQ818330
-OQ818331
-OQ818332
-OQ818333
-OQ818334
-OQ818335
-OQ818336
-OQ818337
-OQ818338
-OQ818339
-OQ818340
-OQ818341
-OQ818342
-OQ818343
-OQ818344
-OQ818345
-OQ818346
-OQ818347
-OQ818348
 
 ---
-3. Finally, for picking outgroups, I chose betacoronavirus GCCDC1 (accession number NC_030886.1)
-
-I placed these all in the same folder as my other references and then concatenated them in each folder to prepare for alignment.
-
-cat *.fasta>all_picornaviridae.fasta
-cat *.fasta>all_picornavirales.fasta
-
-This .fasta file is included in each folder within fasta_files/NCBI
-
----
-4. From there, I used the picornavirales_refseq and picornaviridae_refseq files to generate multiple aligments for trees that I want to     explore, make sure the coronavirus outgroup is added to this!!!: 
-- Picornavirales: all full sequences untrimmed
-- Picornavirales: >3kb full and partial sequences untrimmed
-- Picornavirales: >3kb partial sequences untrimmed
-- Picornaviridae: all full picornaviridae sequences untrimmed
-- Picornaviridae: >3kb full and partial sequences untrimmed
-- Picornaviridae: >3kb partial sequences untrimmed
-
-Deciding not to do AA trees since many of my partial sequences do not include the entire polyprotein, so all of my trees will be NT only.
-
-Sequences exluded from phylogenetic trees based on short length: 
-
-
 I uploaded the concatenated fastas into the [MAFFT program online](https://mafft.cbrc.jp/alignment/server/) for alignment, After the alignment returns, I downloaded it as a .fasta file and saved with the same name as before, but with "_align" at the end. I then used the pre-prep R file used previously to download accession numbers from NCBI [here]() to edit the names of each sequence in the MSA, since RAxML won't accept spaces, periods, dashes, slashes, colon, semicolons, or parentheses in the sequence names.
 
 However, if you do the alignments in Geneious, you can export and select the option to export the fasta without the sequence description, so you would not have to do the above cleaning step in the R script. 
-
 
 ---
 

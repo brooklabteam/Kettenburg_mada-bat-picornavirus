@@ -12,6 +12,7 @@ NC_000940.1,Cowden I virus,,Sapporo virus,Sapovirus,,,
 NC_002615.1,European brown hare syndrome virus,,European brown hare syndrome virus,Lagovirus,,,
 NC_035675.1,Fathead minnow calicivirus,FHMCV/USA/MN/2012,Minovirus A,Minovirus,USA,Pimephales promelas,2012
 NC_075569.1,Feline calicivirus,,Feline calicivirus,Vesivirus,,,
+NC_001481.2,Feline calicivirus,,Feline calicivirus,Vesivirus,,,
 NC_024078.1,Goose calicivirus,,Goose calicivirus,,China,Anatidae,12-Oct
 NC_034444.1,Hom-1 vesivirus,,Hom-1 vesivirus,Vesivirus,USA,,
 NC_040674.1,Marmot norovirus,,Marmot norovirus,Norovirus,China,Marmota himalayana,2013
@@ -19,19 +20,22 @@ NC_019712.1,Mink calicivirus,,Mink calicivirus,Vesivirus,China,Mustela lutreola,
 NC_004064.1,Nebraska virus,,Newbury 1 virus,Nebovirus,,,
 NC_007916.1,Newbury agent 1,,Newbury 1 virus,Nebovirus,United Kingdom,Bos taurus,
 NC_044047.1,Norovirus dog/GVI.1/HKU_Ca026F/2007/HKG,,Norwalk virus,Norovirus,Hong Kong,Canis lupus familiaris,07-Jul
-NC_044856.1,Norovirus GI,,Norwalk virus,Norovirus,Bangladesh,Homo sapiens,2011-07-06
 NC_044853.1,Norovirus GI,,Norwalk virus,Norovirus,Japan,Homo sapiens,1998
+NC_044854.1,Norovirus GI,,Norwalk virus,Norovirus,Japan,Homo sapiens,2000
+NC_044856.1,Norovirus GI,,Norwalk virus,Norovirus,Bangladesh,Homo sapiens,2011-07-06
+NC_001959.2,Norovirus GI,,Norwalk virus,Norovirus,,,
 NC_039897.1,Norovirus GI/Hu/JP/2007/GI.P3_GI.3/Shimizu/KK2866,Shimizu/KK2866,Norwalk virus,Norovirus,Japan,Homo sapiens,2007
 NC_044932.1,Norovirus GII,Hu/GII.PNA4-GII.NA4/PNV06929/2008/PER,Norwalk virus,Norovirus,Peru,Homo sapiens,2008-05-27
 NC_040876.1,Norovirus GII,NORO_176-1_17_12_2015,Norwalk virus,Norovirus,United Kingdom,Homo sapiens,2015-12-17
+NC_039477.1,Norovirus GII,NORO_226_06_01_2016,Norwalk virus,Norovirus,United Kingdom,Homo sapiens,2016-01-06
 NC_039475.1,Norovirus GII.17,,Norwalk virus,Norovirus,South Korea,Homo sapiens,2015
 NC_039476.1,Norovirus GII.2,BJSMQ,Norwalk virus,Norovirus,China,,2016-12-12
 NC_044045.1,Norovirus GII/Hu/JP/2007/GII.P15_GII.15/Sapporo/HK299,Sapporo/HK299,Norwalk virus,Norovirus,Japan,Homo sapiens,2007
 NC_044046.1,Norovirus GII/Hu/JP/2011/GII/Yuzawa/Gira2HS,Yuzawa/Gira2HS,Norwalk virus,Norovirus,Japan,Homo sapiens,2011
 NC_029645.1,Norovirus GIII,,Norwalk virus,Norovirus,Norway,Bos taurus,2006
-NC_029647.1,Norovirus GIV,,Norwalk virus,Norovirus,Australia,Homo sapiens,10-Dec
 NC_045762.1,Norovirus GIV,,Norwalk virus,Norovirus,USA,Felis catus,2010
 NC_044855.1,Norovirus GIV,,Norwalk virus,Norovirus,USA,Homo sapiens,2016-05-11
+NC_029647.1,Norovirus GIV,,Norwalk virus,Norovirus,Australia,Homo sapiens,10-Dec
 NC_008311.1,Norovirus GV,Mu/NoV/GV/MNV1/2002/USA,Norwalk virus,Norovirus,USA,,
 NC_029646.1,Norwalk-like virus,,Norwalk virus,Norovirus,,,
 NC_031324.1,Primate norovirus,,Primate norovirus,Norovirus,,,
@@ -50,3 +54,4 @@ NC_043516.1,Turkey calicivirus,L11043,Nacovirus A,Nacovirus,Germany,Meleagris ga
 NC_002551.1,Vesicular exanthema of swine virus,,Vesicular exanthema of swine virus,Vesivirus,,,
 NC_027122.1,Vesivirus ferret badger/JX12/China/2012,,Vesivirus ferret badger/JX12/China/2012,Vesivirus,China,Melogale,2012-03-01
 NC_004541.1,Walrus calicivirus,,Vesicular exanthema of swine virus,Vesivirus,,Odobenus rosmarus,
+NC_001547.1,Sindbis virus,,Sindbis virus,Alphavirus,USA,Cell culture,1981
