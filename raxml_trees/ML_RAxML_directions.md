@@ -40,17 +40,77 @@ For all trees I used an outgroup of Sindbis virus accession NC_001547.1 since it
 2. Next I added our Madagascar bat sequences using the following accession numbers corresponding to each genome.
 
 Full genomes: 
+OQ818322
+PP766456
+OQ818316
+OQ818321
+OQ818329
+OQ818320
+OQ818328
+PP766469
+PP766459
+OQ818317
+OQ818323
+OQ818324
+OQ818318
 
-Partial genomes: 
+Partial genomes:
+PP766457
+PP766455
+OQ818325
+OQ818319
+OQ818337
+PP766467
+OQ818340
+PP766470 - does not align well with everything else, remove from sapo all alignment, too short
+PP766451 - does not align well with everything else, remove from kobu all alignment, too short
+OQ818348 - does not align well with everything else, remove from sapo all alignment, too short
+PP766471
+PP766472
+OQ818347 - does not align well with everything else, remove from sapo all alignment, too short
+OQ818344
+PP766460 - does not align well with everything else, remove from calici and sapo all alignments, too short
+PP766466 - does not align well with everything else, remove from sapelo all alignment, too short
+PP766473 - does not align well with everything else, remove from sapo all alignment, too short
+PP766454
+PP766452 - does not align well with everything else, remove from kobu all alignment, too short
+PP766462 - does not align well with everything else, remove from sapelo all alignment, too short
+PP766461 - does not align well with everything else, remove from calici and sapo all alignments, too short
+PP766458
+PP766450 - does not align well with everything else, remove from kobu all alignment, too short
+PP766449
+PP766474 - does not align well with everything else, remove from calici and sapo all alignments, too short
+PP766463
+PP766468 - does not align well with everything else, remove from sapo all alignment, too short
+OQ818342
+PP766464
+PP766475
+PP766476 - does not align well with everything else, remove from calici and sapo all alignments, too short
+OQ818343 - does not align well with everything else, remove from sapelo all alignment, too short
+PP766465
+OQ818345 - does not align well with everything else, remove from calici and sapo all alignments, too short
+PP766453
+OQ818346
+PP766477 - does not align well with everything else, remove from calici and sapo all alignments, too short
+
+While I am mainly focused on the full genome sequences, I'll probably include some of the longer partial sequences as well in order to help fill out the tree...plus some genera I only have partials for like hepatovirus and cardiovirus.
 
 ---
 I uploaded the concatenated fastas into the [MAFFT program online](https://mafft.cbrc.jp/alignment/server/) for alignment, After the alignment returns, I downloaded it as a .fasta file and saved with the same name as before, but with "_align" at the end. I then used the pre-prep R file used previously to download accession numbers from NCBI [here]() to edit the names of each sequence in the MSA, since RAxML won't accept spaces, periods, dashes, slashes, colon, semicolons, or parentheses in the sequence names.
 
 However, if you do the alignments in Geneious, you can export and select the option to export the fasta without the sequence description, so you would not have to do the above cleaning step in the R script. 
 
+Made alignments for both full mada genomes only and with all mada genomes in case the partial sequences really mess the alignment up.
+
+For the picornaviridae tree, too many sequences were either aligning to the left or right side of the full genomes so I made two separate alignments for the two different regions to make sure I could view many of the new sequences in comparison to each other as best I can.I also made an alignment of everything just to see how it shakes out. 
+
+Novel sequences in left alignment: OQ818325, OQ818328, PP766471, PP766469, OQ818320, OQ818343, PP766466, OQ818321, OQ818329, OQ818316, OQ818318, OQ818323, OQ818324, OQ818337, PP766457, PP766455, OQ818322, PP766449, PP766456, PP766453, OQ818317
+Novel sequences in right alignment: OQ818325, OQ818328, OQ818346, PP766469, OQ818320, OQ818344, OQ818342, OQ818321, PP766464, PP766463, OQ818329, PP766467, PP766457, PP766458, PP766455, OQ818316, OQ818318, OQ818323, OQ818324, OQ818322, PP766456, PP766452, OQ818317
+Novel sequences in center alignment: OQ818325, OQ818328, PP766469, PP766472, OQ818320, PP766466, OQ818321, PP766462, OQ818329, OQ818316, OQ818318, OQ818323, OQ818324, OQ818322, PP766456, PP766451, OQ818317, OQ818337, PP766457, PP766455
+
 ---
 
-5. Next, I used the MSA to compare nucleotide substitution models in the program [ModelTest-NG](https://github.com/ddarriba/modeltest). This can be run on the command line on your personal computer but it will take awhile. I ran them on Midway instead, see Brook lab documentation on how to do this [here](https://github.com/brooklabteam/brooklab-resources/blob/main/modeltest-ng.md). See the same repo on how to install RAxML on the cluster [here](https://github.com/brooklabteam/brooklab-resources/blob/main/RAxML-mpi.md).
+3. Next, I used the MSA to compare nucleotide substitution models in the program [ModelTest-NG](https://github.com/ddarriba/modeltest). This can be run on the command line on your personal computer but it will take awhile. I ran them on Midway instead, see Brook lab documentation on how to do this [here](https://github.com/brooklabteam/brooklab-resources/blob/main/modeltest-ng.md). See the same repo on how to install RAxML on the cluster [here](https://github.com/brooklabteam/brooklab-resources/blob/main/RAxML-mpi.md).
 
 Below are the batch scripts I used for ModelTest for picornaviridae and picornavirales: 
 
@@ -169,7 +229,7 @@ Best model for picornaviridae all genomes: TVM+G4
 
 ---
 
-6. Once ModelTest-NG finishes (it took about 6 days for the picornavirales and maybe 2 days for picornaviridae), it is time to build a maximum likelihood tree using RAxML. See documentation on their website for how to get this running on your home computer and/or computing cluster. 
+4. Once ModelTest-NG finishes (it took about 6 days for the picornavirales and maybe 2 days for picornaviridae), it is time to build a maximum likelihood tree using RAxML. See documentation on their website for how to get this running on your home computer and/or computing cluster. 
 
 Check whether the alignment can be read by RAxML and the number of threads you should use (I did these on my local computer so the command is raxml-ng, if you run these on the cluster be sure to use raxml-ng-mpi:
 
@@ -217,7 +277,7 @@ Use 10 threads
 
 ---
 
-7. Finally, I kicked off RAxML in each subfolder using the SLURM scripts using below, this does the ML tree search and bootstrapping, but you can do the processes separately to try and save time if the cluster times out on the run time, see [here](https://github.com/amkozlov/raxml-ng/wiki/Tutorial) for more resources on running RAxML:
+5. Finally, I kicked off RAxML in each subfolder using the SLURM scripts using below, this does the ML tree search and bootstrapping, but you can do the processes separately to try and save time if the cluster times out on the run time, see [here](https://github.com/amkozlov/raxml-ng/wiki/Tutorial) for more resources on running RAxML:
 
 The script below are for a one of command that does the tree inference, bootstrapping, and calculated support. If the picornavirales trees time out, I'll do the steps separately. 
 
@@ -348,11 +408,11 @@ raxml-ng-mpi --all --msa picornaviridae_partial_align.fasta --model GTR+G4 --pre
 
 ---
 
-8. Once RAxML finished, I imported the resulting tree into R and built a phylogenetic tree. You can easily look at the tree in [FigTree](http://tree.bio.ed.ac.uk/software/figtree/) before cleaning it up. The scripts for making the trees are within each respective folder. 
+6. Once RAxML finished, I imported the resulting tree into R and built a phylogenetic tree. You can easily look at the tree in [FigTree](http://tree.bio.ed.ac.uk/software/figtree/) before cleaning it up. The scripts for making the trees are within each respective folder. 
 
 ---
 
-9. Upon viewing the picornavirales and the picornaviridae trees, I decided to make additonal trees for each virus family that I believe the novel Madagascar sequences belong to. So I'll have a picornavirales, a picornaviridae, a secoviridae, a caliciviridae, and an iflaviridae tree. To get the refseq's for these, I followed the same instructions as above using the same outgroup. 
+7. Upon viewing the picornavirales and the picornaviridae trees, I decided to make additonal trees for each virus family that I believe the novel Madagascar sequences belong to. So I'll have a picornavirales, a picornaviridae, a secoviridae, a caliciviridae, and an iflaviridae tree. To get the refseq's for these, I followed the same instructions as above using the same outgroup. 
 
 Also following the same instructions as above and using the same outgroup, I decided to make a non-refseq picornavirales tree with only sequences from a bat host. Once I downloaded the sequences from NCBI virus, I put them into Geneious to check for duplicate sequences (they may be different viruses but if the sequences are super similar RAxmL and modeltest give me a hard time), and then removed them from the file before aligning. With the bat picornavirales, I tested a variety of different alignments and ended up choosing the following to use for bat picornavirales full reference sequences and bat picornavirales all reference sequences
 - bat picornavirales full reference sequences with mada sequences >3kb, as done in the picornavirales refseq tree
