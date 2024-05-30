@@ -112,7 +112,7 @@ Novel sequences in center alignment: OQ818325, OQ818328, PP766469, PP766472, OQ8
 
 3. Next, I used the MSA to compare nucleotide substitution models in the program [ModelTest-NG](https://github.com/ddarriba/modeltest). This can be run on the command line on your personal computer but it will take awhile. I ran them on Midway instead, see Brook lab documentation on how to do this [here](https://github.com/brooklabteam/brooklab-resources/blob/main/modeltest-ng.md). See the same repo on how to install RAxML on the cluster [here](https://github.com/brooklabteam/brooklab-resources/blob/main/RAxML-mpi.md).
 
-Below are the batch scripts I used for ModelTest for picornaviridae and picornavirales: 
+Below is an example of ModelTest for picornaviridae:
 
 I have trouble putting the module load and conda step within the batch script, so just run this before submitting scripts: 
 
@@ -121,10 +121,10 @@ module load python
 conda activate /project2/cbrook/software/modeltest_env
 ```
 
-ModelTest for all (partial and full in one tree) picornavirales
+ModelTest picornaviridae_refseq
 ```
 #!/bin/bash
-#SBATCH --job-name=picornavirales_all
+#SBATCH --job-name=picorna
 #SBATCH --partition=broadwl
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=8
@@ -134,7 +134,7 @@ ModelTest for all (partial and full in one tree) picornavirales
 module load python
 conda activate /project2/cbrook/software/modeltest_env
 
-modeltest-ng -i picornavirales_all_align.fasta -d nt -t ml -p 8
+modeltest-ng -i picornaviridae_refseq_all_align.fasta -d nt -t ml -p 8
 ```
 
 ModelTest for full picornavirales
@@ -169,67 +169,14 @@ conda activate /project2/cbrook/software/modeltest_env
 modeltest-ng -i picornavirales_partial_align.fasta -d nt -t ml -p 8
 ```
 
-ModelTest for all (partial and full in one tree) picornaviridae
-```
-#!/bin/bash
-#SBATCH --job-name=picornaviridae_all
-#SBATCH --partition=broadwl
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=8
-#SBATCH --ntasks=8
-#SBATCH --time=36:00:00
+I saved the results of ModelTest-NG [here](). Below are the best models per alignment along with the number of threads recommended to run in RAxML. 
 
-module load python
-conda activate /project2/cbrook/software/modeltest_env
+Best model for caliciviridae refseq full genomes: 
 
-modeltest-ng -i picornaviridae_all_align.fasta -d nt -t ml -p 8
-```
-
-ModelTest for full picornaviridae
-```
-#!/bin/bash
-#SBATCH --job-name=picornaviridae_full
-#SBATCH --partition=broadwl
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=8
-#SBATCH --ntasks=8
-#SBATCH --time=36:00:00
-
-module load python
-conda activate /project2/cbrook/software/modeltest_env
-
-modeltest-ng -i picornaviridae_full_align.fasta -d nt -t ml -p 8
-```
-
-ModelTest for partial picornaviridae
-```
-#!/bin/bash
-#SBATCH --job-name=picornaviridae_partial
-#SBATCH --partition=broadwl
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=8
-#SBATCH --ntasks=8
-#SBATCH --time=36:00:00
-
-module load python
-conda activate /project2/cbrook/software/modeltest_env
-
-modeltest-ng -i picornaviridae_partial_align.fasta -d nt -t ml -p 8
-```
-
-I saved the results of ModelTest-NG [here](). 
-
-Best model for picornavirales full genomes: GTR+G4
-Best model for picornavirales partial genomes: GTR+G4
-Best model for picornavirales all genomes: GTR+G4
-
-Best model for picornaviridae full genomes: GTR+G4
-Best model for picornaviridae partial genomes: GTR+G4
-Best model for picornaviridae all genomes: TVM+G4
 
 ---
 
-4. Once ModelTest-NG finishes (it took about 6 days for the picornavirales and maybe 2 days for picornaviridae), it is time to build a maximum likelihood tree using RAxML. See documentation on their website for how to get this running on your home computer and/or computing cluster. 
+4. Once ModelTest-NG finishes, it is time to build a maximum likelihood tree using RAxML. See documentation on their website for how to get this running on your home computer and/or computing cluster. 
 
 Check whether the alignment can be read by RAxML and the number of threads you should use (I did these on my local computer so the command is raxml-ng, if you run these on the cluster be sure to use raxml-ng-mpi:
 
