@@ -1,0 +1,65 @@
+
+RAxML-NG v. 1.2.0 released on 09.05.2023 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Apple M2, 8 cores, 8 GB RAM
+
+RAxML-NG was called at 31-May-2024 10:47:00 as follows:
+
+raxml-ng --parse --msa cardio_all_align.fasta --model TIM2+G4 --prefix T1
+
+Analysis options:
+  run mode: Alignment parsing and compression
+  start tree(s): 
+  random seed: 1717170420
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: SSE3
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+[00:00:00] Reading alignment from file: cardio_all_align.fasta
+[00:00:00] Loaded alignment with 76 taxa and 12973 sites
+
+WARNING: Sequences EF165067.2 and NC_009448.2 are exactly identical!
+WARNING: Sequences X56019.1 and NC_001366.1 are exactly identical!
+WARNING: Sequences MF172923.1 and MF139053.1 are exactly identical!
+WARNING: Duplicate sequences found: 3
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/modeltest/cardio_all_modeltest/T1.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 6610 patterns
+
+Partition 0: noname
+Model: TIM2+G4m
+Alignment sites / patterns: 12973 / 6610
+Gaps: 39.00 %
+Invariant sites: 42.10 %
+
+
+NOTE: Binary MSA file created: T1.raxml.rba
+
+
+* Estimated memory requirements                : 122 MB
+
+* Recommended number of threads / MPI processes: 8
+
+Please note that numbers given above are rough estimates only. 
+Actual memory consumption and parallel performance on your system may differ!
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/modeltest/cardio_all_modeltest/T1.raxml.log
+
+Analysis started: 31-May-2024 10:47:00 / finished: 31-May-2024 10:47:00
+
+Elapsed time: 0.032 seconds
+

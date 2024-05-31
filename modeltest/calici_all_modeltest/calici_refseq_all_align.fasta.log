@@ -1,0 +1,219 @@
+Physical cores: 14
+Logical cores:  28
+Memory:         62.2GB
+Extensions:     AVX
+
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: calici_refseq_all_align.fasta.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        calici_refseq_all_align.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            64
+  #sites:           15163
+  #patterns:        11860
+  Max. thread mem:  369 MB
+
+Output:
+  Log:           calici_refseq_all_align.fasta.log
+  Starting tree: calici_refseq_all_align.fasta.tree
+  Results:       calici_refseq_all_align.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/14
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> modeltest-ng -i calici_refseq_all_align.fasta -d nt -t ml -p 8 
+
+
+Partition 1/1
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 1h:02:07
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9   -404194.7461    809679.4584         0.0000    0.9875
+       2  GTR+I+G4          10   -404194.3025    809688.1979         8.7395    0.0125
+       3  TPM2uf+I+G4        7   -404248.4225    809767.5579        88.0995    0.0000
+       4  TIM2+I+G4          8   -404245.8073    809771.9543        92.4958    0.0000
+       5  TVM+G4             8   -404246.3923    809773.1241        93.6657    0.0000
+       6  GTR+G4             9   -404243.3527    809776.6715        97.2131    0.0000
+       7  TPM2uf+G4          6   -404299.3293    809859.7450       180.2866    0.0000
+       8  TIM2+G4            7   -404295.5849    809861.8828       182.4243    0.0000
+       9  SYM+I+G4           7   -404348.3761    809967.4652       288.0068    0.0000
+      10  TVMef+I+G4         6   -404376.1669    810013.4202       333.9617    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              TVM+I+G4
+lnL:                -404194.7461
+Frequencies:        0.2421 0.2752 0.2422 0.2406
+Subst. Rates:       1.9127 3.8483 1.5843 1.1663 3.8483 1.0000 
+Inv. sites prop:    0.0220
+Gamma shape:        1.5410
+Score:              809679.4584
+Weight:             0.9875
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.4048
+Alpha-P.Inv:        1.5401
+P.Inv-Alpha:        0.0220
+Frequencies:        0.2421 0.2751 0.2422 0.2405 
+
+Commands:
+  > phyml  -i calici_refseq_all_align.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s calici_refseq_all_align.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa calici_refseq_all_align.fasta --model TVM+I+G4
+  > paup -s calici_refseq_all_align.fasta
+  > iqtree -s calici_refseq_all_align.fasta -m TVM+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9   -404194.7461    808657.4922         0.0000    0.6356
+       2  GTR+I+G4          10   -404194.3025    808658.6051         1.1128    0.3644
+       3  GTR+G4             9   -404243.3527    808754.7053        97.2131    0.0000
+       4  TIM2+I+G4          8   -404245.8073    808757.6147       100.1224    0.0000
+       5  TVM+G4             8   -404246.3923    808758.7845       101.2923    0.0000
+       6  TPM2uf+I+G4        7   -404248.4225    808760.8450       103.3527    0.0000
+       7  TIM2+G4            7   -404295.5849    808855.1698       197.6776    0.0000
+       8  TPM2uf+G4          6   -404299.3293    808860.6586       203.1664    0.0000
+       9  SYM+I+G4           7   -404348.3761    808960.7522       303.2600    0.0000
+      10  TVMef+I+G4         6   -404376.1669    809014.3338       356.8416    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TVM+I+G4
+lnL:                -404194.7461
+Frequencies:        0.2421 0.2752 0.2422 0.2406
+Subst. Rates:       1.9127 3.8483 1.5843 1.1663 3.8483 1.0000 
+Inv. sites prop:    0.0220
+Gamma shape:        1.5410
+Score:              808657.4922
+Weight:             0.6356
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.4064
+Alpha-P.Inv:        1.5149
+P.Inv-Alpha:        0.0220
+Frequencies:        0.2425 0.2748 0.2427 0.2401 
+
+Commands:
+  > phyml  -i calici_refseq_all_align.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s calici_refseq_all_align.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa calici_refseq_all_align.fasta --model TVM+I+G4
+  > paup -s calici_refseq_all_align.fasta
+  > iqtree -s calici_refseq_all_align.fasta -m TVM+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9   -404194.7461    808659.4922         0.0000    0.6356
+       2  GTR+I+G4          10   -404194.3025    808660.6051         1.1128    0.3644
+       3  GTR+G4             9   -404243.3527    808756.7053        97.2131    0.0000
+       4  TIM2+I+G4          8   -404245.8073    808759.6147       100.1224    0.0000
+       5  TVM+G4             8   -404246.3923    808760.7845       101.2923    0.0000
+       6  TPM2uf+I+G4        7   -404248.4225    808762.8450       103.3527    0.0000
+       7  TIM2+G4            7   -404295.5849    808857.1698       197.6776    0.0000
+       8  TPM2uf+G4          6   -404299.3293    808862.6586       203.1664    0.0000
+       9  SYM+I+G4           7   -404348.3761    808962.7522       303.2600    0.0000
+      10  TVMef+I+G4         6   -404376.1669    809016.3338       356.8416    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TVM+I+G4
+lnL:                -404194.7461
+Frequencies:        0.2421 0.2752 0.2422 0.2406
+Subst. Rates:       1.9127 3.8483 1.5843 1.1663 3.8483 1.0000 
+Inv. sites prop:    0.0220
+Gamma shape:        1.5410
+Score:              808659.4922
+Weight:             0.6356
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.4064
+Alpha-P.Inv:        1.5149
+P.Inv-Alpha:        0.0220
+Frequencies:        0.2425 0.2748 0.2427 0.2401 
+
+Commands:
+  > phyml  -i calici_refseq_all_align.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s calici_refseq_all_align.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa calici_refseq_all_align.fasta --model TVM+I+G4
+  > paup -s calici_refseq_all_align.fasta
+  > iqtree -s calici_refseq_all_align.fasta -m TVM+I+G4
+
+There are 3 different topologies
+Topologies written to calici_refseq_all_align.fasta.topos
+
+topo_id   models_count   bic_support   aic_support   aicc_support
+-----------------------------------------------------------------
+      1             71       1.00000       1.00000       1.00000
+      2              3       0.00000       0.00000       0.00000
+      3             14       0.00000       0.00000       0.00000
+
+extended majority-rule consensus: ((((((OQ818348,PP766473)[1.00000],(NC_002615.1,(NC_001543.1,NC_011704.1)[1.00000])[1.00000])[1.00000],(((NC_001481.2,NC_075569.1)[1.00000],((NC_002551.1,(NC_011050.1,NC_034444.1)[1.00000])[1.00000],(NC_004541.1,NC_008580.1)[1.00000])[1.00000])[1.00000],(NC_004542.1,(NC_027122.1,(NC_025676.1,NC_019712.1)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((NC_000940.1,(NC_017936.1,(NC_030793.1,(NC_007916.1,(NC_004064.1,NC_006875.1)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((NC_027026.1,((NC_075724.1,NC_006269.1)[1.00000],(PP766468,(NC_010624.1,NC_006554.1)[1.00000])[1.00000])[1.00000])[1.00000],((NC_033776.1,(OQ818340,(PP766459,OQ818319)[1.00000])[1.00000])[1.00000],(PP766470,OQ818347)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_043516.1,NC_024078.1)[1.00000])[1.00000],NC_001547.1,((((NC_044047.1,(((NC_044932.1,(NC_039475.1,(NC_029646.1,(NC_044046.1,(NC_039476.1,NC_039477.1)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_044045.1,NC_040876.1)[1.00000])[1.00000],(NC_045762.1,(NC_029647.1,NC_044855.1)[1.00000])[1.00000])[1.00000])[1.00000],(NC_008311.1,(NC_029645.1,((NC_001959.2,(NC_044854.1,NC_044853.1)[1.00000])[1.00000],(NC_044856.1,(NC_031324.1,NC_039897.1)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_043512.1,((NC_033081.1,NC_075411.1)[1.00000],(NC_040674.1,NC_012699.1)[1.00000])[1.00000])[1.00000])[1.00000],(NC_035675.1,NC_024031.1)[1.00000])[1.00000]);
+strict consensus: (NC_024031.1,NC_000940.1,NC_007916.1,NC_004064.1,NC_006875.1,NC_030793.1,NC_017936.1,NC_035675.1,NC_043516.1,NC_024078.1,NC_001547.1,NC_043512.1,NC_044045.1,NC_029647.1,NC_044855.1,NC_040876.1,NC_044046.1,NC_039475.1,NC_029646.1,NC_039476.1,NC_039477.1,NC_044932.1,NC_031324.1,NC_039897.1,NC_044856.1,NC_001959.2,NC_044854.1,NC_044853.1,NC_008311.1,NC_029645.1,NC_045762.1,NC_044047.1,NC_040674.1,NC_012699.1,NC_033081.1,NC_075411.1,OQ818348,NC_001543.1,PP766473,NC_011704.1,NC_002615.1,NC_025676.1,NC_019712.1,NC_004541.1,NC_002551.1,NC_011050.1,NC_008580.1,NC_034444.1,NC_001481.2,NC_075569.1,NC_004542.1,NC_027122.1,NC_027026.1,PP766470,OQ818347,NC_075724.1,NC_006269.1,PP766468,NC_010624.1,NC_006554.1,OQ818340,PP766459,OQ818319,NC_033776.1);
+
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC            TVM+I+G4   809679.4584        0.9875
+       AIC            TVM+I+G4   808657.4922        0.6356
+      AICc            TVM+I+G4   808659.4922        0.6356
+
+Execution results written to calici_refseq_all_align.fasta.out
+Starting tree written to calici_refseq_all_align.fasta.tree

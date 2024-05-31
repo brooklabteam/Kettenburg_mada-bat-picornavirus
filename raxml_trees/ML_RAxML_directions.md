@@ -137,42 +137,22 @@ conda activate /project2/cbrook/software/modeltest_env
 modeltest-ng -i picornaviridae_refseq_all_align.fasta -d nt -t ml -p 8
 ```
 
-ModelTest for full picornavirales
+I saved the results of ModelTest-NG [here](). Below are the best models per alignment along with the number of threads recommended to run in RAxML using the following example script. 
 ```
-#!/bin/bash
-#SBATCH --job-name=picornavirales_full
-#SBATCH --partition=broadwl
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=8
-#SBATCH --ntasks=8
-#SBATCH --time=36:00:00
-
-module load python
-conda activate /project2/cbrook/software/modeltest_env
-
-modeltest-ng -i picornavirales_full_align.fasta -d nt -t ml -p 8
+raxml-ng --parse --msa picornaviridae_refseq_all_align.fasta --model GTR+G4 --prefix T1
 ```
-
-ModelTest for partial picornavirales
-```
-#!/bin/bash
-#SBATCH --job-name=picornavirales_partial
-#SBATCH --partition=broadwl
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=8
-#SBATCH --ntasks=8
-#SBATCH --time=36:00:00
-
-module load python
-conda activate /project2/cbrook/software/modeltest_env
-
-modeltest-ng -i picornavirales_partial_align.fasta -d nt -t ml -p 8
-```
-
-I saved the results of ModelTest-NG [here](). Below are the best models per alignment along with the number of threads recommended to run in RAxML. 
-
-Best model for caliciviridae refseq full genomes: 
-
+Best model and threads for caliciviridae refseq all genomes: TVM+I+G4 7 threads
+Best model and threads for cardiovirus all genomes: TIM2+G4 8 threads
+Best model and threads for hepatovirus all genomes: GTR+G4 8 threads
+Best model and threads for kobuvirus all genomes: GTR+I+G4 8 threads
+Best model and threads for kunsagivirus all genomes: TIM2+G4 5 threads
+Best model and threads for mischivirus all genomes: GTR+G4 8 threads
+Best model and threads for sapelovirus all genomes: GTR+G4 9 threads
+Best model and threads for sapovirus all genomes: TIM2+I+G4 8 threads
+Best model and threads for teschovirus all genomes: GTR+G4 9 threads
+Best model and threads for picornaviridae refseq center all genomes: 
+Best model and threads for picornaviridae refseq left all genomes: 
+Best model and threads for picornaviridae refseq right all genomes: 
 
 ---
 

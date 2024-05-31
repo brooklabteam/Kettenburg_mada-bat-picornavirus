@@ -1,0 +1,65 @@
+
+RAxML-NG v. 1.2.0 released on 09.05.2023 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Apple M2, 8 cores, 8 GB RAM
+
+RAxML-NG was called at 31-May-2024 10:52:35 as follows:
+
+raxml-ng --parse --msa kunsagi_all_align.fasta --model TIM2+G4 --prefix T1
+
+Analysis options:
+  run mode: Alignment parsing and compression
+  start tree(s): 
+  random seed: 1717170755
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: SSE3
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+[00:00:00] Reading alignment from file: kunsagi_all_align.fasta
+[00:00:00] Loaded alignment with 8 taxa and 12121 sites
+
+WARNING: Sequences NC_033818.1 and KX644936.1 are exactly identical!
+WARNING: Sequences NC_034206.1 and KY670597.1 are exactly identical!
+WARNING: Sequences NC_038317.1 and KC935379.1 are exactly identical!
+WARNING: Duplicate sequences found: 3
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/modeltest/kunsagi_all_modeltest/T1.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 1242 patterns
+
+Partition 0: noname
+Model: TIM2+G4m
+Alignment sites / patterns: 12121 / 1242
+Gaps: 35.42 %
+Invariant sites: 50.70 %
+
+
+NOTE: Binary MSA file created: T1.raxml.rba
+
+
+* Estimated memory requirements                : 3 MB
+
+* Recommended number of threads / MPI processes: 5
+
+Please note that numbers given above are rough estimates only. 
+Actual memory consumption and parallel performance on your system may differ!
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/modeltest/kunsagi_all_modeltest/T1.raxml.log
+
+Analysis started: 31-May-2024 10:52:35 / finished: 31-May-2024 10:52:35
+
+Elapsed time: 0.009 seconds
+

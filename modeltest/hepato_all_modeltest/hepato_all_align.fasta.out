@@ -1,0 +1,180 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        hepato_all_align.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            118
+  #sites:           12482
+  #patterns:        6738
+  Max. thread mem:  390 MB
+
+Output:
+  Log:           hepato_all_align.fasta.log
+  Starting tree: hepato_all_align.fasta.tree
+  Results:       hepato_all_align.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/14
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9   -188952.9613    380188.4770         0.0000    0.9884
+       2  GTR+I+G4          10   -188952.6874    380197.3612         8.8842    0.0116
+       3  TIM3+G4            7   -189031.6485    380326.9874       138.5104    0.0000
+       4  TIM3+I+G4          8   -189027.9450    380329.0124       140.5354    0.0000
+       5  TIM2+G4            7   -189274.2138    380812.1179       623.6409    0.0000
+       6  TIM2+I+G4          8   -189273.3916    380819.9056       631.4286    0.0000
+       7  TVM+G4             8   -189300.6912    380874.5048       686.0278    0.0000
+       8  TVM+I+G4           9   -189298.3438    380879.2420       690.7650    0.0000
+       9  TIM1+G4            7   -189331.4033    380926.4968       738.0198    0.0000
+      10  TIM1+I+G4          8   -189330.4381    380933.9986       745.5216    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              GTR+G4
+lnL:                -188952.9613
+Frequencies:        0.3100 0.1393 0.2107 0.3399
+Subst. Rates:       3.7954 8.4611 1.7408 3.2374 17.7987 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.4815
+Score:              380188.4770
+Weight:             0.9884
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.9884
+Gamma-Inv:          0.0116
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.4815
+Alpha-P.Inv:        0.5631
+P.Inv-Alpha:        0.0405
+Frequencies:        0.3100 0.1393 0.2107 0.3399 
+
+Commands:
+  > phyml  -i hepato_all_align.fasta -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s hepato_all_align.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa hepato_all_align.fasta --model GTR+G4
+  > paup -s hepato_all_align.fasta
+  > iqtree -s hepato_all_align.fasta -m GTR+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9   -188952.9613    378389.9226         0.0000    0.6739
+       2  GTR+I+G4          10   -188952.6874    378391.3748         1.4522    0.3261
+       3  TIM3+I+G4          8   -189027.9450    378537.8901       147.9675    0.0000
+       4  TIM3+G4            7   -189031.6485    378543.2971       153.3745    0.0000
+       5  TIM2+G4            7   -189274.2138    379028.4276       638.5050    0.0000
+       6  TIM2+I+G4          8   -189273.3916    379028.7833       638.8606    0.0000
+       7  TVM+I+G4           9   -189298.3438    379080.6876       690.7650    0.0000
+       8  TVM+G4             8   -189300.6912    379083.3824       693.4598    0.0000
+       9  TIM1+G4            7   -189331.4033    379142.8065       752.8839    0.0000
+      10  TIM1+I+G4          8   -189330.4381    379142.8763       752.9537    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+G4
+lnL:                -188952.9613
+Frequencies:        0.3100 0.1393 0.2107 0.3399
+Subst. Rates:       3.7954 8.4611 1.7408 3.2374 17.7987 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.4815
+Score:              378389.9226
+Weight:             0.6739
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.6739
+Gamma-Inv:          0.3261
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.4815
+Alpha-P.Inv:        0.5631
+P.Inv-Alpha:        0.0405
+Frequencies:        0.3101 0.1393 0.2108 0.3397 
+
+Commands:
+  > phyml  -i hepato_all_align.fasta -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s hepato_all_align.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa hepato_all_align.fasta --model GTR+G4
+  > paup -s hepato_all_align.fasta
+  > iqtree -s hepato_all_align.fasta -m GTR+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+G4             9   -188952.9613    378398.9226         0.0000    0.6739
+       2  GTR+I+G4          10   -188952.6874    378400.3748         1.4522    0.3261
+       3  TIM3+I+G4          8   -189027.9450    378546.8901       147.9675    0.0000
+       4  TIM3+G4            7   -189031.6485    378552.2971       153.3745    0.0000
+       5  TIM2+G4            7   -189274.2138    379037.4276       638.5050    0.0000
+       6  TIM2+I+G4          8   -189273.3916    379037.7833       638.8606    0.0000
+       7  TVM+I+G4           9   -189298.3438    379089.6876       690.7650    0.0000
+       8  TVM+G4             8   -189300.6912    379092.3824       693.4598    0.0000
+       9  TIM1+G4            7   -189331.4033    379151.8065       752.8839    0.0000
+      10  TIM1+I+G4          8   -189330.4381    379151.8763       752.9537    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+G4
+lnL:                -188952.9613
+Frequencies:        0.3100 0.1393 0.2107 0.3399
+Subst. Rates:       3.7954 8.4611 1.7408 3.2374 17.7987 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.4815
+Score:              378398.9226
+Weight:             0.6739
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.6739
+Gamma-Inv:          0.3261
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.4815
+Alpha-P.Inv:        0.5631
+P.Inv-Alpha:        0.0405
+Frequencies:        0.3101 0.1393 0.2108 0.3397 
+
+Commands:
+  > phyml  -i hepato_all_align.fasta -m 012345 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s hepato_all_align.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa hepato_all_align.fasta --model GTR+G4
+  > paup -s hepato_all_align.fasta
+  > iqtree -s hepato_all_align.fasta -m GTR+G4
+Done
