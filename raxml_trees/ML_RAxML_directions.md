@@ -151,127 +151,20 @@ Best model and threads for sapelovirus all genomes: GTR+G4 9 threads
 Best model and threads for sapovirus all genomes: TIM2+I+G4 8 threads
 Best model and threads for teschovirus all genomes: GTR+G4 9 threads
 Best model and threads for picornaviridae refseq center all genomes: 
-Best model and threads for picornaviridae refseq left all genomes: 
-Best model and threads for picornaviridae refseq right all genomes: 
+Best model and threads for picornaviridae refseq left all genomes: GTR+G4 10 threads
+Best model and threads for picornaviridae refseq right all genomes: GTR+G4 10 threads
 
 ---
 
 4. Once ModelTest-NG finishes, it is time to build a maximum likelihood tree using RAxML. See documentation on their website for how to get this running on your home computer and/or computing cluster. 
 
-Check whether the alignment can be read by RAxML and the number of threads you should use (I did these on my local computer so the command is raxml-ng, if you run these on the cluster be sure to use raxml-ng-mpi:
-
-Picornavirales all (partial and full) genomes
-```
-raxml-ng --check --msa picornavirales_all_align.fasta --model GTR+G4 --prefix T100
-raxml-ng --parse --msa picornavirales_all_align.fasta --model GTR+G4 --prefix T101
-```
-Use 12 threads
-
-Picornavirales full genomes
-```
-raxml-ng --check --msa picornavirales_full_align.fasta --model GTR+G4 --prefix T102
-raxml-ng --parse --msa picornavirales_full_align.fasta --model GTR+G4 --prefix T103
-```
-Use 12 threads
-
-Picornavirales partial genomes
-```
-raxml-ng --check --msa picornavirales_partial_align.fasta --model GTR+G4 --prefix T104
-raxml-ng --parse --msa picornavirales_partial_align.fasta --model GTR+G4 --prefix T105
-```
-Use 12 threads
-
-Picornaviridae all (partial and full) genomes
-```
-raxml-ng --check --msa picornaviridae_all_align.fasta --model TVM+G4 --prefix T106
-raxml-ng --parse --msa picornaviridae_all_align.fasta --model TVM+G4 --prefix T107
-```
-Use 10 threads
-
-Picornaviridae full genomes
-```
-raxml-ng --check --msa picornaviridae_full_align.fasta --model GTR+G4 --prefix T108
-raxml-ng --parse --msa picornaviridae_full_align.fasta --model GTR+G4 --prefix T109
-```
-Use 9 threads
-
-Picornaviridae partial genomes
-```
-raxml-ng --check --msa picornaviridae_partial_align.fasta --model GTR+G4 --prefix T110
-raxml-ng --parse --msa picornaviridae_partial_align.fasta --model GTR+G4 --prefix T111
-```
-Use 10 threads
-
 ---
 
 5. Finally, I kicked off RAxML in each subfolder using the SLURM scripts using below, this does the ML tree search and bootstrapping, but you can do the processes separately to try and save time if the cluster times out on the run time, see [here](https://github.com/amkozlov/raxml-ng/wiki/Tutorial) for more resources on running RAxML:
 
-The script below are for a one of command that does the tree inference, bootstrapping, and calculated support. If the picornavirales trees time out, I'll do the steps separately. 
+The script below are an example of a command that does the tree inference, bootstrapping, and calculated support. If a tree times out, I'll do the steps separately.
 
 Picornavirales all (partial and full) genomes
-```
-#!/bin/bash
-#SBATCH --job-name=picornavirales_all
-#SBATCH --partition=broadwl
-#SBATCH --output=picornavirales_all.out
-#SBATCH --nodes=1
-#SBATCH --ntasks=12
-#SBATCH --ntasks-per-node=12
-#SBATCH --time=36:00:00
-
-module load vim/7.4
-module load emacs/25.1
-module load python/3.6
-module load java/1.8.0_121
-module load cmake/3.15.1
-
-raxml-ng-mpi --all --msa picornavirales_all_align.fasta --model GTR+G4 --prefix T1  --seed 1 --threads auto{12} --bs-metric fbp,tbe
-```
-
-
-Picornavirales full genomes
-```
-#!/bin/bash
-#SBATCH --job-name=picornavirales_full
-#SBATCH --partition=broadwl
-#SBATCH --output=picornavirales_full.out
-#SBATCH --nodes=1
-#SBATCH --ntasks=12
-#SBATCH --ntasks-per-node=12
-#SBATCH --time=36:00:00
-
-module load vim/7.4
-module load emacs/25.1
-module load python/3.6
-module load java/1.8.0_121
-module load cmake/3.15.1
-
-raxml-ng-mpi --all --msa picornavirales_full_align.fasta --model GTR+G4 --prefix T1  --seed 1 --threads auto{12} --bs-metric fbp,tbe
-```
-
-
-Picornavirales partial genomes
-```
-#!/bin/bash
-#SBATCH --job-name=picornavirales_partial
-#SBATCH --partition=broadwl
-#SBATCH --output=picornavirales_partial.out
-#SBATCH --nodes=1
-#SBATCH --ntasks=12
-#SBATCH --ntasks-per-node=12
-#SBATCH --time=36:00:00
-
-module load vim/7.4
-module load emacs/25.1
-module load python/3.6
-module load java/1.8.0_121
-module load cmake/3.15.1
-
-raxml-ng-mpi --all --msa picornavirales_partial_align.fasta --model GTR+G4 --prefix T1  --seed 1 --threads auto{12} --bs-metric fbp,tbe
-```
-
-
-Picornaviridae all (partial and full) genomes
 ```
 #!/bin/bash
 #SBATCH --job-name=picornaviridae_all
@@ -288,51 +181,8 @@ module load python/3.6
 module load java/1.8.0_121
 module load cmake/3.15.1
 
-raxml-ng-mpi --all --msa picornaviridae_all_align.fasta --model TVM+G4 --prefix T1  --seed 1 --threads auto{10} --bs-metric fbp,tbe
+raxml-ng-mpi --all --msa picornaviridae_all_align.fasta --model GTR+G4 --prefix T1  --seed 1 --threads auto{10} --bs-metric fbp,tbe
 ```
-
-
-Picornaviridae full genomes
-```
-#!/bin/bash
-#SBATCH --job-name=picornaviridae_full
-#SBATCH --partition=broadwl
-#SBATCH --output=picornaviridae_full.out
-#SBATCH --nodes=1
-#SBATCH --ntasks=9
-#SBATCH --ntasks-per-node=9
-#SBATCH --time=36:00:00
-
-module load vim/7.4
-module load emacs/25.1
-module load python/3.6
-module load java/1.8.0_121
-module load cmake/3.15.1
-
-raxml-ng-mpi --all --msa picornaviridae_full_align.fasta --model GTR+G4 --prefix T1  --seed 1 --threads auto{9} --bs-metric fbp,tbe
-```
-
-
-Picornaviridae partial genomes
-```
-#!/bin/bash
-#SBATCH --job-name=picornaviridae_partial
-#SBATCH --partition=broadwl
-#SBATCH --output=picornaviridae_partial.out
-#SBATCH --nodes=1
-#SBATCH --ntasks=10
-#SBATCH --ntasks-per-node=10
-#SBATCH --time=36:00:00
-
-module load vim/7.4
-module load emacs/25.1
-module load python/3.6
-module load java/1.8.0_121
-module load cmake/3.15.1
-
-raxml-ng-mpi --all --msa picornaviridae_partial_align.fasta --model GTR+G4 --prefix T1  --seed 1 --threads auto{10} --bs-metric fbp,tbe
-```
-
 ---
 
 6. Once RAxML finished, I imported the resulting tree into R and built a phylogenetic tree. You can easily look at the tree in [FigTree](http://tree.bio.ed.ac.uk/software/figtree/) before cleaning it up. The scripts for making the trees are within each respective folder. 
