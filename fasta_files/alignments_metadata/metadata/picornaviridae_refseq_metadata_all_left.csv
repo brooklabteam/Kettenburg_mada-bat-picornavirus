@@ -200,27 +200,26 @@ NC_023858.1,Melegrivirus A,,Melegrivirus A,Megrivirus,Hungary,Meleagris gallopav
 NC_023861.2,Sicinivirus A,,Sicinivirus A,Sicinivirus,Ireland,Gallus gallus,
 NC_028380.1,sicinivirus A1,JSY,Sicinivirus A,Sicinivirus,China,Gallus gallus,
 NC_033793.1,megrivirus B3CP-APO,HN56,Megrivirus A,Megrivirus,China,Anatidae,14-Jun
-NC_002645.1,Human coronavirus 229E,,Duvinacovirus,Alphacoronavirus,Germany,Homo sapiens,2000
 NC_001547.1,Sindbis virus,,Sindbis virus,Alphavirus,USA,Cell culture,1981
-OQ818316,,,,,,,
-OQ818317,,,,,,,
-OQ818318,,,,,,,
-OQ818320,,,,,,,
-OQ818321,,,,,,,
-OQ818322,,,,,,,
-OQ818323,,,,,,,
-OQ818324,,,,,,,
-OQ818325,,,,,,,
-OQ818328,,,,,,,
-OQ818329,,,,,,,
-OQ818337,,,,,,,
-OQ818343,,,,,,,
-PP766449,,,,,,,
-PP766453,,,,,,,
-PP766454,,,,,,,
-PP766455,,,,,,,
-PP766456,,,,,,,
-PP766457,,,,,,,
-PP766466,,,,,,,
-PP766469,,,,,,,
-PP766471,,,,,,,
+OQ818316,Pteropus rufus mischivirus,AMB150,Pteropus rufus mischivirus,Mischivirus,Madagascar,Pteropus rufus,2018
+OQ818317,Eidolon dupreanum kunsagivirus,KEL148,Eidolon dupreanum kunsagivirus,Kunsagivirus,Madagascar,Eidolon dupreanum,2018
+OQ818318,Eidolon dupreanum teschovirus 1,KEL164,Eidolon dupreanum teschovirus 1,Teschovirus,Madagascar,Eidolon dupreanum,2018
+OQ818320,Eidolon dupreanum sapelovirus 1,KEL233,Eidolon dupreanum sapelovirus 1,Sapelovirus,Madagascar,Eidolon dupreanum,2018
+OQ818321,Eidolon dupreanum sapelovirus 2,KEL272,Eidolon dupreanum sapelovirus 2,Sapelovirus,Madagascar,Eidolon dupreanum,2019
+OQ818322,Eidolon dupreanum kobuvirus,KEL318,Eidolon dupreanum kobuvirus,Kobuvirus,Madagascar,Eidolon dupreanum,2019
+OQ818323,Rousettus madagascariensis teschovirus 1,MIZ190,Rousettus madagascariensis teschovirus 1,Teschovirus,Madagascar,Rousettus madagascariensis,2018
+OQ818324,Rousettus madagascariensis teschovirus 2,MIZ205,Rousettus madagascariensis teschovirus 2,Teschovirus,Madagascar,Rousettus madagascariensis,2018
+OQ818325,Rousettus madagascariensis picornavirus 1,MIZ214,Rousettus madagascariensis picornavirus 1,Unclassified picornavirus,Madagascar,Rousettus madagascariensis,2018
+OQ818328,Rousettus madagascariensis picornavirus 1,MIZ240,Rousettus madagascariensis picornavirus 1,Unclassified picornavirus,Madagascar,Rousettus madagascariensis,2018
+OQ818329,Rousettus madagascariensis sapelovirus 1,MIZ243,Rousettus madagascariensis sapelovirus 1,Sapelovirus,Madagascar,Rousettus madagascariensis,2018
+OQ818337,Eidolon dupreanum hepatovirus,KEL148,Eidolon dupreanum hepatovirus,Hepatovirus,Madagascar,Eidolon dupreanum,2018
+OQ818343,Eidolon dupreanum sapelovirus 1,KEL275B,Eidolon dupreanum sapelovirus 1,Sapelovirus,Madagascar,Eidolon dupreanum,2019
+PP766449,Eidolon dupreanum kobuvirus,ANG22,Eidolon dupreanum kobuvirus,Kobuvirus,Madagascar,Eidolon dupreanum,2013
+PP766453,Eidolon dupreanum kobuvirus,ANGB110.3,Eidolon dupreanum kobuvirus,Kobuvirus,Madagascar,Eidolon dupreanum,2015
+PP766454,Eidolon dupreanum kobuvirus,ANGB121,Eidolon dupreanum kobuvirus,Kobuvirus,Madagascar,Eidolon dupreanum,2016
+PP766455,Eidolon dupreanum hepatovirus,KEL72,Eidolon dupreanum hepatovirus,Hepatovirus,Madagascar,Eidolon dupreanum,2014
+PP766456,Eidolon dupreanum kobuvirus,KEL86,Eidolon dupreanum kobuvirus,Kobuvirus,Madagascar,Eidolon dupreanum,2014
+PP766457,Eidolon dupreanum hepatovirus,KEL148.1,Eidolon dupreanum hepatovirus,Hepatovirus,Madagascar,Eidolon dupreanum,2018
+PP766466,Eidolon dupreanum sapelovirus 1,KEL298.2,Eidolon dupreanum sapelovirus 1,Sapelovirus,Madagascar,Eidolon dupreanum,2019
+PP766469,Rousettus madagascariensis picornavirus 3,MIZ405.1,Rousettus madagascariensis picornavirus 3,Unclassified picornavirus,Madagascar,Rousettus madagascariensis,2019
+PP766471,Rousettus madagascariensis picornavirus 3,MIZ405.3,Rousettus madagascariensis picornavirus 3,Unclassified picornavirus,Madagascar,Rousettus madagascariensis,2019
