@@ -11,18 +11,18 @@ NC_004541.1,Walrus calicivirus,,Vesicular exanthema of swine virus,Vesivirus,USA
 NC_004542.1,Canine vesivirus,,Canine vesivirus,Vesivirus,Japan,Canis lupus familiaris,2002,0,0
 NC_006269.1,Sapovirus Hu/Dresden/pJG-Sap01/DE,,Sapporo virus,Sapovirus,Germany,Homo sapiens,2007,0,0
 NC_006554.1,Sapovirus C12,,Sapporo virus,Sapovirus,Japan,Homo sapiens,2004,0,0
-NC_006875.1,Calicivirus isolate TCG,TCG 14,Calicivirus isolate TCG,,Japan,Bos taurus,2003,0,0
+NC_006875.1,Calicivirus isolate TCG,TCG 14,Calicivirus isolate TCG,Unclassified calicivirus,Japan,Bos taurus,2003,0,0
 NC_007916.1,Newbury agent 1,,Newbury 1 virus,Nebovirus,United Kingdom,Bos taurus,2006,0,0
 NC_008311.1,Norovirus GV,Mu/NoV/GV/MNV1/2002/USA,Norwalk virus,Norovirus,USA,Mus musculus,2002,0,0
 NC_008580.1,Rabbit vesivirus,,Rabbit vesivirus,Vesivirus,USA,Oryctolagus cuniculus,2005,0,0
 NC_010624.1,Sapovirus Mc10,,Sapporo virus,Sapovirus,Thailand,Homo sapiens,2003,0,0
 NC_011050.1,Steller sea lion vesivirus,SSL2004-250F,Steller sea lion vesivirus,Vesivirus,USA,Otariinae,2004,0,0
 NC_011704.1,Rabbit calicivirus Australia 1 MIC-07,MIC-07,Rabbit calicivirus Australia 1 MIC-07,Lagovirus,Australia,Oryctolagus cuniculus,2007,0,0
-NC_012699.1,Calicivirus pig/AB90/CAN,,St-Valerien swine virus,,Canada,Sus scrofa,2006,0,0
+NC_012699.1,Calicivirus pig/AB90/CAN,,St-Valerien swine virus,Unclassified calicivirus,Canada,Sus scrofa,2006,0,0
 NC_017936.1,Bat sapovirus TLC58/HK,,Bat sapovirus TLC58/HK,Sapovirus,Hong Kong,Chiroptera,2011,1,0
 NC_019712.1,Mink calicivirus,,Mink calicivirus,Vesivirus,China,Mustela lutreola,2007,0,0
 NC_024031.1,Atlantic salmon calicivirus,Nordland/2011,Nordland virus,Salovirus,Norway,Salmo salar,2011,0,0
-NC_024078.1,Goose calicivirus,,Goose calicivirus,,China,Anatidae,2012,0,0
+NC_024078.1,Goose calicivirus,,Goose calicivirus,Unclassified calicivirus,China,Anatidae,2012,0,0
 NC_025676.1,San Miguel sea lion virus 8,,San Miguel sea lion virus 8,Vesivirus,USA,Otariinae,1981,0,0
 NC_027026.1,Sapovirus Hu/Nagoya/NGY-1/2012/JPN,,Sapporo virus,Sapovirus,Japan,Homo sapiens,2012,0,0
 NC_027122.1,Vesivirus ferret badger/JX12/China/2012,,Vesivirus ferret badger/JX12/China/2012,Vesivirus,China,Melogale,2012,0,0
@@ -52,7 +52,7 @@ NC_044855.1,Norovirus GIV,,Norwalk virus,Norovirus,USA,Homo sapiens,2016,0,0
 NC_044856.1,Norovirus GI,,Norwalk virus,Norovirus,Bangladesh,Homo sapiens,2011,0,0
 NC_044932.1,Norovirus GII,Hu/GII.PNA4-GII.NA4/PNV06929/2008/PER,Norwalk virus,Norovirus,Peru,Homo sapiens,2008,0,0
 NC_045762.1,Norovirus GIV,,Norwalk virus,Norovirus,USA,Felis catus,2010,0,0
-NC_075411.1,Calicivirus chicken/V0021/Bayern/2004,Bavaria04V0021,Calicivirus chicken/V0021/Bayern/2004,,Germany,Gallus gallus,2004,0,0
+NC_075411.1,Calicivirus chicken/V0021/Bayern/2004,Bavaria04V0021,Calicivirus chicken/V0021/Bayern/2004,Unclassified calicivirus,Germany,Gallus gallus,2004,0,0
 NC_075569.1,Feline calicivirus,,Feline calicivirus,Vesivirus,USA,Felis catus,1992,0,0
 NC_075724.1,Sapovirus Hu/GI/Sapporo/MT-2010/1982,,Sapporo virus,Sapovirus,Japan,Homo sapiens,1982,0,0
 OQ818319,Eidolon dupreanum sapovirus 1,KEL166,Eidolon dupreanum sapovirus 1,Sapovirus,Madagascar,Eidolon dupreanum,2018,1,1
