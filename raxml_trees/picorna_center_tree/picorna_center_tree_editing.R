@@ -26,30 +26,36 @@ plot(rooted.tree)
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
 
 #load tree data prepared from elsewhere
-dat <- read.csv(("caliciviridae_refseq_metadata_all.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(("picornaviridae_refseq_metadata_all_center.csv"), header = T, stringsAsFactors = F)
 head(dat)
 
 #check that your metadata matches your tree data
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #64
-length(tree$tip.label) #64
+nrow(dat) #222
+length(tree$tip.label) #222
 
 #check subgroup names
 unique(dat$Genus)
 
-#Leave this below in case you want to manually color the genus yourself
-# colz = c("Bavovirus"="deepskyblue1", "Lagovirus"="darkorange",   "Minovirus"="gold1",   
-#          "Nacovirus"="firebrick1",   "Nebovirus"="dodgerblue3", "Norovirus"="deeppink", "Recovirus"="aquamarine1",    
-#          "Salovirus"="mediumpurple1",  "Sapovirus"="olivedrab2",   "Unclassified calicivirus"="slateblue2",   
-#          "Vesivirus"="lightpink2","Alphavirus"="black")
-
 #pick order for the labels
-dat$Genus <- factor(dat$Genus, levels = c("Bavovirus", "Lagovirus",   "Minovirus",   
-                                          "Nacovirus",   "Nebovirus", "Norovirus", "Recovirus",    
-                                          "Salovirus",  "Sapovirus",   "Unclassified calicivirus",   
-                                          "Vesivirus","Alphavirus"))   
+dat$Genus <- factor(dat$Genus, levels = c("Aalivirus", "Ailurivirus",   "Ampivirus",   
+                                          "Anativirus",   "Aphthovirus", "Aquamavirus", "Avihepatovirus",    
+                                          "Avisivirus",  "Bopivirus",   "Cardiovirus",   "Cosavirus",
+                                          "Crohivirus", "Cyprivirus", "Dicipivirus", "Enterovirus", 
+                                          "Erbovirus", "Fipivirus", "Gallivirus", "Gruhelivirus",
+                                          "Grusopivirus", "Harkavirus", "Hemipivirus", "Hepatovirus",
+                                          "Hunnivirus", "Kobuvirus", "Kunsagivirus", "Limnipivirus",
+                                          "Livupivirus", "Ludopivirus", "Malagasivirus", "Marsupivirus",
+                                          "Megrivirus", "Mischivirus", "Mosavirus", "Orivirus","Oscivirus",
+                                          "Parechovirus", "Pasivirus", "Passerivirus", "Pemapivirus",
+                                          "Poecivirus", "Potamipivirus", "Rabovirus", "Rafivirus",
+                                          "Rajidapivirus", "Rohelivirus", "Rosavirus", "Sakobuvirus",
+                                          "Salivirus","Sapelovirus","Senecavirus","Shanbavirus",
+                                          "Sicinivirus","Teschovirus","Torchivirus", "Tottorivirus",
+                                          "Tremovirus","Tropivirus","Unclassified picornavirus",
+                                          "Alphavirus"))   
 
 dat$novel <- as.factor(dat$novel)
 
@@ -154,7 +160,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=H
   # scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
-  guides(colour = guide_legend(ncol = 1))+
+  guides(colour = guide_legend(ncol = 3))+
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=4, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
@@ -199,7 +205,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=H
   # scale_fill_manual(values=colz) +
   # scale_color_manual(values=colz)+
   scale_shape_manual(values=shapez) +
-  guides(colour = guide_legend(ncol = 1))+
+  guides(colour = guide_legend(ncol = 3))+
   new_scale_fill() +
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Genus="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=4, nudge_x=0.05) +
   guides(fill="none")+#
@@ -210,30 +216,39 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=H
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,14))+
-  geom_cladelabel(node = 70, label = "Norovirus",offset=0.3, fontsize=4, color="black") +
-  geom_cladelabel(node = 96, label = "Vesivirus", offset=0.3,fontsize=4, color="black") +
-  geom_cladelabel(node = 89, label = "Unclassified caliciviruses", offset=0.3, fontsize=4, color="black") +
-  geom_cladelabel(node = 110, label = "Unclassified caliciviruses", offset=0.3,fontsize=4, color="black")
+  geom_cladelabel(node = 274, label = "Enterovirus",offset=0.3, fontsize=4, color="black") +
+  geom_cladelabel(node = 324, label = "Unclassified picornaviruses/Shanbavirus/Pasivirus/Harkavirus/Hemipivirus", offset=0.3,fontsize=4, color="black") +
+  geom_cladelabel(node = 268, label = "Pemapivirus/Crohivirus/Torchivirus", offset=0.3, fontsize=4, color="black") +
+  geom_cladelabel(node = 330, label = "Various picornaviridae", offset=0.3,fontsize=4, color="black")+
+  geom_cladelabel(node = 385, label = "Apthovirus/Bopivirus/Erbovirus", offset=0.3,fontsize=4, color="black")+
+  geom_cladelabel(node = 404, label = "Cosavirus", offset=0.3,fontsize=4, color="black")+
+  geom_cladelabel(node = 395, label = "Cardiovirus", offset=0.3,fontsize=4, color="black")+
+  geom_cladelabel(node = 426, label = "Various picornaviridae", offset=0.3,fontsize=4, color="black")+
+  geom_cladelabel(node = 438, label = "Unclassified picornaviridae/Rafivirus/Tropivirus", offset=0.3,fontsize=4, color="black")+
+  geom_cladelabel(node = 249, label = "Oscivirus/Livupivirus/Ludopivirus", offset=0.3,fontsize=4, color="black")+
+  geom_cladelabel(node = 244, label = "Unclassified picornaviuses/Sicinivirus/", offset=0.3,fontsize=4, color="black")
 p2
 
-p1.2<-p1.1%>%ggtree::rotate(106)
-p1.2
-
-
 #collapse the labeled clades
-p3<-collapse(p2, 70)+geom_point2(aes(subset=(node==70)), size=4, shape=22, fill="white")
-p4<-collapse(p3, 96)+geom_point2(aes(subset=(node==96)), size=4, shape=22, fill="white")
-p5<-collapse(p4, 89)+geom_point2(aes(subset=(node==89)), size=4, shape=22, fill="white")
-p6<-collapse(p5, 110)+geom_point2(aes(subset=(node==110)), size=4, shape=22, fill="white")
-p6
-
+p3<-collapse(p2, 274)+geom_point2(aes(subset=(node==274)), size=4, shape=22, fill="white")
+p4<-collapse(p3, 324)+geom_point2(aes(subset=(node==324)), size=4, shape=22, fill="white")
+p5<-collapse(p4, 268)+geom_point2(aes(subset=(node==268)), size=4, shape=22, fill="white")
+p6<-collapse(p5, 330)+geom_point2(aes(subset=(node==330)), size=4, shape=22, fill="white")
+p8<-collapse(p6, 385)+geom_point2(aes(subset=(node==385)), size=4, shape=22, fill="white")
+p9<-collapse(p8, 404)+geom_point2(aes(subset=(node==404)), size=4, shape=22, fill="white")
+p10<-collapse(p9, 395)+geom_point2(aes(subset=(node==395)), size=4, shape=22, fill="white")
+p11<-collapse(p10, 426)+geom_point2(aes(subset=(node==426)), size=4, shape=22, fill="white")
+p12<-collapse(p11, 438)+geom_point2(aes(subset=(node==438)), size=4, shape=22, fill="white")
+p13<-collapse(p12, 249)+geom_point2(aes(subset=(node==249)), size=4, shape=22, fill="white")
+p14<-collapse(p13, 244)+geom_point2(aes(subset=(node==244)), size=4, shape=22, fill="white")
+p14
 
 ##add bootstrap values to this tree
-p6.dat <- p6$data
-p6.dat$Bootstrap <- NA
-Bootstrap<-p6.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p6.dat$label)] <- as.numeric(p6.dat$label[(length(tree.dat$tip_label)+1):length(p6.dat$label)])#fill with label
+p14.dat <- p14$data
+p14.dat$Bootstrap <- NA
+Bootstrap<-p14.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p14.dat$label)] <- as.numeric(p14.dat$label[(length(tree.dat$tip_label)+1):length(p14.dat$label)])#fill with label
 
-p7 <- p6  %<+% p6.dat + 
+p15 <- p14  %<+% p14.dat + 
   ggnewscale::new_scale_fill() + 
   geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
@@ -243,5 +258,6 @@ p7 <- p6  %<+% p6.dat +
         legend.text = element_text(size=12),
         legend.title = element_text(size=12),
         legend.key.size = unit(0.3, "cm"))
-p7
+p15
 
+#15x13
