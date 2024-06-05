@@ -80,4 +80,11 @@ Partial sequences (accession number and CZID ID):
 -PP766476/MIZ405_Plate_32_A10_NODE_108        145,168,640 total reads/1,000,000 = 145.168 rPM
 -PP766477/MIZ405_Plate_32_A10_NODE_129        145,168,640 total reads/1,000,000 = 145.168 rPM
 
+Once you have exported all the csv coverage files and converted to rPM for plotting using the above information, you can concatentate all the files into one and use that in the R code to plot using the following code in terminal. 
+
+```
+cat *.csv > all_genome_coverage.csv
+
+```
+
 Use the R code [here]() to generate coverage plots
