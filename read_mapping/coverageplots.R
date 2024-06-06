@@ -13,10 +13,10 @@ library(ggh4x)
 
 ## now let's plot coverage 
 
-homewd="/Users/gwenddolenkettenburg/Desktop/mada-bat-picornavirus/read_mapping/"
+homewd="/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/read_mapping/"
 setwd(paste0(homewd))
 
-dat <- read.csv(file= "allgenome_coverage.csv", header = T, stringsAsFactors = F) #load data
+dat <- read.csv(file= "all_genome_coverage.csv", header = T, stringsAsFactors = F) #load data
 dat$virus<-factor(dat$virus, levels=c("Mischivirus", "Kobuvirus", "Kunsagivirus", "Nepovirus", "Roupivirus", "Sapelovirus",
                                       "Sapovirus", "Teschovirus")) ##pick order to display
 dat$species<-factor(dat$species, levels=c("Pteropus rufus", "Eidolon dupreanum", "Rousettus madagascariensis")) ##pick order to display
@@ -31,7 +31,6 @@ pr_full<-subset(pr, type=="full")
 ed_full<-subset(ed, type=="full")
 rm_full<-subset(rm, type=="full")
 
-pr_partial<-subset(pr, type=="partial")
 ed_partial<-subset(ed, type=="partial")
 rm_partial<-subset(rm, type=="partial")
 
@@ -163,23 +162,6 @@ full
 #export pdf 18x13 inch PDF landscape
 
 #just the partial genomes
-title<-expression(paste(italic("Pteropus rufus")))
-pr_p<-ggplot(pr_partial, aes(x=Position, y=rPM, fill=type))+ 
-  geom_area(linewidth=0.5) +
-  facet_nested(accession~.,
-               scales="free", nest_line = element_line(color="white"), solo_line = TRUE)+
-  scale_fill_manual(values=c("coral2"))+
-  theme_linedraw() +
-  theme(legend.position = "none")+
-  ggtitle(title)+
-  scale_y_continuous(position="left")+
-  xlab("Genome position") + ylab("rPM (reads per million)")+
-  theme(panel.grid.major = element_blank(), 
-        panel.grid.minor = element_blank(),
-        axis.title.y = element_text(margin = margin(0,0,0,1)))
-pr_p
-
-
 title<-expression(paste(italic("Eidolon dupreanum")))
 ed_p<-ggplot(ed_partial, aes(x=Position, y=rPM, fill=type))+ 
   geom_area(linewidth=0.5) +
