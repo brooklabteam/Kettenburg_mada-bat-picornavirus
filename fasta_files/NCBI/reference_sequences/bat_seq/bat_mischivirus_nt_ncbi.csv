@@ -1,0 +1,16 @@
+Accession,Organism_Name,Isolate,Species,Genus,Length,Nuc_Completeness,Country,Host,Isolation_Source,Collection_Date
+NC_043072.1,Bat picornavirus BatPV/V1/13 Hun,,Mischivirus B,Mischivirus,6855,complete,Hungary,Miniopterus schreibersii,feces,2013
+NC_034381.1,mischivirus A1,,Mischivirus A,Mischivirus,8468,complete,China,Miniopterus schreibersii,,Dec-10
+NC_026470.1,mischivirus C1,PREDICT-06105,Mischivirus C,Mischivirus,8096,complete,Democratic Republic of the Congo,Macronycteris gigas,oronasopharynx,2013
+OR951299.1,Mischivirus A,GD2016,Mischivirus A,Mischivirus,6900,partial,China,Miniopterus pusillus,swab,2016
+OR951301.1,Bat mischivirus 5,GD2016,Bat mischivirus 5,Mischivirus,7355,partial,China,Miniopterus pusillus,swab,2016
+OR951306.1,Bat mischivirus 5,GD2017,Bat mischivirus 5,Mischivirus,3238,partial,China,Miniopterus pusillus,swab,2017
+OR951339.1,Bat mischivirus 4,GD2016_273_1639,Bat mischivirus 4,Mischivirus,7149,partial,China,Miniopterus schreibersii,swab,2016
+OR951341.1,Mischivirus A,GD2016,Mischivirus A,Mischivirus,7201,partial,China,Miniopterus schreibersii,swab,2016
+OR951342.1,Bat mischivirus 4,HI2019,Bat mischivirus 4,Mischivirus,7157,partial,China,Miniopterus schreibersii,swab,2019
+OR951347.1,Bat mischivirus 4,GD2016_284_2791,Bat mischivirus 4,Mischivirus,7156,partial,China,Miniopterus schreibersii,swab,2016
+OR951360.1,Bat mischivirus 5,Pool-313,Bat mischivirus 5,Mischivirus,7081,partial,China,Chiroptera sp.,swab,2020
+OR951362.1,Bat mischivirus 4,YN2020,Bat mischivirus 4,Mischivirus,7042,partial,China,Miniopterus schreibersii,swab,2020
+OR867091.1,Mischivirus sp.,MSCZC1516/162,Mischivirus sp.,Mischivirus,958,partial,China,Miniopterus schreibersii,"feces, abdominal cavity",2016
+OR867092.1,Mischivirus sp.,MSWZC17/6,Mischivirus sp.,Mischivirus,8474,partial,China,Miniopterus schreibersii,"feces, abdominal cavity",2017
+MG888045.1,Mischivirus B,,Mischivirus B,Mischivirus,6961,partial,Algeria,Miniopterus,feces,Feb-17

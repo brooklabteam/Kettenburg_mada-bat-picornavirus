@@ -1,13 +1,17 @@
-Accession,Organism_Name,Isolate,Species,Genus,Country,Host,Collection_Date
-NC_075428.1,Canine picornavirus,A128thr,Mischivirus D,Mischivirus,USA,Canis lupus familiaris,Dec-68
-NC_043072.1,Bat picornavirus BatPV/V1/13 Hun,,Mischivirus B,Mischivirus,Hungary,Miniopterus schreibersii,2013
-NC_034381.1,mischivirus A1,,Mischivirus A,Mischivirus,China,Miniopterus schreibersii,10-Dec
-NC_026470.1,mischivirus C1,PREDICT-06105,Mischivirus C,Mischivirus,Democratic Republic of the Congo,Macronycteris gigas,2013
-NC_016964.1,Canine picornavirus,325,Mischivirus D,Mischivirus,Hong Kong,Canis lupus familiaris,2008
-JN831355.1,Canine picornavirus,244,Mischivirus D,Mischivirus,Hong Kong,Canis lupus familiaris,2008
-KU871312.1,Canine picornavirus,,Mischivirus D,Mischivirus,Hong Kong,,2008-02-29
-KU871313.1,Canine picornavirus,,Mischivirus D,Mischivirus,United Arab Emirates,,2013-01-29
-KP100644.1,mischivirus C1,PREDICT-06105,Mischivirus C,Mischivirus,Democratic Republic of the Congo,Macronycteris gigas,2013
-JQ814851.1,mischivirus A1,,Mischivirus A,Mischivirus,China,Miniopterus schreibersii,10-Dec
-JN831356.1,Canine picornavirus,325,Mischivirus D,Mischivirus,Hong Kong,Canis lupus familiaris,2008
-NC_001547.1,Sindbis virus,,Sindbis virus,Alphavirus,USA,Cell culture,1981
+Accession,Organism_Name,Isolate,Species,Genus,Country,source,Host,Collection_Date,novel
+KU871313.1,Canine picornavirus,,Mischivirus D,Mischivirus,United Arab Emirates,Canis lupus familiaris,0,2013,0
+MG888045.1,Mischivirus B,,Mischivirus B,Mischivirus,Algeria,Miniopterus,1,2017,0
+NC_016964.1,Canine picornavirus,325,Mischivirus D,Mischivirus,Hong Kong,Canis lupus familiaris,0,2008,0
+NC_026470.1,mischivirus C1,PREDICT-06105,Mischivirus C,Mischivirus,Democratic Republic of the Congo,Macronycteris gigas,1,2013,0
+NC_034381.1,mischivirus A1,,Mischivirus A,Mischivirus,China,Miniopterus schreibersii,1,2010,0
+NC_043072.1,Bat picornavirus BatPV/V1/13 Hun,,Mischivirus B,Mischivirus,Hungary,Miniopterus schreibersii,1,2013,0
+NC_075428.1,Canine picornavirus,A128thr,Mischivirus D,Mischivirus,USA,Canis lupus familiaris,0,1968,0
+OR867091.1,Mischivirus sp.,MSCZC1516/162,Mischivirus sp.,Mischivirus,China,Miniopterus schreibersii,1,2016,0
+OR867092.1,Mischivirus sp.,MSWZC17/6,Mischivirus sp.,Mischivirus,China,Miniopterus schreibersii,1,2017,0
+OR951299.1,Mischivirus A,GD2016,Mischivirus A,Mischivirus,China,Miniopterus pusillus,1,2016,0
+OR951306.1,Bat mischivirus 5,GD2017,Bat mischivirus 5,Mischivirus,China,Miniopterus pusillus,1,2017,0
+OR951339.1,Bat mischivirus 4,GD2016_273_1639,Bat mischivirus 4,Mischivirus,China,Miniopterus schreibersii,1,2016,0
+OR951342.1,Bat mischivirus 4,HI2019,Bat mischivirus 4,Mischivirus,China,Miniopterus schreibersii,1,2019,0
+OR951347.1,Bat mischivirus 4,GD2016_284_2791,Bat mischivirus 4,Mischivirus,China,Miniopterus schreibersii,1,2016,0
+OR951360.1,Bat mischivirus 5,Pool-313,Bat mischivirus 5,Mischivirus,China,Chiroptera sp.,1,2020,0
+OR951362.1,Bat mischivirus 4,YN2020,Bat mischivirus 4,Mischivirus,China,Miniopterus schreibersii,1,2020,0

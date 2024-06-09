@@ -1,0 +1,31 @@
+sample_id,any_picorna,any_calici,any_pos,virus_general,dataset,specific_roost_site,roost_site,latitude_s,longitude_e,sampling_session,processing_date,year,bat_species,bat_sex,bat_age_class,young_of_year,pupmom_pair,pup_or_mom,sampleid_pupmom_pair
+AMB150,1,0,1,Mischivirus,CZID,Ambakoana,Ambakoana,-18.513,48.1665,48,2018-08-06,2018,Pteropus rufus,male,A,no,no,NA,NA
+ANGB110,1,0,1,Kobuvirus,NIH,Angavobe,AngavoKely,-18.9327,47.7578,30,2015-06-23,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA
+ANGB121,1,0,1,Kobuvirus,NIH,Angavobe,AngavoKely,-18.9327,47.7578,33,2016-01-08,2016,Eidolon dupreanum,male,A,NA,NA,NA,NA
+ANGB141,1,0,1,Kobuvirus,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA
+ANGB22,1,0,1,Kobuvirus,NIH,Angavobe,AngavoKely,-18.9327,47.7578,4,2013-11-24,2013,Eidolon dupreanum,male,J,NA,NA,NA,NA
+KEL148,1,0,1,Kunsagivirus/Hepatovirus,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,male,A,no,no,NA,NA
+KEL164,1,0,1,Teschovirus,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,J,yes,no,NA,NA
+KEL166,0,1,1,Sapovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,J,yes,no,NA,NA
+KEL168,0,1,1,Sapovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA
+KEL200,0,1,1,Sapovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA
+KEL207,0,1,1,Sapovirus,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA
+KEL233,1,0,1,Sapelovirus,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA
+KEL272,1,0,1,Sapelovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,male,A,no,no,NA,NA
+KEL273,1,0,1,Sapelovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,male,A,no,no,NA,NA
+KEL275B,1,0,1,Sapelovirus,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,female,NL,no,no,NA,NA
+KEL298,1,0,1,Sapelovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA
+KEL318,1,0,1,Kobuvirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA
+KEL367,1,0,1,Cardiovirus,NIH,Angavokely,AngavoKely,-18.9327,47.7578,75,2019-08-24,2019,Eidolon dupreanum,male,A,no,no,NA,NA
+KEL72,1,0,1,Hepatovirus,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-17,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA
+KEL86,1,0,1,Kobuvirus,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-18,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA
+MIZ179,0,1,1,Sapovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,43,2018-04-14,2018,Rousettus madagascariensis,male,A,no,no,NA,NA
+MIZ190,1,0,1,Teschovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,male,A,no,no,NA,NA
+MIZ194,1,0,1,Unclassified picornavirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,female,NL,no,no,NA,NA
+MIZ205,1,0,1,Teschovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,male,A,no,no,NA,NA
+MIZ214,1,0,1,Unclassified picornavirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,male,A,no,no,NA,NA
+MIZ219,0,1,1,Sapovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,male,A,no,no,NA,NA
+MIZ240,1,0,1,Unclassified picornavirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,male,A,no,no,NA,NA
+MIZ243,1,0,1,Sapelovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-12,2018,Rousettus madagascariensis,male,J,yes,no,NA,NA
+MIZ345,0,1,1,Sapovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,59,2019-01-31,2019,Rousettus madagascariensis,female,J,yes,yes,pup,MIZ342
+MIZ405,1,1,1,Unclassified picornavirus/Sapovirus,CZID/NIH,Maromizaha,Maromizaha,-18.9623,48.4525,65,2019-04-09,2019,Rousettus madagascariensis,male,A,NA,no,NA,NA

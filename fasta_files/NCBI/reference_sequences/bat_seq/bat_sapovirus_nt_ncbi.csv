@@ -1,0 +1,77 @@
+Accession,Organism_Name,Isolate,Species,Genus,Length,Nuc_Completeness,Country,Host,Collection_Date
+NC_033776.1,Bat sapovirus,Bat-SaV/Limbe65/CAM/2014,Bat sapovirus,Sapovirus,7475,complete,Cameroon,Eidolon helvum,2014-01
+NC_017936.1,Bat sapovirus TLC58/HK,,Bat sapovirus TLC58/HK,Sapovirus,7696,complete,Hong Kong,Chiroptera,
+OR951099.1,Bat sapovirus,GX2018,Bat sapovirus,Sapovirus,3931,partial,China,Scotophilus kuhlii,2018
+OR951100.1,Bat sapovirus,YN2020,Bat sapovirus,Sapovirus,6349,partial,China,Myotis chinensis,2020
+OR951101.1,Bat sapovirus,GX2016_078_10033,Bat sapovirus,Sapovirus,4986,partial,China,Rhinolophus pusillus,2016
+OR951102.1,Bat sapovirus,GD2017_087_34126,Bat sapovirus,Sapovirus,3378,partial,China,Rhinolophus sinicus,2017
+OR951103.1,Bat sapovirus,GD2017,Bat sapovirus,Sapovirus,1636,partial,China,Rhinolophus affinis,2017
+OR951104.1,Bat sapovirus,GD2018_174_81065,Bat sapovirus,Sapovirus,3830,partial,China,Scotophilus kuhlii,2018
+OR951105.1,Bat sapovirus,GD2018_177_16788,Bat sapovirus,Sapovirus,1554,partial,China,Scotophilus kuhlii,2018
+OR951106.1,Bat sapovirus,GX2017_183_49402,Bat sapovirus,Sapovirus,3673,partial,China,Scotophilus kuhlii,2017
+OR951107.1,Bat sapovirus,GX2017_197_22354,Bat sapovirus,Sapovirus,5022,partial,China,Hipposideros larvatus,2017
+OR951108.1,Bat sapovirus,GX2017,Bat sapovirus,Sapovirus,7069,partial,China,Hipposideros larvatus,2017
+OR951109.1,Bat sapovirus,GX2017_201_188356,Bat sapovirus,Sapovirus,5182,partial,China,Hipposideros larvatus,2017
+OR951112.1,Bat sapovirus,GD2017_207_23251,Bat sapovirus,Sapovirus,2887,partial,China,Myotis ricketti,2017
+OR951113.1,Bat sapovirus,GD2017,Bat sapovirus,Sapovirus,4465,partial,China,Myotis ricketti,2017
+OR951115.1,Bat sapovirus,GD2019,Bat sapovirus,Sapovirus,7219,partial,China,Myotis ricketti,2019
+OR951116.1,Bat sapovirus,GD2020,Bat sapovirus,Sapovirus,3899,partial,China,Myotis ricketti,2020
+OR951117.1,Bat sapovirus,JX2020_217_538,Bat sapovirus,Sapovirus,1904,partial,China,Myotis ricketti,2020
+OR951118.1,Bat sapovirus,JX2020_217_5915,Bat sapovirus,Sapovirus,6967,partial,China,Myotis ricketti,2020
+OR951119.1,Bat sapovirus,JX2020_217_9014,Bat sapovirus,Sapovirus,5319,partial,China,Myotis ricketti,2020
+OR951120.1,Bat sapovirus,JX2020_217_22022,Bat sapovirus,Sapovirus,3904,partial,China,Myotis ricketti,2020
+OR951121.1,Bat sapovirus,JX2020_217_29613,Bat sapovirus,Sapovirus,7390,partial,China,Myotis ricketti,2020
+OR951124.1,Bat sapovirus,GD2016_220_21719,Bat sapovirus,Sapovirus,1374,partial,China,Hipposideros armiger,2016
+OR951125.1,Bat sapovirus,GD2016_228_8320,Bat sapovirus,Sapovirus,1820,partial,China,Miniopterus pusillus,2016
+OR951126.1,Bat sapovirus,GD2017_231_6287,Bat sapovirus,Sapovirus,4798,partial,China,Miniopterus pusillus,2017
+OR951127.1,Bat sapovirus,GD2017_231_18393,Bat sapovirus,Sapovirus,4933,partial,China,Miniopterus pusillus,2017
+OR951128.1,Bat sapovirus,GX2016_241_83445,Bat sapovirus,Sapovirus,5458,partial,China,Taphozous melanopogon,2016
+OR951129.1,Bat sapovirus,GX2016_241_124743,Bat sapovirus,Sapovirus,4807,partial,China,Taphozous melanopogon,2016
+OR951131.1,Bat sapovirus,GX2017,Bat sapovirus,Sapovirus,6683,partial,China,Taphozous melanopogon,2017
+OR951136.1,Bat sapovirus,GX2017,Bat sapovirus,Sapovirus,5787,partial,China,Taphozous melanopogon,2017
+OR951137.1,Bat sapovirus,GX2017_244_32882,Bat sapovirus,Sapovirus,2644,partial,China,Taphozous melanopogon,2017
+OR951138.1,Bat sapovirus,YN2017,Bat sapovirus,Sapovirus,7441,partial,China,Eonycteris spelaea,2017
+OR951139.1,Bat sapovirus,GX2016,Bat sapovirus,Sapovirus,7432,partial,China,Myotis siligorensis,2016
+OR951140.1,Bat sapovirus,GX2017_257_9004,Bat sapovirus,Sapovirus,1852,partial,China,Myotis siligorensis,2017
+OR951141.1,Bat sapovirus,YN2017,Bat sapovirus,Sapovirus,6180,partial,China,Aselliscus stoliczkanus,2017
+OR951142.1,Bat sapovirus,JX2020_264_100204,Bat sapovirus,Sapovirus,7127,partial,China,Myotis adversus,2020
+OR951143.1,Bat sapovirus,JX2020_265_3043,Bat sapovirus,Sapovirus,4669,partial,China,Myotis adversus,2020
+OR951144.1,Bat sapovirus,JX2020_265_40567,Bat sapovirus,Sapovirus,5374,partial,China,Myotis adversus,2020
+OR951145.1,Bat sapovirus,Pool-266,Bat sapovirus,Sapovirus,2729,partial,China,Rousettus leschenaultii,2016
+OR951146.1,Bat sapovirus,GD2016_278_26421,Bat sapovirus,Sapovirus,1380,partial,China,Myotis chinensis,2016
+OR951147.1,Bat sapovirus,GD2017_279_6413,Bat sapovirus,Sapovirus,5007,partial,China,Myotis chinensis,2017
+OR951148.1,Bat sapovirus,GX2016_281_1402,Bat sapovirus,Sapovirus,5944,partial,China,Taphozous sp.,2016
+OR951149.1,Bat sapovirus,GX2016_281_4485,Bat sapovirus,Sapovirus,7003,partial,China,Taphozous sp.,2016
+OR951151.1,Bat sapovirus,YN2016,Bat sapovirus,Sapovirus,7534,partial,China,Ia io,2016
+OR951153.1,Bat sapovirus,ZJ2020,Bat sapovirus,Sapovirus,5403,partial,China,Rhinolophus ferrumequinum,2020
+OR951154.1,Bat sapovirus,Pool-312,Bat sapovirus,Sapovirus,1376,partial,China,Hipposideros,2020
+OR951155.1,Bat sapovirus,Pool-313,Bat sapovirus,Sapovirus,1847,partial,China,Chiroptera sp.,2020
+OR951157.1,Bat sapovirus,LN2020,Bat sapovirus,Sapovirus,5259,partial,China,Rhinolophus ferrumequinum,2020
+OQ818319.1,Eidolon dupreanum sapovirus 1,KEL166,Eidolon dupreanum sapovirus 1,Sapovirus,6378,partial,Madagascar,Eidolon dupreanum,2018-02-15
+OQ818344.1,Eidolon dupreanum sapovirus 2,KEL298,Eidolon dupreanum sapovirus 2,Sapovirus,2134,partial,Madagascar,Eidolon dupreanum,2019-02-06
+OQ709197.1,Bat sapovirus WD3,BtSaV/RlWD03,Bat sapovirus WD3,Sapovirus,6865,partial,China,Rousettus leschenaultii,2018
+OP946514.1,Bat sapovirus,GD/L117.18/2022,Bat sapovirus,Sapovirus,544,partial,China,Miniopterus pusillus,2022
+OP930872.1,Bat sapovirus,GD/L2.18/2020,Bat sapovirus,Sapovirus,1633,partial,China,Miniopterus fuliginosus,2020
+OP930873.1,Bat sapovirus,L172.18,Bat sapovirus,Sapovirus,2024,partial,China,Myotis chinensis,2022
+OP930874.1,Bat sapovirus,GZ/L177.18/2022,Bat sapovirus,Sapovirus,7709,partial,China,Ia io,2022
+OP930875.1,Bat sapovirus,GD/L107.18/2022,Bat sapovirus,Sapovirus,4756,partial,China,Hipposideros armiger,2022
+OP930876.1,Bat sapovirus,GD/L113.18/2022,Bat sapovirus,Sapovirus,1770,partial,China,Rousettus leschenaultii,2022
+OP963622.1,Bat sapovirus BtSY1,,Bat sapovirus BtSY1,Sapovirus,7212,partial,China,Cynopterus sphinx,2016
+OP963623.1,Bat sapovirus BtSY2,,Bat sapovirus BtSY2,Sapovirus,7394,partial,China,Rousettus leschenaultii,2017
+OP963671.1,Bat sapovirus BtSY3,,Bat sapovirus BtSY3,Sapovirus,3773,partial,China,Rousettus leschenaultii,2018
+ON872527.1,Bat faecal sapovirus,Ad02/aus/1,Bat faecal sapovirus,Sapovirus,7254,partial,Australia,Pteropus poliocephalus,2019
+ON872528.1,Bat faecal sapovirus,Ad02/aus/2,Bat faecal sapovirus,Sapovirus,699,partial,Australia,Pteropus poliocephalus,2019
+ON872529.1,Bat faecal sapovirus,Ad02/aus/4,Bat faecal sapovirus,Sapovirus,783,partial,Australia,Pteropus poliocephalus,2019
+MH396475.1,Bat sapovirus,KSA403,Bat sapovirus,Sapovirus,896,partial,Saudi Arabia,Eidolon helvum,2012-10-15
+KX759618.1,Bat sapovirus,Bat-SaV/Limbe25/CAM/2014,Bat sapovirus,Sapovirus,6727,partial,Cameroon,Eidolon helvum,2014-01
+KX759619.1,Bat sapovirus,Bat-SaV/Lysoka36/CAM/2014,Bat sapovirus,Sapovirus,6175,partial,Cameroon,Eidolon helvum,2014-01
+KX759620.1,Bat sapovirus,Bat-SaV/Limbe65/CAM/2014,Bat sapovirus,Sapovirus,7475,partial,Cameroon,Eidolon helvum,2014-01
+KX759621.1,Bat sapovirus,Bat-SaV/Limbe899a/CAM/2014,Bat sapovirus,Sapovirus,7463,partial,Cameroon,Eidolon helvum,2014-01
+KX759622.1,Bat sapovirus,Bat-SaV/Limbe899b/CAM/2014,Bat sapovirus,Sapovirus,7474,partial,Cameroon,Eidolon helvum,2014-01
+KX759623.1,Bat sapovirus,Bat-SaV/Limbe900/CAM/2014,Bat sapovirus,Sapovirus,7494,partial,Cameroon,Eidolon helvum,2014-01
+KX759624.1,Bat sapovirus,Bat-SaV/Limbe894/CAM/2014,Bat sapovirus,Sapovirus,1424,partial,Cameroon,Eidolon helvum,2014-01
+JN899072.1,Bat sapovirus TLC34/HK,,Bat sapovirus TLC34/HK,Sapovirus,7679,partial,Hong Kong,Chiroptera,
+JN899073.1,Bat sapovirus TLC38/HK,,Bat sapovirus TLC38/HK,Sapovirus,1130,partial,Hong Kong,Chiroptera,
+JN899074.1,Bat sapovirus TLC39/HK,,Bat sapovirus TLC39/HK,Sapovirus,7679,partial,Hong Kong,Chiroptera,
+JN899075.1,Bat sapovirus TLC58/HK,,Bat sapovirus TLC58/HK,Sapovirus,7696,complete,Hong Kong,Chiroptera,
+JQ267527.1,Bat sapovirus TLC72/HK,,Bat sapovirus TLC72/HK,Sapovirus,764,partial,Hong Kong,Chiroptera,
