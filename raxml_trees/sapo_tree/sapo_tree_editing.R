@@ -195,9 +195,9 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,5))+
-  geom_cladelabel(node = 183, label = "Sapporo virus/Sapovirus sp.",offset=0.3, fontsize=4, color="black") +
-  geom_cladelabel(node = 186, label = "Sapporo virus", offset=0.3,fontsize=4, color="black") +
-  geom_cladelabel(node = 234, label = "Sapporo virus/Sapovirus rat", offset=0.3, fontsize=4, color="black")
+  geom_cladelabel(node = 183, label = "Sapporo virus/Sapovirus sp.",offset=0.05, fontsize=4, color="black") +
+  geom_cladelabel(node = 186, label = "Sapporo virus", offset=0.05,fontsize=4, color="black") +
+  geom_cladelabel(node = 234, label = "Sapporo virus/Sapovirus rat", offset=0.05, fontsize=4, color="black")
 p2
 
 p2.1<-p2%>%ggtree::rotate(184)

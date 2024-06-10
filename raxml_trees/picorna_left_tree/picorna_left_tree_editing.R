@@ -216,15 +216,15 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=H
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,5))+
-  geom_cladelabel(node = 244, label = "Enterovirus",offset=0.3, fontsize=4, color="black") +
-  geom_cladelabel(node = 333, label = "Various picornaviridae", offset=0.3,fontsize=4, color="black") +
-  geom_cladelabel(node = 321, label = "Various picornaviridae", offset=0.3, fontsize=4, color="black") +
-  geom_cladelabel(node = 240, label = "Various picornaviridae", offset=0.3,fontsize=4, color="black")+
-  geom_cladelabel(node = 378, label = "Cardiovirus", offset=0.3,fontsize=4, color="black")+
-  geom_cladelabel(node = 372, label = "Cosavirus", offset=0.3,fontsize=4, color="black")+
-  geom_cladelabel(node = 392, label = "Apthovirus/Bopivirus/Erbovirus", offset=0.3,fontsize=4, color="black")+
-  geom_cladelabel(node = 433, label = "Rosavirus", offset=0.3,fontsize=4, color="black")+
-  geom_cladelabel(node = 428, label = "Various picornaviridae", offset=0.3,fontsize=4, color="black")
+  geom_cladelabel(node = 244, label = "Enterovirus",offset=0.05, fontsize=4, color="black") +
+  geom_cladelabel(node = 333, label = "Various picornaviridae", offset=0.05,fontsize=4, color="black") +
+  geom_cladelabel(node = 321, label = "Various picornaviridae", offset=0.05, fontsize=4, color="black") +
+  geom_cladelabel(node = 240, label = "Various picornaviridae", offset=0.05,fontsize=4, color="black")+
+  geom_cladelabel(node = 378, label = "Cardiovirus", offset=0.05,fontsize=4, color="black")+
+  geom_cladelabel(node = 372, label = "Cosavirus", offset=0.05,fontsize=4, color="black")+
+  geom_cladelabel(node = 392, label = "Apthovirus/Bopivirus/Erbovirus", offset=0.05,fontsize=4, color="black")+
+  geom_cladelabel(node = 433, label = "Rosavirus", offset=0.05,fontsize=4, color="black")+
+  geom_cladelabel(node = 428, label = "Various picornaviridae", offset=0.05,fontsize=4, color="black")
 p2
 
 #collapse the labeled clades

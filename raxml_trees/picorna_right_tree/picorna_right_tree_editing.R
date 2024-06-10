@@ -216,19 +216,19 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=H
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,5))+
-  geom_cladelabel(node = 337, label = "Cardiovirus",offset=0.3, fontsize=4, color="black") +
-  geom_cladelabel(node = 330, label = "Cosavirus", offset=0.3,fontsize=4, color="black") +
-  geom_cladelabel(node = 325, label = "Cardiovirus", offset=0.3, fontsize=4, color="black") +
-  geom_cladelabel(node = 320, label = "Apthovirus/Erbovirus/Bopivirus", offset=0.3,fontsize=4, color="black")+
-  geom_cladelabel(node = 311, label = "Salivirus", offset=0.3,fontsize=4, color="black")+
-  geom_cladelabel(node = 314, label = "Various picornaviridae", offset=0.3,fontsize=4, color="black")+
-  geom_cladelabel(node = 353, label = "Enterovirus", offset=0.3,fontsize=4, color="black")+
-  geom_cladelabel(node = 405, label = "Various picornaviridae", offset=0.3,fontsize=4, color="black")+
-  geom_cladelabel(node = 384, label = "Various picornaviridae", offset=0.3,fontsize=4, color="black")+
-  geom_cladelabel(node = 244, label = "Various picornaviridae", offset=0.3,fontsize=4, color="black")+
-  geom_cladelabel(node = 255, label = "Various picornaviridae", offset=0.3,fontsize=4, color="black")+
-  geom_cladelabel(node = 414, label = "Various picornaviridae", offset=0.3,fontsize=4, color="black")+
-  geom_cladelabel(node = 435, label = "Fipivirus", offset=0.3,fontsize=4, color="black")
+  geom_cladelabel(node = 337, label = "Cardiovirus",offset=0.05, fontsize=4, color="black") +
+  geom_cladelabel(node = 330, label = "Cosavirus", offset=0.05,fontsize=4, color="black") +
+  geom_cladelabel(node = 325, label = "Cardiovirus", offset=0.05, fontsize=4, color="black") +
+  geom_cladelabel(node = 320, label = "Apthovirus/Erbovirus/Bopivirus", offset=0.05,fontsize=4, color="black")+
+  geom_cladelabel(node = 311, label = "Salivirus", offset=0.05,fontsize=4, color="black")+
+  geom_cladelabel(node = 314, label = "Various picornaviridae", offset=0.05,fontsize=4, color="black")+
+  geom_cladelabel(node = 353, label = "Enterovirus", offset=0.05,fontsize=4, color="black")+
+  geom_cladelabel(node = 405, label = "Various picornaviridae", offset=0.05,fontsize=4, color="black")+
+  geom_cladelabel(node = 384, label = "Various picornaviridae", offset=0.05,fontsize=4, color="black")+
+  geom_cladelabel(node = 244, label = "Various picornaviridae", offset=0.05,fontsize=4, color="black")+
+  geom_cladelabel(node = 255, label = "Various picornaviridae", offset=0.05,fontsize=4, color="black")+
+  geom_cladelabel(node = 414, label = "Various picornaviridae", offset=0.05,fontsize=4, color="black")+
+  geom_cladelabel(node = 435, label = "Fipivirus", offset=0.05,fontsize=4, color="black")
 p2
 
 #collapse the labeled clades

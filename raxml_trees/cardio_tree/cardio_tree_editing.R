@@ -195,9 +195,9 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,5))+
-  geom_cladelabel(node = 95, label = "Cardiovirus A",offset=0.3, fontsize=4, color="black") +
-  geom_cladelabel(node = 107, label = "Cardiovirus E/F", offset=0.3,fontsize=4, color="black") +
-  geom_cladelabel(node = 109, label = "Cardiovirus B/D/Rodent cardiovirus", offset=0.3, fontsize=4, color="black")
+  geom_cladelabel(node = 95, label = "Cardiovirus A",offset=0.05, fontsize=4, color="black") +
+  geom_cladelabel(node = 107, label = "Cardiovirus E/F", offset=0.05,fontsize=4, color="black") +
+  geom_cladelabel(node = 109, label = "Cardiovirus B/D/Rodent cardiovirus", offset=0.05, fontsize=4, color="black")
 p2
 
 #flip clades

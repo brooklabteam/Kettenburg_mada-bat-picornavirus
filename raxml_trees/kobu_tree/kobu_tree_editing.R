@@ -196,11 +196,11 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,5))+
-  geom_cladelabel(node = 231, label = "Aichivirus C",offset=0.3, fontsize=4, color="black") +
-  geom_cladelabel(node = 170, label = "Aichivirus B", offset=0.3,fontsize=4, color="black") +
-  geom_cladelabel(node = 215, label = "Aichivirus A", offset=0.3,fontsize=4, color="black") +
-  geom_cladelabel(node = 223, label = "Aichivirus D/Ovine kobuvirus", offset=0.3,fontsize=4, color="black") +
-  geom_cladelabel(node = 189, label = "Aichivirus A/Canine kobuvirus", offset=0.3,fontsize=4, color="black")
+  geom_cladelabel(node = 231, label = "Aichivirus C",offset=0.05, fontsize=4, color="black") +
+  geom_cladelabel(node = 170, label = "Aichivirus B", offset=0.05,fontsize=4, color="black") +
+  geom_cladelabel(node = 215, label = "Aichivirus A", offset=0.05,fontsize=4, color="black") +
+  geom_cladelabel(node = 223, label = "Aichivirus D/Ovine kobuvirus", offset=0.05,fontsize=4, color="black") +
+  geom_cladelabel(node = 189, label = "Aichivirus A/Canine kobuvirus", offset=0.05,fontsize=4, color="black")
 p2
 
 p2.1<-p2%>%ggtree::rotate(152)
