@@ -7,14 +7,14 @@ Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!
 
 System: Apple M2, 8 cores, 8 GB RAM
 
-RAxML-NG was called at 31-May-2024 10:49:59 as follows:
+RAxML-NG was called at 10-Jun-2024 14:02:38 as follows:
 
-raxml-ng --parse --msa hepato_all_align.fasta --model GTR+G4 --prefix T1
+raxml-ng --parse --msa hepato_all_align.fasta --model GTR+I+G4 --prefix T1
 
 Analysis options:
   run mode: Alignment parsing and compression
   start tree(s): 
-  random seed: 1717170599
+  random seed: 1718046158
   tip-inner: OFF
   pattern compression: ON
   per-rate scalers: OFF
@@ -25,27 +25,21 @@ Analysis options:
   parallelization: coarse-grained (auto), PTHREADS (auto)
 
 [00:00:00] Reading alignment from file: hepato_all_align.fasta
-[00:00:00] Loaded alignment with 118 taxa and 12482 sites
+[00:00:00] Loaded alignment with 129 taxa and 12500 sites
 
-WARNING: Sequences KT877158.1 and NC_028981.1 are exactly identical!
-WARNING: Duplicate sequences found: 1
-
-NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
-NOTE: was saved to: /Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/modeltest/hepato_all_modeltest/T1.raxml.reduced.phy
-
-Alignment comprises 1 partitions and 6738 patterns
+Alignment comprises 1 partitions and 7027 patterns
 
 Partition 0: noname
-Model: GTR+FO+G4m
-Alignment sites / patterns: 12482 / 6738
-Gaps: 40.55 %
-Invariant sites: 41.33 %
+Model: GTR+FO+I+G4m
+Alignment sites / patterns: 12500 / 7027
+Gaps: 40.63 %
+Invariant sites: 40.62 %
 
 
 NOTE: Binary MSA file created: T1.raxml.rba
 
 
-* Estimated memory requirements                : 193 MB
+* Estimated memory requirements                : 220 MB
 
 * Recommended number of threads / MPI processes: 8
 
@@ -57,7 +51,7 @@ Alignment can be successfully read by RAxML-NG.
 
 Execution log saved to: /Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/modeltest/hepato_all_modeltest/T1.raxml.log
 
-Analysis started: 31-May-2024 10:49:59 / finished: 31-May-2024 10:49:59
+Analysis started: 10-Jun-2024 14:02:38 / finished: 10-Jun-2024 14:02:38
 
-Elapsed time: 0.044 seconds
+Elapsed time: 0.043 seconds
 

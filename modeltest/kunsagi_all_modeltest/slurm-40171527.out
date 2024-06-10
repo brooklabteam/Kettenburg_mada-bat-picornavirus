@@ -1,0 +1,338 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+                             _      _ _            _      _   _  _____ 
+                            | |    | | |          | |    | \ | |/ ____|
+         _ __ ___   ___   __| | ___| | |_ ___  ___| |_   |  \| | |  __ 
+        | '_ ` _ \ / _ \ / _` |/ _ \ | __/ _ \/ __| __|  | . ` | | |_ |
+        | | | | | | (_) | (_| |  __/ | ||  __/\__ \ |_   | |\  | |__| |
+        |_| |_| |_|\___/ \__,_|\___|_|\__\___||___/\__|  |_| \_|\_____|
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7 released on 17.03.2021 by The Exelixis Lab.
+Written by Diego Darriba.
+Contributors: Tomas Flouri, Alexey Kozlov, Benoit Morel, David Posada, 
+              Alexandros Stamatakis.
+Latest version: https://github.com/ddarriba/modeltest
+--------------------------------------------------------------------------------
+
+Physical cores: 14
+Logical cores:  28
+Memory:         62.2GB
+Extensions:     AVX
+
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: kunsagi_all_align.fasta.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        kunsagi_all_align.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            5
+  #sites:           12121
+  #patterns:        1242
+  Max. thread mem:  2 MB
+
+Output:
+  Log:           kunsagi_all_align.fasta.log
+  Starting tree: kunsagi_all_align.fasta.tree
+  Results:       kunsagi_all_align.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/14
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> modeltest-ng -i kunsagi_all_align.fasta -d nt -t ml -p 8 
+
+
+Partition 1/1
+
+    8/88   TrN+I+G4       0h:00:00   0h:00:00          -45879.5685  2.0262  0.0222
+    5/88   TIM2+I+G4      0h:00:01   0h:00:01          -45860.4112  2.3260  0.0213
+    4/88   TIM3+I+G4      0h:00:01   0h:00:01          -45879.2461  2.4135  0.0219
+    9/88   TPM1uf+I+G4    0h:00:01   0h:00:01          -45880.1584  2.0122  0.0215
+    3/88   TVM+I+G4       0h:00:01   0h:00:01          -45860.4247  2.3128  0.0215
+    2/88   GTR+I+G4       0h:00:01   0h:00:01          -45859.3737  2.3088  0.0216
+    7/88   TPM3uf+I+G4    0h:00:01   0h:00:01          -45880.8533  2.0387  0.0221
+    6/88   TIM1+I+G4      0h:00:01   0h:00:01          -45878.6512  2.0362  0.0218
+   13/88   HKY+I+G4       0h:00:00   0h:00:01          -45880.6334  2.3920  0.0215
+   14/88   TIM2ef+I+G4    0h:00:00   0h:00:01          -45875.5656  2.3017  0.0216
+   17/88   F81+I+G4       0h:00:00   0h:00:01          -46500.5076  3.2923  0.0218
+   15/88   TIM1ef+I+G4    0h:00:00   0h:00:01          -45897.2212  2.3892  0.0216
+   16/88   TIM3ef+I+G4    0h:00:00   0h:00:01          -45897.5316  2.0340  0.0222
+   10/88   TPM2uf+I+G4    0h:00:00   0h:00:01          -45861.5047  2.0248  0.0217
+   12/88   TVMef+I+G4     0h:00:00   0h:00:01          -45879.0247  2.3358  0.0213
+   11/88   SYM+I+G4       0h:00:00   0h:00:01          -45874.0345  2.3847  0.0213
+   21/88   TrNef+I+G4     0h:00:00   0h:00:01          -45898.0828  2.3872  0.0216
+   23/88   JC+I+G4        0h:00:00   0h:00:01          -46541.9759  3.4223  0.0218
+   22/88   K80+I+G4       0h:00:00   0h:00:01          -45903.9722  2.4141  0.0217
+   19/88   TPM2+I+G4      0h:00:00   0h:00:01          -45881.2185  1.9579  0.0216
+   20/88   TPM1+I+G4      0h:00:00   0h:00:01          -45902.9484  2.1226  0.0215
+   24/88   GTR+G4         0h:00:00   0h:00:01          -45857.3342  1.6518       -
+   26/88   TIM3+G4        0h:00:00   0h:00:01          -45876.9044  1.7282       -
+   18/88   TPM3+I+G4      0h:00:00   0h:00:01          -45903.1679  2.4316  0.0219
+   25/88   TVM+G4         0h:00:00   0h:00:01          -45857.8396  1.7416       -
+   30/88   TrN+G4         0h:00:00   0h:00:01          -45877.0105  1.7293       -
+   28/88   TIM1+G4        0h:00:00   0h:00:01          -45875.8594  1.7929       -
+   29/88   TPM3uf+G4      0h:00:01   0h:00:02          -45878.3050  1.7364       -
+   27/88   TIM2+G4        0h:00:01   0h:00:02          -45858.1439  1.6803       -
+   35/88   HKY+G4         0h:00:01   0h:00:02          -45878.4316  1.7344       -
+   31/88   TPM1uf+G4      0h:00:01   0h:00:02          -45877.6729  1.7258       -
+   34/88   TVMef+G4       0h:00:01   0h:00:02          -45876.4539  1.7379       -
+   33/88   SYM+G4         0h:00:01   0h:00:02          -45871.7259  1.6462       -
+   32/88   TPM2uf+G4      0h:00:01   0h:00:02          -45859.3377  1.6713       -
+   39/88   F81+G4         0h:00:00   0h:00:02          -46500.8014  2.5077       -
+   37/88   TIM1ef+G4      0h:00:00   0h:00:02          -45895.3738  1.6822       -
+   36/88   TIM2ef+G4      0h:00:01   0h:00:02          -45872.9507  1.7378       -
+   38/88   TIM3ef+G4      0h:00:00   0h:00:02          -45894.6283  1.7960       -
+   43/88   TrNef+G4       0h:00:00   0h:00:02          -45896.0078  1.7149       -
+   45/88   JC+G4          0h:00:00   0h:00:02          -46542.3837  2.5730       -
+   44/88   K80+G4         0h:00:00   0h:00:02          -45901.4349  1.8102       -
+   41/88   TPM2+G4        0h:00:00   0h:00:02          -45878.7302  1.6785       -
+   40/88   TPM3+G4        0h:00:00   0h:00:02          -45900.5275  1.8080       -
+   42/88   TPM1+G4        0h:00:00   0h:00:02          -45900.5247  1.8050       -
+   52/88   TrN+I          0h:00:00   0h:00:02          -45910.0292       -  0.0985
+   49/88   TIM2+I         0h:00:00   0h:00:02          -45893.1079       -  0.0992
+   50/88   TIM1+I         0h:00:00   0h:00:02          -45909.4458       -  0.0985
+   53/88   TPM1uf+I       0h:00:00   0h:00:02          -45910.5962       -  0.0983
+   48/88   TIM3+I         0h:00:00   0h:00:02          -45909.9869       -  0.0985
+   57/88   HKY+I          0h:00:00   0h:00:02          -45911.1888       -  0.0984
+   46/88   GTR+I          0h:00:00   0h:00:02          -45892.3440       -  0.1001
+   58/88   TIM2ef+I       0h:00:00   0h:00:02          -45908.6123       -  0.0991
+   47/88   TVM+I          0h:00:00   0h:00:02          -45893.1397       -  0.0959
+   54/88   TPM2uf+I       0h:00:00   0h:00:02          -45893.9472       -  0.0991
+   61/88   F81+I          0h:00:00   0h:00:02          -46506.8339       -  0.0878
+   51/88   TPM3uf+I       0h:00:00   0h:00:02          -45911.1406       -  0.0984
+   59/88   TIM1ef+I       0h:00:00   0h:00:02          -45928.2651       -  0.0984
+   60/88   TIM3ef+I       0h:00:00   0h:00:02          -45928.3510       -  0.0984
+   64/88   TPM1+I         0h:00:00   0h:00:02          -45933.4406       -  0.0982
+   56/88   TVMef+I        0h:00:00   0h:00:02          -45911.8254       -  0.0990
+   65/88   TrNef+I        0h:00:00   0h:00:02          -45928.9597       -  0.0984
+   67/88   JC+I           0h:00:00   0h:00:02          -46547.6407       -  0.0870
+   66/88   K80+I          0h:00:00   0h:00:02          -45934.1532       -  0.0983
+   55/88   SYM+I          0h:00:00   0h:00:02          -45907.2245       -  0.0992
+   70/88   TIM3           0h:00:00   0h:00:02          -45981.3540       -       -
+   71/88   TIM2           0h:00:00   0h:00:02          -45965.6659       -       -
+   63/88   TPM2+I         0h:00:00   0h:00:02          -45913.2154       -  0.0956
+   72/88   TIM1           0h:00:00   0h:00:02          -45980.8915       -       -
+   73/88   TPM3uf         0h:00:00   0h:00:02          -45982.2977       -       -
+   74/88   TrN            0h:00:00   0h:00:02          -45981.5123       -       -
+   62/88   TPM3+I         0h:00:00   0h:00:02          -45933.5310       -  0.0981
+   79/88   HKY            0h:00:00   0h:00:02          -45982.4452       -       -
+   69/88   TVM            0h:00:00   0h:00:02          -45965.3922       -       -
+   75/88   TPM1uf         0h:00:00   0h:00:02          -45981.8247       -       -
+   80/88   TIM2ef         0h:00:00   0h:00:02          -45981.1467       -       -
+   76/88   TPM2uf         0h:00:00   0h:00:02          -45966.3568       -       -
+   83/88   F81            0h:00:00   0h:00:02          -46561.3131       -       -
+   84/88   TPM3           0h:00:00   0h:00:02          -46004.1191       -       -
+   82/88   TIM3ef         0h:00:00   0h:00:02          -45999.3767       -       -
+   81/88   TIM1ef         0h:00:00   0h:00:02          -45999.3952       -       -
+   85/88   TPM2           0h:00:00   0h:00:02          -45985.4696       -       -
+   68/88   GTR            0h:00:00   0h:00:02          -45964.6841       -       -
+   88/88   K80            0h:00:00   0h:00:02          -46004.8744       -       -
+   89/88   JC             0h:00:00   0h:00:02          -46600.7645       -       -
+   78/88   TVMef          0h:00:00   0h:00:02          -45983.8494       -       -
+   86/88   TPM1           0h:00:00   0h:00:02          -46004.1388       -       -
+   87/88   TrNef          0h:00:00   0h:00:02          -46000.1258       -       -
+   77/88   SYM            0h:00:01   0h:00:03          -45979.5340       -       -
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:00:03
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TPM2uf+G4          6    -45859.3377     91840.9105         0.0000    0.9512
+       2  TIM2+G4            7    -45858.1439     91847.9255         7.0150    0.0285
+       3  TIM2ef+G4          4    -45872.9507     91849.3310         8.4206    0.0141
+       4  TPM2+G4            3    -45878.7302     91851.4874        10.5769    0.0048
+       5  TPM2uf+I+G4        7    -45861.5047     91854.6471        13.7367    0.0010
+       6  TVM+G4             8    -45857.8396     91856.7196        15.8092    0.0004
+       7  TIM2+I+G4          8    -45860.4112     91861.8629        20.9524    0.0000
+       8  TIM2ef+I+G4        5    -45875.5656     91863.9635        23.0530    0.0000
+       9  GTR+G4             9    -45857.3342     91865.1116        24.2011    0.0000
+      10  SYM+G4             6    -45871.7259     91865.6868        24.7763    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              TPM2uf+G4
+lnL:                -45859.3377
+Frequencies:        0.2431 0.2675 0.2397 0.2498
+Subst. Rates:       1.4669 3.9334 1.4669 1.0000 3.9334 1.0000 
+Inv. sites prop:    -
+Gamma shape:        1.6713
+Score:              91840.9105
+Weight:             0.9512
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.9990
+Gamma-Inv:          0.0010
+Frequencies:        0.9811
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0991
+Alpha:              1.6726
+Alpha-P.Inv:        2.0350
+P.Inv-Alpha:        0.0217
+Frequencies:        0.2431 0.2674 0.2397 0.2497 
+
+Commands:
+  > phyml  -i kunsagi_all_align.fasta -m 010212 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s kunsagi_all_align.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa kunsagi_all_align.fasta --model TPM2uf+G4
+  > paup -s kunsagi_all_align.fasta
+  > iqtree -s kunsagi_all_align.fasta -m TPM2uf+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM2+G4            7    -45858.1439     91744.2877         0.0000    0.3666
+       2  TPM2uf+G4          6    -45859.3377     91744.6754         0.3877    0.3020
+       3  TVM+G4             8    -45857.8396     91745.6792         1.3915    0.1828
+       4  GTR+G4             9    -45857.3342     91746.6685         2.3807    0.1115
+       5  TIM2+I+G4          8    -45860.4112     91750.8225         6.5347    0.0140
+       6  TPM2uf+I+G4        7    -45861.5047     91751.0094         6.7217    0.0127
+       7  GTR+I+G4          10    -45859.3737     91752.7475         8.4597    0.0053
+       8  TVM+I+G4           9    -45860.4247     91752.8493         8.5616    0.0051
+       9  TIM2ef+G4          4    -45872.9507     91767.9014        23.6137    0.0000
+      10  SYM+G4             6    -45871.7259     91769.4517        25.1640    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TIM2+G4
+lnL:                -45858.1439
+Frequencies:        0.2441 0.2664 0.2407 0.2488
+Subst. Rates:       1.4535 3.7444 1.4535 1.0000 4.0482 1.0000 
+Inv. sites prop:    -
+Gamma shape:        1.6803
+Score:              91744.2877
+Weight:             0.3666
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.9629
+Gamma-Inv:          0.0371
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0988
+Alpha:              1.6859
+Alpha-P.Inv:        2.2184
+P.Inv-Alpha:        0.0215
+Frequencies:        0.2436 0.2668 0.2402 0.2494 
+
+Commands:
+  > phyml  -i kunsagi_all_align.fasta -m 010232 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s kunsagi_all_align.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa kunsagi_all_align.fasta --model TIM2+G4
+  > paup -s kunsagi_all_align.fasta
+  > iqtree -s kunsagi_all_align.fasta -m TIM2+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM2+G4            7    -45858.1439     91744.2877         0.0000    0.3666
+       2  TPM2uf+G4          6    -45859.3377     91744.6754         0.3877    0.3020
+       3  TVM+G4             8    -45857.8396     91745.6792         1.3915    0.1828
+       4  GTR+G4             9    -45857.3342     91746.6685         2.3807    0.1115
+       5  TIM2+I+G4          8    -45860.4112     91750.8225         6.5347    0.0140
+       6  TPM2uf+I+G4        7    -45861.5047     91751.0094         6.7217    0.0127
+       7  GTR+I+G4          10    -45859.3737     91752.7475         8.4597    0.0053
+       8  TVM+I+G4           9    -45860.4247     91752.8493         8.5616    0.0051
+       9  TIM2ef+G4          4    -45872.9507     91767.9014        23.6137    0.0000
+      10  SYM+G4             6    -45871.7259     91769.4517        25.1640    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TIM2+G4
+lnL:                -45858.1439
+Frequencies:        0.2441 0.2664 0.2407 0.2488
+Subst. Rates:       1.4535 3.7444 1.4535 1.0000 4.0482 1.0000 
+Inv. sites prop:    -
+Gamma shape:        1.6803
+Score:              91744.2877
+Weight:             0.3666
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              0.0000
+Gamma:              0.9629
+Gamma-Inv:          0.0371
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              0.0988
+Alpha:              1.6859
+Alpha-P.Inv:        2.2184
+P.Inv-Alpha:        0.0215
+Frequencies:        0.2436 0.2668 0.2402 0.2494 
+
+Commands:
+  > phyml  -i kunsagi_all_align.fasta -m 010232 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s kunsagi_all_align.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa kunsagi_all_align.fasta --model TIM2+G4
+  > paup -s kunsagi_all_align.fasta
+  > iqtree -s kunsagi_all_align.fasta -m TIM2+G4
+
+There are 1 different topologies
+Topologies written to kunsagi_all_align.fasta.topos
+
+topo_id   models_count   bic_support   aic_support   aicc_support
+-----------------------------------------------------------------
+      1             88       1.00000       1.00000       1.00000
+
+extended majority-rule consensus: ((OQ818317,NC_033818.1)[1.00000],NC_038317.1,(NC_001547.1,NC_034206.1)[1.00000]);
+strict consensus: ((OQ818317,NC_033818.1)[1.00000],NC_038317.1,(NC_001547.1,NC_034206.1)[1.00000]);
+
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC           TPM2uf+G4    91840.9105        0.9512
+       AIC             TIM2+G4    91744.2877        0.3666
+      AICc             TIM2+G4    91744.2877        0.3666
+
+Execution results written to kunsagi_all_align.fasta.out
+Starting tree written to kunsagi_all_align.fasta.tree

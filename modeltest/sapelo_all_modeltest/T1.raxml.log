@@ -7,14 +7,14 @@ Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!
 
 System: Apple M2, 8 cores, 8 GB RAM
 
-RAxML-NG was called at 31-May-2024 10:54:32 as follows:
+RAxML-NG was called at 10-Jun-2024 13:50:19 as follows:
 
 raxml-ng --parse --msa sapelo_all_align.fasta --model GTR+G4 --prefix T1
 
 Analysis options:
   run mode: Alignment parsing and compression
   start tree(s): 
-  random seed: 1717170872
+  random seed: 1718045419
   tip-inner: OFF
   pattern compression: ON
   per-rate scalers: OFF
@@ -25,23 +25,23 @@ Analysis options:
   parallelization: coarse-grained (auto), PTHREADS (auto)
 
 [00:00:00] Reading alignment from file: sapelo_all_align.fasta
-[00:00:00] Loaded alignment with 57 taxa and 13007 sites
+[00:00:00] Loaded alignment with 57 taxa and 13094 sites
 
-Alignment comprises 1 partitions and 7493 patterns
+Alignment comprises 1 partitions and 7625 patterns
 
 Partition 0: noname
 Model: GTR+FO+G4m
-Alignment sites / patterns: 13007 / 7493
-Gaps: 45.12 %
-Invariant sites: 38.90 %
+Alignment sites / patterns: 13094 / 7625
+Gaps: 41.38 %
+Invariant sites: 36.94 %
 
 
 NOTE: Binary MSA file created: T1.raxml.rba
 
 
-* Estimated memory requirements                : 103 MB
+* Estimated memory requirements                : 105 MB
 
-* Recommended number of threads / MPI processes: 9
+* Recommended number of threads / MPI processes: 8
 
 Please note that numbers given above are rough estimates only. 
 Actual memory consumption and parallel performance on your system may differ!
@@ -51,7 +51,7 @@ Alignment can be successfully read by RAxML-NG.
 
 Execution log saved to: /Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/modeltest/sapelo_all_modeltest/T1.raxml.log
 
-Analysis started: 31-May-2024 10:54:32 / finished: 31-May-2024 10:54:32
+Analysis started: 10-Jun-2024 13:50:19 / finished: 10-Jun-2024 13:50:19
 
 Elapsed time: 0.024 seconds
 

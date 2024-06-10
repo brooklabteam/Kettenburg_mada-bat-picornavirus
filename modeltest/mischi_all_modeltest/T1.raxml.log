@@ -7,14 +7,14 @@ Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!
 
 System: Apple M2, 8 cores, 8 GB RAM
 
-RAxML-NG was called at 31-May-2024 10:53:42 as follows:
+RAxML-NG was called at 10-Jun-2024 13:13:48 as follows:
 
 raxml-ng --parse --msa mischi_full_align.fasta --model GTR+G4 --prefix T1
 
 Analysis options:
   run mode: Alignment parsing and compression
   start tree(s): 
-  random seed: 1717170822
+  random seed: 1718043228
   tip-inner: OFF
   pattern compression: ON
   per-rate scalers: OFF
@@ -25,29 +25,21 @@ Analysis options:
   parallelization: coarse-grained (auto), PTHREADS (auto)
 
 [00:00:00] Reading alignment from file: mischi_full_align.fasta
-[00:00:00] Loaded alignment with 13 taxa and 12569 sites
+[00:00:00] Loaded alignment with 17 taxa and 12835 sites
 
-WARNING: Sequences NC_034381.1 and JQ814851.1 are exactly identical!
-WARNING: Sequences NC_026470.1 and KP100644.1 are exactly identical!
-WARNING: Sequences NC_016964.1 and JN831356.1 are exactly identical!
-WARNING: Duplicate sequences found: 3
-
-NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
-NOTE: was saved to: /Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/modeltest/mischi_all_modeltest/T1.raxml.reduced.phy
-
-Alignment comprises 1 partitions and 5692 patterns
+Alignment comprises 1 partitions and 6777 patterns
 
 Partition 0: noname
 Model: GTR+FO+G4m
-Alignment sites / patterns: 12569 / 5692
-Gaps: 34.60 %
-Invariant sites: 35.87 %
+Alignment sites / patterns: 12835 / 6777
+Gaps: 41.45 %
+Invariant sites: 37.09 %
 
 
 NOTE: Binary MSA file created: T1.raxml.rba
 
 
-* Estimated memory requirements                : 17 MB
+* Estimated memory requirements                : 27 MB
 
 * Recommended number of threads / MPI processes: 8
 
@@ -59,7 +51,7 @@ Alignment can be successfully read by RAxML-NG.
 
 Execution log saved to: /Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/modeltest/mischi_all_modeltest/T1.raxml.log
 
-Analysis started: 31-May-2024 10:53:42 / finished: 31-May-2024 10:53:42
+Analysis started: 10-Jun-2024 13:13:48 / finished: 10-Jun-2024 13:13:48
 
-Elapsed time: 0.013 seconds
+Elapsed time: 0.010 seconds
 

@@ -7,14 +7,14 @@ Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!
 
 System: Apple M2, 8 cores, 8 GB RAM
 
-RAxML-NG was called at 31-May-2024 10:56:29 as follows:
+RAxML-NG was called at 10-Jun-2024 13:20:13 as follows:
 
-raxml-ng --parse --msa tescho_full_align.fasta --model GTR+G4 --prefix T1
+raxml-ng --parse --msa tescho_full_align.fasta --model TIM2+G4 --prefix T1
 
 Analysis options:
   run mode: Alignment parsing and compression
   start tree(s): 
-  random seed: 1717170989
+  random seed: 1718043613
   tip-inner: OFF
   pattern compression: ON
   per-rate scalers: OFF
@@ -25,21 +25,21 @@ Analysis options:
   parallelization: coarse-grained (auto), PTHREADS (auto)
 
 [00:00:00] Reading alignment from file: tescho_full_align.fasta
-[00:00:00] Loaded alignment with 31 taxa and 12167 sites
+[00:00:00] Loaded alignment with 36 taxa and 12231 sites
 
-Alignment comprises 1 partitions and 4320 patterns
+Alignment comprises 1 partitions and 5404 patterns
 
 Partition 0: noname
-Model: GTR+FO+G4m
-Alignment sites / patterns: 12167 / 4320
-Gaps: 40.36 %
-Invariant sites: 49.80 %
+Model: TIM2+G4m
+Alignment sites / patterns: 12231 / 5404
+Gaps: 42.15 %
+Invariant sites: 47.97 %
 
 
 NOTE: Binary MSA file created: T1.raxml.rba
 
 
-* Estimated memory requirements                : 32 MB
+* Estimated memory requirements                : 47 MB
 
 * Recommended number of threads / MPI processes: 9
 
@@ -51,7 +51,7 @@ Alignment can be successfully read by RAxML-NG.
 
 Execution log saved to: /Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/modeltest/tescho_all_modeltest/T1.raxml.log
 
-Analysis started: 31-May-2024 10:56:29 / finished: 31-May-2024 10:56:29
+Analysis started: 10-Jun-2024 13:20:13 / finished: 10-Jun-2024 13:20:13
 
-Elapsed time: 0.014 seconds
+Elapsed time: 0.016 seconds
 

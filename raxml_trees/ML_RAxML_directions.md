@@ -30,7 +30,7 @@ ___
 For each picorna genus, I downloaded a .csv file which I processed in the attached R scripts [here]() to meet the following criteria: 
 - For RefSeq full genome tree: all RefSeq genome picornas with a bat host, all RefSeq genome picorna reference sequences with a non-bat host, and all RefSeq genome unclassified picornas that grouped with the picorna genera with a bat host.
 
--For all other full genome trees, I just downloaded full nucleotide sequences (which may include RefSeq sequences) and repeated the same criteria.
+-For all other full genome trees, I just downloaded full nucleotide sequences (which may include RefSeq sequences), in addition to all bat sequences over 2000bp. 
 
 I then removed any duplicates and any records which were entered twice with two accession numbers after having been reviewed to reference status. The unique records were downloaded into a  folder on my home computer in bulk from NCBI using the following code loaded into my web browser (produced from the Rscripts linked [here]()):
 
@@ -62,38 +62,38 @@ OQ818319
 OQ818337
 PP766467
 OQ818340
-PP766470 - does not align well with everything else, remove from sapo all alignment, too short
-PP766451 - does not align well with everything else, remove from kobu all alignment, too short
-OQ818348 - does not align well with everything else, remove from sapo all alignment, too short
+PP766470
+PP766451
+OQ818348
 PP766471
 PP766472
-OQ818347 - does not align well with everything else, remove from sapo all alignment, too short
+OQ818347
 OQ818344
-PP766460 - does not align well with everything else, remove from calici and sapo all alignments, too short
-PP766466 - does not align well with everything else, remove from sapelo all alignment, too short
-PP766473 - does not align well with everything else, remove from sapo all alignment, too short
-PP766454
-PP766452 - does not align well with everything else, remove from kobu all alignment, too short
-PP766462 - does not align well with everything else, remove from sapelo all alignment, too short
-PP766461 - does not align well with everything else, remove from calici and sapo all alignments, too short
-PP766458
-PP766450 - does not align well with everything else, remove from kobu all alignment, too short
-PP766449
-PP766474 - does not align well with everything else, remove from calici and sapo all alignments, too short
-PP766463
-PP766468 - does not align well with everything else, remove from sapo all alignment, too short
+PP766460 - over 2000bp but still too short for phylogeny
+PP766466 - under 2000bp
+PP766473 - under 2000bp
+PP766454 - under 2000bp
+PP766452 - under 2000bp
+PP766462 - under 2000bp
+PP766461 - under 2000bp
+PP766458 - under 2000bp
+PP766450 - under 2000bp
+PP766449 - under 2000bp
+PP766474 - under 2000bp
+PP766463 - under 2000bp
+PP766468 - under 2000bp
 OQ818342
-PP766464
-PP766475
-PP766476 - does not align well with everything else, remove from calici and sapo all alignments, too short
-OQ818343 - does not align well with everything else, remove from sapelo all alignment, too short
-PP766465
-OQ818345 - does not align well with everything else, remove from calici and sapo all alignments, too short
-PP766453
-OQ818346
-PP766477 - does not align well with everything else, remove from calici and sapo all alignments, too short
+PP766464 - under 2000bp
+PP766475 - under 2000bp
+PP766476 - under 2000bp
+OQ818343
+PP766465 - under 2000bp
+OQ818345 - under 2000bp
+PP766453 - under 2000bp
+OQ818346 - under 2000bp
+PP766477 - under 2000bp
 
-While I am mainly focused on the full genome sequences, I'll probably include some of the longer partial sequences as well in order to help fill out the tree...plus some genera I only have partials for like hepatovirus and cardiovirus.
+While I am mainly focused on the full genome sequences, I'll probably include some of the longer partial sequences as well in order to help fill out the tree...plus some genera I only have partials for like hepatovirus and cardiovirus. Any novel sequence under 2000bp was excluded from phylogenetic analysis. 
 
 ---
 I uploaded the concatenated fastas into the [MAFFT program online](https://mafft.cbrc.jp/alignment/server/) for alignment, After the alignment returns, I downloaded it as a .fasta file and saved with the same name as before, but with "_align" at the end. I then used the pre-prep R file used previously to download accession numbers from NCBI [here]() to edit the names of each sequence in the MSA, since RAxML won't accept spaces, periods, dashes, slashes, colon, semicolons, or parentheses in the sequence names.
@@ -141,15 +141,16 @@ I saved the results of ModelTest-NG [here](). Below are the best models per alig
 ```
 raxml-ng --parse --msa picornaviridae_refseq_all_align.fasta --model GTR+G4 --prefix T1
 ```
+Best model and threads for bat picornavirus all genomes: GTR+G4 8 threads
 Best model and threads for caliciviridae refseq all genomes: TVM+I+G4 7 threads
 Best model and threads for cardiovirus all genomes: TIM2+G4 8 threads
-Best model and threads for hepatovirus all genomes: GTR+G4 8 threads
-Best model and threads for kobuvirus all genomes: GTR+I+G4 8 threads
+Best model and threads for hepatovirus all genomes:  threads
+Best model and threads for kobuvirus all genomes:  threads
 Best model and threads for kunsagivirus all genomes: TIM2+G4 5 threads
 Best model and threads for mischivirus all genomes: GTR+G4 8 threads
-Best model and threads for sapelovirus all genomes: GTR+G4 9 threads
-Best model and threads for sapovirus all genomes: TIM2+I+G4 8 threads
-Best model and threads for teschovirus all genomes: GTR+G4 9 threads
+Best model and threads for sapelovirus all genomes:  threads
+Best model and threads for sapovirus all genomes:  threads
+Best model and threads for teschovirus all genomes: TIM2+G4 9 threads
 Best model and threads for picornaviridae refseq center all genomes: GTR+G4 10 threads
 Best model and threads for picornaviridae refseq left all genomes: GTR+G4 10 threads
 Best model and threads for picornaviridae refseq right all genomes: GTR+G4 10 threads
