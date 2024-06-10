@@ -26,15 +26,15 @@ plot(rooted.tree)
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
 
 #load tree data prepared from elsewhere
-dat <- read.csv(("teschovirus_metadata_full.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(("teschovirus_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
 
 #check that your metadata matches your tree data
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #31
-length(tree$tip.label) #31
+nrow(dat) #36
+length(tree$tip.label) #36
 
 #check subgroup names
 unique(dat$Species)
@@ -46,8 +46,9 @@ unique(dat$Species)
 #          "Vesivirus"="lightpink2","Alphavirus"="black")
 
 #pick order for the labels
-dat$Species <- factor(dat$Species, levels = c("Eidolon dupreanum teschovirus 1", "Porcine teschovirus 15",   "Porcine teschovirus 16",   
-                                          "Rousettus madagascariensis teschovirus 1",   "Rousettus madagascariensis teschovirus 2", "Teschovirus A","Sindbis virus"))   
+dat$Species <- factor(dat$Species, levels = c("Eidolon dupreanum teschovirus 1", "Porcine teschovirus 15",   "Porcine teschovirus 16","Pteropodidae bat teschovirus",   
+                                          "Rousettus madagascariensis teschovirus 1",   "Rousettus madagascariensis teschovirus 2", 
+                                          "Teschovirus A","Teschovirus sp.","Sindbis virus"))   
 
 dat$novel <- as.factor(dat$novel)
 
@@ -193,11 +194,11 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
-  xlim(c(0,5))+
+  xlim(c(0,10))+
   geom_cladelabel(node = 43, label = "Teschovirus A",offset=0.05, fontsize=4, color="black")
 p2
 
-p2.1<-p2%>%ggtree::rotate(31)
+p2.1<-p2%>%ggtree::rotate(36)
 p2.1
 
 #collapse the labeled clades
@@ -221,4 +222,4 @@ p4 <- p3  %<+% p3.dat +
         legend.key.size = unit(0.3, "cm"))
 p4
 
-#15 x 5
+#15.1 x 5
