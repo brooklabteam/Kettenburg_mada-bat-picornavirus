@@ -26,7 +26,7 @@ plot(rooted.tree)
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
 
 #load tree data prepared from elsewhere
-dat <- read.csv(("sapelovirus_metadata_all.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(("sapelovirus_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
 
 #check that your metadata matches your tree data
@@ -47,7 +47,7 @@ unique(dat$Species)
 
 #pick order for the labels
 dat$Species <- factor(dat$Species, levels = c("Bat sapelovirus", "Eidolon dupreanum sapelovirus 1",   "Eidolon dupreanum sapelovirus 2",   
-                                          "Marmot sapelovirus 1",   "Marmot sapelovirus 2", "Rousettus madagascariensis sapelovirus 1", "Sapelovirus A",    
+                                          "Marmot sapelovirus 1",   "Marmot sapelovirus 2", "Pteropodidae bat sapelovirus","Rousettus madagascariensis sapelovirus 1", "Sapelovirus A",    
                                           "Sapelovirus B",  "Sapelovirus-like porcine picornavirus Japan", "Tasmanian devil-associated sapelovirus",  "Sindbis virus"))   
 
 dat$novel <- as.factor(dat$novel)
@@ -194,18 +194,21 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
-  xlim(c(0,5))+
-  geom_cladelabel(node = 59, label = "Sapelovirus A",offset=0.05, fontsize=4, color="black")
+  xlim(c(0,8))+
+  geom_cladelabel(node = 70, label = "Sapelovirus A/B",offset=0.05, fontsize=4, color="black")
 p2
 
 p2.1<-p2%>%ggtree::rotate(57)
 p2.1
 
-p2.2<-p2.1%>%ggtree::rotate(58)
+p2.2<-p2.1%>%ggtree::rotate(65)
 p2.2
 
+p2.3<-p2.2%>%ggtree::rotate(58)
+p2.3
+
 #collapse the labeled clades
-p3<-collapse(p2.2, 59)+geom_point2(aes(subset=(node==59)), size=4, shape=22, fill="white")
+p3<-collapse(p2.3, 70)+geom_point2(aes(subset=(node==70)), size=4, shape=22, fill="white")
 p3
 
 
@@ -226,4 +229,4 @@ p4 <- p3  %<+% p3.dat +
         legend.key.size = unit(0.3, "cm"))
 p4
 
-#15 x 5
+#20 x 5
