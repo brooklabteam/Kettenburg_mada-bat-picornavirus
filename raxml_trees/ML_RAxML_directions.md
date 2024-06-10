@@ -149,7 +149,7 @@ Best model and threads for kobuvirus all genomes:  threads
 Best model and threads for kunsagivirus all genomes: TIM2+G4 5 threads
 Best model and threads for mischivirus all genomes: GTR+G4 8 threads
 Best model and threads for sapelovirus all genomes: GTR+G4 8 threads
-Best model and threads for sapovirus all genomes:  threads
+Best model and threads for sapovirus all genomes: GTR+I+G4 8 threads
 Best model and threads for teschovirus all genomes: TIM2+G4 9 threads
 Best model and threads for picornaviridae refseq center all genomes: GTR+G4 10 threads
 Best model and threads for picornaviridae refseq left all genomes: GTR+G4 10 threads

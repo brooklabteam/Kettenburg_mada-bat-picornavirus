@@ -1,0 +1,180 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        sapo_all_align.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            218
+  #sites:           13479
+  #patterns:        9209
+  Max. thread mem:  989 MB
+
+Output:
+  Log:           sapo_all_align.fasta.log
+  Starting tree: sapo_all_align.fasta.tree
+  Results:       sapo_all_align.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/14
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10   -562584.8561   1129382.1498         0.0000    1.0000
+       2  TIM2+I+G4          8   -562605.8207   1129405.0610        22.9112    0.0000
+       3  TVM+I+G4           9   -562704.3886   1129611.7057       229.5560    0.0000
+       4  TPM2uf+I+G4        7   -562729.8265   1129643.5637       261.4139    0.0000
+       5  GTR+G4             9   -562792.9025   1129788.7336       406.5838    0.0000
+       6  TIM2+G4            7   -562820.7815   1129825.4739       443.3241    0.0000
+       7  SYM+I+G4           7   -562896.9912   1129977.8932       595.7434    0.0000
+       8  TVM+G4             8   -562910.7221   1130014.8639       632.7141    0.0000
+       9  TPM2uf+G4          6   -562942.2025   1130058.8069       676.6572    0.0000
+      10  TIM2ef+I+G4        5   -562987.4490   1130139.7910       757.6413    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -562584.8561
+Frequencies:        0.2291 0.2799 0.2406 0.2504
+Subst. Rates:       1.8953 4.9658 1.6850 1.0737 6.2040 1.0000 
+Inv. sites prop:    0.0306
+Gamma shape:        0.7061
+Score:              1129382.1498
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.6322
+Alpha-P.Inv:        0.7061
+P.Inv-Alpha:        0.0306
+Frequencies:        0.2291 0.2799 0.2406 0.2504 
+
+Commands:
+  > phyml  -i sapo_all_align.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s sapo_all_align.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa sapo_all_align.fasta --model GTR+I+G4
+  > paup -s sapo_all_align.fasta
+  > iqtree -s sapo_all_align.fasta -m GTR+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10   -562584.8561   1126055.7123         0.0000    1.0000
+       2  TIM2+I+G4          8   -562605.8207   1126093.6413        37.9290    0.0000
+       3  TVM+I+G4           9   -562704.3886   1126292.7772       237.0649    0.0000
+       4  TPM2uf+I+G4        7   -562729.8265   1126339.6529       283.9406    0.0000
+       5  GTR+G4             9   -562792.9025   1126469.8050       414.0927    0.0000
+       6  TIM2+G4            7   -562820.7815   1126521.5631       465.8508    0.0000
+       7  SYM+I+G4           7   -562896.9912   1126673.9824       618.2701    0.0000
+       8  TVM+G4             8   -562910.7221   1126703.4442       647.7319    0.0000
+       9  TPM2uf+G4          6   -562942.2025   1126762.4050       706.6927    0.0000
+      10  TIM2ef+I+G4        5   -562987.4490   1126850.8980       795.1857    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -562584.8561
+Frequencies:        0.2291 0.2799 0.2406 0.2504
+Subst. Rates:       1.8953 4.9658 1.6850 1.0737 6.2040 1.0000 
+Inv. sites prop:    0.0306
+Gamma shape:        0.7061
+Score:              1126055.7123
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.6322
+Alpha-P.Inv:        0.7061
+P.Inv-Alpha:        0.0306
+Frequencies:        0.2291 0.2799 0.2406 0.2504 
+
+Commands:
+  > phyml  -i sapo_all_align.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s sapo_all_align.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa sapo_all_align.fasta --model GTR+I+G4
+  > paup -s sapo_all_align.fasta
+  > iqtree -s sapo_all_align.fasta -m GTR+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10   -562584.8561   1126085.7123         0.0000    1.0000
+       2  TIM2+I+G4          8   -562605.8207   1126122.6413        36.9290    0.0000
+       3  TVM+I+G4           9   -562704.3886   1126322.7772       237.0649    0.0000
+       4  TPM2uf+I+G4        7   -562729.8265   1126368.6529       282.9406    0.0000
+       5  GTR+G4             9   -562792.9025   1126499.8050       414.0927    0.0000
+       6  TIM2+G4            7   -562820.7815   1126550.5631       464.8508    0.0000
+       7  SYM+I+G4           7   -562896.9912   1126702.9824       617.2701    0.0000
+       8  TVM+G4             8   -562910.7221   1126732.4442       646.7319    0.0000
+       9  TPM2uf+G4          6   -562942.2025   1126791.4050       705.6927    0.0000
+      10  TIM2ef+I+G4        5   -562987.4490   1126879.8980       794.1857    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+I+G4
+lnL:                -562584.8561
+Frequencies:        0.2291 0.2799 0.2406 0.2504
+Subst. Rates:       1.8953 4.9658 1.6850 1.0737 6.2040 1.0000 
+Inv. sites prop:    0.0306
+Gamma shape:        0.7061
+Score:              1126085.7123
+Weight:             1.0000
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.6322
+Alpha-P.Inv:        0.7061
+P.Inv-Alpha:        0.0306
+Frequencies:        0.2291 0.2799 0.2406 0.2504 
+
+Commands:
+  > phyml  -i sapo_all_align.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s sapo_all_align.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa sapo_all_align.fasta --model GTR+I+G4
+  > paup -s sapo_all_align.fasta
+  > iqtree -s sapo_all_align.fasta -m GTR+I+G4
+Done
