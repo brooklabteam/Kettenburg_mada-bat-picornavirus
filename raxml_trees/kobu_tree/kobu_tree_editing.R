@@ -150,7 +150,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.2, "cm")) +
-  xlim(c(0,30))
+  xlim(c(0,5))
 
 p1
 
@@ -195,7 +195,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
-  xlim(c(0,50))+
+  xlim(c(0,5))+
   geom_cladelabel(node = 231, label = "Aichivirus C",offset=0.3, fontsize=4, color="black") +
   geom_cladelabel(node = 170, label = "Aichivirus B", offset=0.3,fontsize=4, color="black") +
   geom_cladelabel(node = 215, label = "Aichivirus A", offset=0.3,fontsize=4, color="black") +
@@ -239,3 +239,4 @@ p8 <- p7  %<+% p7.dat +
         legend.key.size = unit(0.3, "cm"))
 p8
 
+#15 x 5

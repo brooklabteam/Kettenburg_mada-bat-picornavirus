@@ -149,7 +149,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.2, "cm")) +
-  xlim(c(0,14))
+  xlim(c(0,5))
 
 p1
 
@@ -194,18 +194,21 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
-  xlim(c(0,50))+
+  xlim(c(0,5))+
   geom_cladelabel(node = 95, label = "Cardiovirus A",offset=0.3, fontsize=4, color="black") +
   geom_cladelabel(node = 107, label = "Cardiovirus E/F", offset=0.3,fontsize=4, color="black") +
   geom_cladelabel(node = 109, label = "Cardiovirus B/D/Rodent cardiovirus", offset=0.3, fontsize=4, color="black")
 p2
 
+#flip clades
+p2.1<-p2%>%ggtree::rotate(98)
+p2.1
+
 #collapse the labeled clades
-p3<-collapse(p2, 95)+geom_point2(aes(subset=(node==95)), size=4, shape=22, fill="white")
+p3<-collapse(p2.1, 95)+geom_point2(aes(subset=(node==95)), size=4, shape=22, fill="white")
 p4<-collapse(p3, 107)+geom_point2(aes(subset=(node==107)), size=4, shape=22, fill="white")
 p5<-collapse(p4, 109)+geom_point2(aes(subset=(node==109)), size=4, shape=22, fill="white")
 p5
-
 
 ##add bootstrap values to this tree
 p5.dat <- p5$data
@@ -224,3 +227,4 @@ p6 <- p5  %<+% p5.dat +
         legend.key.size = unit(0.3, "cm"))
 p6
 
+#15 x 5

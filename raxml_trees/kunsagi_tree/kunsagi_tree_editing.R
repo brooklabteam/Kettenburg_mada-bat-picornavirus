@@ -148,7 +148,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.2, "cm")) +
-  xlim(c(0,14))
+  xlim(c(0,5))
 
 p1
 
@@ -193,7 +193,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
-  xlim(c(0,50))
+  xlim(c(0,5))
 p2
 
 ##add bootstrap values to this tree

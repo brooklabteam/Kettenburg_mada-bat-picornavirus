@@ -164,7 +164,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=H
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.2, "cm")) +
-  xlim(c(0,14))
+  xlim(c(0,5))
 
 p1
 
@@ -209,7 +209,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=H
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
-  xlim(c(0,14))+
+  xlim(c(0,5))+
   geom_cladelabel(node = 70, label = "Norovirus",offset=0.3, fontsize=4, color="black") +
   geom_cladelabel(node = 96, label = "Vesivirus", offset=0.3,fontsize=4, color="black") +
   geom_cladelabel(node = 89, label = "Unclassified caliciviruses", offset=0.3, fontsize=4, color="black") +
@@ -242,3 +242,4 @@ p7 <- p6  %<+% p6.dat +
         legend.key.size = unit(0.3, "cm"))
 p7
 
+#15 x 5

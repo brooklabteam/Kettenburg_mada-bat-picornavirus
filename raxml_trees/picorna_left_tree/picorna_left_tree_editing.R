@@ -170,7 +170,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=H
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.2, "cm")) +
-  xlim(c(0,14))
+  xlim(c(0,5))
 
 p1
 
@@ -215,7 +215,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Genus, shape=H
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
-  xlim(c(0,14))+
+  xlim(c(0,5))+
   geom_cladelabel(node = 244, label = "Enterovirus",offset=0.3, fontsize=4, color="black") +
   geom_cladelabel(node = 333, label = "Various picornaviridae", offset=0.3,fontsize=4, color="black") +
   geom_cladelabel(node = 321, label = "Various picornaviridae", offset=0.3, fontsize=4, color="black") +

@@ -165,7 +165,7 @@ Best model and threads for picornaviridae refseq right all genomes: GTR+G4 10 th
 
 The script below are an example of a command that does the tree inference, bootstrapping, and calculated support. If a tree times out, I'll do the steps separately.
 
-Picornavirales all (partial and full) genomes
+Picornaviridae all (partial and full) genomes
 ```
 #!/bin/bash
 #SBATCH --job-name=picornaviridae_all

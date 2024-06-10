@@ -149,7 +149,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.2, "cm")) +
-  xlim(c(0,14))
+  xlim(c(0,5))
 
 p1
 
@@ -194,7 +194,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
-  xlim(c(0,50))+
+  xlim(c(0,5))+
   geom_cladelabel(node = 59, label = "Sapelovirus A",offset=0.3, fontsize=4, color="black")
 p2
 
@@ -226,3 +226,4 @@ p4 <- p3  %<+% p3.dat +
         legend.key.size = unit(0.3, "cm"))
 p4
 
+#15 x 5

@@ -24,29 +24,24 @@ plot(rooted.tree)
 
 #Remove root from displaying, still calculates changes correctly without it
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
-#drop tips of repeat sequences
-rooted.tree <- drop.tip(rooted.tree, "JQ814851.1")
-rooted.tree <- drop.tip(rooted.tree, "KP100644.1")
-rooted.tree <- drop.tip(rooted.tree, "JN831356.1")
-rooted.tree <- drop.tip(rooted.tree, "KN831355.1")
 
 #load tree data prepared from elsewhere
-dat <- read.csv(("mischivirus_metadata_full.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(("mischivirus_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
 
 #check that your metadata matches your tree data
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #13
-length(tree$tip.label) #13
+nrow(dat) #17
+length(tree$tip.label) #17
 
 #check subgroup names
 unique(dat$Species)
 
 #pick order for the labels
-dat$Species <- factor(dat$Species, levels = c("Mischivirus A", "Mischivirus B",   "Mischivirus C",   
-                                          "Mischivirus D",   "Pteropus rufus mischivirus",  "Sindbis virus"))   
+dat$Species <- factor(dat$Species, levels = c("Bat mischivirus 4","Bat mischivirus 5","Mischivirus A", "Mischivirus B",   "Mischivirus C",   
+                                          "Mischivirus D", "Mischivirus sp.",   "Pteropus rufus mischivirus",  "Sindbis virus"))   
 
 dat$novel <- as.factor(dat$novel)
 
@@ -147,7 +142,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.2, "cm")) +
-  xlim(c(0,14))
+  xlim(c(0,5))
 
 p1
 
@@ -192,19 +187,22 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
-  xlim(c(0,50))
+  xlim(c(0,5))
 p2
 
 #flip nodes around to show ancestral states
-p2.1<-p2%>%ggtree::rotate(14)
+p2.1<-p2%>%ggtree::rotate(20)
 p2.1
 
-##add bootstrap values to this tree
-p2.1dat <- p2.1$data
-p2.1dat$Bootstrap <- NA
-Bootstrap<-p2.1dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p2.1dat$label)] <- as.numeric(p2.1dat$label[(length(tree.dat$tip_label)+1):length(p2.1dat$label)])#fill with label
+p2.2<-p2.1%>%ggtree::rotate(18)
+p2.2
 
-p3 <- p2.1  %<+% p2.1dat + 
+##add bootstrap values to this tree
+p2.2dat <- p2.2$data
+p2.2dat$Bootstrap <- NA
+Bootstrap<-p2.2dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p2.2dat$label)] <- as.numeric(p2.2dat$label[(length(tree.dat$tip_label)+1):length(p2.2dat$label)])#fill with label
+
+p3 <- p2.2  %<+% p2.2dat + 
   ggnewscale::new_scale_fill() + 
   geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
