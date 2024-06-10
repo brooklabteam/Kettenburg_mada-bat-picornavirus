@@ -23,22 +23,18 @@ rooted.tree <- root(tree, which(tree$tip.label == "NC_001547.1"))
 plot(rooted.tree)
 
 #load tree data prepared from elsewhere
-dat <- read.csv(("kunsagivirus_metadata_full.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(("kunsagivirus_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
 
 #Remove root from displaying, still calculates changes correctly without it
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
-#Drop tips that are repeat sequences
-rooted.tree <- drop.tip(rooted.tree, "KX644936.1")
-rooted.tree <- drop.tip(rooted.tree, "KC935379.1")
-rooted.tree <- drop.tip(rooted.tree, "KY670597.1")
 
 #check that your metadata matches your tree data
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #8
-length(tree$tip.label) #8
+nrow(dat) #5
+length(tree$tip.label) #5
 
 #check subgroup names
 unique(dat$Species)

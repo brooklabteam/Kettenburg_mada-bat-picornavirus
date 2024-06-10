@@ -144,11 +144,11 @@ raxml-ng --parse --msa picornaviridae_refseq_all_align.fasta --model GTR+G4 --pr
 Best model and threads for bat picornavirus all genomes: GTR+G4 8 threads
 Best model and threads for caliciviridae refseq all genomes: TVM+I+G4 7 threads
 Best model and threads for cardiovirus all genomes: TIM2+G4 8 threads
-Best model and threads for hepatovirus all genomes:  threads
+Best model and threads for hepatovirus all genomes: GTR+I+G4 8 threads
 Best model and threads for kobuvirus all genomes:  threads
 Best model and threads for kunsagivirus all genomes: TIM2+G4 5 threads
 Best model and threads for mischivirus all genomes: GTR+G4 8 threads
-Best model and threads for sapelovirus all genomes:  threads
+Best model and threads for sapelovirus all genomes: GTR+G4 8 threads
 Best model and threads for sapovirus all genomes:  threads
 Best model and threads for teschovirus all genomes: TIM2+G4 9 threads
 Best model and threads for picornaviridae refseq center all genomes: GTR+G4 10 threads
