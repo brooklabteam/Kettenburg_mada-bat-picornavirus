@@ -145,7 +145,7 @@ Best model and threads for bat picornavirus all genomes: GTR+G4 8 threads
 Best model and threads for caliciviridae refseq all genomes: TVM+I+G4 7 threads
 Best model and threads for cardiovirus all genomes: TIM2+G4 8 threads
 Best model and threads for hepatovirus all genomes: GTR+I+G4 8 threads
-Best model and threads for kobuvirus all genomes:  threads
+Best model and threads for kobuvirus all genomes: GTR+I+G4 8 threads
 Best model and threads for kunsagivirus all genomes: TIM2+G4 5 threads
 Best model and threads for mischivirus all genomes: GTR+G4 8 threads
 Best model and threads for sapelovirus all genomes: GTR+G4 8 threads
