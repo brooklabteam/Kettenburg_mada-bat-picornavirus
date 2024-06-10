@@ -14,7 +14,7 @@ library(cowplot)
 
 ##Set working directory
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
-setwd(paste0(homewd,"/raxml_trees/hepato_tree"))
+setwd(paste0(homewd,"/raxml_trees/bat_picorna_tree"))
 
 #load the tree and root it
 tree <-  read.tree("T1.raxml.supportFBP") 
@@ -26,24 +26,21 @@ plot(rooted.tree)
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
 
 #load tree data prepared from elsewhere
-dat <- read.csv(("hepatovirus_metadata_all.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(("bat_picornavirus_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
 
 #check that your metadata matches your tree data
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #118
-length(tree$tip.label) #118
+nrow(dat) #31
+length(tree$tip.label) #31
 
 #check subgroup names
 unique(dat$Species)
 
 #pick order for the labels
-dat$Species <- factor(dat$Species, levels = c("Eidolon dupreanum hepatovirus", "Hepatovirus A", "Hepatovirus B",   
-                                          "Hepatovirus C",   "Hepatovirus D", "Hepatovirus E", "Hepatovirus F",    
-                                          "Hepatovirus G",  "Hepatovirus H",   "Hepatovirus I", "Hepatovirus sp.",
-                                          "Hepatovirus sp. 'sotense'", "Rodent hepatovirus", "Tupaia hepatovirus A",
+dat$Species <- factor(dat$Species, levels = c("Shanbavirus A", "Rousettus madagascariensis picornavirus 1", "Rousettus madagascariensis picornavirus 3",
                                           "Sindbis virus"))   
 
 dat$novel <- as.factor(dat$novel)
@@ -190,17 +187,17 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,5))+
-  geom_cladelabel(node = 119, label = "Hepatovirus A",offset=0.3, fontsize=4, color="black")
+  geom_cladelabel(node = 38, label = "Shanbavirus A",offset=0.05, fontsize=4, color="black")
 p2
 
-p2.1<-p2%>%ggtree::rotate(118)
+p2.1<-p2%>%ggtree::rotate(31)
 p2.1
 
-p2.2<-p2.1%>%ggtree::rotate(208)
+p2.2<-p2.1%>%ggtree::rotate(39)
 p2.2
 
 #collapse the labeled clades
-p3<-collapse(p2.2, 119)+geom_point2(aes(subset=(node==119)), size=4, shape=22, fill="white")
+p3<-collapse(p2.2, 38)+geom_point2(aes(subset=(node==38)), size=4, shape=22, fill="white")
 p3
 
 ##add bootstrap values to this tree
