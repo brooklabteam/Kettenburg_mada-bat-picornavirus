@@ -16,47 +16,81 @@ library(ggridges)
 
 #####################################################################
 
-homewd = "/Users/gwenddolenkettenburg/Desktop/mada-bat-picornavirus" 
-
-dat <- read.csv(file = paste0(homewd,"/metadata/demo_picornavirales_fecesurine_meta_ridgeline_2018_2019.csv"), header = T, stringsAsFactors = F)
+homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
+dat <- read.csv(file = paste0(homewd,"/metadata/demo_sampleset_fecesurine_map.csv"), header = T, stringsAsFactors = F)
 head(dat)
 names(dat)
 
-unique(dat$any_picorna)
+#clean class
+unique(dat$bat_sex)
 
+dat$bat_sex <- dat$bat_sex
+dat$bat_sex[dat$bat_sex=="female"] <- "Female"
+dat$bat_sex[dat$bat_sex=="male"] <- "Male"
 
-#and rank by rough age, by total positives
+dat$month[dat$month=="1"]<-"Jan"
+dat$month[dat$month=="2"]<-"Feb"
+dat$month[dat$month=="3"]<-"March"
+dat$month[dat$month=="4"]<-"April"
+dat$month[dat$month=="5"]<-"May"
+dat$month[dat$month=="6"]<-"June"
+dat$month[dat$month=="7"]<-"July"
+dat$month[dat$month=="8"]<-"August"
+dat$month[dat$month=="9"]<-"Sept"
+dat$month[dat$month=="10"]<-"Oct"
+dat$month[dat$month=="11"]<-"Nov"
+dat$month[dat$month=="12"]<-"Dec"
+
+#clean class
+unique(dat$bat_age_class)
+
+#and rank by rough age
 unique(dat$young_of_year)
 dat$bat_age_class <- dat$bat_age_class
 dat$bat_age_class[dat$bat_age_class=="P" | dat$bat_age_class=="L"] <- "A"
 dat$bat_age_class[dat$bat_age_class=="NL" | dat$young_of_year=="no"] <- "A"
 dat$bat_age_class[dat$young_of_year=="yes"] <- "J"
 
-#get into date form
-dat$collection_date <- as.Date(dat$collection_date,format = "%m/%d/%y")
+unique(dat$any_picorna)
 
+#select columns of interest
+dat <- dplyr::select(dat,roost_site,bat_age_class,bat_sex, processing_date, sampling_session,
+                     bat_species, sample_id, any_picorna, any_calici,any_pos, month, year)
 
-#check sites
+head(dat)
 unique(dat$roost_site)
 
+#get into date form
+#dat$collection_date <- as.Date(dat$collection_date,format = "%y/%m/%d")
+
+#make the data into factors
+dat$bat_species<-factor(dat$bat_species, levels=c("Pteropus rufus", "Eidolon dupreanum", "Rousettus madagascariensis"))
+dat$bat_sex<-factor(dat$bat_sex, levels=c("Female","Male"))
+dat$bat_age_class<-factor(dat$bat_age_class, levels=c("J", "A"))
+dat$month<-factor(dat$month, levels=c("Jan", "Feb", "March", "April", "May", "June", "July", "August", "Sept",
+                                      "Oct", "Nov", "Dec"))
 
 #change picorna to numeric
 dat$any_picorna <- as.numeric(dat$any_picorna)
-
-names(dat)[names(dat)=="bat_species"] <- "species"
+dat$any_calici <- as.numeric(dat$any_calici)
 
 #and make sure it is only 1 of the same sample type per each date
-dat.list <- dlply(dat, .(sampleid))
+dat.list <- dlply(dat, .(sample_id))
 
 #summarize into prevalence by species and epiwk
-dat.sum <- ddply(dat, .(species,month, year), summarise, N=length(any_picorna), pos=sum(any_picorna))
+dat.sum_picorna <- ddply(dat, .(bat_species, year, bat_age_class, bat_sex, month), summarise, N=length(any_picorna), pos=sum(any_picorna))
+dat.sum_calici <- ddply(dat, .(bat_species, year, bat_age_class, bat_sex, month), summarise, N=length(any_calici), pos=sum(any_calici))
 
 #get negatives and prevalence
-dat.sum$neg= dat.sum$N-dat.sum$pos
-dat.sum$prevalence <- dat.sum$pos/dat.sum$N
+dat.sum_picorna$neg= dat.sum_picorna$N-dat.sum_picorna$pos
+dat.sum_picorna$prevalence <- dat.sum_picorna$pos/dat.sum_picorna$N
+
+dat.sum_calici$neg= dat.sum_calici$N-dat.sum_calici$pos
+dat.sum_calici$prevalence <- dat.sum_calici$pos/dat.sum_calici$N
 
 #and confidence intervals on the prevalence
-CIs <- mapply(FUN=prop.test, x=as.list(dat.sum$pos), n=as.list(dat.sum$N), MoreArgs = list(alternative = "two.sided", conf.level = .95, correct=F), SIMPLIFY = F)
+CIs_picorna <- mapply(FUN=prop.test, x=as.list(dat.sum_picorna$pos), n=as.list(dat.sum_picorna$N), MoreArgs = list(alternative = "two.sided", conf.level = .95, correct=F), SIMPLIFY = F)
+CIs_calici <- mapply(FUN=prop.test, x=as.list(dat.sum_calici$pos), n=as.list(dat.sum_calici$N), MoreArgs = list(alternative = "two.sided", conf.level = .95, correct=F), SIMPLIFY = F)
 
 #and extract the upper and lower CIs
 get.CIs <- function(df){
@@ -66,16 +100,14 @@ get.CIs <- function(df){
   return(out.df)
 }
 
-CIs <- lapply(CIs, get.CIs)
+CIs_picorna <- lapply(CIs_picorna, get.CIs)
+CIs_calici <- lapply(CIs_calici, get.CIs)
 
-dat.sum$lci <- c(unlist(sapply(CIs, '[',1)))
-dat.sum$uci <- c(unlist(sapply(CIs, '[',2)))
+dat.sum_picorna$lci <- c(unlist(sapply(CIs_picorna, '[',1)))
+dat.sum_picorna$uci <- c(unlist(sapply(CIs_picorna, '[',2)))
 
-#simplify= the name of "host_genus_species" 
-names(dat.sum)[names(dat.sum)=="host_genus_species"] <- "species"
-
-dat.sum$year<-factor(dat.sum$year)
-dat.sum$year<-factor(dat.sum$year, levels = c("2018","2019"))
+dat.sum_calici$lci <- c(unlist(sapply(CIs_calici, '[',1)))
+dat.sum_calici$uci <- c(unlist(sapply(CIs_calici, '[',2)))
 
 #here's a vector assigning colors to each species
 colz = c("Eidolon dupreanum"="coral2", "Pteropus rufus" = "cornflowerblue", "Rousettus madagascariensis" = "darkgoldenrod1" )

@@ -1,29 +1,29 @@
-﻿family,genus,virus,species,type,num_contigs,num_reads
-Picornaviridae,Cardiovirus,Eidolon dupreanum cardiovirus,Eidolon dupreanum,partial,1,91641
-Picornaviridae,Hepatovirus,Eidolon dupreanum hepatovirus,Eidolon dupreanum,partial,4,2331
-Picornaviridae,Kobuvirus,Eidolon dupreanum kobuvirus,Eidolon dupreanum,full,2,34210
-Picornaviridae,Kobuvirus,Eidolon dupreanum kobuvirus,Eidolon dupreanum,partial,5,712227
-Picornaviridae,Kobuvirus,Eidolon dupreanum kobuvirus 2,Eidolon dupreanum,partial,1,38
-Picornaviridae,Kunsagivirus,Eidolon dupreanum kunsagivirus,Eidolon dupreanum,full,1,1478
-Picornaviridae,Mischivirus,Pteropus rufus mischivirus,Pteropus rufus,full,1,39092
-Picornaviridae,Sapelovirus,Eidolon dupreanum sapelovirus 1,Eidolon dupreanum,full,1,603
-Picornaviridae,Sapelovirus,Eidolon dupreanum sapelovirus 1,Eidolon dupreanum,partial,5,276
-Picornaviridae,Sapelovirus,Eidolon dupreanum sapelovirus 2,Eidolon dupreanum,full,1,1531
-Picornaviridae,Sapelovirus,Eidolon dupreanum sapelovirus 2,Eidolon dupreanum,partial,3,121
-Picornaviridae,Sapelovirus,Rousettus madagascariensis sapelovirus 1,Rousettus madagascariensis,full,1,1585
-Caliciviridae,Sapovirus,Eidolon dupreanum sapovirus 1,Eidolon dupreanum,partial,1,351
-Caliciviridae,Sapovirus,Eidolon dupreanum sapovirus 1,Eidolon dupreanum,full,1,495
-Caliciviridae,Sapovirus,Eidolon dupreanum sapovirus 2,Eidolon dupreanum,partial,1,103
-Caliciviridae,Sapovirus,Eidolon dupreanum sapovirus 3,Eidolon dupreanum,partial,1,99
-Caliciviridae,Sapovirus,Eidolon dupreanum sapovirus 4,Eidolon dupreanum,partial,1,95621
-Caliciviridae,Sapovirus,Rousettus madagascariensis sapovirus 1,Rousettus madagascariensis,partial,1,25
-Caliciviridae,Sapovirus,Rousettus madagascariensis sapovirus 2,Rousettus madagascariensis,partial,6,507
-Caliciviridae,Sapovirus,Rousettus madagascariensis sapovirus 3,Rousettus madagascariensis,partial,2,172
-Picornaviridae,Teschovirus,Eidolon dupreanum teschovirus 1,Eidolon dupreanum,full,1,372
-Picornaviridae,Teschovirus,Rousettus madagascariensis teschovirus 1,Rousettus madagascariensis,full,1,8917
-Picornaviridae,Teschovirus,Rousettus madagascariensis teschovirus 2,Rousettus madagascariensis,full,1,164750
-Picornaviridae,Unclassified picornavirus,Rousettus madagascariensis picornavirus 1,Rousettus madagascariensis,partial,1,214
-Picornaviridae,Unclassified picornavirus,Rousettus madagascariensis picornavirus 1,Rousettus madagascariensis,full,1,707
-Picornaviridae,Unclassified picornavirus,Rousettus madagascariensis picornavirus 2,Rousettus madagascariensis,partial,1,37
-Picornaviridae,Unclassified picornavirus,Rousettus madagascariensis picornavirus 3,Rousettus madagascariensis,full,1,806
-Picornaviridae,Unclassified picornavirus,Rousettus madagascariensis picornavirus 3,Rousettus madagascariensis,partial,4,1232
+﻿family,genus,virus,species,type,num_contigs,num_reads,num_reads_log
+Picornaviridae,Cardiovirus,Eidolon dupreanum cardiovirus,Eidolon dupreanum,partial,1,91641,4.96208982
+Picornaviridae,Hepatovirus,Eidolon dupreanum hepatovirus,Eidolon dupreanum,partial,4,2331,3.367542274
+Picornaviridae,Kobuvirus,Eidolon dupreanum kobuvirus,Eidolon dupreanum,full,2,34210,4.534153074
+Picornaviridae,Kobuvirus,Eidolon dupreanum kobuvirus,Eidolon dupreanum,partial,5,712227,5.852618433
+Picornaviridae,Kobuvirus,Eidolon dupreanum kobuvirus 2,Eidolon dupreanum,partial,1,38,1.579783597
+Picornaviridae,Kunsagivirus,Eidolon dupreanum kunsagivirus,Eidolon dupreanum,full,1,1478,3.169674434
+Picornaviridae,Mischivirus,Pteropus rufus mischivirus,Pteropus rufus,full,1,39092,4.59208789
+Picornaviridae,Sapelovirus,Eidolon dupreanum sapelovirus 1,Eidolon dupreanum,full,1,603,2.780317312
+Picornaviridae,Sapelovirus,Eidolon dupreanum sapelovirus 1,Eidolon dupreanum,partial,5,276,2.440909082
+Picornaviridae,Sapelovirus,Eidolon dupreanum sapelovirus 2,Eidolon dupreanum,full,1,1531,3.184975191
+Picornaviridae,Sapelovirus,Eidolon dupreanum sapelovirus 2,Eidolon dupreanum,partial,3,121,2.08278537
+Picornaviridae,Sapelovirus,Rousettus madagascariensis sapelovirus 1,Rousettus madagascariensis,full,1,1585,3.200029267
+Caliciviridae,Sapovirus,Eidolon dupreanum sapovirus 1,Eidolon dupreanum,partial,1,351,2.545307116
+Caliciviridae,Sapovirus,Eidolon dupreanum sapovirus 1,Eidolon dupreanum,full,1,495,2.694605199
+Caliciviridae,Sapovirus,Eidolon dupreanum sapovirus 2,Eidolon dupreanum,partial,1,103,2.012837225
+Caliciviridae,Sapovirus,Eidolon dupreanum sapovirus 3,Eidolon dupreanum,partial,1,99,1.995635195
+Caliciviridae,Sapovirus,Eidolon dupreanum sapovirus 4,Eidolon dupreanum,partial,1,95621,4.980553281
+Caliciviridae,Sapovirus,Rousettus madagascariensis sapovirus 1,Rousettus madagascariensis,partial,1,25,1.397940009
+Caliciviridae,Sapovirus,Rousettus madagascariensis sapovirus 2,Rousettus madagascariensis,partial,6,507,2.705007959
+Caliciviridae,Sapovirus,Rousettus madagascariensis sapovirus 3,Rousettus madagascariensis,partial,2,172,2.235528447
+Picornaviridae,Teschovirus,Eidolon dupreanum teschovirus 1,Eidolon dupreanum,full,1,372,2.57054294
+Picornaviridae,Teschovirus,Rousettus madagascariensis teschovirus 1,Rousettus madagascariensis,full,1,8917,3.950218767
+Picornaviridae,Teschovirus,Rousettus madagascariensis teschovirus 2,Rousettus madagascariensis,full,1,164750,5.216825423
+Picornaviridae,Unclassified picornavirus,Rousettus madagascariensis picornavirus 1,Rousettus madagascariensis,partial,1,214,2.330413773
+Picornaviridae,Unclassified picornavirus,Rousettus madagascariensis picornavirus 1,Rousettus madagascariensis,full,1,707,2.849419414
+Picornaviridae,Unclassified picornavirus,Rousettus madagascariensis picornavirus 2,Rousettus madagascariensis,partial,1,37,1.568201724
+Picornaviridae,Unclassified picornavirus,Rousettus madagascariensis picornavirus 3,Rousettus madagascariensis,full,1,806,2.906335042
+Picornaviridae,Unclassified picornavirus,Rousettus madagascariensis picornavirus 3,Rousettus madagascariensis,partial,4,1232,3.090610708
