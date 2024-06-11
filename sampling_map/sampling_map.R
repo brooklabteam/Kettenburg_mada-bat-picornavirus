@@ -53,7 +53,7 @@ class(orotl_shp)
 ###import and configuration
 
 p1<-ggplot() +  
-  geom_sf(color = "sienna2", fill = "sienna2",data = orotl_shp)+
+  geom_sf(color = "sienna4", fill = "sienna2",data = orotl_shp)+
   coord_sf(xlim = c(42, 60), ylim = c(-26, -11.5), expand = FALSE)+
   theme_bw()+
   theme(plot.margin = unit(c(-1,.5,-1.5,.1),"cm"))+
