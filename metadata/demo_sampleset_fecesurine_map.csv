@@ -1,4 +1,388 @@
 sample_id,any_picorna,any_calici,any_pos,virus_general,dataset,specific_roost_site,roost_site,latitude_s,longitude_e,sampling_session,processing_date,year,bat_species,bat_sex,bat_age_class,young_of_year,pupmom_pair,pup_or_mom,sampleid_pupmom_pair,bat_weight_g,body_length_cm,bat_forearm_mm,bat_tibia_mm,ear_length_mm,gonad_length_mm,gonad_width_mm,predicted_mass_g,mass_forearm_residual
+ANGB110,1,0,1,Kobuvirus,NIH,Angavobe,AngavoKely,-18.9327,47.7578,30,2015-06-23,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,300,22,133.95,63.57,28.53,6.58,7.77,NA,NA
+ANGB121,1,0,1,Kobuvirus,NIH,Angavobe,AngavoKely,-18.9327,47.7578,33,2016-01-08,2016,Eidolon dupreanum,male,A,NA,NA,NA,NA,360,21,128.8,63.11,29.66,small,small,NA,NA
+ANGB141,1,0,1,Kobuvirus,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,22,128.9,64.6,23,4.5,2.2,309.0554407,-9.055440743
+ANGB22,1,0,1,Kobuvirus,NIH,Angavobe,AngavoKely,-18.9327,47.7578,4,2013-11-24,2013,Eidolon dupreanum,male,J,NA,NA,NA,NA,120,13.3,97.8,46.8,20.8,NA,NA,NA,NA
+KEL148,1,0,1,Kunsagivirus/Hepatovirus,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,male,A,no,no,NA,NA,350,21,127,61.9,29,15.9,17.2,312.9920015,37.0079985
+KEL164,1,0,1,Teschovirus,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,J,yes,no,NA,NA,230,19.2,112.9,52.6,26.8,small,small,NA,NA
+KEL166,0,1,2,Sapovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,J,yes,no,NA,NA,220,18.3,109.3,49.8,27.8,small,small,NA,NA
+KEL168,0,1,2,Sapovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,330,20.8,129.6,62.6,25.2,8.9,9.4,311.4010121,18.59898791
+KEL200,0,1,2,Sapovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,340,23,136.1,69.4,26.5,8.8,6.7,333.4190695,6.580930495
+KEL207,0,1,2,Sapovirus,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,270,20.5,130,59.8,25.6,3.9,1.6,312.7435948,-42.74359482
+KEL233,1,0,1,Sapelovirus,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,300,19.5,122.8,60,33.1,small,small,299.6290351,0.370964854
+KEL272,1,0,1,Sapelovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,male,A,no,no,NA,NA,150,14.25,124.3,63,24.5,15,14.3,304.3861629,-154.3861629
+KEL273,1,0,1,Sapelovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,male,A,no,no,NA,NA,340,13.14,126.8,57.8,24.6,16.9,15.3,312.3526498,27.64735021
+KEL275B,1,0,1,Sapelovirus,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,210,20.8,132.1,65,30.4,7.9,4.6,319.8189424,-109.8189424
+KEL298,1,0,1,Sapelovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,330,23.8,123.53,60.06,20.5,16.12,14.2,301.9420248,28.05797517
+KEL318,1,0,1,Kobuvirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,230,21,122,56,28.6,small,small,NA,NA
+KEL367,1,0,1,Cardiovirus,NIH,Angavokely,AngavoKely,-18.9327,47.7578,75,2019-08-24,2019,Eidolon dupreanum,male,A,no,no,NA,NA,330,19.6,131.6,63.1,25.6,14.8,11.8,327.7791014,2.220898639
+KEL72,1,0,1,Hepatovirus,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-17,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,270,21,128.9,59.3,27.2,14.9,21.9,NA,NA
+KEL86,1,0,1,Kobuvirus,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-18,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,350,22.2,140.9,64.9,37.9,15.9,26.9,NA,NA
+AMB150,1,0,1,Mischivirus,CZID,Ambakoana,Ambakoana,-18.513,48.1665,48,2018-08-06,2018,Pteropus rufus,male,A,no,no,NA,NA,415,23,146.9,67.1,37.4,small,small,476.2230735,-61.2230735
+MIZ179,0,1,2,Sapovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,43,2018-04-14,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,75,12,74.3,35.6,12.3,14.4,13.7,69.65354502,5.346454981
+MIZ190,1,0,1,Teschovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,60,12.5,71.4,33.5,13.3,small,small,65.2385596,-5.238559601
+MIZ194,1,0,1,Unclassified picornavirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,female,NL,no,no,NA,NA,45,12,68,31.4,17.6,3.1,2.4,55.00008832,-10.00008832
+MIZ205,1,0,1,Teschovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,60,12,72.6,36.1,10,14.3,9.3,67.05170055,-7.051700554
+MIZ214,1,0,1,Unclassified picornavirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,65,11.2,70.4,32.1,13.3,12.2,7.9,63.74253193,1.257468067
+MIZ219,0,1,2,Sapovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,70,10.9,73.5,34.3,11,12.2,9.4,68.42431136,1.575688636
+MIZ240,1,0,1,Unclassified picornavirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,50,11.6,73.9,38.1,12.9,12.8,9.9,69.03785571,-19.03785571
+MIZ243,1,0,1,Sapelovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-12,2018,Rousettus madagascariensis,male,J,yes,no,NA,NA,35,9.2,60.7,27.9,14.4,small,small,NA,NA
+MIZ345,0,1,2,Sapovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,59,2019-01-31,2019,Rousettus madagascariensis,female,J,yes,yes,pup,MIZ342,20,6.93,51.11,21.85,11.64,small,small,NA,NA
+MIZ405,1,1,1,Unclassified picornavirus/Sapovirus,CZID/NIH,Maromizaha,Maromizaha,-18.9623,48.4525,65,2019-04-09,2019,Rousettus madagascariensis,male,A,NA,no,NA,NA,70,10.5,68.5,35.3,12.7,9.4,10,NA,NA
+AND12,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,9,2014-08-02,2014,Eidolon dupreanum/Rousettus madagascariensis,male,A,NA,NA,NA,NA,350,19.5,129.1,67.7,28.7,NA,NA,NA,NA
+AND19,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,9,2014-08-03,2014,Eidolon dupreanum/Rousettus madagascariensis,male,A,NA,NA,NA,NA,315,20.5,120.3,60.9,27.5,NA,NA,NA,NA
+AND24,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-14,2014,Eidolon dupreanum/Rousettus madagascariensis,male,A,NA,NA,NA,NA,310,21.5,132.5,63.7,27.2,13.4,17.5,NA,NA
+AND26,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-14,2014,Eidolon dupreanum/Rousettus madagascariensis,male,J,NA,NA,NA,NA,50,10.01,66.6,36.4,19.1,4.9,6.1,NA,NA
+AND27,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-14,2014,Eidolon dupreanum/Rousettus madagascariensis,male,A,NA,NA,NA,NA,370,29.8,130.1,64.2,31,14.5,17.2,NA,NA
+AND28,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-14,2014,Eidolon dupreanum/Rousettus madagascariensis,female,NL,NA,NA,NA,NA,310,21.5,132,64.5,28.5,5.5,11.5,NA,NA
+AND29,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-14,2014,Eidolon dupreanum/Rousettus madagascariensis,male,A,NA,NA,NA,NA,300,22.5,128.3,58.5,31.9,10.5,14.5,NA,NA
+AND30,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-16,2014,Eidolon dupreanum/Rousettus madagascariensis,male,A,NA,NA,NA,NA,325,21.5,134.2,61.2,32.9,11,17.5,NA,NA
+AND31,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-16,2014,Eidolon dupreanum/Rousettus madagascariensis,male,A,NA,NA,NA,NA,260,17.5,130,61.5,25,12.5,14.5,NA,NA
+AND32,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-17,2014,Eidolon dupreanum/Rousettus madagascariensis,male,A,NA,NA,NA,NA,330,20.4,129.5,62.8,31.1,13.5,18.5,NA,NA
+AND33,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-17,2014,Eidolon dupreanum/Rousettus madagascariensis,male,A,NA,NA,NA,NA,320,22.5,125.2,61,32.2,10.5,15,NA,NA
+AND35,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-18,2014,Eidolon dupreanum/Rousettus madagascariensis,male,A,NA,NA,NA,NA,330,20.7,129.3,62.7,28.5,11.9,14.3,NA,NA
+AND36,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,23,2015-03-30,2015,Eidolon dupreanum/Rousettus madagascariensis,male,A,NA,NA,NA,NA,340,22.5,138.7,67.9,32.5,12.6,15.2,NA,NA
+AND37,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,23,2015-03-30,2015,Eidolon dupreanum/Rousettus madagascariensis,male,A,NA,NA,NA,NA,280,23.2,129.9,60.5,31.6,13.7,13.9,NA,NA
+AND38,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,23,2015-03-30,2015,Eidolon dupreanum/Rousettus madagascariensis,male,A,NA,NA,NA,NA,295,20.4,125.1,60.9,31.3,14.2,18.1,NA,NA
+AND40,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,23,2015-03-31,2015,Eidolon dupreanum/Rousettus madagascariensis,male,A,NA,NA,NA,NA,270,19.1,128.4,60.6,29.2,12.5,13.2,NA,NA
+AND41,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,73,2019-08-08,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,165,21.9,132.5,64.3,26.2,13,11.8,330.6904266,-165.6904266
+AND42,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,73,2019-08-08,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,365,23,135.1,64,25.9,13.5,9.8,339.1338951,25.86610489
+ANGB114,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,33,2016-01-08,2016,Eidolon dupreanum,male,A,NA,NA,NA,NA,270,21.3,129.4,59.8,27.6,small,small,NA,NA
+ANGB122,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,33,2016-01-08,2016,Eidolon dupreanum,male,A,NA,NA,NA,NA,360,22.5,133,65.11,29.2,small,small,NA,NA
+ANGB123,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,33,2016-01-08,2016,Eidolon dupreanum,male,A,NA,NA,NA,NA,320,22.5,128,61.67,32.26,small,small,NA,NA
+ANGB125,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,37,2018-02-14,2018,Eidolon dupreanum,male,A,no,no,NA,NA,385,22.5,137.6,65,28.5,24.9,28.3,347.2983332,37.70166682
+ANGB127,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,37,2018-02-14,2018,Eidolon dupreanum,male,A,no,no,NA,NA,295,21.5,130.5,64.1,31.7,small,small,324.2288517,-29.22885172
+ANGB128,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,37,2018-02-14,2018,Eidolon dupreanum,male,A,no,no,NA,NA,325,22.5,134.1,65.2,32.3,26,30,335.8806351,-10.88063508
+ANGB129,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,37,2018-02-14,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,NA,21,128.5,61.5,31.8,small,small,NA,NA
+ANGB130,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,37,2018-02-14,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,330,21,129.2,65.6,32.6,9.3,10.6,310.0600695,19.9399305
+ANGB131,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,37,2018-02-14,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,21.8,138.2,66.4,34.4,10,11.5,340.6230634,-30.62306341
+ANGB132,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,37,2018-02-14,2018,Eidolon dupreanum,male,A,no,no,NA,NA,350,20.3,130.6,62.5,37.1,18.5,19.2,324.5512351,25.44876485
+ANGB133,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,37,2018-02-14,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,285,20.5,132.2,59.1,28,8.6,8.7,320.1569818,-35.1569818
+ANGB134,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,290,20.5,127.7,71.9,22.3,8.3,6.7,305.0461948,-15.04619477
+ANGB135,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,22,133.9,63.8,23.01,4.7,1.5,325.9191107,-5.919110689
+ANGB136,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,290,21.5,127.7,71.3,22.3,3.9,2,305.0461948,-15.04619477
+ANGB137,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,290,20.5,135.8,63.5,22.6,3.9,1.3,332.3935009,-42.39350088
+ANGB138,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,295,21.5,126.8,62.5,23,9.3,7.3,302.0490296,-7.049029592
+ANGB139,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,21,133.8,63.5,24.2,9,7.8,325.5793557,-5.579355682
+ANGB140,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,21.5,126.6,63.2,22.8,8.8,5.4,301.3841342,8.615865813
+ANGB142,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,male,A,no,no,NA,NA,370,21.5,131.6,61.9,22.7,23,15.5,327.7791014,42.22089864
+ANGB143,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,18.5,132.7,63,30.8,6.5,7.5,321.8486971,-21.84869713
+ANGB144,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,281,20.5,124.2,60.4,26.4,7.1,4.1,293.437942,-12.43794198
+ANGB145,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,20,129.9,58.4,30.3,8.2,7,312.4077955,7.592204454
+ANGB146,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,male,J,yes,no,NA,NA,250,18,122.3,57.5,29.3,small,small,NA,NA
+ANGB147,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,19,125.2,63.3,31.3,7,5.1,296.7415332,23.25846681
+ANGB148,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,18.5,129.3,61,28.2,8.8,4,310.3951512,-10.39515122
+ANGB149,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,280,20.5,125.5,59,27.2,6.3,4.3,297.7346539,-17.73465391
+ANGB15,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,4,2013-11-24,2013,Eidolon dupreanum,female,J,NA,NA,NA,NA,75,11.7,79,30,24,NA,NA,NA,NA
+ANGB150,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,330,20.5,129.5,60.5,25.3,8,5.7,311.0656226,18.93437744
+ANGB151,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,340,19,128.2,60.8,29.8,10.1,6.7,306.7149088,33.28509122
+ANGB152,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,18.5,132.6,63.8,27.7,7.6,6.3,321.5101518,-1.51015177
+ANGB153,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,18.5,134.4,62.7,28.8,6,4.9,327.6193924,-17.61939243
+ANGB154,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,340,20,125.1,63.4,28.9,7.2,5.3,296.4107022,43.58929778
+ANGB155,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,18,131.1,65.4,30.4,8.9,6.5,316.4441295,3.555870541
+ANGB156,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,49,2018-09-09,2018,Eidolon dupreanum,male,A,no,no,NA,NA,340,22.5,125.3,63.2,30.2,15.8,13.4,307.5670932,32.4329068
+ANGB157,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,49,2018-09-09,2018,Eidolon dupreanum,male,A,no,no,NA,NA,365,22.8,129.9,63.2,30.7,18.5,14.3,322.2960954,42.70390463
+ANGB158,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,49,2018-09-09,2018,Eidolon dupreanum,female,P,no,no,NA,NA,385,21.8,134.5,61.8,34.5,8.7,5.7,327.9597498,57.0402502
+ANGB159,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,49,2018-09-09,2018,Eidolon dupreanum,female,P,no,no,NA,NA,340,22.2,134.3,65.2,27.1,8.3,6.1,327.2791353,12.72086466
+ANGB160,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,49,2018-09-09,2018,Eidolon dupreanum,male,A,no,no,NA,NA,360,23.5,126.2,60.9,23.4,23.7,14.6,310.4363952,49.56360483
+ANGB161,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,49,2018-09-09,2018,Eidolon dupreanum,male,A,no,no,NA,NA,320,23,128.9,60.6,23.9,15.1,10.3,319.0807354,0.91926456
+ANGB163,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,49,2018-09-09,2018,Eidolon dupreanum,male,A,no,no,NA,NA,345,22.3,131.7,66.2,33.9,15.4,10.5,328.1022903,16.89770968
+ANGB19,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,4,2013-11-24,2013,Eidolon dupreanum,female,J,NA,NA,NA,NA,101,12.5,95,41,26,NA,NA,NA,NA
+ANGB21,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,4,2013-11-24,2013,Eidolon dupreanum,female,L,NA,NA,NA,NA,300,22.3,128.1,60.4,29.1,NA,NA,NA,NA
+ANGB40,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,7,2014-03-20,2014,Eidolon dupreanum,female,NL,NA,NA,NA,NA,320,23,130,64,32,NA,NA,NA,NA
+ANGB42,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,13,2014-10-04,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,420,21.1,132.5,60.5,31.1,10.3,8.2,NA,NA
+ANGB45,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,19,2014-12-14,2014,Eidolon dupreanum,female,L,NA,NA,NA,NA,315,21.8,127,61.1,31.1,5.3,9.3,NA,NA
+ANGB47,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,19,2014-12-14,2014,Eidolon dupreanum,female,J,NA,NA,NA,NA,125,14.4,108,48,26.5,small,NA,NA,NA
+ANGB50,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,19,2014-12-14,2014,Eidolon dupreanum,female,NL,NA,NA,NA,NA,425,20.8,123,62.4,32.4,4.4,10.4,NA,NA
+ANGB51,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,19,2014-12-14,2014,Eidolon dupreanum,male,J,NA,NA,NA,NA,135,15.5,112,51.5,24.5,small,NA,NA,NA
+ANGB52,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,19,2014-12-14,2014,Eidolon dupreanum,female,NL,NA,NA,NA,NA,340,20.2,134,63.2,30,8.6,12.6,NA,NA
+ANGB53,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,19,2014-12-14,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,320,22.5,127.2,59.1,29.4,23.3,26.3,NA,NA
+ANGB57,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,25,2015-04-27,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,390,21.4,132.5,66.4,26,5.3,10.1,NA,NA
+ANGB61,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,25,2015-04-27,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,320,22.6,124.9,57.5,31.9,6.2,9.4,NA,NA
+ANGB64,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,25,2015-04-27,2015,Eidolon dupreanum,male,A,NA,NA,NA,NA,360,20,134,65.3,29.16,18.63,21.32,NA,NA
+ANGB67,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,25,2015-04-27,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,380,22.1,136.1,67.2,33.2,7.8,10,NA,NA
+ANGB90,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,30,2015-06-22,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,330,19.8,139,61.4,32.3,11.1,8.6,NA,NA
+ANGB91,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,30,2015-06-22,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,350,20.5,131.08,58.08,28.01,9.08,6.67,NA,NA
+CAT005,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-28,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,312,22.5,129.1,63.8,28.7,11.8,12.2,319.7232159,-7.723215866
+CAT006,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-28,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,284,20.9,125.7,56.8,28.4,small,small,298.3972571,-14.39725707
+CAT007,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-28,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,309,21.3,126.3,57.8,25.8,12.2,10.1,310.7555831,-1.755583143
+CAT008,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-28,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,370,22.7,132.1,64.8,29.1,10.8,10,329.3957757,40.60422429
+CAT009,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-28,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,276,20.8,125.7,61.1,26.4,small,small,308.8415844,-32.8415844
+CAT010,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,254,19.4,122.1,57.3,25.2,receded,receded,297.4149371,-43.41493714
+CAT011,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,337,22.4,136.2,65.9,26.4,10.6,10.3,342.7207611,-5.72076111
+CAT012,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,269,19.6,121.6,58.3,28.8,small,small,284.897957,-15.89795699
+CAT013,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,290,24.7,135.7,66,28,12,10.3,341.0892951,-51.08929513
+CAT014,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,244,20.7,121.9,58,23.9,small,small,285.8796821,-41.87968208
+CAT015,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,319,21.75,129.8,67.4,33.7,12.8,12.5,321.974227,-2.974227045
+CAT016,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,299,20.5,129,62.3,27.7,10.3,16.6,319.4019386,-20.40193862
+CAT017,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,278,21.7,125.8,59.8,29.2,7.5,10.3,298.7287153,-20.7287153
+CAT018,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,303,20.2,131.1,60.2,26.7,7.4,8.4,316.4441295,-13.44412946
+CAT019,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,318,21.3,135.1,66.4,25.2,12.3,14.9,339.1338951,-21.13389511
+CAT020,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,273,20.4,122.3,62.5,30.6,8.9,7,287.1901378,-14.19013782
+CAT021,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,298,19.5,132.8,64.3,31.3,7.8,8.8,322.1873435,-24.18734355
+CAT022,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,285,21.3,130.2,62,28.2,10.4,9,313.4155003,-28.41550029
+CAT023,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,268,19.8,126.8,60.1,25.4,9.8,6.1,302.0490296,-34.04902959
+CAT024,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,293,21.3,132.2,64,34.9,6,8,320.1569818,-27.1569818
+CAT025,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,295,21.3,129,62.7,30,7.6,7.5,309.3902142,-14.39021422
+CAT026,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-05,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,305,20.9,133.3,60.5,28.6,7,9.3,323.8820899,-18.88208986
+CAT027,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-05,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,342,21.6,135.1,63.9,33.1,11.9,11.6,339.1338951,2.866104891
+CAT028,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-05,2019,Eidolon dupreanum/Rousettus madagascariensis,female,J,no,no,NA,NA,290,20.2,130.1,61.2,25.6,small,small,NA,NA
+CAT030,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-05,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,315,20.8,133.4,64.1,32,13.8,13.1,333.6076393,-18.6076393
+CAT031,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-05,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,300,21.6,130.5,61.5,26.8,6.2,6.8,314.424125,-14.42412504
+CAT034,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-05,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,293,23,131.1,63.3,27.5,15.1,10.6,326.1642529,-33.16425288
+CAT035,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-05,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,296,22.8,133,62,29.5,12.5,14.1,332.3103752,-36.31037524
+CAT037,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-05,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,318,21.3,135.1,65,28.6,10.7,9.8,330.0039974,-12.00399744
+KEL101,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,26,2015-04-28,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,360,22.8,130,65.6,32.2,3.3,7.8,NA,NA
+KEL103,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,26,2015-04-28,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,300,20.9,132.8,65.1,29.6,5.8,12.2,NA,NA
+KEL106,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,26,2015-04-28,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,300,21,133,65.1,29.35,small,NA,NA,NA
+KEL108,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,26,2015-04-28,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,310,20.4,134,64.41,27.81,5.96,6.84,NA,NA
+KEL124,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,31,2015-06-24,2015,Eidolon dupreanum,male,A,NA,NA,NA,NA,360,21.2,127.4,61.2,33.9,7.1,8.12,NA,NA
+KEL125,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,31,2015-06-24,2015,Eidolon dupreanum,male,A,NA,NA,NA,NA,350,20.7,130.2,64,29.2,8.4,9.3,NA,NA
+KEL128,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,31,2015-06-24,2015,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,23.1,129,61.6,23.9,3.7,5.3,NA,NA
+KEL13,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,5,2013-11-26,2013,Eidolon dupreanum,male,A,NA,NA,NA,NA,300,18.5,120,55,31,NA,NA,NA,NA
+KEL134,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,34,2016-01-10,2016,Eidolon dupreanum,male,A,NA,NA,NA,NA,320,23.7,128.2,61.5,25,16.3,23.1,NA,NA
+KEL138,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,34,2016-01-10,2016,Eidolon dupreanum,female,NL,NA,NA,NA,NA,320,22.7,133.8,56.47,27.6,7.6,9.6,NA,NA
+KEL140,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,34,2016-01-10,2016,Eidolon dupreanum,male,A,NA,NA,NA,NA,320,22.5,131.3,64.63,33.24,17,19.49,NA,NA
+KEL141,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,34,2016-01-10,2016,Eidolon dupreanum,female,NL,NA,NA,NA,NA,312,21.5,126,58.8,31.35,5.81,8.11,NA,NA
+KEL145,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,34,2016-01-10,2016,Eidolon dupreanum,female,NL,NA,NA,NA,NA,440,22.5,133.6,63.05,30.66,5.71,9.66,NA,NA
+KEL149,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,380,22,128.5,65.2,26.9,7.2,9.7,307.7173758,72.28262422
+KEL150,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,335,21.3,130.9,62.2,24.5,6.55,8.76,315.770387,19.22961304
+KEL151,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,330,21.1,124.3,63.4,29.9,8.4,11,293.7678286,36.23217136
+KEL152,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,350,20.5,128.8,60.8,26.4,6.8,8.4,308.7207701,41.27922989
+KEL153,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,360,21,123,56.8,23.9,10.4,10.9,289.4875206,70.51247942
+KEL154,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,340,21.8,130,64.9,29.1,6.9,8.6,312.7435948,27.25640518
+KEL155,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,340,19.8,122.8,59.4,33.6,9.9,12.8,288.8305957,51.16940426
+KEL156,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,male,A,no,no,NA,NA,320,20.8,111.6,48.2,33.7,3,4.5,264.6649589,55.3350411
+KEL157,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,380,21.8,131.4,65.1,30.1,8.8,13.7,317.4555066,62.54449341
+KEL158,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,J,yes,no,NA,NA,295,19.8,130.1,56.6,31,2.1,4.2,NA,NA
+KEL159,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,male,J,yes,no,NA,NA,275,21.6,122.3,58.2,22,small,small,NA,NA
+KEL160,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,325,21.9,120.9,58,29.1,7.3,11.1,282.6109962,42.38900384
+KEL161,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,male,A,no,no,NA,NA,360,23.9,131.08,57.4,20.5,15.8,17.9,326.099697,33.90030302
+KEL162,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,400,22.8,128.8,62.7,28.1,8,10.5,308.7207701,91.27922989
+KEL163,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,360,21.2,127,63.4,27.9,5.4,11.4,302.7143405,57.28565952
+KEL165,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,355,20.8,124.6,61.4,29.2,8.7,10.7,294.7581192,60.24188081
+KEL167,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,19.4,126,67,30.1,6.3,9.6,299.3919448,0.608055184
+KEL169,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,male,J,yes,no,NA,NA,205,17.9,107.7,53.1,25.7,small,small,NA,NA
+KEL170,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,355,19.5,124.3,59.1,28.4,8.2,11.1,293.7678286,61.23217136
+KEL171,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,male,J,yes,no,NA,NA,200,18.2,106.8,49.4,29.3,small,small,NA,NA
+KEL172,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,360,18.8,134.3,60.2,31.9,7.9,10.3,327.2791353,32.72086466
+KEL173,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,315,21.6,129.9,64,31.4,9.3,10.5,312.4077955,2.592204454
+KEL174,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-16,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,20.6,122.8,58.6,22.9,7.4,8.2,288.8305957,11.16940426
+KEL175,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-16,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,330,20.8,133.9,64.3,29.1,11.7,15.4,325.9191107,4.080889311
+KEL176,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-16,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,355,21.2,132.3,61.9,27,9.2,11.1,320.4951225,34.50487752
+KEL177,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-16,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,19,123.8,60.6,27.3,6.7,8.5,292.1194476,7.880552379
+KEL178,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-16,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,360,20.3,126,64.4,24.9,9.2,12.2,299.3919448,60.60805518
+KEL179,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-16,2018,Eidolon dupreanum,male,A,no,no,NA,NA,310,20.6,130.5,58.9,30.9,22.7,24.5,324.2288517,-14.22885172
+KEL180,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,270,21,128.3,62.5,22.3,3.5,0,307.0489613,-37.04896133
+KEL181,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-09,2018,Eidolon dupreanum,male,A,no,no,NA,NA,350,22.5,132.4,73.8,42.3,35.5,31.6,330.3666547,19.63334528
+KEL182,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,21,124.9,57.9,24.3,8.2,7.7,295.7493545,14.25064551
+KEL183,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,245,22,132.2,62.6,21.6,9.6,7.4,320.1569818,-75.1569818
+KEL184,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,295,21,129.25,63.4,30.6,8.9,7.5,310.2275975,-15.22759753
+KEL185,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,345,23,130.4,59.3,23.3,9,7.4,314.0878146,30.91218535
+KEL186,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,265,20.5,131.1,59.7,23.9,7.2,5.9,316.4441295,-51.44412946
+KEL187,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,23,131.6,61.8,24.7,7.1,6.8,318.1302664,1.869733627
+KEL188,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,330,22,128.1,61.2,24.4,8.8,5.9,306.3809594,23.61904058
+KEL189,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,22,128.9,64.2,24.3,9.3,6.2,309.0554407,10.94455926
+KEL190,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,21.5,129.6,59.5,24.6,8.9,6.5,311.4010121,-1.401012093
+KEL191,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,325,23,134,67.8,26.6,9.6,7.5,326.2589662,-1.258966203
+KEL192,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,315,22,130.3,61,27.6,7.6,7.4,313.7516064,1.248393621
+KEL193,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,J,yes,no,NA,NA,300,22.5,127.2,64.4,25.4,2.3,1.7,NA,NA
+KEL194,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,345,21.5,129,62.2,26.2,8.8,6.7,309.3902142,35.60978578
+KEL195,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,male,A,no,no,NA,NA,350,21,130.7,62.4,25.7,21.7,12.3,324.873692,25.126308
+KEL196,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,20.5,128.6,61.7,24,6.9,3.3,308.0517376,-8.051737585
+KEL197,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,21,134.5,66.4,26.8,3.4,2.2,327.9597498,-17.9597498
+KEL198,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,male,A,no,no,NA,NA,320,21,130.4,62.7,29.7,21.8,13.4,323.9065418,-3.906541766
+KEL199,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,270,21.5,127,58.5,24.1,6.8,6.4,302.7143405,-32.71434048
+KEL201,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,340,22,128,59.8,23.5,8.1,6.7,306.0471133,33.95288671
+KEL202,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,340,22.5,132.6,64.1,27.1,9.2,6,321.5101518,18.48984823
+KEL203,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,21,130.5,66,NA,8.6,6.2,314.424125,5.57587496
+KEL204,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,21,126.7,60.5,23.5,3.7,1.7,301.7165299,8.28347007
+KEL205,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,21.5,134,63.5,31.6,7.8,4.8,326.2589662,-6.258966203
+KEL206,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,J,yes,no,NA,NA,300,21,130.1,60,27.3,7.3,4.4,NA,NA
+KEL208,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,21,126.2,61,23.7,9.1,5.2,300.0555914,9.944408599
+KEL209,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,265,22.5,131.7,62.4,23.7,8.2,6.7,318.4677986,-53.46779864
+KEL210,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,280,21.5,124.1,59.1,23,3.1,1.7,293.1081605,-13.1081605
+KEL211,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,20,131.5,59.2,24.3,8.1,6.9,317.7928357,-7.792835674
+KEL212,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,23,130.2,62.7,23.2,7.7,5.6,313.4155003,-13.41550029
+KEL213,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,320,18,129.5,64.2,32.3,32.2,12.2,321.0090647,-1.0090647
+KEL215,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,female,J,yes,no,NA,NA,200,18,120.2,57.2,32.3,small,small,NA,NA
+KEL216,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,330,18,128.3,63.9,32.7,9.7,8,307.0489613,22.95103867
+KEL217,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,320,19,124.1,59.7,25.9,21.6,12.9,303.7508877,16.2491123
+KEL218,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,18,127.2,71.3,24.6,13.9,4.9,303.3800664,-3.380066445
+KEL219,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,340,17.5,131.7,61.9,21.5,18.2,16.6,328.1022903,11.89770968
+KEL22,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,5,2013-11-26,2013,Eidolon dupreanum,female,L,NA,NA,NA,NA,310,20.5,126,61,31,NA,NA,NA,NA
+KEL220,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,300,18.5,123.4,58.9,29.8,20.3,16.7,301.5298243,-1.529824289
+KEL221,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,J,yes,no,NA,NA,240,18,122.5,59.1,31.3,small,small,NA,NA
+KEL222,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,17,131.7,66.5,29.9,7.6,6.6,318.4677986,-18.46779864
+KEL223,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,350,18.5,133.9,64.3,33.9,10.9,7.6,335.2308468,14.76915323
+KEL224,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,370,19.5,131.4,63.9,27.5,15.8,12.4,327.1329426,42.86705741
+KEL225,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,320,18.5,124.8,62.2,32.2,20.5,19.3,305.9756804,14.02431957
+KEL226,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,340,18.5,115.9,63.3,29.8,24.3,10,277.9707959,62.02920412
+KEL227,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,330,20.5,127.6,58.2,26.4,11.1,6.8,304.7127621,25.28723794
+KEL228,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,female,J,yes,no,NA,NA,230,18.5,118,57.2,28.3,4.1,2.3,NA,NA
+KEL229,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,340,16,131.6,63.4,29,23.7,12,327.7791014,12.22089864
+KEL230,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,310,19.5,127.4,59.7,32.3,small,small,314.2716032,-4.271603193
+KEL231,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,310,19,128.9,62.6,30.5,small,small,319.0807354,-9.08073544
+KEL232,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,340,19.5,126.8,64.4,26.2,18.7,10,312.3526498,27.64735021
+KEL234,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,270,18.5,117,58,31.5,small,small,281.398487,-11.39848701
+KEL235,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,350,18,130.8,65.9,26.6,14.5,7.9,325.1962222,24.80377777
+KEL236,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,J,yes,no,NA,NA,310,19,116.5,59.5,26.8,small,small,NA,NA
+KEL238,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,340,19,129.1,64.8,26.4,8.6,5.4,309.7250905,30.27490952
+KEL239,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,131,13.53,133.2,36.3,27.6,8.6,9.7,323.5429388,-192.5429388
+KEL240,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,341,15.06,132,61.2,28.6,7.7,7.5,319.4810044,21.51899565
+KEL241,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,325,14.28,128.2,61.6,26.9,12.8,11.8,306.7149088,18.28509122
+KEL242,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,335,15.52,125.6,59.7,24.8,15.2,16.3,308.5228484,26.47715165
+KEL243,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,150,12.53,131.4,63.3,22.4,17.7,16.1,327.1329426,-177.1329426
+KEL244,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,168,10.66,112.6,53.7,24.2,NA,NA,255.8986531,-87.89865315
+KEL245,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,120,13.68,123,55.2,26.2,10.5,10,300.2623253,-180.2623253
+KEL246,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,145,11.61,105.3,46,23.5,NA,NA,245.4453853,-100.4453853
+KEL247,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,175,11.71,114.2,51.7,25.4,NA,NA,260.9892336,-85.98923362
+KEL248,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,135,13.04,131.5,62.1,26.6,16.8,16.5,327.4559854,-192.4559854
+KEL249,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,185,11.09,113.8,53.9,26.7,0,0,271.4539074,-86.45390738
+KEL25,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,5,2013-11-26,2013,Eidolon dupreanum,female,J,NA,NA,NA,NA,70,12.6,77,37.5,21.8,NA,NA,NA,NA
+KEL250,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,184,15.92,134.5,70.3,24,16.9,15.8,337.1810763,-153.1810763
+KEL251,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,155,14.2,108.3,46.6,23.7,0,0,242.3599717,-87.35997173
+KEL252,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,395,24.2,136,62.1,35.1,22.9,20.7,342.0679606,52.93203942
+KEL253,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,207,19.5,129.4,66.9,28.7,12.2,13.4,320.6874916,-113.6874916
+KEL254,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,173,20.5,129.9,55.7,29.6,16.3,15.2,322.2960954,-149.2960954
+KEL259,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-08,2019,Eidolon dupreanum,female,J,yes,no,NA,NA,160,18.5,109.2,35.6,22.8,small,small,NA,NA
+KEL264,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-08,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,360,21.8,126,52,30,7,6,299.3919448,60.60805518
+KEL265,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-08,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,350,22.3,128.63,55.57,32.95,9.43,9.77,308.1520662,41.84793379
+KEL266,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,360,12.72,137.9,73.2,27,9.2,10.2,339.5912497,20.40875033
+KEL266B,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,male,A,no,no,NA,NA,330,21.5,129.1,63,26.5,19.9,17.7,319.7232159,10.27678413
+KEL267,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,male,A,no,no,NA,NA,162,14.91,124.4,62.5,20.5,18.4,21.2,304.7039145,-142.7039145
+KEL268,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,male,A,no,no,NA,NA,182,14.77,128.2,62.2,22.7,10.3,12.2,316.8343904,-134.8343904
+KEL269,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,male,A,no,no,NA,NA,245,13.7,130.8,62.6,25.2,18.5,19.8,325.1962222,-80.19622223
+KEL27,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,5,2013-11-26,2013,Eidolon dupreanum,male,J,NA,NA,NA,NA,90,12.28,75,36.4,19.8,NA,NA,NA,NA
+KEL270,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,125,11.41,131.3,58.7,28.2,9.3,5.4,317.1182792,-192.1182792
+KEL271,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,315,13.45,128.8,53.8,28,7.4,6.7,308.7207701,6.279229885
+KEL272B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,310,19.5,130.1,62,27.1,8.7,9,313.0794964,-3.079496421
+KEL274,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,165,13.06,130.2,60.1,26.5,9.8,9.7,313.4155003,-148.4155003
+KEL275,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,male,A,no,no,NA,NA,165,14.69,128.7,66.5,27.4,15,16.6,318.4385514,-153.4385514
+KEL278,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-05,2019,Eidolon dupreanum,male,A,no,no,NA,NA,320,21.5,128.48,67.25,28.71,20.89,23.45,317.7324918,2.267508208
+KEL278B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,320,19,128,63,27,9.1,8.1,306.0471133,13.95288671
+KEL279,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-05,2019,Eidolon dupreanum,male,A,no,no,NA,NA,360,21.1,135.46,62.54,22.49,19.67,26.41,340.3068259,19.69317411
+KEL279B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,305,19,127.3,61.4,29.4,6.1,8.2,303.713085,1.286915037
+KEL280,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-05,2019,Eidolon dupreanum,male,A,no,NA,NA,NA,350,20.6,128.13,51.74,20.57,17.49,18.87,316.6099562,33.39004384
+KEL280B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,275,21.4,126.4,60.6,27.7,small,small,300.7196547,-25.71965466
+KEL281,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-05,2019,Eidolon dupreanum,male,J,yes,NA,NA,NA,200,19.6,111.07,55.21,22.56,small,small,NA,NA
+KEL281B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,290,21.5,126.8,62.1,27.7,5.5,4.2,302.0490296,-12.04902959
+KEL283,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-05,2019,Eidolon dupreanum,male,A,no,no,NA,NA,335,23,127.47,62,29.75,17.16,16.1,314.4956565,20.50434352
+KEL283B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,295,22.3,131.2,60.2,34.3,small,small,316.7811534,-21.78115343
+KEL285,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-05,2019,Eidolon dupreanum,male,A,no,no,NA,NA,210,26,132.13,64.22,30.66,15.26,14.96,329.4928341,-119.4928341
+KEL285B,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-15,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,95,22.2,129.4,62,30.8,small,small,310.7303356,-215.7303356
+KEL286B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-15,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,115,22.3,133.7,62,30.8,8.7,6.9,325.2397012,-210.2397012
+KEL287,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,350,21.4,126.07,57.03,25.17,19.3,21.05,310.0215633,39.97843674
+KEL289,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,290,20,124.08,57.78,25.04,8.62,5.75,293.0422168,-3.042216826
+KEL29,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,310,20.5,120.9,57.4,30.9,10.9,10.8,NA,NA
+KEL290,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,male,A,no,NA,NA,NA,345,23,126.95,61.05,32.5,15.37,19.12,312.8321355,32.16786452
+KEL291,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,320,24.7,128,61.85,31.15,8.83,6.85,306.0471133,13.95288671
+KEL291B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-15,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,280,21.6,125.3,62.3,28.2,8.6,4.8,297.0724688,-17.07246883
+KEL293,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,371,24.5,127.83,61.67,25.21,17.77,14.9,315.6485083,55.35149172
+KEL294,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,331,26.4,131.14,62.95,25.52,16.75,15.77,326.2933734,4.706626553
+KEL295,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,340,26,130.36,63.92,24.15,18.82,15.16,323.7776384,16.22236164
+KEL296,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,350,19,128.59,60.1,30.97,0.432638889,8.7,308.0182968,41.98170323
+KEL299,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,265,21.2,119.89,61.03,26.6,14.93,15.87,290.4495398,-25.44953976
+KEL299B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-15,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,260,18.5,124.3,58.7,29.8,4.2,8.1,293.7678286,-33.76782864
+KEL30,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,410,21.9,122.3,62.8,30.1,9.1,10.1,NA,NA
+KEL305,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,300,18.8,130,60.4,26.8,4.5,7.2,NA,NA
+KEL306,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,325,24.5,132.1,63.5,33.3,9.1,6.3,NA,NA
+KEL309,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,325,20.5,129.9,61.7,22.1,6.1,7.6,NA,NA
+KEL31,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,20.6,127.8,61.3,33,5.4,6.6,NA,NA
+KEL310,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,325,19.5,132.7,63.1,29.2,10.4,10.7,NA,NA
+KEL312,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,male,A,NA,no,NA,NA,305,23.3,128.9,60.5,32.2,7.8,8.5,NA,NA
+KEL315,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,305,21.4,128.1,62.4,25.7,small,small,NA,NA
+KEL317,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,male,A,NA,no,NA,NA,325,22.8,129.3,63.4,27,6.5,5.4,NA,NA
+KEL322,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,315,21.8,130.4,63.9,32.2,small,small,NA,NA
+KEL334,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,280,22.5,129,60.9,30.5,7.6,3.2,NA,NA
+KEL337,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,68,2019-06-05,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,330,24,128.5,59.7,24.8,6.9,5.3,NA,NA
+KEL338,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,68,2019-06-05,2019,Eidolon dupreanum,male,A,NA,no,NA,NA,320,21.4,123.8,61.4,27.6,10.5,12.9,NA,NA
+KEL345,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,68,2019-06-06,2019,Eidolon dupreanum,male,A,NA,no,NA,NA,345,23.3,128.3,60.9,26.9,10.1,6.3,NA,NA
+KEL348,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,71,2019-07-07,2019,Eidolon dupreanum,male,A,no,no,NA,NA,330,22,128.9,63.1,30.2,9.5,8.3,319.0807354,10.91926456
+KEL349,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,71,2019-07-07,2019,Eidolon dupreanum,male,A,NA,no,NA,NA,370,24.3,129,62.2,29.5,12.1,11.4,NA,NA
+KEL35,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,21,128.1,62.5,27.1,8.9,5.8,NA,NA
+KEL350,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,71,2019-07-07,2019,Eidolon dupreanum,male,A,NA,no,NA,NA,343,21.8,129.8,62.8,31,9.8,10.1,NA,NA
+KEL354,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,71,2019-07-07,2019,Eidolon dupreanum,male,A,NA,no,NA,NA,351,25,123.2,63.9,27.3,11.3,8,NA,NA
+KEL36,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,20.2,134.5,64.4,29.8,10.9,10.8,NA,NA
+KEL361,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,75,2019-08-24,2019,Eidolon dupreanum,male,A,no,no,NA,NA,338,21.6,133.1,64.2,23.7,12.6,8.2,332.6345826,5.36541739
+KEL366,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,75,2019-08-24,2019,Eidolon dupreanum,male,A,no,no,NA,NA,355,22.6,129.9,62.9,25.2,13.1,12.9,322.2960954,32.70390463
+KEL368,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,75,2019-08-24,2019,Eidolon dupreanum,male,A,no,no,NA,NA,385,22.2,134.3,64.6,27.9,16.2,15.3,336.5307117,48.46928831
+KEL369,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,78,2019-09-20,2019,Eidolon dupreanum,male,A,no,no,NA,NA,381,24,132.7,63.9,32.4,17.9,9.6,331.3381882,49.66181176
+KEL370,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,78,2019-09-20,2019,Eidolon dupreanum,male,A,no,no,NA,NA,349,22.2,129.5,62.4,26.1,9.3,10.3,321.0090647,27.9909353
+KEL371,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,78,2019-09-20,2019,Eidolon dupreanum,male,A,no,no,NA,NA,337,22.9,129.7,59.3,25.2,7.1,7.3,321.6524325,15.34756753
+KEL373,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,78,2019-09-20,2019,Eidolon dupreanum,male,A,no,no,NA,NA,326,20.1,125.2,58.1,22.3,0.7,6.9,307.2486593,18.75134071
+KEL374,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,78,2019-09-20,2019,Eidolon dupreanum,male,A,no,no,NA,NA,363,22.9,130.1,63.6,27.9,8.1,7.5,322.9400531,40.05994691
+KEL380,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,78,2019-09-20,2019,Eidolon dupreanum,male,A,no,no,NA,NA,360,20.5,127.7,61.5,29.7,14.7,14.8,315.2320891,44.76791085
+KEL382,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,78,2019-09-20,2019,Eidolon dupreanum,male,A,no,no,NA,NA,345,19,131.4,63.1,26.2,15.6,16.5,327.1329426,17.86705741
+KEL389,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,78,2019-09-20,2019,Eidolon dupreanum,male,A,no,no,NA,NA,292,22.5,130,59.5,26.5,16.1,10.7,322.6180374,-30.6180374
+KEL40,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,340,22.6,125.4,63.6,30.3,7.1,10.2,NA,NA
+KEL41,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,22.5,131.6,61.2,25.1,11.1,11.4,NA,NA
+KEL440,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,91,2020-02-02,2020,Eidolon dupreanum,female,NL,no,no,NA,NA,340,20.5,130,64,27,8.5,6,312.7435948,27.25640518
+KEL442,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,91,2020-02-02,2020,Eidolon dupreanum,male,A,no,no,NA,NA,375,23,132,66.5,20.1,17,16,329.072295,45.92770499
+KEL443,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,91,2020-02-02,2020,Eidolon dupreanum,male,A,no,no,NA,NA,400,23.55,130,67.5,32,20,17.5,322.6180374,77.3819626
+KEL444,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,91,2020-02-02,2020,Eidolon dupreanum,female,NL,no,no,NA,NA,320,20,127,63.5,28,6,4.5,302.7143405,17.28565952
+KEL45,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,340,20.2,129.7,59.8,33.9,5.9,9.2,NA,NA
+KEL452,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,91,2020-02-02,2020,Eidolon dupreanum,male,A,no,no,NA,NA,311,21.6,132.6,64.9,30.4,small,small,331.0142711,-20.01427107
+KEL459,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,91,2020-02-02,2020,Eidolon dupreanum,male,A,no,no,NA,NA,230,21.5,132,60,25,14,13,329.072295,-99.07229501
+KEL46,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,320,21,126.1,64.5,32.5,6.2,9.4,NA,NA
+KEL47,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,21.5,124.1,60.1,24.9,7.9,12.2,NA,NA
+KEL48,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,320,21.5,126.8,59.2,20.2,8.1,10.7,NA,NA
+KEL49,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,450,20.4,122.3,62.5,25.8,4.7,9,NA,NA
+KEL61,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,26,137.9,67.1,33,5.1,10.6,NA,NA
+KEL63,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,21.6,122.7,63.5,28.6,7.6,4.8,NA,NA
+KEL67,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-17,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,290,21,129.2,65.7,34.1,7.2,12.1,NA,NA
+KEL68,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-17,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,20.5,133.6,61.7,30,13.2,22.2,NA,NA
+KEL69,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-17,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,320,20.2,129.9,55,31.7,19.9,26.9,NA,NA
+KEL71,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-17,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,300,21.3,129.6,62.1,30.9,15,23.5,NA,NA
+KEL77,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-17,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,270,21.5,133.7,57.7,35.7,small,NA,NA,NA
+KEL78,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-17,2014,Eidolon dupreanum,female,NL,NA,NA,NA,NA,300,21.2,130,64.6,34.6,small,NA,NA,NA
+KEL91,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-18,2014,Eidolon dupreanum,female,L,NA,NA,NA,NA,290,19.5,125.4,61,33,9.1,11.1,NA,NA
+KEL95,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-18,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,260,21.5,133.8,63.6,30.7,11.3,20.3,NA,NA
+WAY001,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-01,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,281,24,128.1,63.2,25.2,12.7,10,316.5137812,-35.51378122
+WAY004,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-01,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,326,22.5,128.6,64.7,24.9,13,12.3,318.1175707,7.882429303
+WAY005,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-01,2019,Eidolon dupreanum/Rousettus madagascariensis,male,J,yes,yes,pup,WAY010,62,10.74,58.1,28.4,17.9,small,small,NA,NA
+WAY007,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-01,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,NA,NA,NA,271,20.4,124.3,57.8,28.7,small,small,293.7678286,-22.76782864
+WAY008,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-01,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,NA,NA,NA,329,20.4,131.8,61.2,29.5,8.5,9.3,328.4255523,0.57444773
+WAY009,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-01,2019,Eidolon dupreanum/Rousettus madagascariensis,female,L,yes,NA,mom,WAY011,288,18.7,125.5,58.5,28,7.4,7.7,NA,NA
+WAY010,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-01,2019,Eidolon dupreanum/Rousettus madagascariensis,female,L,yes,NA,mom,WAY005,334,20.9,133.6,62.6,26,8.9,10.9,NA,NA
+WAY012,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum/Rousettus madagascariensis,female,P,no,no,NA,NA,368,21.7,132.7,65.5,26.6,9.7,10.9,321.8486971,46.15130287
+WAY013,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum/Rousettus madagascariensis,female,P,no,no,NA,NA,348,21.8,127.9,61.2,26.1,10.8,8.2,305.7133704,42.28662956
+WAY014,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,328,22.3,133.1,64.4,25.3,13.5,10.4,332.6345826,-4.63458261
+WAY015,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum/Rousettus madagascariensis,male,J,yes,yes,pup,WAY020,53,11.09,58.5,31.4,15.7,small,small,NA,NA
+WAY018,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,278,20.2,129.8,61.3,24.3,12.4,13.3,321.974227,-43.97422705
+WAY019,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,278,20.4,133.3,62.4,28.3,small,small,333.2832147,-55.28321468
+WAY020,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum/Rousettus madagascariensis,female,L,no,yes,mom,WAY015,308,19.3,131.2,61.9,24.9,10,7.7,316.7811534,-8.781153432
+WAY022,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum/Rousettus madagascariensis,female,L,yes,yes,mom,WAY024,284,22.5,129.4,63.1,26.4,9.3,10.1,NA,NA
+WAY023,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum/Rousettus madagascariensis,male,J,yes,yes,pup,WAY021,48,10.51,58.2,28.9,13.4,small,small,NA,NA
+WAY024,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum/Rousettus madagascariensis,male,J,yes,yes,pup,WAY022,66,12.11,72.6,34.1,20.8,small,small,NA,NA
+WAY025,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-01,2019,Eidolon dupreanum/Rousettus madagascariensis,female,L,no,yes,mom,WAY033,281,22.3,126.4,61.4,27.4,9.6,9,300.7196547,-19.71965466
+WAY027,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-01,2019,Eidolon dupreanum/Rousettus madagascariensis,female,L,no,yes,mom,WAY035,295,22.2,134.9,63.4,29.1,12.6,10.1,329.3221812,-34.32218122
+WAY033,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-01,2019,Eidolon dupreanum/Rousettus madagascariensis,male,J,yes,yes,pup,WAY025,91,14.59,93.3,42.6,19.8,small,small,NA,NA
+WAY034,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-01,2019,Eidolon dupreanum/Rousettus madagascariensis,female,J,yes,yes,pup,WAY026,86,13.1,82,39.3,20.7,small,small,NA,NA
+WAY039,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-02,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,305,19.7,124.9,61.1,27.8,12.4,11.3,306.2938115,-1.293811537
+WAY042,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-02,2019,Eidolon dupreanum/Rousettus madagascariensis,female,L,no,yes,mom,WAY046,306,21.8,127.6,62.5,26.3,10.7,8.2,304.7127621,1.287237941
+WAY043,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-02,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,306,22.8,126.1,63.6,30.9,12.4,10.6,310.1172824,-4.117282415
+WAY045,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-02,2019,Eidolon dupreanum/Rousettus madagascariensis,male,J,yes,yes,pup,WAY041,83,12.51,79.8,36.5,21.3,6.4,7,NA,NA
+WAY046,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-02,2019,Eidolon dupreanum/Rousettus madagascariensis,female,J,yes,yes,pup,WAY042,102,14.32,93,41.5,23.2,small,small,NA,NA
+WAY047,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-02,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,349,21.5,134.8,65.4,29.7,14.8,10.1,338.1571625,10.84283745
+WAY048,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-03,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,338,21.5,126.3,62.2,27.4,13,12.9,310.7555831,27.24441686
+WAY049,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-03,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,267,18.7,126,57.7,27.8,6.4,4.8,299.3919448,-32.39194482
+WAY051,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-02,2019,Eidolon dupreanum/Rousettus madagascariensis,female,L,no,yes,mom,WAY053,291,21.5,125,58.3,27.8,9.3,8,296.079976,-5.079975971
+WAY052,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-03,2019,Eidolon dupreanum/Rousettus madagascariensis,male,J,yes,yes,pup,WAY050,97,13.1,89.4,41.4,21.5,5.9,4.5,NA,NA
+WAY054,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-27,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,320,21.4,131,62,26.2,10.2,6,316.1072073,3.892792715
+WAY056,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,347,21.6,126.7,62,29.8,12.7,9.2,312.0330864,34.96691364
+WAY057,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,367,22,129.6,64,27.2,17.6,13.4,321.3307117,45.66928833
+WAY062,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,NA,NA,NA,285,21.3,132,60,25,4,3.5,319.4810044,-34.48100435
+WAY063,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,275,18.9,130.5,61,26.1,7,7.2,314.424125,-39.42412504
+WAY064,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,345,21.5,134.3,66,23.1,18,11.2,336.5307117,8.469288314
+WAY065,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,310,21.4,133.1,68.1,31,7.1,6.5,323.2038887,-13.20388867
+WAY066,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,310,28,137,67,28.6,11.2,10.6,345.334812,-35.334812
+WAY067,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,328,22.2,124.1,61,31.5,10.4,10.3,303.7508877,24.2491123
+WAY074,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,300,20.9,130,61,30.2,13.1,11.1,322.6180374,-22.6180374
+WAY075,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-29,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,345,20.2,133.2,64.9,25.9,13.1,12.1,332.9588624,12.04113756
+WAY076,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-29,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,370,22.5,129.5,60.5,24.1,17.2,10,321.0090647,48.9909353
+WAY077,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-29,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,349,23.7,130.4,64.3,27.6,13.6,14.6,323.9065418,25.09345823
+WAY078,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-29,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,303,22,133.1,63.9,25.9,small,small,323.2038887,-20.20388867
 AMB100,0,0,0,,NIH,Ambakoana,Ambakoana,-18.513,48.1665,35,2016-01-18,2016,Pteropus rufus,female,NL,NA,NA,NA,NA,550,26.5,159,73.1,27.2,9.1,13,NA,NA
 AMB106,0,0,0,,CZID/NIH,Ambakoana,Ambakoana,-18.513,48.1665,35,2016-01-19,2016,Pteropus rufus,male,A,NA,NA,NA,NA,680,25,160,83.14,29.1,15.1,19.53,NA,NA
 AMB11,0,0,0,,NIH,Ambakoana,Ambakoana,-18.513,48.1665,3,2013-11-16,2013,Pteropus rufus,female,L,NA,NA,NA,NA,520,27,158,82,34,NA,NA,NA,NA
@@ -30,7 +414,6 @@ AMB146,0,0,0,,CZID,Ambakoana,Ambakoana,-18.513,48.1665,44,2018-04-19,2018,Pterop
 AMB147,0,0,0,,CZID,Ambakoana,Ambakoana,-18.513,48.1665,44,2018-04-21,2018,Pteropus rufus,male,A,no,no,NA,NA,620,25,167,81,30.5,unknown,unknown,645.2375201,-25.23752008
 AMB149,0,0,0,,CZID,Ambakoana,Ambakoana,-18.513,48.1665,48,2018-08-05,2018,Pteropus rufus,female,NL,no,no,NA,NA,480,22.5,145.5,69.9,28.5,6.1,2.8,470.6920709,9.307929051
 AMB15,0,0,0,,CZID,Ambakoana,Ambakoana,-18.513,48.1665,3,2013-11-18,2013,Pteropus rufus,male,J,NA,NA,NA,NA,130,15,96,54,20.8,NA,NA,NA,NA
-AMB150,1,0,1,Mischivirus,CZID,Ambakoana,Ambakoana,-18.513,48.1665,48,2018-08-06,2018,Pteropus rufus,male,A,no,no,NA,NA,415,23,146.9,67.1,37.4,small,small,476.2230735,-61.2230735
 AMB151,0,0,0,,CZID,Ambakoana,Ambakoana,-18.513,48.1665,48,2018-08-07,2018,Pteropus rufus,male,A,no,no,NA,NA,550,25.5,168,84.5,27.5,small,small,654.4259542,-104.4259542
 AMB152,0,0,0,,CZID,Ambakoana,Ambakoana,-18.513,48.1665,48,2018-08-07,2018,Pteropus rufus,male,A,no,no,NA,NA,660,27,170,83.9,35,small,small,673.0284357,-13.02843575
 AMB153,0,0,0,,CZID,Ambakoana,Ambakoana,-18.513,48.1665,48,2018-08-07,2018,Pteropus rufus,male,J,yes,no,NA,NA,490,24,147.8,71.3,28.9,small,small,NA,NA
@@ -73,334 +456,6 @@ AMB77,0,0,0,,NIH,Ambakoana,Ambakoana,-18.513,48.1665,22,2015-03-22,2015,Pteropus
 AMB79,0,0,0,,NIH,Ambakoana,Ambakoana,-18.513,48.1665,27,2015-05-11,2015,Pteropus rufus,male,A,NA,NA,NA,NA,910,32,176,83.3,32.8,18.1,24.1,NA,NA
 AMB8,0,0,0,,CZID,Ambakoana,Ambakoana,-18.513,48.1665,3,2013-11-16,2013,Pteropus rufus,female,NL,NA,NA,NA,NA,640,23.4,166,85,27,NA,NA,NA,NA
 AMB80,0,0,0,,CZID/NIH,Ambakoana,Ambakoana,-18.513,48.1665,27,2015-05-11,2015,Pteropus rufus,male,A,NA,NA,NA,NA,860,28.4,176,87.4,26.2,18.2,18.9,NA,NA
-AND12,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,9,2014-08-02,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,350,19.5,129.1,67.7,28.7,NA,NA,NA,NA
-AND19,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,9,2014-08-03,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,315,20.5,120.3,60.9,27.5,NA,NA,NA,NA
-AND24,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-14,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,310,21.5,132.5,63.7,27.2,13.4,17.5,NA,NA
-AND26,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-14,2014,Eidolon dupreanum,male,J,NA,NA,NA,NA,50,10.01,66.6,36.4,19.1,4.9,6.1,NA,NA
-AND27,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-14,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,370,29.8,130.1,64.2,31,14.5,17.2,NA,NA
-AND28,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-14,2014,Eidolon dupreanum,female,NL,NA,NA,NA,NA,310,21.5,132,64.5,28.5,5.5,11.5,NA,NA
-AND29,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-14,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,300,22.5,128.3,58.5,31.9,10.5,14.5,NA,NA
-AND30,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-16,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,325,21.5,134.2,61.2,32.9,11,17.5,NA,NA
-AND31,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-16,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,260,17.5,130,61.5,25,12.5,14.5,NA,NA
-AND32,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-17,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,20.4,129.5,62.8,31.1,13.5,18.5,NA,NA
-AND33,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-17,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,320,22.5,125.2,61,32.2,10.5,15,NA,NA
-AND35,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-18,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,20.7,129.3,62.7,28.5,11.9,14.3,NA,NA
-AND36,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,23,2015-03-30,2015,Eidolon dupreanum,male,A,NA,NA,NA,NA,340,22.5,138.7,67.9,32.5,12.6,15.2,NA,NA
-AND37,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,23,2015-03-30,2015,Eidolon dupreanum,male,A,NA,NA,NA,NA,280,23.2,129.9,60.5,31.6,13.7,13.9,NA,NA
-AND38,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,23,2015-03-30,2015,Eidolon dupreanum,male,A,NA,NA,NA,NA,295,20.4,125.1,60.9,31.3,14.2,18.1,NA,NA
-AND40,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,23,2015-03-31,2015,Eidolon dupreanum,male,A,NA,NA,NA,NA,270,19.1,128.4,60.6,29.2,12.5,13.2,NA,NA
-AND41,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,73,2019-08-08,2019,Eidolon dupreanum,male,A,no,no,NA,NA,165,21.9,132.5,64.3,26.2,13,11.8,330.6904266,-165.6904266
-AND42,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,73,2019-08-08,2019,Eidolon dupreanum,male,A,no,no,NA,NA,365,23,135.1,64,25.9,13.5,9.8,339.1338951,25.86610489
-ANGB110,1,0,1,Kobuvirus,NIH,Angavobe,AngavoKely,-18.9327,47.7578,30,2015-06-23,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,300,22,133.95,63.57,28.53,6.58,7.77,NA,NA
-ANGB114,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,33,2016-01-08,2016,Eidolon dupreanum,male,A,NA,NA,NA,NA,270,21.3,129.4,59.8,27.6,small,small,NA,NA
-ANGB121,1,0,1,Kobuvirus,NIH,Angavobe,AngavoKely,-18.9327,47.7578,33,2016-01-08,2016,Eidolon dupreanum,male,A,NA,NA,NA,NA,360,21,128.8,63.11,29.66,small,small,NA,NA
-ANGB122,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,33,2016-01-08,2016,Eidolon dupreanum,male,A,NA,NA,NA,NA,360,22.5,133,65.11,29.2,small,small,NA,NA
-ANGB123,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,33,2016-01-08,2016,Eidolon dupreanum,male,A,NA,NA,NA,NA,320,22.5,128,61.67,32.26,small,small,NA,NA
-ANGB125,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,37,2018-02-14,2018,Eidolon dupreanum,male,A,no,no,NA,NA,385,22.5,137.6,65,28.5,24.9,28.3,347.2983332,37.70166682
-ANGB127,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,37,2018-02-14,2018,Eidolon dupreanum,male,A,no,no,NA,NA,295,21.5,130.5,64.1,31.7,small,small,324.2288517,-29.22885172
-ANGB128,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,37,2018-02-14,2018,Eidolon dupreanum,male,A,no,no,NA,NA,325,22.5,134.1,65.2,32.3,26,30,335.8806351,-10.88063508
-ANGB129,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,37,2018-02-14,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,NA,21,128.5,61.5,31.8,small,small,NA,NA
-ANGB130,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,37,2018-02-14,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,330,21,129.2,65.6,32.6,9.3,10.6,310.0600695,19.9399305
-ANGB131,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,37,2018-02-14,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,21.8,138.2,66.4,34.4,10,11.5,340.6230634,-30.62306341
-ANGB132,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,37,2018-02-14,2018,Eidolon dupreanum,male,A,no,no,NA,NA,350,20.3,130.6,62.5,37.1,18.5,19.2,324.5512351,25.44876485
-ANGB133,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,37,2018-02-14,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,285,20.5,132.2,59.1,28,8.6,8.7,320.1569818,-35.1569818
-ANGB134,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,290,20.5,127.7,71.9,22.3,8.3,6.7,305.0461948,-15.04619477
-ANGB135,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,22,133.9,63.8,23.01,4.7,1.5,325.9191107,-5.919110689
-ANGB136,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,290,21.5,127.7,71.3,22.3,3.9,2,305.0461948,-15.04619477
-ANGB137,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,290,20.5,135.8,63.5,22.6,3.9,1.3,332.3935009,-42.39350088
-ANGB138,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,295,21.5,126.8,62.5,23,9.3,7.3,302.0490296,-7.049029592
-ANGB139,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,21,133.8,63.5,24.2,9,7.8,325.5793557,-5.579355682
-ANGB140,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,21.5,126.6,63.2,22.8,8.8,5.4,301.3841342,8.615865813
-ANGB141,1,0,1,Kobuvirus,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,22,128.9,64.6,23,4.5,2.2,309.0554407,-9.055440743
-ANGB142,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,2018,Eidolon dupreanum,male,A,no,no,NA,NA,370,21.5,131.6,61.9,22.7,23,15.5,327.7791014,42.22089864
-ANGB143,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,18.5,132.7,63,30.8,6.5,7.5,321.8486971,-21.84869713
-ANGB144,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,281,20.5,124.2,60.4,26.4,7.1,4.1,293.437942,-12.43794198
-ANGB145,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,20,129.9,58.4,30.3,8.2,7,312.4077955,7.592204454
-ANGB146,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,male,J,yes,no,NA,NA,250,18,122.3,57.5,29.3,small,small,NA,NA
-ANGB147,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,19,125.2,63.3,31.3,7,5.1,296.7415332,23.25846681
-ANGB148,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,18.5,129.3,61,28.2,8.8,4,310.3951512,-10.39515122
-ANGB149,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,280,20.5,125.5,59,27.2,6.3,4.3,297.7346539,-17.73465391
-ANGB15,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,4,2013-11-24,2013,Eidolon dupreanum,female,J,NA,NA,NA,NA,75,11.7,79,30,24,NA,NA,NA,NA
-ANGB150,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,330,20.5,129.5,60.5,25.3,8,5.7,311.0656226,18.93437744
-ANGB151,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,340,19,128.2,60.8,29.8,10.1,6.7,306.7149088,33.28509122
-ANGB152,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,18.5,132.6,63.8,27.7,7.6,6.3,321.5101518,-1.51015177
-ANGB153,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,18.5,134.4,62.7,28.8,6,4.9,327.6193924,-17.61939243
-ANGB154,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,340,20,125.1,63.4,28.9,7.2,5.3,296.4107022,43.58929778
-ANGB155,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,45,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,18,131.1,65.4,30.4,8.9,6.5,316.4441295,3.555870541
-ANGB156,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,49,2018-09-09,2018,Eidolon dupreanum,male,A,no,no,NA,NA,340,22.5,125.3,63.2,30.2,15.8,13.4,307.5670932,32.4329068
-ANGB157,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,49,2018-09-09,2018,Eidolon dupreanum,male,A,no,no,NA,NA,365,22.8,129.9,63.2,30.7,18.5,14.3,322.2960954,42.70390463
-ANGB158,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,49,2018-09-09,2018,Eidolon dupreanum,female,P,no,no,NA,NA,385,21.8,134.5,61.8,34.5,8.7,5.7,327.9597498,57.0402502
-ANGB159,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,49,2018-09-09,2018,Eidolon dupreanum,female,P,no,no,NA,NA,340,22.2,134.3,65.2,27.1,8.3,6.1,327.2791353,12.72086466
-ANGB160,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,49,2018-09-09,2018,Eidolon dupreanum,male,A,no,no,NA,NA,360,23.5,126.2,60.9,23.4,23.7,14.6,310.4363952,49.56360483
-ANGB161,0,0,0,,CZID/NIH,Angavobe,AngavoKely,-18.9327,47.7578,49,2018-09-09,2018,Eidolon dupreanum,male,A,no,no,NA,NA,320,23,128.9,60.6,23.9,15.1,10.3,319.0807354,0.91926456
-ANGB163,0,0,0,,CZID,Angavobe,AngavoKely,-18.9327,47.7578,49,2018-09-09,2018,Eidolon dupreanum,male,A,no,no,NA,NA,345,22.3,131.7,66.2,33.9,15.4,10.5,328.1022903,16.89770968
-ANGB19,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,4,2013-11-24,2013,Eidolon dupreanum,female,J,NA,NA,NA,NA,101,12.5,95,41,26,NA,NA,NA,NA
-ANGB21,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,4,2013-11-24,2013,Eidolon dupreanum,female,L,NA,NA,NA,NA,300,22.3,128.1,60.4,29.1,NA,NA,NA,NA
-ANGB22,1,0,1,Kobuvirus,NIH,Angavobe,AngavoKely,-18.9327,47.7578,4,2013-11-24,2013,Eidolon dupreanum,male,J,NA,NA,NA,NA,120,13.3,97.8,46.8,20.8,NA,NA,NA,NA
-ANGB40,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,7,2014-03-20,2014,Eidolon dupreanum,female,NL,NA,NA,NA,NA,320,23,130,64,32,NA,NA,NA,NA
-ANGB42,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,13,2014-10-04,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,420,21.1,132.5,60.5,31.1,10.3,8.2,NA,NA
-ANGB45,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,19,2014-12-14,2014,Eidolon dupreanum,female,L,NA,NA,NA,NA,315,21.8,127,61.1,31.1,5.3,9.3,NA,NA
-ANGB47,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,19,2014-12-14,2014,Eidolon dupreanum,female,J,NA,NA,NA,NA,125,14.4,108,48,26.5,small,NA,NA,NA
-ANGB50,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,19,2014-12-14,2014,Eidolon dupreanum,female,NL,NA,NA,NA,NA,425,20.8,123,62.4,32.4,4.4,10.4,NA,NA
-ANGB51,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,19,2014-12-14,2014,Eidolon dupreanum,male,J,NA,NA,NA,NA,135,15.5,112,51.5,24.5,small,NA,NA,NA
-ANGB52,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,19,2014-12-14,2014,Eidolon dupreanum,female,NL,NA,NA,NA,NA,340,20.2,134,63.2,30,8.6,12.6,NA,NA
-ANGB53,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,19,2014-12-14,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,320,22.5,127.2,59.1,29.4,23.3,26.3,NA,NA
-ANGB57,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,25,2015-04-27,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,390,21.4,132.5,66.4,26,5.3,10.1,NA,NA
-ANGB61,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,25,2015-04-27,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,320,22.6,124.9,57.5,31.9,6.2,9.4,NA,NA
-ANGB64,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,25,2015-04-27,2015,Eidolon dupreanum,male,A,NA,NA,NA,NA,360,20,134,65.3,29.16,18.63,21.32,NA,NA
-ANGB67,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,25,2015-04-27,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,380,22.1,136.1,67.2,33.2,7.8,10,NA,NA
-ANGB90,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,30,2015-06-22,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,330,19.8,139,61.4,32.3,11.1,8.6,NA,NA
-ANGB91,0,0,0,,NIH,Angavobe,AngavoKely,-18.9327,47.7578,30,2015-06-22,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,350,20.5,131.08,58.08,28.01,9.08,6.67,NA,NA
-CAT005,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-28,2019,Eidolon dupreanum,male,A,no,no,NA,NA,312,22.5,129.1,63.8,28.7,11.8,12.2,319.7232159,-7.723215866
-CAT006,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-28,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,284,20.9,125.7,56.8,28.4,small,small,298.3972571,-14.39725707
-CAT007,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-28,2019,Eidolon dupreanum,male,A,no,no,NA,NA,309,21.3,126.3,57.8,25.8,12.2,10.1,310.7555831,-1.755583143
-CAT008,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-28,2019,Eidolon dupreanum,male,A,no,no,NA,NA,370,22.7,132.1,64.8,29.1,10.8,10,329.3957757,40.60422429
-CAT009,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-28,2019,Eidolon dupreanum,male,A,no,no,NA,NA,276,20.8,125.7,61.1,26.4,small,small,308.8415844,-32.8415844
-CAT010,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum,male,A,no,no,NA,NA,254,19.4,122.1,57.3,25.2,receded,receded,297.4149371,-43.41493714
-CAT011,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum,male,A,no,no,NA,NA,337,22.4,136.2,65.9,26.4,10.6,10.3,342.7207611,-5.72076111
-CAT012,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,269,19.6,121.6,58.3,28.8,small,small,284.897957,-15.89795699
-CAT013,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum,male,A,no,no,NA,NA,290,24.7,135.7,66,28,12,10.3,341.0892951,-51.08929513
-CAT014,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,244,20.7,121.9,58,23.9,small,small,285.8796821,-41.87968208
-CAT015,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum,male,A,no,no,NA,NA,319,21.75,129.8,67.4,33.7,12.8,12.5,321.974227,-2.974227045
-CAT016,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum,male,A,no,no,NA,NA,299,20.5,129,62.3,27.7,10.3,16.6,319.4019386,-20.40193862
-CAT017,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,278,21.7,125.8,59.8,29.2,7.5,10.3,298.7287153,-20.7287153
-CAT018,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,303,20.2,131.1,60.2,26.7,7.4,8.4,316.4441295,-13.44412946
-CAT019,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum,male,A,no,no,NA,NA,318,21.3,135.1,66.4,25.2,12.3,14.9,339.1338951,-21.13389511
-CAT020,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,273,20.4,122.3,62.5,30.6,8.9,7,287.1901378,-14.19013782
-CAT021,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,298,19.5,132.8,64.3,31.3,7.8,8.8,322.1873435,-24.18734355
-CAT022,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,285,21.3,130.2,62,28.2,10.4,9,313.4155003,-28.41550029
-CAT023,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,268,19.8,126.8,60.1,25.4,9.8,6.1,302.0490296,-34.04902959
-CAT024,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,293,21.3,132.2,64,34.9,6,8,320.1569818,-27.1569818
-CAT025,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-04,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,295,21.3,129,62.7,30,7.6,7.5,309.3902142,-14.39021422
-CAT026,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-05,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,305,20.9,133.3,60.5,28.6,7,9.3,323.8820899,-18.88208986
-CAT027,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-05,2019,Eidolon dupreanum,male,A,no,no,NA,NA,342,21.6,135.1,63.9,33.1,11.9,11.6,339.1338951,2.866104891
-CAT028,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-05,2019,Eidolon dupreanum,female,J,no,no,NA,NA,290,20.2,130.1,61.2,25.6,small,small,NA,NA
-CAT030,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-05,2019,Eidolon dupreanum,male,A,no,no,NA,NA,315,20.8,133.4,64.1,32,13.8,13.1,333.6076393,-18.6076393
-CAT031,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-05,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,300,21.6,130.5,61.5,26.8,6.2,6.8,314.424125,-14.42412504
-CAT034,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-05,2019,Eidolon dupreanum,male,A,no,no,NA,NA,293,23,131.1,63.3,27.5,15.1,10.6,326.1642529,-33.16425288
-CAT035,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-05,2019,Eidolon dupreanum,male,A,no,no,NA,NA,296,22.8,133,62,29.5,12.5,14.1,332.3103752,-36.31037524
-CAT037,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,84,2019-11-05,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,318,21.3,135.1,65,28.6,10.7,9.8,330.0039974,-12.00399744
-KEL101,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,26,2015-04-28,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,360,22.8,130,65.6,32.2,3.3,7.8,NA,NA
-KEL103,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,26,2015-04-28,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,300,20.9,132.8,65.1,29.6,5.8,12.2,NA,NA
-KEL106,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,26,2015-04-28,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,300,21,133,65.1,29.35,small,NA,NA,NA
-KEL108,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,26,2015-04-28,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA,310,20.4,134,64.41,27.81,5.96,6.84,NA,NA
-KEL124,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,31,2015-06-24,2015,Eidolon dupreanum,male,A,NA,NA,NA,NA,360,21.2,127.4,61.2,33.9,7.1,8.12,NA,NA
-KEL125,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,31,2015-06-24,2015,Eidolon dupreanum,male,A,NA,NA,NA,NA,350,20.7,130.2,64,29.2,8.4,9.3,NA,NA
-KEL128,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,31,2015-06-24,2015,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,23.1,129,61.6,23.9,3.7,5.3,NA,NA
-KEL13,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,5,2013-11-26,2013,Eidolon dupreanum,male,A,NA,NA,NA,NA,300,18.5,120,55,31,NA,NA,NA,NA
-KEL134,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,34,2016-01-10,2016,Eidolon dupreanum,male,A,NA,NA,NA,NA,320,23.7,128.2,61.5,25,16.3,23.1,NA,NA
-KEL138,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,34,2016-01-10,2016,Eidolon dupreanum,female,NL,NA,NA,NA,NA,320,22.7,133.8,56.47,27.6,7.6,9.6,NA,NA
-KEL140,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,34,2016-01-10,2016,Eidolon dupreanum,male,A,NA,NA,NA,NA,320,22.5,131.3,64.63,33.24,17,19.49,NA,NA
-KEL141,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,34,2016-01-10,2016,Eidolon dupreanum,female,NL,NA,NA,NA,NA,312,21.5,126,58.8,31.35,5.81,8.11,NA,NA
-KEL145,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,34,2016-01-10,2016,Eidolon dupreanum,female,NL,NA,NA,NA,NA,440,22.5,133.6,63.05,30.66,5.71,9.66,NA,NA
-KEL148,1,0,1,Kunsagivirus/Hepatovirus,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,male,A,no,no,NA,NA,350,21,127,61.9,29,15.9,17.2,312.9920015,37.0079985
-KEL149,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,380,22,128.5,65.2,26.9,7.2,9.7,307.7173758,72.28262422
-KEL150,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,335,21.3,130.9,62.2,24.5,6.55,8.76,315.770387,19.22961304
-KEL151,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,330,21.1,124.3,63.4,29.9,8.4,11,293.7678286,36.23217136
-KEL152,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,350,20.5,128.8,60.8,26.4,6.8,8.4,308.7207701,41.27922989
-KEL153,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,360,21,123,56.8,23.9,10.4,10.9,289.4875206,70.51247942
-KEL154,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,340,21.8,130,64.9,29.1,6.9,8.6,312.7435948,27.25640518
-KEL155,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,340,19.8,122.8,59.4,33.6,9.9,12.8,288.8305957,51.16940426
-KEL156,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,male,A,no,no,NA,NA,320,20.8,111.6,48.2,33.7,3,4.5,264.6649589,55.3350411
-KEL157,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,380,21.8,131.4,65.1,30.1,8.8,13.7,317.4555066,62.54449341
-KEL158,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,J,yes,no,NA,NA,295,19.8,130.1,56.6,31,2.1,4.2,NA,NA
-KEL159,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,male,J,yes,no,NA,NA,275,21.6,122.3,58.2,22,small,small,NA,NA
-KEL160,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,325,21.9,120.9,58,29.1,7.3,11.1,282.6109962,42.38900384
-KEL161,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,male,A,no,no,NA,NA,360,23.9,131.08,57.4,20.5,15.8,17.9,326.099697,33.90030302
-KEL162,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,400,22.8,128.8,62.7,28.1,8,10.5,308.7207701,91.27922989
-KEL163,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,360,21.2,127,63.4,27.9,5.4,11.4,302.7143405,57.28565952
-KEL164,1,0,1,Teschovirus,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,J,yes,no,NA,NA,230,19.2,112.9,52.6,26.8,small,small,NA,NA
-KEL165,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,355,20.8,124.6,61.4,29.2,8.7,10.7,294.7581192,60.24188081
-KEL166,0,1,1,Sapovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,J,yes,no,NA,NA,220,18.3,109.3,49.8,27.8,small,small,NA,NA
-KEL167,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,19.4,126,67,30.1,6.3,9.6,299.3919448,0.608055184
-KEL168,0,1,1,Sapovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,330,20.8,129.6,62.6,25.2,8.9,9.4,311.4010121,18.59898791
-KEL169,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,male,J,yes,no,NA,NA,205,17.9,107.7,53.1,25.7,small,small,NA,NA
-KEL170,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,355,19.5,124.3,59.1,28.4,8.2,11.1,293.7678286,61.23217136
-KEL171,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,male,J,yes,no,NA,NA,200,18.2,106.8,49.4,29.3,small,small,NA,NA
-KEL172,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,360,18.8,134.3,60.2,31.9,7.9,10.3,327.2791353,32.72086466
-KEL173,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,315,21.6,129.9,64,31.4,9.3,10.5,312.4077955,2.592204454
-KEL174,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-16,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,20.6,122.8,58.6,22.9,7.4,8.2,288.8305957,11.16940426
-KEL175,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-16,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,330,20.8,133.9,64.3,29.1,11.7,15.4,325.9191107,4.080889311
-KEL176,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-16,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,355,21.2,132.3,61.9,27,9.2,11.1,320.4951225,34.50487752
-KEL177,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-16,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,19,123.8,60.6,27.3,6.7,8.5,292.1194476,7.880552379
-KEL178,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-16,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,360,20.3,126,64.4,24.9,9.2,12.2,299.3919448,60.60805518
-KEL179,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-16,2018,Eidolon dupreanum,male,A,no,no,NA,NA,310,20.6,130.5,58.9,30.9,22.7,24.5,324.2288517,-14.22885172
-KEL180,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,270,21,128.3,62.5,22.3,3.5,0,307.0489613,-37.04896133
-KEL181,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-09,2018,Eidolon dupreanum,male,A,no,no,NA,NA,350,22.5,132.4,73.8,42.3,35.5,31.6,330.3666547,19.63334528
-KEL182,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,21,124.9,57.9,24.3,8.2,7.7,295.7493545,14.25064551
-KEL183,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,245,22,132.2,62.6,21.6,9.6,7.4,320.1569818,-75.1569818
-KEL184,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-09,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,295,21,129.25,63.4,30.6,8.9,7.5,310.2275975,-15.22759753
-KEL185,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,345,23,130.4,59.3,23.3,9,7.4,314.0878146,30.91218535
-KEL186,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,265,20.5,131.1,59.7,23.9,7.2,5.9,316.4441295,-51.44412946
-KEL187,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,23,131.6,61.8,24.7,7.1,6.8,318.1302664,1.869733627
-KEL188,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,330,22,128.1,61.2,24.4,8.8,5.9,306.3809594,23.61904058
-KEL189,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,22,128.9,64.2,24.3,9.3,6.2,309.0554407,10.94455926
-KEL190,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,21.5,129.6,59.5,24.6,8.9,6.5,311.4010121,-1.401012093
-KEL191,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,325,23,134,67.8,26.6,9.6,7.5,326.2589662,-1.258966203
-KEL192,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,315,22,130.3,61,27.6,7.6,7.4,313.7516064,1.248393621
-KEL193,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,J,yes,no,NA,NA,300,22.5,127.2,64.4,25.4,2.3,1.7,NA,NA
-KEL194,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,345,21.5,129,62.2,26.2,8.8,6.7,309.3902142,35.60978578
-KEL195,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,male,A,no,no,NA,NA,350,21,130.7,62.4,25.7,21.7,12.3,324.873692,25.126308
-KEL196,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,20.5,128.6,61.7,24,6.9,3.3,308.0517376,-8.051737585
-KEL197,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,21,134.5,66.4,26.8,3.4,2.2,327.9597498,-17.9597498
-KEL198,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,male,A,no,no,NA,NA,320,21,130.4,62.7,29.7,21.8,13.4,323.9065418,-3.906541766
-KEL199,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,270,21.5,127,58.5,24.1,6.8,6.4,302.7143405,-32.71434048
-KEL200,0,1,1,Sapovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,340,23,136.1,69.4,26.5,8.8,6.7,333.4190695,6.580930495
-KEL201,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,340,22,128,59.8,23.5,8.1,6.7,306.0471133,33.95288671
-KEL202,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,340,22.5,132.6,64.1,27.1,9.2,6,321.5101518,18.48984823
-KEL203,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,21,130.5,66,NA,8.6,6.2,314.424125,5.57587496
-KEL204,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,21,126.7,60.5,23.5,3.7,1.7,301.7165299,8.28347007
-KEL205,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,21.5,134,63.5,31.6,7.8,4.8,326.2589662,-6.258966203
-KEL206,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,J,yes,no,NA,NA,300,21,130.1,60,27.3,7.3,4.4,NA,NA
-KEL207,0,1,1,Sapovirus,CZID,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,270,20.5,130,59.8,25.6,3.9,1.6,312.7435948,-42.74359482
-KEL208,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,21,126.2,61,23.7,9.1,5.2,300.0555914,9.944408599
-KEL209,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,265,22.5,131.7,62.4,23.7,8.2,6.7,318.4677986,-53.46779864
-KEL210,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,280,21.5,124.1,59.1,23,3.1,1.7,293.1081605,-13.1081605
-KEL211,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,20,131.5,59.2,24.3,8.1,6.9,317.7928357,-7.792835674
-KEL212,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,42,2018-04-10,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,23,130.2,62.7,23.2,7.7,5.6,313.4155003,-13.41550029
-KEL213,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,320,18,129.5,64.2,32.3,32.2,12.2,321.0090647,-1.0090647
-KEL215,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,female,J,yes,no,NA,NA,200,18,120.2,57.2,32.3,small,small,NA,NA
-KEL216,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,330,18,128.3,63.9,32.7,9.7,8,307.0489613,22.95103867
-KEL217,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,320,19,124.1,59.7,25.9,21.6,12.9,303.7508877,16.2491123
-KEL218,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,18,127.2,71.3,24.6,13.9,4.9,303.3800664,-3.380066445
-KEL219,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,340,17.5,131.7,61.9,21.5,18.2,16.6,328.1022903,11.89770968
-KEL22,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,5,2013-11-26,2013,Eidolon dupreanum,female,L,NA,NA,NA,NA,310,20.5,126,61,31,NA,NA,NA,NA
-KEL220,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,300,18.5,123.4,58.9,29.8,20.3,16.7,301.5298243,-1.529824289
-KEL221,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,J,yes,no,NA,NA,240,18,122.5,59.1,31.3,small,small,NA,NA
-KEL222,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,17,131.7,66.5,29.9,7.6,6.6,318.4677986,-18.46779864
-KEL223,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,350,18.5,133.9,64.3,33.9,10.9,7.6,335.2308468,14.76915323
-KEL224,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,370,19.5,131.4,63.9,27.5,15.8,12.4,327.1329426,42.86705741
-KEL225,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,320,18.5,124.8,62.2,32.2,20.5,19.3,305.9756804,14.02431957
-KEL226,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,340,18.5,115.9,63.3,29.8,24.3,10,277.9707959,62.02920412
-KEL227,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,330,20.5,127.6,58.2,26.4,11.1,6.8,304.7127621,25.28723794
-KEL228,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,female,J,yes,no,NA,NA,230,18.5,118,57.2,28.3,4.1,2.3,NA,NA
-KEL229,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,340,16,131.6,63.4,29,23.7,12,327.7791014,12.22089864
-KEL230,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,310,19.5,127.4,59.7,32.3,small,small,314.2716032,-4.271603193
-KEL231,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,310,19,128.9,62.6,30.5,small,small,319.0807354,-9.08073544
-KEL232,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,340,19.5,126.8,64.4,26.2,18.7,10,312.3526498,27.64735021
-KEL233,1,0,1,Sapelovirus,CZID,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,300,19.5,122.8,60,33.1,small,small,299.6290351,0.370964854
-KEL234,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,270,18.5,117,58,31.5,small,small,281.398487,-11.39848701
-KEL235,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,A,no,no,NA,NA,350,18,130.8,65.9,26.6,14.5,7.9,325.1962222,24.80377777
-KEL236,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,male,J,yes,no,NA,NA,310,19,116.5,59.5,26.8,small,small,NA,NA
-KEL238,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,46,2018-07-27,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,340,19,129.1,64.8,26.4,8.6,5.4,309.7250905,30.27490952
-KEL239,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,131,13.53,133.2,36.3,27.6,8.6,9.7,323.5429388,-192.5429388
-KEL240,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,341,15.06,132,61.2,28.6,7.7,7.5,319.4810044,21.51899565
-KEL241,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,325,14.28,128.2,61.6,26.9,12.8,11.8,306.7149088,18.28509122
-KEL242,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,335,15.52,125.6,59.7,24.8,15.2,16.3,308.5228484,26.47715165
-KEL243,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,150,12.53,131.4,63.3,22.4,17.7,16.1,327.1329426,-177.1329426
-KEL244,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,168,10.66,112.6,53.7,24.2,NA,NA,255.8986531,-87.89865315
-KEL245,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,120,13.68,123,55.2,26.2,10.5,10,300.2623253,-180.2623253
-KEL246,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,145,11.61,105.3,46,23.5,NA,NA,245.4453853,-100.4453853
-KEL247,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,175,11.71,114.2,51.7,25.4,NA,NA,260.9892336,-85.98923362
-KEL248,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,135,13.04,131.5,62.1,26.6,16.8,16.5,327.4559854,-192.4559854
-KEL249,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,185,11.09,113.8,53.9,26.7,0,0,271.4539074,-86.45390738
-KEL25,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,5,2013-11-26,2013,Eidolon dupreanum,female,J,NA,NA,NA,NA,70,12.6,77,37.5,21.8,NA,NA,NA,NA
-KEL250,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,184,15.92,134.5,70.3,24,16.9,15.8,337.1810763,-153.1810763
-KEL251,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,155,14.2,108.3,46.6,23.7,0,0,242.3599717,-87.35997173
-KEL252,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,395,24.2,136,62.1,35.1,22.9,20.7,342.0679606,52.93203942
-KEL253,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,207,19.5,129.4,66.9,28.7,12.2,13.4,320.6874916,-113.6874916
-KEL254,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,173,20.5,129.9,55.7,29.6,16.3,15.2,322.2960954,-149.2960954
-KEL259,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-08,2019,Eidolon dupreanum,female,J,yes,no,NA,NA,160,18.5,109.2,35.6,22.8,small,small,NA,NA
-KEL264,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-08,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,360,21.8,126,52,30,7,6,299.3919448,60.60805518
-KEL265,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-08,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,350,22.3,128.63,55.57,32.95,9.43,9.77,308.1520662,41.84793379
-KEL266,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,360,12.72,137.9,73.2,27,9.2,10.2,339.5912497,20.40875033
-KEL266B,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,male,A,no,no,NA,NA,330,21.5,129.1,63,26.5,19.9,17.7,319.7232159,10.27678413
-KEL267,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,male,A,no,no,NA,NA,162,14.91,124.4,62.5,20.5,18.4,21.2,304.7039145,-142.7039145
-KEL268,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,male,A,no,no,NA,NA,182,14.77,128.2,62.2,22.7,10.3,12.2,316.8343904,-134.8343904
-KEL269,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,male,A,no,no,NA,NA,245,13.7,130.8,62.6,25.2,18.5,19.8,325.1962222,-80.19622223
-KEL27,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,5,2013-11-26,2013,Eidolon dupreanum,male,J,NA,NA,NA,NA,90,12.28,75,36.4,19.8,NA,NA,NA,NA
-KEL270,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,125,11.41,131.3,58.7,28.2,9.3,5.4,317.1182792,-192.1182792
-KEL271,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,315,13.45,128.8,53.8,28,7.4,6.7,308.7207701,6.279229885
-KEL272,1,0,1,Sapelovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,male,A,no,no,NA,NA,150,14.25,124.3,63,24.5,15,14.3,304.3861629,-154.3861629
-KEL272B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,310,19.5,130.1,62,27.1,8.7,9,313.0794964,-3.079496421
-KEL273,1,0,1,Sapelovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,male,A,no,no,NA,NA,340,13.14,126.8,57.8,24.6,16.9,15.3,312.3526498,27.64735021
-KEL274,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,165,13.06,130.2,60.1,26.5,9.8,9.7,313.4155003,-148.4155003
-KEL275,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,2019,Eidolon dupreanum,male,A,no,no,NA,NA,165,14.69,128.7,66.5,27.4,15,16.6,318.4385514,-153.4385514
-KEL275B,1,0,1,Sapelovirus,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,210,20.8,132.1,65,30.4,7.9,4.6,319.8189424,-109.8189424
-KEL278,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-05,2019,Eidolon dupreanum,male,A,no,no,NA,NA,320,21.5,128.48,67.25,28.71,20.89,23.45,317.7324918,2.267508208
-KEL278B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,320,19,128,63,27,9.1,8.1,306.0471133,13.95288671
-KEL279,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-05,2019,Eidolon dupreanum,male,A,no,no,NA,NA,360,21.1,135.46,62.54,22.49,19.67,26.41,340.3068259,19.69317411
-KEL279B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,305,19,127.3,61.4,29.4,6.1,8.2,303.713085,1.286915037
-KEL280,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-05,2019,Eidolon dupreanum,male,A,no,NA,NA,NA,350,20.6,128.13,51.74,20.57,17.49,18.87,316.6099562,33.39004384
-KEL280B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,275,21.4,126.4,60.6,27.7,small,small,300.7196547,-25.71965466
-KEL281,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-05,2019,Eidolon dupreanum,male,J,yes,NA,NA,NA,200,19.6,111.07,55.21,22.56,small,small,NA,NA
-KEL281B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,290,21.5,126.8,62.1,27.7,5.5,4.2,302.0490296,-12.04902959
-KEL283,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-05,2019,Eidolon dupreanum,male,A,no,no,NA,NA,335,23,127.47,62,29.75,17.16,16.1,314.4956565,20.50434352
-KEL283B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,295,22.3,131.2,60.2,34.3,small,small,316.7811534,-21.78115343
-KEL285,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-05,2019,Eidolon dupreanum,male,A,no,no,NA,NA,210,26,132.13,64.22,30.66,15.26,14.96,329.4928341,-119.4928341
-KEL285B,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-15,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,95,22.2,129.4,62,30.8,small,small,310.7303356,-215.7303356
-KEL286B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-15,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,115,22.3,133.7,62,30.8,8.7,6.9,325.2397012,-210.2397012
-KEL287,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,350,21.4,126.07,57.03,25.17,19.3,21.05,310.0215633,39.97843674
-KEL289,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,290,20,124.08,57.78,25.04,8.62,5.75,293.0422168,-3.042216826
-KEL29,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,310,20.5,120.9,57.4,30.9,10.9,10.8,NA,NA
-KEL290,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,male,A,no,NA,NA,NA,345,23,126.95,61.05,32.5,15.37,19.12,312.8321355,32.16786452
-KEL291,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,320,24.7,128,61.85,31.15,8.83,6.85,306.0471133,13.95288671
-KEL291B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-15,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,280,21.6,125.3,62.3,28.2,8.6,4.8,297.0724688,-17.07246883
-KEL293,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,371,24.5,127.83,61.67,25.21,17.77,14.9,315.6485083,55.35149172
-KEL294,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,331,26.4,131.14,62.95,25.52,16.75,15.77,326.2933734,4.706626553
-KEL295,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,340,26,130.36,63.92,24.15,18.82,15.16,323.7776384,16.22236164
-KEL296,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,350,19,128.59,60.1,30.97,0.432638889,8.7,308.0182968,41.98170323
-KEL298,1,0,1,Sapelovirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,330,23.8,123.53,60.06,20.5,16.12,14.2,301.9420248,28.05797517
-KEL299,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,2019,Eidolon dupreanum,male,A,no,no,NA,NA,265,21.2,119.89,61.03,26.6,14.93,15.87,290.4495398,-25.44953976
-KEL299B,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-15,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,260,18.5,124.3,58.7,29.8,4.2,8.1,293.7678286,-33.76782864
-KEL30,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,410,21.9,122.3,62.8,30.1,9.1,10.1,NA,NA
-KEL305,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,300,18.8,130,60.4,26.8,4.5,7.2,NA,NA
-KEL306,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,325,24.5,132.1,63.5,33.3,9.1,6.3,NA,NA
-KEL309,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,325,20.5,129.9,61.7,22.1,6.1,7.6,NA,NA
-KEL31,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,20.6,127.8,61.3,33,5.4,6.6,NA,NA
-KEL310,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,325,19.5,132.7,63.1,29.2,10.4,10.7,NA,NA
-KEL312,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,male,A,NA,no,NA,NA,305,23.3,128.9,60.5,32.2,7.8,8.5,NA,NA
-KEL315,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,305,21.4,128.1,62.4,25.7,small,small,NA,NA
-KEL317,0,0,0,,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,male,A,NA,no,NA,NA,325,22.8,129.3,63.4,27,6.5,5.4,NA,NA
-KEL318,1,0,1,Kobuvirus,CZID/NIH,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,230,21,122,56,28.6,small,small,NA,NA
-KEL322,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,315,21.8,130.4,63.9,32.2,small,small,NA,NA
-KEL334,0,0,0,,CZID,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,280,22.5,129,60.9,30.5,7.6,3.2,NA,NA
-KEL337,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,68,2019-06-05,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,330,24,128.5,59.7,24.8,6.9,5.3,NA,NA
-KEL338,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,68,2019-06-05,2019,Eidolon dupreanum,male,A,NA,no,NA,NA,320,21.4,123.8,61.4,27.6,10.5,12.9,NA,NA
-KEL345,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,68,2019-06-06,2019,Eidolon dupreanum,male,A,NA,no,NA,NA,345,23.3,128.3,60.9,26.9,10.1,6.3,NA,NA
-KEL348,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,71,2019-07-07,2019,Eidolon dupreanum,male,A,no,no,NA,NA,330,22,128.9,63.1,30.2,9.5,8.3,319.0807354,10.91926456
-KEL349,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,71,2019-07-07,2019,Eidolon dupreanum,male,A,NA,no,NA,NA,370,24.3,129,62.2,29.5,12.1,11.4,NA,NA
-KEL35,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,21,128.1,62.5,27.1,8.9,5.8,NA,NA
-KEL350,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,71,2019-07-07,2019,Eidolon dupreanum,male,A,NA,no,NA,NA,343,21.8,129.8,62.8,31,9.8,10.1,NA,NA
-KEL354,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,71,2019-07-07,2019,Eidolon dupreanum,male,A,NA,no,NA,NA,351,25,123.2,63.9,27.3,11.3,8,NA,NA
-KEL36,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,20.2,134.5,64.4,29.8,10.9,10.8,NA,NA
-KEL361,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,75,2019-08-24,2019,Eidolon dupreanum,male,A,no,no,NA,NA,338,21.6,133.1,64.2,23.7,12.6,8.2,332.6345826,5.36541739
-KEL366,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,75,2019-08-24,2019,Eidolon dupreanum,male,A,no,no,NA,NA,355,22.6,129.9,62.9,25.2,13.1,12.9,322.2960954,32.70390463
-KEL367,1,0,1,Cardiovirus,NIH,Angavokely,AngavoKely,-18.9327,47.7578,75,2019-08-24,2019,Eidolon dupreanum,male,A,no,no,NA,NA,330,19.6,131.6,63.1,25.6,14.8,11.8,327.7791014,2.220898639
-KEL368,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,75,2019-08-24,2019,Eidolon dupreanum,male,A,no,no,NA,NA,385,22.2,134.3,64.6,27.9,16.2,15.3,336.5307117,48.46928831
-KEL369,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,78,2019-09-20,2019,Eidolon dupreanum,male,A,no,no,NA,NA,381,24,132.7,63.9,32.4,17.9,9.6,331.3381882,49.66181176
-KEL370,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,78,2019-09-20,2019,Eidolon dupreanum,male,A,no,no,NA,NA,349,22.2,129.5,62.4,26.1,9.3,10.3,321.0090647,27.9909353
-KEL371,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,78,2019-09-20,2019,Eidolon dupreanum,male,A,no,no,NA,NA,337,22.9,129.7,59.3,25.2,7.1,7.3,321.6524325,15.34756753
-KEL373,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,78,2019-09-20,2019,Eidolon dupreanum,male,A,no,no,NA,NA,326,20.1,125.2,58.1,22.3,0.7,6.9,307.2486593,18.75134071
-KEL374,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,78,2019-09-20,2019,Eidolon dupreanum,male,A,no,no,NA,NA,363,22.9,130.1,63.6,27.9,8.1,7.5,322.9400531,40.05994691
-KEL380,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,78,2019-09-20,2019,Eidolon dupreanum,male,A,no,no,NA,NA,360,20.5,127.7,61.5,29.7,14.7,14.8,315.2320891,44.76791085
-KEL382,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,78,2019-09-20,2019,Eidolon dupreanum,male,A,no,no,NA,NA,345,19,131.4,63.1,26.2,15.6,16.5,327.1329426,17.86705741
-KEL389,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,78,2019-09-20,2019,Eidolon dupreanum,male,A,no,no,NA,NA,292,22.5,130,59.5,26.5,16.1,10.7,322.6180374,-30.6180374
-KEL40,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,340,22.6,125.4,63.6,30.3,7.1,10.2,NA,NA
-KEL41,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,22.5,131.6,61.2,25.1,11.1,11.4,NA,NA
-KEL440,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,91,2020-02-02,2020,Eidolon dupreanum,female,NL,no,no,NA,NA,340,20.5,130,64,27,8.5,6,312.7435948,27.25640518
-KEL442,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,91,2020-02-02,2020,Eidolon dupreanum,male,A,no,no,NA,NA,375,23,132,66.5,20.1,17,16,329.072295,45.92770499
-KEL443,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,91,2020-02-02,2020,Eidolon dupreanum,male,A,no,no,NA,NA,400,23.55,130,67.5,32,20,17.5,322.6180374,77.3819626
-KEL444,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,91,2020-02-02,2020,Eidolon dupreanum,female,NL,no,no,NA,NA,320,20,127,63.5,28,6,4.5,302.7143405,17.28565952
-KEL45,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,340,20.2,129.7,59.8,33.9,5.9,9.2,NA,NA
-KEL452,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,91,2020-02-02,2020,Eidolon dupreanum,male,A,no,no,NA,NA,311,21.6,132.6,64.9,30.4,small,small,331.0142711,-20.01427107
-KEL459,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,91,2020-02-02,2020,Eidolon dupreanum,male,A,no,no,NA,NA,230,21.5,132,60,25,14,13,329.072295,-99.07229501
-KEL46,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,320,21,126.1,64.5,32.5,6.2,9.4,NA,NA
-KEL47,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,21.5,124.1,60.1,24.9,7.9,12.2,NA,NA
-KEL48,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,320,21.5,126.8,59.2,20.2,8.1,10.7,NA,NA
-KEL49,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,450,20.4,122.3,62.5,25.8,4.7,9,NA,NA
-KEL61,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,26,137.9,67.1,33,5.1,10.6,NA,NA
-KEL63,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,13,2014-10-08,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,21.6,122.7,63.5,28.6,7.6,4.8,NA,NA
-KEL67,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-17,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,290,21,129.2,65.7,34.1,7.2,12.1,NA,NA
-KEL68,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-17,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,330,20.5,133.6,61.7,30,13.2,22.2,NA,NA
-KEL69,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-17,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,320,20.2,129.9,55,31.7,19.9,26.9,NA,NA
-KEL71,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-17,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,300,21.3,129.6,62.1,30.9,15,23.5,NA,NA
-KEL72,1,0,1,Hepatovirus,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-17,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,270,21,128.9,59.3,27.2,14.9,21.9,NA,NA
-KEL77,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-17,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,270,21.5,133.7,57.7,35.7,small,NA,NA,NA
-KEL78,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-17,2014,Eidolon dupreanum,female,NL,NA,NA,NA,NA,300,21.2,130,64.6,34.6,small,NA,NA,NA
-KEL86,1,0,1,Kobuvirus,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-18,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,350,22.2,140.9,64.9,37.9,15.9,26.9,NA,NA
-KEL91,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-18,2014,Eidolon dupreanum,female,L,NA,NA,NA,NA,290,19.5,125.4,61,33,9.1,11.1,NA,NA
-KEL95,0,0,0,,NIH,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-18,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA,260,21.5,133.8,63.6,30.7,11.3,20.3,NA,NA
 MAH1,0,0,0,,CZID,Mahabo,Ambakoana,-18.513,48.1665,8,2014-07-13,2014,Pteropus rufus,female,NL,NA,NA,NA,NA,590,25.2,166,75,26.5,NA,NA,NA,NA
 MAH10,0,0,0,,CZID/NIH,Mahabo,Ambakoana,-18.513,48.1665,8,2014-07-16,2014,Pteropus rufus,male,A,NA,NA,NA,NA,590,26.3,170,91.6,36.4,NA,NA,NA,NA
 MAH11,0,0,0,,CZID,Mahabo,Ambakoana,-18.513,48.1665,8,2014-07-18,2014,Pteropus rufus,male,A,NA,NA,NA,NA,650,25.7,174.8,83.2,42.3,NA,NA,NA,NA
@@ -434,6 +489,45 @@ MARO68,0,0,0,,NIH,Marovitsika,Ambakoana,-18.513,48.1665,21,2015-03-11,2015,Ptero
 MARO7,0,0,0,,CZID,Marovitsika,Ambakoana,-18.513,48.1665,2,2013-11-07,2013,Pteropus rufus,female,L,NA,NA,NA,NA,510,32.5,165,79,25,NA,NA,NA,NA
 MARO79,0,0,0,,CZID/NIH,Marovitsika,Ambakoana,-18.513,48.1665,28,2015-05-17,2015,Pteropus rufus,male,J,NA,NA,NA,NA,510,25.4,153.6,73.7,30.8,4.6,6.5,NA,NA
 MARO8,0,0,0,,CZID,Marovitsika,Ambakoana,-18.513,48.1665,2,2013-11-07,2013,Pteropus rufus,male,J,NA,NA,NA,NA,150,24.3,98,50,18.8,NA,NA,NA,NA
+MLB001,0,0,0,,CZID,Mahialambo,Ambakoana,-18.513,48.1665,52,2018-12-13,2018,Pteropus rufus,female,L,no,yes,mom,MLB002,660,27.5,175,89.29,24.69,13.46,12.38,614.7735546,45.22644539
+MLB002,0,0,0,,CZID,Mahialambo,Ambakoana,-18.513,48.1665,52,2018-12-13,2018,Pteropus rufus,male,J,yes,yes,pup,MLB001,120,13,89.62,44.97,21.55,small,small,NA,NA
+MLB003,0,0,0,,CZID,Mahialambo,Ambakoana,-18.513,48.1665,52,2018-12-14,2018,Pteropus rufus,male,J,yes,no,NA,NA,190,17,119.32,57.08,23.18,small,small,NA,NA
+MLB004,0,0,0,,CZID/NIH,Mahialambo,Ambakoana,-18.513,48.1665,52,2018-12-16,2018,Pteropus rufus,female,NL,no,no,NA,NA,480,27.5,151.32,70.74,25.08,small,small,498.1689858,-18.16898581
+MLB005,0,0,0,,CZID/NIH,Mahialambo,Ambakoana,-18.513,48.1665,52,2018-12-17,2018,Pteropus rufus,male,A,no,no,NA,NA,740,25.5,170,85.65,23.56,23.4,16.4,673.0284357,66.97156425
+MLB006,0,0,0,,CZID/NIH,Mahialambo,Ambakoana,-18.513,48.1665,52,2018-12-18,2018,Pteropus rufus,female,L,no,yes,mom,MLB007,500,25,160,78.66,31.07,small,small,540.0298056,-40.02980558
+MLB007,0,0,0,,CZID,Mahialambo,Ambakoana,-18.513,48.1665,52,2018-12-18,2018,Pteropus rufus,female,J,yes,yes,pup,MLB006,180,17,122.75,59.29,27.3,small,small,NA,NA
+MLB009,0,0,0,,CZID,Mahialambo,Ambakoana,-18.513,48.1665,52,2018-12-18,2018,Pteropus rufus,male,A,no,no,NA,NA,625,26.3,162,80,21.23,15.94,14.03,600.4167932,24.58320678
+TSI001,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,69,2019-06-15,2019,Pteropus rufus,female,NL,no,no,NA,NA,600,29.5,168,80.2,28.4,6.04,6.6,579.5212872,20.4787128
+TSI002,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,69,2019-06-16,2019,Pteropus rufus,male,A,no,no,NA,NA,700,34,177,83.7,27.1,receded,receded,740.5232075,-40.52320754
+TSI003,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,69,2019-06-17,2019,Pteropus rufus,female,NL,no,no,NA,NA,465,27.5,157,69.5,32,small,small,525.4440783,-60.44407835
+TSI004,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,72,2019-07-17,2019,Pteropus rufus,male,A,NA,no,NA,NA,500,26,156,77.1,32.5,small,small,NA,NA
+TSI006,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,72,2019-07-18,2019,Pteropus rufus,male,A,NA,no,NA,NA,700,23,164,84,26.1,receded,receded,NA,NA
+TSI007,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,72,2019-07-18,2019,Pteropus rufus,male,A,NA,no,NA,NA,465,26,157.7,72.8,26.4,receded,receded,NA,NA
+TSI011,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,72,2019-07-21,2019,Pteropus rufus,female,NL,NA,no,NA,NA,740,25.2,167,88,24.9,6.1,4.7,NA,NA
+TSI016,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,72,2019-07-23,2019,Pteropus rufus,male,A,NA,no,NA,NA,805,29.4,176,87,30.1,9.1,9.3,NA,NA
+TSI017,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,72,2019-07-23,2019,Pteropus rufus,female,P,NA,no,NA,NA,640,25.9,162,76.4,29.5,10,5.2,NA,NA
+TSI020,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,72,2019-07-24,2019,Pteropus rufus,male,A,NA,no,NA,NA,380,24.5,146.5,72.9,33.3,small,small,NA,NA
+TSI022,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,76,2019-09-01,2019,Pteropus rufus,male,A,no,no,NA,NA,730,26.2,187,80.6,22.6,13.6,11.1,843.469279,-113.469279
+TSI023,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,76,2019-09-02,2019,Pteropus rufus,female,NL,no,no,NA,NA,710,27.5,165,80.4,23.2,13.7,9.2,564.6112756,145.3887244
+TSI026,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,76,2019-09-02,2019,Pteropus rufus,male,A,no,no,NA,NA,560,26.5,173,84.4,30.8,receded,receded,701.4986501,-141.4986501
+TSI028,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,76,2019-09-02,2019,Pteropus rufus,female,NL,no,no,NA,NA,610,NA,158.7,76.7,32,14,15.2,533.6941907,76.30580926
+TSI029,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,76,2019-09-02,2019,Pteropus rufus,male,A,no,no,NA,NA,610,25.6,174,80.7,20.1,14.5,10.9,711.1404373,-101.1404373
+TSI031,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,76,2019-09-03,2019,Pteropus rufus,male,A,no,no,NA,NA,690,27.3,172,100,22.9,12.7,15.6,691.9328289,-1.932828867
+TSI034,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,76,2019-09-05,2019,Pteropus rufus,male,A,no,no,NA,NA,650,23.2,174,80,24,4,11,711.1404373,-61.14043734
+TSI037,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,79,2019-09-29,2019,Pteropus rufus,female,L,no,yes,mom,TSI042,518,26.2,172,80.3,25,13,7,599.5867995,-81.58679951
+TSI038,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,79,2019-09-29,2019,Pteropus rufus,female,L,no,yes,mom,TSI043,510,28.5,160,78.6,31.9,13,9.5,540.0298056,-30.02980558
+TSI039,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,79,2019-09-29,2019,Pteropus rufus,male,J,yes,no,NA,NA,470,22,150.5,71.7,22.9,receded,receded,NA,NA
+TSI044,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,79,2019-10-01,2019,Pteropus rufus,female,P,no,no,NA,NA,645,26.5,158,80.4,32,5,8,530.2922812,114.7077188
+TSI046,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,79,2019-10-04,2019,Pteropus rufus,male,A,no,no,NA,NA,685,25.8,180,90,29.1,14.5,16.4,770.5954511,-85.59545115
+TSI047,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,83,2019-10-26,2019,Pteropus rufus,male,A,no,no,NA,NA,695,29.5,170,83.8,27.9,11.1,12.2,673.0284357,21.97156425
+TSI049,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,83,2019-10-26,2019,Pteropus rufus,male,A,no,no,NA,NA,496,22.3,157.5,78,35.5,small,small,561.6636583,-65.66365832
+TSI053,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,83,2019-10-28,2019,Pteropus rufus,male,A,no,no,NA,NA,680,23,173,85.7,24.5,NA,NA,701.4986501,-21.49865007
+TSI057,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,83,2019-10-31,2019,Pteropus rufus,female,L,no,yes,mom,TSI059,550,24.9,158,79.9,31.3,10.1,15.5,530.2922812,19.7077188
+TSI061,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,83,2019-11-01,2019,Pteropus rufus,male,A,no,no,NA,NA,680,26.5,166,82.3,35,11.1,11.9,636.1240705,43.87592946
+TSI062,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,83,2019-11-01,2019,Pteropus rufus,female,NL,no,no,NA,NA,450,24,160,74.9,24,small,small,540.0298056,-90.02980558
+TSI067,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,92,2020-02-26,2020,Pteropus rufus,male,A,no,no,NA,NA,764,25.8,170,84,30,17,19,673.0284357,90.97156425
+TSI068,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,92,2020-02-28,2020,Pteropus rufus,male,A,no,no,NA,NA,703,26.9,174,83,24,15,14,711.1404373,-8.140437341
+TSI073,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,92,2020-02-29,2020,Pteropus rufus,male,J,yes,no,NA,NA,326,25.3,152,71,25,S,S,NA,NA
 MIZ12,0,0,0,,NIH,Maromizaha,Maromizaha,-18.9623,48.4525,12,2014-10-04,2014,Rousettus madagascariensis,female,NL,NA,NA,NA,NA,72,11.55,76,32.8,16.5,4.8,1.8,NA,NA
 MIZ13,0,0,0,,NIH,Maromizaha,Maromizaha,-18.9623,48.4525,12,2014-10-04,2014,Rousettus madagascariensis,male,A,NA,NA,NA,NA,65,10.45,72.5,32,12.5,13.5,10.5,NA,NA
 MIZ135,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,39,2018-02-18,2018,Rousettus madagascariensis,female,J,yes,yes,pup,MIZ136,20,8.7,50.5,22.2,8.3,small,small,NA,NA
@@ -477,7 +571,6 @@ MIZ175,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,43,2018-04-13,2018,Rou
 MIZ176,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,43,2018-04-13,2018,Rousettus madagascariensis,male,J,yes,no,NA,NA,35,10,61.1,28,12.4,small,small,NA,NA
 MIZ177,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,43,2018-04-13,2018,Rousettus madagascariensis,female,NL,no,no,NA,NA,55,11.5,74.2,30.7,13.9,3.5,3.4,61.06357814,-6.063578141
 MIZ178,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,43,2018-04-14,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,65,10.5,71.8,33.4,11.8,13.7,3.5,65.84077431,-0.840774309
-MIZ179,0,1,1,Sapovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,43,2018-04-14,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,75,12,74.3,35.6,12.3,14.4,13.7,69.65354502,5.346454981
 MIZ18,0,0,0,,NIH,Maromizaha,Maromizaha,-18.9623,48.4525,12,2014-10-04,2014,Rousettus madagascariensis,male,A,NA,NA,NA,NA,52,9.56,66.5,33.5,12.8,small,NA,NA,NA
 MIZ180,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,43,2018-04-14,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,80,13,73.5,36.1,14.2,16.3,9.7,68.42431136,11.57568864
 MIZ181,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,43,2018-04-14,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,60,12,67.6,32.6,13.9,13.7,11.1,59.62643732,0.373562681
@@ -487,10 +580,8 @@ MIZ185,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,43,2018-04-14,2018,Rou
 MIZ186,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,43,2018-04-14,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,55,11.5,73.8,35.9,11.5,10,6.2,68.88426838,-13.88426838
 MIZ188,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,55,12,69.7,33.5,15.6,14,5.7,62.70342374,-7.703423736
 MIZ189,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,female,NL,no,no,NA,NA,60,11.5,74.6,34,14.8,3.9,3.4,61.45833054,-1.458330543
-MIZ190,1,0,1,Teschovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,60,12.5,71.4,33.5,13.3,small,small,65.2385596,-5.238559601
 MIZ192,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,female,NL,no,no,NA,NA,50,12,69.2,31.6,16.1,4.3,2.9,56.16541249,-6.165412487
 MIZ193,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,female,J,yes,no,NA,NA,35,11,63,28.4,15.5,small,small,NA,NA
-MIZ194,1,0,1,Unclassified picornavirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,female,NL,no,no,NA,NA,45,12,68,31.4,17.6,3.1,2.4,55.00008832,-10.00008832
 MIZ195,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,female,NL,no,no,NA,NA,55,11.5,71.8,33.6,14.6,3.8,2.9,58.70399661,-3.703996606
 MIZ196,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,50,11,66.1,32,12.4,small,small,57.46591187,-7.465911874
 MIZ197,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,female,NL,no,no,NA,NA,50,11,69.1,32.8,14.3,3.6,3,56.06814785,-6.068147855
@@ -501,7 +592,6 @@ MIZ201,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rou
 MIZ202,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,female,NL,no,no,NA,NA,55,12,73.3,32.6,13.7,4.4,3.9,60.17693203,-5.176932026
 MIZ203,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,female,NL,no,no,NA,NA,40,11,67,32.3,13.6,3.8,2.8,54.03209602,-14.03209602
 MIZ204,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,60,12,69.8,35.6,15.5,13.8,6.9,62.85145769,-2.851457695
-MIZ205,1,0,1,Teschovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,60,12,72.6,36.1,10,14.3,9.3,67.05170055,-7.051700554
 MIZ206,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,50,11.5,73.3,32.1,10.4,small,small,68.11834484,-18.11834484
 MIZ207,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,female,NL,no,no,NA,NA,40,11,68.2,32.6,14.1,3.2,2.4,55.19402751,-15.19402751
 MIZ208,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,45,11,72.9,34.8,16.2,14.5,7.6,67.50802569,-22.50802569
@@ -510,10 +600,8 @@ MIZ210,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rou
 MIZ211,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,60,12,69,34.6,16.4,9.7,6,61.67102245,-1.671022451
 MIZ212,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,female,NL,no,no,NA,NA,50,12,69.3,29.8,14.9,3.2,2.4,56.26270503,-6.262705031
 MIZ213,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,47,2018-07-29,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,80,11,72,34.2,16.1,10.2,7.1,66.14269457,13.85730543
-MIZ214,1,0,1,Unclassified picornavirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,65,11.2,70.4,32.1,13.3,12.2,7.9,63.74253193,1.257468067
 MIZ215,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,75,12.3,71.3,37.6,15.6,12.6,10,65.08834503,9.911654974
 MIZ218,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,75,10.4,70.3,33.8,11.8,11.8,8.5,63.59367818,11.40632182
-MIZ219,0,1,1,Sapovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,70,10.9,73.5,34.3,11,12.2,9.4,68.42431136,1.575688636
 MIZ220,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,70,12.2,73.8,33.2,12.8,13.8,10,68.88426838,1.115731624
 MIZ221,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,70,11.8,72.3,35.6,15.6,10.6,8.1,66.59658958,3.403410416
 MIZ222,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,female,NL,no,no,NA,NA,60,9.4,70.9,33.5,15.2,3.4,1.7,57.82315549,2.176844511
@@ -533,9 +621,7 @@ MIZ235,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rou
 MIZ236,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,female,NL,no,no,NA,NA,55,9.4,70.2,31.4,13.8,3.1,2.1,57.1395886,-2.139588603
 MIZ238,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,female,NL,no,no,NA,NA,45,9.4,73.2,34.6,12,3.1,2.5,60.07854867,-15.07854867
 MIZ239,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,60,10.8,76.8,30.4,16.7,14.1,11.9,73.54994617,-13.54994617
-MIZ240,1,0,1,Unclassified picornavirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-11,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,50,11.6,73.9,38.1,12.9,12.8,9.9,69.03785571,-19.03785571
 MIZ242,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-12,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,60,11.3,68.8,33.8,15.2,13,11.2,61.3772859,-1.3772859
-MIZ243,1,0,1,Sapelovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,50,2018-09-12,2018,Rousettus madagascariensis,male,J,yes,no,NA,NA,35,9.2,60.7,27.9,14.4,small,small,NA,NA
 MIZ25,0,0,0,,NIH,Maromizaha,Maromizaha,-18.9623,48.4525,12,2014-10-04,2014,Rousettus madagascariensis,male,A,NA,NA,NA,NA,62,10.4,67.5,32.5,11.5,14.5,10,NA,NA
 MIZ26,0,0,0,,NIH,Maromizaha,Maromizaha,-18.9623,48.4525,12,2014-10-04,2014,Rousettus madagascariensis,male,A,NA,NA,NA,NA,62,10.21,70.4,33.2,15.3,3.2,4.5,NA,NA
 MIZ260,0,0,0,,CZID/NIH,Maromizaha,Maromizaha,-18.9623,48.4525,53,2018-12-21,2018,Rousettus madagascariensis,male,A,no,no,NA,NA,26,9.41,69,30.5,14,5.8,6.2,61.67102245,-35.67102245
@@ -566,7 +652,6 @@ MIZ322,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,58,2019-01-09,2019,Rou
 MIZ338,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,59,2019-01-31,2019,Rousettus madagascariensis,female,L,no,yes,mom,MIZ343,70,10.1,68.71,31.6,12.16,2.8,6.5,55.68908308,14.31091692
 MIZ340,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,59,2019-01-31,2019,Rousettus madagascariensis,female,L,no,yes,mom,MIZ344,50,9.27,66.58,30.6,10.59,3.49,6.64,53.62639143,-3.626391432
 MIZ342,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,59,2019-01-31,2019,Rousettus madagascariensis,female,L,no,yes,mom,MIZ345,60,10.58,69.53,31.44,14.75,2.61,6.8,56.48658363,3.513416374
-MIZ345,0,1,1,Sapovirus,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,59,2019-01-31,2019,Rousettus madagascariensis,female,J,yes,yes,pup,MIZ342,20,6.93,51.11,21.85,11.64,small,small,NA,NA
 MIZ35,0,0,0,,NIH,Maromizaha,Maromizaha,-18.9623,48.4525,18,2014-12-12,2014,Rousettus madagascariensis,female,P,NA,NA,NA,NA,70,10.9,70.6,34.1,13.1,4.3,7.2,NA,NA
 MIZ351,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,59,2019-02-01,2019,Rousettus madagascariensis,female,L,no,yes,mom,MIZ364,55,10.38,65.33,34.2,16.07,7.99,6.82,52.4219521,2.578047905
 MIZ352,0,0,0,,CZID,Maromizaha,Maromizaha,-18.9623,48.4525,59,2019-02-01,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,78,11.56,73.88,34.72,11.74,20.95,19.42,69.00712752,8.99287248
@@ -580,7 +665,6 @@ MIZ396,0,0,0,,CZID/NIH,Maromizaha,Maromizaha,-18.9623,48.4525,62,2019-02-24,2019
 MIZ400,0,0,0,,CZID/NIH,Maromizaha,Maromizaha,-18.9623,48.4525,62,2019-02-24,2019,Rousettus madagascariensis,female,NL,no,yes,mom,MIZ402,50,10.4,69,32,14,5,4.5,55.97091117,-5.970911165
 MIZ401,0,0,0,,CZID/NIH,Maromizaha,Maromizaha,-18.9623,48.4525,62,2019-02-24,2019,Rousettus madagascariensis,male,J,yes,no,NA,NA,30,8.8,56,24.5,10,small,small,NA,NA
 MIZ403,0,0,0,,CZID/NIH,Maromizaha,Maromizaha,-18.9623,48.4525,65,2019-04-09,2019,Rousettus madagascariensis,male,A,NA,no,NA,NA,75,12.1,74,34.9,15.9,12.7,11.7,NA,NA
-MIZ405,1,1,1,Unclassified picornavirus/Sapovirus,CZID/NIH,Maromizaha,Maromizaha,-18.9623,48.4525,65,2019-04-09,2019,Rousettus madagascariensis,male,A,NA,no,NA,NA,70,10.5,68.5,35.3,12.7,9.4,10,NA,NA
 MIZ407,0,0,0,,CZID/NIH,Maromizaha,Maromizaha,-18.9623,48.4525,65,2019-04-09,2019,Rousettus madagascariensis,male,A,NA,no,NA,NA,60,11.6,68.9,31.4,13.1,8.4,9.1,NA,NA
 MIZ408,0,0,0,,CZID/NIH,Maromizaha,Maromizaha,-18.9623,48.4525,65,2019-04-09,2019,Rousettus madagascariensis,male,A,NA,no,NA,NA,75,10.5,75,36.4,11.5,10.4,8.7,NA,NA
 MIZ441,0,0,0,,NIH,Maromizaha,Maromizaha,-18.9623,48.4525,67,2019-05-21,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,50,10.8,70.2,34,13,10.6,10,63.44496089,-13.44496089
@@ -667,157 +751,62 @@ MIZ80,0,0,0,,NIH,Maromizaha,Maromizaha,-18.9623,48.4525,24,2015-04-25,2015,Rouse
 MIZ84,0,0,0,,NIH,Maromizaha,Maromizaha,-18.9623,48.4525,24,2015-04-26,2015,Rousettus madagascariensis,female,NL,NA,NA,NA,NA,52,10.843,68,34.78,15.34,4.9,5.2,NA,NA
 MIZ91,0,0,0,,NIH,Maromizaha,Maromizaha,-18.9623,48.4525,24,2015-04-26,2015,Rousettus madagascariensis,female,NL,NA,NA,NA,NA,55,10.43,69.2,33.4,15.6,3.7,3.9,NA,NA
 MIZ94,0,0,0,,NIH,Maromizaha,Maromizaha,-18.9623,48.4525,24,2015-04-26,2015,Rousettus madagascariensis,female,NL,NA,NA,NA,NA,62,10.412,71.9,34.88,13.71,NA,4.5,NA,NA
-MLB001,0,0,0,,CZID,Mahialambo,Maromizaha,-18.1102,48.2098,52,2018-12-13,2018,Pteropus rufus,female,L,no,yes,mom,MLB002,660,27.5,175,89.29,24.69,13.46,12.38,614.7735546,45.22644539
-MLB002,0,0,0,,CZID,Mahialambo,Maromizaha,-18.1102,48.2098,52,2018-12-13,2018,Pteropus rufus,male,J,yes,yes,pup,MLB001,120,13,89.62,44.97,21.55,small,small,NA,NA
-MLB003,0,0,0,,CZID,Mahialambo,Maromizaha,-18.1102,48.2098,52,2018-12-14,2018,Pteropus rufus,male,J,yes,no,NA,NA,190,17,119.32,57.08,23.18,small,small,NA,NA
-MLB004,0,0,0,,CZID/NIH,Mahialambo,Maromizaha,-18.1102,48.2098,52,2018-12-16,2018,Pteropus rufus,female,NL,no,no,NA,NA,480,27.5,151.32,70.74,25.08,small,small,498.1689858,-18.16898581
-MLB005,0,0,0,,CZID/NIH,Mahialambo,Maromizaha,-18.1102,48.2098,52,2018-12-17,2018,Pteropus rufus,male,A,no,no,NA,NA,740,25.5,170,85.65,23.56,23.4,16.4,673.0284357,66.97156425
-MLB006,0,0,0,,CZID/NIH,Mahialambo,Maromizaha,-18.1102,48.2098,52,2018-12-18,2018,Pteropus rufus,female,L,no,yes,mom,MLB007,500,25,160,78.66,31.07,small,small,540.0298056,-40.02980558
-MLB007,0,0,0,,CZID,Mahialambo,Maromizaha,-18.1102,48.2098,52,2018-12-18,2018,Pteropus rufus,female,J,yes,yes,pup,MLB006,180,17,122.75,59.29,27.3,small,small,NA,NA
-MLB009,0,0,0,,CZID,Mahialambo,Maromizaha,-18.1102,48.2098,52,2018-12-18,2018,Pteropus rufus,male,A,no,no,NA,NA,625,26.3,162,80,21.23,15.94,14.03,600.4167932,24.58320678
-RAK10,0,0,0,,NIH,Makira,Ambakoana,-18.513,48.1665,15,2014-11-06,2014,Rousettus madagascariensis,male,A,NA,NA,NA,NA,65,9.81,71,37.8,14.9,4.8,5.9,NA,NA
-RAK18,0,0,0,,NIH,Makira,Ambakoana,-18.513,48.1665,15,2014-11-07,2014,Rousettus madagascariensis,female,NL,NA,NA,NA,NA,60,10.02,66.4,31.4,12.4,small,NA,NA,NA
-RAK20,0,0,0,,NIH,Makira,Ambakoana,-18.513,48.1665,15,2014-11-07,2014,Rousettus madagascariensis,female,P,NA,NA,NA,NA,45,10,67.5,30.5,10.5,3,4.5,NA,NA
-RAK22,0,0,0,,NIH,Makira,Ambakoana,-18.513,48.1665,15,2014-11-08,2014,Rousettus madagascariensis,female,P,NA,NA,NA,NA,70,11.28,67.9,30,13,4,6,NA,NA
-RAK23,0,0,0,,NIH,Makira,Ambakoana,-18.513,48.1665,15,2014-11-08,2014,Rousettus madagascariensis,male,A,NA,NA,NA,NA,60,11.7,74.8,34.8,12.4,11.5,11.6,NA,NA
-RAK25,0,0,0,,NIH,Makira,Ambakoana,-18.513,48.1665,15,2014-11-08,2014,Rousettus madagascariensis,male,A,NA,NA,NA,NA,85,10.64,74.1,34.1,12.5,10.8,16.8,NA,NA
-RAK26,0,0,0,,NIH,Makira,Ambakoana,-18.513,48.1665,15,2014-11-08,2014,Rousettus madagascariensis,male,A,NA,NA,NA,NA,70,11.35,70.3,30.4,11.4,10.3,10.6,NA,NA
-RAK28,0,0,0,,NIH,Makira,Ambakoana,-18.513,48.1665,15,2014-11-09,2014,Rousettus madagascariensis,male,A,NA,NA,NA,NA,45,9.84,70.7,34.7,14.7,small,NA,NA,NA
-RAK29,0,0,0,,NIH,Makira,Ambakoana,-18.513,48.1665,15,2014-11-09,2014,Rousettus madagascariensis,male,A,NA,NA,NA,NA,60,9.54,73,36.5,15,5,11,NA,NA
-RAK30,0,0,0,,NIH,Makira,Ambakoana,-18.513,48.1665,15,2014-11-09,2014,Rousettus madagascariensis,male,A,NA,NA,NA,NA,55,11.16,69.8,32.9,15.6,10.9,11.9,NA,NA
-RAK31,0,0,0,,NIH,Makira,Ambakoana,-18.513,48.1665,15,2014-11-09,2014,Rousettus madagascariensis,female,P,NA,NA,NA,NA,60,9.63,66.5,30.1,17.7,0.7,3.7,NA,NA
-ROU102,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,73,2019-08-08,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,60,NA,74.8,35.5,12.8,9.6,8.9,70.42616673,-10.42616673
-ROU105,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,73,2019-08-09,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,65,11.14,74.4,35.6,13.3,7.6,9.6,69.80780201,-4.807802012
-ROU108,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,73,2019-08-09,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,80,11.6,76.9,36.7,11.5,9.6,11.1,73.70752775,6.292472251
-ROU111,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,73,2019-08-09,2019,Rousettus madagascariensis,male,J,yes,no,NA,NA,57,10.3,71.3,35.6,15,small,small,NA,NA
-ROU114,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,73,2019-08-11,2019,Rousettus madagascariensis,female,NL,no,no,NA,NA,50,10.6,64.2,25.3,12.9,1.6,2,51.33706748,-1.337067477
-ROU115,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-26,2019,Rousettus madagascariensis,female,P,no,no,NA,NA,53,11.5,71,30.5,10.3,1.6,2.8,57.92091764,-4.920917642
-ROU116,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-26,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,61,12.36,73.3,35.2,10.4,8.2,9.8,68.11834484,-7.118344839
-ROU117,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-26,2019,Rousettus madagascariensis,female,NL,no,no,NA,NA,46,10.56,70.1,31.2,12.2,small,small,57.04204631,-11.04204631
-ROU118,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-26,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,64,11.04,74.2,36,9,10.1,11.5,69.49942183,-5.499421828
-ROU119,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-26,2019,Rousettus madagascariensis,female,J,yes,no,NA,NA,45,10.45,68.8,29.9,13,small,small,NA,NA
-ROU121,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-26,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,52,11.15,70.7,33.6,10.7,receded,receded,64.18991125,-12.18991125
-ROU125,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,53,11.17,68.2,32,13.9,small,small,60.49937873,-7.499378733
-ROU126,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Rousettus madagascariensis,female,NL,no,no,NA,NA,56,10.67,68.7,32.9,11.3,3.4,2.9,55.67936908,0.32063092
-ROU127,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,44,11.01,69.2,31.5,11.2,small,small,61.96530847,-17.96530847
-ROU128,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Rousettus madagascariensis,female,NL,no,no,NA,NA,49,11.52,68.9,32.8,13.2,small,small,55.87370245,-6.873702451
-ROU130,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Rousettus madagascariensis,female,NL,no,no,NA,NA,55,11.17,72.9,34.9,14.1,4.2,3.3,59.78355879,-4.783558795
-ROU132,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Rousettus madagascariensis,female,J,no,no,NA,NA,45,10.8,67.4,31.2,13.4,small,small,NA,NA
-ROU133,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Rousettus madagascariensis,female,P,no,no,NA,NA,53,10.82,70.8,33.5,11.1,2,3.5,57.72542071,-4.725420709
-ROU135,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Rousettus madagascariensis,female,P,no,no,NA,NA,54,10.31,72.3,32.1,11.9,2.8,1.7,59.19430263,-5.194302627
-ROU140,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Rousettus madagascariensis,female,J,yes,no,NA,NA,46,10.82,66.5,30.2,13.3,small,small,NA,NA
-ROU142,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Rousettus madagascariensis,female,NL,no,no,NA,NA,57,10.93,71.7,32.4,9.4,4.4,3.2,58.60601657,-1.606016574
-ROU143,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,53,11.09,74.6,34.8,11.5,5.7,6.6,70.11671715,-17.11671715
-ROU145,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,58,11.89,71.6,35.5,13.4,6.7,8.2,65.53939581,-7.539395808
-ROU147,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Rousettus madagascariensis,female,NL,no,no,NA,NA,62,11.65,74.5,34.6,15.2,5.1,3.6,61.35960295,0.640397048
-ROU148,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Rousettus madagascariensis,female,NL,no,no,NA,NA,53,10.59,70.5,32.2,10.5,2.5,1.8,57.43238092,-4.432380917
-ROU149,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,65,12.17,78.7,38.2,12.7,7,6.8,76.56653993,-11.56653993
-ROU150,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Rousettus madagascariensis,female,P,no,no,NA,NA,55,10.8,73.2,35.4,11.9,4.5,3.1,60.07854867,-5.078548667
-ROU151,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,69,12.05,78.4,38.1,18.3,8.6,6.8,76.08707885,-7.087078853
-ROU159,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Rousettus madagascariensis,female,NL,no,no,NA,NA,48,11.76,71.4,32.1,10.6,1,3.3,58.31223937,-10.31223937
-ROU160,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Rousettus madagascariensis,female,NL,no,no,NA,NA,52,11.21,70.9,33.8,14.6,3.4,2.4,57.82315549,-5.823155489
-ROU161,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,51,11.18,71,34.2,12.9,small,small,64.63851623,-13.63851623
-ROU162,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-08,2019,Rousettus madagascariensis,male,J,no,no,NA,NA,40,9.6,68.3,31.2,10.8,small,small,NA,NA
-ROU164,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-08,2019,Rousettus madagascariensis,female,NL,no,no,NA,NA,55,11.31,73.4,34.4,12.8,1,3.2,60.27534204,-5.275342038
-ROU167,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-08,2019,Rousettus madagascariensis,female,P,no,no,NA,NA,52,11.22,69.2,33.2,12.6,3.2,2.1,56.16541249,-4.165412487
-ROU168,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-08,2019,Rousettus madagascariensis,female,P,no,no,NA,NA,56,10.66,69.8,32,12.9,3.3,1.2,56.74958528,-0.749585281
-ROU169,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-08,2019,Rousettus madagascariensis,female,NL,no,no,NA,NA,71,10.59,73,34.3,9.6,3.6,3.7,59.88186202,11.11813798
-ROU173,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-08,2019,Rousettus madagascariensis,female,NL,no,no,NA,NA,53,10.59,71.4,37.5,12.7,small,small,58.31223937,-5.312239369
-ROU175,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,87,2019-11-30,2019,Rousettus madagascariensis,female,P,no,no,NA,NA,70,11.3,62,34,14,7,7,49.23580929,20.76419071
-ROU176,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,87,2019-11-30,2019,Rousettus madagascariensis,female,P,no,no,NA,NA,65,10.3,69,30.5,10.5,4.5,3,55.97091117,9.029088835
-ROU179,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,87,2019-11-30,2019,Rousettus madagascariensis,female,NL,no,no,NA,NA,60,10.5,71,33,10,4,3,57.92091764,2.079082358
-ROU180,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,87,2019-11-30,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,70,11.8,73.5,35,13,6,5,68.42431136,1.575688636
-ROU184,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,87,2019-11-30,2019,Rousettus madagascariensis,female,P,no,no,NA,NA,50,9.1,67.1,34.3,12,5,2,54.12876692,-4.128766923
-ROU191,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,87,2019-11-30,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,65,11.8,72,34,15,12,10,66.14269457,-1.142694569
-ROU193,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,87,2019-11-30,2019,Rousettus madagascariensis,female,P,no,no,NA,NA,67,12.1,73,33.5,11.8,5,4,59.88186202,7.118137978
-ROU36,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-13,2014,Rousettus madagascariensis,male,A,NA,NA,NA,NA,50,10.35,71.5,32.5,14.5,small,NA,NA,NA
-ROU45,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-13,2014,Rousettus madagascariensis,female,NL,NA,NA,NA,NA,45,9.29,67.1,32.2,11.3,small,NA,NA,NA
-ROU48,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-14,2014,Rousettus madagascariensis,female,NL,NA,NA,NA,NA,50,8.32,68.4,29.9,11.9,small,NA,NA,NA
-ROU52,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-14,2014,Rousettus madagascariensis,female,NL,NA,NA,NA,NA,55,9.83,68.3,33.1,15.9,small,NA,NA,NA
-ROU59,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-15,2014,Rousettus madagascariensis,female,NL,NA,NA,NA,NA,40,10.21,70.5,31.2,15.1,0.3,0.5,NA,NA
-ROU61,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-15,2014,Rousettus madagascariensis,female,NL,NA,NA,NA,NA,40,9.4,65.6,31.5,15.4,small,NA,NA,NA
-ROU63,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-15,2014,Rousettus madagascariensis,male,A,NA,NA,NA,NA,64,11.3,70.5,30.5,12.5,9,12.5,NA,NA
-ROU79,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,23,2015-03-30,2015,Rousettus madagascariensis,female,NL,NA,NA,NA,NA,46,8.74,68.2,30.9,14.8,small,NA,NA,NA
-ROU82,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,23,2015-03-30,2015,Rousettus madagascariensis,female,NL,NA,NA,NA,NA,37,8.82,61.3,27.6,15.4,small,NA,NA,NA
-ROU93,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,23,2015-03-31,2015,Rousettus madagascariensis,female,NL,NA,NA,NA,NA,48,9.36,70.3,34,12,4.5,5.4,NA,NA
-ROU95,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,73,2019-08-08,2019,Rousettus madagascariensis,male,J,yes,no,NA,NA,40,11.49,65.2,31.4,14.7,small,small,NA,NA
-RTC001,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-28,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,60,10.7,72.7,35.2,11.7,7.6,7.5,67.20367411,-7.203674113
-RTC002,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-28,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,47,11.25,68.2,30.3,12.5,4,5,60.49937873,-13.49937873
-RTC003,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-28,2019,Rousettus madagascariensis,female,P,no,no,NA,NA,53,12.22,73.6,33.8,12.8,4.1,2.4,60.4722419,-7.472241903
-RTC005,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Rousettus madagascariensis,male,A,no,no,NA,NA,49,10.88,70.1,32.3,13.7,receded,receded,63.29638013,-14.29638013
-TSI001,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,69,2019-06-15,2019,Pteropus rufus,female,NL,no,no,NA,NA,600,29.5,168,80.2,28.4,6.04,6.6,579.5212872,20.4787128
-TSI002,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,69,2019-06-16,2019,Pteropus rufus,male,A,no,no,NA,NA,700,34,177,83.7,27.1,receded,receded,740.5232075,-40.52320754
-TSI003,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,69,2019-06-17,2019,Pteropus rufus,female,NL,no,no,NA,NA,465,27.5,157,69.5,32,small,small,525.4440783,-60.44407835
-TSI004,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,72,2019-07-17,2019,Pteropus rufus,male,A,NA,no,NA,NA,500,26,156,77.1,32.5,small,small,NA,NA
-TSI006,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,72,2019-07-18,2019,Pteropus rufus,male,A,NA,no,NA,NA,700,23,164,84,26.1,receded,receded,NA,NA
-TSI007,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,72,2019-07-18,2019,Pteropus rufus,male,A,NA,no,NA,NA,465,26,157.7,72.8,26.4,receded,receded,NA,NA
-TSI011,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,72,2019-07-21,2019,Pteropus rufus,female,NL,NA,no,NA,NA,740,25.2,167,88,24.9,6.1,4.7,NA,NA
-TSI016,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,72,2019-07-23,2019,Pteropus rufus,male,A,NA,no,NA,NA,805,29.4,176,87,30.1,9.1,9.3,NA,NA
-TSI017,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,72,2019-07-23,2019,Pteropus rufus,female,P,NA,no,NA,NA,640,25.9,162,76.4,29.5,10,5.2,NA,NA
-TSI020,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,72,2019-07-24,2019,Pteropus rufus,male,A,NA,no,NA,NA,380,24.5,146.5,72.9,33.3,small,small,NA,NA
-TSI022,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,76,2019-09-01,2019,Pteropus rufus,male,A,no,no,NA,NA,730,26.2,187,80.6,22.6,13.6,11.1,843.469279,-113.469279
-TSI023,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,76,2019-09-02,2019,Pteropus rufus,female,NL,no,no,NA,NA,710,27.5,165,80.4,23.2,13.7,9.2,564.6112756,145.3887244
-TSI026,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,76,2019-09-02,2019,Pteropus rufus,male,A,no,no,NA,NA,560,26.5,173,84.4,30.8,receded,receded,701.4986501,-141.4986501
-TSI028,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,76,2019-09-02,2019,Pteropus rufus,female,NL,no,no,NA,NA,610,NA,158.7,76.7,32,14,15.2,533.6941907,76.30580926
-TSI029,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,76,2019-09-02,2019,Pteropus rufus,male,A,no,no,NA,NA,610,25.6,174,80.7,20.1,14.5,10.9,711.1404373,-101.1404373
-TSI031,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,76,2019-09-03,2019,Pteropus rufus,male,A,no,no,NA,NA,690,27.3,172,100,22.9,12.7,15.6,691.9328289,-1.932828867
-TSI034,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,76,2019-09-05,2019,Pteropus rufus,male,A,no,no,NA,NA,650,23.2,174,80,24,4,11,711.1404373,-61.14043734
-TSI037,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,79,2019-09-29,2019,Pteropus rufus,female,L,no,yes,mom,TSI042,518,26.2,172,80.3,25,13,7,599.5867995,-81.58679951
-TSI038,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,79,2019-09-29,2019,Pteropus rufus,female,L,no,yes,mom,TSI043,510,28.5,160,78.6,31.9,13,9.5,540.0298056,-30.02980558
-TSI039,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,79,2019-09-29,2019,Pteropus rufus,male,J,yes,no,NA,NA,470,22,150.5,71.7,22.9,receded,receded,NA,NA
-TSI044,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,79,2019-10-01,2019,Pteropus rufus,female,P,no,no,NA,NA,645,26.5,158,80.4,32,5,8,530.2922812,114.7077188
-TSI046,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,79,2019-10-04,2019,Pteropus rufus,male,A,no,no,NA,NA,685,25.8,180,90,29.1,14.5,16.4,770.5954511,-85.59545115
-TSI047,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,83,2019-10-26,2019,Pteropus rufus,male,A,no,no,NA,NA,695,29.5,170,83.8,27.9,11.1,12.2,673.0284357,21.97156425
-TSI049,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,83,2019-10-26,2019,Pteropus rufus,male,A,no,no,NA,NA,496,22.3,157.5,78,35.5,small,small,561.6636583,-65.66365832
-TSI053,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,83,2019-10-28,2019,Pteropus rufus,male,A,no,no,NA,NA,680,23,173,85.7,24.5,NA,NA,701.4986501,-21.49865007
-TSI057,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,83,2019-10-31,2019,Pteropus rufus,female,L,no,yes,mom,TSI059,550,24.9,158,79.9,31.3,10.1,15.5,530.2922812,19.7077188
-TSI061,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,83,2019-11-01,2019,Pteropus rufus,male,A,no,no,NA,NA,680,26.5,166,82.3,35,11.1,11.9,636.1240705,43.87592946
-TSI062,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,83,2019-11-01,2019,Pteropus rufus,female,NL,no,no,NA,NA,450,24,160,74.9,24,small,small,540.0298056,-90.02980558
-TSI067,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,92,2020-02-26,2020,Pteropus rufus,male,A,no,no,NA,NA,764,25.8,170,84,30,17,19,673.0284357,90.97156425
-TSI068,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,92,2020-02-28,2020,Pteropus rufus,male,A,no,no,NA,NA,703,26.9,174,83,24,15,14,711.1404373,-8.140437341
-TSI073,0,0,0,,NIH,Marotsipohy,Ambakoana,-18.513,48.1665,92,2020-02-29,2020,Pteropus rufus,male,J,yes,no,NA,NA,326,25.3,152,71,25,S,S,NA,NA
-WAY001,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-01,2019,Eidolon dupreanum,male,A,no,no,NA,NA,281,24,128.1,63.2,25.2,12.7,10,316.5137812,-35.51378122
-WAY004,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-01,2019,Eidolon dupreanum,male,A,no,no,NA,NA,326,22.5,128.6,64.7,24.9,13,12.3,318.1175707,7.882429303
-WAY005,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-01,2019,Eidolon dupreanum,male,J,yes,yes,pup,WAY010,62,10.74,58.1,28.4,17.9,small,small,NA,NA
-WAY007,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-01,2019,Eidolon dupreanum,female,NL,no,NA,NA,NA,271,20.4,124.3,57.8,28.7,small,small,293.7678286,-22.76782864
-WAY008,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-01,2019,Eidolon dupreanum,male,A,no,NA,NA,NA,329,20.4,131.8,61.2,29.5,8.5,9.3,328.4255523,0.57444773
-WAY009,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-01,2019,Eidolon dupreanum,female,L,yes,NA,mom,WAY011,288,18.7,125.5,58.5,28,7.4,7.7,NA,NA
-WAY010,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-01,2019,Eidolon dupreanum,female,L,yes,NA,mom,WAY005,334,20.9,133.6,62.6,26,8.9,10.9,NA,NA
-WAY012,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum,female,P,no,no,NA,NA,368,21.7,132.7,65.5,26.6,9.7,10.9,321.8486971,46.15130287
-WAY013,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum,female,P,no,no,NA,NA,348,21.8,127.9,61.2,26.1,10.8,8.2,305.7133704,42.28662956
-WAY014,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum,male,A,no,no,NA,NA,328,22.3,133.1,64.4,25.3,13.5,10.4,332.6345826,-4.63458261
-WAY015,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum,male,J,yes,yes,pup,WAY020,53,11.09,58.5,31.4,15.7,small,small,NA,NA
-WAY018,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum,male,A,no,no,NA,NA,278,20.2,129.8,61.3,24.3,12.4,13.3,321.974227,-43.97422705
-WAY019,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum,male,A,no,no,NA,NA,278,20.4,133.3,62.4,28.3,small,small,333.2832147,-55.28321468
-WAY020,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum,female,L,no,yes,mom,WAY015,308,19.3,131.2,61.9,24.9,10,7.7,316.7811534,-8.781153432
-WAY022,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum,female,L,yes,yes,mom,WAY024,284,22.5,129.4,63.1,26.4,9.3,10.1,NA,NA
-WAY023,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum,male,J,yes,yes,pup,WAY021,48,10.51,58.2,28.9,13.4,small,small,NA,NA
-WAY024,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,80,2019-10-02,2019,Eidolon dupreanum,male,J,yes,yes,pup,WAY022,66,12.11,72.6,34.1,20.8,small,small,NA,NA
-WAY025,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-01,2019,Eidolon dupreanum,female,L,no,yes,mom,WAY033,281,22.3,126.4,61.4,27.4,9.6,9,300.7196547,-19.71965466
-WAY027,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-01,2019,Eidolon dupreanum,female,L,no,yes,mom,WAY035,295,22.2,134.9,63.4,29.1,12.6,10.1,329.3221812,-34.32218122
-WAY033,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-01,2019,Eidolon dupreanum,male,J,yes,yes,pup,WAY025,91,14.59,93.3,42.6,19.8,small,small,NA,NA
-WAY034,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-01,2019,Eidolon dupreanum,female,J,yes,yes,pup,WAY026,86,13.1,82,39.3,20.7,small,small,NA,NA
-WAY039,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-02,2019,Eidolon dupreanum,male,A,no,no,NA,NA,305,19.7,124.9,61.1,27.8,12.4,11.3,306.2938115,-1.293811537
-WAY042,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-02,2019,Eidolon dupreanum,female,L,no,yes,mom,WAY046,306,21.8,127.6,62.5,26.3,10.7,8.2,304.7127621,1.287237941
-WAY043,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-02,2019,Eidolon dupreanum,male,A,no,no,NA,NA,306,22.8,126.1,63.6,30.9,12.4,10.6,310.1172824,-4.117282415
-WAY045,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-02,2019,Eidolon dupreanum,male,J,yes,yes,pup,WAY041,83,12.51,79.8,36.5,21.3,6.4,7,NA,NA
-WAY046,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-02,2019,Eidolon dupreanum,female,J,yes,yes,pup,WAY042,102,14.32,93,41.5,23.2,small,small,NA,NA
-WAY047,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-02,2019,Eidolon dupreanum,male,A,no,no,NA,NA,349,21.5,134.8,65.4,29.7,14.8,10.1,338.1571625,10.84283745
-WAY048,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-03,2019,Eidolon dupreanum,male,A,no,no,NA,NA,338,21.5,126.3,62.2,27.4,13,12.9,310.7555831,27.24441686
-WAY049,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-03,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,267,18.7,126,57.7,27.8,6.4,4.8,299.3919448,-32.39194482
-WAY051,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-02,2019,Eidolon dupreanum,female,L,no,yes,mom,WAY053,291,21.5,125,58.3,27.8,9.3,8,296.079976,-5.079975971
-WAY052,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,84,2019-11-03,2019,Eidolon dupreanum,male,J,yes,yes,pup,WAY050,97,13.1,89.4,41.4,21.5,5.9,4.5,NA,NA
-WAY054,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-27,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,320,21.4,131,62,26.2,10.2,6,316.1072073,3.892792715
-WAY056,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum,male,A,no,no,NA,NA,347,21.6,126.7,62,29.8,12.7,9.2,312.0330864,34.96691364
-WAY057,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum,male,A,no,no,NA,NA,367,22,129.6,64,27.2,17.6,13.4,321.3307117,45.66928833
-WAY062,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum,female,NL,no,NA,NA,NA,285,21.3,132,60,25,4,3.5,319.4810044,-34.48100435
-WAY063,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,275,18.9,130.5,61,26.1,7,7.2,314.424125,-39.42412504
-WAY064,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum,male,A,no,no,NA,NA,345,21.5,134.3,66,23.1,18,11.2,336.5307117,8.469288314
-WAY065,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,310,21.4,133.1,68.1,31,7.1,6.5,323.2038887,-13.20388867
-WAY066,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum,male,A,no,no,NA,NA,310,28,137,67,28.6,11.2,10.6,345.334812,-35.334812
-WAY067,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum,male,A,no,no,NA,NA,328,22.2,124.1,61,31.5,10.4,10.3,303.7508877,24.2491123
-WAY074,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-28,2019,Eidolon dupreanum,male,A,no,no,NA,NA,300,20.9,130,61,30.2,13.1,11.1,322.6180374,-22.6180374
-WAY075,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-29,2019,Eidolon dupreanum,male,A,no,no,NA,NA,345,20.2,133.2,64.9,25.9,13.1,12.1,332.9588624,12.04113756
-WAY076,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-29,2019,Eidolon dupreanum,male,A,no,no,NA,NA,370,22.5,129.5,60.5,24.1,17.2,10,321.0090647,48.9909353
-WAY077,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-29,2019,Eidolon dupreanum,male,A,no,no,NA,NA,349,23.7,130.4,64.3,27.6,13.6,14.6,323.9065418,25.09345823
-WAY078,0,0,0,,NIH,Ankarana_Chauves_Souris,Ankarana,-12.9435,49.0555,87,2019-11-29,2019,Eidolon dupreanum,female,NL,no,no,NA,NA,303,22,133.1,63.9,25.9,small,small,323.2038887,-20.20388867
+ROU102,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,73,2019-08-08,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,60,NA,74.8,35.5,12.8,9.6,8.9,70.42616673,-10.42616673
+ROU105,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,73,2019-08-09,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,65,11.14,74.4,35.6,13.3,7.6,9.6,69.80780201,-4.807802012
+ROU108,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,73,2019-08-09,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,80,11.6,76.9,36.7,11.5,9.6,11.1,73.70752775,6.292472251
+ROU111,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,73,2019-08-09,2019,Eidolon dupreanum/Rousettus madagascariensis,male,J,yes,no,NA,NA,57,10.3,71.3,35.6,15,small,small,NA,NA
+ROU114,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,73,2019-08-11,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,50,10.6,64.2,25.3,12.9,1.6,2,51.33706748,-1.337067477
+ROU115,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-26,2019,Eidolon dupreanum/Rousettus madagascariensis,female,P,no,no,NA,NA,53,11.5,71,30.5,10.3,1.6,2.8,57.92091764,-4.920917642
+ROU116,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-26,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,61,12.36,73.3,35.2,10.4,8.2,9.8,68.11834484,-7.118344839
+ROU117,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-26,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,46,10.56,70.1,31.2,12.2,small,small,57.04204631,-11.04204631
+ROU118,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-26,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,64,11.04,74.2,36,9,10.1,11.5,69.49942183,-5.499421828
+ROU119,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-26,2019,Eidolon dupreanum/Rousettus madagascariensis,female,J,yes,no,NA,NA,45,10.45,68.8,29.9,13,small,small,NA,NA
+ROU121,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-26,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,52,11.15,70.7,33.6,10.7,receded,receded,64.18991125,-12.18991125
+ROU125,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,53,11.17,68.2,32,13.9,small,small,60.49937873,-7.499378733
+ROU126,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,56,10.67,68.7,32.9,11.3,3.4,2.9,55.67936908,0.32063092
+ROU127,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,44,11.01,69.2,31.5,11.2,small,small,61.96530847,-17.96530847
+ROU128,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,49,11.52,68.9,32.8,13.2,small,small,55.87370245,-6.873702451
+ROU130,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,55,11.17,72.9,34.9,14.1,4.2,3.3,59.78355879,-4.783558795
+ROU132,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,female,J,no,no,NA,NA,45,10.8,67.4,31.2,13.4,small,small,NA,NA
+ROU133,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,female,P,no,no,NA,NA,53,10.82,70.8,33.5,11.1,2,3.5,57.72542071,-4.725420709
+ROU135,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,female,P,no,no,NA,NA,54,10.31,72.3,32.1,11.9,2.8,1.7,59.19430263,-5.194302627
+ROU140,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,female,J,yes,no,NA,NA,46,10.82,66.5,30.2,13.3,small,small,NA,NA
+ROU142,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,57,10.93,71.7,32.4,9.4,4.4,3.2,58.60601657,-1.606016574
+ROU143,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,53,11.09,74.6,34.8,11.5,5.7,6.6,70.11671715,-17.11671715
+ROU145,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,58,11.89,71.6,35.5,13.4,6.7,8.2,65.53939581,-7.539395808
+ROU147,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,62,11.65,74.5,34.6,15.2,5.1,3.6,61.35960295,0.640397048
+ROU148,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,53,10.59,70.5,32.2,10.5,2.5,1.8,57.43238092,-4.432380917
+ROU149,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,65,12.17,78.7,38.2,12.7,7,6.8,76.56653993,-11.56653993
+ROU150,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Eidolon dupreanum/Rousettus madagascariensis,female,P,no,no,NA,NA,55,10.8,73.2,35.4,11.9,4.5,3.1,60.07854867,-5.078548667
+ROU151,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,69,12.05,78.4,38.1,18.3,8.6,6.8,76.08707885,-7.087078853
+ROU159,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,48,11.76,71.4,32.1,10.6,1,3.3,58.31223937,-10.31223937
+ROU160,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,52,11.21,70.9,33.8,14.6,3.4,2.4,57.82315549,-5.823155489
+ROU161,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-07,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,51,11.18,71,34.2,12.9,small,small,64.63851623,-13.63851623
+ROU162,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-08,2019,Eidolon dupreanum/Rousettus madagascariensis,male,J,no,no,NA,NA,40,9.6,68.3,31.2,10.8,small,small,NA,NA
+ROU164,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-08,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,55,11.31,73.4,34.4,12.8,1,3.2,60.27534204,-5.275342038
+ROU167,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-08,2019,Eidolon dupreanum/Rousettus madagascariensis,female,P,no,no,NA,NA,52,11.22,69.2,33.2,12.6,3.2,2.1,56.16541249,-4.165412487
+ROU168,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-08,2019,Eidolon dupreanum/Rousettus madagascariensis,female,P,no,no,NA,NA,56,10.66,69.8,32,12.9,3.3,1.2,56.74958528,-0.749585281
+ROU169,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-08,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,71,10.59,73,34.3,9.6,3.6,3.7,59.88186202,11.11813798
+ROU173,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,84,2019-11-08,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,53,10.59,71.4,37.5,12.7,small,small,58.31223937,-5.312239369
+ROU175,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,87,2019-11-30,2019,Eidolon dupreanum/Rousettus madagascariensis,female,P,no,no,NA,NA,70,11.3,62,34,14,7,7,49.23580929,20.76419071
+ROU176,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,87,2019-11-30,2019,Eidolon dupreanum/Rousettus madagascariensis,female,P,no,no,NA,NA,65,10.3,69,30.5,10.5,4.5,3,55.97091117,9.029088835
+ROU179,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,87,2019-11-30,2019,Eidolon dupreanum/Rousettus madagascariensis,female,NL,no,no,NA,NA,60,10.5,71,33,10,4,3,57.92091764,2.079082358
+ROU180,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,87,2019-11-30,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,70,11.8,73.5,35,13,6,5,68.42431136,1.575688636
+ROU184,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,87,2019-11-30,2019,Eidolon dupreanum/Rousettus madagascariensis,female,P,no,no,NA,NA,50,9.1,67.1,34.3,12,5,2,54.12876692,-4.128766923
+ROU191,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,87,2019-11-30,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,65,11.8,72,34,15,12,10,66.14269457,-1.142694569
+ROU193,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,87,2019-11-30,2019,Eidolon dupreanum/Rousettus madagascariensis,female,P,no,no,NA,NA,67,12.1,73,33.5,11.8,5,4,59.88186202,7.118137978
+ROU36,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-13,2014,Eidolon dupreanum/Rousettus madagascariensis,male,A,NA,NA,NA,NA,50,10.35,71.5,32.5,14.5,small,NA,NA,NA
+ROU45,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-13,2014,Eidolon dupreanum/Rousettus madagascariensis,female,NL,NA,NA,NA,NA,45,9.29,67.1,32.2,11.3,small,NA,NA,NA
+ROU48,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-14,2014,Eidolon dupreanum/Rousettus madagascariensis,female,NL,NA,NA,NA,NA,50,8.32,68.4,29.9,11.9,small,NA,NA,NA
+ROU52,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-14,2014,Eidolon dupreanum/Rousettus madagascariensis,female,NL,NA,NA,NA,NA,55,9.83,68.3,33.1,15.9,small,NA,NA,NA
+ROU59,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-15,2014,Eidolon dupreanum/Rousettus madagascariensis,female,NL,NA,NA,NA,NA,40,10.21,70.5,31.2,15.1,0.3,0.5,NA,NA
+ROU61,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-15,2014,Eidolon dupreanum/Rousettus madagascariensis,female,NL,NA,NA,NA,NA,40,9.4,65.6,31.5,15.4,small,NA,NA,NA
+ROU63,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,14,2014-10-15,2014,Eidolon dupreanum/Rousettus madagascariensis,male,A,NA,NA,NA,NA,64,11.3,70.5,30.5,12.5,9,12.5,NA,NA
+ROU79,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,23,2015-03-30,2015,Eidolon dupreanum/Rousettus madagascariensis,female,NL,NA,NA,NA,NA,46,8.74,68.2,30.9,14.8,small,NA,NA,NA
+ROU82,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,23,2015-03-30,2015,Eidolon dupreanum/Rousettus madagascariensis,female,NL,NA,NA,NA,NA,37,8.82,61.3,27.6,15.4,small,NA,NA,NA
+ROU93,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,23,2015-03-31,2015,Eidolon dupreanum/Rousettus madagascariensis,female,NL,NA,NA,NA,NA,48,9.36,70.3,34,12,4.5,5.4,NA,NA
+ROU95,0,0,0,,NIH,Ankarana_Canyon,Ankarana,-12.9435,49.0555,73,2019-08-08,2019,Eidolon dupreanum/Rousettus madagascariensis,male,J,yes,no,NA,NA,40,11.49,65.2,31.4,14.7,small,small,NA,NA
+RTC001,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-28,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,60,10.7,72.7,35.2,11.7,7.6,7.5,67.20367411,-7.203674113
+RTC002,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-28,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,47,11.25,68.2,30.3,12.5,4,5,60.49937873,-13.49937873
+RTC003,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-28,2019,Eidolon dupreanum/Rousettus madagascariensis,female,P,no,no,NA,NA,53,12.22,73.6,33.8,12.8,4.1,2.4,60.4722419,-7.472241903
+RTC005,0,0,0,,NIH,Ankarana_Cathedral,Ankarana,-12.9435,49.0555,80,2019-09-29,2019,Eidolon dupreanum/Rousettus madagascariensis,male,A,no,no,NA,NA,49,10.88,70.1,32.3,13.7,receded,receded,63.29638013,-14.29638013
