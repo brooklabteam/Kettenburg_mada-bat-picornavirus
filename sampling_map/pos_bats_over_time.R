@@ -51,14 +51,15 @@ dat$bat_age_class[dat$bat_age_class=="P" | dat$bat_age_class=="L"] <- "A"
 dat$bat_age_class[dat$bat_age_class=="NL" | dat$young_of_year=="no"] <- "A"
 dat$bat_age_class[dat$young_of_year=="yes"] <- "J"
 
-unique(dat$any_picorna)
-
 #select columns of interest
-dat <- dplyr::select(dat,roost_site,bat_age_class,bat_sex, processing_date, sampling_session,
+dat <- dplyr::select(dat,roost_site,bat_age_class,bat_sex, sampling_session,
                      bat_species, sample_id, any_picorna, any_calici,any_pos, month, year)
 
 head(dat)
 unique(dat$roost_site)
+
+#there are no positives at Ankarana so subset to all but that site
+dat<-subset(dat, roost_site=="AngavoKely" | roost_site == "Ambakoana" | roost_site == "Maromizaha")
 
 #get into date form
 #dat$collection_date <- as.Date(dat$collection_date,format = "%y/%m/%d")
@@ -78,8 +79,8 @@ dat$any_calici <- as.numeric(dat$any_calici)
 dat.list <- dlply(dat, .(sample_id))
 
 #summarize into prevalence by species and epiwk
-dat.sum_picorna <- ddply(dat, .(bat_species, year, bat_age_class, bat_sex, month), summarise, N=length(any_picorna), pos=sum(any_picorna))
-dat.sum_calici <- ddply(dat, .(bat_species, year, bat_age_class, bat_sex, month), summarise, N=length(any_calici), pos=sum(any_calici))
+dat.sum_picorna <- ddply(dat, .(bat_species, year, bat_age_class, bat_sex, month, sampling_session), summarise, N=length(any_picorna), pos=sum(any_picorna))
+dat.sum_calici <- ddply(dat, .(bat_species, year, bat_age_class, bat_sex, month, sampling_session), summarise, N=length(any_calici), pos=sum(any_calici))
 
 #get negatives and prevalence
 dat.sum_picorna$neg= dat.sum_picorna$N-dat.sum_picorna$pos
@@ -110,32 +111,22 @@ dat.sum_calici$lci <- c(unlist(sapply(CIs_calici, '[',1)))
 dat.sum_calici$uci <- c(unlist(sapply(CIs_calici, '[',2)))
 
 #here's a vector assigning colors to each species
-colz = c("Eidolon dupreanum"="coral2", "Pteropus rufus" = "cornflowerblue", "Rousettus madagascariensis" = "darkgoldenrod1" )
-colz2 = c("2018"="cornflowerblue", "2019"="darkgoldenrod1")
+colz = c("Eidolon dupreanum"="coral2", "Pteropus rufus" = "cornflowerblue", "Rousettus madagascariensis" = "darkgoldenrod1")
 
-
-##Make two plots each of 2018 and 2019 just so we can see the prevalence on the y scale
-
-
-##Version using lines and points
-p1 <- ggplot(dat.sum, aes(x=month,y=prevalence, fill=year))+
-  #geom_area(aes(x=day_of_year, y= prevalence, color=year))+
-  geom_point(aes(x=month, y= prevalence, color=year, size=N)) +
-  geom_errorbar(aes(x=month, ymin=lci, ymax=uci, color=year), size=.1) +
-  geom_smooth(aes(x=month, color=year,fill=year), se=FALSE)+
-  #geom_line(aes(x=month, y= prevalence, color=year))+
-  # annotate("rect", xmin = 152, xmax = 244, ymin = 0, ymax = 1,
-  #          alpha = .3)+
-  # geom_vline(xintercept=c(152,244), linetype="dotted")+
-  scale_x_continuous(limits = c(1,12), expand=c(0,0))+
-  #facet_wrap(~year, dir = "v")+
-  theme_linedraw()+
-  theme(plot.background = element_blank(),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank())+
-  scale_fill_manual(values=colz2)+
-  scale_color_manual(values=colz2) +
-  labs(x="Month", y="Prevalence", title = expression(~italic(Picornavirales) ~"positive bats over time"))
+#plot
+p1 <- ggplot(dat.sum_picorna, aes(fill=bat_species, y=prevalence, x=month)) +
+  geom_point(aes(x=month, y=prevalence, size=N, color=bat_sex     )) +
+  geom_line(aes(x=month, y=prevalence, color=bat_sex)) +
+  facet_grid(bat_species~.) + 
+  theme_bw() + 
+  ggtitle("Picornaviridae shedding")
 p1
 
+p2 <- ggplot(dat.sum_calici, aes(fill=bat_species, y=prevalence, x=month)) +
+  geom_point(aes(x=month, y=prevalence, size=N, color=bat_sex     )) +
+  geom_line(aes(x=month, y=prevalence, color=bat_sex)) +
+  facet_grid(bat_species~.) + 
+  theme_bw() + 
+  ggtitle("Caliciviridae shedding")
+p2
 
