@@ -26,24 +26,27 @@ plot(rooted.tree)
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
 
 #load tree data prepared from elsewhere
-dat <- read.csv(("hepatovirus_metadata_all.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(("hepatovirus_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
 
 #check that your metadata matches your tree data
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #118
-length(tree$tip.label) #118
+nrow(dat) #129
+length(tree$tip.label) #129
 
 #check subgroup names
 unique(dat$Species)
 
 #pick order for the labels
-dat$Species <- factor(dat$Species, levels = c("Eidolon dupreanum hepatovirus", "Hepatovirus A", "Hepatovirus B",   
+dat$Species <- factor(dat$Species, levels = c("Eidolon dupreanum hepatovirus","Eptesicus fuscus hepatovirus", 
+                                              "Hepatovirus A", "Hepatovirus B",   
                                           "Hepatovirus C",   "Hepatovirus D", "Hepatovirus E", "Hepatovirus F",    
                                           "Hepatovirus G",  "Hepatovirus H",   "Hepatovirus I", "Hepatovirus sp.",
-                                          "Hepatovirus sp. 'sotense'", "Rodent hepatovirus", "Tupaia hepatovirus A",
+                                          "Hepatovirus sp. 'sotense'", "Hipposideros bat hepatovirus","Rodent hepatovirus", 
+                                          "Taphozous bat hepatovirus" ,
+                                          "Tupaia hepatovirus A",
                                           "Sindbis virus"))   
 
 dat$novel <- as.factor(dat$novel)
@@ -190,17 +193,20 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,5))+
-  geom_cladelabel(node = 119, label = "Hepatovirus A",offset=0.3, fontsize=4, color="black")
+  geom_cladelabel(node = 186, label = "Hepatovirus A",offset=0.3, fontsize=4, color="black")
 p2
 
-p2.1<-p2%>%ggtree::rotate(118)
+p2.1<-p2%>%ggtree::rotate(129)
 p2.1
 
-p2.2<-p2.1%>%ggtree::rotate(208)
+p2.2<-p2.1%>%ggtree::rotate(190)
 p2.2
 
+p2.3<-p2.2%>%ggtree::rotate(194)
+p2.3
+
 #collapse the labeled clades
-p3<-collapse(p2.2, 119)+geom_point2(aes(subset=(node==119)), size=4, shape=22, fill="white")
+p3<-collapse(p2.3, 186)+geom_point2(aes(subset=(node==186)), size=4, shape=22, fill="white")
 p3
 
 ##add bootstrap values to this tree
@@ -220,4 +226,4 @@ p4 <- p3  %<+% p3.dat +
         legend.key.size = unit(0.3, "cm"))
 p4
 
-#15 x 5
+#17 x 7
