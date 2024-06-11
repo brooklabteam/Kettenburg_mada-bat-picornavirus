@@ -26,15 +26,15 @@ plot(rooted.tree)
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
 
 #load tree data prepared from elsewhere
-dat <- read.csv(("sapovirus_metadata_all.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(("sapovirus_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
 
 #check that your metadata matches your tree data
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #170
-length(tree$tip.label) #170
+nrow(dat) #218
+length(tree$tip.label) #218
 
 #check subgroup names
 unique(dat$Species)
@@ -46,8 +46,11 @@ unique(dat$Species)
 #          "Vesivirus"="lightpink2","Alphavirus"="black")
 
 #pick order for the labels
-dat$Species <- factor(dat$Species, levels = c("Bat sapovirus", "Bat sapovirus TLC58/HK",   "Eidolon dupreanum sapovirus 1",   
-                                          "Eidolon dupreanum sapovirus 2","Sapovirus sp.",   "Sapovirus Sapozj-9", "Sapovirus rat/S4-82", "Sapporo virus",    
+dat$Species <- factor(dat$Species, levels = c("Bat faecal sapovirus","Bat sapovirus", "Bat sapovirus TLC34/HK", "Bat sapovirus TLC39/HK" ,"Bat sapovirus TLC58/HK",
+                                              "Bat sapovirus WD3",  
+                                              "Eidolon dupreanum sapovirus 1",   
+                                          "Eidolon dupreanum sapovirus 2","Rousettus madagascariensis sapovirus 2","Sapovirus sp.",  
+                                          "Sapovirus Sapozj-9", "Sapovirus rat/S4-82", "Sapporo virus",    
                                           "Sindbis virus"))   
 
 dat$novel <- as.factor(dat$novel)
@@ -195,30 +198,29 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,5))+
-  geom_cladelabel(node = 183, label = "Sapporo virus/Sapovirus sp.",offset=0.05, fontsize=4, color="black") +
-  geom_cladelabel(node = 186, label = "Sapporo virus", offset=0.05,fontsize=4, color="black") +
-  geom_cladelabel(node = 234, label = "Sapporo virus/Sapovirus rat", offset=0.05, fontsize=4, color="black")
+  geom_cladelabel(node = 303, label = "Sapporo virus",offset=0.05, fontsize=4, color="black") +
+  geom_cladelabel(node = 276, label = "Sapporo virus", offset=0.05,fontsize=4, color="black") +
+  geom_cladelabel(node = 336, label = "Sapporo virus", offset=0.05, fontsize=4, color="black") +
+  geom_cladelabel(node = 315, label = "Sapporo virus", offset=0.05, fontsize=4, color="black")
 p2
 
-p2.1<-p2%>%ggtree::rotate(184)
+p2.1<-p2%>%ggtree::rotate(279)
 p2.1
 
-p2.2<-p2.1%>%ggtree::rotate(229)
-p2.2
-
 #collapse the labeled clades
-p3<-collapse(p2.2, 183)+geom_point2(aes(subset=(node==183)), size=4, shape=22, fill="white")
-p4<-collapse(p3, 186)+geom_point2(aes(subset=(node==186)), size=4, shape=22, fill="white")
-p5<-collapse(p4, 234)+geom_point2(aes(subset=(node==234)), size=4, shape=22, fill="white")
-p5
+p3<-collapse(p2.1, 303)+geom_point2(aes(subset=(node==303)), size=4, shape=22, fill="white")
+p4<-collapse(p3, 276)+geom_point2(aes(subset=(node==276)), size=4, shape=22, fill="white")
+p5<-collapse(p4, 336)+geom_point2(aes(subset=(node==336)), size=4, shape=22, fill="white")
+p6<-collapse(p5, 315)+geom_point2(aes(subset=(node==315)), size=4, shape=22, fill="white")
+p6
 
 
 ##add bootstrap values to this tree
-p5.dat <- p5$data
-p5.dat$Bootstrap <- NA
-Bootstrap<-p5.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p5.dat$label)] <- as.numeric(p5.dat$label[(length(tree.dat$tip_label)+1):length(p5.dat$label)])#fill with label
+p6.dat <- p6$data
+p6.dat$Bootstrap <- NA
+Bootstrap<-p6.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p6.dat$label)] <- as.numeric(p6.dat$label[(length(tree.dat$tip_label)+1):length(p6.dat$label)])#fill with label
 
-p6 <- p5  %<+% p5.dat + 
+p7 <- p6  %<+% p6.dat + 
   ggnewscale::new_scale_fill() + 
   geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
@@ -228,6 +230,6 @@ p6 <- p5  %<+% p5.dat +
         legend.text = element_text(size=12),
         legend.title = element_text(size=12),
         legend.key.size = unit(0.3, "cm"))
-p6
+p7
 
-#15 x 5
+#17 x 7
