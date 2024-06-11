@@ -194,7 +194,7 @@ p1.1 <- p1  %<+% p0.dat +
 p1.1
 
 
-##Get the clade numbers so we can collapse unnnecesary clades
+##Get the clade numbers so we can collapse unnecessary clades
 ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
 
 

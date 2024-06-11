@@ -264,4 +264,4 @@ p16 <- p15  %<+% p15.dat +
         legend.key.size = unit(0.3, "cm"))
 p16
 
-#15x13
+#17x13
