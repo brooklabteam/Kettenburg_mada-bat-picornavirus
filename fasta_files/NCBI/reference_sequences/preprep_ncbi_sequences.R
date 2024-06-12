@@ -9,7 +9,7 @@ homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus"
 setwd(paste0(homewd, "/fasta_files/NCBI/reference_sequences/picornaviridae"))
 
 #load the dataset and query - change dataset and working directory as you go
-dat <- read.csv(file = "teschovirus_fullgenome_nt_ncbi.csv", header = T, stringsAsFactors = F)
+dat <- read.csv(file = "summary_seq.csv", header = T, stringsAsFactors = F)
 
 head(dat)
 
