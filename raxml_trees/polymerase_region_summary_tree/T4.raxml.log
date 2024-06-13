@@ -1,0 +1,102 @@
+
+RAxML-NG v. 1.1.0-master released on 22.06.2022 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz, 28 cores, 62 GB RAM
+
+RAxML-NG was called at 13-Jun-2024 13:25:18 as follows:
+
+raxml-ng-mpi --bootstrap --msa polymerase_summary_align_trim.fasta --model GTR+G4 --prefix T4 --seed 2 --threads auto{7}
+
+Analysis options:
+  run mode: Bootstrapping
+  start tree(s): 
+  bootstrap replicates: max: 1000 + bootstopping (autoMRE, cutoff: 0.030000)
+  random seed: 2
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+[00:00:00] Reading alignment from file: polymerase_summary_align_trim.fasta
+[00:00:00] Loaded alignment with 287 taxa and 2937 sites
+
+WARNING: Sequences AB084788.1 and NC_004421.1 are exactly identical!
+WARNING: Sequences EU787450.2 and NC_011829.1 are exactly identical!
+WARNING: Sequences KF793927.1 and NC_023422.1 are exactly identical!
+WARNING: Sequences JF755427.1 and NC_015936.1 are exactly identical!
+WARNING: Sequences OP094599.1 and OQ363763.1 are exactly identical!
+WARNING: Sequences EF165067.2 and NC_009448.2 are exactly identical!
+WARNING: Sequences KT877158.1 and NC_028981.1 are exactly identical!
+WARNING: Sequences ON024079.1 and ON024080.1 are exactly identical!
+WARNING: Sequences HM002617.1 and NC_075724.1 are exactly identical!
+WARNING: Sequences MN102407.1 and MN102408.1 are exactly identical!
+WARNING: Sequences KX759620.1 and NC_033776.1 are exactly identical!
+WARNING: Sequences LC215892.1 and LC215894.1 are exactly identical!
+WARNING: Duplicate sequences found: 12
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /home/gkettenburg/RAxML_tree/polymerase_region_summary_tree/T4.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 2194 patterns
+
+Partition 0: noname
+Model: GTR+FO+G4m
+Alignment sites / patterns: 2937 / 2194
+Gaps: 53.44 %
+Invariant sites: 29.96 %
+
+
+NOTE: Binary MSA file created: T4.raxml.rba
+
+Parallelization scheme autoconfig: 3 worker(s) x 2 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 1097 / 17552
+[00:00:01] Data distribution: max. searches per worker: 334
+[00:00:01] Starting bootstrapping analysis with 1000 replicates.
+
+[00:04:48] [worker #2] Bootstrap tree #3, logLikelihood: -206083.771467
+[00:07:52] [worker #1] Bootstrap tree #2, logLikelihood: -202872.691174
+[00:08:55] [worker #2] Bootstrap tree #6, logLikelihood: -195679.825223
+[00:09:35] [worker #0] Bootstrap tree #1, logLikelihood: -204772.116443
+[00:14:21] [worker #2] Bootstrap tree #9, logLikelihood: -201518.642020
+[00:17:46] [worker #0] Bootstrap tree #4, logLikelihood: -205809.357020
+[00:17:52] [worker #1] Bootstrap tree #5, logLikelihood: -198098.467357
+[00:18:30] [worker #2] Bootstrap tree #12, logLikelihood: -198603.323714
+[00:22:52] [worker #2] Bootstrap tree #15, logLikelihood: -196150.933869
+[00:26:19] [worker #0] Bootstrap tree #7, logLikelihood: -196274.917838
+[00:27:48] [worker #2] Bootstrap tree #18, logLikelihood: -204364.093991
+[00:29:54] [worker #1] Bootstrap tree #8, logLikelihood: -200085.805668
+[00:33:07] [worker #2] Bootstrap tree #21, logLikelihood: -203005.671962
+[00:34:08] [worker #0] Bootstrap tree #10, logLikelihood: -205249.436381
+[00:37:59] [worker #2] Bootstrap tree #24, logLikelihood: -200294.660855
+[00:38:06] [worker #1] Bootstrap tree #11, logLikelihood: -201425.200685
+[00:42:43] [worker #0] Bootstrap tree #13, logLikelihood: -197396.500319
+[00:43:28] [worker #2] Bootstrap tree #27, logLikelihood: -196550.076788
+[00:46:36] [worker #1] Bootstrap tree #14, logLikelihood: -204665.748998
+[00:48:10] [worker #2] Bootstrap tree #30, logLikelihood: -205385.638832
+[00:50:54] [worker #0] Bootstrap tree #16, logLikelihood: -201472.914326
+[00:53:13] [worker #2] Bootstrap tree #33, logLikelihood: -204363.511261
+[00:56:50] [worker #1] Bootstrap tree #17, logLikelihood: -197183.519551
+[00:57:52] [worker #2] Bootstrap tree #36, logLikelihood: -201214.123319
+[01:00:07] [worker #0] Bootstrap tree #19, logLikelihood: -198993.427570
+[01:02:17] [worker #2] Bootstrap tree #39, logLikelihood: -197310.672819
+[01:05:44] [worker #1] Bootstrap tree #20, logLikelihood: -195784.684076
+[01:06:54] [worker #2] Bootstrap tree #42, logLikelihood: -197932.000468
+[01:08:11] [worker #0] Bootstrap tree #22, logLikelihood: -203409.122824
+[01:11:54] [worker #2] Bootstrap tree #45, logLikelihood: -201601.088261
+[01:16:16] [worker #1] Bootstrap tree #23, logLikelihood: -196658.731972
+[01:16:18] [worker #2] Bootstrap tree #48, logLikelihood: -207416.528015
+[01:17:06] [worker #0] Bootstrap tree #25, logLikelihood: -196726.696691
+[01:24:45] [worker #1] Bootstrap tree #26, logLikelihood: -195178.105796
+[01:25:24] [worker #0] Bootstrap tree #28, logLikelihood: -197170.965998
+[01:33:52] [worker #1] Bootstrap tree #29, logLikelihood: -192570.351361
+[01:34:06] [worker #0] Bootstrap tree #31, logLikelihood: -198586.862653
