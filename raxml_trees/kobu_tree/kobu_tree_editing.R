@@ -17,7 +17,7 @@ homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
 setwd(paste0(homewd,"/raxml_trees/kobu_tree"))
 
 #load the tree and root it
-tree <-  read.tree("T10.raxml.supportFBP") 
+tree <-  read.tree("T1.raxml.supportFBP") 
 rooted.tree <- root(tree, which(tree$tip.label == "NC_001547.1"))
 #take a quick look in base R
 plot(rooted.tree)
@@ -25,16 +25,19 @@ plot(rooted.tree)
 #Remove root from displaying, still calculates changes correctly without it
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
 
+#Remove rabbit kobuvirus from displaying
+rooted.tree<-drop.tip(rooted.tree, "NC_026314.1")
+
 #load tree data prepared from elsewhere
-dat <- read.csv(("kobuvirus_metadata_all.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(("kobuvirus_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
 
 #check that your metadata matches your tree data
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #152
-length(tree$tip.label) #152
+nrow(dat) #183
+length(tree$tip.label) #182
 
 #check subgroup names
 unique(dat$Species)
@@ -47,7 +50,8 @@ unique(dat$Species)
 
 #pick order for the labels
 dat$Species <- factor(dat$Species, levels = c("Aichivirus A", "Aichivirus B",   "Aichivirus C",
-                                          "Aichivirus D",   "Aichivirus E",  "Bamboo rat kobuvirus", "Canine kobuvirus", "Capreolus pygargus kobuvirus",    
+                                          "Aichivirus D",   "Aichivirus E", "Aichivirus F" ,"Bat kobuvirus", "Bamboo rat kobuvirus",
+                                          "Canine kobuvirus", "Capreolus pygargus kobuvirus",    
                                           "Eidolon dupreanum kobuvirus",  "Kobuvirus sp.", "Marmot kobuvirus", "Mouse kobuvirus M-5/USA/2010" , 
                                           "Ovine kobuvirus",  "Sindbis virus"))   
 
@@ -195,39 +199,35 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
-  xlim(c(0,5))+
-  geom_cladelabel(node = 231, label = "Aichivirus C",offset=0.05, fontsize=4, color="black") +
-  geom_cladelabel(node = 170, label = "Aichivirus B", offset=0.05,fontsize=4, color="black") +
-  geom_cladelabel(node = 215, label = "Aichivirus A", offset=0.05,fontsize=4, color="black") +
-  geom_cladelabel(node = 223, label = "Aichivirus D/Ovine kobuvirus", offset=0.05,fontsize=4, color="black") +
-  geom_cladelabel(node = 189, label = "Aichivirus A/Canine kobuvirus", offset=0.05,fontsize=4, color="black")
+  xlim(c(0,9))+
+  geom_cladelabel(node = 296, label = "Aichivirus C",offset=0.05, fontsize=4, color="black") +
+  geom_cladelabel(node = 273, label = "Aichivirus B", offset=0.05,fontsize=4, color="black") +
+  geom_cladelabel(node = 241, label = "Aichivirus A", offset=0.05,fontsize=4, color="black") +
+  geom_cladelabel(node = 255, label = "Aichivirus A", offset=0.05,fontsize=4, color="black") +
+  geom_cladelabel(node = 201, label = "Scotophilus kobuvirus", offset=0.05,fontsize=4, color="black") +
+  geom_cladelabel(node = 227, label = "Canine kobuvirus", offset=0.05,fontsize=4, color="black")
 p2
 
-p2.1<-p2%>%ggtree::rotate(152)
+p2.1<-p2%>%ggtree::rotate(193)
 p2.1
-
-p2.2<-p2.1%>%ggtree::rotate(172)
-p2.2
-
-p2.3<-p2.2%>%ggtree::rotate(175)
-p2.3
 
 
 #collapse the labeled clades
-p3<-collapse(p2.3, 231)+geom_point2(aes(subset=(node==231)), size=4, shape=22, fill="white")
-p4<-collapse(p3, 170)+geom_point2(aes(subset=(node==170)), size=4, shape=22, fill="white")
-p5<-collapse(p4, 189)+geom_point2(aes(subset=(node==189)), size=4, shape=22, fill="white")
-p6<-collapse(p5, 215)+geom_point2(aes(subset=(node==215)), size=4, shape=22, fill="white")
-p7<-collapse(p6, 223)+geom_point2(aes(subset=(node==223)), size=4, shape=22, fill="white")
-p7
+p3<-collapse(p2.1, 296)+geom_point2(aes(subset=(node==296)), size=4, shape=22, fill="white")
+p4<-collapse(p3, 273)+geom_point2(aes(subset=(node==273)), size=4, shape=22, fill="white")
+p5<-collapse(p4, 241)+geom_point2(aes(subset=(node==241)), size=4, shape=22, fill="white")
+p6<-collapse(p5, 255)+geom_point2(aes(subset=(node==255)), size=4, shape=22, fill="white")
+p7<-collapse(p6, 201)+geom_point2(aes(subset=(node==201)), size=4, shape=22, fill="white")
+p8<-collapse(p7, 227)+geom_point2(aes(subset=(node==227)), size=4, shape=22, fill="white")
+p8
 
 
 ##add bootstrap values to this tree
-p7.dat <- p7$data
-p7.dat$Bootstrap <- NA
-Bootstrap<-p7.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p7.dat$label)] <- as.numeric(p7.dat$label[(length(tree.dat$tip_label)+1):length(p7.dat$label)])#fill with label
+p8.dat <- p8$data
+p8.dat$Bootstrap <- NA
+Bootstrap<-p8.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p8.dat$label)] <- as.numeric(p8.dat$label[(length(tree.dat$tip_label)+1):length(p8.dat$label)])#fill with label
 
-p8 <- p7  %<+% p7.dat + 
+p9 <- p8  %<+% p8.dat + 
   ggnewscale::new_scale_fill() + 
   geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
@@ -237,6 +237,6 @@ p8 <- p7  %<+% p7.dat +
         legend.text = element_text(size=12),
         legend.title = element_text(size=12),
         legend.key.size = unit(0.3, "cm"))
-p8
+p9
 
-#15 x 5
+#15 x 6
