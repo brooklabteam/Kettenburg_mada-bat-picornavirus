@@ -7,9 +7,11 @@ library(ggnewscale)
 #install.packages('gdata')
 library(gdata)
 library(phylotools)
+library(phytools)
 library(phylobase)
 library(cowplot)
 library(ggtreeExtra)
+library(viridis)
 
 ###packages loaded
 
@@ -171,34 +173,53 @@ colz2 = c('1' =  "yellow", '0' = "white")
 
 circ<-ggtree(rooted.tree, layout="circular")
 
-##uncollapsed tree
+##Get the clade numbers so we can label
+ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
+
+##base tree
 p1 <- ggtree(rooted.tree, layout = "circular") %<+% tree.dat +
   geom_tippoint(aes(color=Genus, shape=Seq_type), size=2,stroke=0,show.legend = T) +
   scale_color_manual(values=genuscolz)+
   scale_shape_manual(values=shapez) +
-  guides(colour = guide_legend(ncol = 1))+
-  guides(colour = guide_legend(override.aes = list(size=3)))+
-  theme(legend.position = "left",
+  guides(colour = "none")+
+  theme(legend.position = c(0.3,0.5),
         legend.direction = "vertical",
-        legend.text = element_text(size=11),
-        legend.key.size = unit(0.2, "cm")) +
-  xlim(c(0,5))
+        legend.text = element_text(size=10),
+        legend.title = element_text(size=10),
+        #legend.key = element_rect(fill = "transparent"),
+        legend.key.size = unit(0.25, "cm")) +
+  xlim(c(0,5)) 
 p1
 
 #rotate tree a bit
 p1<-rotate_tree(p1, 90)
 p1
 
+#add clade labels
+p1.1 <- p1 +
+  geom_cladelabel(node = 290, label = "Kobuvirus",offset.text=0.1, fontsize=3, angle=315, hjust=0,align = TRUE, color="#E54E21") +
+  geom_cladelabel(node = 288, label = "Kunsagivirus",offset.text=0.1, fontsize=3, angle=280,hjust=0.5,align = TRUE, color="#6C8645") +
+  geom_cladelabel(node = 352, label = "Cardiovirus",offset.text=0.1, fontsize=3, angle=83,hjust=0.6,align = TRUE, color="#0A9F9D") +
+  geom_cladelabel(node = 377, label = "Mischivirus",offset.text=0.1, fontsize=3,angle=65,hjust=0.4,align = TRUE, color="#C18748") +
+  geom_cladelabel(node = 382, label = "Teschovirus",offset.text=0.1, fontsize=3,angle=51,hjust=0.7,align = TRUE, color="#b67c3b") +
+  geom_cladelabel(node = 535, label = "Hepatovirus",offset.text=0.1, fontsize=3,angle=25,hjust=0.4,align = TRUE, color="#CEB175") +
+  geom_cladelabel(node = 530, label = "Shanbavirus",offset.text=0.1, fontsize=3,angle=358,hjust=0.4,align = TRUE, color="#54D8B1") +
+  geom_cladelabel(node = 503, label = "Sapelovirus",offset.text=0.1, fontsize=3,angle=340,hjust=0.4,align = TRUE, color="#C52E19") +
+  geom_cladelabel(node = 501, label = "Bat picornavirus",offset.text=0.1,angle=320,hjust=0.5, fontsize=3,align = TRUE, color="#175149") +
+  geom_cladelabel(node = 396, label = "Sapovirus",offset.text=0.1,angle=75, fontsize=3,align = TRUE,hjust=1, color="#AF4E24")
+p1.1
+
+
 ##Add contig/read metadata
 #attach various metadata to p1
-p1 <- p1 %<+% contig
+p1.1 <- p1.1 %<+% contig
 
 #pop contig data on top of the tree
-p2<-p1+geom_fruit(#data=contig,
+p2<-p1.1+geom_fruit(#data=contig,
                   geom=geom_tile,
                   mapping=aes(fill=Novel_contigs),
                   width=0.3,
-                  offset=0.1) + 
+                  offset=0.15) + 
                 scale_fill_viridis(option="G")
                   
 p2
@@ -212,64 +233,12 @@ p3<-p2+new_scale_fill()+
   mapping=aes(fill=Novel_reads_log10),
   width=0.3,
   offset=0.08
-)  + scale_fill_viridis(option="B") +
-  guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
-  theme(legend.position = "left",
-                 legend.direction = "vertical",
-                 legend.text = element_text(size=11),
-                 legend.title = element_text(size=11),
-                 legend.key.size = unit(0.3, "cm"))
+)  + scale_fill_viridis(option="B") 
+  #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))
+ # theme(legend.position = "left",
+                 # legend.direction = "vertical",
+                 # legend.text = element_text(size=11),
+                 # legend.title = element_text(size=11),
+                 # legend.key.size = unit(0.3, "cm"))
 p3
 
-
-
-
-
-
-
-
-
-##Add region/host class metadata
-#attach various metadata to p4
-p3 <- p3 %<+% region
-
-p4<-p3+geom_fruit(#data=region,
-  geom=geom_tile,
-  mapping=aes(fill=Region),
-  width=0.3,
-  offset=0.1
-)
-p4
-
-#attach various metadata to p2
-p4<-p4 %<+% host
-
-p5<-p4+new_scale_fill()+
-  geom_fruit(#data=host,
-    geom=geom_tile,
-    mapping=aes(fill=Host_class),
-    width=0.3,
-    offset=0.05
-  )
-p5
-
-
-
-#add node shapes to represent bootstrap values
-# p0<-ggtree(rooted.tree)
-# p0.dat <- p0$data
-# p0.dat$Bootstrap <- NA
-# Bootstrap<-p0.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p0.dat$label)] <- as.numeric(p0.dat$label[(length(tree.dat$tip_label)+1):length(p0.dat$label)])#fill with label
-# 
-# #add bootstrap values to original plot
-# p1.1 <- p1  %<+% p0.dat + 
-#   ggnewscale::new_scale_fill() + 
-#   geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
-#   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
-#   #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
-#   theme(legend.position = "left",
-#         legend.direction = "vertical",
-#         legend.text = element_text(size=12),
-#         legend.title = element_text(size=12),
-#         legend.key.size = unit(0.3, "cm"))
-# p1.1
