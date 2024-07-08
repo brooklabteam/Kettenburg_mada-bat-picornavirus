@@ -13,6 +13,7 @@ library(cowplot)
 library(ggtreeExtra)
 library(viridis)
 library(ggplotify)
+library(patchwork)
 
 ###packages loaded
 
@@ -2182,35 +2183,50 @@ sapo
 tescho #smaller
 
 
+#trying to make a final figure with plot_grid
 smallphylo <-plot_grid(sapelo, tescho, cardio, labels=c("X","X","X"), 
                        rel_widths = c(1,1,1), rel_heights = c(1,1,1),
                        ncol=1, align="hv", axis="l", label_size = 23)
 smallphylo
 smallphylo<-as.ggplot(smallphylo)
 
+smallphylo<-smallphylo + theme(plot.margin = unit(c(0, 0, 0, 0),"cm"))
+smallphylo
 
-top_grid<-plot_grid(base,smallphylo, labels=c("X",""),
-                    rel_widths = c(3,1.5), rel_heights = c(1,1),
-                    ncol=2, align="hv", axis="l", label_size = 23)
-top_grid
-top_grid<-as.ggplot(top_grid)
-
-
-doublegrid<-plot_grid(batpicorna,hepato,kobu,mischi, sapo, kunsagi, labels=c("X","X","X","X","X","X"),
-                      rel_widths = c(1,1,1,1,1,1), rel_heights = c(1,1,1,1,1,2),
-                      nrow = 3, align="hv", axis="l", label_size = 23)
-doublegrid
-doublegrid<-as.ggplot(doublegrid)
+left_grid<-plot_grid(base,batpicorna,kobu,sapo, labels=c("X","X","X","X"),
+                    rel_widths = c(4,1,1,1), rel_heights = c(4,1,1,1),
+                    ncol=1, align="hv", axis="t", label_size = 23)
+left_grid
+left_grid<-as.ggplot(left_grid)
 
 
-final<- plot_grid(top_grid,doublegrid, labels=c("",""),
+right_grid<-plot_grid(sapelo, tescho, cardio, hepato, mischi, kunsagi, labels=c("X","X","X","X","X","X"),
+                     rel_widths = c(1,1,1,1,1,1), rel_heights = c(1,1,1,1,1,1),
+                     ncol=1, align="hv", axis="l", label_size = 23)
+right_grid
+right_grid<-as.ggplot(right_grid)
+
+
+final<- plot_grid(left_grid,right_grid, labels=c("",""),
                   rel_widths = c(1,1), rel_heights = c(1,1),
-                  ncol=1, align="hv", axis="b", label_size = 23)
+                  ncol=2, align="hv", axis="b", label_size = 23)
 final
 
 
+#trying to make a final figure with patchwork
+left<-kobu/sapo
+left
+left<-as.ggplot(left)
 
+right<-sapelo/tescho/cardio/hepato/mischi/batpicorna/kunsagi
+right
+right<-as.ggplot(right)
 
+left2<-base/left + plot_layout(ncol=1,widths=c(2,1), heights = c(2,1))
+left2
+left2<-as.ggplot(left2)
 
+final<-left2 | right #+ plot_layout(ncol=2,widths=c(1,1), heights = c(1,1))
+final
 
 
