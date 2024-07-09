@@ -222,7 +222,7 @@ p1.1 <- p1 +
   geom_cladelabel(node = 535, label = "Hepatovirus",offset.text=0.1, fontsize=3,angle=25,hjust=0.4,align = TRUE, color="#D89000") +
   geom_cladelabel(node = 530, label = "Shanbavirus",offset.text=0.1, fontsize=3,angle=358,hjust=0.4,align = TRUE, color="#9590FF") +
   geom_cladelabel(node = 503, label = "Sapelovirus",offset.text=0.1, fontsize=3,angle=340,hjust=0.4,align = TRUE, color="#00BFC4") +
-  geom_cladelabel(node = 501, label = "Bat picornavirus",offset.text=0.1,angle=320,hjust=0.5, fontsize=3,align = TRUE, color="#FF62BC") +
+  geom_cladelabel(node = 501, label = "Bat picornavirus",offset.text=0.1,angle=318,hjust=0.5, fontsize=3,align = TRUE, color="#FF62BC") +
   geom_cladelabel(node = 396, label = "Sapovirus",offset.text=0.1,angle=75, fontsize=3,align = TRUE,hjust=1, color="#00B0F6")
 p1.1
 
@@ -2232,40 +2232,20 @@ final
 
 
 
-
-#trying to make a final figure with patchwork - rectangular layout 2
-left<-kobu/sapo/sapelo/tescho
-left
-left<-as.ggplot(left)
-
-right<-cardio/hepato/mischi/batpicorna/kunsagi
-right
-right<-as.ggplot(right)
-
-right2<-left|right + plot_layout(ncol=2,widths=c(1,1), heights = c(1,1))
-right2
-right2<-as.ggplot(left2)
-
-final<-left2 | right #+ plot_layout(ncol=2,widths=c(1,1), heights = c(1,1))
-final
-
-
-
-
 #trying to make a final figure with plot_grid
-phylo_grid<-plot_grid(cardio, hepato, mischi, batpicorna, kunsagi, labels=c("X","X","X","X","X"),
-                      rel_widths = c(1,1,1,1,1,1), rel_heights = c(1,1,1,1,1,1),
+phylo_grid<-plot_grid(cardio, hepato, mischi, batpicorna, tescho, kunsagi, labels=c("E","F","G","H","I","J"),
+                      rel_widths = c(1,1,1,1,1,1,1), rel_heights = c(1,1,1,1,1,1,1),
                       ncol=1, align="hv", axis="l", label_size = 23)
 phylo_grid
 phylo_grid<-as.ggplot(phylo_grid)
 
-small_grid<-plot_grid(kobu,sapo,sapelo,tescho, labels=c("X","X","X","X"),
-                      rel_widths = c(1,1,1,1), rel_heights = c(1,1,1,1),
+small_grid<-plot_grid(kobu,sapo,sapelo, labels=c("B","C","D"),
+                      rel_widths = c(1,1,1), rel_heights = c(1,1,1),
                       ncol=1, align="hv", axis="l", label_size = 23)
 small_grid
 small_grid<-as.ggplot(small_grid)
 
-leftside<-plot_grid(base, small_grid, labels=c("X",""),
+leftside<-plot_grid(base, small_grid, labels=c("A",""),
                rel_widths=c(2,1), rel_heights=c(1,1),
                ncol=1, align="h", axis="l", label_size=23)
 leftside
@@ -2282,7 +2262,7 @@ final
 ggsave(file = paste0(homewd, "/raxml_trees/master_phylo_fig/master_phylo_fig.pdf"),
        plot= final,
        units="mm",  
-       width=200, 
+       width=220, 
        height=200, 
        scale=2, 
        dpi=500)
