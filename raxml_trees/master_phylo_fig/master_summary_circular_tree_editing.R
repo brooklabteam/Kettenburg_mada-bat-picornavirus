@@ -152,6 +152,9 @@ region<-data.frame(id=tree.dat$tip_label,Region=tree.dat$region)
 host<-data.frame(id=tree.dat$tip_label,Host_class=tree.dat$host_class)
 #rownames(host) <- rooted.tree$tip.label
 
+novel<-data.frame(id=tree.dat$tip_label,Seq_type=tree.dat$Seq_type)
+#rownames(novel) <- rooted.tree$tip.label
+
 #make real tree.dat file for putting the tip points on the tree
 tree.dat <- dplyr::select(tree.dat, tip_label, Isolate, Host, source, Country, Collection_Date, Genus, Seq_type, old_tip_label)
 
@@ -172,6 +175,9 @@ tree.dat$Host <- as.factor(tree.dat$Host)
 tree.dat$Seq_type[tree.dat$Seq_type==0] <- "Reference seq"
 tree.dat$Seq_type[tree.dat$Seq_type==1] <- "Novel seq"
 tree.dat$Seq_type<-as.factor(tree.dat$Seq_type)
+novel$Seq_type[novel$Seq_type==0] <- "Reference seq"
+novel$Seq_type[novel$Seq_type==1] <- "Novel seq"
+#novel$Seq_type<-as.factor(novel$Seq_type)
 
 shapez = c("Bat host" =  17, "Non-bat host" = 19, "Reference seq"=19,"Novel seq"=17)
 colz2 = c('1' =  "yellow", '0' = "white")
@@ -183,18 +189,24 @@ ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
 
 ##base tree
 p1 <- ggtree(rooted.tree, layout = "circular") %<+% tree.dat +
-  geom_tippoint(aes(color=Genus, shape=Seq_type), size=2,stroke=0,show.legend = T) +
-  scale_color_manual(values=genuscolz)+
+  geom_tippoint(aes(color=Genus, shape=Host), size=2,stroke=0,show.legend = T) +
+  #scale_color_manual(values=genuscolz)+
   scale_shape_manual(values=shapez) +
   guides(colour = "none")+
   theme(legend.position = c(0.305,0.505),
+        #legend.position = "left",
+        legend.margin = margin(c(0,0,0,0)),
         legend.direction = "vertical",
         legend.text = element_text(size=9),
         legend.title = element_text(size=9),
-        #legend.key = element_rect(fill = "transparent"),
+        legend.key = element_rect(fill = "transparent"),
         legend.key.size = unit(0.25, "cm")) +
   xlim(c(0,5)) 
 p1
+
+library(scales)
+hex_codes2 <- hue_pal()(10)      
+show_col(hex_codes2)
 
 #rotate tree a bit
 p1<-rotate_tree(p1, 90)
@@ -202,18 +214,17 @@ p1
 
 #add clade labels
 p1.1 <- p1 +
-  geom_cladelabel(node = 290, label = "Kobuvirus",offset.text=0.1, fontsize=3, angle=315, hjust=0,align = TRUE, color="#E54E21") +
-  geom_cladelabel(node = 288, label = "Kunsagivirus",offset.text=0.1, fontsize=3, angle=280,hjust=0.5,align = TRUE, color="#6C8645") +
-  geom_cladelabel(node = 352, label = "Cardiovirus",offset.text=0.1, fontsize=3, angle=83,hjust=0.6,align = TRUE, color="#0A9F9D") +
-  geom_cladelabel(node = 377, label = "Mischivirus",offset.text=0.1, fontsize=3,angle=65,hjust=0.4,align = TRUE, color="#C18748") +
-  geom_cladelabel(node = 382, label = "Teschovirus",offset.text=0.1, fontsize=3,angle=51,hjust=0.7,align = TRUE, color="#b67c3b") +
-  geom_cladelabel(node = 535, label = "Hepatovirus",offset.text=0.1, fontsize=3,angle=25,hjust=0.4,align = TRUE, color="#CEB175") +
-  geom_cladelabel(node = 530, label = "Shanbavirus",offset.text=0.1, fontsize=3,angle=358,hjust=0.4,align = TRUE, color="#54D8B1") +
-  geom_cladelabel(node = 503, label = "Sapelovirus",offset.text=0.1, fontsize=3,angle=340,hjust=0.4,align = TRUE, color="#C52E19") +
-  geom_cladelabel(node = 501, label = "Bat picornavirus",offset.text=0.1,angle=320,hjust=0.5, fontsize=3,align = TRUE, color="#175149") +
-  geom_cladelabel(node = 396, label = "Sapovirus",offset.text=0.1,angle=75, fontsize=3,align = TRUE,hjust=1, color="#AF4E24")
+  geom_cladelabel(node = 290, label = "Kobuvirus",offset.text=0.1, fontsize=3, angle=315, hjust=0,align = TRUE, color="#A3A500") +
+  geom_cladelabel(node = 288, label = "Kunsagivirus",offset.text=0.1, fontsize=3, angle=280,hjust=0.5,align = TRUE, color="#39B600") +
+  geom_cladelabel(node = 352, label = "Cardiovirus",offset.text=0.1, fontsize=3, angle=83,hjust=0.6,align = TRUE, color="#F8766D") +
+  geom_cladelabel(node = 377, label = "Mischivirus",offset.text=0.1, fontsize=3,angle=65,hjust=0.4,align = TRUE, color="#00BF7D") +
+  geom_cladelabel(node = 382, label = "Teschovirus",offset.text=0.1, fontsize=3,angle=51,hjust=0.7,align = TRUE, color="#E76BF3") +
+  geom_cladelabel(node = 535, label = "Hepatovirus",offset.text=0.1, fontsize=3,angle=25,hjust=0.4,align = TRUE, color="#D89000") +
+  geom_cladelabel(node = 530, label = "Shanbavirus",offset.text=0.1, fontsize=3,angle=358,hjust=0.4,align = TRUE, color="#9590FF") +
+  geom_cladelabel(node = 503, label = "Sapelovirus",offset.text=0.1, fontsize=3,angle=340,hjust=0.4,align = TRUE, color="#00BFC4") +
+  geom_cladelabel(node = 501, label = "Bat picornavirus",offset.text=0.1,angle=320,hjust=0.5, fontsize=3,align = TRUE, color="#FF62BC") +
+  geom_cladelabel(node = 396, label = "Sapovirus",offset.text=0.1,angle=75, fontsize=3,align = TRUE,hjust=1, color="#00B0F6")
 p1.1
-
 
 ##Add contig/read metadata
 #attach various metadata to p1
@@ -223,8 +234,8 @@ p1.1 <- p1.1 %<+% contig
 p2<-p1.1+geom_fruit(#data=contig,
                   geom=geom_tile,
                   mapping=aes(fill=Novel_contigs),
-                  width=0.3,
-                  offset=0.15) + 
+                  width=0.2,
+                  offset=0.12) + 
                 scale_fill_viridis(option="G")
                   
 p2
@@ -232,23 +243,43 @@ p2
 #attach various metadata to p2
 p2<-p2 %<+% reads
 
-base<-p2+new_scale_fill()+
+p3<-p2+new_scale_fill()+
   geom_fruit(#data=reads,
   geom=geom_tile,
   mapping=aes(fill=Novel_reads_log10),
-  width=0.3,
-  offset=0.08
+  width=0.2,
+  offset=0.05
 )  + scale_fill_viridis(option="B") +
   #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))
  theme(
                  #legend.direction = "none",
+                 legend.margin = margin(c(0,0,0,0)),
                  legend.text = element_text(size=9),
                  legend.title = element_text(size=9),
                  legend.key.size = unit(0.3, "cm"),
        plot.margin = unit(c(0, 0, 0, 0), 
                           "cm"))
-base
+p3
 
+
+#attach various metadata to p3
+#p3<-p3 %<+% novel
+
+base<-p3+new_scale_fill()+
+  geom_fruit(#data=reads,
+    geom=geom_tile,
+    mapping=aes(fill=Seq_type),
+    width=0.2,
+    offset=0.05
+  )  + scale_fill_manual(values=c("Novel seq"="darkorchid1","Reference seq"="grey88"))+
+  theme(
+    #legend.direction = "none",
+    legend.text = element_text(size=9),
+    legend.title = element_text(size=9),
+    legend.key.size = unit(0.3, "cm"),
+    plot.margin = unit(c(0, 0, 0, 0), 
+                       "cm"))
+base
 
 
 #mischi
@@ -360,7 +391,7 @@ tree.dat$Host[tree.dat$Host==1] <- "Bat host"
 tree.dat$Host <- as.factor(tree.dat$Host)
 shapez = c("Bat host" =  17, "Non-bat host" = 19)
 colz2 = c('1' =  "yellow", '0' = "white")
-colz3 = c("Bat host"="black","Non-bat host"="grey50")
+colz3 = c("Bat host"="#00BF7D","Non-bat host"="black")
 
 ##uncollapsed tree
 p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Host), size=3,stroke=0,show.legend = T) +
@@ -418,7 +449,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
-  geom_treescale(fontsize=4, x=0,y=-1, linesize = .5) +
+  geom_treescale(fontsize=4, x=0,y=-2, linesize = .5) +
   theme(legend.position = "none", 
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
@@ -568,7 +599,7 @@ tree.dat$Host[tree.dat$Host==1] <- "Bat host"
 tree.dat$Host <- as.factor(tree.dat$Host)
 shapez = c("Bat host" =  17, "Non-bat host" = 19)
 colz2 = c('1' =  "yellow", '0' = "white")
-colz3 = c("Bat host"="black","Non-bat host"="grey50")
+colz3 = c("Bat host"="#00BFC4","Non-bat host"="black")
 
 
 ##uncollapsed tree
@@ -581,7 +612,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
-  geom_treescale(fontsize=4, x=0,y=-2, linesize = .5) +
+  geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
   guides(colour = guide_legend(ncol = 1))+
   theme(legend.position = "none", 
         legend.direction = "horizontal",
@@ -627,13 +658,13 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
-  geom_treescale(fontsize=4, x=0,y=-1, linesize = .5) +
+  geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
   theme(legend.position = "none", 
         legend.direction = "horizontal",
         legend.text = element_text(size=9), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,10))+
-  geom_cladelabel(node = 70, label = "Sapelovirus A/B (collapsed)",offset=0.05, fontsize=3, color="black")
+  geom_cladelabel(node = 70, label = "Sapelovirus A/B (collapsed)",offset=0.1, fontsize=3, color="black")
 p2
 
 p2.1<-p2%>%ggtree::rotate(57)
@@ -788,7 +819,7 @@ tree.dat$Host[tree.dat$Host==1] <- "Bat host"
 tree.dat$Host <- as.factor(tree.dat$Host)
 shapez = c("Bat host" =  17, "Non-bat host" = 19)
 colz2 = c('1' =  "yellow", '0' = "white")
-colz3 = c("Bat host"="black","Non-bat host"="grey50")
+colz3 = c("Bat host"="#00B0F6","Non-bat host"="black")
 
 
 ##uncollapsed tree
@@ -847,16 +878,16 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
-  geom_treescale(fontsize=4, x=0,y=-1, linesize = .5) +
+  geom_treescale(fontsize=4, x=0,y=-2, linesize = .5) +
   theme(legend.position = "none", 
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,9))+
-  geom_cladelabel(node = 336, label = "Sapporo virus (collapsed)",offset=0.05, fontsize=3, color="black") +
-  geom_cladelabel(node = 277, label = "Sapporo virus/Bat sapovirus (collapsed)", offset=0.05,fontsize=3, color="black") +
-  geom_cladelabel(node = 315, label = "Sapporo virus (collapsed)", offset=0.05, fontsize=3, color="black")+
-  geom_cladelabel(node = 282, label = "Bat sapovirus (collapsed)", offset=0.05, fontsize=3, color="black")
+  geom_cladelabel(node = 336, label = "Sapporo virus (collapsed)",offset=0.1, fontsize=3, color="black") +
+  geom_cladelabel(node = 277, label = "Sapporo virus/Bat sapovirus (collapsed)", offset=0.1,fontsize=3, color="black") +
+  geom_cladelabel(node = 315, label = "Sapporo virus (collapsed)", offset=0.1, fontsize=3, color="black")+
+  geom_cladelabel(node = 282, label = "Bat sapovirus (collapsed)", offset=0.1, fontsize=3, color="black")
 
 p2
 
@@ -1005,7 +1036,7 @@ tree.dat$Host[tree.dat$Host==1] <- "Bat host"
 tree.dat$Host <- as.factor(tree.dat$Host)
 shapez = c("Bat host" =  17, "Non-bat host" = 19)
 colz2 = c('1' =  "yellow", '0' = "white")
-colz3 = c("Bat host"="black","Non-bat host"="grey50")
+colz3 = c("Bat host"="#39B600","Non-bat host"="black")
 
 
 ##uncollapsed tree
@@ -1212,7 +1243,7 @@ tree.dat$Host[tree.dat$Host==1] <- "Bat host"
 tree.dat$Host <- as.factor(tree.dat$Host)
 shapez = c("Bat host" =  17, "Non-bat host" = 19)
 colz2 = c('1' =  "yellow", '0' = "white")
-colz3 = c("Bat host"="black","Non-bat host"="grey50")
+colz3 = c("Bat host"="#A3A500","Non-bat host"="black")
 
 
 ##uncollapsed tree
@@ -1271,20 +1302,20 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
-  geom_treescale(fontsize=4, x=0,y=-1, linesize = .5) +
+  geom_treescale(fontsize=4, x=0,y=-2, linesize = .5) +
   theme(legend.position = "none", 
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,10))+
-  geom_cladelabel(node = 296, label = "Aichivirus C (collapsed)",offset=0.05, fontsize=3, color="black") +
-  geom_cladelabel(node = 273, label = "Aichivirus B (collapsed)", offset=0.05,fontsize=3, color="black") +
-  geom_cladelabel(node = 241, label = "Aichivirus A (collapsed)", offset=0.05,fontsize=3, color="black") +
-  geom_cladelabel(node = 255, label = "Aichivirus A (collapsed)", offset=0.05,fontsize=3, color="black") +
-  geom_cladelabel(node = 201, label = "Scotophilus kobuvirus (collapsed)", offset=0.05,fontsize=3, color="black") +
-  geom_cladelabel(node = 227, label = "Canine kobuvirus (collapsed)", offset=0.05,fontsize=3, color="black") +
-  geom_cladelabel(node = 185, label = "Aichivirus F (collapsed)", offset=0.05,fontsize=3, color="black") +
-  geom_cladelabel(node = 264, label = "Aichivirus D (collapsed)", offset=0.05,fontsize=3, color="black")
+  geom_cladelabel(node = 296, label = "Aichivirus C (collapsed)",offset=0.1, fontsize=3, color="black") +
+  geom_cladelabel(node = 273, label = "Aichivirus B (collapsed)", offset=0.1,fontsize=3, color="black") +
+  #geom_cladelabel(node = 241, label = "Aichivirus A (collapsed)", offset=0.05,fontsize=3, color="black") +
+  geom_cladelabel(node = 255, label = "Aichivirus A (collapsed)", offset=0.1,fontsize=3, color="black") +
+  geom_cladelabel(node = 198, label = "Scotophilus/Rhinolophus kobuvirus (collapsed)", offset=0.1,fontsize=3, color="black") +
+  geom_cladelabel(node = 225, label = "Canine kobuvirus (collapsed)", offset=0.1,fontsize=3, color="black") +
+  geom_cladelabel(node = 185, label = "Aichivirus F (collapsed)", offset=0.1,fontsize=3, color="black") +
+  geom_cladelabel(node = 264, label = "Aichivirus D (collapsed)", offset=0.1,fontsize=3, color="black")
   
 p2
 
@@ -1294,10 +1325,10 @@ p2.1
 #collapse the labeled clades
 p3<-collapse(p2.1, 296)+geom_point2(aes(subset=(node==296)), size=3, shape=22, fill="white")
 p4<-collapse(p3, 273)+geom_point2(aes(subset=(node==273)), size=3, shape=22, fill="white")
-p5<-collapse(p4, 241)+geom_point2(aes(subset=(node==241)), size=3, shape=22, fill="white")
-p6<-collapse(p5, 255)+geom_point2(aes(subset=(node==255)), size=3, shape=22, fill="white")
-p7<-collapse(p6, 201)+geom_point2(aes(subset=(node==201)), size=3, shape=22, fill="white")
-p8.1<-collapse(p7, 227)+geom_point2(aes(subset=(node==227)), size=3, shape=22, fill="white")
+#p5<-collapse(p4, 241)+geom_point2(aes(subset=(node==241)), size=3, shape=22, fill="white")
+p6<-collapse(p4, 255)+geom_point2(aes(subset=(node==255)), size=3, shape=22, fill="white")
+p7<-collapse(p6, 198)+geom_point2(aes(subset=(node==198)), size=3, shape=22, fill="white")
+p8.1<-collapse(p7, 225)+geom_point2(aes(subset=(node==225)), size=3, shape=22, fill="white")
 p8.2<-collapse(p8.1, 185)+geom_point2(aes(subset=(node==185)), size=3, shape=22, fill="white")
 p8<-collapse(p8.2, 264)+geom_point2(aes(subset=(node==264)), size=3, shape=22, fill="white")
 p8
@@ -1435,7 +1466,7 @@ tree.dat$Host[tree.dat$Host==1] <- "Bat host"
 tree.dat$Host <- as.factor(tree.dat$Host)
 shapez = c("Bat host" =  17, "Non-bat host" = 19)
 colz2 = c('1' =  "yellow", '0' = "white")
-colz3 = c("Bat host"="black","Non-bat host"="grey50")
+colz3 = c("Bat host"="#D89000","Non-bat host"="black")
 
 
 ##uncollapsed tree
@@ -1493,15 +1524,15 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
-  geom_treescale(fontsize=4, x=0,y=-1, linesize = .5) +
+  geom_treescale(fontsize=4, x=0,y=-2, linesize = .5) +
   theme(legend.position = "none", 
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,9))+
-  geom_cladelabel(node = 189, label = "Hepatovirus A/D/F/I (collapsed)",offset=0.05, fontsize=3, color="black") +
-  geom_cladelabel(node = 213, label = "Bat hepatovirus (collapsed)",offset=0.05, fontsize=3, color="black") +
-  geom_cladelabel(node = 203, label = "Bat hepatovirus (collapsed)",offset=0.05, fontsize=3, color="black")
+  geom_cladelabel(node = 189, label = "Hepatovirus A/D/F/I (collapsed)",offset=0.1, fontsize=3, color="black") +
+  geom_cladelabel(node = 213, label = "Bat hepatovirus (collapsed)",offset=0.1, fontsize=3, color="black") +
+  geom_cladelabel(node = 203, label = "Bat hepatovirus (collapsed)",offset=0.1, fontsize=3, color="black")
 p2
 
 p2.1<-p2%>%ggtree::rotate(129)
@@ -1647,7 +1678,7 @@ tree.dat$Host[tree.dat$Host==1] <- "Bat host"
 tree.dat$Host <- as.factor(tree.dat$Host)
 shapez = c("Bat host" =  17, "Non-bat host" = 19)
 colz2 = c('1' =  "yellow", '0' = "white")
-colz3 = c("Bat host"="black","Non-bat host"="grey50")
+colz3 = c("Bat host"="#FF62BC","Non-bat host"="black")
 
 
 ##uncollapsed tree
@@ -1705,13 +1736,13 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
-  geom_treescale(fontsize=4, x=0,y=-1, linesize = .5) +
+  geom_treescale(fontsize=4, x=0,y=-2, linesize = .5) +
   theme(legend.position = "none", 
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,8))+
-  geom_cladelabel(node = 38, label = "Shanbavirus A (collapsed)",offset=0.05, fontsize=3, color="black")
+  geom_cladelabel(node = 38, label = "Shanbavirus A (collapsed)",offset=0.1, fontsize=3, color="black")
 p2
 
 p2.1<-p2%>%ggtree::rotate(31)
@@ -1859,7 +1890,7 @@ tree.dat$Host[tree.dat$Host==1] <- "Bat host"
 tree.dat$Host <- as.factor(tree.dat$Host)
 shapez = c("Bat host" =  17, "Non-bat host" = 19)
 colz2 = c('1' =  "yellow", '0' = "white")
-colz3 = c("Bat host"="black","Non-bat host"="grey50")
+colz3 = c("Bat host"="#E76BF3","Non-bat host"="black")
 
 
 ##uncollapsed tree
@@ -1918,13 +1949,13 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
-  geom_treescale(fontsize=4, x=0,y=-1, linesize = .5) +
+  geom_treescale(fontsize=4, x=0,y=-2, linesize = .5) +
   theme(legend.position = "none", 
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,10))+
-  geom_cladelabel(node = 44, label = "Teschovirus A (collapsed)",offset=0.05, fontsize=3, color="black")
+  geom_cladelabel(node = 44, label = "Teschovirus A (collapsed)",offset=0.1, fontsize=3, color="black")
 p2
 
 p2.1<-p2%>%ggtree::rotate(36)
@@ -2069,7 +2100,7 @@ tree.dat$Host[tree.dat$Host==1] <- "Bat host"
 tree.dat$Host <- as.factor(tree.dat$Host)
 shapez = c("Bat host" =  17, "Non-bat host" = 19)
 colz2 = c('1' =  "yellow", '0' = "white")
-colz3 = c("Bat host"="black","Non-bat host"="grey50")
+colz3 = c("Bat host"="#F8766D","Non-bat host"="black")
 
 
 ##uncollapsed tree
@@ -2128,15 +2159,15 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
-  geom_treescale(fontsize=4, x=0,y=-1, linesize = .5) +
+  geom_treescale(fontsize=4, x=0,y=-2, linesize = .5) +
   theme(legend.position = "none", 
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,8))+
-  geom_cladelabel(node = 95, label = "Cardiovirus A (collapsed)",offset=0.05, fontsize=3, color="black") +
-  geom_cladelabel(node = 107, label = "Cardiovirus E/F (collapsed)", offset=0.05,fontsize=3, color="black") +
-  geom_cladelabel(node = 109, label = "Cardiovirus B/D/Rodent cardiovirus (collapsed)", offset=0.05, fontsize=3, color="black")
+  geom_cladelabel(node = 95, label = "Cardiovirus A (collapsed)",offset=0.1, fontsize=3, color="black") +
+  geom_cladelabel(node = 107, label = "Cardiovirus E/F (collapsed)", offset=0.1,fontsize=3, color="black") +
+  geom_cladelabel(node = 109, label = "Cardiovirus B/D/Rodent cardiovirus (collapsed)", offset=0.1, fontsize=3, color="black")
 p2
 
 #flip clades
@@ -2183,50 +2214,76 @@ sapo
 tescho #smaller
 
 
-#trying to make a final figure with plot_grid
-smallphylo <-plot_grid(sapelo, tescho, cardio, labels=c("X","X","X"), 
-                       rel_widths = c(1,1,1), rel_heights = c(1,1,1),
-                       ncol=1, align="hv", axis="l", label_size = 23)
-smallphylo
-smallphylo<-as.ggplot(smallphylo)
-
-smallphylo<-smallphylo + theme(plot.margin = unit(c(0, 0, 0, 0),"cm"))
-smallphylo
-
-left_grid<-plot_grid(base,batpicorna,kobu,sapo, labels=c("X","X","X","X"),
-                    rel_widths = c(4,1,1,1), rel_heights = c(4,1,1,1),
-                    ncol=1, align="hv", axis="t", label_size = 23)
-left_grid
-left_grid<-as.ggplot(left_grid)
-
-
-right_grid<-plot_grid(sapelo, tescho, cardio, hepato, mischi, kunsagi, labels=c("X","X","X","X","X","X"),
-                     rel_widths = c(1,1,1,1,1,1), rel_heights = c(1,1,1,1,1,1),
-                     ncol=1, align="hv", axis="l", label_size = 23)
-right_grid
-right_grid<-as.ggplot(right_grid)
-
-
-final<- plot_grid(left_grid,right_grid, labels=c("",""),
-                  rel_widths = c(1,1), rel_heights = c(1,1),
-                  ncol=2, align="hv", axis="b", label_size = 23)
-final
-
-
-#trying to make a final figure with patchwork
-left<-kobu/sapo
+#trying to make a final figure with patchwork - rectangular layout
+left<-kobu/sapo/tescho
 left
 left<-as.ggplot(left)
 
-right<-sapelo/tescho/cardio/hepato/mischi/batpicorna/kunsagi
+right<-sapelo/cardio/hepato/mischi/batpicorna/kunsagi
 right
 right<-as.ggplot(right)
 
-left2<-base/left + plot_layout(ncol=1,widths=c(2,1), heights = c(2,1))
+left2<-base/left + plot_layout(ncol=1,widths=c(1,1), heights = c(1,1))
 left2
 left2<-as.ggplot(left2)
 
 final<-left2 | right #+ plot_layout(ncol=2,widths=c(1,1), heights = c(1,1))
 final
 
+
+
+
+#trying to make a final figure with patchwork - rectangular layout 2
+left<-kobu/sapo/sapelo/tescho
+left
+left<-as.ggplot(left)
+
+right<-cardio/hepato/mischi/batpicorna/kunsagi
+right
+right<-as.ggplot(right)
+
+right2<-left|right + plot_layout(ncol=2,widths=c(1,1), heights = c(1,1))
+right2
+right2<-as.ggplot(left2)
+
+final<-left2 | right #+ plot_layout(ncol=2,widths=c(1,1), heights = c(1,1))
+final
+
+
+
+
+#trying to make a final figure with plot_grid
+phylo_grid<-plot_grid(cardio, hepato, mischi, batpicorna, kunsagi, labels=c("X","X","X","X","X"),
+                      rel_widths = c(1,1,1,1,1,1), rel_heights = c(1,1,1,1,1,1),
+                      ncol=1, align="hv", axis="l", label_size = 23)
+phylo_grid
+phylo_grid<-as.ggplot(phylo_grid)
+
+small_grid<-plot_grid(kobu,sapo,sapelo,tescho, labels=c("X","X","X","X"),
+                      rel_widths = c(1,1,1,1), rel_heights = c(1,1,1,1),
+                      ncol=1, align="hv", axis="l", label_size = 23)
+small_grid
+small_grid<-as.ggplot(small_grid)
+
+leftside<-plot_grid(base, small_grid, labels=c("X",""),
+               rel_widths=c(2,1), rel_heights=c(1,1),
+               ncol=1, align="h", axis="l", label_size=23)
+leftside
+leftside<-as.ggplot(leftside)
+
+
+final<-plot_grid(leftside, phylo_grid, labels=c("",""),
+                 rel_widths=c(1,1), rel_heights = c(1,1),
+                 ncol=2,align="hv", axis="l", label_size = 23)
+final
+
+
+#homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
+ggsave(file = paste0(homewd, "/raxml_trees/master_phylo_fig/master_phylo_fig.pdf"),
+       plot= final,
+       units="mm",  
+       width=200, 
+       height=200, 
+       scale=2, 
+       dpi=500)
 
