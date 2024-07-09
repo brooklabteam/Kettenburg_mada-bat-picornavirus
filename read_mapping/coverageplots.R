@@ -36,6 +36,9 @@ rm_partial<-subset(rm, type=="partial")
 
 colz=c("partial"="deepskyblue3", "full"="coral2")
 
+
+
+#swap out between plotting reads per million and the raw coverage
 title<-expression(paste(italic("Pteropus rufus")))
 pr_all<-ggplot(pr, aes(x=Position, y=rPM, fill=type))+ 
   geom_area(linewidth=0.5) +
@@ -47,6 +50,7 @@ pr_all<-ggplot(pr, aes(x=Position, y=rPM, fill=type))+
   ggtitle(title)+
   scale_y_continuous(position="left")+
   xlab("Genome position") + ylab("rPM (reads per million)")+
+  #xlab("Genome position") + ylab("Coverage")+
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
         axis.title.y = element_text(margin = margin(0,0,0,1)))
@@ -64,6 +68,7 @@ ed_all<-ggplot(ed, aes(x=Position, y=rPM, fill=type))+
   ggtitle(title)+
   scale_y_continuous(position="left")+
   xlab("Genome position") + ylab("rPM (reads per million)")+
+  #xlab("Genome position") + ylab("Coverage")+
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
         axis.title.y = element_text(margin = margin(0,0,0,1)))
@@ -81,21 +86,35 @@ rm_all<-ggplot(rm, aes(x=Position, y=rPM, fill=type))+
   ggtitle(title)+
   scale_y_continuous(position="left")+
   xlab("Genome position") + ylab("rPM (reads per million)")+
+  #xlab("Genome position") + ylab("Coverage")+
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
         axis.title.y = element_text(margin = margin(0,0,0,1)))
 rm_all
 
 #everything together
-all<-plot_grid(pr_all,ed_all, rm_all, ncol=3, labels = "AUTO", align="hv", axis="l")
+all_pr_ed<-plot_grid(pr_all, ed_all, ncol=1, labels = "AUTO", 
+                     rel_heights=c(0.2,1),align="hv", axis="l")
+all_pr_ed
+
+
+all<-plot_grid(all_pr_ed, rm_all, ncol=2, labels = c("","C"), align="hv", axis="l")
 all
 
-#export 15x20 inch portrait PDF
+# ggsave(file = paste0(homewd, "/figures/all_coverage_rpm.pdf"),
+#        plot= all,
+#        units="mm",  
+#        width=300, 
+#        height=300, 
+#        scale=3, 
+#        dpi=500)
 
 
 #just the full genomes
+#again sub out reads per million and coverage, then make both figures
 title<-expression(paste(italic("Pteropus rufus")))
-pr_f<-ggplot(pr_full, aes(x=Position, y=rPM, fill=type))+ 
+#pr_f<-ggplot(pr_full, aes(x=Position, y=rPM, fill=type))+ 
+pr_f<-ggplot(pr_full, aes(x=Position, y=Coverage, fill=type))+ 
   geom_area(linewidth=0.5) +
   facet_nested(accession~.,
                scales="free", nest_line = element_line(color="white"), solo_line = TRUE)+
@@ -104,7 +123,8 @@ pr_f<-ggplot(pr_full, aes(x=Position, y=rPM, fill=type))+
   theme(legend.position = "none")+
   ggtitle(title)+
   scale_y_continuous(position="left")+
-  xlab("Genome position") + ylab("rPM (reads per million)")+
+  #xlab("Genome position") + ylab("rPM (reads per million)")+
+  xlab("Genome position") + ylab("Coverage")+
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
         axis.title.y = element_text(margin = margin(0,0,0,1)))
@@ -112,7 +132,8 @@ pr_f
 
 
 title<-expression(paste(italic("Eidolon dupreanum")))
-ed_f<-ggplot(ed_full, aes(x=Position, y=rPM, fill=type))+ 
+#ed_f<-ggplot(ed_full, aes(x=Position, y=rPM, fill=type))+ 
+ed_f<-ggplot(ed_full, aes(x=Position, y=Coverage, fill=type))+ 
   geom_area(linewidth=0.5) +
   facet_nested(accession~.,
                scales="free", nest_line = element_line(color="white"), solo_line = TRUE)+
@@ -121,7 +142,8 @@ ed_f<-ggplot(ed_full, aes(x=Position, y=rPM, fill=type))+
   theme(legend.position = "none")+
   ggtitle(title)+
   scale_y_continuous(position="left")+
-  xlab("Genome position") + ylab("rPM (reads per million)")+
+  #xlab("Genome position") + ylab("rPM (reads per million)")+
+  xlab("Genome position") + ylab("Coverage")+
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
         axis.title.y = element_text(margin = margin(0,0,0,1)))
@@ -129,7 +151,8 @@ ed_f
 
 
 title<-expression(paste(italic("Rousettus madagascariensis")))
-rm_f<-ggplot(rm_full, aes(x=Position, y=rPM, fill=type))+ 
+#rm_f<-ggplot(rm_full, aes(x=Position, y=rPM, fill=type))+ 
+rm_f<-ggplot(rm_full, aes(x=Position, y=Coverage, fill=type))+ 
   geom_area(linewidth=0.5) +
   facet_nested(accession~.,
                scales="free", nest_line = element_line(color="white"), solo_line = TRUE)+
@@ -138,7 +161,8 @@ rm_f<-ggplot(rm_full, aes(x=Position, y=rPM, fill=type))+
   theme(legend.position = "none")+
   ggtitle(title)+
   scale_y_continuous(position="left")+
-  xlab("Genome position") + ylab("rPM (reads per million)")+
+  #xlab("Genome position") + ylab("rPM (reads per million)")+
+  xlab("Genome position") + ylab("Coverage")+
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
         axis.title.y = element_text(margin = margin(0,0,0,1)))
@@ -159,11 +183,20 @@ ed_pf<-as.ggplot(ed_pf)
 full<-plot_grid(ed_pf, rm_f, ncol=2, labels = c("","C"),label_size=23, align="hv", axis="l")
 full
 
-#export pdf 18x13 inch PDF landscape
+#ggsave(file = paste0(homewd, "/figures/full_coverage_rpm.pdf"),
+ggsave(file = paste0(homewd, "/figures/full_coverage.pdf"),
+       plot= full,
+       units="mm",  
+       width=200, 
+       height=110, 
+       scale=2, 
+       dpi=500)
+
 
 #just the partial genomes
 title<-expression(paste(italic("Eidolon dupreanum")))
-ed_p<-ggplot(ed_partial, aes(x=Position, y=rPM, fill=type))+ 
+#ed_p<-ggplot(ed_partial, aes(x=Position, y=rPM, fill=type))+ 
+ed_p<-ggplot(ed_partial, aes(x=Position, y=Coverage, fill=type))+ 
   geom_area(linewidth=0.5) +
   facet_nested(accession~.,
                scales="free", nest_line = element_line(color="white"), solo_line = TRUE)+
@@ -172,7 +205,8 @@ ed_p<-ggplot(ed_partial, aes(x=Position, y=rPM, fill=type))+
   theme(legend.position = "none")+
   ggtitle(title)+
   scale_y_continuous(position="left")+
-  xlab("Genome position") + ylab("rPM (reads per million)")+
+  #xlab("Genome position") + ylab("rPM (reads per million)")+
+  xlab("Genome position") + ylab("Coverage")+
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
         axis.title.y = element_text(margin = margin(0,0,0,1)))
@@ -180,7 +214,8 @@ ed_p
 
 
 title<-expression(paste(italic("Rousettus madagascariensis")))
-rm_p<-ggplot(rm_partial, aes(x=Position, y=rPM, fill=type))+ 
+#rm_p<-ggplot(rm_partial, aes(x=Position, y=rPM, fill=type))+ 
+rm_p<-ggplot(rm_partial, aes(x=Position, y=Coverage, fill=type))+ 
   geom_area(linewidth=0.5) +
   facet_nested(accession~.,
                scales="free", nest_line = element_line(color="white"), solo_line = TRUE)+
@@ -189,15 +224,23 @@ rm_p<-ggplot(rm_partial, aes(x=Position, y=rPM, fill=type))+
   theme(legend.position = "none")+
   ggtitle(title)+
   scale_y_continuous(position="left")+
-  xlab("Genome position") + ylab("rPM (reads per million)")+
+  #xlab("Genome position") + ylab("rPM (reads per million)")+
+  xlab("Genome position") + ylab("Coverage")+
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
         axis.title.y = element_text(margin = margin(0,0,0,1)))
 rm_p
 
 
-partial<-plot_grid(pr_p, ed_p,rm_p, ncol=3, labels =c("A","B","C"),label_size=23, align="hv", axis="l")
+partial<-plot_grid(ed_p,rm_p, ncol=2, labels =c("A","B"),label_size=23, align="hv", axis="l")
 partial
 
-#export 18x13inch PDF landscape
+
+  ggsave(file = paste0(homewd, "/figures/partial_coverage.pdf"),
+       plot= partial,
+       units="mm",  
+       width=200, 
+       height=250, 
+       scale=2, 
+       dpi=500)
 
