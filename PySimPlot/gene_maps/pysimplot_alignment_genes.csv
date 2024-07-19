@@ -1,3 +1,27 @@
 molecule,start,end,gene,type
-Bat picornavirus,1,521,5'UTR,full
-Bat picornavirus,521,7906,Polyprotein,full
+Bat picornavirus,1,541,5'UTR,full
+Bat picornavirus,542,7992,Polyprotein,full
+Bat picornavirus,7993,8280,3'UTR,full
+Cardiovirus,4019,7500,Polyprotein,partial
+Cardiovirus,7501,7631,3'UTR,partial
+Hepatovirus,1,755,5'UTR,full
+Hepatovirus,756,7744,Polyprotein,full
+Hepatovirus,7745,7880,3'UTR,full
+Kobuvirus,1,743,5'UTR,full
+Kobuvirus,744,8048,Polyprotein,full
+Kobuvirus,8049,8379,3'UTR,full
+Kunsagivirus,1,542,5'UTR,full
+Kunsagivirus,543,7401,Polyprotein,full
+Kunsagivirus,7402,7574,3'UTR,full
+Mischivirus,1,1514,5'UTR,full
+Mischivirus,1515,8826,Polyprotein,full
+Mischivirus,8827,9074,3'UTR,full
+Sapelovirus,1,420,5'UTR,full
+Sapelovirus,421,7784,Polyprotein,full
+Sapelovirus,7785,7936,3'UTR,full
+Teschovirus,1,589,5'UTR,full
+Teschovirus,590,7338,Polyprotein,full
+Teschovirus,7339,7440,3'UTR,full
+Sapovirus,1,6934,Polyprotein,full
+Sapovirus,6997,7694,Minor structural protein,full
+Sapovirus,7695,7791,3'UTR,full
