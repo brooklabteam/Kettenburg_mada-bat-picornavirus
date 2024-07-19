@@ -1,0 +1,3 @@
+molecule,start,end,mid,gene,type
+Bat picornavirus,1,521,370,5'UTR,full
+Bat picornavirus,7907,8133,7700,3'UTR,full

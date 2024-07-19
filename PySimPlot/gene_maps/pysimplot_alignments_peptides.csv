@@ -1,0 +1,3 @@
+molecule,from,to,gene,type
+Bat picornavirus,521,835,L,full
+Bat picornavirus,836,1033,VP4,full

@@ -1,0 +1,25 @@
+FileName: D:\sapelo_bootscan_align_all_nt_mid2.fasta
+Window: 200 bp, Step: 20 bp, GapStrip: On, Reps: 100, Kimura (2-parameter), T/t: 2.0, Neighbor-Joining
+This output generated using SimPlot v3.5.1 - software Copyright © 1997-2003 Stuart C. Ray - JHU
+
+"Status","Group","Members"
+"Ref","OQ818321","OQ818321"
+"Ref","OQ818320","OQ818320"
+"Query","OQ818329"
+"Ref","PP766465","PP766465"
+"Ref","OQ818342","OQ818342"
+"Ref","NC_003987.1","NC_003987.1"
+"Ref","NC_033820.1","NC_033820.1"
+"Ref","Pteropodidae_bat_sapelovirus","Pteropodidae_bat_sapelovirus"
+
+
+"CenterPos","OQ818321","OQ818320","PP766465","OQ818342","NC_003987.1","NC_033820.1","Pteropodidae_bat_sapelovirus"
+"100","0","0","0","0","2","0","98"
+"120","0","0","0","0","7","0","90"
+"140","0","0","0","0","4","0","91"
+"160","0","0","0","0","4","0","85"
+"180","0","0","0","0","2","0","93"
+"200","0","0","0","0","5","0","91"
+"220","0","0","0","0","3","0","94"
+"240","0","0","0","0","3","0","94"
+"260","0","0","0","0","1","0","97"
