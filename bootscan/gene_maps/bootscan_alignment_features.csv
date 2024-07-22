@@ -100,3 +100,36 @@ Teschovirus,5140,5468,5150,3A,full
 Teschovirus,5469,5547,5508,3B,full
 Teschovirus,5548,6185,5866.5,3C,full
 Teschovirus,6186,7562,6874,3D,full
+Bat picornavirus left,1,628,314.5,5'UTR,partial
+Bat picornavirus left,629,2834,1731.5,Polyprotein,partial
+Bat picornavirus mid,2779,5424,4101.5,Polyprotein,partial
+Kobuvirus mid,2454,5326,3890,Polyprotein,partial
+Sapovirus mid,2695,4878,3786.5,Polyprotein,partial
+Sapovirus right,6667,7022,6844.5,Polyprotein,partial
+Sapovirus right,7086,7842,7464,Minor structural protein,partial
+Sapovirus right,7843,7890,7866.5,3'UTR,partial
+Teschovirus all,4561,7786,6173.5,Polyprotein,partial
+Bat picornavirus left,629,960,794.5,L,partial
+Bat picornavirus left,961,1164,1062.5,VP4,partial
+Bat picornavirus left,1165,1930,1547.5,VP2,partial
+Bat picornavirus left,1931,2626,2278.5,VP3,partial
+Bat picornavirus left,2627,2834,2730.5,VP1,partial
+Bat picornavirus mid,2779,3633,3206,VP1,partial
+Bat picornavirus mid,3634,4367,4000.5,2A,partial
+Bat picornavirus mid,4368,4710,4539,2B,partial
+Bat picornavirus mid,4711,5424,5067.5,2C,partial
+Kobuvirus mid,2489,3157,2823,VP3,partial
+Kobuvirus mid,3158,3919,3538.5,VP1,partial
+Kobuvirus mid,3920,4327,4123.5,2A,partial
+Kobuvirus mid,4328,4822,4575,2B,partial
+Kobuvirus mid,4823,5326,5074.5,2C,partial
+Sapovirus mid,2692,2965,2828.5,NS4,partial
+Sapovirus mid,2966,3299,3132.5,Vpg,partial
+Sapovirus mid,3300,4848,4074,Pro-Pol,partial
+Sapovirus right,6667,7022,6844.5,VP1,partial
+Sapovirus right,7086,7842,7464,VP2,partial
+Teschovirus all,4561,5131,4846,2C,partial
+Teschovirus all,5132,5463,5297.5,3A,partial
+Teschovirus all,5464,5541,5502.5,3B,partial
+Teschovirus all,5542,6169,5855.5,3C,partial
+Teschovirus all,6170,7591,6880.5,3D,partial
