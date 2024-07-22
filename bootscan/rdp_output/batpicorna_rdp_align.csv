@@ -1,0 +1,30 @@
+,,,Breakpoint Positions
+,,In Alignment, ,In Recombinant Sequence, ,Relative to OQ818328,, , , , , , Detection Methods
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+ 1 ,1~, 184, 836, 8, 177, 28, 585,^Shanbavirus_A,Unknown (OQ818328),OP963617.1, 1.70553748996891E-07,NS, 3.15296710329107E-05, 1.56471189387077E-02, 1.01132349228822E-03,NS,NS,NS, 1.57236416337099E-02,
+
+ 2 ,3~, 516, 795, 336, 553, 339, 554,^OP963617.1,OQ818328,Unknown (PP766469), 2.75733534435097E-03,NS,NS,NS,NS, 3.69599065257039E-02,NS,NS, 7.53860359297143E-04,
+ 2,,,,,,,,,OQ818325,
+
+ 3 ,6~, 500, 687, 198, 378, 325, 504,^PP766469,Unknown (Bat_picornavirus_3),OQ818328, 1.25868433763302E-02,NS,NS,NS,NS,NS,NS,NS, 3.05799910077551E-02,
+ 3,,,,,,,,,,OQ818325
+
+ 4 ,7~, 6021, 6175, 5390, 5538, 5379, 5527,^OP963617.1,Unknown (OQ818328),Bat_picornavirus_3, 1.37785674943744E-02,NS,NS,NS,NS,NS,NS,NS,NS,
+ 4,,,,,,,,,Unknown(OQ818325),
+
+ 5 ,8~, 6352, 6395, 5966, 6009, 5701, 5744,^Bat_picornavirus_3,OQ818325,Unknown (PP766469), 1.72494631651811E-02,NS,NS,NS,NS,NS,NS,NS,NS,
+ 5,,,,,,,,,OQ818328,
+
+ 6 ,9~, 308, 372, 10, 73, 137, 201,^PP766469,Bat_picornavirus_3,OQ818328, 1.74070509579157E-02,NS, 2.82024032291262E-02,NS,NS, 1.00605384513922E-51,NS,NS,NS,
+
+Table Key:
+~            = It is possible that this apparent recombination signal could have been caused by an evolutionary
+               process other than recombination.
+*            = The actual breakpoint position is undetermined (it was most likely overprinted by a subsequent 
+               recombination event).
+^            = The recombinant sequence may have been misidentified (one of the identified parents might be the recombinant)
+Minor Parent = Parent contributing the smaller fraction of sequence.
+Major Parent = Parent contributing the larger fraction of sequence.
+Unknown      = Only one parent and a recombinant need be in the alignment for a recombination event to be detectable.
+               The sequence listed as unknown was used to infer the existance of a missing parental sequence.
+NS           = No significant P-value was recorded for this recombination event using this method.

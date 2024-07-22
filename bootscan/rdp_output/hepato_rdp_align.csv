@@ -1,0 +1,23 @@
+,,,Breakpoint Positions
+,,In Alignment, ,In Recombinant Sequence, ,Relative to PP766455,, , , , , , Detection Methods
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+ 1 ,1~, 7627, 825, 7196, 671, 7155, 627,^NC_028981.1,Unknown (NC_028366.1),PP766455, 1.20107374705892E-04, 8.69162908855589E-07, 1.04682192447854E-08, 2.30933868913223E-05, 2.24639922757242E-03,NS,NS,NS,NS,
+ 1,,,,,,,,,,PP766457
+
+ 2 ,2~, 768, 1410, 721, 1325, 599, 1212,^Hipposideros_bat_hepatovirus,NC_028366.1,Unknown (PP766455), 5.98427710312875E-03,NS, 1.32562758937205E-04, 9.26405657287982E-09, 1.56794491450738E-07,NS,NS,NS, 4.23555913000173E-03,
+
+ 3 ,3~, 3753, 4874, 3440, 4511, 3396, 4467,^NC_028981.1,PP766455,Unknown (NC_038313.1), 6.69874752313631E-03,NS,NS, 9.68236844319424E-04, 1.65515181147727E-04,NS,NS,NS,NS,
+ 3,,,,,,,,,NC_038313.1,Unknown(PP766455)
+ 3,,,,,,,,,,Unknown(PP766457)
+
+Table Key:
+~            = It is possible that this apparent recombination signal could have been caused by an evolutionary
+               process other than recombination.
+*            = The actual breakpoint position is undetermined (it was most likely overprinted by a subsequent 
+               recombination event).
+^            = The recombinant sequence may have been misidentified (one of the identified parents might be the recombinant)
+Minor Parent = Parent contributing the smaller fraction of sequence.
+Major Parent = Parent contributing the larger fraction of sequence.
+Unknown      = Only one parent and a recombinant need be in the alignment for a recombination event to be detectable.
+               The sequence listed as unknown was used to infer the existance of a missing parental sequence.
+NS           = No significant P-value was recorded for this recombination event using this method.

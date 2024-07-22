@@ -1,0 +1,18 @@
+,,,Breakpoint Positions
+,,In Alignment, ,In Recombinant Sequence, ,Relative to OQ818318,, , , , , , Detection Methods
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+ 1 ,2~, 7528, 7684*, 6773, 6872*, 7038, 7085*,^Pteropodidae_bat_teschovirus,Unknown (LC386158.1),OQ818323, 2.00145696553766E-03,NS, 5.43725983415325E-04, 1.00937662007401E-03, 3.16156290106728E-02,NS,NS,NS, 2.25781505877687E-03,
+
+ 2 ,6~, 7236, 7329, 6746, 6839, 6746, 6839,^OQ818318,LC386158.1,Pteropodidae_bat_teschovirus, 1.80720194952525E-02,NS,NS,NS,NS,NS,NS,NS,NS,
+
+Table Key:
+~            = It is possible that this apparent recombination signal could have been caused by an evolutionary
+               process other than recombination.
+*            = The actual breakpoint position is undetermined (it was most likely overprinted by a subsequent 
+               recombination event).
+^            = The recombinant sequence may have been misidentified (one of the identified parents might be the recombinant)
+Minor Parent = Parent contributing the smaller fraction of sequence.
+Major Parent = Parent contributing the larger fraction of sequence.
+Unknown      = Only one parent and a recombinant need be in the alignment for a recombination event to be detectable.
+               The sequence listed as unknown was used to infer the existance of a missing parental sequence.
+NS           = No significant P-value was recorded for this recombination event using this method.
