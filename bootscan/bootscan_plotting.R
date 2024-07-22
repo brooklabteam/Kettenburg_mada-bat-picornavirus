@@ -13,24 +13,24 @@ library(patchwork)
 library(ggplotify)
 
 
-#This is to make a figure of the representative PySimPlots with their matching genome plots
+#This is to make a figure of the representative bootscan figures with their matching genome plots
 
 ##First make the genome plots
-homewd="/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/PySimPlot/"
-setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/gene_maps")
+homewd="/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/bootscan/"
+setwd("~/Desktop/developer/mada-bat-picornavirus/bootscan/gene_maps")
 
 #Load the gene data
-map <- read.csv("pysimplot_alignment_genes.csv", header = T, stringsAsFactors = F)
+map <- read.csv("bootscan_alignment_genes.csv", header = T, stringsAsFactors = F)
 map$gene<-factor(map$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP0", "VP3",
                                         "VP1", "2A", "2B", "2C", "3A", "3B",
                                         "3C", "3D", "NS1/NS2","Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Minor structural protein","3'UTR"))
 #Load the peptide files
-map_pep <- read.csv("pysimplot_alignment_peptides.csv", header = T, stringsAsFactors = F)
+map_pep <- read.csv("bootscan_alignment_peptides.csv", header = T, stringsAsFactors = F)
 map_pep$gene<-factor(map_pep$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP0", "VP3",
                                               "VP1", "2A", "2B", "2C", "3A", "3B",
                                               "3C", "3D", "NS1/NS2","Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Minor structural protein","3'UTR"))
 #Load the feature file in case its needed
-map_feat <- read.csv("pysimplot_alignment_features.csv", header = T, stringsAsFactors = F)
+map_feat <- read.csv("bootscan_alignment_features.csv", header = T, stringsAsFactors = F)
 map_feat$gene<-factor(map_feat$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP0", "VP3",
                                                 "VP1", "2A", "2B", "2C", "3A", "3B",
                                                 "3C", "3D", "NS1/NS2","Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Minor structural protein","3'UTR"))
@@ -60,7 +60,6 @@ map_mischivirus<-subset(map,molecule=="Mischivirus")
 map_sapovirus<-subset(map,molecule=="Sapovirus")
 map_sapelovirus<-subset(map,molecule=="Sapelovirus")
 map_teschovirus<-subset(map,molecule=="Teschovirus")
-map_cardiovirus<-subset(map,molecule=="Cardiovirus")
 
 map_batpicornavirus_pep<-subset(map_pep,molecule=="Bat picornavirus")
 map_hepatovirus_pep<-subset(map_pep,molecule=="Hepatovirus")
@@ -70,7 +69,6 @@ map_mischivirus_pep<-subset(map_pep,molecule=="Mischivirus")
 map_sapovirus_pep<-subset(map_pep,molecule=="Sapovirus")
 map_sapelovirus_pep<-subset(map_pep,molecule=="Sapelovirus")
 map_teschovirus_pep<-subset(map_pep,molecule=="Teschovirus")
-map_cardiovirus_pep<-subset(map_pep,molecule=="Cardiovirus")
 
 map_batpicornavirus_feat<-subset(map_feat,molecule=="Bat picornavirus")
 map_hepatovirus_feat<-subset(map_feat,molecule=="Hepatovirus")
@@ -80,7 +78,6 @@ map_mischivirus_feat<-subset(map_feat,molecule=="Mischivirus")
 map_sapovirus_feat<-subset(map_feat,molecule=="Sapovirus")
 map_sapelovirus_feat<-subset(map_feat,molecule=="Sapelovirus")
 map_teschovirus_feat<-subset(map_feat,molecule=="Teschovirus")
-map_cardiovirus_feat<-subset(map_feat,molecule=="Cardiovirus")
 
 #gene maps
 map_batpicorna<-ggplot(map_batpicornavirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
@@ -100,7 +97,7 @@ map_batpicorna<-ggplot(map_batpicornavirus, aes(xmin = start, xmax = end, y = mo
   geom_text(data=map_batpicornavirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz2)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,8290),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,8552),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -111,34 +108,6 @@ map_batpicorna<-ggplot(map_batpicornavirus, aes(xmin = start, xmax = end, y = mo
   xlab("Genome position") + ylab("")
 map_batpicorna
 
-
-map_cardio<-ggplot(map_cardiovirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
-  geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
-                  arrowhead_height = grid::unit(4, "mm"),
-                  arrow_body_height = grid::unit(4, "mm")) +
-  # geom_feature(data=map_hepatovirus_feat, aes(x=mid, y=molecule),
-  #              feature_height = grid::unit(6,"mm"))+
-  # geom_feature_label(data=map_hepatovirus_feat, aes(x=mid, y=molecule, label=gene),
-  #                    feature_height = grid::unit(6,"mm"),
-  #                    label_height = grid::unit(6,"mm"))+
-  geom_subgene_arrow(data = map_cardiovirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
-                                                                 xsubmin=from, xsubmax=to), color="black",
-                     arrowhead_width = grid::unit(3, "mm"),
-                     arrowhead_height = grid::unit(4, "mm"),
-                     arrow_body_height = grid::unit(4, "mm"))+
-  geom_text(data=map_cardiovirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
-  scale_fill_manual(values=colz2)+
-  theme_genes()+
-  scale_x_continuous(limits=c(4000,7640),expand=c(0,0))+
-  theme(legend.position = "none")+
-  theme(plot.margin = unit(c(0,0,0,0), "cm"),
-        axis.text.y = element_blank(),
-        axis.ticks.x=element_blank(),
-        axis.text.x = element_blank(),
-        axis.title.x = element_blank(),
-        axis.line.x = element_blank())+
-  xlab("Genome position") + ylab("")
-map_cardio
 
 
 map_hepato<-ggplot(map_hepatovirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
@@ -158,7 +127,7 @@ map_hepato<-ggplot(map_hepatovirus, aes(xmin = start, xmax = end, y = molecule, 
   geom_text(data=map_hepatovirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz2)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,7890),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,7920),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -187,7 +156,7 @@ map_kobu<-ggplot(map_kobuvirus, aes(xmin = start, xmax = end, y = molecule, fill
   geom_text(data=map_kobuvirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz2)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,8420),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,8535),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -216,7 +185,7 @@ map_kun<-ggplot(map_kunsagivirus, aes(xmin = start, xmax = end, y = molecule, fi
   geom_text(data=map_kunsagivirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz2)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,7580),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,7975),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -245,7 +214,7 @@ map_mischi<-ggplot(map_mischivirus, aes(xmin = start, xmax = end, y = molecule, 
   geom_text(data=map_mischivirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz2)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,9080),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,8890),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -274,7 +243,7 @@ map_sapelo<-ggplot(map_sapelovirus, aes(xmin = start, xmax = end, y = molecule, 
   geom_text(data=map_sapelovirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz2)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,7940),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,8230),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -303,7 +272,7 @@ map_tescho<-ggplot(map_teschovirus, aes(xmin = start, xmax = end, y = molecule, 
   geom_text(data=map_teschovirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz2)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,7445),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,7700),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -332,7 +301,7 @@ map_sapo<-ggplot(map_sapovirus, aes(xmin = start, xmax = end, y = molecule, fill
   geom_text(data=map_sapovirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
   scale_fill_manual(values=colz2)+
   theme_genes()+
-  scale_x_continuous(limits=c(0,7800),expand=c(0,0))+
+  scale_x_continuous(limits=c(0,7920),expand=c(0,0))+
   theme(legend.position = "none")+
   theme(plot.margin = unit(c(0,0,0,0), "cm"),
         axis.text.y = element_blank(),
@@ -345,8 +314,8 @@ map_sapo
 
 
 
-##Now get the plots for the PySimPlot, just the map_BLAST ones, there will be a separate PDF file with the table of African bat picorna similarities
-setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/output")
+##Now get the plots for the bootscan
+setwd("~/Desktop/developer/mada-bat-picornavirus/bootscan/output")
 
 #<-c("#F8766D","darkorange1","#C49A00","#53B400","#A58AFF","#00B6EB","#A58AFF","#FB61D7")
 colzpalette<-c("#F8766D","#C49A00","#53B400","#A58AFF","#00B6EB","darkorange1","#FB61D7")
@@ -354,11 +323,12 @@ colzpalette<-c("#F8766D","#C49A00","#53B400","#A58AFF","#00B6EB","darkorange1","
 ##Bat picornavirus
 
 ##nt first
-batpicorna_map <- read.csv(file = "batpicorna_align_nt.csv", header = T, stringsAsFactors = F)
+batpicorna_map <- read.csv(file = "batpicorna_bootscan_align_nt.csv", header = T, stringsAsFactors = F)
 head(batpicorna_map)
 
 #move to long
-long.sim_nt <- melt(batpicorna_map, id.vars = c("pointer"), measure.vars = c("PP766469","OQ818325","NC_015934","PP711945","PP711946","OP963617"))
+long.sim_nt <- melt(batpicorna_map, id.vars = c("pointer"), measure.vars = c("OQ818328","PP766469","Bat_picornavirus_3",
+                                                                             "Shanbavirus_A","OP963617.1"))
 
 unique(long.sim_nt$variable)
 
@@ -366,16 +336,17 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
+long.sim_nt$accession[long.sim_nt$accession == "OQ818328"] <- "R. madagascariensis picornavirus 1: OQ818328*"
 long.sim_nt$accession[long.sim_nt$accession == "PP766469"] <- "R. madagascariensis picornavirus 3: PP766469*"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818325"] <- "R. madagascariensis picornavirus 1: OQ818325*"
-long.sim_nt$accession[long.sim_nt$accession == "NC_015934"] <- "Bat picornavirus 3: NC_015934"
-long.sim_nt$accession[long.sim_nt$accession == "PP711945"] <- "Rousettus bat picornavirus: PP711945"
-long.sim_nt$accession[long.sim_nt$accession == "PP711946"] <- "Chaerephon bat picornavirus: PP711946"
-long.sim_nt$accession[long.sim_nt$accession == "OP963617"] <- "Bat picornavirus BtSY4: OP963617"
+long.sim_nt$accession[long.sim_nt$accession == "Bat_picornavirus_3"] <- "Bat picornavirus 3"
+long.sim_nt$accession[long.sim_nt$accession == "Shanbavirus_A"] <- "Shanbavirus A"
+long.sim_nt$accession[long.sim_nt$accession == "OP963617.1"] <- "Bat picornavirus BtSY4"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("R. madagascariensis picornavirus 3: PP766469*", "R. madagascariensis picornavirus 1: OQ818325*",
-                                                                  "Bat picornavirus 3: NC_015934","Rousettus bat picornavirus: PP711945",
-                                                                  "Chaerephon bat picornavirus: PP711946", "Bat picornavirus BtSY4: OP963617"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("R. madagascariensis picornavirus 1: OQ818328*",
+                                                                  "R. madagascariensis picornavirus 3: PP766469*",
+                                                                  "Bat picornavirus 3",
+                                                                  "Shanbavirus A",
+                                                                  "Bat picornavirus BtSY4"))
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
@@ -384,7 +355,7 @@ title<-expression(paste("Reference: R. madagascariensis picornavirus 1: OQ818325
 #Plot nucleotide
 batpicorna_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -407,45 +378,51 @@ batpicorna_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, col
 
 batpicorna_map_nt
 
-#put gene map with PySimPlot
+#put gene map with bootscan
 bat_picorna_nt<-batpicorna_map_nt/map_batpicorna+plot_layout(nrow=2,  heights = c(1, 0.2))
 bat_picorna_nt
 
 bat_picorna_nt<-as.ggplot(bat_picorna_nt)
 bat_picorna_nt
 
-#then aa
-batpicorna_map <- read.csv(file = "batpicorna_align_aa.csv", header = T, stringsAsFactors = F)
-head(batpicorna_map)
+
+
+
+#Hepatovirus
+#nucleotide
+hepato_map_nt <- read.csv(file = "hepato_bootscan_align_nt.csv", header = T, stringsAsFactors = F) #animo acid
+head(hepato_map_nt)
 
 #move to long
-long.sim_aa <- melt(batpicorna_map, id.vars = c("pointer"), measure.vars = c("PP766469","OQ818325","NC_015934","PP711945","PP711946","OP963617"))
+long.sim_nt <- melt(hepato_map_nt, id.vars = c("pointer"), measure.vars = c("PP766457","Hipposideros_bat_hepatovirus","NC_028366.1",
+                                                                            "NC_028981.1","NC_038313.1"))
+unique(long.sim_nt$variable)
 
-unique(long.sim_aa$variable)
+long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
-long.sim_aa$variable <- as.character(long.sim_aa$variable)
+names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
+long.sim_nt$accession[long.sim_nt$accession == "PP766457"] <- "E. dupreanum hepatovirus: PP766457*"
+long.sim_nt$accession[long.sim_nt$accession == "Hipposideros_bat_hepatovirus"] <- "Hipposideros bat hepatovirus"
+long.sim_nt$accession[long.sim_nt$accession == "NC_028366.1"] <- "Hepatovirus H2"
+long.sim_nt$accession[long.sim_nt$accession == "NC_028981.1"] <- "Tupaia hepatovirus A"
+long.sim_nt$accession[long.sim_nt$accession == "NC_038313.1"] <- "Bat hepatovirus SMG18520Minmav2014"
 
-long.sim_aa$accession[long.sim_aa$accession == "PP766469"] <- "R. madagascariensis picornavirus 3: PP766469*"
-long.sim_aa$accession[long.sim_aa$accession == "OQ818325"] <- "R. madagascariensis picornavirus 1: OQ818325*"
-long.sim_aa$accession[long.sim_aa$accession == "NC_015934"] <- "Bat picornavirus 3: NC_015934"
-long.sim_aa$accession[long.sim_aa$accession == "PP711945"] <- "Rousettus bat picornavirus: PP711945"
-long.sim_aa$accession[long.sim_aa$accession == "PP711946"] <- "Chaerephon bat picornavirus: PP711946"
-long.sim_aa$accession[long.sim_aa$accession == "OP963617"] <- "Bat picornavirus BtSY4: OP963617"
 
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("R. madagascariensis picornavirus 3: PP766469*", "R. madagascariensis picornavirus 1: OQ818325*",
-                                                                  "Bat picornavirus 3: NC_015934","Rousettus bat picornavirus: PP711945",
-                                                                  "Chaerephon bat picornavirus: PP711946", "Bat picornavirus BtSY4: OP963617"))
-long.sim_aa$value[long.sim_aa$value<0] <- 0
-long.sim_aa$value <- long.sim_aa$value/100
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum hepatovirus: PP766457*",
+                                                                  "Hipposideros bat hepatovirus",
+                                                                  "Hepatovirus H2",
+                                                                  "Tupaia hepatovirus A",
+                                                                  "Bat hepatovirus SMG18520Minmav2014"))
+long.sim_nt$value[long.sim_nt$value<0] <- 0
+long.sim_nt$value <- long.sim_nt$value/100
 
-title<-expression(paste("Reference: R. madagascariensis picornavirus 1: OQ818325*"))
+#plot nucleotide
+title<-expression(paste("Reference: E. dupreanum hepatovirus: PP766455*"))
 
-## Nucleotide
-batpicorna_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+hepato_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -459,65 +436,6 @@ batpicorna_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, col
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
-  ggtitle(title)+
-  scale_color_manual(values=colzpalette) + 
-  scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055), 
-                     labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
-  #scale_x_continuous(expand=c(0,0))+
-  scale_y_continuous(limits=c(0,1), expand=c(0,0))
-
-batpicorna_map_aa
-
-#put gene map with PySimPlot
-bat_picorna_aa<-batpicorna_map_aa/map_batpicorna+plot_layout(nrow=2,  heights = c(1, 0.2))
-bat_picorna_aa
-
-bat_picorna_aa<-as.ggplot(bat_picorna_aa)
-bat_picorna_aa
-
-
-
-
-#Hepatovirus
-#nucleotide
-hepato_map_nt <- read.csv(file = "hepato_align_nt.csv", header = T, stringsAsFactors = F) #animo acid
-head(hepato_map_nt)
-
-#move to long
-long.sim_nt <- melt(hepato_map_nt, id.vars = c("pointer"), measure.vars = c("PP766457","KT452742","NC_028366","NC_028981"))
-unique(long.sim_nt$variable)
-
-long.sim_nt$variable <- as.character(long.sim_nt$variable)
-
-names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
-
-long.sim_nt$accession[long.sim_nt$accession == "PP766457"] <- "E. dupreanum hepatovirus: PP766457*"
-long.sim_nt$accession[long.sim_nt$accession == "KT452742"] <- "Bat hepatovirus: KT452742"
-long.sim_nt$accession[long.sim_nt$accession == "NC_028366"] <- "Hepatovirus H2: NC_028366"
-long.sim_nt$accession[long.sim_nt$accession == "NC_028981"] <- "Tupaia hepatovirus A: NC_028981"
-
-
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum hepatovirus: PP766457*","Bat hepatovirus: KT452742",
-                                                                  "Hepatovirus H2: NC_028366","Tupaia hepatovirus A: NC_028981"))
-long.sim_nt$value[long.sim_nt$value<0] <- 0
-long.sim_nt$value <- long.sim_nt$value/100
-#plot nucleotide
-hepato_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
-  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
-        strip.background = element_rect(fill="white"), 
-        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
-        legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
-        legend.title = element_blank(),
-        legend.key.height= unit(3.5, 'mm'),
-        legend.key.width= unit(3.5, 'mm'),
-        legend.background =element_rect(fill = alpha("white", 0)),
-        axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 2))+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -527,42 +445,49 @@ hepato_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
 
 hepato_map_nt
 
-#put gene map with PySimPlot
+#put gene map with bootscan
 hepato_nt<-hepato_map_nt/map_hepato+plot_layout(nrow=2,  heights = c(1, 0.2))
 hepato_nt
 
 hepato_nt<-as.ggplot(hepato_nt)
 hepato_nt
 
-##amino acid
-hepato_map_aa <- read.csv(file = "hepato_align_aa.csv", header = T, stringsAsFactors = F) #animo acid
-head(hepato_map_aa)
+
+
+
+#Kobuvirus
+#Nucleotide
+kobuvirus_nt_map <- read.csv(file = "kobu_bootscan_align_nt.csv", header = T, stringsAsFactors = F) #Amino acid
+head(kobuvirus_nt_map)
 
 #move to long
-long.sim_aa <- melt(hepato_map_aa, id.vars = c("pointer"), measure.vars = c("PP766457","KT452742","NC_028366","NC_028981"))
-unique(long.sim_aa$variable)
+long.sim_nt <- melt(kobuvirus_nt_map, id.vars = c("pointer"), measure.vars = c("OQ818322","PP766456","NC_034971.1",
+                                                                               "Rhinolophus_kobuvirus"))
+unique(long.sim_nt$variable)
 
-long.sim_aa$variable <- as.character(long.sim_aa$variable)
+long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
-names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
+names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_aa$accession[long.sim_aa$accession == "PP766457"] <- "E. dupreanum hepatovirus: PP766457*"
-long.sim_aa$accession[long.sim_aa$accession == "KT452742"] <- "Bat hepatovirus: KT452742"
-long.sim_aa$accession[long.sim_aa$accession == "NC_028366"] <- "Hepatovirus H2: NC_028366"
-long.sim_aa$accession[long.sim_aa$accession == "NC_028981"] <- "Tupaia hepatovirus A: NC_028981"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818322"] <- "E. dupreanum kobuvirus: OQ818322*"
+long.sim_nt$accession[long.sim_nt$accession == "PP766456"] <- "E. dupreanum kobuvirus: PP766456*"
+long.sim_nt$accession[long.sim_nt$accession == "NC_034971.1"] <- "Canine kobuvirus"
+long.sim_nt$accession[long.sim_nt$accession == "Rhinolophus_kobuvirus"] <- "Rhinolophus kobuvirus"
 
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum kobuvirus: OQ818322*",
+                                                                  "E. dupreanum kobuvirus: PP766456*",
+                                                                  "Canine kobuvirus",
+                                                                  "Rhinolophus kobuvirus"))
+#and plot
+long.sim_nt$value[long.sim_nt$value<0] <- 0
+long.sim_nt$value <- long.sim_nt$value/100
 
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("E. dupreanum hepatovirus: PP766457*","Bat hepatovirus: KT452742",
-                                                                  "Hepatovirus H2: NC_028366","Tupaia hepatovirus A: NC_028981"))
-long.sim_aa$value[long.sim_aa$value<0] <- 0
-long.sim_aa$value <- long.sim_aa$value/100
+#plot nucleotide
+title<-expression(paste("Reference: E. dupreanum kobuvirus: OP287812.1"))
 
-## Amino acid
-title<-expression(paste("Reference: E. dupreanum hepatovirus: PP766455*"))
-
-hepatovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+kobu_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -577,66 +502,6 @@ hepatovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, co
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
   scale_color_manual(values=colzpalette) + 
-  #scale_fill_distiller()+
-  ggtitle(title)+
-  scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
-                     labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
-  #scale_x_continuous(expand=c(0,0))+
-  scale_y_continuous(limits=c(0,1), expand=c(0,0))
-
-hepatovirus_map_aa
-
-#put gene map with PySimPlot
-hep_map_aa<-hepatovirus_map_aa/map_hepato+plot_layout(nrow=2,  heights = c(1, 0.2))
-hep_map_aa
-
-hep_map_aa<-as.ggplot(hep_map_aa)
-hep_map_aa
-
-
-
-
-#Kobuvirus
-#Nucleotide
-kobuvirus_nt_map <- read.csv(file = "kobu_align_nt.csv", header = T, stringsAsFactors = F) #Amino acid
-head(kobuvirus_nt_map)
-
-#move to long
-long.sim_nt <- melt(kobuvirus_nt_map, id.vars = c("pointer"), measure.vars = c("PP766456","OP287812"))
-unique(long.sim_nt$variable)
-
-long.sim_nt$variable <- as.character(long.sim_nt$variable)
-
-names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
-
-long.sim_nt$accession[long.sim_nt$accession == "PP766456"] <- "E. dupreanum kobuvirus: PP766456*"
-long.sim_nt$accession[long.sim_nt$accession == "OP287812"] <- "E. dupreanum kobuvirus: OP287812"
-
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum kobuvirus: PP766456*", "E. dupreanum kobuvirus: OP287812"))
-#and plot
-long.sim_nt$value[long.sim_nt$value<0] <- 0
-long.sim_nt$value <- long.sim_nt$value/100
-
-#plot nucleotide
-title<-expression(paste("Reference: E. dupreanum kobuvirus: OQ818322*"))
-
-kobu_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
-  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
-        strip.background = element_rect(fill="white"), 
-        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
-        legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
-        legend.title = element_blank(),
-        legend.key.height= unit(3.5, 'mm'),
-        legend.key.width= unit(3.5, 'mm'),
-        legend.background =element_rect(fill = alpha("white", 0)),
-        axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 1))+
-  scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -645,89 +510,34 @@ kobu_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=acc
 
 kobu_map_nt
 
-#put gene map with PySimPlot
+#put gene map with bootscan
 kobu_nt<-kobu_map_nt/map_kobu+plot_layout(nrow=2,  heights = c(1, 0.2))
 kobu_nt
 
 kobu_nt<-as.ggplot(kobu_nt)
 kobu_nt
 
-#amino acid
-kobuvirus_aa_map <- read.csv(file = "kobu_align_aa.csv", header = T, stringsAsFactors = F) #Amino acid
-head(kobuvirus_aa_map)
-
-#move to long
-long.sim_aa <- melt(kobuvirus_aa_map, id.vars = c("pointer"), measure.vars = c("PP766456","OP287812"))
-unique(long.sim_aa$variable)
-
-long.sim_aa$variable <- as.character(long.sim_aa$variable)
-
-names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
-
-long.sim_aa$accession[long.sim_aa$accession == "PP766456"] <- "E. dupreanum kobuvirus: PP766456*"
-long.sim_aa$accession[long.sim_aa$accession == "OP287812"] <- "E. dupreanum kobuvirus: OP287812"
-
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("E. dupreanum kobuvirus: PP766456*", "E. dupreanum kobuvirus: OP287812"))
-#and plot
-long.sim_aa$value[long.sim_aa$value<0] <- 0
-long.sim_aa$value <- long.sim_aa$value/100
-
-## Amino acid
-title<-expression(paste("Reference: E. dupreanum kobuvirus: OQ818322*"))
-
-kobuvirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
-  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
-        strip.background = element_rect(fill="white"), 
-        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
-        legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
-        legend.title = element_blank(),
-        legend.key.height= unit(3.5, 'mm'),
-        legend.key.width= unit(3.5, 'mm'),
-        legend.background =element_rect(fill = alpha("white", 0)),
-        axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 1))+
-  scale_color_manual(values=colzpalette) + 
-  #scale_fill_distiller()+
-  ggtitle(title)+
-  scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
-                     labels = c(0,2000,4000,6000,8000),expand=c(0,0))+
-  #scale_x_continuous(expand=c(0,0))+
-  scale_y_continuous(limits=c(0,1), expand=c(0,0))
-
-kobuvirus_map_aa
-
-#put gene map with PySimPlot
-kobu_map_aa<-kobuvirus_map_aa/map_kobu+plot_layout(nrow=2,  heights = c(1, 0.2))
-kobu_map_aa
-
-kobu_map_aa<-as.ggplot(kobu_map_aa)
-kobu_map_aa
-
 
 
 
 #kunsagivirus
 #Nucleotide
-kunsagivirus_nt_map <- read.csv(file = "kunsagi_align_nt.csv", header = T, stringsAsFactors = F) #Amino acid
+kunsagivirus_nt_map <- read.csv(file = "kunsagi_bootscan_align_nt.csv", header = T, stringsAsFactors = F) #Amino acid
 head(kunsagivirus_nt_map)
 
 #move to long
-long.sim_nt <- melt(kunsagivirus_nt_map, id.vars = c("pointer"), measure.vars = c("NC_033818","OP589993"))
+long.sim_nt <- melt(kunsagivirus_nt_map, id.vars = c("pointer"), measure.vars = c("NC_033818.1","OP589993.1","NC_034206.1"))
 unique(long.sim_nt$variable)
 
 long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "NC_033818"] <- "Kunsagivirus B: NC_033818"
-long.sim_nt$accession[long.sim_nt$accession == "OP589993"] <- "Auskunsag virus: OP589993"
+long.sim_nt$accession[long.sim_nt$accession == "NC_033818.1"] <- "Kunsagivirus B"
+long.sim_nt$accession[long.sim_nt$accession == "OP589993.1"] <- "Auskunsag virus"
+long.sim_nt$accession[long.sim_nt$accession == "NC_034206.1"] <- "Bakunsa virus"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Kunsagivirus B: NC_033818", "Auskunsag virus: OP589993"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Kunsagivirus B", "Auskunsag virus","Bakunsa virus"))
 #and plot
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
@@ -737,7 +547,7 @@ title<-expression(paste("Reference: E. dupreanum kunsagivirus: OQ818317*"))
 
 kunsagi_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -760,39 +570,46 @@ kunsagi_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=
 
 kunsagi_map_nt
 
-#put gene map with PySimPlot
+#put gene map with bootscan
 kunsagi_nt<-kunsagi_map_nt/map_kun+plot_layout(nrow=2,  heights = c(1, 0.2))
 kunsagi_nt
 
 kunsagi_nt<-as.ggplot(kunsagi_nt)
 kunsagi_nt
 
-#amino acid
-kunsagivirus_aa_map <- read.csv(file = "kunsagi_align_aa.csv", header = T, stringsAsFactors = F) #Amino acid
-head(kunsagivirus_aa_map)
+
+
+
+#Mischivirus
+#Plot nucleotide
+mischivirus_nt_map <- read.csv(file = "mischi_bootscan_align_nt.csv", header = T, stringsAsFactors = F) #Amino acid
+head(mischivirus_nt_map)
 
 #move to long
-long.sim_aa <- melt(kunsagivirus_aa_map, id.vars = c("pointer"), measure.vars = c("NC_033818","OP589993"))
-unique(long.sim_aa$variable)
+long.sim_nt <- melt(mischivirus_nt_map, id.vars = c("pointer"), measure.vars = c("Bat_mischivirus_5","Mischivirus_B",
+                                                                                 "NC_026470.1"))
+unique(long.sim_nt$variable)
 
-long.sim_aa$variable <- as.character(long.sim_aa$variable)
+long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
-names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
+names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_aa$accession[long.sim_aa$accession == "NC_033818"] <- "Kunsagivirus B: NC_033818"
-long.sim_aa$accession[long.sim_aa$accession == "OP589993"] <- "Auskunsag virus: OP589993"
+long.sim_nt$accession[long.sim_nt$accession == "Bat_mischivirus_5"] <- "Bat mischivirus 5"
+long.sim_nt$accession[long.sim_nt$accession == "Mischivirus_B"] <- "Mischivirus B"
+long.sim_nt$accession[long.sim_nt$accession == "NC_026470.1"] <- "Mischivirus A"
 
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("Kunsagivirus B: NC_033818", "Auskunsag virus: OP589993"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Bat mischivirus 5", "Mischivirus B",
+                                                                  "Mischivirus A"))
 #and plot
-long.sim_aa$value[long.sim_aa$value<0] <- 0
-long.sim_aa$value <- long.sim_aa$value/100
+long.sim_nt$value[long.sim_nt$value<0] <- 0
+long.sim_nt$value <- long.sim_nt$value/100
 
-## Amino acid
-title<-expression(paste("Reference: E. dupreanum kunsagivirus: OQ818317*"))
+## nucleotide
+title<-expression(paste("Reference: P. rufus mischivirus: OQ818316*"))
 
-kunsagivirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+mischi_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -807,69 +624,6 @@ kunsagivirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, c
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 1))+
   scale_color_manual(values=colzpalette) + 
-  #scale_fill_distiller()+
-  ggtitle(title)+
-  scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
-                     labels = c(0,2000,4000,6000,8000),expand=c(0,0))+
-  #scale_x_continuous(expand=c(0,0))+
-  scale_y_continuous(limits=c(0,1), expand=c(0,0))
-
-kunsagivirus_map_aa
-
-#put gene map with PySimPlot
-kun_map_aa<-kunsagivirus_map_aa/map_kun+plot_layout(nrow=2,  heights = c(1, 0.2))
-kun_map_aa
-
-kun_map_aa<-as.ggplot(kun_map_aa)
-kun_map_aa
-
-
-
-
-#Mischivirus
-#Plot nucleotide
-mischivirus_nt_map <- read.csv(file = "mischi_align_nt.csv", header = T, stringsAsFactors = F) #Amino acid
-head(mischivirus_nt_map)
-
-#move to long
-long.sim_nt <- melt(mischivirus_nt_map, id.vars = c("pointer"), measure.vars = c("JQ814851","MG888045",
-                                                                                 "NC_026470"))
-unique(long.sim_nt$variable)
-
-long.sim_nt$variable <- as.character(long.sim_nt$variable)
-
-names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
-
-long.sim_nt$accession[long.sim_nt$accession == "JQ814851"] <- "M. schreibersii picornavirus 1: JQ814851"
-long.sim_nt$accession[long.sim_nt$accession == "MG888045"] <- "Mischivirus B: MG888045"
-long.sim_nt$accession[long.sim_nt$accession == "NC_026470"] <- "Mischivirus A: NC_026470"
-
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("M. schreibersii picornavirus 1: JQ814851", "Mischivirus B: MG888045",
-                                                                  "Mischivirus A: NC_026470"))
-#and plot
-long.sim_nt$value[long.sim_nt$value<0] <- 0
-long.sim_nt$value <- long.sim_nt$value/100
-
-## nucleotide
-title<-expression(paste("Reference: P. rufus mischivirus: OQ818316*"))
-
-mischi_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
-  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
-        strip.background = element_rect(fill="white"), 
-        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
-        legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
-        legend.title = element_blank(),
-        legend.key.height= unit(3.5, 'mm'),
-        legend.key.width= unit(3.5, 'mm'),
-        legend.background =element_rect(fill = alpha("white", 0)),
-        axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 2))+
-  scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -878,83 +632,24 @@ mischi_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
 
 mischi_map_nt
 
-#put gene map with PySimPlot
+#put gene map with bootscan
 mischi_nt<-mischi_map_nt/map_mischi+plot_layout(nrow=2,  heights = c(1, 0.2))
 mischi_nt
 
 mischi_nt<-as.ggplot(mischi_nt)
 mischi_nt
 
-#amino acid
-mischivirus_aa_map <- read.csv(file = "mischi_align_aa.csv", header = T, stringsAsFactors = F) #Amino acid
-head(mischivirus_aa_map)
-
-#move to long
-long.sim_aa <- melt(mischivirus_aa_map, id.vars = c("pointer"), measure.vars = c("JQ814851","MG888045",
-                                                                                  "NC_026470"))
-unique(long.sim_aa$variable)
-
-long.sim_aa$variable <- as.character(long.sim_aa$variable)
-
-names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
-
-long.sim_aa$accession[long.sim_aa$accession == "JQ814851"] <- "M. schreibersii picornavirus 1: JQ814851"
-long.sim_aa$accession[long.sim_aa$accession == "MG888045"] <- "Mischivirus B: MG888045"
-long.sim_aa$accession[long.sim_aa$accession == "NC_026470"] <- "Mischivirus A: NC_026470"
-
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("M. schreibersii picornavirus 1: JQ814851", "Mischivirus B: MG888045",
-                                                                  "Mischivirus A: NC_026470"))
-#and plot
-long.sim_aa$value[long.sim_aa$value<0] <- 0
-long.sim_aa$value <- long.sim_aa$value/100
-
-## Amino acid
-title<-expression(paste("Reference: P. rufus mischivirus: OQ818316*"))
-
-mischivirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
-  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
-        strip.background = element_rect(fill="white"), 
-        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
-        legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
-        legend.title = element_blank(),
-        legend.key.height= unit(3.5, 'mm'),
-        legend.key.width= unit(3.5, 'mm'),
-        legend.background =element_rect(fill = alpha("white", 0)),
-        axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 2))+
-  scale_color_manual(values=colzpalette) + 
-  #scale_fill_distiller()+
-  ggtitle(title)+
-  scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
-                     labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
-  #scale_x_continuous(expand=c(0,0))+
-  scale_y_continuous(limits=c(0,1), expand=c(0,0))
-
-mischivirus_map_aa
-
-#put gene map with PySimPlot
-mischi_map_aa<-mischivirus_map_aa/map_mischi+plot_layout(nrow=2,  heights = c(1, 0.2))
-mischi_map_aa
-
-mischi_map_aa<-as.ggplot(mischi_map_aa)
-mischi_map_aa
-
 
 
 
 #Sapelovirus
 #Plot nucleotide
-sapelovirus_full_nt_map <- read.csv(file = "sapelo_align_nt.csv", header = T, stringsAsFactors = F) #Amino acid
+sapelovirus_full_nt_map <- read.csv(file = "sapelo_bootscan_align_nt.csv", header = T, stringsAsFactors = F) #Amino acid
 head(sapelovirus_full_nt_map)
 
 #move to long
-long.sim_nt <- melt(sapelovirus_full_nt_map, id.vars = c("pointer"), measure.vars = c("OQ818320","OQ818329","PP711943","PP711911",
-                                                                                      "OR951332","NC_033820"))
+long.sim_nt <- melt(sapelovirus_full_nt_map, id.vars = c("pointer"), measure.vars = c("OQ818321","OQ818320","NC_003987.1","NC_033820.1",
+                                                                                      "Pteropodidae_bat_sapelovirus"))
 
 unique(long.sim_nt$variable)
 
@@ -962,26 +657,27 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "OQ818320"] <- "E. dupreanum sapelovirus: OQ818320*"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818329"] <- "R. madagascariensis sapelovirus: OQ818329*"
-long.sim_nt$accession[long.sim_nt$accession == "PP711943"] <- "Eidolon bat picornavirus: PP711943"
-long.sim_nt$accession[long.sim_nt$accession == "PP711911"] <- "Rousettus bat picornavirus: PP711911"
-long.sim_nt$accession[long.sim_nt$accession == "OR951332"] <- "Pteropodidae bat sapelovirus: OR951332"
-long.sim_nt$accession[long.sim_nt$accession == "NC_033820"] <- "Eidolon helvum sapelovirus: NC_033820"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818321"] <- "E. dupreanum sapelovirus 2: OQ818321*"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818320"] <- "E. dupreanum sapelovirus 1: OQ818320*"
+long.sim_nt$accession[long.sim_nt$accession == "NC_003987.1"] <- "Porcine sapelovirus 1"
+long.sim_nt$accession[long.sim_nt$accession == "NC_033820.1"] <- "Bat sapelovirus"
+long.sim_nt$accession[long.sim_nt$accession == "Pteropodidae_bat_sapelovirus"] <- "Pteropodidae bat sapelovirus"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum sapelovirus: OQ818320*","R. madagascariensis sapelovirus: OQ818329*",
-                                                                  "Eidolon bat picornavirus: PP711943","Rousettus bat picornavirus: PP711911",
-                                                                  "Pteropodidae bat sapelovirus: OR951332","Eidolon helvum sapelovirus: NC_033820"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum sapelovirus 1: OQ818320*",
+                                                                  "E. dupreanum sapelovirus 2: OQ818321*",
+                                                                  "Porcine sapelovirus 1",
+                                                                  "Bat sapelovirus",
+                                                                  "Pteropodidae bat sapelovirus"))
 #and plot
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## nucleotide
-title<-expression(paste("Reference: E. dupreanum sapelovirus: OQ818321*"))
+title<-expression(paste("Reference: R. madagascariensis sapelovirus 1: OQ818329*"))
 
 sapelo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -1004,47 +700,50 @@ sapelo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
 
 sapelo_map_nt
 
-#put gene map with PySimPlot
+#put gene map with bootscan
 sapelo_nt<-sapelo_map_nt/map_sapelo+plot_layout(nrow=2,  heights = c(1, 0.2))
 sapelo_nt
 
 sapelo_nt<-as.ggplot(sapelo_nt)
 sapelo_nt
 
-#amino acid
-sapelovirus_full_aa_map <- read.csv(file = "sapelo_align_aa.csv", header = T, stringsAsFactors = F) #Amino acid
-head(sapelovirus_full_aa_map)
+
+
+
+#Teschovirus 1
+#Plot nucleotide
+teschovirus_nt_map <- read.csv(file = "tescho_bootscan_align_nt1.csv", header = T, stringsAsFactors = F) #Amino acid
+head(teschovirus_nt_map)
 
 #move to long
-long.sim_aa <- melt(sapelovirus_full_aa_map, id.vars = c("pointer"), measure.vars = c("OQ818320","OQ818329","PP711943","PP711911",
-                                                                                       "OR951332","NC_033820"))
+long.sim_nt <- melt(teschovirus_nt_map, id.vars = c("pointer"), measure.vars = c("OQ818318","OQ818323","LC386158.1",
+                                                                                 "Pteropodidae_bat_teschovirus"))
 
-unique(long.sim_aa$variable)
+unique(long.sim_nt$variable)
 
-long.sim_aa$variable <- as.character(long.sim_aa$variable)
+long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
-names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
+names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_aa$accession[long.sim_aa$accession == "OQ818320"] <- "E. dupreanum sapelovirus: OQ818320*"
-long.sim_aa$accession[long.sim_aa$accession == "OQ818329"] <- "R. madagascariensis sapelovirus: OQ818329*"
-long.sim_aa$accession[long.sim_aa$accession == "PP711943"] <- "Eidolon bat picornavirus: PP711943"
-long.sim_aa$accession[long.sim_aa$accession == "PP711911"] <- "Rousettus bat picornavirus: PP711911"
-long.sim_aa$accession[long.sim_aa$accession == "OR951332"] <- "Pteropodidae bat sapelovirus: OR951332"
-long.sim_aa$accession[long.sim_aa$accession == "NC_033820"] <- "Eidolon helvum sapelovirus: NC_033820"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818318"] <- "E. dupreanum teschovirus 1: OQ818318*"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818323"] <- "R. madagascariensis teschovirus 1: OQ818323*"
+long.sim_nt$accession[long.sim_nt$accession == "LC386158.1"] <- "Porcine teschovirus 16"
+long.sim_nt$accession[long.sim_nt$accession == "Pteropodidae_bat_teschovirus"] <- "Pteropodidae bat teschovirus"
 
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("E. dupreanum sapelovirus: OQ818320*","R. madagascariensis sapelovirus: OQ818329*",
-                                                                  "Eidolon bat picornavirus: PP711943","Rousettus bat picornavirus: PP711911",
-                                                                  "Pteropodidae bat sapelovirus: OR951332","Eidolon helvum sapelovirus: NC_033820"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum teschovirus 1: OQ818318*",
+                                                                  "R. madagascariensis teschovirus 1: OQ818323*",
+                                                                  "Porcine teschovirus 16",
+                                                                  "Pteropodidae bat teschovirus"))
 #and plot
-long.sim_aa$value[long.sim_aa$value<0] <- 0
-long.sim_aa$value <- long.sim_aa$value/100
+long.sim_nt$value[long.sim_nt$value<0] <- 0
+long.sim_nt$value <- long.sim_nt$value/100
 
-## Amino acid
-title<-expression(paste("Reference: E. dupreanum sapelovirus: OQ818321*"))
+## nucleotide
+title<-expression(paste("Reference: R. madagascariensis teschovirus 2: OQ818324*"))
 
-sapelovirus_full_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+tescho_map_nt1 <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -1057,35 +756,34 @@ sapelovirus_full_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=valu
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
+  guides(colour = guide_legend(nrow = 2))+
   scale_color_manual(values=colzpalette) + 
-  #scale_fill_distiller()+
+  #scale_color_manual(values=colz2) + 
+  scale_fill_distiller()+
   ggtitle(title)+
-  scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
-                     labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
-  #scale_x_continuous(expand=c(0,0))+
+  scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
-sapelovirus_full_map_aa
+tescho_map_nt1
 
-#put gene map with PySimPlot
-sapelo_map_aa<-sapelovirus_full_map_aa/map_sapelo+plot_layout(nrow=2,  heights = c(1, 0.2))
-sapelo_map_aa
+#put gene map with bootscan
+tescho_nt1<-tescho_map_nt1/map_tescho+plot_layout(nrow=2,  heights = c(1, 0.2))
+tescho_nt1
 
-sapelo_map_aa<-as.ggplot(sapelo_full_map_aa)
-sapelo_map_aa
-
-
+tescho_nt1<-as.ggplot(tescho_nt1)
+tescho_nt1
 
 
-#Teschovirus
+
+
+#Teschovirus 2
 #Plot nucleotide
-teschovirus_nt_map <- read.csv(file = "tescho_align_nt.csv", header = T, stringsAsFactors = F) #Amino acid
+teschovirus_nt_map <- read.csv(file = "tescho_bootscan_align_nt2.csv", header = T, stringsAsFactors = F) #Amino acid
 head(teschovirus_nt_map)
 
 #move to long
-long.sim_nt <- melt(teschovirus_nt_map, id.vars = c("pointer"), measure.vars = c("OQ818324","OQ818318","OR951334",
-                                                                                 "OR951324","PP711934"))
+long.sim_nt <- melt(teschovirus_nt_map, id.vars = c("pointer"), measure.vars = c("OQ818323","OQ818324","LC386158.1",
+                                                                                 "Pteropodidae_bat_teschovirus"))
 
 unique(long.sim_nt$variable)
 
@@ -1094,26 +792,24 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
 long.sim_nt$accession[long.sim_nt$accession == "OQ818324"] <- "R. madagascariensis teschovirus 2: OQ818324*"
-long.sim_nt$accession[long.sim_nt$accession == "OQ818318"] <- "E. dupreanum teschovirus 1: OQ818318*"
-long.sim_nt$accession[long.sim_nt$accession == "OR951334"] <- "Pteropodidae bat teschovirus: OR951334"
-long.sim_nt$accession[long.sim_nt$accession == "OR951324"] <- "Pteropodidae bat teschovirus: OR951324"
-long.sim_nt$accession[long.sim_nt$accession == "PP711934"] <- "Rousettus bat picornavirus: PP711934"
+long.sim_nt$accession[long.sim_nt$accession == "OQ818323"] <- "R. madagascariensis teschovirus 1: OQ818323*"
+long.sim_nt$accession[long.sim_nt$accession == "LC386158.1"] <- "Porcine teschovirus 16"
+long.sim_nt$accession[long.sim_nt$accession == "Pteropodidae_bat_teschovirus"] <- "Pteropodidae bat teschovirus"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("R. madagascariensis teschovirus 2: OQ818324*",
-                                                                  "E. dupreanum teschovirus 1: OQ818318*",
-                                                                  "Pteropodidae bat teschovirus: OR951334",
-                                                                  "Pteropodidae bat teschovirus: OR951324",
-                                                                  "Rousettus bat picornavirus: PP711934"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("R. madagascariensis teschovirus 1: OQ818323*",
+                                                                  "R. madagascariensis teschovirus 2: OQ818324*",
+                                                                  "Porcine teschovirus 16",
+                                                                  "Pteropodidae bat teschovirus"))
 #and plot
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## nucleotide
-title<-expression(paste("Reference: R. madagascariensis teschovirus 1: OQ818323*"))
+title<-expression(paste("Reference: E. dupreanum teschovirus 1: OQ818318*"))
 
-tescho_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+tescho_map_nt2 <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -1126,7 +822,7 @@ tescho_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
+  guides(colour = guide_legend(nrow = 2))+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -1134,91 +830,26 @@ tescho_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
-tescho_map_nt
+tescho_map_nt2
 
-#put gene map with PySimPlot
-tescho_nt<-tescho_map_nt/map_tescho+plot_layout(nrow=2,  heights = c(1, 0.2))
-tescho_nt
+#put gene map with bootscan
+tescho_nt2<-tescho_map_nt2/map_tescho+plot_layout(nrow=2,  heights = c(1, 0.2))
+tescho_nt2
 
-tescho_nt<-as.ggplot(tescho_nt)
-tescho_nt
-
-#amino acid
-teschovirus_aa_map <- read.csv(file = "tescho_align_aa.csv", header = T, stringsAsFactors = F) #Amino acid
-head(teschovirus_aa_map)
-
-#move to long
-long.sim_aa <- melt(teschovirus_aa_map, id.vars = c("pointer"), measure.vars = c("OQ818324","OQ818318","OR951334",
-                                                                                 "OR951324","PP711934"))
-
-unique(long.sim_aa$variable)
-
-long.sim_aa$variable <- as.character(long.sim_aa$variable)
-
-names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
-
-long.sim_aa$accession[long.sim_aa$accession == "OQ818324"] <- "R. madagascariensis teschovirus 2: OQ818324*"
-long.sim_aa$accession[long.sim_aa$accession == "OQ818318"] <- "E. dupreanum teschovirus 1: OQ818318*"
-long.sim_aa$accession[long.sim_aa$accession == "OR951334"] <- "Pteropodidae bat teschovirus: OR951334"
-long.sim_aa$accession[long.sim_aa$accession == "OR951324"] <- "Pteropodidae bat teschovirus: OR951324"
-long.sim_aa$accession[long.sim_aa$accession == "PP711934"] <- "Rousettus bat picornavirus: PP711934"
-
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("R. madagascariensis teschovirus 2: OQ818324*",
-                                                                  "E. dupreanum teschovirus 1: OQ818318*",
-                                                                  "Pteropodidae bat teschovirus: OR951334",
-                                                                  "Pteropodidae bat teschovirus: OR951324",
-                                                                  "Rousettus bat picornavirus: PP711934"))
-#and plot
-long.sim_aa$value[long.sim_aa$value<0] <- 0
-long.sim_aa$value <- long.sim_aa$value/100
-
-## Amino acid
-title<-expression(paste("Reference: R. madagascariensis teschovirus 1: OQ818323*"))
-
-teschovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
-  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
-        strip.background = element_rect(fill="white"), 
-        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
-        legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
-        legend.title = element_blank(),
-        legend.key.height= unit(3.5, 'mm'),
-        legend.key.width= unit(3.5, 'mm'),
-        legend.background =element_rect(fill = alpha("white", 0)),
-        axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
-  scale_color_manual(values=colzpalette) + 
-  #scale_fill_distiller()+
-  ggtitle(title)+
-  scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
-                     labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
-  #scale_x_continuous(expand=c(0,0))+
-  scale_y_continuous(limits=c(0,1), expand=c(0,0))
-
-teschovirus_map_aa
-
-#put gene map with PySimPlot
-tescho_map_aa<-teschovirus_map_aa/map_tescho+plot_layout(nrow=2,  heights = c(1, 0.2))
-tescho_map_aa
-
-tescho_map_aa<-as.ggplot(tescho_map_aa)
-tescho_map_aa
+tescho_nt2<-as.ggplot(tescho_nt2)
+tescho_nt2
 
 
 
 
 #Sapovirus
 #Plot nucleotide
-sapovirus_nt_map <- read.csv(file = "sapo_align_nt.csv", header = T, stringsAsFactors = F) #Amino acid
+sapovirus_nt_map <- read.csv(file = "sapo_bootscan_align_nt.csv", header = T, stringsAsFactors = F) #Amino acid
 head(sapovirus_nt_map)
 
 #move to long
-long.sim_nt <- melt(sapovirus_nt_map, id.vars = c("pointer"), measure.vars = c("OQ818319","KX759621","OP963623",
-                                                                               "PP712001","KX759623"))
+long.sim_nt <- melt(sapovirus_nt_map, id.vars = c("pointer"), measure.vars = c("E_helvum_sapovirus","OQ818319","R_leschenaulti_sapovirus",
+                                                                               "ON872527.1"))
 
 unique(long.sim_nt$variable)
 
@@ -1226,15 +857,15 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
+long.sim_nt$accession[long.sim_nt$accession == "E_helvum_sapovirus"] <- "E. helvum sapovirus"
 long.sim_nt$accession[long.sim_nt$accession == "OQ818319"] <- "E. dupreanum sapovirus 1: OQ818319*"
-long.sim_nt$accession[long.sim_nt$accession == "KX759621"] <- "Bat sapovirus: KX759621"
-long.sim_nt$accession[long.sim_nt$accession == "OP963623"] <- "Bat sapovirus BtSY2: OP963623"
-long.sim_nt$accession[long.sim_nt$accession == "PP712001"] <- "Rousettus bat calicivirus: PP712001"
-long.sim_nt$accession[long.sim_nt$accession == "KX759623"] <- "Bat sapovirus: KX759623"
+long.sim_nt$accession[long.sim_nt$accession == "R_leschenaulti_sapovirus"] <- "R. leschenaulti sapovirus"
+long.sim_nt$accession[long.sim_nt$accession == "ON872527.1"] <- "Bat faecal sapovirus"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum sapovirus 1: OQ818319*","Bat sapovirus: KX759621",
-                                                                  "Bat sapovirus BtSY2: OP963623","Rousettus bat calicivirus: PP712001",
-                                                                  "Bat sapovirus: KX759623"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum sapovirus 1: OQ818319*",
+                                                                  "E. helvum sapovirus",
+                                                                  "R. leschenaulti sapovirus",
+                                                                  "Bat faecal sapovirus"))
 
 #and plot
 long.sim_nt$value[long.sim_nt$value<0] <- 0
@@ -1245,7 +876,7 @@ title<-expression(paste("Reference: E. dupreanum sapovirus 1: PP766459*"))
 
 sapo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Permuted trees")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -1258,7 +889,7 @@ sapo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=acc
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
+  guides(colour = guide_legend(nrow = 2))+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -1268,92 +899,20 @@ sapo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=acc
 
 sapo_map_nt
 
-#put gene map with PySimPlot
+#put gene map with bootscan
 sapo_nt<-sapo_map_nt/map_sapo+plot_layout(nrow=2,  heights = c(1, 0.2))
 sapo_nt
 
 sapo_nt<-as.ggplot(sapo_nt)
 sapo_nt
 
-#amino acid
-sapovirus_aa_map <- read.csv(file = "sapo_align_aa.csv", header = T, stringsAsFactors = F) #Amino acid
-head(sapovirus_aa_map)
-
-#move to long
-long.sim_aa <- melt(sapovirus_aa_map, id.vars = c("pointer"), measure.vars = c("OQ818319","KX759621","OP963623",
-                                                                               "PP712001","KX759623"))
-
-unique(long.sim_aa$variable)
-
-long.sim_aa$variable <- as.character(long.sim_aa$variable)
-
-names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
-
-long.sim_aa$accession[long.sim_aa$accession == "OQ818319"] <- "E. dupreanum sapovirus 1: OQ818319*"
-long.sim_aa$accession[long.sim_aa$accession == "KX759621"] <- "Bat sapovirus: KX759621"
-long.sim_aa$accession[long.sim_aa$accession == "OP963623"] <- "Bat sapovirus BtSY2: OP963623"
-long.sim_aa$accession[long.sim_aa$accession == "PP712001"] <- "Rousettus bat calicivirus: PP712001"
-long.sim_aa$accession[long.sim_aa$accession == "KX759623"] <- "Bat sapovirus: KX759623"
-
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("E. dupreanum sapovirus 1: OQ818319*","Bat sapovirus: KX759621",
-                                                                  "Bat sapovirus BtSY2: OP963623","Rousettus bat calicivirus: PP712001",
-                                                                  "Bat sapovirus: KX759623"))
-
-#and plot
-long.sim_aa$value[long.sim_aa$value<0] <- 0
-long.sim_aa$value <- long.sim_aa$value/100
-
-## Amino acid
-title<-expression(paste("Reference: E. dupreanum sapovirus 1: PP766459*"))
-
-sapovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
-  theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
-  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
-        strip.background = element_rect(fill="white"), 
-        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
-        legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
-        legend.title = element_blank(),
-        legend.key.height= unit(3.5, 'mm'),
-        legend.key.width= unit(3.5, 'mm'),
-        legend.background =element_rect(fill = alpha("white", 0)),
-        axis.text = element_text(size=12), axis.title = element_text(size=12),
-        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
-        plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
-  scale_color_manual(values=colzpalette) + 
-  #scale_fill_distiller()+
-  ggtitle(title)+
-  scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
-                     labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
-  #scale_x_continuous(expand=c(0,0))+
-  scale_y_continuous(limits=c(0,1), expand=c(0,0))
-
-sapovirus_map_aa
-
-#put gene map with PySimPlot
-sapo_map_aa<-sapovirus_map_aa/map_sapo+plot_layout(nrow=2,  heights = c(1,0.2))
-sapo_map_aa
-
-sapo_map_aa<-as.ggplot(sapo_map_aa)
-sapo_map_aa
-
-
 
 ##Now put the whole figure together
-amino<-plot_grid(bat_picorna_aa,hep_map_aa,kobu_map_aa,kun_map_aa,
-                mischi_map_aa,sapelo_map_aa,sapo_map_aa, tescho_map_aa,
-                ncol=3,
-                labels="AUTO", label_size = 23, align = "hv", axis="b")
-amino
-
-
-nucleotide<-plot_grid(bat_picorna_nt,hepato_nt,kobu_nt,kunsagi_nt,
-                      mischi_nt,sapelo_nt,sapo_nt, tescho_nt,
+bootscan<-plot_grid(bat_picorna_nt,hepato_nt,kobu_nt,kunsagi_nt,
+                      mischi_nt,sapelo_nt,sapo_nt, tescho_nt1, tescho_nt2,
                       ncol=3,
                       labels="AUTO", label_size = 23, align = "hv", axis="b")
-nucleotide
+bootscan
 
 
 #export 20x23 landscape PDF

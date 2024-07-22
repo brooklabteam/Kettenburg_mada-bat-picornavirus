@@ -1,48 +1,48 @@
 molecule,start,end,mid,gene,type
 Bat picornavirus,1,631,316,5'UTR,full
-Bat picornavirus,8233,8552,8392.5,3'UTR,full
-Hepatovirus,1,805,403,5'UTR,full
-Hepatovirus,7762,7917,7839.5,3'UTR,full
+Bat picornavirus,8233,8552,8150,3'UTR,full
+Hepatovirus,1,805,350,5'UTR,full
+Hepatovirus,7762,7917,7600,3'UTR,full
 Kobuvirus,1,762,381.5,5'UTR,full
-Kobuvirus,8178,8533,8355.5,3'UTR,full
+Kobuvirus,8178,8533,8100,3'UTR,full
 Kunsagivirus,1,629,315,5'UTR,full
-Kunsagivirus,7799,7971,7885,3'UTR,full
+Kunsagivirus,7799,7971,7700,3'UTR,full
 Mischivirus,1,1318,659.5,5'UTR,full
-Mischivirus,8638,8889,8763.5,3'UTR,full
+Mischivirus,8638,8889,8550,3'UTR,full
 Sapelovirus,1,516,258.5,5'UTR,full
-Sapelovirus,8011,8225,8118,3'UTR,full
+Sapelovirus,8011,8225,7950,3'UTR,full
 Teschovirus,1,602,301.5,5'UTR,full
-Teschovirus,7579,7696,7637.5,3'UTR,full
-Sapovirus,7799,7911,7855,3'UTR,full
+Teschovirus,7579,7696,7400,3'UTR,full
+Sapovirus,7799,7911,7600,3'UTR,full
 Sapovirus,1,749,375,NS1/NS2,full
 Sapovirus,750,2067,1408.5,Helicase,full
 Sapovirus,2068,2923,2495.5,NS4,full
 Sapovirus,2924,3266,3095,Vpg,full
 Sapovirus,3267,5359,4313,Pro-Pol,full
 Sapovirus,5360,7020,6190,VP1,full
-Sapovirus,7087,7795,7441,VP2,full
+Sapovirus,7087,7795,7000,VP2,full
 Bat picornavirus,632,956,794,L,full
 Bat picornavirus,957,1165,1061,VP4,full
-Bat picornavirus,1166,1931,1548.5,VP2,full
+Bat picornavirus,1166,1931,1600,VP2,full
 Bat picornavirus,1932,2627,2279.5,VP3,full
 Bat picornavirus,2628,3639,3133.5,VP1,full
 Bat picornavirus,3640,4371,4005.5,2A,full
 Bat picornavirus,4372,4710,4541,2B,full
 Bat picornavirus,4711,5710,5210.5,2C,full
-Bat picornavirus,5711,6151,5931,3A,full
+Bat picornavirus,5711,6151,5700,3A,full
 Bat picornavirus,6152,6220,6186,3B,full
-Bat picornavirus,6221,6772,6496.5,3C,full
+Bat picornavirus,6221,6772,6550,3C,full
 Bat picornavirus,6773,8229,7501,3D,full
 Hepatovirus,806,877,841.5,VP4,full
-Hepatovirus,878,1543,1210.5,VP2,full
+Hepatovirus,878,1543,1240,VP2,full
 Hepatovirus,1544,2290,1917,VP3,full
 Hepatovirus,2291,3221,2756,VP1,full
 Hepatovirus,3222,3910,3566,2A,full
 Hepatovirus,3911,4239,4075,2B,full
 Hepatovirus,4240,5295,4767.5,2C,full
-Hepatovirus,5296,5547,5421.5,3A,full
+Hepatovirus,5296,5547,5200,3A,full
 Hepatovirus,5551,5622,5586.5,3B,full
-Hepatovirus,5623,6291,5957,3C,full
+Hepatovirus,5623,6291,6200,3C,full
 Hepatovirus,6292,7761,7026.5,3D,full
 Kobuvirus,763,1330,1046.5,L,full
 Kobuvirus,1331,2495,1913,VP0,full
@@ -51,9 +51,9 @@ Kobuvirus,3165,3926,3545.5,VP1,full
 Kobuvirus,3927,4334,4130.5,2A,full
 Kobuvirus,4335,4829,4582,2B,full
 Kobuvirus,4830,5834,5332,2C,full
-Kobuvirus,5835,6119,5977,3A,full
+Kobuvirus,5835,6119,5750,3A,full
 Kobuvirus,6120,6200,6160,3B,full
-Kobuvirus,6201,6770,6485.5,3C,full
+Kobuvirus,6201,6770,6550,3C,full
 Kobuvirus,6771,8174,7472.5,3D,full
 Kunsagivirus,630,1545,1087.5,VP0,full
 Kunsagivirus,1546,2250,1898,VP3,full
@@ -61,9 +61,9 @@ Kunsagivirus,2251,3013,2632,VP1,full
 Kunsagivirus,3014,3605,3309.5,2A,full
 Kunsagivirus,3606,3923,3764.5,2B,full
 Kunsagivirus,3924,5159,4541.5,2C,full
-Kunsagivirus,5160,5579,5369.5,3A,full
+Kunsagivirus,5160,5579,5200,3A,full
 Kunsagivirus,5580,5651,5615.5,3B,full
-Kunsagivirus,5652,6236,5944,3C,full
+Kunsagivirus,5652,6236,6000,3C,full
 Kunsagivirus,6237,7792,7014.5,3D,full
 Mischivirus,1319,1537,1428,L,full
 Mischivirus,1538,2576,2057,VP0,full
@@ -72,9 +72,9 @@ Mischivirus,3433,4268,3850.5,VP1,full
 Mischivirus,4269,4434,4351.5,2A,full
 Mischivirus,4435,4976,4705.5,2B,full
 Mischivirus,4977,6063,5520,2C,full
-Mischivirus,6064,6490,6277,3A,full
+Mischivirus,6064,6490,6150,3A,full
 Mischivirus,6491,6642,6566.5,3B,full
-Mischivirus,6643,7368,7005.5,3C,full
+Mischivirus,6643,7368,7150,3C,full
 Mischivirus,7369,8613,7991,3D,full
 Sapelovirus,517,914,715.5,L,full
 Sapelovirus,915,1073,994,VP4,full
@@ -84,9 +84,9 @@ Sapelovirus,2524,3448,2986,VP1,full
 Sapelovirus,3449,4252,3850.5,2A,full
 Sapelovirus,4253,4616,4434.5,2B,full
 Sapelovirus,4617,5654,5135.5,2C,full
-Sapelovirus,5655,5997,5826,3A,full
+Sapelovirus,5655,5997,5650,3A,full
 Sapelovirus,5998,6069,6033.5,3B,full
-Sapelovirus,6070,6615,6342.5,3C,full
+Sapelovirus,6070,6615,6500,3C,full
 Sapelovirus,6616,8007,7311.5,3D,full
 Teschovirus,603,877,740,L,full
 Teschovirus,878,1099,988.5,VP4,full
@@ -96,7 +96,7 @@ Teschovirus,2749,3600,3174.5,VP1,full
 Teschovirus,3608,3664,3636,2A,full
 Teschovirus,3665,4163,3914,2B,full
 Teschovirus,4164,5139,4651.5,2C,full
-Teschovirus,5140,5468,5304,3A,full
+Teschovirus,5140,5468,5150,3A,full
 Teschovirus,5469,5547,5508,3B,full
 Teschovirus,5548,6185,5866.5,3C,full
 Teschovirus,6186,7562,6874,3D,full

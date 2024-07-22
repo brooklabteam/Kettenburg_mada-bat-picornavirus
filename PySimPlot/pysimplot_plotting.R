@@ -502,6 +502,8 @@ long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum 
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 #plot nucleotide
+title<-expression(paste("Reference: E. dupreanum hepatovirus: PP766455*"))
+
 hepato_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
