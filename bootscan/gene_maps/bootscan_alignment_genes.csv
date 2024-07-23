@@ -26,9 +26,9 @@ Sapovirus,7799,7911,3'UTR,full
 Bat picornavirus left,1,628,5'UTR,partial
 Bat picornavirus left,629,2834,Polyprotein,partial
 Bat picornavirus mid,2779,5424,Polyprotein,partial
-Kobuvirus mid,2454,5326,Polyprotein,partial
-Sapovirus mid,2695,4878,Polyprotein,partial
+Kobuvirus mid,2489,5326,Polyprotein,partial
+Sapovirus mid,2695,4850,Polyprotein,partial
 Sapovirus right,6667,7022,Polyprotein,partial
 Sapovirus right,7086,7842,Minor structural protein,partial
 Sapovirus right,7843,7890,3'UTR,partial
-Teschovirus all,4561,7786,Polyprotein,partial
+Teschovirus all,4561,7591,Polyprotein,partial

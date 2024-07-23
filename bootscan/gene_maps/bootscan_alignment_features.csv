@@ -101,14 +101,7 @@ Teschovirus,5469,5547,5508,3B,full
 Teschovirus,5548,6185,5866.5,3C,full
 Teschovirus,6186,7562,6874,3D,full
 Bat picornavirus left,1,628,314.5,5'UTR,partial
-Bat picornavirus left,629,2834,1731.5,Polyprotein,partial
-Bat picornavirus mid,2779,5424,4101.5,Polyprotein,partial
-Kobuvirus mid,2454,5326,3890,Polyprotein,partial
-Sapovirus mid,2695,4878,3786.5,Polyprotein,partial
-Sapovirus right,6667,7022,6844.5,Polyprotein,partial
-Sapovirus right,7086,7842,7464,Minor structural protein,partial
-Sapovirus right,7843,7890,7866.5,3'UTR,partial
-Teschovirus all,4561,7786,6173.5,Polyprotein,partial
+Sapovirus right,7843,7890,7700,3'UTR,partial
 Bat picornavirus left,629,960,794.5,L,partial
 Bat picornavirus left,961,1164,1062.5,VP4,partial
 Bat picornavirus left,1165,1930,1547.5,VP2,partial
