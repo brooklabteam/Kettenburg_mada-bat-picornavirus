@@ -1,3 +1,6 @@
+#This script is for figure 2, which is a master phylogeny using all the viral genera identified for the 
+#RDRP gene to create an infographic, then additional genus specific phylogenies to go with it. 
+
 rm(list=ls())
 
 library(ggplot2)
@@ -2214,25 +2217,7 @@ sapo
 tescho #smaller
 
 
-#trying to make a final figure with patchwork - rectangular layout
-left<-kobu/sapo/tescho
-left
-left<-as.ggplot(left)
-
-right<-sapelo/cardio/hepato/mischi/batpicorna/kunsagi
-right
-right<-as.ggplot(right)
-
-left2<-base/left + plot_layout(ncol=1,widths=c(1,1), heights = c(1,1))
-left2
-left2<-as.ggplot(left2)
-
-final<-left2 | right #+ plot_layout(ncol=2,widths=c(1,1), heights = c(1,1))
-final
-
-
-
-#trying to make a final figure with plot_grid
+#Plot final figure with plot_grid
 phylo_grid<-plot_grid(cardio, hepato, mischi, batpicorna, tescho, kunsagi, labels=c("E","F","G","H","I","J"),
                       rel_widths = c(1,1,1,1,1,1,1), rel_heights = c(1,1,1,1,1,1,1),
                       ncol=1, align="hv", axis="l", label_size = 23)
@@ -2259,7 +2244,7 @@ final
 
 
 #homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
-ggsave(file = paste0(homewd, "/raxml_trees/master_phylo_fig/master_phylo_fig.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/Fig2_summary_phylogeny.pdf"),
        plot= final,
        units="mm",  
        width=220, 

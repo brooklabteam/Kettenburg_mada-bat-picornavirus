@@ -305,7 +305,7 @@ p4_pos <- p2b+
 
 p4_pos
 
-ggsave(file = "Fig1_sampling_map.pdf",
+ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map.pdf"),
        plot = p4_pos,
        units="mm",  
        width=60, 
