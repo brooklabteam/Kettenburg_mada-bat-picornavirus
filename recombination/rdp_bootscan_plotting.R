@@ -813,7 +813,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 #plot nucleotide
-title<-expression(paste("Reference: E. dupreanum kobuvirus: OQ818322*"))
+title<-expression(paste("Potential recombinant: E. dupreanum kobuvirus: OQ818322*"))
 
 kobu_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
