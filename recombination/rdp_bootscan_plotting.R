@@ -730,19 +730,19 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
 long.sim_nt$accession[long.sim_nt$accession == "NC_028981.1...PP766455"] <- "Unknown (inferred by Tupaia hepatovirus) (major parent) - E. dupreanum hepatovirus: PP766455* (minor parent)"
-long.sim_nt$accession[long.sim_nt$accession == "NC_028981.1...NC_028366.1"] <- "Unknown (inferred by Tupaia hepatovirus)  (major parent) - E. helvum sapovirus M32Eidhel2010 (recombinant)"
-long.sim_nt$accession[long.sim_nt$accession == "PP766455...NC_028366.1"] <- "E. dupreanum hepatovirus: PP766455* (minor parent) - E. helvum sapovirus M32Eidhel2010 (recombinant)"
+long.sim_nt$accession[long.sim_nt$accession == "NC_028981.1...NC_028366.1"] <- "Unknown (inferred by Tupaia hepatovirus)  (major parent) - E. helvum hepatovirus M32Eidhel2010 (recombinant)"
+long.sim_nt$accession[long.sim_nt$accession == "PP766455...NC_028366.1"] <- "E. dupreanum hepatovirus: PP766455* (minor parent) - E. helvum hepatovirus M32Eidhel2010 (recombinant)"
 
 
 long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Unknown (inferred by Tupaia hepatovirus) (major parent) - E. dupreanum hepatovirus: PP766455* (minor parent)",
-                                                                  "Unknown (inferred by Tupaia hepatovirus)  (major parent) - E. helvum sapovirus M32Eidhel2010 (recombinant)",
-                                                                  "E. dupreanum hepatovirus: PP766455* (minor parent) - E. helvum sapovirus M32Eidhel2010 (recombinant)"))
+                                                                  "Unknown (inferred by Tupaia hepatovirus)  (major parent) - E. helvum hepatovirus M32Eidhel2010 (recombinant)",
+                                                                  "E. dupreanum hepatovirus: PP766455* (minor parent) - E. helvum hepatovirus M32Eidhel2010 (recombinant)"))
 
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 #plot nucleotide
-title<-expression(paste("Potential recombinant - E. helvum sapovirus M32Eidhel2010"))
+title<-expression(paste("Potential recombinant - E. helvum hepatovirus M32Eidhel2010"))
 
 hepato_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
