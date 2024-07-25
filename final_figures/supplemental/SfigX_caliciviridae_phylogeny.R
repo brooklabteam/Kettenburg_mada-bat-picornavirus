@@ -242,4 +242,23 @@ p7 <- p6  %<+% p6.dat +
         legend.key.size = unit(0.3, "cm"))
 p7
 
+
+
+# save figs
+
+homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
+
+ggsave(file = paste0(homewd, "/final_figures/supplemental/SfigX_caliciviridae_phylogeny.pdf"),
+       plot = p7,
+       units="mm",  
+       width=90, 
+       height=40, 
+       scale=4, 
+       dpi=300)
+
+
+
+
+
 #15 x 5
+
