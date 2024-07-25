@@ -511,7 +511,7 @@ map_sapo_right
 setwd("~/Desktop/developer/mada-bat-picornavirus/recombination/rdp_bootscan_csv_to_plot")
 
 #colzpalette<-c("#F8766D","#C49A00","#53B400","#A58AFF","#00B6EB","darkorange1","#FB61D7")
-colzpalette<-c("#3B9AB2","goldenrod","#F21A00")
+colzpalette<-c("#3B9AB2","#EBCC2A","#F21A00")
 
 
 ##Bat picornavirus
@@ -1132,13 +1132,42 @@ sapo_nt
 
 
 
-##Now put the whole figure together
-rdp<-plot_grid(bat_picorna_nt, bat_picorna_nt_left, bat_picorna_nt_right,
-               hepato_nt, kobu_nt, kobu_nt_mid, mischi_nt, sapelo_nt, sapo_nt,
-                      ncol=3,
-                      labels="AUTO", label_size = 23, align = "hv", axis="b")
-rdp
+#To plot figure 4
+fig4<-plot_grid(kobu_nt,kobu_nt_mid, sapo_nt,
+                ncol=3,
+                labels="AUTO", label_size = 23, align = "hv", axis="b")
+fig4
+#only showing kobuvirus and sapovirus since they have the strongest support for recombination
 
 
-#export 20x23 landscape PDF
+#To plot supplementary for everything else
+recombination_supp<-plot_grid(mischi_nt, hepato_nt,bat_picorna_nt, bat_picorna_nt_left,
+                           bat_picorna_nt_right, sapelo_nt,
+                           ncol=3,
+                           labels="AUTO", label_size = 23, align = "hv", axis="b")
+recombination_supp
+
+
+
+
+# save figs
+
+homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
+
+ggsave(file = paste0(homewd, "/final_figures/Fig4_recombination.pdf"),
+       plot = fig4,
+       units="mm",  
+       width=150, 
+       height=40, 
+       scale=4, 
+       dpi=300)
+
+ggsave(file = paste0(homewd, "/final_figures/supplemental/SfigX_recombination.pdf"),
+       plot = recombination_supp,
+       units="mm",  
+       width=160, 
+       height=80, 
+       scale=4, 
+       dpi=300)
+
 
