@@ -348,8 +348,9 @@ map_sapo
 ##Now get the plots for the PySimPlot, just the map_BLAST ones, there will be a separate PDF file with the table of African bat picorna similarities
 setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/output")
 
-#<-c("#F8766D","darkorange1","#C49A00","#53B400","#A58AFF","#00B6EB","#A58AFF","#FB61D7")
-colzpalette<-c("#F8766D","#C49A00","#53B400","#A58AFF","#00B6EB","darkorange1","#FB61D7")
+#colzpalette<-c("#F8766D","#C49A00","#53B400","#A58AFF","#00B6EB","darkorange1","#FB61D7")
+colzpalette<-c("#3B9AB2","#EBCC2A","#F21A00","darkslategray2","darkorange1","firebrick4")
+
 
 ##Bat picornavirus
 
@@ -1343,20 +1344,61 @@ sapo_map_aa
 
 
 
-##Now put the whole figure together
-amino<-plot_grid(bat_picorna_aa,hep_map_aa,kobu_map_aa,kun_map_aa,
-                mischi_map_aa,sapelo_map_aa,sapo_map_aa, tescho_map_aa,
-                ncol=3,
-                labels="AUTO", label_size = 23, align = "hv", axis="b")
-amino
 
 
-nucleotide<-plot_grid(bat_picorna_nt,hepato_nt,kobu_nt,kunsagi_nt,
-                      mischi_nt,sapelo_nt,sapo_nt, tescho_nt,
+
+#To plot figure 3
+fig3<-plot_grid(hep_map_aa,kun_map_aa,
+                 sapelo_map_aa,sapo_map_aa, tescho_map_aa,bat_picorna_aa,
+                 ncol=3,
+                 labels="AUTO", label_size = 23, align = "hv", axis="b")
+fig3
+#excluded kobuvirus from figure because it's so similar, and excluded mischivirus since it's so different
+
+
+#To plot nucleotide supplementary
+nucleotide_supp<-plot_grid(mischi_nt,hepato_nt,
+                      kobu_nt,kunsagi_nt,sapelo_nt, sapo_nt,bat_picorna_nt,tescho_nt,
                       ncol=3,
                       labels="AUTO", label_size = 23, align = "hv", axis="b")
-nucleotide
+nucleotide_supp
 
 
-#export 20x23 landscape PDF
+#To plot amino acid supplementary for kobuvirus and mischivirus
+amino_supp<-plot_grid(mischi_map_aa, bat_picorna_aa,
+                    ncol=2,
+                    labels="AUTO", label_size = 23, align = "hv", axis="b")
+amino_supp
+
+
+
+# save figs
+
+homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
+
+ggsave(file = paste0(homewd, "/final_figures/supplemental/SfigX_nucleotide_pysimplot.pdf"),
+       plot = nucleotide_supp,
+       units="mm",  
+       width=140, 
+       height=110, 
+       scale=4, 
+       dpi=300)
+
+ggsave(file = paste0(homewd, "/final_figures/Fig3_pysimplot.pdf"),
+       plot = fig3,
+       units="mm",  
+       width=150, 
+       height=80, 
+       scale=4, 
+       dpi=300)
+
+ggsave(file = paste0(homewd, "/final_figures/supplemental/SfigX_amino_pysimplot.pdf"),
+       plot = amino_supp,
+       units="mm",  
+       width=100, 
+       height=40, 
+       scale=4, 
+       dpi=300)
+
+
 
