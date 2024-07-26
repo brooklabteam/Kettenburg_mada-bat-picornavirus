@@ -1052,11 +1052,11 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
-  geom_treescale(fontsize=4, x=0,y=0, linesize = .5) +
+  geom_treescale(fontsize=4, x=0,y=-1, linesize = .5) +
   guides(colour = guide_legend(ncol = 1))+
   theme(legend.position = "bottom", 
         legend.direction = "horizontal",
-        legend.text = element_text(size=12), 
+        legend.text = element_text(size=11), 
         legend.key.size = unit(0.2, "cm")) +
   xlim(c(0,7))
 
@@ -1074,7 +1074,7 @@ p1.1 <- p1  %<+% p0.dat +
   geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
   #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
-  theme(legend.position = "bottom",
+  theme(legend.position = "none",
         legend.direction = "horizontal",
         legend.text = element_text(size=12),
         legend.title = element_text(size=12),
@@ -1098,10 +1098,10 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
-  geom_treescale(fontsize=4, x=0,y=0, linesize = .5) +
+  geom_treescale(fontsize=4, x=0,y=-1, linesize = .5) +
   theme(legend.position = "bottom", 
         legend.direction = "horizontal",
-        legend.text = element_text(size=12), 
+        legend.text = element_text(size=11), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,7))
 p2
@@ -1979,7 +1979,7 @@ tescho <- p3  %<+% p3.dat +
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
   #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
   theme(legend.position = "none",
-        legend.direction = "vertical",
+        legend.direction = "horizontal",
         legend.text = element_text(size=12),
         legend.title = element_text(size=12),
         legend.key.size = unit(0.3, "cm"))
@@ -2218,8 +2218,8 @@ tescho #smaller
 
 
 #Plot final figure with plot_grid
-phylo_grid<-plot_grid(cardio, hepato, mischi, batpicorna, tescho, kunsagi, labels=c("E","F","G","H","I","J"),
-                      rel_widths = c(1,1,1,1,1,1,1), rel_heights = c(1,1,1,1,1,1,1),
+phylo_grid<-plot_grid(cardio, hepato, mischi, batpicorna, tescho,kunsagi, labels=c("E","F","G","H","I","J"),
+                      rel_widths = c(1,1,1,1,1,1), rel_heights = c(0.8,1,1,1,0.8,0.6),
                       ncol=1, align="hv", axis="l", label_size = 23)
 phylo_grid
 phylo_grid<-as.ggplot(phylo_grid)
@@ -2241,6 +2241,7 @@ final<-plot_grid(leftside, phylo_grid, labels=c("",""),
                  rel_widths=c(1,1), rel_heights = c(1,1),
                  ncol=2,align="hv", axis="l", label_size = 23)
 final
+
 
 
 #homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
