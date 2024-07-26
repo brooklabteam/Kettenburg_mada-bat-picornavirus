@@ -1,3 +1,5 @@
+#This is to plot a visual supplemental fig of the coverage plots for the genomes
+
 rm(list=ls())
 
 library(plyr)
@@ -10,8 +12,6 @@ library(gridExtra)
 library(cowplot)
 library(patchwork)
 library(ggh4x)
-
-## now let's plot coverage 
 
 homewd="/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/read_mapping/"
 setwd(paste0(homewd))
@@ -36,82 +36,9 @@ rm_partial<-subset(rm, type=="partial")
 
 colz=c("partial"="deepskyblue3", "full"="coral2")
 
-
-
-#swap out between plotting reads per million and the raw coverage
-title<-expression(paste(italic("Pteropus rufus")))
-pr_all<-ggplot(pr, aes(x=Position, y=rPM, fill=type))+ 
-  geom_area(linewidth=0.5) +
-  facet_nested(accession~.,
-               scales="free", nest_line = element_line(color="white"), solo_line = TRUE)+
-  scale_fill_manual(values=c("deepskyblue","coral2"))+
-  theme_linedraw() +
-  theme(legend.position = "none")+
-  ggtitle(title)+
-  scale_y_continuous(position="left")+
-  xlab("Genome position") + ylab("rPM (reads per million)")+
-  #xlab("Genome position") + ylab("Coverage")+
-  theme(panel.grid.major = element_blank(), 
-        panel.grid.minor = element_blank(),
-        axis.title.y = element_text(margin = margin(0,0,0,1)))
-pr_all
-
-
-title<-expression(paste(italic("Eidolon dupreanum")))
-ed_all<-ggplot(ed, aes(x=Position, y=rPM, fill=type))+ 
-  geom_area(linewidth=0.5) +
-  facet_nested(accession~.,
-               scales="free", nest_line = element_line(color="white"), solo_line = TRUE)+
-  scale_fill_manual(values=c("deepskyblue","coral2"))+
-  theme_linedraw() +
-  theme(legend.position = "none")+
-  ggtitle(title)+
-  scale_y_continuous(position="left")+
-  xlab("Genome position") + ylab("rPM (reads per million)")+
-  #xlab("Genome position") + ylab("Coverage")+
-  theme(panel.grid.major = element_blank(), 
-        panel.grid.minor = element_blank(),
-        axis.title.y = element_text(margin = margin(0,0,0,1)))
-ed_all
-
-
-title<-expression(paste(italic("Rousettus madagascariensis")))
-rm_all<-ggplot(rm, aes(x=Position, y=rPM, fill=type))+ 
-  geom_area(linewidth=0.5) +
-  facet_nested(accession~.,
-               scales="free", nest_line = element_line(color="white"), solo_line = TRUE)+
-  scale_fill_manual(values=c("deepskyblue","coral2"))+
-  theme_linedraw() +
-  theme(legend.position = "none")+
-  ggtitle(title)+
-  scale_y_continuous(position="left")+
-  xlab("Genome position") + ylab("rPM (reads per million)")+
-  #xlab("Genome position") + ylab("Coverage")+
-  theme(panel.grid.major = element_blank(), 
-        panel.grid.minor = element_blank(),
-        axis.title.y = element_text(margin = margin(0,0,0,1)))
-rm_all
-
-#everything together
-all_pr_ed<-plot_grid(pr_all, ed_all, ncol=1, labels = "AUTO", 
-                     rel_heights=c(0.2,1),align="hv", axis="l")
-all_pr_ed
-
-
-all<-plot_grid(all_pr_ed, rm_all, ncol=2, labels = c("","C"), align="hv", axis="l")
-all
-
-# ggsave(file = paste0(homewd, "/figures/all_coverage_rpm.pdf"),
-#        plot= all,
-#        units="mm",  
-#        width=300, 
-#        height=300, 
-#        scale=3, 
-#        dpi=500)
-
-
 #just the full genomes
-#again sub out reads per million and coverage, then make both figures
+
+#sub out reads per million and coverage, then make both figures
 title<-expression(paste(italic("Pteropus rufus")))
 #pr_f<-ggplot(pr_full, aes(x=Position, y=rPM, fill=type))+ 
 pr_f<-ggplot(pr_full, aes(x=Position, y=Coverage, fill=type))+ 
@@ -124,7 +51,7 @@ pr_f<-ggplot(pr_full, aes(x=Position, y=Coverage, fill=type))+
   ggtitle(title)+
   scale_y_continuous(position="left")+
   #xlab("Genome position") + ylab("rPM (reads per million)")+
-  xlab("Genome position") + ylab("Coverage")+
+  xlab("Genome position") + ylab("Coverage (reads)")+
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
         axis.title.y = element_text(margin = margin(0,0,0,1)))
@@ -143,7 +70,7 @@ ed_f<-ggplot(ed_full, aes(x=Position, y=Coverage, fill=type))+
   ggtitle(title)+
   scale_y_continuous(position="left")+
   #xlab("Genome position") + ylab("rPM (reads per million)")+
-  xlab("Genome position") + ylab("Coverage")+
+  xlab("Genome position") + ylab("Coverage (reads)")+
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
         axis.title.y = element_text(margin = margin(0,0,0,1)))
@@ -162,7 +89,7 @@ rm_f<-ggplot(rm_full, aes(x=Position, y=Coverage, fill=type))+
   ggtitle(title)+
   scale_y_continuous(position="left")+
   #xlab("Genome position") + ylab("rPM (reads per million)")+
-  xlab("Genome position") + ylab("Coverage")+
+  xlab("Genome position") + ylab("Coverage (reads)")+
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
         axis.title.y = element_text(margin = margin(0,0,0,1)))
@@ -183,15 +110,6 @@ ed_pf<-as.ggplot(ed_pf)
 full<-plot_grid(ed_pf, rm_f, ncol=2, labels = c("","C"),label_size=23, align="hv", axis="l")
 full
 
-#ggsave(file = paste0(homewd, "/figures/full_coverage_rpm.pdf"),
-ggsave(file = paste0(homewd, "/figures/full_coverage.pdf"),
-       plot= full,
-       units="mm",  
-       width=200, 
-       height=110, 
-       scale=2, 
-       dpi=500)
-
 
 #just the partial genomes
 title<-expression(paste(italic("Eidolon dupreanum")))
@@ -206,7 +124,7 @@ ed_p<-ggplot(ed_partial, aes(x=Position, y=Coverage, fill=type))+
   ggtitle(title)+
   scale_y_continuous(position="left")+
   #xlab("Genome position") + ylab("rPM (reads per million)")+
-  xlab("Genome position") + ylab("Coverage")+
+  xlab("Genome position") + ylab("Coverage (reads)")+
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
         axis.title.y = element_text(margin = margin(0,0,0,1)))
@@ -225,7 +143,7 @@ rm_p<-ggplot(rm_partial, aes(x=Position, y=Coverage, fill=type))+
   ggtitle(title)+
   scale_y_continuous(position="left")+
   #xlab("Genome position") + ylab("rPM (reads per million)")+
-  xlab("Genome position") + ylab("Coverage")+
+  xlab("Genome position") + ylab("Coverage (reads)")+
   theme(panel.grid.major = element_blank(), 
         panel.grid.minor = element_blank(),
         axis.title.y = element_text(margin = margin(0,0,0,1)))
@@ -236,11 +154,24 @@ partial<-plot_grid(ed_p,rm_p, ncol=2, labels =c("A","B"),label_size=23, align="h
 partial
 
 
-  ggsave(file = paste0(homewd, "/figures/partial_coverage.pdf"),
-       plot= partial,
+# save figs
+homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
+
+
+#ggsave(file = paste0(homewd, "/figures/full_coverage_rpm.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/supplemental/SfigX_full_coverage_plot.pdf"),
+       plot= full,
        units="mm",  
        width=200, 
-       height=250, 
+       height=110, 
+       scale=2, 
+       dpi=500)
+
+ggsave(file = paste0(homewd, "/final_figures/supplemental/SfigX_partial_coverage_plot.pdf"),
+       plot= partial,
+       units="mm",  
+       width=220, 
+       height=220, 
        scale=2, 
        dpi=500)
 
