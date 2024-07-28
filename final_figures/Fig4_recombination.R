@@ -868,11 +868,11 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
-long.sim_nt$accession[long.sim_nt$accession == "NC_034971.1...Rhinolophus_kobuvirus"] <- "Canine kobuvirus (major parent) - E. dupreanum kobuvirus: OQ818322* (inferred by Rhinolophus kobuvirus) (minor parent)"
+long.sim_nt$accession[long.sim_nt$accession == "NC_034971.1...Rhinolophus_kobuvirus"] <- "Canine kobuvirus (major parent) - Unknown (inferred by Rhinolophus kobuvirus) (minor parent)"
 long.sim_nt$accession[long.sim_nt$accession == "NC_034971.1...OQ818322"] <- "Canine kobuvirus (major parent) -  E. dupreanum kobuvirus: OQ818322* (recombinant)"
 long.sim_nt$accession[long.sim_nt$accession == "Rhinolophus_kobuvirus...OQ818322"] <- "Unknown (inferred by Rhinolophus kobuvirus) (minor parent) - E. dupreanum kobuvirus: OQ818322* (recombinant)"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Canine kobuvirus (major parent) - E. dupreanum kobuvirus: OQ818322* (inferred by Rhinolophus kobuvirus) (minor parent)",
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Canine kobuvirus (major parent) - Unknown (inferred by Rhinolophus kobuvirus) (minor parent)",
                                                                   "Canine kobuvirus (major parent) -  E. dupreanum kobuvirus: OQ818322* (recombinant)",
                                                                   "Unknown (inferred by Rhinolophus kobuvirus) (minor parent) - E. dupreanum kobuvirus: OQ818322* (recombinant)"))
 #and plot
