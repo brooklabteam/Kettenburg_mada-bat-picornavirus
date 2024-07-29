@@ -1365,7 +1365,7 @@ nucleotide_supp
 
 
 #To plot amino acid supplementary for kobuvirus and mischivirus
-amino_supp<-plot_grid(mischi_map_aa, bat_picorna_aa,
+amino_supp<-plot_grid(mischi_map_aa, kobu_map_aa,
                     ncol=2,
                     labels="AUTO", label_size = 23, align = "hv", axis="b")
 amino_supp
