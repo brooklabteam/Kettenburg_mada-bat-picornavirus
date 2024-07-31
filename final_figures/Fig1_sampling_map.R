@@ -375,7 +375,7 @@ p1 <- ggplot(dat, aes(x=sampling_session, y=roost_site, fill=num_unique_viruses)
   labs(#title = expression("Diversity of" ~italic(Picornavirales) ~"sequences"),
     x = "Sampling session",
     y= "Roost site",
-    fill="Unique virus genera",
+    fill="Unique virus species",
     title="")+
   theme_linedraw()+
   scale_y_discrete(position="left", limits=rev)+
