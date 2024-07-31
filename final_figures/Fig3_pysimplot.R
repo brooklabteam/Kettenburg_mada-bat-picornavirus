@@ -1348,8 +1348,8 @@ sapo_map_aa
 
 
 #To plot figure 3
-fig3<-plot_grid(hep_map_aa,kun_map_aa,
-                 sapelo_map_aa,sapo_map_aa, tescho_map_aa,bat_picorna_aa,
+fig3<-plot_grid(hep_map_aa,kun_map_aa,bat_picorna_aa,
+                 sapelo_map_aa,tescho_map_aa,sapo_map_aa,
                  ncol=3,
                  labels="AUTO", label_size = 23, align = "hv", axis="b")
 fig3
@@ -1357,15 +1357,15 @@ fig3
 
 
 #To plot nucleotide supplementary
-nucleotide_supp<-plot_grid(mischi_nt,hepato_nt,
-                      kobu_nt,kunsagi_nt,sapelo_nt, sapo_nt,bat_picorna_nt,tescho_nt,
+nucleotide_supp<-plot_grid(hepato_nt,kobu_nt,kunsagi_nt,mischi_nt,
+                      bat_picorna_nt,sapelo_nt,tescho_nt,sapo_nt,
                       ncol=3,
                       labels="AUTO", label_size = 23, align = "hv", axis="b")
 nucleotide_supp
 
 
 #To plot amino acid supplementary for kobuvirus and mischivirus
-amino_supp<-plot_grid(mischi_map_aa, kobu_map_aa,
+amino_supp<-plot_grid(kobu_map_aa, mischi_map_aa,
                     ncol=2,
                     labels="AUTO", label_size = 23, align = "hv", axis="b")
 amino_supp
