@@ -1141,7 +1141,7 @@ fig4
 
 
 #To plot supplementary for everything else
-recombination_supp<-plot_grid(mischi_nt, hepato_nt,bat_picorna_nt, bat_picorna_nt_left,
+recombination_supp<-plot_grid(hepato_nt, mischi_nt, bat_picorna_nt, bat_picorna_nt_left,
                            bat_picorna_nt_right, sapelo_nt,
                            ncol=3,
                            labels="AUTO", label_size = 23, align = "hv", axis="b")
