@@ -25,6 +25,9 @@ ___
 - Unclassified cardiovirus taxid 434308
 - Hepatovirus taxid 12091
 - Unclassified hepatovirus taxid 1714618
+- Shanbavirus taxid 2169640
+- Unclassified shanbavirus taxid 2788549
+- Bat picornavirus taxid 1281456
 
 
 For each picorna genus, I downloaded a .csv file which I processed in the attached R scripts [here]() to meet the following criteria: 
