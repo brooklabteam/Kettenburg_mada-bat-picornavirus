@@ -396,8 +396,8 @@ p1
 
 
 ##Put the map and both summary figs together
-sum<-plot_grid(p1,p1_sum, labels=c("B","C"),
-               rel_widths = c(1,1), rel_heights = c(1,3),
+sum<-plot_grid(p1_sum,p1, labels=c("B","C"),
+               rel_widths = c(1,1), rel_heights = c(3,1),
                ncol=1, align="hv", axis="l", label_size = 23)
 sum
 sum<-as.ggplot(sum)
