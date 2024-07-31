@@ -1,0 +1,33 @@
+sample_id,virus,virus_family,virus_general,num_contigs,num_reads,num_reads_log,specific_roost_site,roost_site,sampling_session,num_unique_viruses,num_shared_viruses,processing_date,month,year,bat_species,bat_sex,bat_age_class,young_of_year,pupmom_pair,pup_or_mom,sampleid_pupmom_pair
+ANGB22,Eidolon dupreanum kobuvirus,Picornaviridae,Kobuvirus,1,711325,5.852068073,Angavobe,AngavoKely,4,1,0,2013-11-24,Nov,2013,Eidolon dupreanum,male,J,NA,NA,NA,NA
+KEL72,Eidolon dupreanum hepatovirus,Picornaviridae,Hepatovirus,1,1335,3.125481266,Angavokely,AngavoKely,20,2,0,2014-12-17,Dec,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA
+KEL86,Eidolon dupreanum kobuvirus,Picornaviridae,Kobuvirus,1,4175,3.62065648,Angavokely,AngavoKely,20,2,0,2014-12-18,Dec,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA
+ANGB110,Eidolon dupreanum kobuvirus,Picornaviridae,Kobuvirus,3,539,2.731588765,Angavobe,AngavoKely,30,1,0,2015-06-23,June,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA
+ANGB121,Eidolon dupreanum kobuvirus,Picornaviridae,Kobuvirus,1,363,2.559906625,Angavobe,AngavoKely,33,1,0,2016-01-08,Jan,2016,Eidolon dupreanum,male,A,NA,NA,NA,NA
+KEL166,Eidolon dupreanum sapovirus 1,Caliciviridae,Sapovirus,1,351,2.545307116,Angavokely,AngavoKely,38,4,1,2018-02-15,Feb,2018,Eidolon dupreanum,female,J,yes,no,NA,NA
+KEL168,Eidolon dupreanum sapovirus 1,Caliciviridae,Sapovirus,1,495,2.694605199,Angavokely,AngavoKely,38,4,1,2018-02-15,Mar,2018,Eidolon dupreanum,female,NL,no,no,NA,NA
+KEL148,Eidolon dupreanum kunsagivirus,Picornaviridae,Kunsagivirus,1,1478,3.169674434,Angavokely,AngavoKely,38,4,1,2018-02-15,Apr,2018,Eidolon dupreanum,male,A,no,no,NA,NA
+KEL148,Eidolon dupreanum hepatovirus,Picornaviridae,Hepatovirus,3,996,2.998259338,Angavokely,AngavoKely,38,4,1,2018-02-15,May,2018,Eidolon dupreanum,male,A,no,no,NA,NA
+KEL164,Eidolon dupreanum teschovirus 1,Picornaviridae,Teschovirus,1,372,2.57054294,Angavokely,AngavoKely,38,4,1,2018-02-15,Jun,2018,Eidolon dupreanum,female,J,yes,no,NA,NA
+ANGB141,Eidolon dupreanum kobuvirus 2,Picornaviridae,Kobuvirus,1,38,1.579783597,Angavobe,AngavoKely,41,1,0,2018-04-09,April,2018,Eidolon dupreanum,female,NL,no,no,NA,NA
+KEL200,Eidolon dupreanum sapovirus 3,Caliciviridae,Sapovirus,1,95621,4.980553281,Angavokely,AngavoKely,42,2,0,2018-04-10,April,2018,Eidolon dupreanum,female,NL,no,no,NA,NA
+KEL207,Eidolon dupreanum sapovirus 4,Caliciviridae,Sapovirus,2,202,2.305351369,Angavokely,AngavoKely,42,2,0,2018-04-10,April,2018,Eidolon dupreanum,female,NL,no,no,NA,NA
+MIZ179,Rousettus madagascariensis sapovirus 1,Caliciviridae,Sapovirus,1,25,1.397940009,Maromizaha,Maromizaha,43,1,0,2018-04-14,April,2018,Rousettus madagascariensis,male,A,no,no,NA,NA
+KEL233,Eidolon dupreanum sapelovirus 1,Picornaviridae,Sapelovirus,1,603,2.780317312,Angavokely,AngavoKely,46,1,0,2018-07-27,July,2018,Eidolon dupreanum,male,A,no,no,NA,NA
+MIZ190,Rousettus madagascariensis teschovirus 1,Picornaviridae,Teschovirus,1,8917,3.950218767,Maromizaha,Maromizaha,47,2,0,2018-07-29,July,2018,Rousettus madagascariensis,male,A,no,no,NA,NA
+MIZ194,Rousettus madagascariensis picornavirus 2,Picornaviridae,Unclassified picornavirus,1,37,1.568201724,Maromizaha,Maromizaha,47,2,0,2018-07-29,July,2018,Rousettus madagascariensis,female,NL,no,no,NA,NA
+MIZ205,Rousettus madagascariensis teschovirus 2,Picornaviridae,Teschovirus,1,164750,5.216825423,Maromizaha,Maromizaha,47,2,0,2018-07-29,July,2018,Rousettus madagascariensis,male,A,no,no,NA,NA
+AMB150,Pteropus rufus mischivirus,Picornaviridae,Mischivirus,1,39092,4.59208789,Ambakoana,Ambakoana,48,1,0,2018-08-06,Aug,2018,Pteropus rufus,male,A,no,no,NA,NA
+MIZ219,Rousettus madagascariensis sapovirus 2,Caliciviridae,Sapovirus,2,112,2.049218023,Maromizaha,Maromizaha,50,3,1,2018-09-11,Sept,2018,Rousettus madagascariensis,male,A,no,no,NA,NA
+MIZ214,Rousettus madagascariensis picornavirus 1,Picornaviridae,Unclassified picornavirus,1,702,2.846337112,Maromizaha,Maromizaha,50,3,1,2018-09-11,Sept,2018,Rousettus madagascariensis,male,A,no,no,NA,NA
+MIZ240,Rousettus madagascariensis picornavirus 1,Picornaviridae,Unclassified picornavirus,1,707,2.849419414,Maromizaha,Maromizaha,50,3,1,2018-09-11,Sept,2018,Rousettus madagascariensis,male,A,no,no,NA,NA
+MIZ243,Rousettus madagascariensis sapelovirus 1,Picornaviridae,Sapelovirus,1,1585,3.200029267,Maromizaha,Maromizaha,50,3,1,2018-09-12,Sept,2018,Rousettus madagascariensis,male,J,yes,no,NA,NA
+KEL272,Eidolon dupreanum sapelovirus 2,Picornaviridae,Sapelovirus,1,1531,3.184975191,Angavokely,AngavoKely,56,2,0,2019-01-07,Jan,2019,Eidolon dupreanum,male,A,no,no,NA,NA
+KEL273,Eidolon dupreanum sapelovirus 1,Picornaviridae,Sapelovirus,3,131,2.117271296,Angavokely,AngavoKely,56,2,0,2019-01-07,Jan,2019,Eidolon dupreanum,male,A,no,no,NA,NA
+MIZ345,Rousettus madagascariensis sapovirus 3,Caliciviridae,Sapovirus,1,124,2.093421685,Maromizaha,Maromizaha,59,1,0,2019-01-31,Jan,2019,Rousettus madagascariensis,female,J,yes,yes,pup,MIZ342
+KEL298,Eidolon dupreanum sapelovirus 1,Picornaviridae,Sapelovirus,3,197,2.294466226,Angavokely,AngavoKely,60,1,0,2019-02-06,Feb,2019,Eidolon dupreanum,male,A,no,no,NA,NA
+KEL275B,Eidolon dupreanum sapelovirus 1,Picornaviridae,Sapelovirus,2,69,1.838849091,Angavokely,AngavoKely,63,1,0,2019-03-14,Mar,2019,Eidolon dupreanum,female,NL,no,no,NA,NA
+MIZ405,Rousettus madagascariensis sapovirus 3,Caliciviridae,Sapovirus,5,443,2.646403726,Maromizaha,Maromizaha,65,2,0,2019-04-09,May,2019,Rousettus madagascariensis,male,A,NA,no,NA,NA
+MIZ405,Rousettus madagascariensis picornavirus 3,Picornaviridae,Unclassified picornavirus,4,1232,3.090610708,Maromizaha,Maromizaha,65,2,0,2019-04-09,May,2019,Rousettus madagascariensis,male,A,NA,no,NA,NA
+KEL318,Eidolon dupreanum kobuvirus,Picornaviridae,Kobuvirus,1,30035,4.477627636,Angavokely,AngavoKely,66,1,0,2019-04-23,May,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA
+KEL367,Eidolon dupreanum cardiovirus,Picornaviridae,Cardiovirus,1,91641,4.96208982,Angavokely,AngavoKely,75,1,0,2019-08-24,Aug,2019,Eidolon dupreanum,male,A,no,no,NA,NA

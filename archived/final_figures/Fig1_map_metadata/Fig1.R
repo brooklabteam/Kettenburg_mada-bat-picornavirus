@@ -30,7 +30,7 @@ homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus"
 #basewd = paste(strsplit(homewd, "/")[[1]][1:6], collapse = "/")
 #Cara had the above command as basewd but it did not work for me and kept going into the Mada_bat_picorna folder
 #So using Sophia's astrovirus map file I changed it to the basewd command below
-basewd = "/Users/gwenddolenkettenburg/Desktop/Mada-GIS"
+basewd = "/Users/gwenddolenkettenburg/Desktop/developer/Mada-GIS"
 #mapwd = paste0(basewd, "/", "Mada_GIS")
 setwd(paste0(homewd, "/", "sampling_map/"))
 

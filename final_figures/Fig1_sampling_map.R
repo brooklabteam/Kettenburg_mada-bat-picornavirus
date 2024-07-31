@@ -15,6 +15,10 @@ library(ggplot2)
 library(ggnewscale)
 library(ggspatial)
 library(ggrepel)
+library(reshape)
+library(paletteer)
+library(hrbrthemes)
+library(reshape)
 
 # To run this script, change the "mainwd" to wherever this folder
 # ("Mada_bat_picorna") is stored on your computer
@@ -200,20 +204,6 @@ piesN_pos = subset(pies_pos, plot_class_pos=="Negative")
 ###Get the pie data in the right format###
 colz = c('Positive' ="goldenrod1", 'Negative' ="cadetblue1", "Picorna positive"="goldenrod1", "Calici positive"="tomato1")
 
-p3_picorna<-ggplot() +
-  geom_scatterpie(aes(x=longitude_e, y=latitude_s, r=(N/1000)),
-                  data = pies_picorna, cols="plot_class_picorna", long_format=TRUE) +
-  scale_fill_manual(values=colz)
-
-p3_picorna
-
-p3_calici<-ggplot() +
-  geom_scatterpie(aes(x=longitude_e, y=latitude_s, r=(N/1000)),
-                  data = pies_calici, cols="plot_class_calici", long_format=TRUE) +
-  scale_fill_manual(values=colz)
-
-p3_calici
-
 p3_pos<-ggplot() +
   geom_scatterpie(aes(x=longitude_e, y=latitude_s, r=(N/1000)),
                   data = pies_pos, cols="plot_class_pos", long_format=TRUE) +
@@ -290,7 +280,7 @@ p4_pos <- p2b+
                   data = pies_pos, cols="plot_class_pos", long_format=TRUE) +
   theme_bw() +theme(panel.grid = element_blank(),
                     plot.title = element_text(color="black", size=12, face="bold"),
-                    plot.margin = unit(c(-1,.5,-1.5,.1),"cm"),
+                    plot.margin = unit(c(.1,.5,.1,.5),"cm"),
                     axis.title.x = element_text(color="black", size=12),
                     axis.title.y = element_text(color="black", size=12),
                     legend.position=c(.9,.75),
@@ -305,12 +295,127 @@ p4_pos <- p2b+
 
 p4_pos
 
-ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map.pdf"),
-       plot = p4_pos,
+# ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map.pdf"),
+#        plot = p4_pos,
+#        units="mm",  
+#        width=60, 
+#        height=60, 
+#        scale=3, 
+#        dpi=300)
+
+
+##Add other demographic data now
+
+homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
+
+dat <- read.csv(file = paste0(homewd,"/metadata/summary_contig_reads_for_heatmap.csv"), header = T, stringsAsFactors = F)
+head(dat)
+names(dat)
+
+dat$genus<-factor(dat$genus, levels=c("Cardiovirus", "Hepatovirus", "Kobuvirus", "Kunsagivirus",
+                                      "Mischivirus", "Sapelovirus","Sapovirus","Teschovirus","Unclassified picornavirus"))
+dat$family<-factor(dat$family, levels=c("Caliciviridae", "Picornaviridae"))
+dat$species<-factor(dat$species, levels=c("Eidolon dupreanum","Pteropus rufus", "Rousettus madagascariensis"))
+
+##Make a plot showing the number of viruses per genera and family
+p1_sum <- ggplot(dat, aes(x=species, y=genus, fill=num_contigs)) +
+  geom_tile() +
+  #geom_tile(aes(fill = cut(num_genome,breaks=0:6, labels=1:6))) +
+  #scale_fill_manual(values=c("lightblue1","skyblue", "royalblue1")) +
+  scale_fill_viridis_c(option = "C", direction = -1) +
+  #scale_fill_gradient(low="yellow", high="red")+
+  #facet_wrap(~family, ncol=1,  scales = "free_y")+
+  facet_nested(family~., scales="free", space="free",
+               switch="y")+
+  
+  labs(#title = expression("Diversity of" ~italic(Picornavirales) ~"sequences"),
+    x = "Bat species",
+    y= "",
+    fill="Novel sequences",
+    title="")+
+  theme_linedraw()+
+  scale_y_discrete(position="left", limits=rev)+
+  scale_x_discrete(position="top")+
+  theme(plot.margin = margin(0, 1, 0, 0, "pt"),
+        plot.background = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        plot.title = element_text(size=10, face="italic"), 
+        axis.text.y = element_text(size=10,face="italic"),
+        axis.text.x = element_text(size=10,face="italic"),
+        legend.text = element_text(size=10),
+        legend.title = element_text(size=10),
+        legend.position = "bottom")
+p1_sum
+
+##Add a plot showing the shared number of viruses in population during each sampling session
+dat <- read.csv(file = paste0(homewd,"/metadata/demo_data_indiv_pos_heatmap_simple.csv"), header = T, stringsAsFactors = F)
+head(dat)
+names(dat)
+
+dat$bat_species<-factor(dat$bat_species, levels=c("Pteropus rufus","Eidolon dupreanum", "Rousettus madagascariensis"))
+dat$roost_site<-factor(dat$roost_site, levels=c("AngavoKely","Ambakoana","Maromizaha"))
+dat$sampling_session<-factor(dat$sampling_session)
+
+#Subset because Pteropus only has one sample pos with only one virus
+dat<-subset(dat, bat_species!="Pteropus rufus")
+
+
+p1 <- ggplot(dat, aes(x=sampling_session, y=roost_site, fill=num_unique_viruses)) +
+  geom_tile() +
+  #geom_tile(aes(fill = cut(num_genome,breaks=0:6, labels=1:6))) +
+  #scale_fill_manual(values=c("lightblue1","skyblue", "royalblue1")) +
+  scale_fill_viridis_c(option = "C", direction = -1) +
+  #scale_fill_gradient(low="yellow", high="red")+
+  #facet_wrap(~family, ncol=1,  scales = "free_y")+
+  # facet_nested(family~., scales="free", space="free",
+  #              switch="y")+
+  # facet_nested(family+genus~., scales="free", space="free",
+  #              switch="y", nest_line = element_line(color="white"), solo_line = TRUE)+
+  labs(#title = expression("Diversity of" ~italic(Picornavirales) ~"sequences"),
+    x = "Sampling session",
+    y= "Roost site",
+    fill="Unique virus genera",
+    title="")+
+  theme_linedraw()+
+  scale_y_discrete(position="left", limits=rev)+
+  scale_x_discrete(position="top")+
+  theme(plot.margin = margin(0, 1, 0, 0, "pt"),
+        plot.background = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        plot.title = element_text(size=10, face="italic"), 
+        axis.text.y = element_text(size=10),
+        axis.text.x = element_text(size=10),
+        legend.text = element_text(size=10),
+        legend.title = element_text(size=10),
+        legend.position = "bottom",
+        #legend.position = c(0.2,0.15),
+        legend.direction = "horizontal")
+p1
+
+
+##Put the map and both summary figs together
+sum<-plot_grid(p1,p1_sum, labels=c("B","C"),
+               rel_widths = c(1,1), rel_heights = c(1,3),
+               ncol=1, align="hv", axis="l", label_size = 23)
+sum
+sum<-as.ggplot(sum)
+
+
+
+Fig1<-plot_grid(p4_pos, sum, labels=c("A",""),
+                      rel_widths = c(1,1), rel_heights = c(1.5,1),
+                      ncol=2, align="hv", axis="l", label_size = 23)
+Fig1
+Fig1<-as.ggplot(Fig1)
+
+
+ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_demo.pdf"),
+       plot = Fig1,
        units="mm",  
-       width=60, 
-       height=60, 
+       width=130, 
+       height=90, 
        scale=3, 
        dpi=300)
-
 
