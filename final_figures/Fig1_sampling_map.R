@@ -313,8 +313,8 @@ head(dat)
 names(dat)
 
 dat$genus<-factor(dat$genus, levels=c("Cardiovirus", "Hepatovirus", "Kobuvirus", "Kunsagivirus",
-                                      "Mischivirus", "Sapelovirus","Sapovirus","Teschovirus","Unclassified picornavirus"))
-dat$family<-factor(dat$family, levels=c("Caliciviridae", "Picornaviridae"))
+                                      "Mischivirus","Unclassified picornavirus", "Sapelovirus","Sapovirus","Teschovirus"))
+dat$family<-factor(dat$family, levels=c("Picornaviridae","Caliciviridae"))
 dat$species<-factor(dat$species, levels=c("Eidolon dupreanum","Pteropus rufus", "Rousettus madagascariensis"))
 
 ##Make a plot showing the number of viruses per genera and family
