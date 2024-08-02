@@ -304,49 +304,6 @@ p4_pos
 #        dpi=300)
 
 
-##Add other demographic data now
-
-homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
-
-dat <- read.csv(file = paste0(homewd,"/metadata/summary_contig_reads_for_heatmap.csv"), header = T, stringsAsFactors = F)
-head(dat)
-names(dat)
-
-dat$genus<-factor(dat$genus, levels=c("Cardiovirus", "Hepatovirus", "Kobuvirus", "Kunsagivirus",
-                                      "Mischivirus","Unclassified picornavirus", "Sapelovirus","Sapovirus","Teschovirus"))
-dat$family<-factor(dat$family, levels=c("Picornaviridae","Caliciviridae"))
-dat$species<-factor(dat$species, levels=c("Eidolon dupreanum","Pteropus rufus", "Rousettus madagascariensis"))
-
-##Make a plot showing the number of viruses per genera and family
-p1_sum <- ggplot(dat, aes(x=species, y=genus, fill=num_contigs)) +
-  geom_tile() +
-  #geom_tile(aes(fill = cut(num_genome,breaks=0:6, labels=1:6))) +
-  #scale_fill_manual(values=c("lightblue1","skyblue", "royalblue1")) +
-  scale_fill_viridis_c(option = "C", direction = -1) +
-  #scale_fill_gradient(low="yellow", high="red")+
-  #facet_wrap(~family, ncol=1,  scales = "free_y")+
-  facet_nested(family~., scales="free", space="free",
-               switch="y")+
-  
-  labs(#title = expression("Diversity of" ~italic(Picornavirales) ~"sequences"),
-    x = "Bat species",
-    y= "",
-    fill="Novel sequences",
-    title="")+
-  theme_linedraw()+
-  scale_y_discrete(position="left", limits=rev)+
-  scale_x_discrete(position="top")+
-  theme(plot.margin = margin(0, 1, 0, 0, "pt"),
-        plot.background = element_blank(),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        plot.title = element_text(size=10, face="italic"), 
-        axis.text.y = element_text(size=10,face="italic"),
-        axis.text.x = element_text(size=10,face="italic"),
-        legend.text = element_text(size=10),
-        legend.title = element_text(size=10),
-        legend.position = "bottom")
-p1_sum
 
 ##Add a plot showing the shared number of viruses in population during each sampling session
 dat <- read.csv(file = paste0(homewd,"/metadata/demo_data_indiv_pos_heatmap_simple.csv"), header = T, stringsAsFactors = F)
@@ -361,7 +318,8 @@ dat$sampling_session<-factor(dat$sampling_session)
 dat<-subset(dat, bat_species!="Pteropus rufus")
 
 
-p1 <- ggplot(dat, aes(x=sampling_session, y=roost_site, fill=num_unique_viruses)) +
+#simple summary
+p1 <- ggplot(dat, aes(x=roost_site, y=sampling_session, fill=num_unique_viruses)) +
   geom_tile() +
   #geom_tile(aes(fill = cut(num_genome,breaks=0:6, labels=1:6))) +
   #scale_fill_manual(values=c("lightblue1","skyblue", "royalblue1")) +
@@ -373,8 +331,8 @@ p1 <- ggplot(dat, aes(x=sampling_session, y=roost_site, fill=num_unique_viruses)
   # facet_nested(family+genus~., scales="free", space="free",
   #              switch="y", nest_line = element_line(color="white"), solo_line = TRUE)+
   labs(#title = expression("Diversity of" ~italic(Picornavirales) ~"sequences"),
-    x = "Sampling session",
-    y= "Roost site",
+    x = "Roost site",
+    y= "Sampling session",
     fill="Unique virus species",
     title="")+
   theme_linedraw()+
@@ -395,27 +353,109 @@ p1 <- ggplot(dat, aes(x=sampling_session, y=roost_site, fill=num_unique_viruses)
 p1
 
 
+
+##stacked bar plot
+dat <- read.csv(file = paste0(homewd,"/metadata/demo_data_indiv_pos_heatmap_species.csv"), header = T, stringsAsFactors = F)
+head(dat)
+names(dat)
+
+dat$bat_species<-factor(dat$bat_species, levels=c("Pteropus rufus","Eidolon dupreanum", "Rousettus madagascariensis"))
+dat$roost_site<-factor(dat$roost_site, levels=c("AngavoKely","Ambakoana","Maromizaha"))
+dat$sampling_session<-factor(dat$sampling_session)
+
+#Subset because Pteropus only has one sample pos with only one virus
+dat<-subset(dat, bat_species!="Pteropus rufus")
+
+#by virus
+p2<-ggplot(dat) +
+  geom_bar(aes(x = sampling_session, y = num_virus, fill = virus),
+           position = "stack",
+           stat = "identity") +
+  facet_nested(roost_site~., scales="free", space="free")+
+  
+  labs(
+    x = "Sampling session",
+    y= "Number of sequences",
+    fill="Virus species",
+    title="")+
+  theme_linedraw()+
+  theme(plot.margin = margin(0, 1, 0, 30, "pt"),
+        plot.background = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.text.y = element_text(size=10),
+        axis.text.x = element_text(size=10),
+        legend.text = element_text(size=8),
+        legend.title = element_text(size=9),
+        legend.position = "right")
+
+p2
+
+
+#by virus genus
+p3<-ggplot(dat) +
+  geom_bar(aes(x = sampling_session, y = num_genus, fill = genus),
+           position = "stack",
+           stat = "identity") +
+  facet_nested(roost_site~., scales="free", space="free")+
+  
+  labs(
+    x = "Sampling session",
+    y= "Number of sequences",
+    fill="Virus genus",
+    title="")+
+  theme_linedraw()+
+  theme(plot.margin = margin(0, 1, 0, 30, "pt"),
+        plot.background = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.text.y = element_text(size=10),
+        axis.text.x = element_text(size=10),
+        legend.text = element_text(size=8),
+        legend.title = element_text(size=9),
+        legend.position = "right")
+        #legend.position = c(0.2,0.3))
+
+p3
+
+
+
+
 ##Put the map and both summary figs together
-sum<-plot_grid(p1_sum,p1, labels=c("B","C"),
-               rel_widths = c(1,1), rel_heights = c(3,1),
-               ncol=1, align="hv", axis="l", label_size = 23)
+sum<-plot_grid(p3,p2, labels=c("B","C"),
+               rel_widths = c(1,1), rel_heights = c(1,1),
+               ncol=1, align="hv", axis="b", label_size = 23)
 sum
 sum<-as.ggplot(sum)
 
 
 
 Fig1<-plot_grid(p4_pos, sum, labels=c("A",""),
-                      rel_widths = c(1,1), rel_heights = c(1.5,1),
+                      rel_widths = c(1,1.2), rel_heights = c(1,1),
                       ncol=2, align="hv", axis="l", label_size = 23)
 Fig1
 Fig1<-as.ggplot(Fig1)
 
+Fig1.2<-plot_grid(p4_pos, p3, labels=c("A","B"),
+                rel_widths = c(1,1.2), rel_heights = c(0.8,1),
+                ncol=2, align="hv", axis="l", label_size = 23)
+Fig1.2
+Fig1.2<-as.ggplot(Fig1.2)
 
-ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_demo.pdf"),
+
+ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_demo_v1.pdf"),
        plot = Fig1,
        units="mm",  
        width=130, 
-       height=90, 
+       height=80, 
+       scale=3, 
+       dpi=300)
+
+ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_demo_v2.pdf"),
+       plot = Fig1.2,
+       units="mm",  
+       width=130, 
+       height=50, 
        scale=3, 
        dpi=300)
 

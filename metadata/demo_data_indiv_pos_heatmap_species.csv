@@ -1,0 +1,31 @@
+roost_site,sampling_session,num_unique_viruses,num_shared_viruses,num_virus,num_genus,genus,virus,bat_species
+AngavoKely,4,1,0,1,1,Kobuvirus,Eidolon dupreanum kobuvirus,Eidolon dupreanum
+AngavoKely,20,2,0,1,1,Hepatovirus,Eidolon dupreanum hepatovirus,Eidolon dupreanum
+AngavoKely,20,2,0,1,1,Kobuvirus,Eidolon dupreanum kobuvirus,Eidolon dupreanum
+AngavoKely,30,1,0,1,1,Kobuvirus,Eidolon dupreanum kobuvirus,Eidolon dupreanum
+AngavoKely,33,1,0,1,1,Kobuvirus,Eidolon dupreanum kobuvirus,Eidolon dupreanum
+AngavoKely,38,4,1,2,1,Sapovirus,Eidolon dupreanum sapovirus 1,Eidolon dupreanum
+AngavoKely,38,4,1,1,1,Kunsagivirus,Eidolon dupreanum kunsagivirus,Eidolon dupreanum
+AngavoKely,38,4,1,1,1,Hepatovirus,Eidolon dupreanum hepatovirus,Eidolon dupreanum
+AngavoKely,38,4,1,1,1,Teschovirus,Eidolon dupreanum teschovirus 1,Eidolon dupreanum
+AngavoKely,41,1,0,1,1,Kobuvirus,Eidolon dupreanum kobuvirus 2,Eidolon dupreanum
+AngavoKely,42,2,0,1,2,Sapovirus,Eidolon dupreanum sapovirus 3,Eidolon dupreanum
+AngavoKely,42,2,0,1,2,Sapovirus,Eidolon dupreanum sapovirus 4,Eidolon dupreanum
+Maromizaha,43,1,0,1,1,Sapovirus,Rousettus madagascariensis sapovirus 1,Rousettus madagascariensis
+AngavoKely,46,1,0,1,1,Sapelovirus,Eidolon dupreanum sapelovirus 1,Eidolon dupreanum
+Maromizaha,47,2,0,1,2,Teschovirus,Rousettus madagascariensis teschovirus 1,Rousettus madagascariensis
+Maromizaha,47,2,0,1,1,Unclassified bat picornavirus,Rousettus madagascariensis picornavirus 2,Rousettus madagascariensis
+Maromizaha,47,2,0,1,2,Teschovirus,Rousettus madagascariensis teschovirus 2,Rousettus madagascariensis
+Ambakoana,48,1,0,1,1,Mischivirus,Pteropus rufus mischivirus,Pteropus rufus
+Maromizaha,50,3,1,1,1,Sapovirus,Rousettus madagascariensis sapovirus 2,Rousettus madagascariensis
+Maromizaha,50,3,1,2,1,Unclassified bat picornavirus,Rousettus madagascariensis picornavirus 1,Rousettus madagascariensis
+Maromizaha,50,3,1,1,1,Sapelovirus,Rousettus madagascariensis sapelovirus 1,Rousettus madagascariensis
+AngavoKely,56,2,0,1,2,Sapelovirus,Eidolon dupreanum sapelovirus 2,Eidolon dupreanum
+AngavoKely,56,2,0,1,2,Sapelovirus,Eidolon dupreanum sapelovirus 1,Eidolon dupreanum
+Maromizaha,59,1,0,1,1,Sapovirus,Rousettus madagascariensis sapovirus 3,Rousettus madagascariensis
+AngavoKely,60,1,0,1,1,Sapelovirus,Eidolon dupreanum sapelovirus 1,Eidolon dupreanum
+AngavoKely,63,1,0,1,1,Sapelovirus,Eidolon dupreanum sapelovirus 1,Eidolon dupreanum
+Maromizaha,65,2,0,1,1,Sapovirus,Rousettus madagascariensis sapovirus 3,Rousettus madagascariensis
+Maromizaha,65,2,0,1,1,Unclassified bat picornavirus,Rousettus madagascariensis picornavirus 3,Rousettus madagascariensis
+AngavoKely,66,1,0,1,1,Kobuvirus,Eidolon dupreanum kobuvirus,Eidolon dupreanum
+AngavoKely,75,1,0,1,1,Cardiovirus,Eidolon dupreanum cardiovirus,Eidolon dupreanum

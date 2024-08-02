@@ -1,0 +1,180 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        tescho_full_align.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            38
+  #sites:           12393
+  #patterns:        5639
+  Max. thread mem:  102 MB
+
+Output:
+  Log:           tescho_full_align.fasta.log
+  Starting tree: tescho_full_align.fasta.tree
+  Results:       tescho_full_align.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/14
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM2+G4            7   -127688.9581    256131.9072         0.0000    0.9997
+       2  GTR+G4             9   -127687.6952    256148.2310        16.3239    0.0003
+       3  TIM2+I+G4          8   -127698.4050    256160.2258        28.3186    0.0000
+       4  GTR+I+G4          10   -127697.1518    256176.5691        44.6620    0.0000
+       5  TPM2uf+G4          6   -127818.2019    256380.9699       249.0627    0.0000
+       6  TVM+G4             8   -127816.8143    256397.0444       265.1372    0.0000
+       7  TPM2uf+I+G4        7   -127828.8948    256411.7806       279.8734    0.0000
+       8  TrN+G4             6   -127840.4583    256425.4827       293.5756    0.0000
+       9  TVM+I+G4           9   -127827.5745    256427.9897       296.0825    0.0000
+      10  TIM1+G4            7   -127840.4402    256434.8714       302.9642    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              TIM2+G4
+lnL:                -127688.9581
+Frequencies:        0.3006 0.2311 0.2153 0.2529
+Subst. Rates:       1.8292 4.9827 1.8292 1.0000 8.1162 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.5321
+Score:              256131.9072
+Weight:             0.9997
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              1.0000
+Gamma-Inv:          0.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.5321
+Alpha-P.Inv:        0.5682
+P.Inv-Alpha:        0.0222
+Frequencies:        0.3006 0.2311 0.2153 0.2529 
+
+Commands:
+  > phyml  -i tescho_full_align.fasta -m 010232 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s tescho_full_align.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa tescho_full_align.fasta --model TIM2+G4
+  > paup -s tescho_full_align.fasta
+  > iqtree -s tescho_full_align.fasta -m TIM2+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM2+G4            7   -127688.9581    255537.9162         0.0000    0.6763
+       2  GTR+G4             9   -127687.6952    255539.3903         1.4741    0.3236
+       3  TIM2+I+G4          8   -127698.4050    255558.8100        20.8938    0.0000
+       4  GTR+I+G4          10   -127697.1518    255560.3035        22.3873    0.0000
+       5  TPM2uf+G4          6   -127818.2019    255794.4038       256.4876    0.0000
+       6  TVM+G4             8   -127816.8143    255795.6285       257.7123    0.0000
+       7  TPM2uf+I+G4        7   -127828.8948    255817.7896       279.8734    0.0000
+       8  TVM+I+G4           9   -127827.5745    255819.1489       281.2327    0.0000
+       9  TrN+G4             6   -127840.4583    255838.9167       301.0005    0.0000
+      10  TIM1+G4            7   -127840.4402    255840.8804       302.9642    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TIM2+G4
+lnL:                -127688.9581
+Frequencies:        0.3006 0.2311 0.2153 0.2529
+Subst. Rates:       1.8292 4.9827 1.8292 1.0000 8.1162 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.5321
+Score:              255537.9162
+Weight:             0.6763
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              1.0000
+Gamma-Inv:          0.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.5321
+Alpha-P.Inv:        0.5681
+P.Inv-Alpha:        0.0222
+Frequencies:        0.3006 0.2311 0.2153 0.2530 
+
+Commands:
+  > phyml  -i tescho_full_align.fasta -m 010232 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s tescho_full_align.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa tescho_full_align.fasta --model TIM2+G4
+  > paup -s tescho_full_align.fasta
+  > iqtree -s tescho_full_align.fasta -m TIM2+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TIM2+G4            7   -127688.9581    255538.9162         0.0000    0.6763
+       2  GTR+G4             9   -127687.6952    255540.3903         1.4741    0.3236
+       3  TIM2+I+G4          8   -127698.4050    255559.8100        20.8938    0.0000
+       4  GTR+I+G4          10   -127697.1518    255561.3035        22.3873    0.0000
+       5  TPM2uf+G4          6   -127818.2019    255795.4038       256.4876    0.0000
+       6  TVM+G4             8   -127816.8143    255796.6285       257.7123    0.0000
+       7  TPM2uf+I+G4        7   -127828.8948    255818.7896       279.8734    0.0000
+       8  TVM+I+G4           9   -127827.5745    255820.1489       281.2327    0.0000
+       9  TrN+G4             6   -127840.4583    255839.9167       301.0005    0.0000
+      10  TIM1+G4            7   -127840.4402    255841.8804       302.9642    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TIM2+G4
+lnL:                -127688.9581
+Frequencies:        0.3006 0.2311 0.2153 0.2529
+Subst. Rates:       1.8292 4.9827 1.8292 1.0000 8.1162 1.0000 
+Inv. sites prop:    -
+Gamma shape:        0.5321
+Score:              255538.9162
+Weight:             0.6763
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              1.0000
+Gamma-Inv:          0.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.5321
+Alpha-P.Inv:        0.5681
+P.Inv-Alpha:        0.0222
+Frequencies:        0.3006 0.2311 0.2153 0.2530 
+
+Commands:
+  > phyml  -i tescho_full_align.fasta -m 010232 -f m -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s tescho_full_align.fasta -m GTRGAMMAX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa tescho_full_align.fasta --model TIM2+G4
+  > paup -s tescho_full_align.fasta
+  > iqtree -s tescho_full_align.fasta -m TIM2+G4
+Done
