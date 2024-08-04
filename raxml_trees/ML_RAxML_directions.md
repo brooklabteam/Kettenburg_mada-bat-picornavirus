@@ -157,7 +157,7 @@ Best model and threads for teschovirus all genomes: TIM2+G4 9 threads
 Best model and threads for picornaviridae refseq center all genomes: GTR+G4 10 threads
 Best model and threads for picornaviridae refseq left all genomes: GTR+G4 10 threads
 Best model and threads for picornaviridae refseq right all genomes: GTR+G4 10 threads
-Best model and threads for polymerase summary tree: GTR+G4 7 threads
+Best model and threads for polymerase summary tree: GTR+I+G4 6 threads
 
 ---
 

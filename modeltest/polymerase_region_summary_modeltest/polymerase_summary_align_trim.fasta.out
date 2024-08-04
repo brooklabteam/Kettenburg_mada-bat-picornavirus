@@ -1,0 +1,180 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        polymerase_summary_align_trim.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            293
+  #sites:           1991
+  #patterns:        1906
+  Max. thread mem:  275 MB
+
+Output:
+  Log:           polymerase_summary_align_trim.fasta.log
+  Starting tree: polymerase_summary_align_trim.fasta.tree
+  Results:       polymerase_summary_align_trim.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/14
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10   -166667.6644    337839.9895         0.0000    0.6925
+       2  GTR+G4             9   -166672.2747    337841.6137         1.6242    0.3074
+       3  TVM+G4             8   -166684.6354    337858.7387        18.7492    0.0001
+       4  TVM+I+G4           9   -166680.9725    337859.0093        19.0198    0.0001
+       5  TIM2+I+G4          8   -166715.9542    337921.3762        81.3867    0.0000
+       6  TIM2+G4            7   -166722.4438    337926.7591        86.7696    0.0000
+       7  TPM2uf+I+G4        7   -166724.2379    337930.3472        90.3578    0.0000
+       8  TPM2uf+G4          6   -166729.0191    337932.3132        92.3238    0.0000
+       9  TIM3+I+G4          8   -166920.4575    338330.3829       490.3934    0.0000
+      10  TPM3uf+G4          6   -166929.7824    338333.8399       493.8504    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -166667.6644
+Frequencies:        0.2417 0.2284 0.2219 0.3080
+Subst. Rates:       2.1667 4.0143 1.8480 1.3991 4.5821 1.0000 
+Inv. sites prop:    0.0219
+Gamma shape:        1.2480
+Score:              337839.9895
+Weight:             0.6925
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.3075
+Gamma-Inv:          0.6925
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.1841
+Alpha-P.Inv:        1.2480
+P.Inv-Alpha:        0.0219
+Frequencies:        0.2415 0.2283 0.2219 0.3082 
+
+Commands:
+  > phyml  -i polymerase_summary_align_trim.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s polymerase_summary_align_trim.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa polymerase_summary_align_trim.fasta --model GTR+I+G4
+  > paup -s polymerase_summary_align_trim.fasta
+  > iqtree -s polymerase_summary_align_trim.fasta -m GTR+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10   -166667.6644    334521.3289         0.0000    0.9737
+       2  GTR+G4             9   -166672.2747    334528.5494         7.2206    0.0263
+       3  TVM+I+G4           9   -166680.9725    334545.9451        24.6162    0.0000
+       4  TVM+G4             8   -166684.6354    334551.2708        29.9420    0.0000
+       5  TIM2+I+G4          8   -166715.9542    334613.9083        92.5795    0.0000
+       6  TIM2+G4            7   -166722.4438    334624.8876       103.5588    0.0000
+       7  TPM2uf+I+G4        7   -166724.2379    334628.4758       107.1469    0.0000
+       8  TPM2uf+G4          6   -166729.0191    334636.0382       114.7093    0.0000
+       9  TIM3+I+G4          8   -166920.4575    335022.9150       501.5862    0.0000
+      10  TIM3+G4            7   -166926.1843    335032.3687       511.0398    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -166667.6644
+Frequencies:        0.2417 0.2284 0.2219 0.3080
+Subst. Rates:       2.1667 4.0143 1.8480 1.3991 4.5821 1.0000 
+Inv. sites prop:    0.0219
+Gamma shape:        1.2480
+Score:              334521.3289
+Weight:             0.9737
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0263
+Gamma-Inv:          0.9737
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.1841
+Alpha-P.Inv:        1.2480
+P.Inv-Alpha:        0.0219
+Frequencies:        0.2416 0.2284 0.2219 0.3081 
+
+Commands:
+  > phyml  -i polymerase_summary_align_trim.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s polymerase_summary_align_trim.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa polymerase_summary_align_trim.fasta --model GTR+I+G4
+  > paup -s polymerase_summary_align_trim.fasta
+  > iqtree -s polymerase_summary_align_trim.fasta -m GTR+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10   -166667.6644    335025.3289         0.0000    0.9315
+       2  GTR+G4             9   -166672.2747    335030.5494         5.2206    0.0685
+       3  TVM+I+G4           9   -166680.9725    335047.9451        22.6162    0.0000
+       4  TVM+G4             8   -166684.6354    335051.2708        25.9420    0.0000
+       5  TIM2+I+G4          8   -166715.9542    335113.9083        88.5795    0.0000
+       6  TIM2+G4            7   -166722.4438    335122.8876        97.5588    0.0000
+       7  TPM2uf+I+G4        7   -166724.2379    335126.4758       101.1469    0.0000
+       8  TPM2uf+G4          6   -166729.0191    335132.0382       106.7093    0.0000
+       9  TIM3+I+G4          8   -166920.4575    335522.9150       497.5862    0.0000
+      10  TIM3+G4            7   -166926.1843    335530.3687       505.0398    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+I+G4
+lnL:                -166667.6644
+Frequencies:        0.2417 0.2284 0.2219 0.3080
+Subst. Rates:       2.1667 4.0143 1.8480 1.3991 4.5821 1.0000 
+Inv. sites prop:    0.0219
+Gamma shape:        1.2480
+Score:              335025.3289
+Weight:             0.9315
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0685
+Gamma-Inv:          0.9315
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.1841
+Alpha-P.Inv:        1.2480
+P.Inv-Alpha:        0.0219
+Frequencies:        0.2416 0.2284 0.2219 0.3081 
+
+Commands:
+  > phyml  -i polymerase_summary_align_trim.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s polymerase_summary_align_trim.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa polymerase_summary_align_trim.fasta --model GTR+I+G4
+  > paup -s polymerase_summary_align_trim.fasta
+  > iqtree -s polymerase_summary_align_trim.fasta -m GTR+I+G4
+Done
