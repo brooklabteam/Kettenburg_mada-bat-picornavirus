@@ -1,0 +1,35 @@
+,,,Breakpoint Positions
+,,In Alignment, ,In Recombinant Sequence, ,Relative to HQ595345.1,, , , , , , Detection Methods
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+ 1 ,2~, 8404, 8460, 6738, 6781, 7540, 7576,^KJ641690.1,Unknown (OP963617.1),KJ641693.1,NS, 4.69653581360594E-07,NS, 2.62219908832505E-03, 3.42903432348431E-03,NS,NS,NS,NS,
+ 1,,,,,,,,KJ641687.1,,HQ595345.1
+ 1,,,,,,,,KJ641699.1,,NC_015934.1
+ 1,,,,,,,,,,OQ363775.1
+ 1,,,,,,,,,,OQ363764.1
+
+ 2 ,3~, 1580, 1704, 1365, 1464, 1173, 1265,PP711930,KJ641687.1,OQ818328, 4.17893600318189E-04,NS, 4.01451943435571E-02, 1.01303982280952E-02, 1.8614778974695E-04, 7.54845404443116E-27,NS,NS,NS,
+ 2,,,,,,,,PP711909,KJ641690.1,OQ818325
+
+ 3 ,10~, 1104, 1196, 119, 208, 717, 806,^KJ641699.1,KJ641693.1,Unknown (PP711930),NS,NS,NS, 4.39251070918648E-03,NS, 3.48961786014689E-05,NS,NS,NS,
+ 3,,,,,,,,KJ641687.1,,
+
+ 4 ,14~, 5291, 5456, 4688, 4853, 4523, 4688,OQ818328,PP745912,PP766469, 6.70152475260875E-03,NS, 2.80308386830462E-03,NS,NS,NS,NS,NS, 4.68485547102626E-02,
+ 4,,,,,,,,OQ818325[T],,
+
+ 5 ,19~, 4893, 5654, 4332, 5090, 4125, 4883,PP711946,PP746000,PP766469, .013170418669311,NS, 1.29481477713495E-02,NS, 2.98353559066891E-02, 1.26337815907339E-06,NS,NS, 1.13658920243712E-02,
+
+ 6 ,25~, 6411, 6704, 5711, 6004, 5631, 5924,^OP963617.1,KJ641693.1,Unknown (PP711945),NS,NS,NS, 3.44312731807877E-02, 1.25102072223399E-02,NS,NS,NS,NS,
+
+ 7 ,26~, 4509, 4816, 3965, 4255, 3758, 4048,PP711946,KJ641699.1,PP711930,NS,NS,NS, 3.79369818556241E-02,NS,NS,NS,NS, 2.34451122500289E-02,
+
+Table Key:
+~            = It is possible that this apparent recombination signal could have been caused by an evolutionary
+               process other than recombination.
+*            = The actual breakpoint position is undetermined (it was most likely overprinted by a subsequent 
+               recombination event).
+^            = The recombinant sequence may have been misidentified (one of the identified parents might be the recombinant)
+Minor Parent = Parent contributing the smaller fraction of sequence.
+Major Parent = Parent contributing the larger fraction of sequence.
+Unknown      = Only one parent and a recombinant need be in the alignment for a recombination event to be detectable.
+               The sequence listed as unknown was used to infer the existance of a missing parental sequence.
+NS           = No significant P-value was recorded for this recombination event using this method.

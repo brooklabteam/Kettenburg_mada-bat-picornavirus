@@ -1,0 +1,25 @@
+,,,Breakpoint Positions
+,,In Alignment, ,In Recombinant Sequence, ,Relative to NC_003987,, , , , , , Detection Methods
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+ 1 ,1~, 1550, 1618, 1513, 1581, 1522, 1590,^OQ818320,PP711911,PP711921, 3.47762055243517E-04, 2.46670065174172E-03, 4.27848175419197E-02, 3.52688347720065E-03,NS,NS,NS,NS,NS,
+ 1,,,,,,,,NC_033820,,
+ 1,,,,,,,,PP766466,,
+
+ 2 ,3~, 1366, 1549*, 1329, 1512*, 1338, 1521*,^OR951325,OQ818320,OR951332, 2.35489564449532E-03,NS, 1.22444391599732E-02,NS, 5.61363768298882E-03,NS,NS,NS,NS,
+ 2,,,,,,,,,PP766466,
+
+ 3 ,5~, 432, 614, 423, 601, 432, 605,^OR951325,PP711943,PP711911, 1.23894976805228E-02,NS,NS,NS,NS,NS,NS,NS, 7.98628755525588E-03,
+
+ 4 ,10~, 153, 214, 147, 208, 153, 214,PP711911,PP711921,OR951325, 1.92010542932923E-02,NS, 8.54533578461773E-03,NS,NS,NS,NS,NS,NS,
+
+Table Key:
+~            = It is possible that this apparent recombination signal could have been caused by an evolutionary
+               process other than recombination.
+*            = The actual breakpoint position is undetermined (it was most likely overprinted by a subsequent 
+               recombination event).
+^            = The recombinant sequence may have been misidentified (one of the identified parents might be the recombinant)
+Minor Parent = Parent contributing the smaller fraction of sequence.
+Major Parent = Parent contributing the larger fraction of sequence.
+Unknown      = Only one parent and a recombinant need be in the alignment for a recombination event to be detectable.
+               The sequence listed as unknown was used to infer the existance of a missing parental sequence.
+NS           = No significant P-value was recorded for this recombination event using this method.

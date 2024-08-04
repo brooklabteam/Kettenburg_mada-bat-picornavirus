@@ -1,0 +1,29 @@
+,,,Breakpoint Positions
+,,In Alignment, ,In Recombinant Sequence, ,Relative to KX759619,, , , , , , Detection Methods
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+ 1 ,1~, 3166, 3306, 3022, 3124, 3097, 3175,^OP963622,KX759619,Unknown (OQ818319),NS,NS,NS, 2.17128644265798E-05,NS, 4.5019884149499E-03,NS,NS,NS,
+
+ 2 ,2~, 1293, 1332, 1161, 1200, 1233, 1272,^OQ709197,PP712008,OQ818348, 8.16194084816884E-05,NS,NS, 1.09591801589229E-02,NS,NS,NS,NS,NS,
+
+ 3 ,3~, 3174, 3322, 3102, 3188, 3105, 3191,^KX759623,Unknown (PP712004),OQ818319,NS,NS,NS, 5.20465008088016E-04,NS, 3.09196594984383E-04,NS,NS,NS,
+ 3,,,,,,,,KX759619[P],,PP766459
+
+ 4 ,6~, 2910, 3062, 2841, 2990, 2844, 2993,^PP712001,OP963623,Unknown (PP766470),NS,NS,NS, 3.15297425791261E-03, 4.95869950655679E-02,NS,NS,NS,NS,
+ 4,,,,,,,,PP712004[T],,
+
+ 5 ,14~, 1661, 1726, 1595, 1654, 1601, 1660,OP963623,OQ709197,PP712004, 2.38448103136278E-02, 4.54114726168461E-02,NS,NS,NS,NS,NS,NS,NS,
+
+ 6 ,17~, 2770, 2859*, 2632, 2721*, 2704, 2793*,^PP712008,OQ818319,Unknown (PP712004),NS,NS,NS, 4.07341127204353E-02,NS, 2.96707909867259E-08,NS,NS,NS,
+ 6,,,,,,,,,PP766459,Unknown(PP712001)
+
+Table Key:
+~            = It is possible that this apparent recombination signal could have been caused by an evolutionary
+               process other than recombination.
+*            = The actual breakpoint position is undetermined (it was most likely overprinted by a subsequent 
+               recombination event).
+^            = The recombinant sequence may have been misidentified (one of the identified parents might be the recombinant)
+Minor Parent = Parent contributing the smaller fraction of sequence.
+Major Parent = Parent contributing the larger fraction of sequence.
+Unknown      = Only one parent and a recombinant need be in the alignment for a recombination event to be detectable.
+               The sequence listed as unknown was used to infer the existance of a missing parental sequence.
+NS           = No significant P-value was recorded for this recombination event using this method.
