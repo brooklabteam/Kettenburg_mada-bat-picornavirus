@@ -33,8 +33,8 @@ head(dat)
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #57
-length(tree$tip.label) #57
+nrow(dat) #60
+length(tree$tip.label) #60
 
 #check subgroup names
 unique(dat$Species)
@@ -46,8 +46,8 @@ unique(dat$Species)
 #          "Vesivirus"="lightpink2","Alphavirus"="black")
 
 #pick order for the labels
-dat$Species <- factor(dat$Species, levels = c("Bat sapelovirus", "Eidolon dupreanum sapelovirus 1",   "Eidolon dupreanum sapelovirus 2",   
-                                          "Marmot sapelovirus 1",   "Marmot sapelovirus 2", "Pteropodidae bat sapelovirus","Rousettus madagascariensis sapelovirus 1", "Sapelovirus A",    
+dat$Species <- factor(dat$Species, levels = c("Bat sapelovirus", "Eidolon bat sapelovirus","Eidolon dupreanum sapelovirus 1",   "Eidolon dupreanum sapelovirus 2",   
+                                          "Marmot sapelovirus 1",   "Marmot sapelovirus 2", "Pteropodidae bat sapelovirus","Rousettus bat sapelovirus","Rousettus madagascariensis sapelovirus 1", "Sapelovirus A",    
                                           "Sapelovirus B",  "Sapelovirus-like porcine picornavirus Japan", "Tasmanian devil-associated sapelovirus",  "Sindbis virus"))   
 
 dat$novel <- as.factor(dat$novel)
@@ -149,7 +149,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.2, "cm")) +
-  xlim(c(0,5))
+  xlim(c(0,10))
 
 p1
 
@@ -195,20 +195,14 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,8))+
-  geom_cladelabel(node = 70, label = "Sapelovirus A/B",offset=0.05, fontsize=4, color="black")
+  geom_cladelabel(node = 78, label = "Sapelovirus A/B (collapsed)",offset=0.05, fontsize=4, color="black")
 p2
 
-p2.1<-p2%>%ggtree::rotate(57)
-p2.1
-
-p2.2<-p2.1%>%ggtree::rotate(65)
-p2.2
-
-p2.3<-p2.2%>%ggtree::rotate(58)
+p2.3<-p2%>%ggtree::rotate(60)
 p2.3
 
 #collapse the labeled clades
-p3<-collapse(p2.3, 70)+geom_point2(aes(subset=(node==70)), size=4, shape=22, fill="white")
+p3<-collapse(p2.3, 78)+geom_point2(aes(subset=(node==78)), size=4, shape=22, fill="white")
 p3
 
 
