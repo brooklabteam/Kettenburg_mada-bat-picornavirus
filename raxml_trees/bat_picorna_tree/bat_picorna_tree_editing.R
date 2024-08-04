@@ -33,14 +33,14 @@ head(dat)
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #31
-length(tree$tip.label) #31
+nrow(dat) #39
+length(tree$tip.label) #39
 
 #check subgroup names
 unique(dat$Species)
 
 #pick order for the labels
-dat$Species <- factor(dat$Species, levels = c("Shanbavirus A", "Rousettus madagascariensis picornavirus 1", "Rousettus madagascariensis picornavirus 3",
+dat$Species <- factor(dat$Species, levels = c("Bat picornavirus BtSY4","Bat picornavirus 7","Chaerephon bat picornavirus","Shanbavirus A", "Rousettus bat picornavirus","Rousettus madagascariensis picornavirus 1", "Rousettus madagascariensis picornavirus 3",
                                           "Sindbis virus"))   
 
 dat$novel <- as.factor(dat$novel)
@@ -187,25 +187,26 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,5))+
-  geom_cladelabel(node = 38, label = "Shanbavirus A",offset=0.05, fontsize=4, color="black")
+  geom_cladelabel(node = 48, label = "Shanbavirus A",offset=0.05, fontsize=4, color="black")+
+  geom_cladelabel(node = 45, label = "Shanbavirus A",offset=0.05, fontsize=4, color="black")+
+  geom_cladelabel(node = 70, label = "Shanbavirus A",offset=0.05, fontsize=4, color="black")
 p2
 
-p2.1<-p2%>%ggtree::rotate(31)
+p2.1<-p2%>%ggtree::rotate(58)
 p2.1
 
-p2.2<-p2.1%>%ggtree::rotate(39)
-p2.2
-
 #collapse the labeled clades
-p3<-collapse(p2.2, 38)+geom_point2(aes(subset=(node==38)), size=4, shape=22, fill="white")
-p3
+p3<-collapse(p2.1, 48)+geom_point2(aes(subset=(node==48)), size=4, shape=22, fill="white")
+p4<-collapse(p3, 45)+geom_point2(aes(subset=(node==45)), size=4, shape=22, fill="white")
+p5<-collapse(p4, 70)+geom_point2(aes(subset=(node==70)), size=4, shape=22, fill="white")
+p5
 
 ##add bootstrap values to this tree
-p3.dat <- p3$data
-p3.dat$Bootstrap <- NA
-Bootstrap<-p3.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p3.dat$label)] <- as.numeric(p3.dat$label[(length(tree.dat$tip_label)+1):length(p3.dat$label)])#fill with label
+p5.dat <- p5$data
+p5.dat$Bootstrap <- NA
+Bootstrap<-p5.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p5.dat$label)] <- as.numeric(p5.dat$label[(length(tree.dat$tip_label)+1):length(p5.dat$label)])#fill with label
 
-p4 <- p3  %<+% p3.dat + 
+p6 <- p5  %<+% p5.dat + 
   ggnewscale::new_scale_fill() + 
   geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
@@ -215,6 +216,6 @@ p4 <- p3  %<+% p3.dat +
         legend.text = element_text(size=12),
         legend.title = element_text(size=12),
         legend.key.size = unit(0.3, "cm"))
-p4
+p6
 
 #15 x 5
