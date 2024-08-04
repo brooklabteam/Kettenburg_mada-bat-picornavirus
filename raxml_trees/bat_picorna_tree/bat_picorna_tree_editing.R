@@ -187,9 +187,9 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Species, shape
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,5))+
-  geom_cladelabel(node = 48, label = "Shanbavirus A",offset=0.05, fontsize=4, color="black")+
-  geom_cladelabel(node = 45, label = "Shanbavirus A",offset=0.05, fontsize=4, color="black")+
-  geom_cladelabel(node = 70, label = "Shanbavirus A",offset=0.05, fontsize=4, color="black")
+  geom_cladelabel(node = 48, label = "Shanbavirus A (collapsed)",offset=0.05, fontsize=4, color="black")+
+  geom_cladelabel(node = 45, label = "Shanbavirus A (collapsed)",offset=0.05, fontsize=4, color="black")+
+  geom_cladelabel(node = 70, label = "Shanbavirus A (collapsed)",offset=0.05, fontsize=4, color="black")
 p2
 
 p2.1<-p2%>%ggtree::rotate(58)
