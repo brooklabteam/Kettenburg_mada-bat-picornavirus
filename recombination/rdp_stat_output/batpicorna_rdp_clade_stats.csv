@@ -1,0 +1,30 @@
+,,,Breakpoint Positions
+,,In Alignment, ,In Recombinant Sequence, ,Relative to bat_picornavirus_3,, , , , , , Detection Methods
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+ 1 ,1~, 8628, 212, 7806, 123, 8012, 209,^r_aegypticus_africa,PP711946,PP711912,NS,NS, 1.7774350142938E-16, 1.47550156545664E-02,NS,NS,NS,NS, 1.78439772513528E-07,
+
+ 2 ,2~, 8600, 848, 7706, 180, 7991, 811,^shanbavirus_a,Unknown (rhinolophus_BtSY4),bat_picornavirus_3, 1.01811155500095E-07,NS, 8.68598378442318E-08, 1.30920064523021E-03, 3.5462233329428E-03,NS,NS,NS, 3.53834281157095E-05,
+
+ 3 ,7~, 295, 362, 117, 184, 281, 345,^rhinolophus_BtSY4,PP711912,Unknown (OQ818328), 7.56394590726062E-03,NS,NS, 8.85556192925918E-03, 1.28105372499437E-03,NS,NS,NS,NS,
+ 3,,,,,,,,,,Unknown(OQ818325)
+
+ 4 ,8~, 7566, 7836, 6885, 7153, 7010, 7278,r_aegypticus_africa,Unknown (OQ818328),OQ818325,NS,NS, 9.6602319174132E-03,NS,NS,NS,NS,NS,NS,
+
+ 5 ,9~, 3884, 4134, 3238, 3452, 3534, 3748,^PP766469,Unknown (OQ818325),PP711912, 1.69680623746415E-02,NS, 2.07058898324259E-02,NS,NS,NS,NS,NS,NS,
+
+ 6 ,12~, 1373*, 1755, 962*, 1311, 1309*, 1643,^PP766469,OQ818325,Unknown (rhinolophus_BtSY4),NS,NS, 1.27126429943318E-02, 3.42384251299652E-04, 1.71409359504631E-02,NS,NS,NS,NS,
+ 6,,,,,,,,,OQ818328,
+
+ 7 ,13~, 1873*, 2043, 1548*, 1709, 1761*, 1910,^rhinolophus_BtSY4,PP766469,shanbavirus_a, 1.52248981277686E-02,NS,NS,NS,NS,NS,NS,NS,NS,
+
+Table Key:
+~            = It is possible that this apparent recombination signal could have been caused by an evolutionary
+               process other than recombination.
+*            = The actual breakpoint position is undetermined (it was most likely overprinted by a subsequent 
+               recombination event).
+^            = The recombinant sequence may have been misidentified (one of the identified parents might be the recombinant)
+Minor Parent = Parent contributing the smaller fraction of sequence.
+Major Parent = Parent contributing the larger fraction of sequence.
+Unknown      = Only one parent and a recombinant need be in the alignment for a recombination event to be detectable.
+               The sequence listed as unknown was used to infer the existance of a missing parental sequence.
+NS           = No significant P-value was recorded for this recombination event using this method.

@@ -1,6 +1,8 @@
 ,,,Breakpoint Positions
 ,,In Alignment, ,In Recombinant Sequence, ,Relative to PP766467,, , , , , , Detection Methods
 Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+ 1 ,1~, 1166, 1447, 1166, 1447, 1166, 1447,^KU955338,MT499387,HM641897, 1.79579517572614E-02,NS,NS,NS,NS,NS,NS,NS,NS,
+
 Table Key:
 ~            = It is possible that this apparent recombination signal could have been caused by an evolutionary
                process other than recombination.

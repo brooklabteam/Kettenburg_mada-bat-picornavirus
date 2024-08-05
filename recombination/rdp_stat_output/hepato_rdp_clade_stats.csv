@@ -1,0 +1,28 @@
+,,,Breakpoint Positions
+,,In Alignment, ,In Recombinant Sequence, ,Relative to H_larvatus_china,, , , , , , Detection Methods
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+ 1 ,1~, 7719, 797, 7198, 560, 7355, 723,^NC_028366,PP766455,Unknown (NC_028981), 1.83472993411191E-04, 1.45617610019638E-06, 1.57866539172232E-08, 6.58676870260992E-06, 1.51397370509095E-02,NS,NS,NS,NS,
+ 1,,,,,,,,,PP766457,
+
+ 2 ,3~, 6762, 6902, 5987, 6127, 6406, 6546,^KT452729,NC_028366,Unknown (NC_028981), 5.00091305532529E-04, 2.63278684681664E-02, 4.45989070605623E-04, 6.25361325106085E-03, 3.64022900581684E-03,NS,NS,NS,NS,
+
+ 3 ,4~, 834*, 7718, 577*, 7197, 740*, 7354,^NC_028366,H_larvatus_china,PP766457,NS,NS, 5.76461750960807E-04, 6.72951408398794E-03, 7.98727045036559E-03,NS,NS,NS,NS,
+ 3,,,,,,,,,,PP766455
+
+ 4 ,5~, 1854, 2077, 1745, 1968, 1760, 1983,^PP766457,KT452729,NC_028366, 6.0273774659542E-03,NS,NS,NS, 4.27477391439122E-02,NS,NS,NS, 4.02213379390761E-02,
+ 4,,,,,,,,PP766455,,
+
+ 5 ,6~, 1302, 1446, 1012, 1156, 1208, 1352,^NC_038313,PP766455,Unknown (H_larvatus_china), 1.52061032001671E-02, 2.21862162264005E-02,NS, 9.12989479439445E-03,NS,NS,NS,NS,NS,
+ 5,,,,,,,,,PP766457,
+
+Table Key:
+~            = It is possible that this apparent recombination signal could have been caused by an evolutionary
+               process other than recombination.
+*            = The actual breakpoint position is undetermined (it was most likely overprinted by a subsequent 
+               recombination event).
+^            = The recombinant sequence may have been misidentified (one of the identified parents might be the recombinant)
+Minor Parent = Parent contributing the smaller fraction of sequence.
+Major Parent = Parent contributing the larger fraction of sequence.
+Unknown      = Only one parent and a recombinant need be in the alignment for a recombination event to be detectable.
+               The sequence listed as unknown was used to infer the existance of a missing parental sequence.
+NS           = No significant P-value was recorded for this recombination event using this method.

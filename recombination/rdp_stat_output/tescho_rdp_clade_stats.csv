@@ -1,0 +1,28 @@
+,,,Breakpoint Positions
+,,In Alignment, ,In Recombinant Sequence, ,Relative to LC386158,, , , , , , Detection Methods
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+ 1 ,1, 7346, 7558, 6968, 7180, 6444, 6656,r_aegypticus_africa,Unknown (OQ818324),OQ818323, 1.04043501611607E-20, 3.09057698818799E-07, 4.54383018894338E-21, 9.72691370220096E-11, 6.31649872519176E-10,NS,NS,NS, 8.05102262635415E-09,
+ 1,,,,,,,,,Unknown(OQ818323),OQ818324
+
+ 2 ,2~, 63*, 1064, 28*, 915, 0*, 521,^OQ818323,r_aegypticus_africa,OQ818324, 4.70146785597146E-06,NS, 5.47362055853438E-04, 1.19276268040191E-08, 1.7634379608674E-06,NS,NS,NS, 1.65793124300762E-04,
+
+ 3 ,3~, 1760, 2547, 1128, 1887, 1149, 1918,^rousettus_china,OQ818318,Unknown (OR951324), 6.18873681815557E-03,NS, 1.05733119920538E-02, 3.34130351934961E-02, .042472084259592,NS,NS,NS,NS,
+
+ 4 ,4~, 674, 705, 136, 154, 153, 184,^OR951324,LC386158,r_aegypticus_africa, 1.90798586191682E-02,NS,NS,NS,NS,NS,NS,NS,NS,
+
+ 5 ,5~, 3582*, 7322, 3299*, 6944, 2888*, 6420,^r_aegypticus_africa,Unknown (OQ818323),OQ818324, 2.11829998346202E-02,NS,NS, 1.96168125456233E-04,NS,NS,NS,NS, 1.62612747668156E-04,
+ 5,,,,,,,,,Unknown(OQ818324),OQ818323
+
+ 6 ,7~, 7305, 7418, 6736, 6849, 6403, 6516,^OQ818318,LC386158,rousettus_china,NS,NS, 4.13626897033818E-02, .021570411804121,NS,NS,NS,NS,NS,
+
+Table Key:
+~            = It is possible that this apparent recombination signal could have been caused by an evolutionary
+               process other than recombination.
+*            = The actual breakpoint position is undetermined (it was most likely overprinted by a subsequent 
+               recombination event).
+^            = The recombinant sequence may have been misidentified (one of the identified parents might be the recombinant)
+Minor Parent = Parent contributing the smaller fraction of sequence.
+Major Parent = Parent contributing the larger fraction of sequence.
+Unknown      = Only one parent and a recombinant need be in the alignment for a recombination event to be detectable.
+               The sequence listed as unknown was used to infer the existance of a missing parental sequence.
+NS           = No significant P-value was recorded for this recombination event using this method.

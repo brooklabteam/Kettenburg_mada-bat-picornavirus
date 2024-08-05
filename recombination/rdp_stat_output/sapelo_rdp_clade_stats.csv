@@ -1,0 +1,67 @@
+,,,Breakpoint Positions
+,,In Alignment, ,In Recombinant Sequence, ,Relative to eonycteris_china,, , , , , , Detection Methods
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+ 1 ,1~, 7778, 335, 7443, 269, 7179, 0,^PP711943,OQ818320,Unknown (NC_003987),NS,NS, 1.10317478105965E-12, 4.01760461930843E-02, 2.41052354454829E-06,NS,NS,NS,NS,
+
+ 2 ,2~, 336*, 957, 268*, 817, 0*, 539,^OQ818321,PP711943,Unknown (PP711911), 1.98550904933349E-09, 1.10789282746775E-06, 7.83009531634208E-07, 2.57024964986682E-07, 2.46084460901436E-05,NS,NS,NS,NS,
+ 2,,,,,,,,,NC_033820,
+ 2,,,,,,,,,OQ818320,
+
+ 3 ,3, 3334, 5410, 3071, 5027, 2880, 4860,^NC_033820,PP711943,OQ818320, 6.3418609248748E-09,NS, 6.76894436689894E-06, 4.65937324203712E-10, 2.87169148585341E-11,NS,NS,NS, 1.86517468137026E-14,
+
+ 4 ,4, 223, 957, 101, 758, 0, 539,^PP711921,NC_033820,Unknown (PP711911), 5.93842229584038E-10, 8.30807095437633E-08, 2.97721532584379E-07, 4.70916620019181E-07, 1.1675924401163E-07,NS,NS,NS,NS,
+ 4,,,,,,,,,OQ818320,
+
+ 5 ,5~, 3239, 4228, 2991, 3919, 2785, 3730,^OQ818329,Unknown (PP711943),PP711921, 7.64802102017311E-08,NS,NS, 1.39144863046754E-02, 6.74291611384205E-07,NS,NS,NS,NS,
+ 5,,,,,,,,,Unknown(OQ818321),OQ818320
+ 5,,,,,,,,,Unknown(PP711921),PP711943
+
+ 6 ,6~, 2786, 4175, 2566, 3906, 2338, 3681,^PP711911,Unknown (PP711943),PP711921, 1.41059282424822E-07,NS, 7.70692204498111E-03, 8.69006923465447E-04, 4.63470125537139E-08,NS,NS,NS,NS,
+ 6,,,,,,,,OQ818329[T],,OQ818321
+
+ 7 ,11~, 2456, 2524, 2236, 2304, 2008, 2076,^PP711911,OQ818320,Unknown (PP711921), 1.33948325235655E-04, 1.33832041623086E-03,NS, 2.2667466225502E-03, 2.29858539182032E-02,NS,NS,NS,NS,
+ 7,,,,,,,,,NC_033820,
+
+ 8 ,12~, 7424, 8049*, 6799, 6863*, 6825, 7446*,^PP711921,Unknown (OQ818320),OQ818321, 2.91123265849544E-04, 6.80284781936392E-03,NS,NS,NS,NS,NS,NS,NS,
+
+ 9 ,13~, 6874, 7022, 6476, 6624, 6276, 6424,^OQ818329,Unknown (NC_003987),PP711921, 9.18801045636037E-04,NS, 3.69107955986949E-02,NS,NS,NS,NS,NS,NS,
+ 9,,,,,,,,PP711943[T],,
+
+ 10 ,14, 5420*, 6873*, 5119*, 6539*, 4870*, 6275*,^PP711943,NC_033820,Unknown (OQ818329),NS, 1.28993721929834E-14, 5.87040131830055E-14, 5.39894473309041E-04, 4.16183419837597E-08,NS,NS,NS,NS,
+ 10,,,,,,,,,OQ818320,
+
+ 11 ,15, 4241*, 5419*, 3977*, 5118*, 3730*, 4869*,^PP711943,OQ818320,Unknown (OQ818329),NS, 1.14162221830662E-15, 8.47866521769653E-14, 4.68757878211749E-18,NS,NS,NS,NS,NS,
+ 11,,,,,,,,OQ818320[T],,
+
+ 12 ,16~, 7045*, 7773*, 6711*, 7438*, 6447*, 7174*,^PP711943,OQ818320,Unknown (OQ818329),NS, 8.4667873363406E-10, 2.67198422858557E-07, 3.00663702084036E-03, 1.93555234805606E-04,NS,NS,NS,NS,
+
+ 13 ,17~, 82*, 512, 48*, 441, 0*, 137,^NC_003987,Unknown (PP711911),OQ818320, 7.12176938910639E-03,NS, 2.89763733519964E-03, 6.8963867993268E-03,NS,NS,NS,NS,NS,
+ 13,,,,,,,,,Unknown(OQ818320),PP711911
+
+ 14 ,18~, 2408, 2520, 2169, 2281, 1960, 2072,^OQ818329,OQ818320,Unknown (OQ818321), 1.25483143516377E-02,NS,NS,NS,NS,NS,NS,NS,NS,
+ 14,,,,,,,,,NC_033820,
+
+ 15 ,19~, 6023*, 6090*, 5647*, 5711*, 5428*, 5492*,PP711911,OQ818320,eonycteris_china, 1.54128336649946E-02,NS,NS,NS,NS,NS,NS,NS,NS,
+
+ 16 ,20~, 1415, 1455, 1273, 1313, 994, 1034,^PP711943,NC_003987,OQ818321, 1.77849425902893E-02,NS,NS,NS,NS,NS,NS,NS,NS,
+ 16,,,,,,,,,,PP711921
+
+ 17 ,21~, 2647, 2684, 2408, 2445, 2199, 2236,OQ818329,NC_033820,PP711911, 3.72954608963067E-02,NS,NS,NS,NS,NS,NS,NS,NS,
+
+ 18 ,22~, 6552, 6811, 6199, 6458, 5954, 6213,^OQ818321,PP711911,NC_033820, .044047578394224,NS,NS, 1.41388452985647E-02,NS,NS,NS,NS,NS,
+ 18,,,,,,,,PP711921[T],,
+
+ 19 ,23~, 5839, 6017*, 5433, 5610*, 5244, 5422*,^PP711921,NC_033820,Unknown (PP711911),NS,NS, 4.99505945188925E-02,NS,NS,NS,NS,NS,NS,
+ 19,,,,,,,,OQ818321[T],,
+
+Table Key:
+~            = It is possible that this apparent recombination signal could have been caused by an evolutionary
+               process other than recombination.
+*            = The actual breakpoint position is undetermined (it was most likely overprinted by a subsequent 
+               recombination event).
+^            = The recombinant sequence may have been misidentified (one of the identified parents might be the recombinant)
+Minor Parent = Parent contributing the smaller fraction of sequence.
+Major Parent = Parent contributing the larger fraction of sequence.
+Unknown      = Only one parent and a recombinant need be in the alignment for a recombination event to be detectable.
+               The sequence listed as unknown was used to infer the existance of a missing parental sequence.
+NS           = No significant P-value was recorded for this recombination event using this method.
