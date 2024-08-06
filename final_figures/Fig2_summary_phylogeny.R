@@ -45,19 +45,19 @@ head(dat)
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #287
-length(tree$tip.label) #287
+nrow(dat) #293
+length(tree$tip.label) #293
 
 #check subgroup names
 unique(dat$Genus)
 
 #pick order for the labels
 dat$Genus <- factor(dat$Genus, levels = c("Cardiovirus","Hepatovirus","Kobuvirus","Kunsagivirus","Mischivirus",
-                                          "Sapelovirus","Sapovirus","Shanbavirus","Teschovirus","Unclassified picornavirus",
+                                          "Sapelovirus","Sapovirus","Teschovirus","Unclassified bat picornavirus",
                                           "Alphavirus"))   
 #pick colors for virus genera
-genuscolz<- c("Cardiovirus"="#0A9F9D","Hepatovirus"="#CEB175","Kobuvirus"="#E54E21","Kunsagivirus"="#6C8645","Mischivirus"="#C18748",
-              "Sapelovirus"="#C52E19","Sapovirus"="#AF4E24","Shanbavirus"="#54D8B1","Teschovirus"="#b67c3b","Unclassified picornavirus"="#175149",
+genuscolz<- c("Cardiovirus"="#F8766D","Hepatovirus"="#D89000","Kobuvirus"="#A3A500","Kunsagivirus"="#39B600","Mischivirus"="#00BF7D",
+              "Sapelovirus"="#00BFC4","Sapovirus"="#00B0F6","Teschovirus"="#E76BF3","Unclassified bat picornavirus"="#9590FF",
               "Alphavirus"="black")
 
 #take a glance
@@ -191,20 +191,20 @@ circ<-ggtree(rooted.tree, layout="circular")
 ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
 
 ##base tree
-p1 <- ggtree(rooted.tree, layout = "circular") %<+% tree.dat +
+p1 <- ggtree(rooted.tree, layout="fan", size=0.5) %<+% tree.dat +
   geom_tippoint(aes(color=Genus, shape=Host), size=2,stroke=0,show.legend = T) +
   #scale_color_manual(values=genuscolz)+
   scale_shape_manual(values=shapez) +
   guides(colour = "none")+
-  theme(legend.position = c(0.305,0.505),
+  theme(legend.position = c(0.5,0.59),
         #legend.position = "left",
         legend.margin = margin(c(0,0,0,0)),
-        legend.direction = "vertical",
         legend.text = element_text(size=9),
         legend.title = element_text(size=9),
         legend.key = element_rect(fill = "transparent"),
-        legend.key.size = unit(0.25, "cm")) +
-  xlim(c(0,5)) 
+        legend.key.size = unit(0.25, "cm"),
+        legend.box = "horizontal") +
+  xlim(c(0,15)) 
 p1
 
 library(scales)
@@ -212,21 +212,20 @@ hex_codes2 <- hue_pal()(10)
 show_col(hex_codes2)
 
 #rotate tree a bit
-p1<-rotate_tree(p1, 90)
+p1<-rotate_tree(p1, 30)
 p1
 
 #add clade labels
 p1.1 <- p1 +
-  geom_cladelabel(node = 290, label = "Kobuvirus",offset.text=0.1, fontsize=3, angle=315, hjust=0,align = TRUE, color="#A3A500") +
-  geom_cladelabel(node = 288, label = "Kunsagivirus",offset.text=0.1, fontsize=3, angle=280,hjust=0.5,align = TRUE, color="#39B600") +
-  geom_cladelabel(node = 352, label = "Cardiovirus",offset.text=0.1, fontsize=3, angle=83,hjust=0.6,align = TRUE, color="#F8766D") +
-  geom_cladelabel(node = 377, label = "Mischivirus",offset.text=0.1, fontsize=3,angle=65,hjust=0.4,align = TRUE, color="#00BF7D") +
-  geom_cladelabel(node = 382, label = "Teschovirus",offset.text=0.1, fontsize=3,angle=51,hjust=0.7,align = TRUE, color="#E76BF3") +
-  geom_cladelabel(node = 535, label = "Hepatovirus",offset.text=0.1, fontsize=3,angle=25,hjust=0.4,align = TRUE, color="#D89000") +
-  geom_cladelabel(node = 530, label = "Shanbavirus",offset.text=0.1, fontsize=3,angle=358,hjust=0.4,align = TRUE, color="#9590FF") +
-  geom_cladelabel(node = 503, label = "Sapelovirus",offset.text=0.1, fontsize=3,angle=340,hjust=0.4,align = TRUE, color="#00BFC4") +
-  geom_cladelabel(node = 501, label = "Bat picornavirus",offset.text=0.1,angle=318,hjust=0.5, fontsize=3,align = TRUE, color="#FF62BC") +
-  geom_cladelabel(node = 396, label = "Sapovirus",offset.text=0.1,angle=75, fontsize=3,align = TRUE,hjust=1, color="#00B0F6")
+  geom_cladelabel(node = 302, label = "Kobuvirus",offset.text=-0.4, fontsize=3, angle=320, hjust=0,align = TRUE, color="#A3A500") +
+  geom_cladelabel(node = 472, label = "Kunsagivirus",offset.text=-0.4, fontsize=3, angle=50,hjust=0.5,align = TRUE, color="#39B600") +
+  geom_cladelabel(node = 531, label = "Cardiovirus",offset.text=-0.4, fontsize=3, angle=30,hjust=0.5,align = TRUE, color="#F8766D") +
+  geom_cladelabel(node = 556, label = "Mischivirus",offset.text=-0.4, fontsize=3,angle=10,hjust=0.6,align = TRUE, color="#00BF7D") +
+  geom_cladelabel(node = 517, label = "Teschovirus",offset.text=-0.4, fontsize=3,angle=356,hjust=0.3,align = TRUE, color="#E76BF3") +
+  geom_cladelabel(node = 329, label = "Hepatovirus",offset.text=-0.4, fontsize=3,angle=73,hjust=0.4,align = TRUE, color="#D89000") +
+  geom_cladelabel(node = 481, label = "Sapelovirus",offset.text=-0.4, fontsize=3,angle=335,hjust=0.4,align = TRUE, color="#00BFC4") +
+  geom_cladelabel(node = 500, label = "Bat picornavirus",offset.text=-0.4,angle=310,hjust=0.5, fontsize=3,align = TRUE, color="#9590FF") +
+  geom_cladelabel(node = 363, label = "Sapovirus",offset.text=-0.4,angle=45, fontsize=3,align = TRUE,hjust=1, color="#00B0F6")
 p1.1
 
 ##Add contig/read metadata
@@ -237,9 +236,9 @@ p1.1 <- p1.1 %<+% contig
 p2<-p1.1+geom_fruit(#data=contig,
                   geom=geom_tile,
                   mapping=aes(fill=Novel_contigs),
-                  width=0.2,
-                  offset=0.12) + 
-                scale_fill_viridis(option="G")
+                  pwidth=0.1,
+                  offset=0.1) + 
+                scale_fill_viridis(option="G", name="Novel\ncontigs")
                   
 p2
 
@@ -250,10 +249,9 @@ p3<-p2+new_scale_fill()+
   geom_fruit(#data=reads,
   geom=geom_tile,
   mapping=aes(fill=Novel_reads_log10),
-  width=0.2,
-  offset=0.05
-)  + scale_fill_viridis(option="B") +
-  #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))
+  pwidth=0.1,
+  offset=0.09)  + scale_fill_viridis(option="B", name="Novel\nreads (log10)") +
+  #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
  theme(
                  #legend.direction = "none",
                  legend.margin = margin(c(0,0,0,0)),
@@ -272,9 +270,9 @@ base<-p3+new_scale_fill()+
   geom_fruit(#data=reads,
     geom=geom_tile,
     mapping=aes(fill=Seq_type),
-    width=0.2,
-    offset=0.05
-  )  + scale_fill_manual(values=c("Novel seq"="darkorchid1","Reference seq"="grey88"))+
+    width=0.5,
+    offset=0.06
+  )  + scale_fill_manual(values=c("Novel seq"="darkorchid1","Reference seq"="grey88"), name="Seq type")+
   theme(
     #legend.direction = "none",
     legend.text = element_text(size=9),
@@ -283,6 +281,9 @@ base<-p3+new_scale_fill()+
     plot.margin = unit(c(0, 0, 0, 0), 
                        "cm"))
 base
+
+
+
 
 
 #mischi
