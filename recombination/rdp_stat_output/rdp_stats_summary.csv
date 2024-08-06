@@ -1,0 +1,585 @@
+BAT PICORNAVIRUS CLADE,,,,,,,,,,,,,,,,,,,
+,,,Breakpoint Positions,,,,,,,,,,,,,,,,
+,,In Alignment, ,In Recombinant Sequence, ,Relative to bat_picornavirus_3,, , , , , , Detection Methods,,,,,,
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+1,1~,8628,212,7806,123,8012,209,^r_aegypticus_africa,PP711946,PP711912,NS,NS,1.78E-16,1.48E-02,NS,NS,NS,NS,1.78E-07
+,,,,,,,,,,,,,,,,,,,
+2,2~,8600,848,7706,180,7991,811,^shanbavirus_a,Unknown (rhinolophus_BtSY4),bat_picornavirus_3,1.02E-07,NS,8.69E-08,1.31E-03,3.55E-03,NS,NS,NS,3.54E-05
+,,,,,,,,,,,,,,,,,,,
+3,7~,295,362,117,184,281,345,^rhinolophus_BtSY4,PP711912,Unknown (OQ818328),7.56E-03,NS,NS,8.86E-03,1.28E-03,NS,NS,NS,NS
+3,,,,,,,,,,Unknown(OQ818325),,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+4,8~,7566,7836,6885,7153,7010,7278,r_aegypticus_africa,Unknown (OQ818328),OQ818325,NS,NS,9.66E-03,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+5,9~,3884,4134,3238,3452,3534,3748,^PP766469,Unknown (OQ818325),PP711912,1.70E-02,NS,2.07E-02,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+6,12~, 1373*,1755, 962*,1311, 1309*,1643,^PP766469,OQ818325,Unknown (rhinolophus_BtSY4),NS,NS,1.27E-02,3.42E-04,1.71E-02,NS,NS,NS,NS
+6,,,,,,,,,OQ818328,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+7,13~, 1873*,2043, 1548*,1709, 1761*,1910,^rhinolophus_BtSY4,PP766469,shanbavirus_a,1.52E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+BAT PICORNAVIRUS,,,,,,,,,,,,,,,,,,,
+,,,Breakpoint Positions,,,,,,,,,,,,,,,,
+,,In Alignment, ,In Recombinant Sequence, ,Relative to HQ595345.1,, , , , , , Detection Methods,,,,,,
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+1,3~,8322,8479,6709,6800,7471,7594,^KJ641690.1,Unknown (HQ595345.1),OP963617.1,1.96E-06,4.20E-09,NS,NS,NS,NS,NS,NS,NS
+1,,,,,,,,KJ641699.1,Unknown(NC_015934.1),,,,,,,,,,
+1,,,,,,,,,Unknown(KJ641693.1),,,,,,,,,,
+1,,,,,,,,,Unknown(OQ363775.1),,,,,,,,,,
+1,,,,,,,,,Unknown(OQ363764.1),,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+2,4~,4590,4782,3971,4160,3831,4023,^OP963617.1,PP745912,Unknown (OQ363764.1),1.79E-04,NS,NS,NS,NS,NS,NS,NS,NS
+2,,,,,,,,,HQ595345.1,Unknown(PP745912),,,,,,,,,
+2,,,,,,,,,NC_015934.1,,,,,,,,,,
+2,,,,,,,,,KJ641693.1,,,,,,,,,,
+2,,,,,,,,,OQ363775.1,,,,,,,,,,
+2,,,,,,,,,OQ363764.1,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+3,5~,990,1300,844,1148,606,910,^OQ363775.1,PP766469,Unknown (PP746000),2.21E-04,NS,NS,NS,3.30E-03,NS,NS,NS,NS
+3,,,,,,,,HQ595345.1[T],,,,,,,,,,,
+3,,,,,,,,NC_015934.1[T],,,,,,,,,,,
+3,,,,,,,,KJ641693.1[T],,,,,,,,,,,
+3,,,,,,,,OQ363764.1[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+4,6~,2860,3202,2614,2907,2376,2669,^OQ363775.1,PP711930,Unknown (KJ641699.1),3.76E-04,NS,NS,1.10E-02,NS,NS,NS,NS,NS
+4,,,,,,,,HQ595345.1[T],PP711928,Unknown(KJ641687.1),,,,,,,,,
+4,,,,,,,,NC_015934.1[T],,Unknown(KJ641690.1),,,,,,,,,
+4,,,,,,,,KJ641693.1[T],,,,,,,,,,,
+4,,,,,,,,OQ363764.1,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+5,7~,1580,1704,1365,1464,1173,1265,PP711930,KJ641687.1,OQ818328,6.84E-04,NS,NS,2.84E-03,1.74E-04,NS,NS,NS,NS
+5,,,,,,,,PP711909,KJ641690.1,OQ818325,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+6,8~,3886,4817,3218,4049,3218,4049,^HQ595345.1,Unknown (PP766469),OQ818328,6.01E-04,3.60E-03,NS,7.20E-04,4.10E-02,NS,NS,NS,NS
+6,,,,,,,,NC_015934.1,,,,,,,,,,,
+6,,,,,,,,OQ363775.1[P],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+7,9~,5790,6052,5057,5220,5019,5275,^PP766469,Unknown (PP746000),OQ818328,7.56E-04,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+8,10, 7675*,3689, 6590*,2830, 6829*,3102,^KJ641687.1,KJ641690.1,KJ641699.1,1.02E-03,NS,1.53E-03,3.43E-07,3.68E-06,NS,NS,NS,5.22E-05
+,,,,,,,,,,,,,,,,,,,
+9,11~,2088,2211,1265,1379,1626,1734,PP745912,KJ641687.1,OQ363764.1,NS,NS,NS,9.43E-03,NS,NS,NS,NS,NS
+9,,,,,,,,,KJ641690.1,KJ641693.1,,,,,,,,,
+9,,,,,,,,,,OQ363775.1,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+10,12~,2378,2479,1588,1689,1898,1999,^PP746000,PP766469,OP963617.1,1.97E-03,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+11,13~,4002,4180,3590,3723,3334,3464,^PP711930,KJ641699.1,Unknown (PP745912),3.24E-03,NS,NS,NS,NS,NS,NS,NS,NS
+11,,,,,,,,PP711909[T],KJ641687.1,,,,,,,,,,
+11,,,,,,,,PP711928[T],KJ641690.1,,,,,,,,,,
+11,,,,,,,,PP711945[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+12,14~,502,800,330,554,157,446,^OQ818328,OP963617.1,PP766469,3.55E-03,NS,NS,NS,NS,NS,NS,NS,0.016164469
+12,,,,,,,,OQ818325,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+13,15~,6110,6206,5409,5505,5333,5429,^PP711913,HQ595345.1,PP711946,4.79E-03,NS,NS,NS,NS,NS,NS,NS,NS
+13,,,,,,,,PP711912,NC_015934.1,,,,,,,,,,
+13,,,,,,,,PP711945[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+14,19~,4532,5466,3986,4905,3779,4698,PP711946,PP746000,PP711912,NS,NS,6.27E-03,1.04E-02,6.18E-04,NS,NS,NS,1.48E-04
+,,,,,,,,,,,,,,,,,,,
+15,20~,5291, 5463*,4688, 4860*,4523, 4695*,OQ818328,PP745912,PP766469,6.88E-03,NS,NS,NS,NS,NS,NS,NS,4.62E-02
+15,,,,,,,,OQ818325[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+16,21~,7884,8042,6704,6859,7038,7193,^PP745912,OQ818328,Unknown (HQ595345.1),5.38E-03,NS,3.43E-02,NS,NS,NS,NS,NS,NS
+16,,,,,,,,,,Unknown(NC_015934.1),,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+17,22~,7222,7445,6000,6223,6376,6599,^PP746000,PP711909,Unknown (KJ641693.1),NS,NS,7.37E-03,NS,NS,NS,NS,NS,NS
+17,,,,,,,,,PP711930,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+18,23~,8160,208,7387,34,7311,0,^PP711912,Unknown (OQ818328),PP711930,1.35E-02,NS,0.018845876,1.01E-02,5.34E-03,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+19,24~,290,374,117,201,0,38,^OP963617.1,Unknown (PP711945),OQ818328,0.019271697,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+20,25~,3618,3658,3262,3281,3055,3074,^OQ818325,Unknown (OQ363764.1),PP711928,2.23E-02,NS,NS,NS,NS,NS,NS,NS,NS
+20,,,,,,,,OQ818328[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+21,26~,6527,6669,5374,5516,5747,5889,PP746000,KJ641690.1,Unknown (PP711913),0.023100316,NS,NS,NS,NS,NS,NS,NS,NS
+21,,,,,,,,,PP711913,Unknown(KJ641687.1),,,,,,,,,
+21,,,,,,,,,,Unknown(KJ641690.1),,,,,,,,,
+21,,,,,,,,,,Unknown(KJ641699.1),,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+22,27~,6110,6204,4717,4811,5333,5427,^PP711928,OQ363775.1,Unknown (KJ641690.1),2.39E-02,NS,NS,NS,NS,NS,NS,NS,NS
+22,,,,,,,,PP711909[T],,,,,,,,,,,
+22,,,,,,,,PP711930[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+23,28~,3902, 4396*,3512, 3944*,3234, 3663*,^PP711945,PP711909,Unknown (PP711928),NS,NS,1.51E-02,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+24,29~,5973,6008,5268,5303,5199,5234,^OQ818328,HQ595345.1,PP711928,2.36E-02,NS,NS,NS,NS,NS,NS,NS,NS
+24,,,,,,,,OQ818325[T],NC_015934.1,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+25,30~,6250,6278,4854,4882,5470,5498,^PP711928,KJ641693.1,OQ818328,2.24E-02,NS,NS,NS,NS,NS,NS,NS,NS
+25,,,,,,,,,,OQ818325,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+26,31~,6916,6992,6448,6524,6136,6212,^OQ363764.1,KJ641690.1,PP766469,2.68E-02,NS,NS,NS,NS,NS,NS,NS,NS
+26,,,,,,,,HQ595345.1[T],KJ641687.1,,,,,,,,,,
+26,,,,,,,,NC_015934.1[T],KJ641699.1,,,,,,,,,,
+26,,,,,,,,OQ363775.1[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+27,32~, 8079*, 8283*, 7542*, 7746*, 7230*, 7434*,^OQ363764.1,HQ595345.1,Unknown (PP745912),NS,4.49E-05,2.89E-06,1.77E-04,NS,NS,NS,NS,NS
+27,,,,,,,,,NC_015934.1,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+28,33~,4934,5062,3859,3987,4166,4294,PP746000,KJ641690.1,Unknown (OQ818328),2.79E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+29,34~,2955,3361,2654,3026,2459,2827,^PP711946,PP766469,Unknown (KJ641690.1),4.87E-02,NS,NS,3.90E-02,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+30,35~,6378,6755,5808,6185,5598,5975,^PP711946,Unknown (OP963617.1),KJ641693.1,NS,NS,3.14E-02,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+CARDIOVIRUS,,,,,,,,,,,,,,,,,,,
+,,,Breakpoint Positions,,,,,,,,,,,,,,,,
+,,In Alignment, ,In Recombinant Sequence, ,Relative to PP766467,, , , , , , Detection Methods,,,,,,
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+1,1~,1166,1447,1166,1447,1166,1447,^KU955338,MT499387,HM641897,1.80E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+HEPATOVIRUS CLADE,,,,,,,,,,,,,,,,,,,
+,,,Breakpoint Positions,,,,,,,,,,,,,,,,
+,,In Alignment, ,In Recombinant Sequence, ,Relative to H_larvatus_china,, , , , , , Detection Methods,,,,,,
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+1,1~,7719,797,7198,560,7355,723,^NC_028366,PP766455,Unknown (NC_028981),1.83E-04,1.46E-06,1.58E-08,6.59E-06,1.51E-02,NS,NS,NS,NS
+1,,,,,,,,,PP766457,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+2,3~,6762,6902,5987,6127,6406,6546,^KT452729,NC_028366,Unknown (NC_028981),5.00E-04,2.63E-02,4.46E-04,6.25E-03,3.64E-03,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+3,4~, 834*,7718, 577*,7197, 740*,7354,^NC_028366,H_larvatus_china,PP766457,NS,NS,5.76E-04,6.73E-03,7.99E-03,NS,NS,NS,NS
+3,,,,,,,,,,PP766455,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+4,5~,1854,2077,1745,1968,1760,1983,^PP766457,KT452729,NC_028366,6.03E-03,NS,NS,NS,4.27E-02,NS,NS,NS,4.02E-02
+4,,,,,,,,PP766455,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+5,6~,1302,1446,1012,1156,1208,1352,^NC_038313,PP766455,Unknown (H_larvatus_china),1.52E-02,2.22E-02,NS,9.13E-03,NS,NS,NS,NS,NS
+5,,,,,,,,,PP766457,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+HEPATOVIRUS,,,,,,,,,,,,,,,,,,,
+,,,Breakpoint Positions,,,,,,,,,,,,,,,,
+,,In Alignment, ,In Recombinant Sequence, ,Relative to PP766455,, , , , , , Detection Methods,,,,,,
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+1,2~,7741,786,7224,560,7265,607,^NC_028366,PP766455,Unknown (NC_028981),1.50E-03,3.63E-05,1.92E-07,1.96E-04,1.36E-04,NS,NS,NS,NS
+1,,,,,,,,,PP766457,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+2,4~,7428,671,6939,640,6955,519,^OR867086,OR951271,Unknown (PP766455),NS,5.02E-03,7.66E-05,8.91E-05,NS,NS,NS,NS,NS
+2,,,,,,,,OR951275,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+3,5~,6762,6902,5987,6127,6290,6430,^KT452729,NC_028366,Unknown (NC_028981),2.02E-03,NS,1.81E-03,2.15E-02,1.26E-02,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+4,6~,3619,4399,3326,4084,3311,3984,^NC_038313,Unknown (PP766457),OR951275,5.41E-03,NS,NS,2.66E-02,NS,NS,NS,NS,NS
+4,,,,,,,,,Unknown(PP766455),,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+5,8~,5409,5724,5002,5302,4958,5261,^NC_028981,OR951275,Unknown (NC_038313),2.42E-03,NS,NS,NS,NS,NS,NS,NS,NS
+5,,,,,,,,,OR951274,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+6,9~,1829,2166,1583,1920,1633,1970,^NC_028366,Unknown (KT452729),PP766455,1.09E-02,NS,NS,NS,NS,NS,NS,NS,NS
+6,,,,,,,,,,PP766457,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+KOBUVIRUS CLADE,,,,,,,,,,,,,,,,,,,
+,,,Breakpoint Positions,,,,,,,,,,,,,,,,
+,,In Alignment, ,In Recombinant Sequence, ,Relative to MN116647,, , , , , , Detection Methods,,,,,,
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+1,2~,8077,8554,7921,8347,7901,8268,^OQ818322,Unknown (NC_034971.1),OP287812.1,NS,NS,3.08E-04,NS,NS,NS,NS,NS,NS
+1,,,,,,,,,Unknown(OP287812.1),NC_034971.1,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+2,3~,674,1244,489,996,627,1109,^NC_034971.1,rhinolophus_china,MN116647,NS,NS,5.31E-04,1.46E-03,NS,NS,NS,NS,1.58E-02
+2,,,,,,,,,,rattus_tanezumi_china,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+3,4~,4440, 673*,3698, 43*,4266, 626*,^rhinolophus_china,Unknown (NC_034971.1),rattus_tanezumi_china,8.94E-04,NS,2.56E-02,6.78E-03,1.00E-03,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+4,5~,1739,2074,1482,1817,1586,1909,^NC_034971.1,Unknown (PP766456),rattus_tanezumi_china,NS,NS,8.99E-04,NS,NS,NS,NS,NS,4.45E-03
+4,,,,,,,,,Unknown(OP287812.1),MN116647,,,,,,,,,
+4,,,,,,,,,Unknown(OQ818322),,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+5,6~,3412,3656,3155,3399,3244,3488,NC_034971.1,Unknown (PP766456),rattus_tanezumi_china,6.57E-04,NS,NS,NS,NS,NS,NS,NS,1.12E-02
+5,,,,,,,,,Unknown(OP287812.1),,,,,,,,,,
+5,,,,,,,,,Unknown(OQ818322),,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+6,7~, 4469*,6855, 4286*,6667, 4295*,6679,^rattus_tanezumi_china,PP766456,rhinolophus_china,3.28E-03,NS,NS,NS,NS,NS,NS,NS,NS
+6,,,,,,,,MN116647,,,,,,,,,,,
+6,,,,,,,,NC_034971.1[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+7,8~,8006,170,7738,1,7830,142,^NC_034971.1,rattus_tanezumi_china,Unknown (OP287812.1),7.99E-03,NS,3.90E-02,NS,NS,NS,NS,NS,NS
+7,,,,,,,,,OP287812.1,Unknown(MN116647),,,,,,,,,
+7,,,,,,,,,PP766456,Unknown(rattus_tanezumi_china),,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+8,9~,2943,3121,2686,2864,2778,2956,^NC_034971.1,OQ818322,rattus_tanezumi_china,2.10E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+KOBUVIRUS,,,,,,,,,,,,,,,,,,,
+,,,Breakpoint Positions,,,,,,,,,,,,,,,,
+,,In Alignment, ,In Recombinant Sequence, ,Relative to MN116647,, , , , , , Detection Methods,,,,,,
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+1,1~,8510,1250,8268,1109,8268,1109,^MN116647,Unknown (NC_034971.1),OR951365.1,5.59E-05,NS,3.76E-04,5.65E-03,1.21E-04,NS,NS,NS,3.37E-03
+1,,,,,,,,OM069746,,,,,,,,,,,
+1,,,,,,,,OM069755,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+2,2~,3370,3662,3107,3399,3196,3488,^NC_034971.1,Unknown (PP766456),OR951245.1,1.56E-04,NS,5.25E-03,NS,NS,NS,NS,NS,3.54E-02
+2,,,,,,,,,Unknown(OP287812.1),,,,,,,,,,
+2,,,,,,,,,Unknown(OQ818322),,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+3,3~,1745,2080,1482,1817,1586,1909,^NC_034971.1,Unknown (OQ818322),OM069746,4.98E-04,NS,5.14E-03,NS,NS,NS,NS,NS,8.45E-03
+3,,,,,,,,,Unknown(OP287812.1),MN116647,,,,,,,,,
+3,,,,,,,,,Unknown(PP766456),OM069755,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+4,4~,8078, 8558*,7809, 8216*,7901, 8268*,^NC_034971.1,Unknown (OP287812.1),OQ818322,NS,NS,7.69E-04,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+5,5~,4730,5347,3894,4511,4553,5170,^OR951365.1,NC_034971.1,Unknown (PP766456),NS,NS,5.71E-03,5.00E-03,0.003761435,NS,NS,NS,NS
+5,,,,,,,,,,Unknown(OP287812.1),,,,,,,,,
+5,,,,,,,,,,Unknown(OQ818322),,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+6,6~,4618,5827,3872,5081,4441,5650,^OR951245.1,MN116647,Unknown (OQ818322),7.54E-03,NS,NS,1.65E-02,8.93E-04,NS,NS,NS,NS
+6,,,,,,,,OR951365.1,,Unknown(PP766456),,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+7,7~,2757,2824,2020,2087,2586,2653,^OR951245.1,Unknown (NC_034971.1),OR951365.1,7.04E-03,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+8,8~,8410, 8454*,8207, 8228*,8207, 8228*,^MN116647,OR951365.1,Unknown (OR951245.1),8.75E-03,5.12E-03,4.11E-02,NS,NS,NS,NS,NS,NS
+8,,,,,,,,OM069746,,,,,,,,,,,
+8,,,,,,,,OM069755,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+9,9~,7324, 7430*,7147, 7253*,7147, 7253*,MN116647,OP287812.1,OR951245.1,3.51E-02,2.43E-03,1.02E-02,NS,NS,NS,NS,NS,NS
+9,,,,,,,,,OQ818322,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+10,10~,6888,6993,6619,6724,6711,6816,^NC_034971.1,PP766456,OM069746,0.011078326,NS,NS,7.54E-03,9.86E-03,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+11,11~,2949,3127,2686,2864,2778,2956,NC_034971.1,OQ818322,OM069755,2.26E-02,NS,3.23E-02,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+12,12~,3536, 3572*,3362, 3398*,3362, 3398*,^MN116647,OR951365.1,OM069746,3.68E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+13,13~,8126, 8396*,7905, 8156*,7949, 8201*,^OP287812.1,Unknown (MN116647),OR951245.1,NS,1.57E-03,4.74E-02,0.02374371,NS,NS,NS,NS,NS
+13,,,,,,,,OQ818322,Unknown(OR951245.1),MN116647,,,,,,,,,
+13,,,,,,,,PP766456,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+14,14~, 5831*,6339, 5085*,5593, 5654*,6162,^OR951245.1,OM069746,Unknown (PP766456),3.60E-02,1.52E-02,NS,NS,2.83E-02,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+KUNSAGIVIRUS CLADE,,,,,,,,,,,,,,,,,,,
+,,,Breakpoint Positions,,,,,,,,,,,,,,,,
+,,In Alignment, ,In Recombinant Sequence, ,Relative to NC_033818.1,, , , , , , Detection Methods,,,,,,
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+1,1~,6540,6631,5891,5982,5597,5688,^rodent_china,NC_033818.1,NC_038317,4.24E-05,4.26E-02,NS,1.96E-03,3.27E-02,NS,NS,NS,4.80E-04
+1,,,,,,,,,OQ818317,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+2,2~,4742,4983,4194,4435,3970,4211,^NC_038317,OP589993.1,Unknown (NC_034206.1),1.68E-02,NS,1.25E-04,1.92E-03,1.57E-02,NS,NS,NS,NS
+2,,,,,,,,,NC_034206.1,Unknown(OP589993.1),,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+3,4~,4255,4502,3191,3432,3494,3735,^ON136180,NC_033818.1,NC_034206.1,NS,5.51E-03,NS,NS,2.41E-02,NS,NS,NS,NS
+3,,,,,,,,NC_038317,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+4,5~,2196,2246,1815,1865,1815,1865,^NC_033818.1,NC_034206.1,OP589993.1,1.54E-03,NS,NS,NS,NS,NS,NS,NS,NS
+4,,,,,,,,OQ818317[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+5,6~,4672,5133,4320,4779,3905,4361,^NC_034206.1,Unknown (rodent_china),OQ818317,5.16E-03,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+6,7~,7688,7749,7060,7121,6732,6793,^NC_034206.1,Unknown (OP589993.1),rodent_china,1.49E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+7,8~,1256,1530,1029,1299,905,1172,^NC_034206.1,OP589993.1,Unknown (ON136180),NS,NS,0.029339758,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+KUNSAGIVIRUS,,,,,,,,,,,,,,,,,,,
+,,,Breakpoint Positions,,,,,,,,,,,,,,,,
+,,In Alignment, ,In Recombinant Sequence, ,Relative to NC_033818.1,, , , , , , Detection Methods,,,,,,
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+1,1~,6518,6574,5893,5949,5597,5653,^NC_038317,Unknown (OQ818317),OQ716009,1.83E-04,1.90E-02,NS,NS,NS,NS,NS,NS,5.50E-03
+1,,,,,,,,,Unknown(NC_033818.1),,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+2,2~,1254,1522,1038,1302,914,1175,^NC_034206.1,OP589993.1,Unknown (OQ716008),1.46E-02,NS,2.03E-03,NS,NS,NS,NS,NS,NS
+2,,,,,,,,,,Unknown(OQ716009),,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+3,3~,2184,2235,1814,1865,1814,1865,^NC_033818.1,NC_034206.1,OP589993.1,2.92E-03,NS,NS,NS,NS,NS,NS,NS,NS
+3,,,,,,,,OQ818317[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+4,4~,5448,5582,4893,5027,4648,4770,^NC_038317,Unknown (OQ818317),OQ716008,8.00E-03,NS,NS,NS,NS,NS,NS,NS,1.99E-02
+,,,,,,,,,,,,,,,,,,,
+5,5~,1064,1329,373,638,724,989,^ON136180,OQ716008,NC_038317,8.68E-03,NS,1.04E-02,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+6,6~,4691,5010,4351,4670,3938,4252,^NC_034206.1,Unknown (OQ818317),NC_038317,NS,NS,8.82E-03,7.05E-03,7.58E-03,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+7,7~,4208, 4487*,3461, 3734*,3461, 3734*,^NC_033818.1,NC_038317,Unknown (NC_034206.1),5.24E-03,2.60E-02,3.30E-02,NS,3.44E-02,NS,NS,NS,NS
+7,,,,,,,,OQ818317[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+8,8~,6753,6844,5966,6057,5830,5921,^OQ818317,Unknown (NC_038317),OQ716009,1.02E-02,NS,NS,NS,NS,NS,NS,NS,NS
+8,,,,,,,,,,OQ716008,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+9,9~, 6463*, 6651*, 5864*, 6052*, 5556*, 5730*,^NC_034206.1,Unknown (NC_033818.1),OQ716008,1.25E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+MISCHIVIRUS,,,,,,,,,,,,,,,,,,,
+,,,Breakpoint Positions,,,,,,,,,,,,,,,,
+,,In Alignment, ,In Recombinant Sequence, ,Relative to MG888045.1,, , , , , , Detection Methods,,,,,,
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+1,2~,5175,6044,4134,4957,3288,4138,^NC_075428.1,NC_026470.1,OR951360.1,1.44E-04,NS,3.37E-04,3.58E-03,1.64E-03,NS,NS,NS,7.87E-03
+,,,,,,,,,,,,,,,,,,,
+2,3~,6006,6175,5269,5420,4100,4254,^NC_026470.1,MG888045.1,OQ818316,6.34E-04,NS,3.65E-03,8.00E-03,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+3,4~,2623,2729,2021,2127,1049,1155,^NC_075428.1,Unknown (OQ818316),MG888045.1,1.44E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+4,5~,3046,3373,2389,2714,1429,1754,^NC_075428.1,Unknown (NC_043072.1),OR951360.1,1.79E-02,NS,NS,4.21E-04,4.61E-05,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+5,6~,8079,8135,6142,6198,5959,6015,^OR951360.1,OQ818316,NC_043072.1,3.86E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+6,7~, 2730*, 3045*, 2128*, 2388*, 1156*, 1428*,^NC_075428.1,NC_043072.1,Unknown (OQ818316),4.12E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+SAPELO CLADE,,,,,,,,,,,,,,,,,,,
+,,,Breakpoint Positions,,,,,,,,,,,,,,,,
+,,In Alignment, ,In Recombinant Sequence, ,Relative to eonycteris_china,, , , , , , Detection Methods,,,,,,
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+1,1~,7778,335,7443,269,7179,0,^PP711943,OQ818320,Unknown (NC_003987),NS,NS,1.10E-12,4.02E-02,2.41E-06,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+2,2~, 336*,957, 268*,817, 0*,539,^OQ818321,PP711943,Unknown (PP711911),1.99E-09,1.11E-06,7.83E-07,2.57E-07,2.46E-05,NS,NS,NS,NS
+2,,,,,,,,,NC_033820,,,,,,,,,,
+2,,,,,,,,,OQ818320,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+3,3,3334,5410,3071,5027,2880,4860,^NC_033820,PP711943,OQ818320,6.34E-09,NS,6.77E-06,4.66E-10,2.87E-11,NS,NS,NS,1.87E-14
+,,,,,,,,,,,,,,,,,,,
+4,4,223,957,101,758,0,539,^PP711921,NC_033820,Unknown (PP711911),5.94E-10,8.31E-08,2.98E-07,4.71E-07,1.17E-07,NS,NS,NS,NS
+4,,,,,,,,,OQ818320,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+5,5~,3239,4228,2991,3919,2785,3730,^OQ818329,Unknown (PP711943),PP711921,7.65E-08,NS,NS,1.39E-02,6.74E-07,NS,NS,NS,NS
+5,,,,,,,,,Unknown(OQ818321),OQ818320,,,,,,,,,
+5,,,,,,,,,Unknown(PP711921),PP711943,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+6,6~,2786,4175,2566,3906,2338,3681,^PP711911,Unknown (PP711943),PP711921,1.41E-07,NS,7.71E-03,8.69E-04,4.63E-08,NS,NS,NS,NS
+6,,,,,,,,OQ818329[T],,OQ818321,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+7,11~,2456,2524,2236,2304,2008,2076,^PP711911,OQ818320,Unknown (PP711921),1.34E-04,1.34E-03,NS,2.27E-03,2.30E-02,NS,NS,NS,NS
+7,,,,,,,,,NC_033820,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+8,12~,7424, 8049*,6799, 6863*,6825, 7446*,^PP711921,Unknown (OQ818320),OQ818321,2.91E-04,6.80E-03,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+9,13~,6874,7022,6476,6624,6276,6424,^OQ818329,Unknown (NC_003987),PP711921,9.19E-04,NS,3.69E-02,NS,NS,NS,NS,NS,NS
+9,,,,,,,,PP711943[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+10,14, 5420*, 6873*, 5119*, 6539*, 4870*, 6275*,^PP711943,NC_033820,Unknown (OQ818329),NS,1.29E-14,5.87E-14,5.40E-04,4.16E-08,NS,NS,NS,NS
+10,,,,,,,,,OQ818320,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+11,15, 4241*, 5419*, 3977*, 5118*, 3730*, 4869*,^PP711943,OQ818320,Unknown (OQ818329),NS,1.14E-15,8.48E-14,4.69E-18,NS,NS,NS,NS,NS
+11,,,,,,,,OQ818320[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+12,16~, 7045*, 7773*, 6711*, 7438*, 6447*, 7174*,^PP711943,OQ818320,Unknown (OQ818329),NS,8.47E-10,2.67E-07,3.01E-03,1.94E-04,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+13,17~, 82*,512, 48*,441, 0*,137,^NC_003987,Unknown (PP711911),OQ818320,7.12E-03,NS,2.90E-03,6.90E-03,NS,NS,NS,NS,NS
+13,,,,,,,,,Unknown(OQ818320),PP711911,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+14,18~,2408,2520,2169,2281,1960,2072,^OQ818329,OQ818320,Unknown (OQ818321),1.25E-02,NS,NS,NS,NS,NS,NS,NS,NS
+14,,,,,,,,,NC_033820,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+15,19~, 6023*, 6090*, 5647*, 5711*, 5428*, 5492*,PP711911,OQ818320,eonycteris_china,1.54E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+16,20~,1415,1455,1273,1313,994,1034,^PP711943,NC_003987,OQ818321,1.78E-02,NS,NS,NS,NS,NS,NS,NS,NS
+16,,,,,,,,,,PP711921,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+17,21~,2647,2684,2408,2445,2199,2236,OQ818329,NC_033820,PP711911,3.73E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+18,22~,6552,6811,6199,6458,5954,6213,^OQ818321,PP711911,NC_033820,0.044047578,NS,NS,1.41E-02,NS,NS,NS,NS,NS
+18,,,,,,,,PP711921[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+19,23~,5839, 6017*,5433, 5610*,5244, 5422*,^PP711921,NC_033820,Unknown (PP711911),NS,NS,5.00E-02,NS,NS,NS,NS,NS,NS
+19,,,,,,,,OQ818321[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+SAPELOVIRUS,,,,,,,,,,,,,,,,,,,
+,,,Breakpoint Positions,,,,,,,,,,,,,,,,
+,,In Alignment, ,In Recombinant Sequence, ,Relative to NC_003987,, , , , , , Detection Methods,,,,,,
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+1,1,3545,850,3028,396,3181,645,^OR951332,OR951325,PP711911,5.80E-52,3.26E-76,2.24E-71,6.11E-44,1.54E-21,NS,NS,NS,9.77E-14
+,,,,,,,,,,,,,,,,,,,
+2,2,7766,335,7443,269,7180,268,^PP711943,OQ818320,Unknown (NC_003987),NS,NS,4.52E-12,6.59E-09,2.04E-05,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+3,3,8095,988,7733,847,7468,762,^OQ818321,NC_033820,Unknown (OR951327),5.57E-08,NS,4.72E-09,7.25E-04,6.45E-08,NS,NS,NS,NS
+3,,,,,,,,,,Unknown(OR951326),,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+4,4,3332,5416,3070,5027,3033,4879,^NC_033820,PP711943,OQ818320,1.66E-08,NS,1.77E-05,1.22E-09,7.52E-11,NS,NS,NS,4.88E-14
+,,,,,,,,,,,,,,,,,,,
+5,5,8001,993,6863,793,7415,767,PP711921,NC_033820,Unknown (OR951326),2.09E-11,3.52E-04,9.92E-10,3.43E-06,9.14E-06,NS,NS,NS,NS
+5,,,,,,,,,OQ818320,Unknown(OR951327),,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+6,6~,2952,4167,2706,3860,2662,3716,^PP711921,PP711943,Unknown (OR951326),3.98E-08,NS,NS,1.61E-10,3.76E-10,NS,NS,NS,NS
+6,,,,,,,,OQ818321,OQ818320,Unknown(OR951327),,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+7,7~, 7891*, 850*, 7299*, 450*, 7305*, 645*,^OR951326,OR951327,OR951332,NS,NS,1.31E-04,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+8,8, 866*, 3331*, 415*, 2830*, 645*, 3032*,^OR951327,OR951326,Unknown (NC_033820),NS,2.12E-11,1.07E-11,5.20E-16,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+9,9~,7279, 8000*,6796, 6862*,6693, 7414*,^PP711921,Unknown (OQ818320),OQ818321,1.66E-04,9.61E-04,NS,NS,NS,NS,NS,NS,NS
+9,,,,,,,,,Unknown(NC_033820),,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+10,10,2456,2522,2237,2303,2202,2268,^PP711911,OQ818320,Unknown (PP711921),2.20E-04,2.46E-03,NS,4.03E-03,2.50E-02,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+11,11~,4801,6061,4437,5660,4276,5478,^PP711921,OQ818320,Unknown (OR951326),1.33E-03,NS,NS,5.37E-03,2.71E-03,NS,NS,NS,NS
+11,,,,,,,,OQ818321,PP711943,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+12,12~,6862,7012,6279,6429,6279,6429,^NC_003987,PP711921,Unknown (OQ818329),2.32E-03,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+13,13~,41,563,0,384,7,494,^OQ818329,OQ818320,Unknown (NC_003987),3.39E-03,1.78E-02,1.36E-02,1.38E-04,NS,NS,NS,NS,NS
+13,,,,,,,,PP711911,NC_033820,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+14,14~,7538,7624,7170,7256,6952,7038,PP711911,OQ818320,OR951326,NS,NS,6.53E-03,NS,NS,NS,NS,NS,NS
+14,,,,,,,,,NC_033820,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+15,15~,6130,6244,5762,5876,5547,5661,^PP711911,PP711921,OR951326,6.98E-03,NS,NS,NS,NS,NS,NS,NS,NS
+15,,,,,,,,,,OR951327,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+16,16~,4249,4762,3914,4398,3762,4237,PP711921,OQ818320,Unknown (OQ818329),9.36E-03,NS,NS,3.04E-02,2.96E-02,NS,NS,NS,NS
+16,,,,,,,,OQ818321,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+17,17~,3390,4530,3143,4199,3085,4027,^OQ818329,Unknown (PP711943),OR951325,0.009677487,NS,NS,NS,NS,NS,NS,NS,NS
+17,,,,,,,,,Unknown(OR951325),PP711943,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+18,18~,1931,1954,1773,1796,1696,1719,PP711943,Unknown (OR951332),OQ818320,1.40E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+19,19~,2270,2451,1752,1933,2016,2197,^OR951325,OQ818320,OR951332,1.44E-02,NS,8.25E-03,5.35E-03,9.49E-03,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+20,20~,4701,4996,4182,4459,4182,4459,^NC_003987,Unknown (PP711943),OR951325,0.01191445,NS,NS,1.98E-02,1.83E-02,NS,NS,NS,NS
+20,,,,,,,,,Unknown(OR951325),OQ818320,,,,,,,,,
+20,,,,,,,,,,PP711943,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+21,21~,1335,1556,845,1051,1109,1321,^OR951325,PP711943,Unknown (PP711921),1.79E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+22,22~,810,828,621,639,632,645,^OQ818329,PP711943,PP711911,3.97E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+23,23~,6852,6887,6465,6500,6269,6304,OQ818329,NC_033820,PP711911,4.30E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+24,24~,2400,2785,2162,2547,2146,2522,^OQ818329,PP711943,Unknown (PP711921),NS,NS,2.25E-02,1.42E-02,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+SAPOVIRUS CLADE,,,,,,,,,,,,,,,,,,,
+,,,Breakpoint Positions,,,,,,,,,,,,,,,,
+,,In Alignment, ,In Recombinant Sequence, ,Relative to e_helvum_cameroon,, , , , , , Detection Methods,,,,,,
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+1,1~,7832,7918,7490,7562,7301,7386,^r_aegypticus_kenya,Unknown (ON872527),e_helvum_cameroon,1.58E-03,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+2,3~,1316,1665,1140,1451,1140,1451,^e_helvum_cameroon,OQ709197,ON872527,5.70E-03,NS,7.73E-03,2.58E-02,NS,NS,NS,NS,NS
+2,,,,,,,,OQ818319[T],,,,,,,,,,,
+2,,,,,,,,PP766459[T],,,,,,,,,,,
+2,,,,,,,,OP963623[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+3,4~,3548,7519,3225,7029,3225,7029,^e_helvum_cameroon,PP766459,Unknown (r_aegypticus_kenya),4.64E-03,NS,NS,3.18E-05,3.97E-05,NS,NS,NS,3.66E-04
+,,,,,,,,,,,,,,,,,,,
+4,5~,8222,963,7749,893,7633,803,^r_aegypticus_kenya,PP766459,OQ709197,1.29E-02,NS,1.21E-02,1.97E-02,2.03E-04,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+5,6~,4100,4144,3570,3614,3751,3795,^ON872527,OP963622,OP963623,1.22E-02,9.38E-03,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+6,7~,429,679,196,405,334,546,^ON872527,PP766459,Unknown (OQ709197),3.91E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+7,8~,2413,2516,1983,2066,2149,2238,^ON872527,PP766459,Unknown (OP963622),2.44E-02,0.024391296,NS,NS,NS,NS,NS,NS,NS
+7,,,,,,,,,OQ818319,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+8,9~,7302,7504,6645,6815,6825,7020,OP963623,OQ709197,PP766459,4.22E-02,NS,NS,1.68E-03,1.20E-03,NS,NS,NS,3.78E-02
+8,,,,,,,,,,OQ818319,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+9,10~,6328,6606,5752,6021,5907,6176,^OP963623,ON872527,OP963622,4.51E-02,NS,NS,NS,2.81E-02,NS,NS,NS,NS
+9,,,,,,,,OQ818319[T],,,,,,,,,,,
+9,,,,,,,,PP766459[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+SAPOVIRUS,,,,,,,,,,,,,,,,,,,
+,,,Breakpoint Positions,,,,,,,,,,,,,,,,
+,,In Alignment, ,In Recombinant Sequence, ,Relative to KX759619,, , , , , , Detection Methods,,,,,,
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+1,1~,7345,164,6898,88,6073,0,^PP712015,PP712001,OP963623,2.35E-08,NS,1.27E-06,NS,3.50E-02,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+2,2~,1620,1808,1421,1609,670,858,OP963623,KX759621,PP712004,1.28E-03,NS,1.01E-05,NS,4.52E-02,NS,NS,NS,3.61E-04
+,,,,,,,,,,,,,,,,,,,
+3,3~,1404,1482,1212,1290,461,539,^OP963623,KX759619,PP712004,4.08E-04,NS,NS,NS,NS,NS,NS,NS,0.034985937
+,,,,,,,,,,,,,,,,,,,
+4,4~,5722,5862,5369,5509,4573,4713,OP963622,NC_033776,PP712008,6.31E-03,NS,7.36E-04,NS,NS,NS,NS,NS,NS
+4,,,,,,,,,KX759622,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+5,5~,5128,5482,4883,5167,4062,4346,^KX759623,PP712001,PP766459,NS,NS,8.36E-04,NS,NS,NS,NS,NS,7.22E-03
+5,,,,,,,,,,OQ818319,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+6,6~,3070,3148,2870,2948,2023,2101,^KX759621,OQ709197,PP766459,1.27E-03,NS,NS,NS,NS,NS,NS,NS,NS
+6,,,,,,,,,,OQ818319,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+7,7~,7236,7308,6726,6787,5987,6036,^OP963622,NC_033776,Unknown (PP766459),1.31E-03,NS,NS,NS,NS,NS,NS,NS,NS
+7,,,,,,,,,KX759622,Unknown(OQ818319),,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+8,8~,4950,5066,4656,4772,3884,4000,^OP963622,NC_033776,Unknown (PP712001),1.09E-03,NS,NS,NS,NS,NS,NS,NS,NS
+8,,,,,,,,,KX759622,Unknown(PP712004),,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+9,9~,1875,2515,925,1501,925,1501,^KX759619,PP766459,Unknown (PP712001),1.88E-03,NS,3.84E-02,NS,NS,NS,NS,NS,NS
+9,,,,,,,,KX759623[T],OQ818319,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+10,10~,1230,1518,1111,1399,287,575,^KX759623,OQ709197,ON872527,3.11E-03,NS,NS,3.16E-02,0.035006714,NS,NS,NS,NS
+10,,,,,,,,OQ818319[T],,,,,,,,,,,
+10,,,,,,,,PP766459[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+11,11~,2332,3030,2095,2731,1344,1989,^OP963623,PP712015,Unknown (PP712001),NS,NS,3.42E-03,9.17E-03,NS,NS,NS,NS,NS
+11,,,,,,,,,PP712001,Unknown(PP712015),,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+12,12~,7036,7134,6673,6771,5817,5915,^PP712004,Unknown (PP712015),PP712001,5.08E-03,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+13,13~,6298,6960,5970,6560,5149,5741,^KX759623,Unknown (PP712004),NC_033776,4.36E-03,NS,NS,8.77E-04,1.13E-03,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+14,15~,5042,5076,4738,4772,3976,4010,^PP712008,PP712001,Unknown (OP963623),6.85E-03,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+15,16~,476,702,301,526,0,18,^OP963623,ON872527,Unknown (PP712008),1.13E-02,NS,NS,1.89E-03,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+16,17~,7166,7310,6486,6561,5944,6038,^OQ709197,PP712015,Unknown (KX759623),1.30E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+17,18~,2346,2450,1988,2076,1355,1436,^OQ709197,PP766459,Unknown (PP712004),1.40E-02,NS,NS,NS,NS,NS,NS,NS,NS
+17,,,,,,,,,OQ818319,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+18,19~,3829,3882,3332,3385,2770,2817,^OQ709197,OP963623,Unknown (PP712004),1.69E-02,4.91E-02,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+19,20~,6765,6917,6309,6446,5554,5698,^PP712008,OP963622,Unknown (KX759621),2.78E-02,NS,NS,NS,NS,NS,NS,NS,NS
+19,,,,,,,,,KX759621,Unknown(OP963622),,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+20,21~,5503,5714,4363,4565,4363,4565,^KX759619,PP766459,Unknown (PP712001),2.86E-02,NS,NS,NS,NS,NS,NS,NS,NS
+20,,,,,,,,,PP712001,Unknown(OQ818319),,,,,,,,,
+20,,,,,,,,,,Unknown(PP766459),,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+21,22~, 5719*, 7340*, 5384*, 6893*, 4570*, 6068*,^PP712015,PP712001,Unknown (KX759619),3.97E-02,NS,7.81E-03,6.12E-07,8.59E-04,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+22,23~,6224,6581,5835,6155,5075,5410,^OP963623,PP712004,Unknown (PP712015),NS,NS,NS,0.020013486,5.74E-04,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+TESCHOVIRUS CLADE,,,,,,,,,,,,,,,,,,,
+,,,Breakpoint Positions,,,,,,,,,,,,,,,,
+,,In Alignment, ,In Recombinant Sequence, ,Relative to LC386158,, , , , , , Detection Methods,,,,,,
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+1,1,7346,7558,6968,7180,6444,6656,r_aegypticus_africa,Unknown (OQ818324),OQ818323,1.04E-20,3.09E-07,4.54E-21,9.73E-11,6.32E-10,NS,NS,NS,8.05E-09
+1,,,,,,,,,Unknown(OQ818323),OQ818324,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+2,2~, 63*,1064, 28*,915, 0*,521,^OQ818323,r_aegypticus_africa,OQ818324,4.70E-06,NS,5.47E-04,1.19E-08,1.76E-06,NS,NS,NS,1.66E-04
+,,,,,,,,,,,,,,,,,,,
+3,3~,1760,2547,1128,1887,1149,1918,^rousettus_china,OQ818318,Unknown (OR951324),6.19E-03,NS,1.06E-02,3.34E-02,0.042472084,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+4,4~,674,705,136,154,153,184,^OR951324,LC386158,r_aegypticus_africa,1.91E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+5,5~, 3582*,7322, 3299*,6944, 2888*,6420,^r_aegypticus_africa,Unknown (OQ818323),OQ818324,2.12E-02,NS,NS,1.96E-04,NS,NS,NS,NS,1.63E-04
+5,,,,,,,,,Unknown(OQ818324),OQ818323,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+6,7~,7305,7418,6736,6849,6403,6516,^OQ818318,LC386158,rousettus_china,NS,NS,4.14E-02,0.021570412,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+TESCHOVIRUS,,,,,,,,,,,,,,,,,,,
+,,,Breakpoint Positions,,,,,,,,,,,,,,,,
+,,In Alignment, ,In Recombinant Sequence, ,Relative to LC386158,, , , , , , Detection Methods,,,,,,
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+1,1,5395,1104,5039,913,4632,539,^PP711934,OQ818323,OQ818324,2.33E-15,NS,6.56E-06,2.02E-04,5.00E-10,NS,NS,NS,2.66E-14
+,,,,,,,,,,,,,,,,,,,
+2,2,3494, 5394*,3231, 5072*,2847, 4631*,^OQ818323,PP711934,Unknown (OR951335),1.63E-07,NS,9.02E-08,2.11E-02,2.88E-10,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+3,3~,7230,7370,6692,6832,6407,6547,^PP711948,LC386158,OQ818318,1.56E-04,NS,9.86E-03,NS,NS,NS,NS,NS,9.78E-05
+,,,,,,,,,,,,,,,,,,,
+4,4~,1178,1388,539,749,613,817,^OR951335,OQ818323,Unknown (OQ818324),2.20E-03,NS,NS,3.81E-03,2.02E-02,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+5,5~,7171,581,6307,54,6348,78,^OR951335,OQ818323,Unknown (OR951333),2.24E-03,NS,NS,4.51E-05,1.81E-02,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+6,6~,4869,5127,3981,4236,4153,4395,^OR951324,OR951334,OQ818323,4.02E-03,NS,NS,NS,NS,NS,NS,NS,NS
+6,,,,,,,,OQ818318,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+7,7~,4475,4860,3996,4381,3759,4144,^PP711948,Unknown (OR951335),OR951334,9.51E-03,NS,NS,NS,1.26E-02,NS,NS,NS,3.71E-02
+,,,,,,,,,,,,,,,,,,,
+8,8~,3920,4118,3534,3708,3246,3424,OQ818318,OR951334,PP711948,NS,NS,1.87E-02,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+9,9~, 7148*,7170, 6284*,6306, 6325*,6347,^OR951335,OR951333,OQ818324,NS,NS,2.55E-02,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+10,10~, 602*,993, 74*,354, 99*,458,^OR951335,Unknown (OR951333),OQ818324,NS,NS,2.24E-02,NS,2.17E-02,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+11,11~,2169,2235,1965,2029,1569,1635,^OQ818323,Unknown (OQ818318),PP711934,2.56E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+12,12~,2208,2388,1482,1660,1608,1786,^OR951333,OQ818324,OR951324,3.02E-02,NS,2.87E-02,0.044139616,NS,NS,NS,NS,NS
+12,,,,,,,,OR951334[T],,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+13,13~,1909,1994,1237,1321,1320,1404,^OR951335,OQ818318,OQ818323,3.22E-02,NS,NS,NS,NS,NS,NS,NS,NS
+,,,,,,,,,,,,,,,,,,,
+Table Key:,,,,,,,,,,,,,,,,,,,
+~            = It is possible that this apparent recombination signal could have been caused by an evolutionary,,,,,,,,,,,,,,,,,,,
+               process other than recombination.,,,,,,,,,,,,,,,,,,,
+*            = The actual breakpoint position is undetermined (it was most likely overprinted by a subsequent ,,,,,,,,,,,,,,,,,,,
+               recombination event).,,,,,,,,,,,,,,,,,,,
+^            = The recombinant sequence may have been misidentified (one of the identified parents might be the recombinant),,,,,,,,,,,,,,,,,,,
+Minor Parent = Parent contributing the smaller fraction of sequence.,,,,,,,,,,,,,,,,,,,
+Major Parent = Parent contributing the larger fraction of sequence.,,,,,,,,,,,,,,,,,,,
+Unknown      = Only one parent and a recombinant need be in the alignment for a recombination event to be detectable.,,,,,,,,,,,,,,,,,,,
+               The sequence listed as unknown was used to infer the existance of a missing parental sequence.,,,,,,,,,,,,,,,,,,,
+NS           = No significant P-value was recorded for this recombination event using this method.,,,,,,,,,,,,,,,,,,,
