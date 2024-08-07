@@ -295,69 +295,49 @@ p4_pos <- p2b+
 
 p4_pos
 
-# ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map.pdf"),
-#        plot = p4_pos,
-#        units="mm",  
-#        width=60, 
-#        height=60, 
-#        scale=3, 
-#        dpi=300)
+ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_only.pdf"),
+       plot = p4_pos,
+       units="mm",
+       width=60,
+       height=60,
+       scale=3,
+       dpi=300)
 
 
 
 ##Add a plot showing the shared number of viruses in population during each sampling session
-dat <- read.csv(file = paste0(homewd,"/metadata/demo_data_indiv_pos_heatmap_simple.csv"), header = T, stringsAsFactors = F)
-head(dat)
-names(dat)
-
-dat$bat_species<-factor(dat$bat_species, levels=c("Pteropus rufus","Eidolon dupreanum", "Rousettus madagascariensis"))
-dat$roost_site<-factor(dat$roost_site, levels=c("AngavoKely","Ambakoana","Maromizaha"))
-dat$sampling_session<-factor(dat$sampling_session)
-
-#Subset because Pteropus only has one sample pos with only one virus
-dat<-subset(dat, bat_species!="Pteropus rufus")
-
-
-#simple summary
-p1 <- ggplot(dat, aes(x=roost_site, y=sampling_session, fill=num_unique_viruses)) +
-  geom_tile() +
-  #geom_tile(aes(fill = cut(num_genome,breaks=0:6, labels=1:6))) +
-  #scale_fill_manual(values=c("lightblue1","skyblue", "royalblue1")) +
-  scale_fill_viridis_c(option = "C", direction = -1) +
-  #scale_fill_gradient(low="yellow", high="red")+
-  #facet_wrap(~family, ncol=1,  scales = "free_y")+
-  # facet_nested(family~., scales="free", space="free",
-  #              switch="y")+
-  # facet_nested(family+genus~., scales="free", space="free",
-  #              switch="y", nest_line = element_line(color="white"), solo_line = TRUE)+
-  labs(#title = expression("Diversity of" ~italic(Picornavirales) ~"sequences"),
-    x = "Roost site",
-    y= "Sampling session",
-    fill="Unique virus species",
-    title="")+
-  theme_linedraw()+
-  scale_y_discrete(position="left", limits=rev)+
-  scale_x_discrete(position="top")+
-  theme(plot.margin = margin(0, 1, 0, 0, "pt"),
-        plot.background = element_blank(),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        plot.title = element_text(size=10, face="italic"), 
-        axis.text.y = element_text(size=10),
-        axis.text.x = element_text(size=10),
-        legend.text = element_text(size=10),
-        legend.title = element_text(size=10),
-        legend.position = "bottom",
-        #legend.position = c(0.2,0.15),
-        legend.direction = "horizontal")
-p1
-
-
 
 ##stacked bar plot
 dat <- read.csv(file = paste0(homewd,"/metadata/demo_data_indiv_pos_heatmap_species.csv"), header = T, stringsAsFactors = F)
 head(dat)
 names(dat)
+
+#pick order for the labels
+dat$genus <- factor(dat$genus, levels = c("Cardiovirus","Hepatovirus","Kobuvirus","Kunsagivirus","Mischivirus", "Unclassified bat picornavirus",
+                                          "Sapelovirus","Teschovirus", "Sapovirus"))   
+dat$virus <- factor(dat$virus, levels = c("Eidolon dupreanum cardiovirus", "Eidolon dupreanum hepatovirus", "Eidolon dupreanum kobuvirus", "Eidolon dupreanum kobuvirus 2",
+                                          "Eidolon dupreanum kunsagivirus", "Pteropus rufus mischivirus", "Rousettus madagascariensis picornavirus 1", "Rousettus madagascariensis picornavirus 2",
+                                          "Rousettus madagascariensis picornavirus 3", "Eidolon dupreanum sapelovirus 1","Eidolon dupreanum sapelovirus 2", "Rousettus madagascariensis sapelovirus 1",
+                                          "Eidolon dupreanum teschovirus 1","Rousettus madagascariensis teschovirus 1","Rousettus madagascariensis teschovirus 2","Eidolon dupreanum sapovirus 1",
+                                          "Eidolon dupreanum sapovirus 2", "Eidolon dupreanum sapovirus 3", "Eidolon dupreanum sapovirus 4", "Rousettus madagascariensis sapovirus 1",
+                                          "Rousettus madagascariensis sapovirus 2", "Rousettus madagascariensis sapovirus 3"))   
+
+#pick colors for virus genera
+genuscolz<- c("Cardiovirus"="#F8766D","Hepatovirus"="#D89000","Kobuvirus"="#A3A500","Kunsagivirus"="#39B600","Mischivirus"="#00BF7D",
+              "Sapelovirus"="#00BFC4","Sapovirus"="#00B0F6","Teschovirus"="#E76BF3","Unclassified bat picornavirus"="#9590FF",
+              "Alphavirus"="black")
+
+library(scales)
+hex_codes2 <- hue_pal()(30)      
+show_col(hex_codes2)
+
+viruscolz<-c("Eidolon dupreanum cardiovirus"="#F8766D", "Eidolon dupreanum hepatovirus"="#D89000", "Eidolon dupreanum kobuvirus"="#A3A500", "Eidolon dupreanum kobuvirus 2"="#A3A560",
+             "Eidolon dupreanum kunsagivirus"="#39B600", "Pteropus rufus mischivirus"="#00BF7D", "Rousettus madagascariensis picornavirus 1"="#9590FF", "Rousettus madagascariensis picornavirus 2"="#B983FF",
+             "Rousettus madagascariensis picornavirus 3"="mediumpurple4", "Eidolon dupreanum sapelovirus 1"="#00BFC4","Eidolon dupreanum sapelovirus 2"="aquamarine3", "Rousettus madagascariensis sapelovirus 1"="#00C0AF",
+             "Eidolon dupreanum teschovirus 1"="#FF67A4","Rousettus madagascariensis teschovirus 1"="#FF62BC","Rousettus madagascariensis teschovirus 2"="#FD61D1","Eidolon dupreanum sapovirus 1"="#00B7E9",
+             "Eidolon dupreanum sapovirus 2"="#00B0F6", "Eidolon dupreanum sapovirus 3"="#00A7FF", "Eidolon dupreanum sapovirus 4"="#619CFF", "Rousettus madagascariensis sapovirus 1"="royalblue1",
+             "Rousettus madagascariensis sapovirus 2"="royalblue3", "Rousettus madagascariensis sapovirus 3"="royalblue4")
+
 
 dat$bat_species<-factor(dat$bat_species, levels=c("Pteropus rufus","Eidolon dupreanum", "Rousettus madagascariensis"))
 dat$roost_site<-factor(dat$roost_site, levels=c("AngavoKely","Ambakoana","Maromizaha"))
@@ -372,6 +352,7 @@ p2<-ggplot(dat) +
            position = "stack",
            stat = "identity") +
   facet_nested(roost_site~., scales="free", space="free")+
+  scale_fill_manual(values=viruscolz)+
   
   labs(
     x = "Sampling session",
@@ -398,6 +379,7 @@ p3<-ggplot(dat) +
            position = "stack",
            stat = "identity") +
   facet_nested(roost_site~., scales="free", space="free")+
+  scale_fill_manual(values=genuscolz)+
   
   labs(
     x = "Sampling session",
@@ -495,14 +477,17 @@ p6 <- ggplot(dat.diversity.virus, aes(x=roost_site, y=shannon)) + theme_bw() +
 p6
 
 
+
+
 ##Put the map and both summary figs together
-sum<-plot_grid(p3,p2, labels=c("B","C"),
+library(cowplot)
+library(ggplotify)
+
+sum<-plot_grid(p3 + theme(legend.justification = "left"), p2 + theme(legend.justification = "left"), labels=c("B","C"),
                rel_widths = c(1,1), rel_heights = c(1,1),
                ncol=1, align="hv", axis="b", label_size = 23)
 sum
 sum<-as.ggplot(sum)
-
-
 
 Fig1<-plot_grid(p4_pos, sum, labels=c("A",""),
                       rel_widths = c(1,1.2), rel_heights = c(1,1),
@@ -517,7 +502,13 @@ Fig1.2
 Fig1.2<-as.ggplot(Fig1.2)
 
 
-ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_demo_v1.pdf"),
+Fig1.3<-plot_grid(p3 + theme(legend.justification = "left"), p2 + theme(legend.justification = "left"), labels=c("A","B"),
+                  rel_widths = c(1,1), rel_heights = c(1,1),
+                  ncol=2, align="hv", axis="l", label_size = 23)
+Fig1.3
+
+
+ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_diversity_v1.pdf"),
        plot = Fig1,
        units="mm",  
        width=130, 
@@ -525,7 +516,7 @@ ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_demo_v1.pdf"),
        scale=3, 
        dpi=300)
 
-ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_demo_v2.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_diversity_v2.pdf"),
        plot = Fig1.2,
        units="mm",  
        width=130, 
@@ -533,3 +524,10 @@ ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_demo_v2.pdf"),
        scale=3, 
        dpi=300)
 
+ggsave(file = paste0(homewd, "/final_figures/Fig1_diversity_v3.pdf"),
+       plot = Fig1.3,
+       units="mm",  
+       width=130, 
+       height=50, 
+       scale=3, 
+       dpi=300)
