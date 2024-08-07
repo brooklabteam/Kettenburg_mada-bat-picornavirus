@@ -359,7 +359,7 @@ batpicorna_map <- read.csv(file = "batpicorna_align_nt.csv", header = T, strings
 head(batpicorna_map)
 
 #move to long
-long.sim_nt <- melt(batpicorna_map, id.vars = c("pointer"), measure.vars = c("PP766469","OQ818325","NC_015934","PP711945","PP711946","OP963617"))
+long.sim_nt <- melt(batpicorna_map, id.vars = c("pointer"), measure.vars = c("PP766469","OQ818325","PP711912","PP711945","PP711930"))
 
 unique(long.sim_nt$variable)
 
@@ -369,14 +369,15 @@ names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
 long.sim_nt$accession[long.sim_nt$accession == "PP766469"] <- "R. madagascariensis picornavirus 3: PP766469*"
 long.sim_nt$accession[long.sim_nt$accession == "OQ818325"] <- "R. madagascariensis picornavirus 1: OQ818325*"
-long.sim_nt$accession[long.sim_nt$accession == "NC_015934"] <- "Bat picornavirus 3: NC_015934"
+long.sim_nt$accession[long.sim_nt$accession == "PP711912"] <- "Rousettus bat picornavirus: PP711912"
 long.sim_nt$accession[long.sim_nt$accession == "PP711945"] <- "Rousettus bat picornavirus: PP711945"
-long.sim_nt$accession[long.sim_nt$accession == "PP711946"] <- "Chaerephon bat picornavirus: PP711946"
-long.sim_nt$accession[long.sim_nt$accession == "OP963617"] <- "Bat picornavirus BtSY4: OP963617"
+long.sim_nt$accession[long.sim_nt$accession == "PP711930"] <- "Rousettus bat picornavirus: PP711930"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("R. madagascariensis picornavirus 3: PP766469*", "R. madagascariensis picornavirus 1: OQ818325*",
-                                                                  "Bat picornavirus 3: NC_015934","Rousettus bat picornavirus: PP711945",
-                                                                  "Chaerephon bat picornavirus: PP711946", "Bat picornavirus BtSY4: OP963617"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("R. madagascariensis picornavirus 3: PP766469*", 
+                                                                  "R. madagascariensis picornavirus 1: OQ818325*",
+                                                                  "Rousettus bat picornavirus: PP711912",
+                                                                  "Rousettus bat picornavirus: PP711945",
+                                                                  "Rousettus bat picornavirus: PP711930"))
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
@@ -420,7 +421,7 @@ batpicorna_map <- read.csv(file = "batpicorna_align_aa.csv", header = T, strings
 head(batpicorna_map)
 
 #move to long
-long.sim_aa <- melt(batpicorna_map, id.vars = c("pointer"), measure.vars = c("PP766469","OQ818325","NC_015934","PP711945","PP711946","OP963617"))
+long.sim_aa <- melt(batpicorna_map, id.vars = c("pointer"), measure.vars = c("PP766469","OQ818325","PP711912","PP711945","PP711930"))
 
 unique(long.sim_aa$variable)
 
@@ -430,20 +431,20 @@ names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
 
 long.sim_aa$accession[long.sim_aa$accession == "PP766469"] <- "R. madagascariensis picornavirus 3: PP766469*"
 long.sim_aa$accession[long.sim_aa$accession == "OQ818325"] <- "R. madagascariensis picornavirus 1: OQ818325*"
-long.sim_aa$accession[long.sim_aa$accession == "NC_015934"] <- "Bat picornavirus 3: NC_015934"
+long.sim_aa$accession[long.sim_aa$accession == "PP711912"] <- "Rousettus bat picornavirus: PP711912"
 long.sim_aa$accession[long.sim_aa$accession == "PP711945"] <- "Rousettus bat picornavirus: PP711945"
-long.sim_aa$accession[long.sim_aa$accession == "PP711946"] <- "Chaerephon bat picornavirus: PP711946"
-long.sim_aa$accession[long.sim_aa$accession == "OP963617"] <- "Bat picornavirus BtSY4: OP963617"
+long.sim_aa$accession[long.sim_aa$accession == "PP711930"] <- "Rousettus bat picornavirus: PP711930"
 
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("R. madagascariensis picornavirus 3: PP766469*", "R. madagascariensis picornavirus 1: OQ818325*",
-                                                                  "Bat picornavirus 3: NC_015934","Rousettus bat picornavirus: PP711945",
-                                                                  "Chaerephon bat picornavirus: PP711946", "Bat picornavirus BtSY4: OP963617"))
+long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("R. madagascariensis picornavirus 3: PP766469*", 
+                                                                  "R. madagascariensis picornavirus 1: OQ818325*",
+                                                                  "Rousettus bat picornavirus: PP711912",
+                                                                  "Rousettus bat picornavirus: PP711945",
+                                                                  "Rousettus bat picornavirus: PP711930"))
 long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
 title<-expression(paste("Reference: R. madagascariensis picornavirus 1: OQ818325*"))
-
-## Nucleotide
+## amino acid
 batpicorna_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
@@ -956,8 +957,7 @@ sapelovirus_full_nt_map <- read.csv(file = "sapelo_align_nt.csv", header = T, st
 head(sapelovirus_full_nt_map)
 
 #move to long
-long.sim_nt <- melt(sapelovirus_full_nt_map, id.vars = c("pointer"), measure.vars = c("OQ818320","OQ818329","PP711943","PP711911",
-                                                                                      "OR951332","NC_033820"))
+long.sim_nt <- melt(sapelovirus_full_nt_map, id.vars = c("pointer"), measure.vars = c("OQ818320","OQ818329","PP711921","PP711911","NC_033820"))
 
 unique(long.sim_nt$variable)
 
@@ -967,14 +967,15 @@ names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
 long.sim_nt$accession[long.sim_nt$accession == "OQ818320"] <- "E. dupreanum sapelovirus: OQ818320*"
 long.sim_nt$accession[long.sim_nt$accession == "OQ818329"] <- "R. madagascariensis sapelovirus: OQ818329*"
-long.sim_nt$accession[long.sim_nt$accession == "PP711943"] <- "Eidolon bat picornavirus: PP711943"
+long.sim_nt$accession[long.sim_nt$accession == "PP711921"] <- "Eidolon bat picornavirus: PP711921"
 long.sim_nt$accession[long.sim_nt$accession == "PP711911"] <- "Rousettus bat picornavirus: PP711911"
-long.sim_nt$accession[long.sim_nt$accession == "OR951332"] <- "Pteropodidae bat sapelovirus: OR951332"
 long.sim_nt$accession[long.sim_nt$accession == "NC_033820"] <- "Eidolon helvum sapelovirus: NC_033820"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum sapelovirus: OQ818320*","R. madagascariensis sapelovirus: OQ818329*",
-                                                                  "Eidolon bat picornavirus: PP711943","Rousettus bat picornavirus: PP711911",
-                                                                  "Pteropodidae bat sapelovirus: OR951332","Eidolon helvum sapelovirus: NC_033820"))
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum sapelovirus: OQ818320*",
+                                                                  "R. madagascariensis sapelovirus: OQ818329*",
+                                                                  "Rousettus bat picornavirus: PP711911",
+                                                                  "Eidolon bat picornavirus: PP711921",
+                                                                  "Eidolon helvum sapelovirus: NC_033820"))
 #and plot
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
@@ -1019,8 +1020,7 @@ sapelovirus_full_aa_map <- read.csv(file = "sapelo_align_aa.csv", header = T, st
 head(sapelovirus_full_aa_map)
 
 #move to long
-long.sim_aa <- melt(sapelovirus_full_aa_map, id.vars = c("pointer"), measure.vars = c("OQ818320","OQ818329","PP711943","PP711911",
-                                                                                       "OR951332","NC_033820"))
+long.sim_aa <- melt(sapelovirus_full_aa_map, id.vars = c("pointer"), measure.vars = c("OQ818320","OQ818329","PP711921","PP711911","NC_033820"))
 
 unique(long.sim_aa$variable)
 
@@ -1030,19 +1030,20 @@ names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
 
 long.sim_aa$accession[long.sim_aa$accession == "OQ818320"] <- "E. dupreanum sapelovirus: OQ818320*"
 long.sim_aa$accession[long.sim_aa$accession == "OQ818329"] <- "R. madagascariensis sapelovirus: OQ818329*"
-long.sim_aa$accession[long.sim_aa$accession == "PP711943"] <- "Eidolon bat picornavirus: PP711943"
+long.sim_aa$accession[long.sim_aa$accession == "PP711921"] <- "Eidolon bat picornavirus: PP711921"
 long.sim_aa$accession[long.sim_aa$accession == "PP711911"] <- "Rousettus bat picornavirus: PP711911"
-long.sim_aa$accession[long.sim_aa$accession == "OR951332"] <- "Pteropodidae bat sapelovirus: OR951332"
 long.sim_aa$accession[long.sim_aa$accession == "NC_033820"] <- "Eidolon helvum sapelovirus: NC_033820"
 
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("E. dupreanum sapelovirus: OQ818320*","R. madagascariensis sapelovirus: OQ818329*",
-                                                                  "Eidolon bat picornavirus: PP711943","Rousettus bat picornavirus: PP711911",
-                                                                  "Pteropodidae bat sapelovirus: OR951332","Eidolon helvum sapelovirus: NC_033820"))
+long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("E. dupreanum sapelovirus: OQ818320*",
+                                                                  "R. madagascariensis sapelovirus: OQ818329*",
+                                                                  "Rousettus bat picornavirus: PP711911",
+                                                                  "Eidolon bat picornavirus: PP711921",
+                                                                  "Eidolon helvum sapelovirus: NC_033820"))
 #and plot
 long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
-## Amino acid
+## nucleotide
 title<-expression(paste("Reference: E. dupreanum sapelovirus: OQ818321*"))
 
 sapelovirus_full_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -1075,7 +1076,7 @@ sapelovirus_full_map_aa
 sapelo_map_aa<-sapelovirus_full_map_aa/map_sapelo+plot_layout(nrow=2,  heights = c(1, 0.2))
 sapelo_map_aa
 
-sapelo_map_aa<-as.ggplot(sapelo_full_map_aa)
+sapelo_map_aa<-as.ggplot(sapelo_map_aa)
 sapelo_map_aa
 
 
@@ -1087,8 +1088,8 @@ teschovirus_nt_map <- read.csv(file = "tescho_align_nt.csv", header = T, strings
 head(teschovirus_nt_map)
 
 #move to long
-long.sim_nt <- melt(teschovirus_nt_map, id.vars = c("pointer"), measure.vars = c("OQ818324","OQ818318","OR951334",
-                                                                                 "OR951324","PP711934"))
+long.sim_nt <- melt(teschovirus_nt_map, id.vars = c("pointer"), measure.vars = c("OQ818324","OQ818318","PP711948",
+                                                                                 "OR951334"))
 
 unique(long.sim_nt$variable)
 
@@ -1099,21 +1100,18 @@ names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 long.sim_nt$accession[long.sim_nt$accession == "OQ818324"] <- "R. madagascariensis teschovirus 2: OQ818324*"
 long.sim_nt$accession[long.sim_nt$accession == "OQ818318"] <- "E. dupreanum teschovirus 1: OQ818318*"
 long.sim_nt$accession[long.sim_nt$accession == "OR951334"] <- "Pteropodidae bat teschovirus: OR951334"
-long.sim_nt$accession[long.sim_nt$accession == "OR951324"] <- "Pteropodidae bat teschovirus: OR951324"
-long.sim_nt$accession[long.sim_nt$accession == "PP711934"] <- "Rousettus bat picornavirus: PP711934"
+long.sim_nt$accession[long.sim_nt$accession == "PP711948"] <- "Rousettus bat picornavirus: PP711948"
 
 long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("R. madagascariensis teschovirus 2: OQ818324*",
                                                                   "E. dupreanum teschovirus 1: OQ818318*",
                                                                   "Pteropodidae bat teschovirus: OR951334",
-                                                                  "Pteropodidae bat teschovirus: OR951324",
-                                                                  "Rousettus bat picornavirus: PP711934"))
+                                                                  "Rousettus bat picornavirus: PP711948"))
 #and plot
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## nucleotide
 title<-expression(paste("Reference: R. madagascariensis teschovirus 1: OQ818323*"))
-
 tescho_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
@@ -1129,7 +1127,7 @@ tescho_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
+  guides(colour = guide_legend(nrow = 2))+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -1151,8 +1149,8 @@ teschovirus_aa_map <- read.csv(file = "tescho_align_aa.csv", header = T, strings
 head(teschovirus_aa_map)
 
 #move to long
-long.sim_aa <- melt(teschovirus_aa_map, id.vars = c("pointer"), measure.vars = c("OQ818324","OQ818318","OR951334",
-                                                                                 "OR951324","PP711934"))
+long.sim_aa <- melt(teschovirus_aa_map, id.vars = c("pointer"), measure.vars = c("OQ818324","OQ818318","PP711948",
+                                                                                 "OR951334"))
 
 unique(long.sim_aa$variable)
 
@@ -1163,19 +1161,17 @@ names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
 long.sim_aa$accession[long.sim_aa$accession == "OQ818324"] <- "R. madagascariensis teschovirus 2: OQ818324*"
 long.sim_aa$accession[long.sim_aa$accession == "OQ818318"] <- "E. dupreanum teschovirus 1: OQ818318*"
 long.sim_aa$accession[long.sim_aa$accession == "OR951334"] <- "Pteropodidae bat teschovirus: OR951334"
-long.sim_aa$accession[long.sim_aa$accession == "OR951324"] <- "Pteropodidae bat teschovirus: OR951324"
-long.sim_aa$accession[long.sim_aa$accession == "PP711934"] <- "Rousettus bat picornavirus: PP711934"
+long.sim_aa$accession[long.sim_aa$accession == "PP711948"] <- "Rousettus bat picornavirus: PP711948"
 
 long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("R. madagascariensis teschovirus 2: OQ818324*",
                                                                   "E. dupreanum teschovirus 1: OQ818318*",
                                                                   "Pteropodidae bat teschovirus: OR951334",
-                                                                  "Pteropodidae bat teschovirus: OR951324",
-                                                                  "Rousettus bat picornavirus: PP711934"))
+                                                                  "Rousettus bat picornavirus: PP711948"))
 #and plot
 long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
-## Amino acid
+## nucleotide
 title<-expression(paste("Reference: R. madagascariensis teschovirus 1: OQ818323*"))
 
 teschovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -1193,7 +1189,7 @@ teschovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, co
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
+  guides(colour = guide_legend(nrow = 2))+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
@@ -1220,7 +1216,7 @@ sapovirus_nt_map <- read.csv(file = "sapo_align_nt.csv", header = T, stringsAsFa
 head(sapovirus_nt_map)
 
 #move to long
-long.sim_nt <- melt(sapovirus_nt_map, id.vars = c("pointer"), measure.vars = c("OQ818319","KX759621","OP963623",
+long.sim_nt <- melt(sapovirus_nt_map, id.vars = c("pointer"), measure.vars = c("OQ818319","PP712015",
                                                                                "PP712001","KX759623"))
 
 unique(long.sim_nt$variable)
@@ -1230,13 +1226,13 @@ long.sim_nt$variable <- as.character(long.sim_nt$variable)
 names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
 
 long.sim_nt$accession[long.sim_nt$accession == "OQ818319"] <- "E. dupreanum sapovirus 1: OQ818319*"
-long.sim_nt$accession[long.sim_nt$accession == "KX759621"] <- "Bat sapovirus: KX759621"
-long.sim_nt$accession[long.sim_nt$accession == "OP963623"] <- "Bat sapovirus BtSY2: OP963623"
+long.sim_nt$accession[long.sim_nt$accession == "PP712015"] <- "Rousettus bat calicivirus: PP712015"
 long.sim_nt$accession[long.sim_nt$accession == "PP712001"] <- "Rousettus bat calicivirus: PP712001"
 long.sim_nt$accession[long.sim_nt$accession == "KX759623"] <- "Bat sapovirus: KX759623"
 
-long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum sapovirus 1: OQ818319*","Bat sapovirus: KX759621",
-                                                                  "Bat sapovirus BtSY2: OP963623","Rousettus bat calicivirus: PP712001",
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum sapovirus 1: OQ818319*",
+                                                                  "Rousettus bat calicivirus: PP712015",
+                                                                  "Rousettus bat calicivirus: PP712001",
                                                                   "Bat sapovirus: KX759623"))
 
 #and plot
@@ -1245,6 +1241,7 @@ long.sim_nt$value <- long.sim_nt$value/100
 
 #plot nucleotide
 title<-expression(paste("Reference: E. dupreanum sapovirus 1: PP766459*"))
+
 
 sapo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
@@ -1261,7 +1258,7 @@ sapo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=acc
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
+  guides(colour = guide_legend(nrow = 2))+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -1283,7 +1280,7 @@ sapovirus_aa_map <- read.csv(file = "sapo_align_aa.csv", header = T, stringsAsFa
 head(sapovirus_aa_map)
 
 #move to long
-long.sim_aa <- melt(sapovirus_aa_map, id.vars = c("pointer"), measure.vars = c("OQ818319","KX759621","OP963623",
+long.sim_aa <- melt(sapovirus_aa_map, id.vars = c("pointer"), measure.vars = c("OQ818319","PP712015",
                                                                                "PP712001","KX759623"))
 
 unique(long.sim_aa$variable)
@@ -1293,20 +1290,20 @@ long.sim_aa$variable <- as.character(long.sim_aa$variable)
 names(long.sim_aa)[names(long.sim_aa)=="variable"] <- "accession"
 
 long.sim_aa$accession[long.sim_aa$accession == "OQ818319"] <- "E. dupreanum sapovirus 1: OQ818319*"
-long.sim_aa$accession[long.sim_aa$accession == "KX759621"] <- "Bat sapovirus: KX759621"
-long.sim_aa$accession[long.sim_aa$accession == "OP963623"] <- "Bat sapovirus BtSY2: OP963623"
+long.sim_aa$accession[long.sim_aa$accession == "PP712015"] <- "Rousettus bat calicivirus: PP712015"
 long.sim_aa$accession[long.sim_aa$accession == "PP712001"] <- "Rousettus bat calicivirus: PP712001"
 long.sim_aa$accession[long.sim_aa$accession == "KX759623"] <- "Bat sapovirus: KX759623"
 
-long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("E. dupreanum sapovirus 1: OQ818319*","Bat sapovirus: KX759621",
-                                                                  "Bat sapovirus BtSY2: OP963623","Rousettus bat calicivirus: PP712001",
+long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("E. dupreanum sapovirus 1: OQ818319*",
+                                                                  "Rousettus bat calicivirus: PP712015",
+                                                                  "Rousettus bat calicivirus: PP712001",
                                                                   "Bat sapovirus: KX759623"))
 
 #and plot
 long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
-## Amino acid
+#plot nucleotide
 title<-expression(paste("Reference: E. dupreanum sapovirus 1: PP766459*"))
 
 sapovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
@@ -1324,7 +1321,7 @@ sapovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, colo
         axis.text = element_text(size=12), axis.title = element_text(size=12),
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
-  guides(colour = guide_legend(nrow = 3))+
+  guides(colour = guide_legend(nrow = 2))+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
