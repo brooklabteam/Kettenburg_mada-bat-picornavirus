@@ -419,6 +419,80 @@ p3<-ggplot(dat) +
 p3
 
 
+###stats for comparing diversity between the two sampling sites: 
+
+#raw species and genus richness between the two sites
+
+dat.sum<-ddply(dat,.(roost_site, genus,virus, sampling_session), summarise, N=length(pos))
+dat.sum.virus<-ddply(dat,.(roost_site, virus, sampling_session), summarise, N=length(virus))
+dat.sum.genus<-ddply(dat,.(roost_site, genus, sampling_session), summarise, N=length(genus))
+
+length(unique(dat$virus[dat$roost_site=="AngavoKely"])) #11
+length(unique(dat$virus[dat$roost_site=="Maromizaha"])) #9
+length(unique(dat$genus[dat$roost_site=="AngavoKely"])) #7
+length(unique(dat$genus[dat$roost_site=="Maromizaha"])) #4
+
+#look at shannon diversity
+library(vegan)
+library(ecolTest)
+library(divo)
+shan.ang.virus <- diversity(dat.sum.virus$N[dat.sum.virus$roost_site=="AngavoKely"], index="shannon") #2.944
+shan.ang.genus <- diversity(dat.sum.genus$N[dat.sum.genus$roost_site=="AngavoKely"], index="shannon") #2.798
+shan.mar.virus <-  diversity(dat.sum.virus$N[dat.sum.virus$roost_site=="Maromizaha"], index="shannon") #2.303
+shan.mar.genus <-  diversity(dat.sum.genus$N[dat.sum.genus$roost_site=="Maromizaha"], index="shannon") #2.264
+
+#compare diversity between sampling sites
+Hutcheson_t_test(
+  x=dat.sum.virus$N[dat.sum.virus$roost_site=="AngavoKely"],
+  y=dat.sum.virus$N[dat.sum.virus$roost_site=="Maromizaha"],
+  shannon.base = exp(1),
+  alternative = "less",
+  difference = 0)
+#Hutcheson t-statistic = 5.8194, df = 20.672, p-value = 1, not statistically different for virus
+
+Hutcheson_t_test(
+  x=dat.sum.genus$N[dat.sum.genus$roost_site=="AngavoKely"],
+  y=dat.sum.genus$N[dat.sum.genus$roost_site=="Maromizaha"],
+  shannon.base = exp(1),
+  alternative = "less",
+  difference = 0)
+#Hutcheson t-statistic = Inf, df = NaN, p-value = NA
+
+#plot the two
+dat.diversity.genus <- cbind.data.frame(roost_site=c("AngavoKely", "Maromizaha"), shannon=c(shan.ang.genus, shan.mar.genus))
+dat.diversity.virus <- cbind.data.frame(roost_site=c("AngavoKely", "Maromizaha"), shannon=c(shan.ang.virus, shan.mar.virus))
+
+library(ggsignif)
+
+p5 <- ggplot(dat.diversity.genus, aes(x=roost_site, y=shannon)) + theme_bw() +
+  theme(axis.title.x = element_blank(), axis.text = element_text(size=14), 
+        axis.title.y = element_text(size=16)) + ylab("Shannon's Diversity Index") +
+  geom_bar(aes( fill=roost_site),
+           show.legend = F, stat="identity", position = "dodge") + 
+  scale_fill_manual(values=c("chocolate4", "darkolivegreen")) +
+  geom_signif(comparisons = list(c("Angavokely", "Maromizaha")), 
+              map_signif_level = TRUE, annotations = "***",
+              vjust = .5,
+              margin_top = .2,
+              textsize = 9) +
+  coord_cartesian(ylim=c(0,4)) #no significance
+
+p5
+
+p6 <- ggplot(dat.diversity.virus, aes(x=roost_site, y=shannon)) + theme_bw() +
+  theme(axis.title.x = element_blank(), axis.text = element_text(size=14), 
+        axis.title.y = element_text(size=16)) + ylab("Shannon's Diversity Index") +
+  geom_bar(aes( fill=roost_site),
+           show.legend = F, stat="identity", position = "dodge") + 
+  scale_fill_manual(values=c("chocolate4", "darkolivegreen")) +
+  geom_signif(comparisons = list(c("Angavokely", "Maromizaha")), 
+              map_signif_level = TRUE, annotations = "***",
+              vjust = .5,
+              margin_top = .2,
+              textsize = 9) +
+  coord_cartesian(ylim=c(0,4)) #no significance
+
+p6
 
 
 ##Put the map and both summary figs together
