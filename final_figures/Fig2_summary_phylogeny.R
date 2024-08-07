@@ -217,15 +217,15 @@ p1
 
 #add clade labels
 p1.1 <- p1 +
-  geom_cladelabel(node = 302, label = "Kobuvirus",offset.text=-0.4, fontsize=3, angle=320, hjust=0,align = TRUE, color="#A3A500") +
-  geom_cladelabel(node = 472, label = "Kunsagivirus",offset.text=-0.4, fontsize=3, angle=50,hjust=0.5,align = TRUE, color="#39B600") +
-  geom_cladelabel(node = 531, label = "Cardiovirus",offset.text=-0.4, fontsize=3, angle=30,hjust=0.5,align = TRUE, color="#F8766D") +
-  geom_cladelabel(node = 556, label = "Mischivirus",offset.text=-0.4, fontsize=3,angle=10,hjust=0.6,align = TRUE, color="#00BF7D") +
-  geom_cladelabel(node = 517, label = "Teschovirus",offset.text=-0.4, fontsize=3,angle=356,hjust=0.3,align = TRUE, color="#E76BF3") +
-  geom_cladelabel(node = 329, label = "Hepatovirus",offset.text=-0.4, fontsize=3,angle=73,hjust=0.4,align = TRUE, color="#D89000") +
-  geom_cladelabel(node = 481, label = "Sapelovirus",offset.text=-0.4, fontsize=3,angle=335,hjust=0.4,align = TRUE, color="#00BFC4") +
-  geom_cladelabel(node = 500, label = "Bat picornavirus",offset.text=-0.4,angle=310,hjust=0.5, fontsize=3,align = TRUE, color="#9590FF") +
-  geom_cladelabel(node = 363, label = "Sapovirus",offset.text=-0.4,angle=45, fontsize=3,align = TRUE,hjust=1, color="#00B0F6")
+  geom_cladelabel(node = 302, label = "Kobuvirus",offset=3, offset.text=0.4, fontsize=3, angle=320, hjust=0,align = TRUE, color="#A3A500") +
+  geom_cladelabel(node = 472, label = "Kunsagivirus",offset=3, offset.text=0.4,  fontsize=3, angle=50,hjust=0.5,align = TRUE, color="#39B600") +
+  geom_cladelabel(node = 531, label = "Cardiovirus",offset=3, offset.text=0.4,  fontsize=3, angle=30,hjust=0.5,align = TRUE, color="#F8766D") +
+  geom_cladelabel(node = 556, label = "Mischivirus",offset=3, offset.text=0.4,  fontsize=3,angle=10,hjust=0.6,align = TRUE, color="#00BF7D") +
+  geom_cladelabel(node = 517, label = "Teschovirus",offset=3, offset.text=0.4,  fontsize=3,angle=356,hjust=0.3,align = TRUE, color="#E76BF3") +
+  geom_cladelabel(node = 329, label = "Hepatovirus",offset=3, offset.text=0.4,  fontsize=3,angle=73,hjust=0.4,align = TRUE, color="#D89000") +
+  geom_cladelabel(node = 481, label = "Sapelovirus",offset=3, offset.text=0.4,  fontsize=3,angle=335,hjust=0.4,align = TRUE, color="#00BFC4") +
+  geom_cladelabel(node = 500, label = "Bat picornavirus",offset=3, offset.text=0.4, angle=310,hjust=0.5, fontsize=3,align = TRUE, color="#9590FF") +
+  geom_cladelabel(node = 363, label = "Sapovirus",offset=3, offset.text=0.4,angle=45, fontsize=3,align = TRUE,hjust=1, color="#00B0F6")
 p1.1
 
 ##Add contig/read metadata
@@ -518,8 +518,8 @@ unique(dat$Species)
 #          "Vesivirus"="lightpink2","Alphavirus"="black")
 
 #pick order for the labels
-dat$Species <- factor(dat$Species, levels = c("Bat sapelovirus", "Eidolon dupreanum sapelovirus 1",   "Eidolon dupreanum sapelovirus 2",   
-                                              "Marmot sapelovirus 1",   "Marmot sapelovirus 2", "Pteropodidae bat sapelovirus","Rousettus madagascariensis sapelovirus 1", "Sapelovirus A",    
+dat$Species <- factor(dat$Species, levels = c("Bat sapelovirus", "Eidolon bat sapelovirus","Eidolon dupreanum sapelovirus 1",   "Eidolon dupreanum sapelovirus 2",   
+                                              "Marmot sapelovirus 1",   "Marmot sapelovirus 2", "Pteropodidae bat sapelovirus","Rousettus bat sapelovirus","Rousettus madagascariensis sapelovirus 1", "Sapelovirus A",    
                                               "Sapelovirus B",  "Sapelovirus-like porcine picornavirus Japan", "Tasmanian devil-associated sapelovirus",  "Sindbis virus"))   
 
 dat$novel <- as.factor(dat$novel)
@@ -668,20 +668,14 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
         legend.text = element_text(size=9), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,10))+
-  geom_cladelabel(node = 70, label = "Sapelovirus A/B (collapsed)",offset=0.1, fontsize=3, color="black")
+  geom_cladelabel(node = 78, label = "Sapelovirus A/B (collapsed)",offset=0.1, fontsize=3, color="black")
 p2
 
-p2.1<-p2%>%ggtree::rotate(57)
+p2.1<-p2%>%ggtree::rotate(60)
 p2.1
 
-p2.2<-p2.1%>%ggtree::rotate(65)
-p2.2
-
-p2.3<-p2.2%>%ggtree::rotate(58)
-p2.3
-
 #collapse the labeled clades
-p3<-collapse(p2.3, 70)+geom_point2(aes(subset=(node==70)), size=3, shape=22, fill="white")
+p3<-collapse(p2.1, 78)+geom_point2(aes(subset=(node==78)), size=3, shape=22, fill="white")
 p3
 
 
@@ -722,8 +716,8 @@ head(dat)
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #218
-length(tree$tip.label) #218
+nrow(dat) #222
+length(tree$tip.label) #222
 
 #check subgroup names
 unique(dat$Species)
@@ -738,7 +732,7 @@ unique(dat$Species)
 dat$Species <- factor(dat$Species, levels = c("Bat faecal sapovirus","Bat sapovirus", "Bat sapovirus TLC34/HK", "Bat sapovirus TLC39/HK" ,"Bat sapovirus TLC58/HK",
                                               "Bat sapovirus WD3",  
                                               "Eidolon dupreanum sapovirus 1",   
-                                              "Eidolon dupreanum sapovirus 2","Rousettus madagascariensis sapovirus 2","Sapovirus sp.",  
+                                              "Eidolon dupreanum sapovirus 2","Rousettus bat calicivirus","Rousettus madagascariensis sapovirus 2","Sapovirus sp.",  
                                               "Sapovirus Sapozj-9", "Sapovirus rat/S4-82", "Sapporo virus",    
                                               "Sindbis virus"))   
 
@@ -887,31 +881,27 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
-  xlim(c(0,9))+
-  geom_cladelabel(node = 336, label = "Sapporo virus (collapsed)",offset=0.1, fontsize=3, color="black") +
-  geom_cladelabel(node = 277, label = "Sapporo virus/Bat sapovirus (collapsed)", offset=0.1,fontsize=3, color="black") +
-  geom_cladelabel(node = 315, label = "Sapporo virus (collapsed)", offset=0.1, fontsize=3, color="black")+
-  geom_cladelabel(node = 282, label = "Bat sapovirus (collapsed)", offset=0.1, fontsize=3, color="black")
+  xlim(c(0,12))+
+  geom_cladelabel(node = 276, label = "Sapporo virus (collapsed)",offset=0.1, fontsize=3, color="black")+
+  geom_cladelabel(node = 245, label = "Myotis bat sapovirus (collapsed)",offset=0.1, fontsize=3, color="black")
 
 p2
 
-p2.1<-p2%>%ggtree::rotate(279)
+p2.1<-p2%>%ggtree::rotate(243)
 p2.1
 
 #collapse the labeled clades
-p3<-collapse(p2.1, 336)+geom_point2(aes(subset=(node==336)), size=3, shape=22, fill="white")
-p4<-collapse(p3, 277)+geom_point2(aes(subset=(node==277)), size=3, shape=22, fill="white")
-p6.1<-collapse(p4, 315)+geom_point2(aes(subset=(node==315)), size=3, shape=22, fill="white")
-p6<-collapse(p6.1, 282)+geom_point2(aes(subset=(node==282)), size=3, shape=22, fill="white")
-p6
+p3<-collapse(p2.1, 276)+geom_point2(aes(subset=(node==276)), size=3, shape=22, fill="white")
+p4<-collapse(p3, 245)+geom_point2(aes(subset=(node==245)), size=3, shape=22, fill="white")
+p4
 
 
 ##add bootstrap values to this tree
-p6.dat <- p6$data
-p6.dat$Bootstrap <- NA
-Bootstrap<-p6.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p6.dat$label)] <- as.numeric(p6.dat$label[(length(tree.dat$tip_label)+1):length(p6.dat$label)])#fill with label
+p4.dat <- p4$data
+p4.dat$Bootstrap <- NA
+Bootstrap<-p4.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p4.dat$label)] <- as.numeric(p4.dat$label[(length(tree.dat$tip_label)+1):length(p4.dat$label)])#fill with label
 
-sapo <- p6  %<+% p6.dat + 
+sapo <- p4  %<+% p4.dat + 
   ggnewscale::new_scale_fill() + 
   geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
@@ -1591,14 +1581,14 @@ head(dat)
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #31
-length(tree$tip.label) #31
+nrow(dat) #39
+length(tree$tip.label) #39
 
 #check subgroup names
 unique(dat$Species)
 
 #pick order for the labels
-dat$Species <- factor(dat$Species, levels = c("Shanbavirus A", "Rousettus madagascariensis picornavirus 1", "Rousettus madagascariensis picornavirus 3",
+dat$Species <- factor(dat$Species, levels = c("Bat picornavirus BtSY4","Bat picornavirus 7","Chaerephon bat picornavirus","Shanbavirus A", "Rousettus bat picornavirus","Rousettus madagascariensis picornavirus 1", "Rousettus madagascariensis picornavirus 3",
                                               "Sindbis virus"))   
 
 dat$novel <- as.factor(dat$novel)
@@ -1682,7 +1672,7 @@ tree.dat$Host[tree.dat$Host==1] <- "Bat host"
 tree.dat$Host <- as.factor(tree.dat$Host)
 shapez = c("Bat host" =  17, "Non-bat host" = 19)
 colz2 = c('1' =  "yellow", '0' = "white")
-colz3 = c("Bat host"="#FF62BC","Non-bat host"="black")
+colz3 = c("Bat host"="#9590FF","Non-bat host"="black")
 
 
 ##uncollapsed tree
@@ -1746,25 +1736,26 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,8))+
-  geom_cladelabel(node = 38, label = "Shanbavirus A (collapsed)",offset=0.1, fontsize=3, color="black")
+  geom_cladelabel(node = 45, label = "Shanbavirus A (collapsed)",offset=0.1, fontsize=3, color="black")+
+  geom_cladelabel(node = 48, label = "Shanbavirus A (collapsed)",offset=0.1, fontsize=3, color="black")+
+  geom_cladelabel(node = 70, label = "Shanbavirus A (collapsed)",offset=0.1, fontsize=3, color="black")
 p2
 
-p2.1<-p2%>%ggtree::rotate(31)
+p2.1<-p2%>%ggtree::rotate(58)
 p2.1
 
-p2.2<-p2.1%>%ggtree::rotate(39)
-p2.2
-
 #collapse the labeled clades
-p3<-collapse(p2.2, 38)+geom_point2(aes(subset=(node==38)), size=4, shape=22, fill="white")
-p3
+p3<-collapse(p2.1, 45)+geom_point2(aes(subset=(node==45)), size=4, shape=22, fill="white")
+p4<-collapse(p3, 48)+geom_point2(aes(subset=(node==48)), size=4, shape=22, fill="white")
+p5<-collapse(p4, 70)+geom_point2(aes(subset=(node==70)), size=4, shape=22, fill="white")
+p5
 
 ##add bootstrap values to this tree
-p3.dat <- p3$data
-p3.dat$Bootstrap <- NA
-Bootstrap<-p3.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p3.dat$label)] <- as.numeric(p3.dat$label[(length(tree.dat$tip_label)+1):length(p3.dat$label)])#fill with label
+p5.dat <- p5$data
+p5.dat$Bootstrap <- NA
+Bootstrap<-p5.dat$Bootstrap[(length(tree.dat$tip_label)+1):length(p5.dat$label)] <- as.numeric(p5.dat$label[(length(tree.dat$tip_label)+1):length(p5.dat$label)])#fill with label
 
-batpicorna <- p3  %<+% p3.dat + 
+batpicorna <- p5  %<+% p5.dat + 
   ggnewscale::new_scale_fill() + 
   geom_nodepoint(aes(fill=Bootstrap, show.legend = T), shape=21, stroke=0)+
   scale_fill_continuous(low="yellow", high="red", limits=c(0,100))+
@@ -1796,8 +1787,8 @@ head(dat)
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #36
-length(tree$tip.label) #36
+nrow(dat) #38
+length(tree$tip.label) #38
 
 #check subgroup names
 unique(dat$Species)
@@ -1810,7 +1801,7 @@ unique(dat$Species)
 
 #pick order for the labels
 dat$Species <- factor(dat$Species, levels = c("Eidolon dupreanum teschovirus 1", "Porcine teschovirus 15",   "Porcine teschovirus 16","Pteropodidae bat teschovirus",   
-                                              "Rousettus madagascariensis teschovirus 1",   "Rousettus madagascariensis teschovirus 2", 
+                                              "Rousettus madagascariensis teschovirus 1", "Rousettus bat teschovirus",  "Rousettus madagascariensis teschovirus 2", 
                                               "Teschovirus A","Teschovirus sp.","Sindbis virus"))   
 
 dat$novel <- as.factor(dat$novel)
@@ -1959,14 +1950,14 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,10))+
-  geom_cladelabel(node = 44, label = "Teschovirus A (collapsed)",offset=0.1, fontsize=3, color="black")
+  geom_cladelabel(node = 51, label = "Teschovirus A (collapsed)",offset=0.1, fontsize=3, color="black")
 p2
 
-p2.1<-p2%>%ggtree::rotate(36)
+p2.1<-p2%>%ggtree::rotate(38)
 p2.1
 
 #collapse the labeled clades
-p3<-collapse(p2.1, 44)+geom_point2(aes(subset=(node==44)), size=4, shape=22, fill="white")
+p3<-collapse(p2.1, 51)+geom_point2(aes(subset=(node==51)), size=4, shape=22, fill="white")
 p3
 
 ##add bootstrap values to this tree
@@ -2219,14 +2210,14 @@ tescho #smaller
 
 
 #Plot final figure with plot_grid
-phylo_grid<-plot_grid(kunsagi, mischi, batpicorna, sapelo, tescho,sapo, labels=c("E","F","G","H","I","J"),
-                      rel_widths = c(1,1,1,1,1,1), rel_heights = c(0.4,1,1,1,0.6,1.2),
+phylo_grid<-plot_grid( mischi, batpicorna, sapelo, tescho,sapo, labels=c("F","G","H","I","J"),
+                      rel_widths = c(1,1,1,1,1), rel_heights = c(0.9,1,1,0.6,1.7),
                       ncol=1, align="hv", axis="l", label_size = 23)
 phylo_grid
 phylo_grid<-as.ggplot(phylo_grid)
 
-small_grid<-plot_grid(cardio,hepato,kobu, labels=c("B","C","D"),
-                      rel_widths = c(1,1,1), rel_heights = c(0.8,1,1),
+small_grid<-plot_grid(cardio,hepato,kobu,kunsagi, labels=c("B","C","D","E"),
+                      rel_widths = c(1,1,1), rel_heights = c(0.8,1,1,0.4),
                       ncol=1, align="hv", axis="l", label_size = 23)
 small_grid
 small_grid<-as.ggplot(small_grid)
@@ -2249,7 +2240,7 @@ final
 ggsave(file = paste0(homewd, "/final_figures/Fig2_summary_phylogeny.pdf"),
        plot= final,
        units="mm",  
-       width=220, 
+       width=235, 
        height=200, 
        scale=2, 
        dpi=500)
