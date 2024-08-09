@@ -22,17 +22,17 @@ setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/gene_maps")
 #Load the gene data
 map <- read.csv("pysimplot_alignment_genes.csv", header = T, stringsAsFactors = F)
 map$gene<-factor(map$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP0", "VP3",
-                                        "VP1", "2A", "2B", "2C", "3A", "3B",
+                                        "VP1","VP1 ", "2A", "2B", "2C", "3A", "3B",
                                         "3C", "3D", "NS1/NS2","Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Minor structural protein","3'UTR"))
 #Load the peptide files
 map_pep <- read.csv("pysimplot_alignment_peptides.csv", header = T, stringsAsFactors = F)
 map_pep$gene<-factor(map_pep$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP0", "VP3",
-                                              "VP1", "2A", "2B", "2C", "3A", "3B",
+                                              "VP1", "VP1 ","2A", "2B", "2C", "3A", "3B",
                                               "3C", "3D", "NS1/NS2","Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Minor structural protein","3'UTR"))
 #Load the feature file in case its needed
 map_feat <- read.csv("pysimplot_alignment_features.csv", header = T, stringsAsFactors = F)
 map_feat$gene<-factor(map_feat$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP0", "VP3",
-                                                "VP1", "2A", "2B", "2C", "3A", "3B",
+                                                "VP1","VP1 ", "2A", "2B", "2C", "3A", "3B",
                                                 "3C", "3D", "NS1/NS2","Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Minor structural protein","3'UTR"))
 
 #Pick colors for genes
@@ -43,8 +43,8 @@ colz=c("5'UTR"="gold", "L"="royalblue","VP4"="paleturquoise3", "VP2"="skyblue1",
        "Minor structural protein"="black","3'UTR"="gold")
 
 colz2=c("5'UTR"="grey", "L"="white","VP4"="white", "VP2"="white", "VP0"="white", "VP3"="white",
-       "VP1"="white", "2A"="white", "2B"="white", "2C"="white", "3A"="white", "3B"="white",
-       "3C"="white", "3D"="white", "Helicase"="white","NS4"="white","Vpg"="white","Pro-Pol"="white","NS1/NS2"="white",
+       "VP1"="white", "VP1 "="cornflowerblue", "2A"="cornflowerblue", "2B"="white", "2C"="white", "3A"="cornflowerblue", "3B"="white",
+       "3C"="white", "3D"="white", "Helicase"="white","NS4"="cornflowerblue","Vpg"="white","Pro-Pol"="white","NS1/NS2"="white",
        "Polyprotein"="black",
        "Minor structural protein"="black","3'UTR"="grey")
 
@@ -400,6 +400,8 @@ batpicorna_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, col
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
+  annotate("rect", xmin=3168, xmax=3904, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5161, xmax=5579, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -461,6 +463,8 @@ batpicorna_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, col
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
+  annotate("rect", xmin=3368/3.055, xmax=4104/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5261/3.055, xmax=5679/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   ggtitle(title)+
   scale_color_manual(values=colzpalette) + 
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055), 
@@ -523,6 +527,8 @@ hepato_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
   scale_color_manual(values=colzpalette) + 
+  annotate("rect", xmin=3068, xmax=3804, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5061, xmax=5379, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -581,6 +587,8 @@ hepatovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, co
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
   scale_color_manual(values=colzpalette) + 
+  annotate("rect", xmin=3068/3.055, xmax=3804/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5061/3.055, xmax=5379/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   #scale_fill_distiller()+
   ggtitle(title)+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
@@ -641,6 +649,8 @@ kobu_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=acc
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 1))+
   scale_color_manual(values=colzpalette) + 
+  annotate("rect", xmin=3768, xmax=4304, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5661, xmax=5979, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -695,6 +705,8 @@ kobuvirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, colo
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 1))+
+  annotate("rect", xmin=3768/3.055, xmax=4304/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5661/3.055, xmax=5979/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
@@ -755,6 +767,8 @@ kunsagi_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 1))+
+  annotate("rect", xmin=2768, xmax=3304, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=4861, xmax=5179, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -810,6 +824,8 @@ kunsagivirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, c
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 1))+
+  annotate("rect", xmin=2768/3.055, xmax=3304/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=4861/3.055, xmax=5179/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
@@ -873,6 +889,8 @@ mischi_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
+  annotate("rect", xmin=4368, xmax=4704, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=6261, xmax=6779, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -931,6 +949,8 @@ mischivirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, co
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
+  annotate("rect", xmin=4368/3.055, xmax=4704/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=6261/3.055, xmax=6779/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
@@ -999,6 +1019,8 @@ sapelo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
+  annotate("rect", xmin=3368, xmax=4004, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5461, xmax=5779, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -1062,6 +1084,8 @@ sapelovirus_full_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=valu
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
+  annotate("rect", xmin=3368/3.055, xmax=4204/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5561/3.055, xmax=5879/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
@@ -1128,6 +1152,8 @@ tescho_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
+  annotate("rect", xmin=3368, xmax=3604, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=4961, xmax=5279, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -1190,6 +1216,8 @@ teschovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, co
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
+  annotate("rect", xmin=3368/3.055, xmax=3604/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=4961/3.055, xmax=5279/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
@@ -1259,6 +1287,8 @@ sapo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=acc
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
+  annotate("rect", xmin=2000, xmax=2800, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5179, xmax=6800, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -1322,6 +1352,8 @@ sapovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, colo
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
+  annotate("rect", xmin=2000/3.055, xmax=2800/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5179/3.055, xmax=6800/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
@@ -1338,8 +1370,6 @@ sapo_map_aa
 
 sapo_map_aa<-as.ggplot(sapo_map_aa)
 sapo_map_aa
-
-
 
 
 
