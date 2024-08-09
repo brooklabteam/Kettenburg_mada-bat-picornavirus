@@ -22,17 +22,17 @@ setwd("~/Desktop/developer/mada-bat-picornavirus/recombination/gene_maps")
 #Load the gene data
 map <- read.csv("bootscan_alignment_genes.csv", header = T, stringsAsFactors = F)
 map$gene<-factor(map$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP0", "VP3",
-                                        "VP1", "2A", "2B", "2C", "3A", "3B",
-                                        "3C", "3D", "NS1/NS2","Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Minor structural protein","3'UTR"))
+                                      "VP1","VP1 ", "2A", "2B", "2C", "3A", "3B",
+                                      "3C", "3D", "NS1/NS2","Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Minor structural protein","3'UTR"))
 #Load the peptide files
 map_pep <- read.csv("bootscan_alignment_peptides.csv", header = T, stringsAsFactors = F)
 map_pep$gene<-factor(map_pep$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP0", "VP3",
-                                              "VP1", "2A", "2B", "2C", "3A", "3B",
+                                              "VP1", "VP1 ","2A", "2B", "2C", "3A", "3B",
                                               "3C", "3D", "NS1/NS2","Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Minor structural protein","3'UTR"))
 #Load the feature file in case its needed
 map_feat <- read.csv("bootscan_alignment_features.csv", header = T, stringsAsFactors = F)
 map_feat$gene<-factor(map_feat$gene, levels = c("5'UTR", "L","VP4", "VP2", "VP0", "VP3",
-                                                "VP1", "2A", "2B", "2C", "3A", "3B",
+                                                "VP1","VP1 ", "2A", "2B", "2C", "3A", "3B",
                                                 "3C", "3D", "NS1/NS2","Helicase","NS4","Vpg","Pro-Pol", "Polyprotein", "Minor structural protein","3'UTR"))
 
 #Pick colors for genes
@@ -43,10 +43,11 @@ colz=c("5'UTR"="gold", "L"="royalblue","VP4"="paleturquoise3", "VP2"="skyblue1",
        "Minor structural protein"="black","3'UTR"="gold")
 
 colz2=c("5'UTR"="grey", "L"="white","VP4"="white", "VP2"="white", "VP0"="white", "VP3"="white",
-       "VP1"="white", "2A"="white", "2B"="white", "2C"="white", "3A"="white", "3B"="white",
-       "3C"="white", "3D"="white", "Helicase"="white","NS4"="white","Vpg"="white","Pro-Pol"="white","NS1/NS2"="white",
-       "Polyprotein"="black",
-       "Minor structural protein"="black","3'UTR"="grey")
+        "VP1"="white", "VP1 "="cornflowerblue", "2A"="cornflowerblue", "2B"="white", "2C"="white", "3A"="cornflowerblue", "3B"="white",
+        "3C"="white", "3D"="white", "Helicase"="white","NS4"="cornflowerblue","Vpg"="white","Pro-Pol"="white","NS1/NS2"="white",
+        "Polyprotein"="black",
+        "Minor structural protein"="black","3'UTR"="grey")
+
 
 
 #Plot map and BLAST together plots
