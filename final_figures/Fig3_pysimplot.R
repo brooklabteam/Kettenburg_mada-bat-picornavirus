@@ -386,7 +386,7 @@ title<-expression(paste("Reference: R. madagascariensis picornavirus 1: OQ818325
 #Plot nucleotide
 batpicorna_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Nucleotide identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -449,7 +449,7 @@ title<-expression(paste("Reference: R. madagascariensis picornavirus 1: OQ818325
 ## amino acid
 batpicorna_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Amino acid identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -512,7 +512,7 @@ title<-expression(paste("Reference: E. dupreanum hepatovirus: PP766455*"))
 
 hepato_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Nucleotide identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -572,7 +572,7 @@ title<-expression(paste("Reference: E. dupreanum hepatovirus: PP766455*"))
 
 hepatovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Amino acid identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -634,7 +634,7 @@ title<-expression(paste("Reference: E. dupreanum kobuvirus: OQ818322*"))
 
 kobu_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Nucleotide identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -691,7 +691,7 @@ title<-expression(paste("Reference: E. dupreanum kobuvirus: OQ818322*"))
 
 kobuvirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Amino acid identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -753,7 +753,7 @@ title<-expression(paste("Reference: E. dupreanum kunsagivirus: OQ818317*"))
 
 kunsagi_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Nucleotide identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -810,7 +810,7 @@ title<-expression(paste("Reference: E. dupreanum kunsagivirus: OQ818317*"))
 
 kunsagivirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Amino acid identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -875,7 +875,7 @@ title<-expression(paste("Reference: P. rufus mischivirus: OQ818316*"))
 
 mischi_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Nucleotide identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -935,7 +935,7 @@ title<-expression(paste("Reference: P. rufus mischivirus: OQ818316*"))
 
 mischivirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Amino acid identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -1005,7 +1005,7 @@ title<-expression(paste("Reference: E. dupreanum sapelovirus: OQ818321*"))
 
 sapelo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Nucleotide identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -1070,7 +1070,7 @@ title<-expression(paste("Reference: E. dupreanum sapelovirus: OQ818321*"))
 
 sapelovirus_full_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Amino acid identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -1138,7 +1138,7 @@ long.sim_nt$value <- long.sim_nt$value/100
 title<-expression(paste("Reference: R. madagascariensis teschovirus 1: OQ818323*"))
 tescho_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Nucleotide identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -1202,7 +1202,7 @@ title<-expression(paste("Reference: R. madagascariensis teschovirus 1: OQ818323*
 
 teschovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Amino acid identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -1273,7 +1273,7 @@ title<-expression(paste("Reference: E. dupreanum sapovirus 1: PP766459*"))
 
 sapo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Nucleotide similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Nucleotide identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -1338,7 +1338,7 @@ title<-expression(paste("Reference: E. dupreanum sapovirus 1: PP766459*"))
 
 sapovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
-        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("Amino acid similarity")+xlab("Genome position")+
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Amino acid identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
@@ -1403,7 +1403,7 @@ amino_supp
 
 homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
 
-ggsave(file = paste0(homewd, "/final_figures/supplemental/SfigX_nucleotide_pysimplot.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig4_nucleotide_pysimplot.pdf"),
        plot = nucleotide_supp,
        units="mm",  
        width=140, 
@@ -1419,7 +1419,7 @@ ggsave(file = paste0(homewd, "/final_figures/Fig3_pysimplot.pdf"),
        scale=4, 
        dpi=300)
 
-ggsave(file = paste0(homewd, "/final_figures/supplemental/SfigX_amino_pysimplot.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig3_amino_pysimplot.pdf"),
        plot = amino_supp,
        units="mm",  
        width=100, 
