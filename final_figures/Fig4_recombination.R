@@ -794,14 +794,14 @@ tescho_nt1
 
 
 #To plot figure 4
-fig4<-plot_grid(hepato_clade_nt,sapelo_clade_nt2, sapo_clade_nt2, tescho_nt1,
+fig4<-plot_grid(hepato_clade_nt,sapelo_clade_nt2, sapo_clade_nt1, tescho_nt1,
                 ncol=2,
                 labels="AUTO", label_size = 23, align = "hv", axis="b")
 fig4
 
 
 #To plot supplementary for everything else
-recombination_supp<-plot_grid(hepato_nt,sapelo_clade_nt1, sapo_clade_nt1, tescho_clade_nt1, tescho_clade_nt2,
+recombination_supp<-plot_grid(hepato_nt,sapelo_clade_nt1, sapo_clade_nt2, tescho_clade_nt1, tescho_clade_nt2,
                            ncol=3,
                            labels="AUTO", label_size = 23, align = "hv", axis="b")
 recombination_supp
@@ -820,7 +820,7 @@ ggsave(file = paste0(homewd, "/final_figures/Fig4_recombination.pdf"),
        scale=4, 
        dpi=300)
 
-ggsave(file = paste0(homewd, "/final_figures/supplemental/SfigX_recombination.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig5_recombination.pdf"),
        plot = recombination_supp,
        units="mm",  
        width=150, 
