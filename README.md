@@ -1,9 +1,11 @@
 # Repo: mada-bat-picornavirus for paper linked [here]()
 Full and partial genomes described from mNGS data collected on subset of Malagasy bat fecal and urine samples
 ---
-Folders and R scripts for final and supplemental figures are linked [here](https://github.com/brooklabteam/mada-bat-picornavirus/tree/main/final_figures)
 
-Folders and R scripts for final and supplemental tables are linked [here](https://github.com/brooklabteam/mada-bat-picornavirus/tree/main/final_tables)
+-Folders and R scripts for final and supplemental figures are linked [here](https://github.com/brooklabteam/mada-bat-picornavirus/tree/main/final_figures)
+
+-Folders and R scripts for final and supplemental tables are linked [here](https://github.com/brooklabteam/mada-bat-picornavirus/tree/main/final_tables)
+
 ---
 
 Fasta files, command line contig sorting, and reference sequences for phylogenies are [here](https://github.com/brooklabteam/mada-bat-picornavirus/tree/main/fasta_files)
