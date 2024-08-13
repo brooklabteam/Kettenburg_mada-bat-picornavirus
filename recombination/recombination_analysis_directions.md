@@ -1,34 +1,24 @@
-Bootscan
+RDP4 analysis
 ---
-To look at potential recombination events between novel Madagascar sequences and other described reference sequences in a plot, follow the documentation linked [here](https://sray.med.som.jhmi.edu/SCRoftware/SimPlot/online_help/hs1050.htm)
+To look at potential recombination events between novel Madagascar sequences and other described reference sequences in a plot, follow the documentation linked [here](http://web.cbio.uct.ac.za/~darren/RDP4Manual.pdf)
 ---
-1. This software can only run on a PC computer. Follow the directions [here](https://sray.med.som.jhmi.edu/SCRoftware/SimPlot/) to download. 
----figures
-2. Once installed, I will use the nucleotide alignments created for PySimPlot to feed into Bootscan. The analysis is very similar, it just measures % permutated trees rather than aa/nt similarity. The first sequence listed in the fasta is the reference sequence, so make sure this is always a Madagascar novel sequence. 
+1. This software can only run on a PC computer. Follow the directions [here](http://web.cbio.uct.ac.za/~darren/rdp.html) to download. 
 
-Based on the quality of the alignments, and based on the length of the sequences (partial sequences will likely not be analyzed), the following alignments were able to provide Bootscan output. Save the files as .csv:
-- Bat picornaviruses ICTV full
-- Cheravirus ICTV partial
-- Hepatovirus ICTV partial
-- Kobuvirus ICTV full
-- Kunsagivirus ICTV full
-- Mischivirus ICTV full
-- Sapelovirus ICTV full
-- Sapovirus ICTV and some african sequences full
-- Teschovirus ICTV full
+2. Once installed, I will use the nucleotide alignments created for PySimPlot to feed into RDP4, the summary sheet of alignments and sequences included per alignment is [here](https://github.com/brooklabteam/mada-bat-picornavirus/blob/main/recombination/recombination_references.xlsx).
 
-Separately, I did some bootscan analyses based on the results from the pat picornavirales phylogenies, I made one with all bat picornavirales over 3kb and another with reference sequences all full viruses but all madagascar sequences still over 3kb.
-
-
-Alignment files from Geneious are in their respective labeled files within the master bootscan folder, and metadata/summary files are [here]()
+Alignment files from Geneious are in their respective labeled files within the master recombination folder, and metadata/summary files are [here](https://github.com/brooklabteam/mada-bat-picornavirus/tree/main/recombination)
 
 ---
-3. After finishing populating the csv files, I made files with their data that could be read into R to make the figures (the PySimPlot R scripts can be modified to take these inputs, since the data set up and plotting scripts will be similar). The gene mapping scripts can stay the same as well.  
+
+3. Load each alignment into RDP4 then run analysis using default settings, I saved individual .csv files of the statistics of each alignment and further summarized them into one master file within the recombination folder. Then, I saved the bootscan figues as .csv files to plot as long as bootscan was significant for recombination. 
+
+---
+4. After finishing populating the csv files, I made files with their data that could be read into R to make the figures and combines the gene map script, like what is done in the PySimPlot figure
 
 Bootscan plots were set to a window size of 200bp with the step size set to 20bp
 
-In making a figure, I decided to only mark a point as a breakpoint if it was >30% permuted trees. Other papers have more stringent cutoffs, but I have seen some papers describing novel picornaviruses with a much lower cutoff, the highest breakpoint was ~57%. For this reason, the final figure for recombination only includes sapovirus, kunsagivirus, and hepatovirus.
+In making a figure, I decided to only consider the bootstrap cutoff if it was >70% as suggested by the RDP4 manual.
 
 ---
 
-The R plot to generate figures and process the data is [here]().
+The R plot to generate figures and process the data is [here](https://github.com/brooklabteam/mada-bat-picornavirus/tree/main/recombination).
