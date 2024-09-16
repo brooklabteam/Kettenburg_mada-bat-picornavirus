@@ -295,13 +295,13 @@ p4_pos <- p2b+
 
 p4_pos
 
-ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_only.pdf"),
-       plot = p4_pos,
-       units="mm",
-       width=60,
-       height=60,
-       scale=3,
-       dpi=300)
+# ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_only.pdf"),
+#        plot = p4_pos,
+#        units="mm",
+#        width=60,
+#        height=60,
+#        scale=3,
+#        dpi=300)
 
 
 
@@ -345,6 +345,8 @@ dat$sampling_session<-factor(dat$sampling_session)
 
 #Subset because Pteropus only has one sample pos with only one virus
 dat<-subset(dat, bat_species!="Pteropus rufus")
+
+library(ggh4x)
 
 #by virus
 p2<-ggplot(dat) +
@@ -400,6 +402,39 @@ p3<-ggplot(dat) +
 
 p3
 
+
+
+#virus and genus together
+p4<-ggplot(dat) +
+  geom_bar(aes(x = sampling_date, y = num_virus, fill = virus),
+           position = "stack",
+           stat = "identity") +
+  #facet_nested(roost_site+genus~., scales="free", space="free")+
+  facet_nested(genus~roost_site, scales="free", space="free",
+                nest_line = element_line(color="white"), solo_line = TRUE)+
+  scale_fill_manual(values=viruscolz)+
+  
+  labs(
+    x = "Sampling session",
+    y= "Number of sequences",
+    fill="Virus species",
+    title="")+
+  theme_linedraw()+
+  theme(plot.margin = margin(0, 1, 0, 30, "pt"),
+        plot.background = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.text.y = element_text(size=10),
+        #axis.text.x = element_text(size=10),
+        axis.text.x = element_text(angle = 90, size=10),
+        legend.text = element_text(size=8),
+        legend.title = element_text(size=9),
+        legend.position = "right")
+
+p4
+
+p4+scale_y_continuous(n.breaks = 3)
+p4
 
 ###stats for comparing diversity between the two sampling sites: 
 
