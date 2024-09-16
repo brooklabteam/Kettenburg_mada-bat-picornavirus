@@ -57,8 +57,8 @@ class(orotl_shp)
 ###import and configuration
 
 p1<-ggplot() +  
-  geom_sf(color = "sienna4", fill = "sienna2",data = orotl_shp)+
-  coord_sf(xlim = c(42, 60), ylim = c(-26, -11.5), expand = FALSE)+
+  geom_sf(color = "sienna4", fill = "sienna1",data = orotl_shp)+
+  coord_sf(xlim = c(42, 56), ylim = c(-26, -11.5), expand = FALSE)+
   theme_bw()+
   theme(plot.margin = unit(c(-1,.5,-1.5,.1),"cm"))+
   xlab("Longitude") + ylab("Latitude") 
@@ -104,14 +104,14 @@ unique(dat$roost_site)
 
 #Ankarana does not have any positives so I combined both the E dupreanum and R. madagascariensis just for the purpose of only haveing one pie
 coordinate <- ddply(dat, .(roost_site), summarise, latitude_s=unique(latitude_s), longitude_e=unique(longitude_e))
-#coordinate <-subset(coordinate, roost_site=="Ambakoana" | roost_site=="AngavoKely" | roost_site=="Ankarana_ED" | roost_site=="Ankarana_RM"| roost_site=="Maromizaha")
+#coordinate <-subset(coordinate, roost_site=="Ambakoana" | roost_site=="Angavokely" | roost_site=="Ankarana_ED" | roost_site=="Ankarana_RM"| roost_site=="Maromizaha")
 coordinate <-subset(coordinate, roost_site=="Ambakoana" | roost_site=="AngavoKely" | roost_site=="Ankarana" | roost_site=="Maromizaha")
 #coordinate$bat_species <- c("Pteropus rufus", "Eidolon dupreanum,"Eidolon dupreanum","Rousettus madagascariensis","Rousettus madagascariensis")
 coordinate$bat_species <- c("Pteropus rufus", "Eidolon dupreanum","Eidolon dupreanum/Rousettus madagascariensis","Rousettus madagascariensis")
 head(coordinate)
 
 #plot sites on map
-p2<-p1+geom_point(aes(x=longitude_e, y=latitude_s),color="black",size=1,data=dat)+
+p2<-p1+geom_point(aes(x=longitude_e, y=latitude_s),color="red",size=1,data=dat)+
   annotation_scale(location = "bl", width_hint = 0.05) +    # scale
   annotation_north_arrow(location = "tl", which_north = "true",#north arrow     
                          pad_x = unit(0.02, "cm"), 
@@ -120,10 +120,10 @@ p2<-p1+geom_point(aes(x=longitude_e, y=latitude_s),color="black",size=1,data=dat
 #print(p2)
 
 coordinate$label <- coordinate$bat_species
-coordinate$label[coordinate$label=="Pteropus rufus"] <- "Pteropus\nrufus"
-coordinate$label[coordinate$label=="Rousettus madagascariensis"] <- "Rousettus\nmadagascariensis"
-coordinate$label[coordinate$label=="Eidolon dupreanum"] <- "Eidolon\ndupreanum"
-coordinate$label[coordinate$label=="Eidolon dupreanum/Rousettus madagascariensis"] <- "Eidolon dupreanum &\nRousettus madagascariensis"
+coordinate$label[coordinate$label=="Pteropus rufus"] <- "Pteropus\nrufus (N=146)"
+coordinate$label[coordinate$label=="Rousettus madagascariensis"] <- "Rousettus\nmadagascariensis \n(N=232)"
+coordinate$label[coordinate$label=="Eidolon dupreanum"] <- "Eidolon\ndupreanum \n(N=281)"
+coordinate$label[coordinate$label=="Eidolon dupreanum/Rousettus madagascariensis"] <- "Eidolon dupreanum &\nRousettus madagascariensis \n(0% picorna & calici prevalence)"
 
 #order is Ambakoana, Angavokely, Ankarana,  Maromizaha
 
@@ -131,14 +131,17 @@ coordinate$label[coordinate$label=="Eidolon dupreanum/Rousettus madagascariensis
 # nudge_x = c(6 PR,-1 ED,2 RM,3 ED_RM),
 # nudge_y = c(1 PR,-4.4 ED,2 RM, -1 ED_RM),
 
+#nudge_x = c(PR 6,ED 3.5,ED_RM 3.5,RM 5),
+#nudge_y = c(PR 1.5,ED -5,ED_RM 0,RM -1.5),
+
 #load GPS point and label
 p2b<-p1+geom_point(aes(x=longitude_e, y=latitude_s),color="black",size=2,data=coordinate)+
   geom_text(data= coordinate,                       #### Labeling
             aes(x=longitude_e, y=latitude_s, label=label),
             fontface="italic",
             color = "#1B262C", size=3,
-            nudge_x = c(9,2.5,7.5,6),
-            nudge_y = c(1,-5,0,-1.5),
+            nudge_x = c(6,2.8,3.5,5.4),
+            nudge_y = c(1.5,-5,0,-1.5),
             check_overlap = T)+
   annotation_scale(location = "bl", width_hint = 0.05) +    #scale
   annotation_north_arrow(location = "tl", which_north = "true",#north arrow     
@@ -159,44 +162,30 @@ p2b<-p1+geom_point(aes(x=longitude_e, y=latitude_s),color="black",size=2,data=co
 p2b
 
 ###by total positives is anything with dat
-dat$plot_class_picorna<-NA
-dat$plot_class_calici<-NA
 dat$plot_class_pos<-NA
-dat$plot_class_picorna[dat$any_picorna==1]<-"Positive"
-dat$plot_class_picorna[dat$any_picorna==0]<-"Negative"
-dat$plot_class_calici[dat$any_calici==1]<-"Positive"
-dat$plot_class_calici[dat$any_calici==0]<-"Negative"
 dat$plot_class_pos[dat$any_pos==1]<-"Picorna positive"
 dat$plot_class_pos[dat$any_pos==0]<-"Negative"
 dat$plot_class_pos[dat$any_pos==2]<-"Calici positive"
 
 
 ##by total positives
-pies_picorna <- ddply(dat, .(bat_species, roost_site, latitude_s, longitude_e, plot_class_picorna), summarise, value=length(sample_id))
-pies_calici <- ddply(dat, .(bat_species, roost_site, latitude_s, longitude_e, plot_class_calici), summarise, value=length(sample_id))
-pies_pos <- ddply(dat, .(bat_species, roost_site, latitude_s, longitude_e, plot_class_pos), summarise, value=length(sample_id))
+
+#get rid of ankarana site because it has no positives
+drop.dat <- droplevels(dat[!dat$roost_site == 'Ankarana',])
+
+pies_pos <- ddply(drop.dat, .(bat_species, roost_site, latitude_s, longitude_e, plot_class_pos), summarise, value=length(sample_id))
 
 
 #tot_sum = ddply(pies,.(bat_species, bat_sex), summarise,N=sum(value))
-tot_sum_picorna = ddply(pies_picorna,.(bat_species), summarise,N=sum(value))
-tot_sum_calici = ddply(pies_calici,.(bat_species), summarise,N=sum(value))
 tot_sum_pos = ddply(pies_pos,.(bat_species), summarise,N=sum(value))
 
 #pies <- merge(pies, tot_sum, by=c("bat_species", "bat_sex"), all.x=T)
-pies_picorna <- merge(pies_picorna, tot_sum_picorna, by=c("bat_species"), all.x=T)
-pies_calici <- merge(pies_calici, tot_sum_calici, by=c("bat_species"), all.x=T)
 pies_pos <- merge(pies_pos, tot_sum_pos, by=c("bat_species"), all.x=T)
 
 #pies$plot_class <- factor(pies$plot_class, levels=c( "male -", "female -", "male +", "female +"))
-pies_picorna$plot_class_picorna <- factor(pies_picorna$plot_class_picorna, levels=c( "Positive", "Negative"))
-pies_calici$plot_class_calici <- factor(pies_calici$plot_class_calici, levels=c( "Positive", "Negative"))
 pies_pos$plot_class_pos <- factor(pies_pos$plot_class_pos, levels=c("Picorna positive","Calici positive", "Negative"))
 
 #now split into two or three pies
-piesP_picorna = subset(pies_picorna, plot_class_picorna=="Positive")
-piesN_picorna = subset(pies_picorna, plot_class_picorna=="Negative")
-piesP_calici = subset(pies_calici, plot_class_calici=="Positive")
-piesN_calici = subset(pies_calici, plot_class_calici=="Negative")
 piesPP_pos = subset(pies_pos, plot_class_pos=="Picorna positive")
 piesPC_pos = subset(pies_pos, plot_class_pos=="Calici positive")
 piesN_pos = subset(pies_pos, plot_class_pos=="Negative")
@@ -212,12 +201,6 @@ p3_pos<-ggplot() +
 p3_pos
  
 # # copy of latitude (x.) and longitude (y.)
-pies_picorna$x2 <- pies_picorna$longitude_e
-pies_picorna$y2 <- pies_picorna$latitude_s
-
-pies_calici$x2 <- pies_calici$longitude_e
-pies_calici$y2 <- pies_calici$latitude_s
-
 pies_pos$x2 <- pies_pos$longitude_e
 pies_pos$y2 <- pies_pos$latitude_s
 
@@ -225,38 +208,12 @@ pies_pos$y2 <- pies_pos$latitude_s
 # #manually move the pie chart in case there is an overlap (change x and y)
 
 #from the labels
-# nudge_x = c(PR 9,ED 2.5,ED_RM 7.7,RM 6),
-# nudge_y = c(PR 1,ED -5,ED_RM 0,RM -1.5),
-
-#picorna
-pies_picorna$x2[pies_picorna$bat_species== "Pteropus rufus"] <- pies_picorna$longitude_e[pies_picorna$bat_species== "Pteropus rufus"] + 6
-pies_picorna$y2[pies_picorna$bat_species== "Pteropus rufus"] <- pies_picorna$latitude_s[pies_picorna$bat_species== "Pteropus rufus"] + 1
-
-pies_picorna$x2[pies_picorna$bat_species== "Eidolon dupreanum"] <- pies_picorna$longitude_e[pies_picorna$bat_species== "Eidolon dupreanum"] -1
-pies_picorna$y2[pies_picorna$bat_species== "Eidolon dupreanum"] <- pies_picorna$latitude_s[pies_picorna$bat_species== "Eidolon dupreanum"] - 4.5
-
-pies_picorna$x2[pies_picorna$bat_species== "Rousettus madagascariensis"] <- pies_picorna$longitude_e[pies_picorna$bat_species== "Rousettus madagascariensis"] + 2
-pies_picorna$y2[pies_picorna$bat_species== "Rousettus madagascariensis"] <- pies_picorna$latitude_s[pies_picorna$bat_species== "Rousettus madagascariensis"] - 2
-
-pies_picorna$x2[pies_picorna$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] <- pies_picorna$longitude_e[pies_picorna$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] +3
-pies_picorna$y2[pies_picorna$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] <- pies_picorna$latitude_s[pies_picorna$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] -1
-
-#calici
-pies_calici$x2[pies_calici$bat_species== "Pteropus rufus"] <- pies_calici$longitude_e[pies_calici$bat_species== "Pteropus rufus"] + 6
-pies_calici$y2[pies_calici$bat_species== "Pteropus rufus"] <- pies_calici$latitude_s[pies_calici$bat_species== "Pteropus rufus"] + 1
-
-pies_calici$x2[pies_calici$bat_species== "Eidolon dupreanum"] <- pies_calici$longitude_e[pies_calici$bat_species== "Eidolon dupreanum"] -1
-pies_calici$y2[pies_calici$bat_species== "Eidolon dupreanum"] <- pies_calici$latitude_s[pies_calici$bat_species== "Eidolon dupreanum"] - 4.5
-
-pies_calici$x2[pies_calici$bat_species== "Rousettus madagascariensis"] <- pies_calici$longitude_e[pies_calici$bat_species== "Rousettus madagascariensis"] + 2
-pies_calici$y2[pies_calici$bat_species== "Rousettus madagascariensis"] <- pies_calici$latitude_s[pies_calici$bat_species== "Rousettus madagascariensis"] - 2
-
-pies_calici$x2[pies_calici$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] <- pies_calici$longitude_e[pies_calici$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] +3
-pies_calici$y2[pies_calici$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] <- pies_calici$latitude_s[pies_calici$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] -1
+#nudge_x = c(PR 6,ED 3.5,ED_RM 3.5,RM 5),
+#nudge_y = c(PR 1.5,ED -5,ED_RM 0,RM -1.5),
 
 #pos
-pies_pos$x2[pies_pos$bat_species== "Pteropus rufus"] <- pies_pos$longitude_e[pies_pos$bat_species== "Pteropus rufus"] + 6
-pies_pos$y2[pies_pos$bat_species== "Pteropus rufus"] <- pies_pos$latitude_s[pies_pos$bat_species== "Pteropus rufus"] + 1
+pies_pos$x2[pies_pos$bat_species== "Pteropus rufus"] <- pies_pos$longitude_e[pies_pos$bat_species== "Pteropus rufus"] + 3.3
+pies_pos$y2[pies_pos$bat_species== "Pteropus rufus"] <- pies_pos$latitude_s[pies_pos$bat_species== "Pteropus rufus"] + 1.2
 
 pies_pos$x2[pies_pos$bat_species== "Eidolon dupreanum"] <- pies_pos$longitude_e[pies_pos$bat_species== "Eidolon dupreanum"] -1
 pies_pos$y2[pies_pos$bat_species== "Eidolon dupreanum"] <- pies_pos$latitude_s[pies_pos$bat_species== "Eidolon dupreanum"] - 4.5
@@ -264,11 +221,9 @@ pies_pos$y2[pies_pos$bat_species== "Eidolon dupreanum"] <- pies_pos$latitude_s[p
 pies_pos$x2[pies_pos$bat_species== "Rousettus madagascariensis"] <- pies_pos$longitude_e[pies_pos$bat_species== "Rousettus madagascariensis"] + 2
 pies_pos$y2[pies_pos$bat_species== "Rousettus madagascariensis"] <- pies_pos$latitude_s[pies_pos$bat_species== "Rousettus madagascariensis"] - 2
 
-pies_pos$x2[pies_pos$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] <- pies_pos$longitude_e[pies_pos$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] +3
-pies_pos$y2[pies_pos$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] <- pies_pos$latitude_s[pies_pos$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] -1
+# pies_pos$x2[pies_pos$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] <- pies_pos$longitude_e[pies_pos$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] +3
+# pies_pos$y2[pies_pos$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] <- pies_pos$latitude_s[pies_pos$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] -1
 
-head(pies_picorna)
-head(pies_calici)
 head(pies_pos)
 
 #This is figure 1
@@ -276,22 +231,22 @@ head(pies_pos)
 #all positives
 p4_pos <- p2b+
   annotate("segment", x=pies_pos$longitude_e, xend=pies_pos$x2,y=pies_pos$latitude_s,yend=pies_pos$y2,size=1)+ # put the lines
-  geom_scatterpie(aes(x=x2, y=y2, r=(log10(N)/1.2)), 
-                  data = pies_pos, cols="plot_class_pos", long_format=TRUE) +
+  geom_scatterpie(aes(x=x2, y=y2, r=(N/1000)*8), 
+    data = pies_pos, cols="plot_class_pos", long_format=TRUE) +
   theme_bw() +theme(panel.grid = element_blank(),
                     plot.title = element_text(color="black", size=12, face="bold"),
                     plot.margin = unit(c(.1,.5,.1,.5),"cm"),
                     axis.title.x = element_text(color="black", size=12),
                     axis.title.y = element_text(color="black", size=12),
-                    legend.position=c(.9,.75),
+                    legend.position=c(.85,.15),
                     legend.margin = margin(),
                     legend.title=element_blank(),
                     legend.text = element_text(size = 9)) +
-  scale_fill_manual(values=colz) +
-  geom_scatterpie_legend(log10(c(10,100)/1.2),
-                         x=55, y=-23.5, 
-                         n=2,
-                         labeller = function(x) paste(10^(x)*1,"indiv"))
+  scale_fill_manual(values=colz)
+  # geom_scatterpie_legend(log10(c(10,200)/1.2),
+  #                        x=55, y=-23.5, 
+  #                        n=2,
+  #                        labeller = function(x) paste(10^(x)*1,"indiv"))
 
 p4_pos
 
@@ -306,15 +261,13 @@ p4_pos
 
 
 ##Add a plot showing the shared number of viruses in population during each sampling session
-
-##stacked bar plot
 dat <- read.csv(file = paste0(homewd,"/metadata/demo_data_indiv_pos_heatmap_species.csv"), header = T, stringsAsFactors = F)
 head(dat)
 names(dat)
 
 #pick order for the labels
-dat$genus <- factor(dat$genus, levels = c("Cardiovirus","Hepatovirus","Kobuvirus","Kunsagivirus","Mischivirus", "Unclassified bat picornavirus",
-                                          "Sapelovirus","Teschovirus", "Sapovirus"))   
+dat$genus <- factor(dat$genus, levels = c("Cardio.","Hepato.","Kobu.","Kunsagi.","Mischi.", "Bat picorna.",
+                                          "Sapelo.","Tescho.", "Sapo."))   
 dat$virus <- factor(dat$virus, levels = c("Eidolon dupreanum cardiovirus", "Eidolon dupreanum hepatovirus", "Eidolon dupreanum kobuvirus", "Eidolon dupreanum kobuvirus 2",
                                           "Eidolon dupreanum kunsagivirus", "Pteropus rufus mischivirus", "Rousettus madagascariensis picornavirus 1", "Rousettus madagascariensis picornavirus 2",
                                           "Rousettus madagascariensis picornavirus 3", "Eidolon dupreanum sapelovirus 1","Eidolon dupreanum sapelovirus 2", "Rousettus madagascariensis sapelovirus 1",
@@ -323,9 +276,9 @@ dat$virus <- factor(dat$virus, levels = c("Eidolon dupreanum cardiovirus", "Eido
                                           "Rousettus madagascariensis sapovirus 2", "Rousettus madagascariensis sapovirus 3"))   
 
 #pick colors for virus genera
-genuscolz<- c("Cardiovirus"="#F8766D","Hepatovirus"="#D89000","Kobuvirus"="#A3A500","Kunsagivirus"="#39B600","Mischivirus"="#00BF7D",
-              "Sapelovirus"="#00BFC4","Sapovirus"="#00B0F6","Teschovirus"="#E76BF3","Unclassified bat picornavirus"="#9590FF",
-              "Alphavirus"="black")
+genuscolz<- c("Cardio."="#F8766D","Hepato."="#D89000","Kobu."="#A3A500","Kunsagi."="#39B600","Mischi."="#00BF7D",
+              "Sapelo."="#00BFC4","Sapo."="#00B0F6","Tescho."="#E76BF3","Bat picorna."="#9590FF",
+              "Alpha."="black")
 
 library(scales)
 hex_codes2 <- hue_pal()(30)      
@@ -333,76 +286,20 @@ show_col(hex_codes2)
 
 viruscolz<-c("Eidolon dupreanum cardiovirus"="#F8766D", "Eidolon dupreanum hepatovirus"="#D89000", "Eidolon dupreanum kobuvirus"="#A3A500", "Eidolon dupreanum kobuvirus 2"="#A3A560",
              "Eidolon dupreanum kunsagivirus"="#39B600", "Pteropus rufus mischivirus"="#00BF7D", "Rousettus madagascariensis picornavirus 1"="#9590FF", "Rousettus madagascariensis picornavirus 2"="#B983FF",
-             "Rousettus madagascariensis picornavirus 3"="mediumpurple4", "Eidolon dupreanum sapelovirus 1"="#00BFC4","Eidolon dupreanum sapelovirus 2"="aquamarine3", "Rousettus madagascariensis sapelovirus 1"="#00C0AF",
-             "Eidolon dupreanum teschovirus 1"="#FF67A4","Rousettus madagascariensis teschovirus 1"="#FF62BC","Rousettus madagascariensis teschovirus 2"="#FD61D1","Eidolon dupreanum sapovirus 1"="#00B7E9",
-             "Eidolon dupreanum sapovirus 2"="#00B0F6", "Eidolon dupreanum sapovirus 3"="#00A7FF", "Eidolon dupreanum sapovirus 4"="#619CFF", "Rousettus madagascariensis sapovirus 1"="royalblue1",
+             "Rousettus madagascariensis picornavirus 3"="mediumpurple4", "Eidolon dupreanum sapelovirus 1"="aquamarine1","Eidolon dupreanum sapelovirus 2"="aquamarine3", "Rousettus madagascariensis sapelovirus 1"="aquamarine4",
+             "Eidolon dupreanum teschovirus 1"="palevioletred1","Rousettus madagascariensis teschovirus 1"="palevioletred3","Rousettus madagascariensis teschovirus 2"="palevioletred4","Eidolon dupreanum sapovirus 1"="lightskyblue1",
+             "Eidolon dupreanum sapovirus 3"="lightskyblue3", "Eidolon dupreanum sapovirus 4"="lightskyblue4", "Rousettus madagascariensis sapovirus 1"="#619CFF",
              "Rousettus madagascariensis sapovirus 2"="royalblue3", "Rousettus madagascariensis sapovirus 3"="royalblue4")
 
 
 dat$bat_species<-factor(dat$bat_species, levels=c("Pteropus rufus","Eidolon dupreanum", "Rousettus madagascariensis"))
-dat$roost_site<-factor(dat$roost_site, levels=c("AngavoKely","Ambakoana","Maromizaha"))
+dat$roost_site<-factor(dat$roost_site, levels=c("Angavokely","Ambakoana","Maromizaha"))
 dat$sampling_session<-factor(dat$sampling_session)
 
 #Subset because Pteropus only has one sample pos with only one virus
 dat<-subset(dat, bat_species!="Pteropus rufus")
 
 library(ggh4x)
-
-#by virus
-p2<-ggplot(dat) +
-  geom_bar(aes(x = sampling_session, y = num_virus, fill = virus),
-           position = "stack",
-           stat = "identity") +
-  facet_nested(roost_site~., scales="free", space="free")+
-  scale_fill_manual(values=viruscolz)+
-  
-  labs(
-    x = "Sampling session",
-    y= "Number of sequences",
-    fill="Virus species",
-    title="")+
-  theme_linedraw()+
-  theme(plot.margin = margin(0, 1, 0, 30, "pt"),
-        plot.background = element_blank(),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        axis.text.y = element_text(size=10),
-        axis.text.x = element_text(size=10),
-        legend.text = element_text(size=8),
-        legend.title = element_text(size=9),
-        legend.position = "right")
-
-p2
-
-
-#by virus genus
-p3<-ggplot(dat) +
-  geom_bar(aes(x = sampling_session, y = num_genus, fill = genus),
-           position = "stack",
-           stat = "identity") +
-  facet_nested(roost_site~., scales="free", space="free")+
-  scale_fill_manual(values=genuscolz)+
-  
-  labs(
-    x = "Sampling session",
-    y= "Number of sequences",
-    fill="Virus genus",
-    title="")+
-  theme_linedraw()+
-  theme(plot.margin = margin(0, 1, 0, 30, "pt"),
-        plot.background = element_blank(),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        axis.text.y = element_text(size=10),
-        axis.text.x = element_text(size=10),
-        legend.text = element_text(size=8),
-        legend.title = element_text(size=9),
-        legend.position = "right")
-        #legend.position = c(0.2,0.3))
-
-p3
-
-
 
 #virus and genus together
 p4<-ggplot(dat) +
@@ -415,11 +312,12 @@ p4<-ggplot(dat) +
   scale_fill_manual(values=viruscolz)+
   
   labs(
-    x = "Sampling session",
+    x = "Sampling date",
     y= "Number of sequences",
     fill="Virus species",
     title="")+
   theme_linedraw()+
+  scale_y_continuous(n.breaks = 2)+
   theme(plot.margin = margin(0, 1, 0, 30, "pt"),
         plot.background = element_blank(),
         panel.grid.major = element_blank(),
@@ -433,9 +331,6 @@ p4<-ggplot(dat) +
 
 p4
 
-p4+scale_y_continuous(n.breaks = 3)
-p4
-
 ###stats for comparing diversity between the two sampling sites: 
 
 #raw species and genus richness between the two sites
@@ -444,23 +339,23 @@ dat.sum<-ddply(dat,.(roost_site, genus,virus, sampling_session), summarise, N=le
 dat.sum.virus<-ddply(dat,.(roost_site, virus, sampling_session), summarise, N=length(virus))
 dat.sum.genus<-ddply(dat,.(roost_site, genus, sampling_session), summarise, N=length(genus))
 
-length(unique(dat$virus[dat$roost_site=="AngavoKely"])) #11
+length(unique(dat$virus[dat$roost_site=="Angavokely"])) #11
 length(unique(dat$virus[dat$roost_site=="Maromizaha"])) #9
-length(unique(dat$genus[dat$roost_site=="AngavoKely"])) #7
+length(unique(dat$genus[dat$roost_site=="Angavokely"])) #7
 length(unique(dat$genus[dat$roost_site=="Maromizaha"])) #4
 
 #look at shannon diversity
 library(vegan)
 library(ecolTest)
 library(divo)
-shan.ang.virus <- diversity(dat.sum.virus$N[dat.sum.virus$roost_site=="AngavoKely"], index="shannon") #2.944
-shan.ang.genus <- diversity(dat.sum.genus$N[dat.sum.genus$roost_site=="AngavoKely"], index="shannon") #2.798
+shan.ang.virus <- diversity(dat.sum.virus$N[dat.sum.virus$roost_site=="Angavokely"], index="shannon") #2.944
+shan.ang.genus <- diversity(dat.sum.genus$N[dat.sum.genus$roost_site=="Angavokely"], index="shannon") #2.798
 shan.mar.virus <-  diversity(dat.sum.virus$N[dat.sum.virus$roost_site=="Maromizaha"], index="shannon") #2.303
 shan.mar.genus <-  diversity(dat.sum.genus$N[dat.sum.genus$roost_site=="Maromizaha"], index="shannon") #2.264
 
 #compare diversity between sampling sites
 Hutcheson_t_test(
-  x=dat.sum.virus$N[dat.sum.virus$roost_site=="AngavoKely"],
+  x=dat.sum.virus$N[dat.sum.virus$roost_site=="Angavokely"],
   y=dat.sum.virus$N[dat.sum.virus$roost_site=="Maromizaha"],
   shannon.base = exp(1),
   alternative = "less",
@@ -468,7 +363,7 @@ Hutcheson_t_test(
 #Hutcheson t-statistic = 5.8194, df = 20.672, p-value = 1, not statistically different for virus
 
 Hutcheson_t_test(
-  x=dat.sum.genus$N[dat.sum.genus$roost_site=="AngavoKely"],
+  x=dat.sum.genus$N[dat.sum.genus$roost_site=="Angavokely"],
   y=dat.sum.genus$N[dat.sum.genus$roost_site=="Maromizaha"],
   shannon.base = exp(1),
   alternative = "less",
@@ -476,8 +371,8 @@ Hutcheson_t_test(
 #Hutcheson t-statistic = Inf, df = NaN, p-value = NA
 
 #plot the two
-dat.diversity.genus <- cbind.data.frame(roost_site=c("AngavoKely", "Maromizaha"), shannon=c(shan.ang.genus, shan.mar.genus))
-dat.diversity.virus <- cbind.data.frame(roost_site=c("AngavoKely", "Maromizaha"), shannon=c(shan.ang.virus, shan.mar.virus))
+dat.diversity.genus <- cbind.data.frame(roost_site=c("Angavokely", "Maromizaha"), shannon=c(shan.ang.genus, shan.mar.genus))
+dat.diversity.virus <- cbind.data.frame(roost_site=c("Angavokely", "Maromizaha"), shannon=c(shan.ang.virus, shan.mar.virus))
 
 library(ggsignif)
 
@@ -518,51 +413,19 @@ p6
 library(cowplot)
 library(ggplotify)
 
-sum<-plot_grid(p3 + theme(legend.justification = "left"), p2 + theme(legend.justification = "left"), labels=c("B","C"),
-               rel_widths = c(1,1), rel_heights = c(1,1),
-               ncol=1, align="hv", axis="b", label_size = 23)
-sum
-sum<-as.ggplot(sum)
 
-Fig1<-plot_grid(p4_pos, sum, labels=c("A",""),
-                      rel_widths = c(1,1.2), rel_heights = c(1,1),
-                      ncol=2, align="hv", axis="l", label_size = 23)
-Fig1
-Fig1<-as.ggplot(Fig1)
 
-Fig1.2<-plot_grid(p4_pos, p3, labels=c("A","B"),
-                rel_widths = c(1,1.2), rel_heights = c(0.8,1),
+Fig1.2<-plot_grid(p4_pos, p4, labels=c("A","B"),
+                rel_widths = c(2,2.5), rel_heights = c(2,1),
                 ncol=2, align="hv", axis="l", label_size = 23)
 Fig1.2
 Fig1.2<-as.ggplot(Fig1.2)
 
-
-Fig1.3<-plot_grid(p3 + theme(legend.justification = "left"), p2 + theme(legend.justification = "left"), labels=c("A","B"),
-                  rel_widths = c(1,1), rel_heights = c(1,1),
-                  ncol=2, align="hv", axis="l", label_size = 23)
-Fig1.3
-
-
-ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_diversity_v1.pdf"),
-       plot = Fig1,
-       units="mm",  
-       width=130, 
-       height=80, 
-       scale=3, 
-       dpi=300)
-
-ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_diversity_v2.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_diversity.pdf"),
        plot = Fig1.2,
        units="mm",  
        width=130, 
-       height=50, 
+       height=70, 
        scale=3, 
        dpi=300)
 
-ggsave(file = paste0(homewd, "/final_figures/Fig1_diversity_v3.pdf"),
-       plot = Fig1.3,
-       units="mm",  
-       width=130, 
-       height=50, 
-       scale=3, 
-       dpi=300)

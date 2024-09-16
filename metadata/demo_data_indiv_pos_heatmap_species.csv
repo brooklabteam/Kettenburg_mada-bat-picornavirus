@@ -1,31 +1,31 @@
 roost_site,sampling_session,sampling_date,num_unique_viruses,num_shared_viruses,num_virus,num_genus,genus,virus,pos,bat_species
-AngavoKely,4,2013-11-24,1,0,1,1,Kobuvirus,Eidolon dupreanum kobuvirus,1,Eidolon dupreanum
-AngavoKely,20,2014-12-17,2,0,1,1,Hepatovirus,Eidolon dupreanum hepatovirus,1,Eidolon dupreanum
-AngavoKely,20,2014-12-17,2,0,1,1,Kobuvirus,Eidolon dupreanum kobuvirus,1,Eidolon dupreanum
-AngavoKely,30,2015-06-23,1,0,1,1,Kobuvirus,Eidolon dupreanum kobuvirus,1,Eidolon dupreanum
-AngavoKely,33,2016-01-08,1,0,1,1,Kobuvirus,Eidolon dupreanum kobuvirus,1,Eidolon dupreanum
-AngavoKely,38,2018-02-15,4,1,2,1,Sapovirus,Eidolon dupreanum sapovirus 1,1,Eidolon dupreanum
-AngavoKely,38,2018-02-15,4,1,1,1,Kunsagivirus,Eidolon dupreanum kunsagivirus,1,Eidolon dupreanum
-AngavoKely,38,2018-02-15,4,1,1,1,Hepatovirus,Eidolon dupreanum hepatovirus,1,Eidolon dupreanum
-AngavoKely,38,2018-02-15,4,1,1,1,Teschovirus,Eidolon dupreanum teschovirus 1,1,Eidolon dupreanum
-AngavoKely,41,2018-04-09,1,0,1,1,Kobuvirus,Eidolon dupreanum kobuvirus 2,1,Eidolon dupreanum
-AngavoKely,42,2018-04-10,2,0,1,2,Sapovirus,Eidolon dupreanum sapovirus 3,1,Eidolon dupreanum
-AngavoKely,42,2018-04-10,2,0,1,2,Sapovirus,Eidolon dupreanum sapovirus 4,1,Eidolon dupreanum
-Maromizaha,43,2018-04-13,1,0,1,1,Sapovirus,Rousettus madagascariensis sapovirus 1,1,Rousettus madagascariensis
-AngavoKely,46,2018-07-27,1,0,1,1,Sapelovirus,Eidolon dupreanum sapelovirus 1,1,Eidolon dupreanum
-Maromizaha,47,2018-07-29,2,0,1,2,Teschovirus,Rousettus madagascariensis teschovirus 1,1,Rousettus madagascariensis
-Maromizaha,47,2018-07-29,2,0,1,1,Unclassified bat picornavirus,Rousettus madagascariensis picornavirus 2,1,Rousettus madagascariensis
-Maromizaha,47,2018-07-29,2,0,1,2,Teschovirus,Rousettus madagascariensis teschovirus 2,1,Rousettus madagascariensis
-Ambakoana,48,2018-08-05,1,0,1,1,Mischivirus,Pteropus rufus mischivirus,1,Pteropus rufus
-Maromizaha,50,2018-09-11,3,1,1,1,Sapovirus,Rousettus madagascariensis sapovirus 2,1,Rousettus madagascariensis
-Maromizaha,50,2018-09-11,3,1,2,1,Unclassified bat picornavirus,Rousettus madagascariensis picornavirus 1,1,Rousettus madagascariensis
-Maromizaha,50,2018-09-11,3,1,1,1,Sapelovirus,Rousettus madagascariensis sapelovirus 1,1,Rousettus madagascariensis
-AngavoKely,56,2019-01-06,2,0,1,2,Sapelovirus,Eidolon dupreanum sapelovirus 2,1,Eidolon dupreanum
-AngavoKely,56,2019-01-06,2,0,1,2,Sapelovirus,Eidolon dupreanum sapelovirus 1,1,Eidolon dupreanum
-Maromizaha,59,2019-02-01,1,0,1,1,Sapovirus,Rousettus madagascariensis sapovirus 3,1,Rousettus madagascariensis
-AngavoKely,60,2019-02-06,1,0,1,1,Sapelovirus,Eidolon dupreanum sapelovirus 1,1,Eidolon dupreanum
-AngavoKely,63,2019-03-14,1,0,1,1,Sapelovirus,Eidolon dupreanum sapelovirus 1,1,Eidolon dupreanum
-Maromizaha,65,2019-04-09,2,0,1,1,Sapovirus,Rousettus madagascariensis sapovirus 3,1,Rousettus madagascariensis
-Maromizaha,65,2019-04-09,2,0,1,1,Unclassified bat picornavirus,Rousettus madagascariensis picornavirus 3,1,Rousettus madagascariensis
-AngavoKely,66,2019-04-23,1,0,1,1,Kobuvirus,Eidolon dupreanum kobuvirus,1,Eidolon dupreanum
-AngavoKely,75,2019-08-24,1,0,1,1,Cardiovirus,Eidolon dupreanum cardiovirus,1,Eidolon dupreanum
+Angavokely,4,2013-11-24,1,0,1,1,Kobu.,Eidolon dupreanum kobuvirus,1,Eidolon dupreanum
+Angavokely,20,2014-12-17,2,0,1,1,Hepato.,Eidolon dupreanum hepatovirus,1,Eidolon dupreanum
+Angavokely,20,2014-12-17,2,0,1,1,Kobu.,Eidolon dupreanum kobuvirus,1,Eidolon dupreanum
+Angavokely,30,2015-06-23,1,0,1,1,Kobu.,Eidolon dupreanum kobuvirus,1,Eidolon dupreanum
+Angavokely,33,2016-01-08,1,0,1,1,Kobu.,Eidolon dupreanum kobuvirus,1,Eidolon dupreanum
+Angavokely,38,2018-02-15,4,1,2,1,Sapo.,Eidolon dupreanum sapovirus 1,1,Eidolon dupreanum
+Angavokely,38,2018-02-15,4,1,1,1,Kunsagi.,Eidolon dupreanum kunsagivirus,1,Eidolon dupreanum
+Angavokely,38,2018-02-15,4,1,1,1,Hepato.,Eidolon dupreanum hepatovirus,1,Eidolon dupreanum
+Angavokely,38,2018-02-15,4,1,1,1,Tescho.,Eidolon dupreanum teschovirus 1,1,Eidolon dupreanum
+Angavokely,41,2018-04-09,1,0,1,1,Kobu.,Eidolon dupreanum kobuvirus 2,1,Eidolon dupreanum
+Angavokely,42,2018-04-10,2,0,1,2,Sapo.,Eidolon dupreanum sapovirus 3,1,Eidolon dupreanum
+Angavokely,42,2018-04-10,2,0,1,2,Sapo.,Eidolon dupreanum sapovirus 4,1,Eidolon dupreanum
+Maromizaha,43,2018-04-13,1,0,1,1,Sapo.,Rousettus madagascariensis sapovirus 1,1,Rousettus madagascariensis
+Angavokely,46,2018-07-27,1,0,1,1,Sapelo.,Eidolon dupreanum sapelovirus 1,1,Eidolon dupreanum
+Maromizaha,47,2018-07-29,2,0,1,2,Tescho.,Rousettus madagascariensis teschovirus 1,1,Rousettus madagascariensis
+Maromizaha,47,2018-07-29,2,0,1,1,Bat picorna.,Rousettus madagascariensis picornavirus 2,1,Rousettus madagascariensis
+Maromizaha,47,2018-07-29,2,0,1,2,Tescho.,Rousettus madagascariensis teschovirus 2,1,Rousettus madagascariensis
+Ambakoana,48,2018-08-05,1,0,1,1,Mischi.,Pteropus rufus mischivirus,1,Pteropus rufus
+Maromizaha,50,2018-09-11,3,1,1,1,Sapo.,Rousettus madagascariensis sapovirus 2,1,Rousettus madagascariensis
+Maromizaha,50,2018-09-11,3,1,2,1,Bat picorna.,Rousettus madagascariensis picornavirus 1,1,Rousettus madagascariensis
+Maromizaha,50,2018-09-11,3,1,1,1,Sapelo.,Rousettus madagascariensis sapelovirus 1,1,Rousettus madagascariensis
+Angavokely,56,2019-01-06,2,0,1,2,Sapelo.,Eidolon dupreanum sapelovirus 2,1,Eidolon dupreanum
+Angavokely,56,2019-01-06,2,0,1,2,Sapelo.,Eidolon dupreanum sapelovirus 1,1,Eidolon dupreanum
+Maromizaha,59,2019-02-01,1,0,1,1,Sapo.,Rousettus madagascariensis sapovirus 3,1,Rousettus madagascariensis
+Angavokely,60,2019-02-06,1,0,1,1,Sapelo.,Eidolon dupreanum sapelovirus 1,1,Eidolon dupreanum
+Angavokely,63,2019-03-14,1,0,1,1,Sapelo.,Eidolon dupreanum sapelovirus 1,1,Eidolon dupreanum
+Maromizaha,65,2019-04-09,2,0,1,1,Sapo.,Rousettus madagascariensis sapovirus 3,1,Rousettus madagascariensis
+Maromizaha,65,2019-04-09,2,0,1,1,Bat picorna.,Rousettus madagascariensis picornavirus 3,1,Rousettus madagascariensis
+Angavokely,66,2019-04-23,1,0,1,1,Kobu.,Eidolon dupreanum kobuvirus,1,Eidolon dupreanum
+Angavokely,75,2019-08-24,1,0,1,1,Cardio.,Eidolon dupreanum cardiovirus,1,Eidolon dupreanum
