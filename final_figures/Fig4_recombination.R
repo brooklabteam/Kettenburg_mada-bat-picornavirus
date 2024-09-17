@@ -42,11 +42,11 @@ colz=c("5'UTR"="gold", "L"="royalblue","VP4"="paleturquoise3", "VP2"="skyblue1",
        "Polyprotein"="azure3",
        "Minor structural protein"="black","3'UTR"="gold")
 
-colz2=c("5'UTR"="grey", "L"="white","VP4"="white", "VP2"="white", "VP0"="white", "VP3"="white",
-        "VP1"="white", "VP1 "="cornflowerblue", "2A"="cornflowerblue", "2B"="white", "2C"="white", "3A"="cornflowerblue", "3B"="white",
-        "3C"="white", "3D"="white", "Helicase"="white","NS4"="cornflowerblue","Vpg"="white","Pro-Pol"="white","NS1/NS2"="white",
+colz2=c("5'UTR"="cornflowerblue", "L"="white","VP4"="white", "VP2"="white", "VP0"="white", "VP3"="white",
+        "VP1"="white", "VP1 "="orange1", "2A"="orange1", "2B"="white", "2C"="white", "3A"="orange1", "3B"="white",
+        "3C"="white", "3D"="white", "Helicase"="white","NS4"="orange1","Vpg"="white","Pro-Pol"="white","NS1/NS2"="white",
         "Polyprotein"="black",
-        "Minor structural protein"="black","3'UTR"="grey")
+        "Minor structural protein"="black","3'UTR"="cornflowerblue")
 
 
 
@@ -221,7 +221,11 @@ long.sim_nt$value <- long.sim_nt$value/100
 #plot nucleotide
 title<-expression(paste("Potential recombinant - E. helvum hepatovirus M32Eidhel2010"))
 
-hepato_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+hepato_map_nt <- ggplot(long.sim_nt) + 
+  annotate("rect", xmin=1, xmax=790, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=7740, xmax=7917, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=3495, xmax=3885, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Bootstrap support")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -239,12 +243,10 @@ hepato_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
   guides(colour = guide_legend(nrow = 3))+
   scale_color_manual(values=colzpalette) + 
   geom_hline(yintercept=0.69, linetype='dashed', col = 'black')+
-  annotate("rect", xmin=1, xmax=790, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=7740, xmax=7917, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=3495, xmax=3885, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
@@ -289,7 +291,9 @@ long.sim_nt$value <- long.sim_nt$value/100
 #plot nucleotide
 title<-expression(paste("Potential recombinant - E. dupreanum hepatovirus: PP766457*"))
 
-hepato_map_clade_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+hepato_map_clade_nt <- ggplot(long.sim_nt) + 
+  annotate("rect", xmin=1854, xmax=2077, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Bootstrap support")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -307,10 +311,10 @@ hepato_map_clade_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, c
   guides(colour = guide_legend(nrow = 3))+
   scale_color_manual(values=colzpalette) + 
   geom_hline(yintercept=0.69, linetype='dashed', col = 'black')+
-  annotate("rect", xmin=1854, xmax=2077, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
@@ -357,7 +361,9 @@ long.sim_nt$value <- long.sim_nt$value/100
 ## nucleotide
 title<-expression(paste("Potential recombinant - E. dupreanum sapelovirus 2: OQ818321*"))
 
-sapelo_map_clade_nt1 <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+sapelo_map_clade_nt1 <- ggplot(long.sim_nt) + 
+  annotate("rect", xmin=336, xmax=957, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Bootstrap support")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -375,10 +381,10 @@ sapelo_map_clade_nt1 <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, 
   guides(colour = guide_legend(nrow = 3))+
   scale_color_manual(values=colzpalette) + 
   geom_hline(yintercept=0.69, linetype='dashed', col = 'black')+
-  annotate("rect", xmin=336, xmax=957, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
@@ -421,7 +427,9 @@ long.sim_nt$value <- long.sim_nt$value/100
 ## nucleotide
 title<-expression(paste("Potential recombinant - Bat sapelovirus Bat/CAM/Sap-P24/2013"))
 
-sapelo_map_clade_nt2 <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+sapelo_map_clade_nt2 <- ggplot(long.sim_nt) + 
+  annotate("rect", xmin=3334, xmax=5410, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Bootstrap support")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -439,10 +447,10 @@ sapelo_map_clade_nt2 <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, 
   guides(colour = guide_legend(nrow = 3))+
   scale_color_manual(values=colzpalette) + 
   geom_hline(yintercept=0.69, linetype='dashed', col = 'black')+
-  annotate("rect", xmin=3334, xmax=5410, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
@@ -490,7 +498,9 @@ long.sim_nt$value <- long.sim_nt$value/100
 #plot nucleotide
 title<-expression(paste("Potential recombinant - E. helvum sapovirus clade"))
 
-sapo_map_clade_nt1 <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+sapo_map_clade_nt1 <- ggplot(long.sim_nt) + 
+  annotate("rect", xmin=3548, xmax=7519, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Bootstrap support")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -508,10 +518,10 @@ sapo_map_clade_nt1 <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, co
   guides(colour = guide_legend(nrow = 3))+
   scale_color_manual(values=colzpalette) + 
   geom_hline(yintercept=0.69, linetype='dashed', col = 'black')+
-  annotate("rect", xmin=3548, xmax=7519, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
@@ -555,7 +565,9 @@ long.sim_nt$value <- long.sim_nt$value/100
 #plot nucleotide
 title<-expression(paste("Potential recombinant - Bat sapovirus BtSY2"))
 
-sapo_map_clade_nt2 <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+sapo_map_clade_nt2 <- ggplot(long.sim_nt) +
+  annotate("rect", xmin=7302, xmax=7504, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Bootstrap support")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -573,10 +585,10 @@ sapo_map_clade_nt2 <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, co
   guides(colour = guide_legend(nrow = 3))+
   scale_color_manual(values=colzpalette) + 
   geom_hline(yintercept=0.69, linetype='dashed', col = 'black')+
-  annotate("rect", xmin=7302, xmax=7504, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
@@ -624,7 +636,9 @@ long.sim_nt$value <- long.sim_nt$value/100
 #plot nucleotide
 title<-expression(paste("Potential recombinant - R. aegypticus African teschovirus clade"))
 
-tescho_map_clade_nt1 <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+tescho_map_clade_nt1 <- ggplot(long.sim_nt) + 
+  annotate("rect", xmin=7346, xmax=7558, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Bootstrap support")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -642,10 +656,10 @@ tescho_map_clade_nt1 <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, 
   guides(colour = guide_legend(nrow = 3))+
   scale_color_manual(values=colzpalette) + 
   geom_hline(yintercept=0.69, linetype='dashed', col = 'black')+
-  annotate("rect", xmin=7346, xmax=7558, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
@@ -689,7 +703,9 @@ long.sim_nt$value <- long.sim_nt$value/100
 #plot nucleotide
 title<-expression(paste("Potential recombinant - R. madagascariensis teschovirus 1: OQ818323*"))
 
-tescho_map_clade_nt2 <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+tescho_map_clade_nt2 <- ggplot(long.sim_nt) + 
+  annotate("rect", xmin=63, xmax=1064, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Bootstrap support")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -707,10 +723,10 @@ tescho_map_clade_nt2 <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, 
   guides(colour = guide_legend(nrow = 3))+
   scale_color_manual(values=colzpalette) + 
   geom_hline(yintercept=0.69, linetype='dashed', col = 'black')+
-  annotate("rect", xmin=63, xmax=1064, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
@@ -754,7 +770,10 @@ long.sim_nt$value <- long.sim_nt$value/100
 #plot nucleotide
 title<-expression(paste("Potential recombinant - Rousettus bat picornavirus 29A/Kenya/BAT3/2015"))
 
-tescho_map_nt1 <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+tescho_map_nt1 <- ggplot(long.sim_nt) + 
+   annotate("rect", xmin=1, xmax=1104, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5395, xmax=7800, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Bootstrap support")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -772,11 +791,10 @@ tescho_map_nt1 <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=
   guides(colour = guide_legend(nrow = 3))+
   scale_color_manual(values=colzpalette) + 
   geom_hline(yintercept=0.69, linetype='dashed', col = 'black')+
-  annotate("rect", xmin=1, xmax=1104, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=5395, xmax=7800, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
