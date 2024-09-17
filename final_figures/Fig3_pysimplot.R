@@ -42,11 +42,11 @@ colz=c("5'UTR"="gold", "L"="royalblue","VP4"="paleturquoise3", "VP2"="skyblue1",
        "Polyprotein"="azure3",
        "Minor structural protein"="black","3'UTR"="gold")
 
-colz2=c("5'UTR"="grey", "L"="white","VP4"="white", "VP2"="white", "VP0"="white", "VP3"="white",
-       "VP1"="white", "VP1 "="cornflowerblue", "2A"="cornflowerblue", "2B"="white", "2C"="white", "3A"="cornflowerblue", "3B"="white",
-       "3C"="white", "3D"="white", "Helicase"="white","NS4"="cornflowerblue","Vpg"="white","Pro-Pol"="white","NS1/NS2"="white",
+colz2=c("5'UTR"="cornflowerblue", "L"="white","VP4"="white", "VP2"="white", "VP0"="white", "VP3"="white",
+       "VP1"="white", "VP1 "="orange1", "2A"="orange1", "2B"="white", "2C"="white", "3A"="orange1", "3B"="white",
+       "3C"="white", "3D"="white", "Helicase"="white","NS4"="orange1","Vpg"="white","Pro-Pol"="white","NS1/NS2"="white",
        "Polyprotein"="black",
-       "Minor structural protein"="black","3'UTR"="grey")
+       "Minor structural protein"="black","3'UTR"="cornflowerblue")
 
 
 #Plot map and BLAST together plots
@@ -406,6 +406,7 @@ batpicorna_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, col
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
@@ -467,6 +468,7 @@ batpicorna_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, col
   annotate("rect", xmin=5261/3.055, xmax=5679/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   ggtitle(title)+
   scale_color_manual(values=colzpalette) + 
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055), 
                      labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
   #scale_x_continuous(expand=c(0,0))+
@@ -532,6 +534,7 @@ hepato_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
@@ -591,6 +594,7 @@ hepatovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, co
   annotate("rect", xmin=5061/3.055, xmax=5379/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   #scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
                      labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
   #scale_x_continuous(expand=c(0,0))+
@@ -654,6 +658,7 @@ kobu_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=acc
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
@@ -710,6 +715,7 @@ kobuvirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, colo
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
                      labels = c(0,2000,4000,6000,8000),expand=c(0,0))+
   #scale_x_continuous(expand=c(0,0))+
@@ -773,6 +779,7 @@ kunsagi_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
@@ -829,6 +836,7 @@ kunsagivirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, c
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
                      labels = c(0,2000,4000,6000,8000),expand=c(0,0))+
   #scale_x_continuous(expand=c(0,0))+
@@ -895,6 +903,7 @@ mischi_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
@@ -954,6 +963,7 @@ mischivirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, co
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
                      labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
   #scale_x_continuous(expand=c(0,0))+
@@ -1025,6 +1035,7 @@ sapelo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
@@ -1089,6 +1100,7 @@ sapelovirus_full_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=valu
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
                      labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
   #scale_x_continuous(expand=c(0,0))+
@@ -1158,6 +1170,7 @@ tescho_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
@@ -1221,6 +1234,7 @@ teschovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, co
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
                      labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
   #scale_x_continuous(expand=c(0,0))+
@@ -1293,6 +1307,7 @@ sapo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=acc
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(expand=c(0,0))+
   scale_y_continuous(limits=c(0,1), expand=c(0,0))
 
@@ -1357,6 +1372,7 @@ sapovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, colo
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
   scale_x_continuous(breaks=c(0,2000/3.055,4000/3.055,6000/3.055,8000/3.055),
                      labels = c(0,2000, 4000,6000,8000),expand=c(0,0))+
   #scale_x_continuous(expand=c(0,0))+
@@ -1406,7 +1422,7 @@ homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus"
 ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig4_nucleotide_pysimplot.pdf"),
        plot = nucleotide_supp,
        units="mm",  
-       width=140, 
+       width=150, 
        height=110, 
        scale=4, 
        dpi=300)
