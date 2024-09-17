@@ -195,16 +195,18 @@ p1 <- ggtree(rooted.tree, layout="fan", size=0.5) %<+% tree.dat +
   geom_tippoint(aes(color=Genus, shape=Host), size=2,stroke=0,show.legend = T) +
   #scale_color_manual(values=genuscolz)+
   scale_shape_manual(values=shapez) +
-  guides(colour = "none")+
-  theme(#legend.position = c(0.5,0.59),
-        legend.position = "left",
+  guides(colour = "none", shape = guide_legend(order = 1))+
+  theme(#legend.position = c(0.5,0.59), #keep this one in case we want the legend within the plot
+        #legend.position = c(0.97,0.59), #right side
+        legend.position = c(0.52,0.07),
         legend.margin = margin(0,0,0,0),
         legend.box.margin=margin(-10,-10,-10,-10),
         legend.text = element_text(size=9),
         legend.title = element_text(size=9),
         legend.key = element_rect(fill = "transparent"),
         legend.key.size = unit(0.25, "cm"),
-        legend.direction = "vertical") +
+        legend.direction = "vertical",
+        legend.box = "horizontal") +
   xlim(c(0,15)) 
 p1
 
@@ -274,7 +276,9 @@ base<-p3+new_scale_fill()+
     geom=geom_tile,
     mapping=aes(fill=Seq_type),
     width=0.5,
-    offset=0.06)  + scale_fill_manual(values=c("Novel seq"="gold2","Reference seq"="grey88"), name="Seq type")+
+    offset=0.06)  + 
+  guides(fill = guide_legend(order=2))+
+  scale_fill_manual(values=c("Novel seq"="gold2","Reference seq"="grey88"), name="Seq type")+
   theme(
     #legend.direction = "none",
     legend.text = element_text(size=9),
@@ -2221,7 +2225,7 @@ phylo_grid
 phylo_grid<-as.ggplot(phylo_grid)
 
 small_grid<-plot_grid(cardio,hepato,kobu,kunsagi, labels=c("B","C","D","E"),
-                      rel_widths = c(1,1,1), rel_heights = c(0.8,1,1,0.4),
+                      rel_widths = c(1,1,1), rel_heights = c(0.6,1,1,0.3),
                       ncol=1, align="hv", axis="l", label_size = 23)
 small_grid
 small_grid<-as.ggplot(small_grid)
@@ -2245,7 +2249,7 @@ ggsave(file = paste0(homewd, "/final_figures/Fig2_summary_phylogeny.pdf"),
        plot= final,
        units="mm",  
        width=235, 
-       height=200, 
+       height=230, 
        scale=2, 
        dpi=500)
 
