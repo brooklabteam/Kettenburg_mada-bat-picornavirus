@@ -384,7 +384,10 @@ long.sim_nt$value <- long.sim_nt$value/100
 title<-expression(paste("Reference: R. madagascariensis picornavirus 1: OQ818325*"))
 
 #Plot nucleotide
-batpicorna_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+batpicorna_map_nt <- ggplot(long.sim_nt) + 
+  annotate("rect", xmin=3168, xmax=3904, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5161, xmax=5579, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Nucleotide identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -400,8 +403,6 @@ batpicorna_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, col
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
-  annotate("rect", xmin=3168, xmax=3904, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=5161, xmax=5579, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -448,7 +449,10 @@ long.sim_aa$value <- long.sim_aa$value/100
 
 title<-expression(paste("Reference: R. madagascariensis picornavirus 1: OQ818325*"))
 ## amino acid
-batpicorna_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+batpicorna_map_aa <- ggplot(long.sim_aa) + 
+  annotate("rect", xmin=3368/3.055, xmax=4104/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5261/3.055, xmax=5679/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Amino acid identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -464,8 +468,6 @@ batpicorna_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, col
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
-  annotate("rect", xmin=3368/3.055, xmax=4104/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=5261/3.055, xmax=5679/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   ggtitle(title)+
   scale_color_manual(values=colzpalette) + 
   coord_cartesian(ylim=c(0,1.02))+
@@ -512,7 +514,10 @@ long.sim_nt$value <- long.sim_nt$value/100
 #plot nucleotide
 title<-expression(paste("Reference: E. dupreanum hepatovirus: PP766455*"))
 
-hepato_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+hepato_map_nt <- ggplot(long.sim_nt) + 
+  annotate("rect", xmin=3068, xmax=3804, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5061, xmax=5379, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Nucleotide identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -529,8 +534,6 @@ hepato_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
   scale_color_manual(values=colzpalette) + 
-  annotate("rect", xmin=3068, xmax=3804, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=5061, xmax=5379, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
   ggtitle(title)+
@@ -573,7 +576,10 @@ long.sim_aa$value <- long.sim_aa$value/100
 ## Amino acid
 title<-expression(paste("Reference: E. dupreanum hepatovirus: PP766455*"))
 
-hepatovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+hepatovirus_map_aa <- ggplot(long.sim_aa) +
+  annotate("rect", xmin=3068/3.055, xmax=3804/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5061/3.055, xmax=5379/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Amino acid identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -590,8 +596,6 @@ hepatovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, co
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
   scale_color_manual(values=colzpalette) + 
-  annotate("rect", xmin=3068/3.055, xmax=3804/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=5061/3.055, xmax=5379/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   #scale_fill_distiller()+
   ggtitle(title)+
   coord_cartesian(ylim=c(0,1.02))+
@@ -694,7 +698,10 @@ long.sim_aa$value <- long.sim_aa$value/100
 ## Amino acid
 title<-expression(paste("Reference: E. dupreanum kobuvirus: OQ818322*"))
 
-kobuvirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+kobuvirus_map_aa <- ggplot(long.sim_aa) + 
+  annotate("rect", xmin=3768/3.055, xmax=4304/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5661/3.055, xmax=5979/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Amino acid identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -710,8 +717,6 @@ kobuvirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, colo
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 1))+
-  annotate("rect", xmin=3768/3.055, xmax=4304/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=5661/3.055, xmax=5979/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
@@ -757,7 +762,10 @@ long.sim_nt$value <- long.sim_nt$value/100
 #plot nucleotide
 title<-expression(paste("Reference: E. dupreanum kunsagivirus: OQ818317*"))
 
-kunsagi_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+kunsagi_map_nt <- ggplot(long.sim_nt) + 
+  annotate("rect", xmin=2768, xmax=3304, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=4861, xmax=5179, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Nucleotide identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -773,8 +781,6 @@ kunsagi_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 1))+
-  annotate("rect", xmin=2768, xmax=3304, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=4861, xmax=5179, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -815,7 +821,10 @@ long.sim_aa$value <- long.sim_aa$value/100
 ## Amino acid
 title<-expression(paste("Reference: E. dupreanum kunsagivirus: OQ818317*"))
 
-kunsagivirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+kunsagivirus_map_aa <- ggplot(long.sim_aa) + 
+  annotate("rect", xmin=2768/3.055, xmax=3304/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=4861/3.055, xmax=5179/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Amino acid identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -831,8 +840,6 @@ kunsagivirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, c
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 1))+
-  annotate("rect", xmin=2768/3.055, xmax=3304/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=4861/3.055, xmax=5179/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
@@ -881,7 +888,10 @@ long.sim_nt$value <- long.sim_nt$value/100
 ## nucleotide
 title<-expression(paste("Reference: P. rufus mischivirus: OQ818316*"))
 
-mischi_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+mischi_map_nt <- ggplot(long.sim_nt) + 
+  annotate("rect", xmin=4368, xmax=4704, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=6261, xmax=6779, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Nucleotide identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -897,8 +907,6 @@ mischi_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
-  annotate("rect", xmin=4368, xmax=4704, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=6261, xmax=6779, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -942,7 +950,10 @@ long.sim_aa$value <- long.sim_aa$value/100
 ## Amino acid
 title<-expression(paste("Reference: P. rufus mischivirus: OQ818316*"))
 
-mischivirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+mischivirus_map_aa <- ggplot(long.sim_aa) + 
+  annotate("rect", xmin=4368/3.055, xmax=4704/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=6261/3.055, xmax=6779/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Amino acid identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -958,8 +969,6 @@ mischivirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, co
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
-  annotate("rect", xmin=4368/3.055, xmax=4704/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=6261/3.055, xmax=6779/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
@@ -1013,7 +1022,10 @@ long.sim_nt$value <- long.sim_nt$value/100
 ## nucleotide
 title<-expression(paste("Reference: E. dupreanum sapelovirus: OQ818321*"))
 
-sapelo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+sapelo_map_nt <- ggplot(long.sim_nt) + 
+  annotate("rect", xmin=3368, xmax=4004, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5461, xmax=5779, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Nucleotide identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -1029,8 +1041,6 @@ sapelo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
-  annotate("rect", xmin=3368, xmax=4004, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=5461, xmax=5779, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -1079,7 +1089,10 @@ long.sim_aa$value <- long.sim_aa$value/100
 ## nucleotide
 title<-expression(paste("Reference: E. dupreanum sapelovirus: OQ818321*"))
 
-sapelovirus_full_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+sapelovirus_full_map_aa <- ggplot(long.sim_aa) + 
+  annotate("rect", xmin=3368/3.055, xmax=4204/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5561/3.055, xmax=5879/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Amino acid identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -1095,8 +1108,6 @@ sapelovirus_full_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=valu
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 3))+
-  annotate("rect", xmin=3368/3.055, xmax=4204/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=5561/3.055, xmax=5879/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
@@ -1148,7 +1159,10 @@ long.sim_nt$value <- long.sim_nt$value/100
 
 ## nucleotide
 title<-expression(paste("Reference: R. madagascariensis teschovirus 1: OQ818323*"))
-tescho_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+tescho_map_nt <- ggplot(long.sim_nt) + 
+  annotate("rect", xmin=3368, xmax=3604, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=4961, xmax=5279, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Nucleotide identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -1164,8 +1178,6 @@ tescho_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=a
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
-  annotate("rect", xmin=3368, xmax=3604, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=4961, xmax=5279, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
@@ -1213,7 +1225,10 @@ long.sim_aa$value <- long.sim_aa$value/100
 ## nucleotide
 title<-expression(paste("Reference: R. madagascariensis teschovirus 1: OQ818323*"))
 
-teschovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+teschovirus_map_aa <- ggplot(long.sim_aa) + 
+  annotate("rect", xmin=3368/3.055, xmax=3604/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=4961/3.055, xmax=5279/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Amino acid identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -1229,8 +1244,6 @@ teschovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, co
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
-  annotate("rect", xmin=3368/3.055, xmax=3604/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=4961/3.055, xmax=5279/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
@@ -1285,7 +1298,10 @@ long.sim_nt$value <- long.sim_nt$value/100
 title<-expression(paste("Reference: E. dupreanum sapovirus 1: PP766459*"))
 
 
-sapo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+sapo_map_nt <- ggplot(long.sim_nt) + 
+  annotate("rect", xmin=2000, xmax=2800, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5179, xmax=6800, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Nucleotide identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -1301,8 +1317,6 @@ sapo_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=acc
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
-  annotate("rect", xmin=2000, xmax=2800, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=5179, xmax=6800, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_color_manual(values=colz2) + 
   scale_fill_distiller()+
