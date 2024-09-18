@@ -724,13 +724,6 @@ tescho_nt
 
 
 #To plot figure 4
-fig4<-plot_grid(hepato_clade_nt,hepato_nt, sapelo_clade_nt1, sapelo_clade_nt2, sapelo_nt, 
-                tescho_clade_nt1, tescho_clade_nt2, tescho_nt,
-                ncol=4,
-                labels="AUTO", label_size = 23, align = "hv", axis="b")
-fig4
-
-
 fig4<-plot_grid(sapelo_clade_nt1,tescho_nt,
                 ncol=2,
                 labels="AUTO", label_size = 23, align = "hv", axis="b")
@@ -750,7 +743,7 @@ homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus"
 ggsave(file = paste0(homewd, "/final_figures/Fig4_recombination.pdf"),
        plot = fig4,
        units="mm",  
-       width=150, 
+       width=100, 
        height=40, 
        scale=4, 
        dpi=300)
@@ -758,8 +751,8 @@ ggsave(file = paste0(homewd, "/final_figures/Fig4_recombination.pdf"),
 ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig5_recombination.pdf"),
        plot = recombination_supp,
        units="mm",  
-       width=150, 
-       height=70, 
+       width=100, 
+       height=80, 
        scale=4, 
        dpi=300)
 
