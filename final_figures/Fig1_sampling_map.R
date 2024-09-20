@@ -335,9 +335,9 @@ p4
 
 #raw species and genus richness between the two sites
 
-dat.sum<-ddply(dat,.(roost_site, genus,virus, sampling_session), summarise, N=length(pos))
-dat.sum.virus<-ddply(dat,.(roost_site, virus, sampling_session), summarise, N=length(virus))
-dat.sum.genus<-ddply(dat,.(roost_site, genus, sampling_session), summarise, N=length(genus))
+dat.sum<-ddply(dat,.(roost_site, genus,virus, sampling_date), summarise, N=length(pos))
+dat.sum.virus<-ddply(dat,.(roost_site, virus, sampling_date), summarise, N=length(virus))
+dat.sum.genus<-ddply(dat,.(roost_site, genus, sampling_date), summarise, N=length(genus))
 
 length(unique(dat$virus[dat$roost_site=="Angavokely"])) #11
 length(unique(dat$virus[dat$roost_site=="Maromizaha"])) #9
@@ -348,72 +348,62 @@ length(unique(dat$genus[dat$roost_site=="Maromizaha"])) #4
 library(vegan)
 library(ecolTest)
 library(divo)
+
 shan.ang.virus <- diversity(dat.sum.virus$N[dat.sum.virus$roost_site=="Angavokely"], index="shannon") #2.944
 shan.ang.genus <- diversity(dat.sum.genus$N[dat.sum.genus$roost_site=="Angavokely"], index="shannon") #2.798
 shan.mar.virus <-  diversity(dat.sum.virus$N[dat.sum.virus$roost_site=="Maromizaha"], index="shannon") #2.303
 shan.mar.genus <-  diversity(dat.sum.genus$N[dat.sum.genus$roost_site=="Maromizaha"], index="shannon") #2.264
 
-#compare diversity between sampling sites
-Hutcheson_t_test(
-  x=dat.sum.virus$N[dat.sum.virus$roost_site=="Angavokely"],
-  y=dat.sum.virus$N[dat.sum.virus$roost_site=="Maromizaha"],
-  shannon.base = exp(1),
-  alternative = "less",
-  difference = 0)
-#Hutcheson t-statistic = 5.8194, df = 20.672, p-value = 1, not statistically different for virus
-
-Hutcheson_t_test(
-  x=dat.sum.genus$N[dat.sum.genus$roost_site=="Angavokely"],
-  y=dat.sum.genus$N[dat.sum.genus$roost_site=="Maromizaha"],
-  shannon.base = exp(1),
-  alternative = "less",
-  difference = 0)
-#Hutcheson t-statistic = Inf, df = NaN, p-value = NA
+#try by sampling date instead of site which there were multiple viruses in one samplign date
+shan.genus <- diversity(dat.sum.genus$N, index="shannon") #3.224
+shan.virus <-  diversity(dat.sum.virus$N, index="shannon") #3.367
+shan.genus.2014.12.17 <- diversity(dat.sum.genus$N[dat.sum.genus$sampling_date=="2014-12-17"], index="shannon") #0.693
+shan.virus.2014.12.17 <- diversity(dat.sum.virus$N[dat.sum.virus$sampling_date=="2014-12-17"], index="shannon") #0.693
+shan.genus.2018.2.15 <- diversity(dat.sum.genus$N[dat.sum.genus$sampling_date=="2018-02-15"], index="shannon") #1.386
+shan.virus.2018.2.15 <- diversity(dat.sum.virus$N[dat.sum.virus$sampling_date=="2018-02-15"], index="shannon") #1.386
+shan.genus.2018.4.10 <- diversity(dat.sum.genus$N[dat.sum.genus$sampling_date=="2018-04-10"], index="shannon") #0
+shan.virus.2018.4.10 <- diversity(dat.sum.virus$N[dat.sum.virus$sampling_date=="2018-04-10"], index="shannon") #0.693
+shan.genus.2018.7.29 <- diversity(dat.sum.genus$N[dat.sum.genus$sampling_date=="2018-07-29"], index="shannon") #0.636
+shan.virus.2018.7.29 <- diversity(dat.sum.virus$N[dat.sum.virus$sampling_date=="2018-07-29"], index="shannon") #1.098
+shan.genus.2018.9.11 <- diversity(dat.sum.genus$N[dat.sum.genus$sampling_date=="2018-09-11"], index="shannon") #1.098
+shan.virus.2018.9.11 <- diversity(dat.sum.virus$N[dat.sum.virus$sampling_date=="2018-09-11"], index="shannon") #1.098
+shan.genus.2019.1.6 <- diversity(dat.sum.genus$N[dat.sum.genus$sampling_date=="2019-01-06"], index="shannon") #0
+shan.virus.2019.1.6 <- diversity(dat.sum.virus$N[dat.sum.virus$sampling_date=="2019-01-06"], index="shannon") #0.693
+shan.genus.2019.4.9 <- diversity(dat.sum.genus$N[dat.sum.genus$sampling_date=="2019-04-09"], index="shannon") #0.693
+shan.virus.2019.4.9 <- diversity(dat.sum.virus$N[dat.sum.virus$sampling_date=="2019-04-09"], index="shannon") #0.693
 
 #plot the two
 dat.diversity.genus <- cbind.data.frame(roost_site=c("Angavokely", "Maromizaha"), shannon=c(shan.ang.genus, shan.mar.genus))
 dat.diversity.virus <- cbind.data.frame(roost_site=c("Angavokely", "Maromizaha"), shannon=c(shan.ang.virus, shan.mar.virus))
+dat.diversity.genus.date <- cbind.data.frame(sampling_date=c("2014-12-17", "2018-02-15", "2018-04-10", "2018-07-29", "2018-09-11","2019-01-06","2019-04-09"), 
+                                             shannon=c(shan.genus.2014.12.17, shan.genus.2018.2.15, shan.genus.2018.4.10, shan.genus.2018.7.29,
+                                                       shan.genus.2018.9.11,shan.genus.2019.1.6,shan.genus.2019.4.9))
+dat.diversity.virus.date <- cbind.data.frame(sampling_date=c("2014-12-17", "2018-02-15", "2018-04-10", "2018-07-29", "2018-09-11","2019-01-06","2019-04-09"), 
+                                             shannon=c(shan.virus.2014.12.17, shan.virus.2018.2.15, shan.virus.2018.4.10, shan.virus.2018.7.29,
+                                                       shan.virus.2018.9.11,shan.virus.2019.1.6,shan.virus.2019.4.9))
 
 library(ggsignif)
 
-p5 <- ggplot(dat.diversity.genus, aes(x=roost_site, y=shannon)) + theme_bw() +
-  theme(axis.title.x = element_blank(), axis.text = element_text(size=14), 
-        axis.title.y = element_text(size=16)) + ylab("Shannon's Diversity Index") +
-  geom_bar(aes( fill=roost_site),
-           show.legend = F, stat="identity", position = "dodge") + 
-  scale_fill_manual(values=c("chocolate4", "darkolivegreen")) +
-  geom_signif(comparisons = list(c("Angavokely", "Maromizaha")), 
-              map_signif_level = TRUE, annotations = "***",
-              vjust = .5,
-              margin_top = .2,
-              textsize = 9) +
-  coord_cartesian(ylim=c(0,4)) #no significance
+#compare diversity between regions
+Hutcheson_t_test(
+  x= dat.sum.virus$N[dat.sum.virus$roost_site=="Angavokely"],
+  y= dat.sum.virus$N[dat.sum.virus$roost_site=="Maromizaha"],
+  shannon.base = exp(1),
+  alternative = "less",
+  difference = 0)
+#p-value NA, Hutcheson t-statistic = Inf, df = NaN, p-value = NA
 
-p5
-
-p6 <- ggplot(dat.diversity.virus, aes(x=roost_site, y=shannon)) + theme_bw() +
-  theme(axis.title.x = element_blank(), axis.text = element_text(size=14), 
-        axis.title.y = element_text(size=16)) + ylab("Shannon's Diversity Index") +
-  geom_bar(aes( fill=roost_site),
-           show.legend = F, stat="identity", position = "dodge") + 
-  scale_fill_manual(values=c("chocolate4", "darkolivegreen")) +
-  geom_signif(comparisons = list(c("Angavokely", "Maromizaha")), 
-              map_signif_level = TRUE, annotations = "***",
-              vjust = .5,
-              margin_top = .2,
-              textsize = 9) +
-  coord_cartesian(ylim=c(0,4)) #no significance
-
-p6
-
-
-
+Hutcheson_t_test(
+  x= dat.sum.genus$N[dat.sum.genus$roost_site=="Angavokely"],
+  y= dat.sum.genus$N[dat.sum.genus$roost_site=="Maromizaha"],
+  shannon.base = exp(1),
+  alternative = "less",
+  difference = 0)
+#p-value 1, Hutcheson t-statistic = 5.8194, df = 20.672, p-value = 1
 
 ##Put the map and both summary figs together
 library(cowplot)
 library(ggplotify)
-
-
 
 Fig1.2<-plot_grid(p4_pos, p4, labels=c("A","B"),
                 rel_widths = c(2,2.5), rel_heights = c(2,1),
