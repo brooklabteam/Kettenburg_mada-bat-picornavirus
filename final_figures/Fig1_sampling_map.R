@@ -105,7 +105,7 @@ unique(dat$roost_site)
 #Ankarana does not have any positives so I combined both the E dupreanum and R. madagascariensis just for the purpose of only haveing one pie
 coordinate <- ddply(dat, .(roost_site), summarise, latitude_s=unique(latitude_s), longitude_e=unique(longitude_e))
 #coordinate <-subset(coordinate, roost_site=="Ambakoana" | roost_site=="Angavokely" | roost_site=="Ankarana_ED" | roost_site=="Ankarana_RM"| roost_site=="Maromizaha")
-coordinate <-subset(coordinate, roost_site=="Ambakoana" | roost_site=="AngavoKely" | roost_site=="Ankarana" | roost_site=="Maromizaha")
+coordinate <-subset(coordinate, roost_site=="Ambakoana" | roost_site=="Angavokely/Angavobe" | roost_site=="Ankarana" | roost_site=="Maromizaha")
 #coordinate$bat_species <- c("Pteropus rufus", "Eidolon dupreanum,"Eidolon dupreanum","Rousettus madagascariensis","Rousettus madagascariensis")
 coordinate$bat_species <- c("Pteropus rufus", "Eidolon dupreanum","Eidolon dupreanum/Rousettus madagascariensis","Rousettus madagascariensis")
 head(coordinate)
@@ -293,7 +293,7 @@ viruscolz<-c("Eidolon dupreanum cardiovirus"="#F8766D", "Eidolon dupreanum hepat
 
 
 dat$bat_species<-factor(dat$bat_species, levels=c("Pteropus rufus","Eidolon dupreanum", "Rousettus madagascariensis"))
-dat$roost_site<-factor(dat$roost_site, levels=c("Angavokely","Ambakoana","Maromizaha"))
+dat$roost_site<-factor(dat$roost_site, levels=c("Angavokely/Angavobe","Ambakoana","Maromizaha"))
 dat$sampling_session<-factor(dat$sampling_session)
 
 #Subset because Pteropus only has one sample pos with only one virus
