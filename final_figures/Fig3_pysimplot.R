@@ -1365,7 +1365,11 @@ long.sim_aa$value <- long.sim_aa$value/100
 #plot nucleotide
 title<-expression(paste("Reference: E. dupreanum sapovirus 1: PP766459*"))
 
-sapovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
+sapovirus_map_aa <- ggplot(long.sim_aa) + 
+  
+  annotate("rect", xmin=2000/3.055, xmax=2800/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=5179/3.055, xmax=6800/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
         panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Amino acid identity")+xlab("Genome position")+
   theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
@@ -1381,8 +1385,6 @@ sapovirus_map_aa <- ggplot(long.sim_aa) + geom_line(aes(x=pointer, y=value, colo
         plot.margin = unit(c(0,0.5,1,0.5), "cm"),
         plot.title = element_text(size = 14, face = "bold")) +
   guides(colour = guide_legend(nrow = 2))+
-  annotate("rect", xmin=2000/3.055, xmax=2800/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
-  annotate("rect", xmin=5179/3.055, xmax=6800/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   scale_color_manual(values=colzpalette) + 
   #scale_fill_distiller()+
   ggtitle(title)+
