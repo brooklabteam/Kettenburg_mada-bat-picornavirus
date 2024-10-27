@@ -57,7 +57,7 @@ class(orotl_shp)
 ###import and configuration
 
 p1<-ggplot() +  
-  geom_sf(color = "sienna4", fill = "sienna1",data = orotl_shp)+
+  geom_sf(color = "sienna1", fill = "sienna1",data = orotl_shp)+
   coord_sf(xlim = c(42, 56), ylim = c(-26, -11.5), expand = FALSE)+
   theme_bw()+
   theme(plot.margin = unit(c(-1,.5,-1.5,.1),"cm"))+
@@ -93,7 +93,7 @@ unique(dat$any_picorna)
                     
 # now subset the data to just include the columns of interest
 dat <- dplyr::select(dat,roost_site,latitude_s, longitude_e,
-                       collection_date,
+                       processing_date,
                        bat_species, sample_id, any_picorna, any_calici, any_pos)
 
 head(dat)
@@ -121,9 +121,9 @@ p2<-p1+geom_point(aes(x=longitude_e, y=latitude_s),color="red",size=1,data=dat)+
 
 coordinate$label <- coordinate$bat_species
 coordinate$label[coordinate$label=="Pteropus rufus"] <- "Pteropus\nrufus (N=146)"
-coordinate$label[coordinate$label=="Rousettus madagascariensis"] <- "Rousettus\nmadagascariensis \n(N=232)"
+coordinate$label[coordinate$label=="Rousettus madagascariensis"] <- "Rousettus\nmadagascariensis \n(N=225)"
 coordinate$label[coordinate$label=="Eidolon dupreanum"] <- "Eidolon\ndupreanum \n(N=281)"
-coordinate$label[coordinate$label=="Eidolon dupreanum/Rousettus madagascariensis"] <- "Eidolon dupreanum &\nRousettus madagascariensis \n(0% picorna & calici prevalence)"
+coordinate$label[coordinate$label=="Eidolon dupreanum/Rousettus madagascariensis"] <- "Eidolon dupreanum &\nRousettus madagascariensis \n(0% picorna & calici prevalence) \n(N=92 E. dupreanum & 59 R. madagascariensis)"
 
 #order is Ambakoana, Angavokely, Ankarana,  Maromizaha
 
@@ -191,7 +191,7 @@ piesPC_pos = subset(pies_pos, plot_class_pos=="Calici positive")
 piesN_pos = subset(pies_pos, plot_class_pos=="Negative")
 
 ###Get the pie data in the right format###
-colz = c('Positive' ="goldenrod1", 'Negative' ="cadetblue1", "Picorna positive"="goldenrod1", "Calici positive"="tomato1")
+colz = c('Positive' ="goldenrod1", 'Negative' ="lightcyan2", "Picorna positive"="goldenrod1", "Calici positive"="purple1")
 
 p3_pos<-ggplot() +
   geom_scatterpie(aes(x=longitude_e, y=latitude_s, r=(N/1000)),
