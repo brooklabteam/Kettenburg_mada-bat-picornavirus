@@ -57,7 +57,7 @@ class(orotl_shp)
 ###import and configuration
 
 p1<-ggplot() +  
-  geom_sf(color = "sienna1", fill = "sienna1",data = orotl_shp)+
+  geom_sf(color = "sienna4", fill = "sienna1",data = orotl_shp)+
   coord_sf(xlim = c(42, 56), ylim = c(-26, -11.5), expand = FALSE)+
   theme_bw()+
   theme(plot.margin = unit(c(-1,.5,-1.5,.1),"cm"))+
@@ -123,7 +123,7 @@ coordinate$label <- coordinate$bat_species
 coordinate$label[coordinate$label=="Pteropus rufus"] <- "Pteropus\nrufus (N=146)"
 coordinate$label[coordinate$label=="Rousettus madagascariensis"] <- "Rousettus\nmadagascariensis \n(N=225)"
 coordinate$label[coordinate$label=="Eidolon dupreanum"] <- "Eidolon\ndupreanum \n(N=281)"
-coordinate$label[coordinate$label=="Eidolon dupreanum/Rousettus madagascariensis"] <- "Eidolon dupreanum &\nRousettus madagascariensis \n(0% picorna & calici prevalence) \n(N=92 E. dupreanum & 59 R. madagascariensis)"
+coordinate$label[coordinate$label=="Eidolon dupreanum/Rousettus madagascariensis"] <- "N=92 Eidolon dupreanum &\nN=59 Rousettus madagascariensis \n(0% picorna & calici prevalence)"
 
 #order is Ambakoana, Angavokely, Ankarana,  Maromizaha
 
@@ -204,6 +204,9 @@ p3_pos
 pies_pos$x2 <- pies_pos$longitude_e
 pies_pos$y2 <- pies_pos$latitude_s
 
+coordinate$x2<-coordinate$longitude_e
+coordinate$y2<-coordinate$latitude_s
+
 
 # #manually move the pie chart in case there is an overlap (change x and y)
 
@@ -221,8 +224,11 @@ pies_pos$y2[pies_pos$bat_species== "Eidolon dupreanum"] <- pies_pos$latitude_s[p
 pies_pos$x2[pies_pos$bat_species== "Rousettus madagascariensis"] <- pies_pos$longitude_e[pies_pos$bat_species== "Rousettus madagascariensis"] + 2
 pies_pos$y2[pies_pos$bat_species== "Rousettus madagascariensis"] <- pies_pos$latitude_s[pies_pos$bat_species== "Rousettus madagascariensis"] - 2
 
-# pies_pos$x2[pies_pos$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] <- pies_pos$longitude_e[pies_pos$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] +3
-# pies_pos$y2[pies_pos$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] <- pies_pos$latitude_s[pies_pos$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] -1
+#pies_pos$x2[pies_pos$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] <- pies_pos$longitude_e[pies_pos$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] +3
+#pies_pos$y2[pies_pos$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] <- pies_pos$latitude_s[pies_pos$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] -1
+
+coordinate$x2[coordinate$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] <- coordinate$longitude_e[coordinate$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] +1
+coordinate$y2[coordinate$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] <- coordinate$latitude_s[coordinate$bat_species== "Eidolon dupreanum/Rousettus madagascariensis"] +0.2
 
 head(pies_pos)
 
@@ -231,6 +237,7 @@ head(pies_pos)
 #all positives
 p4_pos <- p2b+
   annotate("segment", x=pies_pos$longitude_e, xend=pies_pos$x2,y=pies_pos$latitude_s,yend=pies_pos$y2,size=1)+ # put the lines
+  annotate("segment", x=coordinate$longitude_e, xend=coordinate$x2,y=coordinate$latitude_s,yend=coordinate$y2,size=1)+
   geom_scatterpie(aes(x=x2, y=y2, r=(N/1000)*8), 
     data = pies_pos, cols="plot_class_pos", long_format=TRUE) +
   theme_bw() +theme(panel.grid = element_blank(),
