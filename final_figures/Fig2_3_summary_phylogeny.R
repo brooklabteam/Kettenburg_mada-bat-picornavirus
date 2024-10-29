@@ -2270,7 +2270,7 @@ ggsave(file = paste0(homewd, "/final_figures/Fig3_indiv_phylogenies.pdf"),
        plot= final,
        units="mm",  
        width=230, 
-       height=180, 
+       height=200, 
        scale=2, 
        dpi=500)
 
