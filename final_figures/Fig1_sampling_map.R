@@ -332,7 +332,7 @@ p4<-ggplot(dat) +
         axis.text.y = element_text(size=10),
         #axis.text.x = element_text(size=10),
         axis.text.x = element_text(angle = 90, size=10),
-        legend.text = element_text(size=8),
+        legend.text = element_text(size=8, face="italic"),
         legend.title = element_text(size=9),
         legend.position = "right")
 
