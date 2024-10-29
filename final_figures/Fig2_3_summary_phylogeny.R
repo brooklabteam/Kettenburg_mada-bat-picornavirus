@@ -220,15 +220,15 @@ p1
 
 #add clade labels
 p1.1 <- p1 +
-  geom_cladelabel(node = 302, label = "Kobuvirus",offset=3, offset.text=0.4, fontsize=3, angle=320, hjust=0,align = TRUE, color="#A3A500") +
-  geom_cladelabel(node = 472, label = "Kunsagivirus",offset=3, offset.text=0.4,  fontsize=3, angle=50,hjust=0.5,align = TRUE, color="#39B600") +
-  geom_cladelabel(node = 531, label = "Cardiovirus",offset=3, offset.text=0.4,  fontsize=3, angle=30,hjust=0.5,align = TRUE, color="#F8766D") +
-  geom_cladelabel(node = 556, label = "Mischivirus",offset=3, offset.text=0.4,  fontsize=3,angle=10,hjust=0.6,align = TRUE, color="#00BF7D") +
-  geom_cladelabel(node = 517, label = "Teschovirus",offset=3, offset.text=0.4,  fontsize=3,angle=356,hjust=0.3,align = TRUE, color="#E76BF3") +
-  geom_cladelabel(node = 329, label = "Hepatovirus",offset=3, offset.text=0.4,  fontsize=3,angle=73,hjust=0.4,align = TRUE, color="#D89000") +
-  geom_cladelabel(node = 481, label = "Sapelovirus",offset=3, offset.text=0.4,  fontsize=3,angle=335,hjust=0.4,align = TRUE, color="#00BFC4") +
-  geom_cladelabel(node = 500, label = "Bat picornavirus",offset=3, offset.text=0.4, angle=310,hjust=0.5, fontsize=3,align = TRUE, color="#9590FF") +
-  geom_cladelabel(node = 363, label = "Sapovirus",offset=3, offset.text=0.4,angle=45, fontsize=3,align = TRUE,hjust=1, color="#00B0F6")
+  geom_cladelabel(node = 302, label = 'italic(Kobuvirus)', parse=TRUE,offset=3, offset.text=0.4, fontsize=3, angle=320, hjust=0,align = TRUE, color="#A3A500") +
+  geom_cladelabel(node = 472, label = "italic(Kunsagivirus)", parse=TRUE, offset=3, offset.text=0.4,  fontsize=3, angle=50,hjust=0.5,align = TRUE, color="#39B600") +
+  geom_cladelabel(node = 531, label = "italic(Cardiovirus)", parse=TRUE,offset=3, offset.text=0.4,  fontsize=3, angle=30,hjust=0.5,align = TRUE, color="#F8766D") +
+  geom_cladelabel(node = 556, label = "italic(Mischivirus)",parse=TRUE,offset=3, offset.text=0.4,  fontsize=3,angle=10,hjust=0.6,align = TRUE, color="#00BF7D") +
+  geom_cladelabel(node = 517, label = "italic(Teschovirus)",parse=TRUE,offset=3, offset.text=0.4,  fontsize=3,angle=356,hjust=0.3,align = TRUE, color="#E76BF3") +
+  geom_cladelabel(node = 329, label = "italic(Hepatovirus)",parse=TRUE,offset=3, offset.text=0.4,  fontsize=3,angle=73,hjust=0.4,align = TRUE, color="#D89000") +
+  geom_cladelabel(node = 481, label = "italic(Sapelovirus)",parse=TRUE,offset=3, offset.text=0.4,  fontsize=3,angle=335,hjust=0.4,align = TRUE, color="#00BFC4") +
+  geom_cladelabel(node = 500, label = "italic(Bat_picornavirus)",parse=TRUE,offset=3, offset.text=0.4, angle=310,hjust=0.5, fontsize=3,align = TRUE, color="#9590FF") +
+  geom_cladelabel(node = 363, label = "italic(Sapovirus)",parse=TRUE,offset=3, offset.text=0.4,angle=45, fontsize=3,align = TRUE,hjust=1, color="#00B0F6")
 p1.1
 
 ##Add contig/read metadata
@@ -292,8 +292,8 @@ base
 ggsave(file = paste0(homewd, "/final_figures/Fig2_summary_phylogeny.pdf"),
        plot= base,
        units="mm",  
-       width=80, 
-       height=80, 
+       width=90, 
+       height=90, 
        scale=2, 
        dpi=500)
 
@@ -420,7 +420,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
   guides(colour = guide_legend(ncol = 1))+
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05, fontface=3) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-1, linesize = .5) +
@@ -466,7 +466,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   scale_shape_manual(values=shapez) +
   guides(colour = guide_legend(ncol = 1))+
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05, fontface=3) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-2, linesize = .5) +
@@ -675,7 +675,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   scale_shape_manual(values=shapez) +
   guides(colour = guide_legend(ncol = 1))+
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05, fontface=3) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-3, linesize = .5) +
@@ -889,7 +889,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   scale_shape_manual(values=shapez) +
   guides(colour = guide_legend(ncol = 1))+
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05, fontface=3) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-2, linesize = .5) +
@@ -1102,7 +1102,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   scale_shape_manual(values=shapez) +
   guides(colour = guide_legend(ncol = 1))+
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05, fontface=3) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-1, linesize = .5) +
@@ -1309,7 +1309,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   scale_shape_manual(values=shapez) +
   guides(colour = guide_legend(ncol = 1))+
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05, fontface=3) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-2, linesize = .5) +
@@ -1531,7 +1531,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   scale_shape_manual(values=shapez) +
   guides(colour = guide_legend(ncol = 1))+
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05, fontface=3) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-2, linesize = .5) +
@@ -1745,7 +1745,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   scale_shape_manual(values=shapez) +
   guides(colour = guide_legend(ncol = 1))+
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05, fontface=3) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-2, linesize = .5) +
@@ -1913,7 +1913,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   scale_shape_manual(values=shapez) +
   new_scale_fill() +
   guides(colour = guide_legend(ncol = 1))+
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", family="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05, fontface=3) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-1, linesize = .5) +
@@ -1959,7 +1959,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   scale_shape_manual(values=shapez) +
   guides(colour = guide_legend(ncol = 1))+
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05, fontface=3) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-2, linesize = .5) +
@@ -2169,7 +2169,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   scale_shape_manual(values=shapez) +
   guides(colour = guide_legend(ncol = 1))+
   new_scale_fill() +
-  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05) +
+  geom_tiplab(aes(fill = novel, show.legend=F), geom = "label", Species="Helvetica", label.size = 0, label.padding = unit(0, "lines"), alpha=.4, size=3, nudge_x=0.05, fontface=3) +
   guides(fill="none")+#
   scale_fill_manual(values=colz2) +
   geom_treescale(fontsize=4, x=0,y=-2, linesize = .5) +
