@@ -239,7 +239,7 @@ p1.1 <- p1.1 %<+% contig
 p2<-p1.1+geom_fruit(#data=contig,
                   geom=geom_tile,
                   mapping=aes(fill=Novel_contigs),
-                  pwidth=0.1,
+                  pwidth=1,
                   offset=0.1) + 
                 #scale_fill_viridis(option="G", name="Novel\ncontigs", direction = -1)
                   scale_fill_gradient(low="peachpuff1", high="orangered3")
@@ -253,7 +253,7 @@ p3<-p2+new_scale_fill()+
   geom_fruit(#data=reads,
   geom=geom_tile,
   mapping=aes(fill=Novel_reads_log10),
-  pwidth=0.1,
+  pwidth=1,
   offset=0.09)+ 
   scale_fill_gradient(low="lightblue1", high="royalblue2")+
   #scale_fill_viridis(option="B", name="Novel\nreads (log10)", direction = -1) +
@@ -288,9 +288,19 @@ base<-p3+new_scale_fill()+
                        "cm"))
 base
 
+#homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
+ggsave(file = paste0(homewd, "/final_figures/Fig2_summary_phylogeny.pdf"),
+       plot= base,
+       units="mm",  
+       width=80, 
+       height=80, 
+       scale=2, 
+       dpi=500)
 
 
 
+
+###Now make figure 3
 
 #mischi
 #load the tree and root it
@@ -2218,38 +2228,49 @@ tescho #smaller
 
 
 #Plot final figure with plot_grid version 1
-phylo_grid<-plot_grid( mischi, batpicorna, sapelo, tescho,sapo, labels=c("F","G","H","I","J"),
-                      rel_widths = c(1,1,1,1,1), rel_heights = c(0.9,1,1,0.6,1.7),
-                      ncol=1, align="hv", axis="l", label_size = 23)
-phylo_grid
-phylo_grid<-as.ggplot(phylo_grid)
-
-small_grid<-plot_grid(cardio,hepato,kobu,kunsagi, labels=c("B","C","D","E"),
-                      rel_widths = c(1,1,1), rel_heights = c(0.6,1,1,0.3),
+small_grid<-plot_grid(cardio,hepato,kobu,kunsagi,mischi, labels=c("A","B","C","D","E"),
+                      rel_widths = c(1,1,1,1), rel_heights = c(0.6,1,0.8,0.3,0.9),
                       ncol=1, align="hv", axis="l", label_size = 23)
 small_grid
 small_grid<-as.ggplot(small_grid)
 
-leftside<-plot_grid(base, small_grid, labels=c("A",""),
-               rel_widths=c(2,1), rel_heights=c(1,1),
-               ncol=1, align="h", axis="l", label_size=23)
-leftside
-leftside<-as.ggplot(leftside)
+phylo_grid<-plot_grid(batpicorna, sapelo, tescho,sapo, labels=c("F","G","H","I"),
+                      rel_widths = c(1,1,1,1), rel_heights = c(1.4,1.2,1,2),
+                      ncol=1, align="hv", axis="l", label_size = 23)
+phylo_grid
+phylo_grid<-as.ggplot(phylo_grid)
+
+# leftside<-plot_grid(base, small_grid, labels=c("A",""),
+#                rel_widths=c(2,1), rel_heights=c(1,1),
+#                ncol=1, align="h", axis="l", label_size=23)
+# leftside
+# leftside<-as.ggplot(leftside)
+
+# final<-plot_grid(leftside, phylo_grid, labels=c("",""),
+#                  rel_widths=c(1,1), rel_heights = c(1,1),
+#                  ncol=2,align="hv", axis="l", label_size = 23)
+# final
 
 
-final<-plot_grid(leftside, phylo_grid, labels=c("",""),
+
+
+final<-plot_grid(small_grid, phylo_grid, labels=c("",""),
                  rel_widths=c(1,1), rel_heights = c(1,1),
                  ncol=2,align="hv", axis="l", label_size = 23)
 final
 
-
+# phylo_grid<-plot_grid(cardio,hepato,kobu,kunsagi,mischi, batpicorna, sapelo, tescho,sapo, labels=c("A","B","C","D","E","F","G","H","I"),
+#                       rel_widths = c(1,1,1,1,1,1,1,1), rel_heights = c(0.6,1,1,0.3,0.9,1,1,0.6,1.7),
+#                       ncol=2, align="hv", axis="l", label_size = 23)
+# phylo_grid
+# phylo_grid<-as.ggplot(phylo_grid)
 
 #homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
-ggsave(file = paste0(homewd, "/final_figures/Fig2_summary_phylogeny.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/Fig3_indiv_phylogenies.pdf"),
        plot= final,
        units="mm",  
-       width=235, 
-       height=230, 
+       width=230, 
+       height=180, 
        scale=2, 
        dpi=500)
 
