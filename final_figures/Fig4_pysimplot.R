@@ -381,7 +381,7 @@ long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("R. madagascar
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
-title<-expression(paste("Reference: R. madagascariensis picornavirus 1: OQ818325*"))
+title<-expression(paste(italic("Reference: R. madagascariensis picornavirus 1: OQ818325*")))
 
 #Plot nucleotide
 batpicorna_map_nt <- ggplot(long.sim_nt) + 
@@ -447,7 +447,7 @@ long.sim_aa$accession <- factor(long.sim_aa$accession, levels = c("R. madagascar
 long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
-title<-expression(paste("Reference: R. madagascariensis picornavirus 1: OQ818325*"))
+title<-expression(paste(italic("Reference: R. madagascariensis picornavirus 1: OQ818325*")))
 ## amino acid
 batpicorna_map_aa <- ggplot(long.sim_aa) + 
   annotate("rect", xmin=3368/3.055, xmax=4104/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -512,7 +512,7 @@ long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("E. dupreanum 
 long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 #plot nucleotide
-title<-expression(paste("Reference: E. dupreanum hepatovirus: PP766455*"))
+title<-expression(paste(italic("Reference: E. dupreanum hepatovirus: PP766455*")))
 
 hepato_map_nt <- ggplot(long.sim_nt) + 
   annotate("rect", xmin=3068, xmax=3804, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -574,7 +574,7 @@ long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
 ## Amino acid
-title<-expression(paste("Reference: E. dupreanum hepatovirus: PP766455*"))
+title<-expression(paste(italic("Reference: E. dupreanum hepatovirus: PP766455*")))
 
 hepatovirus_map_aa <- ggplot(long.sim_aa) +
   annotate("rect", xmin=3068/3.055, xmax=3804/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -638,7 +638,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 #plot nucleotide
-title<-expression(paste("Reference: E. dupreanum kobuvirus: OQ818322*"))
+title<-expression(paste(italic("Reference: E. dupreanum kobuvirus: OQ818322*")))
 
 kobu_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=accession), size=1) +
   theme(panel.background = element_rect("white"),
@@ -696,7 +696,7 @@ long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
 ## Amino acid
-title<-expression(paste("Reference: E. dupreanum kobuvirus: OQ818322*"))
+title<-expression(paste(italic("Reference: E. dupreanum kobuvirus: OQ818322*")))
 
 kobuvirus_map_aa <- ggplot(long.sim_aa) + 
   annotate("rect", xmin=3768/3.055, xmax=4304/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -760,7 +760,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 #plot nucleotide
-title<-expression(paste("Reference: E. dupreanum kunsagivirus: OQ818317*"))
+title<-expression(paste(italic("Reference: E. dupreanum kunsagivirus: OQ818317*")))
 
 kunsagi_map_nt <- ggplot(long.sim_nt) + 
   annotate("rect", xmin=2768, xmax=3304, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -819,7 +819,7 @@ long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
 ## Amino acid
-title<-expression(paste("Reference: E. dupreanum kunsagivirus: OQ818317*"))
+title<-expression(paste(italic("Reference: E. dupreanum kunsagivirus: OQ818317*")))
 
 kunsagivirus_map_aa <- ggplot(long.sim_aa) + 
   annotate("rect", xmin=2768/3.055, xmax=3304/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -886,7 +886,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## nucleotide
-title<-expression(paste("Reference: P. rufus mischivirus: OQ818316*"))
+title<-expression(paste(italic("Reference: P. rufus mischivirus: OQ818316*")))
 
 mischi_map_nt <- ggplot(long.sim_nt) + 
   annotate("rect", xmin=4368, xmax=4704, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -948,7 +948,7 @@ long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
 ## Amino acid
-title<-expression(paste("Reference: P. rufus mischivirus: OQ818316*"))
+title<-expression(paste(italic("Reference: P. rufus mischivirus: OQ818316*")))
 
 mischivirus_map_aa <- ggplot(long.sim_aa) + 
   annotate("rect", xmin=4368/3.055, xmax=4704/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -1020,7 +1020,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## nucleotide
-title<-expression(paste("Reference: E. dupreanum sapelovirus: OQ818321*"))
+title<-expression(paste(italic("Reference: E. dupreanum sapelovirus: OQ818321*")))
 
 sapelo_map_nt <- ggplot(long.sim_nt) + 
   annotate("rect", xmin=3368, xmax=4004, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -1087,7 +1087,7 @@ long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
 ## nucleotide
-title<-expression(paste("Reference: E. dupreanum sapelovirus: OQ818321*"))
+title<-expression(paste(italic("Reference: E. dupreanum sapelovirus: OQ818321*")))
 
 sapelovirus_full_map_aa <- ggplot(long.sim_aa) + 
   annotate("rect", xmin=3368/3.055, xmax=4204/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -1158,7 +1158,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## nucleotide
-title<-expression(paste("Reference: R. madagascariensis teschovirus 1: OQ818323*"))
+title<-expression(paste(italic("Reference: R. madagascariensis teschovirus 1: OQ818323*")))
 tescho_map_nt <- ggplot(long.sim_nt) + 
   annotate("rect", xmin=3368, xmax=3604, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
   annotate("rect", xmin=4961, xmax=5279, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -1223,7 +1223,7 @@ long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
 ## nucleotide
-title<-expression(paste("Reference: R. madagascariensis teschovirus 1: OQ818323*"))
+title<-expression(paste(italic("Reference: R. madagascariensis teschovirus 1: OQ818323*")))
 
 teschovirus_map_aa <- ggplot(long.sim_aa) + 
   annotate("rect", xmin=3368/3.055, xmax=3604/3.055, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -1295,7 +1295,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 #plot nucleotide
-title<-expression(paste("Reference: E. dupreanum sapovirus 1: PP766459*"))
+title<-expression(paste(italic("Reference: E. dupreanum sapovirus 1: PP766459*")))
 
 
 sapo_map_nt <- ggplot(long.sim_nt) + 
@@ -1363,7 +1363,7 @@ long.sim_aa$value[long.sim_aa$value<0] <- 0
 long.sim_aa$value <- long.sim_aa$value/100
 
 #plot nucleotide
-title<-expression(paste("Reference: E. dupreanum sapovirus 1: PP766459*"))
+title<-expression(paste(italic("Reference: E. dupreanum sapovirus 1: PP766459*")))
 
 sapovirus_map_aa <- ggplot(long.sim_aa) + 
   

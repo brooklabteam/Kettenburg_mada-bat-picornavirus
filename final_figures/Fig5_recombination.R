@@ -219,7 +219,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 #plot nucleotide
-title<-expression(paste("Potential recombinant - E. helvum hepatovirus M32Eidhel2010"))
+title<-expression(paste(italic("Potential recombinant - E. helvum hepatovirus M32Eidhel2010")))
 
 hepato_map_clade_nt <- ggplot(long.sim_nt) + 
   annotate("rect", xmin=1, xmax=790, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -285,7 +285,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 #plot nucleotide
-title<-expression(paste("Potential recombinant - E. helvum hepatovirus M32Eidhel2010"))
+title<-expression(paste(italic("Potential recombinant - E. helvum hepatovirus M32Eidhel2010")))
 
 hepato_map_nt <- ggplot(long.sim_nt) + 
   annotate("rect", xmin=1, xmax=790, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -355,7 +355,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## nucleotide
-title<-expression(paste("Potential recombinant - Bat sapelovirus Bat/CAM/Sap-P24/2013"))
+title<-expression(paste(italic("Potential recombinant - Bat sapelovirus Bat/CAM/Sap-P24/2013")))
 
 sapelo_map_clade_nt1 <- ggplot(long.sim_nt) + 
   annotate("rect", xmin=3071, xmax=5027, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -419,7 +419,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## nucleotide
-title<-expression(paste("Potential recombinant - E. dupreanum sapelovirus 2: OQ818321*"))
+title<-expression(paste(italic("Potential recombinant - E. dupreanum sapelovirus 2: OQ818321*")))
 
 sapelo_map_clade_nt2 <- ggplot(long.sim_nt) + 
   annotate("rect", xmin=268, xmax=817, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -483,7 +483,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 ## nucleotide
-title<-expression(paste("Potential recombinant - Bat sapelovirus Bat/CAM/Sap-P24/2013"))
+title<-expression(paste(italic("Potential recombinant - Bat sapelovirus Bat/CAM/Sap-P24/2013")))
 
 sapelo_map_nt <- ggplot(long.sim_nt) + 
   annotate("rect", xmin=3071, xmax=5027, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -552,7 +552,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 #plot nucleotide
-title<-expression(paste("Potential recombinant - R. madagascariensis teschovirus 1: OQ818323*"))
+title<-expression(paste(italic("Potential recombinant - R. madagascariensis teschovirus 1: OQ818323*")))
 
 tescho_map_clade_nt1 <- ggplot(long.sim_nt) + 
   annotate("rect", xmin=28, xmax=915, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -617,7 +617,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 #plot nucleotide
-title<-expression(paste("Potential recombinant - R. aegypticus Africa clade"))
+title<-expression(paste(italic("Potential recombinant - R. aegypticus Africa clade")))
 
 tescho_map_clade_nt2 <- ggplot(long.sim_nt) + 
   annotate("rect", xmin=7300, xmax=7700, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
@@ -682,7 +682,7 @@ long.sim_nt$value[long.sim_nt$value<0] <- 0
 long.sim_nt$value <- long.sim_nt$value/100
 
 #plot nucleotide
-title<-expression(paste("Potential recombinant - Rousettus bat picornavirus 29A/Kenya/BAT3/2015"))
+title<-expression(paste(italic("Potential recombinant - Rousettus bat picornavirus 29A/Kenya/BAT3/2015")))
 
 tescho_map_nt <- ggplot(long.sim_nt) + 
   annotate("rect", xmin=1, xmax=913, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
