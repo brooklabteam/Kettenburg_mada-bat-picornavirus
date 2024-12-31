@@ -56,7 +56,7 @@ dat$Genus <- factor(dat$Genus, levels = c("Cardiovirus","Hepatovirus","Kobuvirus
                                           "Sapelovirus","Sapovirus","Teschovirus","Unclassified bat picornavirus",
                                           "Alphavirus"))   
 #pick colors for virus genera
-genuscolz<- c("Cardiovirus"="#F8766D","Hepatovirus"="#D89000","Kobuvirus"="#A3A500","Kunsagivirus"="#39B600","Mischivirus"="#00BF7D",
+genuscolz<- c("Cardiovirus"="#F8766D","Hepatovirus"="#D89000","Kobuvirus"="#A3A500","Kunsagivirus"="#39B600","Mischivirus"="#00BF7F",
               "Sapelovirus"="#00BFC4","Sapovirus"="#00B0F6","Teschovirus"="#E76BF3","Unclassified bat picornavirus"="#9590FF",
               "Alphavirus"="black")
 
@@ -223,7 +223,7 @@ p1.1 <- p1 +
   geom_cladelabel(node = 302, label = 'italic(Kobuvirus)', parse=TRUE,offset=3, offset.text=0.4, fontsize=3, angle=320, hjust=0,align = TRUE, color="#A3A500") +
   geom_cladelabel(node = 472, label = "italic(Kunsagivirus)", parse=TRUE, offset=3, offset.text=0.4,  fontsize=3, angle=50,hjust=0.5,align = TRUE, color="#39B600") +
   geom_cladelabel(node = 531, label = "italic(Cardiovirus)", parse=TRUE,offset=3, offset.text=0.4,  fontsize=3, angle=30,hjust=0.5,align = TRUE, color="#F8766D") +
-  geom_cladelabel(node = 556, label = "italic(Mischivirus)",parse=TRUE,offset=3, offset.text=0.4,  fontsize=3,angle=10,hjust=0.6,align = TRUE, color="#00BF7D") +
+  geom_cladelabel(node = 556, label = "italic(Mischivirus)",parse=TRUE,offset=3, offset.text=0.4,  fontsize=3,angle=12,hjust=0.6,align = TRUE, color="#00BF7F") +
   geom_cladelabel(node = 517, label = "italic(Teschovirus)",parse=TRUE,offset=3, offset.text=0.4,  fontsize=3,angle=356,hjust=0.3,align = TRUE, color="#E76BF3") +
   geom_cladelabel(node = 329, label = "italic(Hepatovirus)",parse=TRUE,offset=3, offset.text=0.4,  fontsize=3,angle=73,hjust=0.4,align = TRUE, color="#D89000") +
   geom_cladelabel(node = 481, label = "italic(Sapelovirus)",parse=TRUE,offset=3, offset.text=0.4,  fontsize=3,angle=335,hjust=0.4,align = TRUE, color="#00BFC4") +
@@ -289,10 +289,10 @@ base<-p3+new_scale_fill()+
 base
 
 #homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
-ggsave(file = paste0(homewd, "/final_figures/Fig2_summary_phylogeny.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/Fig2_summary_phylogeny.png"),
        plot= base,
        units="mm",  
-       width=90, 
+       width=100, 
        height=90, 
        scale=2, 
        dpi=500)
