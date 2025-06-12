@@ -18,13 +18,7 @@ Now you have your non-host reads for a given sample. Select the non-host reads f
 
 In the resulting file, it will show you the coverage per position in the genome. We're looking for decent coverage of at least two reads per site, ideally with overlapping positions to cover all areas of the genome. If the sequence does not have sufficient coverage, I make a file labeled "discarded" and put the sequence and the corresponding read report files in there. These sequences will not be further analyzed. On those that do have good coverage, click the graphs tab on the bottom right and select "export" to get a csv file of the coverage per position. From this, you can make one per sequence and use these to make graphs in R.
 
-Genomes not analyzed further and reasoning: 
--KEL318_NODE_1: Same virus found in a duplicate sample for KEL318
--RR034B_052_NODE_4: Freddy's partial sequence, removed and will refer to his paper
-
-
 These values are "coverage" and we want the data in reads per million. We can get the total reads from CZID, per sample, go to the upper right corner and click "sample info". Then, click the tab that says pipelines and you'll see the total reads value. That reads value should be divided by the scaling factor of (total reads overall/1,000,000). The resulting value will be used in the csv sheet from Geneious. Divide every genome position value by this scaling factor to transform coverage to reads per million. 
-
 
 Full genome sequences (accession number and CZID ID): 
 -OQ818316/RR034B_029_NODE_84                62,438,032 total reads/1,000,000 = 62.438 rPM
@@ -40,6 +34,7 @@ Full genome sequences (accession number and CZID ID):
 -PP766456/KEL86kidney_Plate_25_C8_NODE_1    46,323,502 total reads/1,000,000 = 46.323 rPM
 -PP766459/KEL168_NODE_1                     53,993,066 total reads/1,000,000 = 53.993 rPM
 -PP766469/MIZ405_Plate_32_A10_NODE_1        145,168,640 total reads/1,000,000 = 145.168 rPM
+-/RR034B_242_fecRa_S67                        63,545,254 total reads/1,000,000 = 63.545 rPM
 
 Partial sequences (accession number and CZID ID): 
 -OQ818319/RR034B_096_NODE_2                   44,295,222 total reads/1,000,000 = 44.295 rPM
@@ -79,6 +74,8 @@ Partial sequences (accession number and CZID ID):
 -PP766475/MIZ405_Plate_32_A10_NODE_105        145,168,640 total reads/1,000,000 = 145.168 rPM
 -PP766476/MIZ405_Plate_32_A10_NODE_108        145,168,640 total reads/1,000,000 = 145.168 rPM
 -PP766477/MIZ405_Plate_32_A10_NODE_129        145,168,640 total reads/1,000,000 = 145.168 rPM
+-/RR034B_239_fecRa_S61                        53,902,938 total reads/1,000,000 = 53.902 rPM
+-/RR034B_281_fecRa_S29                        43,437,908 total reads/1,000,000 = 43.437 rPM
 
 Once you have exported all the csv coverage files and converted to rPM for plotting using the above information, you can concatentate all the files into one and use that in the R code to plot using the following code in terminal. 
 
