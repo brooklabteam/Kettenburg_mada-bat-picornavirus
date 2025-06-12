@@ -1,0 +1,87 @@
+>Feature RR034B_242_fecRa [organism=Rousettus madagascariensis picornavirus 4] Rousettus madagascariensis picornavirus 4, genomic sequence
+1	486	5'UTR
+487	7575	CDS
+			product		polyprotein
+			transl_table	1
+			codon_start	1
+487	762	mat_peptide
+			product		L peptide
+763	960	mat_peptide
+			product		VP4 peptide
+961	1680	mat_peptide
+			product		VP2 peptide
+1681	2361	mat_peptide
+			product		VP3 peptide
+2362	3294	mat_peptide
+			product		VP1 peptide
+3295	3945	mat_peptide
+			product		2A peptide
+3946	4269	mat_peptide
+			product		2B peptide
+4270	5262	mat_peptide
+			product		2C peptide
+5263	5568	mat_peptide
+			product		3A peptide
+5569	5637	mat_peptide
+			product		3B peptide
+5638	6186	mat_peptide
+			product		3C peptide
+6187	7572	mat_peptide
+			product		3D peptide
+7576	7667	3'UTR
+
+>Feature RR034B_281_fecRa [organism=Rousettus madagascariensis teschovirus 2] Rousettus madagascariensis teschovirus 2, genomic sequence
+1	563	5'UTR
+564	>6984	CDS
+			product		polyprotein
+			transl_table	1
+			codon_start	1
+564	914	mat_peptide
+			product		L peptide
+915	1283	mat_peptide
+			product		VP4 peptide
+1284	2138	mat_peptide
+			product		VP2 peptide
+2139	2600	mat_peptide
+			product		VP3 peptide
+2601	3353	mat_peptide
+			product		VP1 peptide
+3354	3419	mat_peptide
+			product		2A peptide
+3420	3878	mat_peptide
+			product		2B peptide
+3879	4853	mat_peptide
+			product		2C peptide
+4854	5159	mat_peptide
+			product		3A peptide
+5160	5234	mat_peptide
+			product		3B peptide
+5235	5855	mat_peptide
+			product		3C peptide
+5856	>6984	mat_peptide
+			product		3D peptide
+
+>Feature RR034B_239_fecRa [organism=Rousettus madagascariensis sapovirus 4] Rousettus madagascariensis sapovirus 4, genomic sequence
+<1	6713	CDS
+			product		polyprotein
+			transl_table	1
+			codon_start	3
+<1	713	mat_peptide
+			product		NS1 and NS2
+714	1979	mat_peptide
+			product		Helicase
+1980	2828	mat_peptide
+			product		NS4
+2829	3107	mat_peptide
+			product		Vpg
+3108	5150	mat_peptide
+			product		Pro-Pol
+5151	6710	mat_peptide
+			product		VP1
+6716	7165	CDS
+			product		minor structural protein
+			transl_table	1
+			codon_start	2
+6716	7162	mat_peptide
+			product		VP2
+7166	>7214	3'UTR

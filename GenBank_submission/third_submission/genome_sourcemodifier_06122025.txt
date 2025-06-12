@@ -1,0 +1,30 @@
+Sequence_ID	Collected_by	Collection_date	Country	Isolation_source	Host	Isolate
+RR034B_239_fecRa	Ekipa Fanihy	14-Apr-18	Madagascar	Fecal swab	Rousettus madagascariensis	MIZ186
+RR034B_242_fecRa	Ekipa Fanihy	14-Apr-18	Madagascar	Fecal swab	Rousettus madagascariensis	MIZ188
+RR034B_281_fecRa	Ekipa Fanihy	11-Sep-18	Madagascar	Fecal swab	Rousettus madagascariensis	MIZ231
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
