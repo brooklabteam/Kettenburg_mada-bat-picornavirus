@@ -116,7 +116,7 @@ OP920760.1,Capreolus pygargus kobuvirus,CpKoV/XK/CHN/2021,Capreolus pygargus kob
 OQ121963.1,aichivirus A1,hu/C8_Seoul_02/2019,Kobuvirus aichi,Kobuvirus,6,716402,5.85515679,South Korea,Asia,Homo sapiens,Human,0,2019,0
 OQ363763.1,Kobuvirus aichi,GX/B45M0208/2019,Kobuvirus aichi,Kobuvirus,6,716402,5.85515679,China,Asia,Rhizomys pruinosus,Rodent,0,2019,0
 OQ758029.1,Kobuvirus sp.,,Kobuvirus sp.,Kobuvirus,6,716402,5.85515679,Hungary,Europe,Capra hircus,Ungulate,0,2020,0
-OQ818322,Eidolon dupreanum kobuvirus,KEL318,Eidolon dupreanum kobuvirus,Kobuvirus,6,716402,5.85515679,Madagascar,Africa,Eidolon dupreanum,Bat,1,2019,0
+OQ818322.1,Eidolon dupreanum kobuvirus,KEL318,Eidolon dupreanum kobuvirus,Kobuvirus,6,716402,5.85515679,Madagascar,Africa,Eidolon dupreanum,Bat,1,2019,0
 OR682616.1,Caprine kobuvirus,Caprine/SWUN/F1/2022,Aichivirus C,Kobuvirus,6,716402,5.85515679,China,Asia,Capra hircus,Ungulate,0,2022,0
 OR951211.1,Bat kobuvirus,GX2018,Bat kobuvirus,Kobuvirus,6,716402,5.85515679,China,Asia,Scotophilus kuhlii,Bat,1,2018,0
 OR951280.1,Aichivirus F,GD2017_210_473,Aichivirus F,Kobuvirus,6,716402,5.85515679,China,Asia,Myotis ricketti,Bat,1,2017,0
