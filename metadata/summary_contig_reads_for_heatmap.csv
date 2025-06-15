@@ -1,9 +1,8 @@
 ﻿family,genus,virus,species,type,num_contigs,num_reads,num_reads_log
 Picornaviridae,Cardiovirus,Eidolon dupreanum cardiovirus,Eidolon dupreanum,partial,1,91641,4.96208982
 Picornaviridae,Hepatovirus,Eidolon dupreanum hepatovirus,Eidolon dupreanum,partial,4,2331,3.367542274
-Picornaviridae,Kobuvirus,Eidolon dupreanum kobuvirus,Eidolon dupreanum,full,2,34210,4.534153074
+Picornaviridae,Kobuvirus,Eidolon dupreanum kobuvirus,Eidolon dupreanum,full,1,4175,3.62065648
 Picornaviridae,Kobuvirus,Eidolon dupreanum kobuvirus,Eidolon dupreanum,partial,5,712227,5.852618433
-Picornaviridae,Kobuvirus,Eidolon dupreanum kobuvirus 2,Eidolon dupreanum,partial,1,38,1.579783597
 Picornaviridae,Kunsagivirus,Eidolon dupreanum kunsagivirus,Eidolon dupreanum,full,1,1478,3.169674434
 Picornaviridae,Mischivirus,Pteropus rufus mischivirus,Pteropus rufus,full,1,39092,4.59208789
 Picornaviridae,Sapelovirus,Eidolon dupreanum sapelovirus 1,Eidolon dupreanum,full,1,603,2.780317312

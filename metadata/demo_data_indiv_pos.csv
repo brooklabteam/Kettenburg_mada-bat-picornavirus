@@ -2,7 +2,6 @@ sample_id,virus,any_picorna,any_calici,any_pos,virus_family,virus_general,datase
 AMB150,Pteropus rufus mischivirus,1,0,1,Picornaviridae,Mischivirus,CZID,1,39092,4.59208789,Ambakoana,Ambakoana,-18.513,48.1665,48,2018-08-06,Aug,2018,Pteropus rufus,male,A,no,no,NA,NA
 ANGB110,Eidolon dupreanum kobuvirus,1,0,1,Picornaviridae,Kobuvirus,NIH,3,539,2.731588765,Angavobe,AngavoKely,-18.9327,47.7578,30,2015-06-23,June,2015,Eidolon dupreanum,female,NL,NA,NA,NA,NA
 ANGB121,Eidolon dupreanum kobuvirus,1,0,1,Picornaviridae,Kobuvirus,NIH,1,363,2.559906625,Angavobe,AngavoKely,-18.9327,47.7578,33,2016-01-08,Jan,2016,Eidolon dupreanum,male,A,NA,NA,NA,NA
-ANGB141,Eidolon dupreanum kobuvirus 2,1,0,1,Picornaviridae,Kobuvirus,CZID/NIH,1,38,1.579783597,Angavobe,AngavoKely,-18.9327,47.7578,41,2018-04-09,April,2018,Eidolon dupreanum,female,NL,no,no,NA,NA
 ANGB22,Eidolon dupreanum kobuvirus,1,0,1,Picornaviridae,Kobuvirus,NIH,1,711325,5.852068073,Angavobe,AngavoKely,-18.9327,47.7578,4,2013-11-24,Nov,2013,Eidolon dupreanum,male,J,NA,NA,NA,NA
 KEL148,Eidolon dupreanum kunsagivirus,1,0,1,Picornaviridae,Kunsagivirus,CZID,1,1478,3.169674434,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,Apr,2018,Eidolon dupreanum,male,A,no,no,NA,NA
 KEL148,Eidolon dupreanum hepatovirus,1,0,1,Picornaviridae,Hepatovirus,CZID,3,996,2.998259338,Angavokely,AngavoKely,-18.9327,47.7578,38,2018-02-15,May,2018,Eidolon dupreanum,male,A,no,no,NA,NA
@@ -16,7 +15,6 @@ KEL272,Eidolon dupreanum sapelovirus 2,1,0,1,Picornaviridae,Sapelovirus,CZID/NIH
 KEL273,Eidolon dupreanum sapelovirus 1,1,0,1,Picornaviridae,Sapelovirus,CZID/NIH,3,131,2.117271296,Angavokely,AngavoKely,-18.9327,47.7578,56,2019-01-07,Jan,2019,Eidolon dupreanum,male,A,no,no,NA,NA
 KEL275B,Eidolon dupreanum sapelovirus 1,1,0,1,Picornaviridae,Sapelovirus,CZID,2,69,1.838849091,Angavokely,AngavoKely,-18.9327,47.7578,63,2019-03-14,Mar,2019,Eidolon dupreanum,female,NL,no,no,NA,NA
 KEL298,Eidolon dupreanum sapelovirus 1,1,0,1,Picornaviridae,Sapelovirus,CZID/NIH,3,197,2.294466226,Angavokely,AngavoKely,-18.9327,47.7578,60,2019-02-06,Feb,2019,Eidolon dupreanum,male,A,no,no,NA,NA
-KEL318,Eidolon dupreanum kobuvirus,1,0,1,Picornaviridae,Kobuvirus,CZID/NIH,1,30035,4.477627636,Angavokely,AngavoKely,-18.9327,47.7578,66,2019-04-23,May,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA
 KEL367,Eidolon dupreanum cardiovirus,1,0,1,Picornaviridae,Cardiovirus,NIH,1,91641,4.96208982,Angavokely,AngavoKely,-18.9327,47.7578,75,2019-08-24,Aug,2019,Eidolon dupreanum,male,A,no,no,NA,NA
 KEL72,Eidolon dupreanum hepatovirus,1,0,1,Picornaviridae,Hepatovirus,NIH,1,1335,3.125481266,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-17,Dec,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA
 KEL86,Eidolon dupreanum kobuvirus,1,0,1,Picornaviridae,Kobuvirus,NIH,1,4175,3.62065648,Angavokely,AngavoKely,-18.9327,47.7578,20,2014-12-18,Dec,2014,Eidolon dupreanum,male,A,NA,NA,NA,NA

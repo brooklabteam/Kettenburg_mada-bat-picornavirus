@@ -81,7 +81,7 @@
 6716	7165	CDS
 			product		minor structural protein
 			transl_table	1
-			codon_start	2
+			codon_start	1
 6716	7162	mat_peptide
 			product		VP2
 7166	>7214	3'UTR

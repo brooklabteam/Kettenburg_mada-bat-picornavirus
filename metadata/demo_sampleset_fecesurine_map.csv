@@ -111,7 +111,7 @@ ANGB137,0,0,0,,CZID/NIH,Angavobe,Angavokely/Angavobe,-18.9327,47.7578,41,2018-04
 ANGB138,0,0,0,,CZID/NIH,Angavobe,Angavokely/Angavobe,-18.9327,47.7578,41,2018-04-09,4,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,295,21.5,126.8,62.5,23,9.3,7.3,302.0490296,-7.049029592
 ANGB139,0,0,0,,CZID,Angavobe,Angavokely/Angavobe,-18.9327,47.7578,41,2018-04-09,4,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,320,21,133.8,63.5,24.2,9,7.8,325.5793557,-5.579355682
 ANGB140,0,0,0,,CZID,Angavobe,Angavokely/Angavobe,-18.9327,47.7578,41,2018-04-09,4,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,310,21.5,126.6,63.2,22.8,8.8,5.4,301.3841342,8.615865813
-ANGB141,1,0,1,Kobuvirus,CZID/NIH,Angavobe,Angavokely/Angavobe,-18.9327,47.7578,41,2018-04-09,4,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,22,128.9,64.6,23,4.5,2.2,309.0554407,-9.055440743
+ANGB141,0,0,0,,CZID/NIH,Angavobe,Angavokely/Angavobe,-18.9327,47.7578,41,2018-04-09,4,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,22,128.9,64.6,23,4.5,2.2,309.0554407,-9.055440743
 ANGB142,0,0,0,,CZID/NIH,Angavobe,Angavokely/Angavobe,-18.9327,47.7578,41,2018-04-09,4,2018,Eidolon dupreanum,male,A,no,no,NA,NA,370,21.5,131.6,61.9,22.7,23,15.5,327.7791014,42.22089864
 ANGB143,0,0,0,,CZID,Angavobe,Angavokely/Angavobe,-18.9327,47.7578,45,2018-07-27,7,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,300,18.5,132.7,63,30.8,6.5,7.5,321.8486971,-21.84869713
 ANGB144,0,0,0,,CZID,Angavobe,Angavokely/Angavobe,-18.9327,47.7578,45,2018-07-27,7,2018,Eidolon dupreanum,female,NL,no,no,NA,NA,281,20.5,124.2,60.4,26.4,7.1,4.1,293.437942,-12.43794198
@@ -352,7 +352,7 @@ KEL310,0,0,0,,CZID/NIH,Angavokely,Angavokely/Angavobe,-18.9327,47.7578,66,2019-0
 KEL312,0,0,0,,CZID/NIH,Angavokely,Angavokely/Angavobe,-18.9327,47.7578,66,2019-04-23,4,2019,Eidolon dupreanum,male,A,NA,no,NA,NA,305,23.3,128.9,60.5,32.2,7.8,8.5,NA,NA
 KEL315,0,0,0,,CZID/NIH,Angavokely,Angavokely/Angavobe,-18.9327,47.7578,66,2019-04-23,4,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,305,21.4,128.1,62.4,25.7,small,small,NA,NA
 KEL317,0,0,0,,CZID/NIH,Angavokely,Angavokely/Angavobe,-18.9327,47.7578,66,2019-04-23,4,2019,Eidolon dupreanum,male,A,NA,no,NA,NA,325,22.8,129.3,63.4,27,6.5,5.4,NA,NA
-KEL318,1,0,1,Kobuvirus,CZID/NIH,Angavokely,Angavokely/Angavobe,-18.9327,47.7578,66,2019-04-23,4,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,230,21,122,56,28.6,small,small,NA,NA
+KEL318,0,0,0,,CZID/NIH,Angavokely,Angavokely/Angavobe,-18.9327,47.7578,66,2019-04-23,4,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,230,21,122,56,28.6,small,small,NA,NA
 KEL322,0,0,0,,CZID,Angavokely,Angavokely/Angavobe,-18.9327,47.7578,66,2019-04-23,4,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,315,21.8,130.4,63.9,32.2,small,small,NA,NA
 KEL334,0,0,0,,CZID,Angavokely,Angavokely/Angavobe,-18.9327,47.7578,66,2019-04-23,4,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,280,22.5,129,60.9,30.5,7.6,3.2,NA,NA
 KEL337,0,0,0,,NIH,Angavokely,Angavokely/Angavobe,-18.9327,47.7578,68,2019-06-05,6,2019,Eidolon dupreanum,female,NL,NA,no,NA,NA,330,24,128.5,59.7,24.8,6.9,5.3,NA,NA

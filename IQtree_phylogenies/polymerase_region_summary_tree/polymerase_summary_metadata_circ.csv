@@ -1,0 +1,294 @@
+Accession,Organism_Name,Isolate,Species,Genus,num_genus_novel_contigs,num_genus_novel_reads,num_genus_novel_reads_log,Country,region,source,host_class,Host,Collection_Date,Seq_type
+NC_001547.1,Sindbis virus,,Sindbis virus,Alphavirus,0,0,0,USA,North America,Cell culture,Lab strain,0,1981,0
+DQ294633.1,Mengo virus,Rz-pMwt,Cardiovirus A,Cardiovirus,1,91641,4.96208982,USA,North America,Mus,Rodent,0,2005,0
+EF165067.2,cardiovirus D1,,Cardiovirus D,Cardiovirus,1,91641,4.96208982,USA,North America,Homo sapiens,Human,0,2008,0
+EU542581.1,Rat theilovirus 1,,Cardiovirus B,Cardiovirus,1,91641,4.96208982,USA,North America,Rattus,Rodent,0,2008,0
+EU718732.1,Theiler's encephalomyelitis virus,TOB15,Cardiovirus B,Cardiovirus,1,91641,4.96208982,USA,North America,Mus,Rodent,0,2008,0
+GU595289.1,Human TMEV-like cardiovirus,HTCV-UC6,Cardiovirus B,Cardiovirus,1,91641,4.96208982,USA,North America,Homo sapiens,Human,0,2001,0
+HM181996.1,Saffold virus 3,SAFV-3_NL1999-590,Cardiovirus D,Cardiovirus,1,91641,4.96208982,Netherlands,Europe,Homo sapiens,Human,0,1998,0
+KF836387.1,Encephalomyocarditis virus,JZ1202,Cardiovirus A,Cardiovirus,1,91641,4.96208982,China,Asia,Sus scrofa,Pig,0,2012,0
+KF836388.1,Encephalomyocarditis virus,JZ1203,Cardiovirus A,Cardiovirus,1,91641,4.96208982,China,Asia,Mus musculus,Rodent,0,2012,0
+KM269482.1,Encephalomyocarditis virus,,Cardiovirus A,Cardiovirus,1,91641,4.96208982,USA,North America,Pan troglodytes,Non-human primate,0,1944,0
+KU955338.1,Mengo virus,,Cardiovirus A,Cardiovirus,1,91641,4.96208982,Central African Republic,Africa,Tatera,Rodent,0,1983,0
+KX231802.1,Mengo virus,,Cardiovirus A,Cardiovirus,1,91641,4.96208982,Russia,Asia,Papio hamadryas,Non-human primate,0,2007,0
+MF139053.1,Rodent Cardiovirus,SX1,Rodent Cardiovirus,Cardiovirus,1,91641,4.96208982,China,Asia,Rattus,Rodent,0,2014,0
+MH778548.1,Cardiovirus B,SAFV_BR193,Cardiovirus B,Cardiovirus,1,91641,4.96208982,Brazil,South America,Homo sapiens,Human,0,2015,0
+MN116646.1,Cardiovirus B,,Cardiovirus B,Cardiovirus,1,91641,4.96208982,Hungary,Europe,Rattus norvegicus,Rodent,0,2018,0
+MN547968.1,Encephalomyocarditis virus,SG-G15150-19,Cardiovirus A,Cardiovirus,1,91641,4.96208982,Singapore,Asia,Cuniculus,Rabbit,0,2019,0
+MT250508.1,Encephalomyocarditis virus,FRA/SIG/1/2013,Cardiovirus A,Cardiovirus,1,91641,4.96208982,France,Europe,Loxodonta africana,Elephant,0,2013,0
+MT250509.1,Encephalomyocarditis virus,FRA/SIG/1/2014,Cardiovirus A,Cardiovirus,1,91641,4.96208982,France,Europe,Rattus rattus,Rodent,0,2013,0
+MT499387.1,Encephalomyocarditis virus,SG-NParks-M100-02,Cardiovirus A,Cardiovirus,1,91641,4.96208982,Singapore,Asia,Pongo pygmaeus,Non-human primate,0,2002,0
+MZ382838.1,Marmot cardiovirus,,Marmot cardiovirus,Cardiovirus,1,91641,4.96208982,China,Asia,Marmota,Rodent,0,2014,0
+NC_001479.1,Encephalomyocarditis virus,,Cardiovirus A,Cardiovirus,1,91641,4.96208982,USA,North America,Homo sapiens,Human,0,2000,0
+NC_009448.2,Saffold virus,,Cardiovirus B,Cardiovirus,1,91641,4.96208982,USA,North America,Homo sapiens,Human,0,2006,0
+NC_010810.1,Saffold virus 2,,Cardiovirus D,Cardiovirus,1,91641,4.96208982,USA,North America,Homo sapiens,Human,0,2008,0
+NC_038305.1,cardiovirus C1,BCV-1,Cardiovirus C,Cardiovirus,1,91641,4.96208982,USA,North America,Rattus norvegicus,Rodent,0,2010,0
+NC_075977.1,cardiovirus F1,RtMruf-PicoV/JL2014-1,Cardiovirus F,Cardiovirus,1,91641,4.96208982,China,Asia,Rodentia,Rodent,0,2014,0
+NC_076099.1,cardiovirus E1,RtMrut-PicoV/JL2014-1,Cardiovirus E,Cardiovirus,1,91641,4.96208982,China,Asia,Rodentia,Rodent,0,2014,0
+PP766467,Eidolon dupreanum cardiovirus,KEL367,Eidolon dupreanum cardiovirus,Cardiovirus,1,91641,4.96208982,Madagascar,Africa,Eidolon dupreanum,Bat,1,2019,1
+EU140838.1,Simian hepatitis A virus,,Hepatovirus A,Hepatovirus,4,2331,3.367542274,India,Asia,Macaca mulatta,Non-human primate,0,2007,0
+HM769724.1,Hepatovirus A,HAV-Arg/06,Hepatovirus A,Hepatovirus,4,2331,3.367542274,Argentina,South America,Homo sapiens,Human,0,2006,0
+KT452641.1,Rodent hepatovirus,KS11510Myogla2011,Rodent hepatovirus,Hepatovirus,4,2331,3.367542274,Germany,Europe,Myodes glareolus,Rodent,0,2011,0
+KT452661.1,Shrew hepatovirus,KS121289Sorara2012,Hepatovirus I,Hepatovirus,4,2331,3.367542274,Germany,Europe,Sorex araneus,Shrew,0,2012,0
+KT452695.1,Hedgehog hepatovirus,Igel75Erieur2014,Hepatovirus H,Hepatovirus,4,2331,3.367542274,Germany,Europe,Erinaceus europaeus,Hedgehog,0,2014,0
+KT877158.1,hepatovirus H3,TN1,Hepatovirus H,Hepatovirus,4,2331,3.367542274,China,Asia,Tupaia chinensis,Shrew,0,2012,0
+KX228694.1,Human hepatitis A virus,HAV/Egy/BI-11/2015,Hepatovirus A,Hepatovirus,4,2331,3.367542274,Egypt,Africa,Homo sapiens,Human,0,2014,0
+KX420952.1,Hepatovirus A,KSA215,Hepatovirus A,Hepatovirus,4,2331,3.367542274,Saudi Arabia,Asia,Rhinopoma hardwickii,Bat,1,2012,0
+KX523680.1,Hepatovirus A,LV8,Hepatovirus A,Hepatovirus,4,2331,3.367542274,China,Asia,Homo sapiens,Human,0,1988,0
+LC416594.1,Human hepatitis A virus,HA18-0551,Hepatovirus A,Hepatovirus,4,2331,3.367542274,Japan,Asia,Homo sapiens,Human,0,2018,0
+LC515199.1,Hepatovirus A,,Hepatovirus A,Hepatovirus,4,2331,3.367542274,Gabon,Africa,Homo sapiens,Human,0,2016,0
+MG049743.1,Hepatovirus A,,Hepatovirus A,Hepatovirus,4,2331,3.367542274,Brazil,South America,Homo sapiens,Human,0,2017,0
+MG181943.1,Didelphis aurita hepatitis A virus,,Hepatovirus A,Hepatovirus,4,2331,3.367542274,Brazil,South America,Didelphis aurita,Marsupial,0,2015,0
+MG546668.1,Human hepatitis A virus,Ahvaz,Hepatovirus A,Hepatovirus,4,2331,3.367542274,Iran,Asia,Homo sapiens,Human,0,2017,0
+MN062165.1,Hepatovirus A,,Hepatovirus A,Hepatovirus,4,2331,3.367542274,USA,North America,Homo sapiens,Human,0,2018,0
+MT457854.1,Hepatovirus sp.,,Hepatovirus sp.,Hepatovirus,4,2331,3.367542274,Australia,Australia,Aves,Bird,0,2013,0
+MW391925.1,Hepatovirus sp.,YS,Hepatovirus sp.,Hepatovirus,4,2331,3.367542274,China,Asia,Apodemus peninsulae,Rodent,0,2019,0
+NC_027818.1,Phopivirus,,Hepatovirus B,Hepatovirus,4,2331,3.367542274,USA,North America,Phoca vitulina,Seal,0,2011,0
+NC_028363.1,Rodent hepatovirus RMU101637Micarv2010,RMU101637Micarv2010,Hepatovirus D,Hepatovirus,4,2331,3.367542274,Germany,Europe,Microtus arvalis,Rodent,0,2010,0
+NC_028364.1,Shrew hepatovirus KS121232Sorara2012,KS121232Sorara2012,Hepatovirus I,Hepatovirus,4,2331,3.367542274,Germany,Europe,Sorex araneus,Shrew,0,2012,0
+NC_028365.1,Hedgehog hepatovirus Igel8Erieur2014,Igel8Erieur2014,Hepatovirus H,Hepatovirus,4,2331,3.367542274,Germany,Europe,Erinaceus europaeus,Hedgehog,0,2014,0
+NC_028366.1,hepatovirus H2,M32Eidhel2010,Hepatovirus H,Hepatovirus,4,2331,3.367542274,Ghana,Africa,Eidolon helvum,Bat,1,2010,0
+NC_028981.1,Tupaia hepatovirus A,TN1,Tupaia hepatovirus A,Hepatovirus,4,2331,3.367542274,China,Asia,Tupaia chinensis,Shrew,0,2012,0
+NC_038313.1,Bat hepatovirus SMG18520Minmav2014,SMG18520Minmav2014,Hepatovirus C,Hepatovirus,4,2331,3.367542274,Madagascar,Africa,Miniopterus,Bat,1,2014,0
+NC_038314.1,Rodent hepatovirus CIV459Lopsik2004,CIV459Lopsik2004,Hepatovirus E,Hepatovirus,4,2331,3.367542274,Cote d'Ivoire,Africa,Lophuromys sikapusi,Rodent,0,2004,0
+NC_038315.1,Rodent hepatovirus KEF121Sigmas2012,KEF121Sigmas2012,Hepatovirus F,Hepatovirus,4,2331,3.367542274,Mexico,South America,Sigmodon mascotensis,Rodent,0,2012,0
+NC_038316.1,Bat hepatovirus BUO2BF86Colafr2010,BUO2BF86Colafr2010,Hepatovirus G,Hepatovirus,4,2331,3.367542274,Ghana,Africa,Coleura afra,Bat,0,2010,0
+OQ559662.1,Simian hepatitis A virus,SHAV/Macaca/Germany/2021,Hepatovirus A,Hepatovirus,4,2331,3.367542274,Germany,Europe,Macaca fascicularis,Non-human primate,0,2021,0
+OR261026.1,Hepatovirus A,,Hepatovirus A,Hepatovirus,4,2331,3.367542274,Australia,Australia,Homo sapiens,Human,0,2023,0
+OR367421.1,Hepatovirus sp. 'sotense',CH-APSJS/2021,Hepatovirus sp. 'sotense',Hepatovirus,4,2331,3.367542274,Brazil,South America,Artibeus planirostris,Bat,0,2021,0
+OR452341.1,Hepatovirus A,Chu-alp-02,Hepatovirus A,Hepatovirus,4,2331,3.367542274,Bolivia,South America,Vicugna pacos,Ungulate,0,2019,0
+OR867083.1,Hepatovirus sp.,HAQL/13130,Hepatovirus sp.,Hepatovirus,4,2331,3.367542274,China,Asia,Hipposideros armiger,Bat,1,2022,0
+PP766455,Eidolon dupreanum hepatovirus,KEL72,Eidolon dupreanum hepatovirus,Hepatovirus,4,2331,3.367542274,Madagascar,Africa,Eidolon dupreanum,Bat,1,2014,1
+PP766457,Eidolon dupreanum hepatovirus,KEL148.1,Eidolon dupreanum hepatovirus,Hepatovirus,4,2331,3.367542274,Madagascar,Africa,Eidolon dupreanum,Bat,1,2018,1
+PP827030.1,bar-headed goose hepatovirus,PICV5,bar-headed goose hepatovirus,Hepatovirus,4,2331,3.367542274,China,Asia,Anser indicus,Bird,0,2020,0
+PP827031.1,bar-headed goose hepatovirus,PICV13,bar-headed goose hepatovirus,Hepatovirus,4,2331,3.367542274,China,Asia,Anser indicus,Bird,0,2020,0
+AB084788.1,Aichivirus B,,Aichivirus B,Kobuvirus,6,716402,5.85515679,Japan,Asia,Bos taurus,Ungulate,0,2002,0
+EU787450.2,aichivirus C1,,Aichivirus C,Kobuvirus,6,716402,5.85515679,Hungary,Europe,Sus scrofa,Pig,0,2007,0
+FJ890523.1,Aichi virus 1,Chshc7,Aichivirus A,Kobuvirus,6,716402,5.85515679,China,Asia,Homo sapiens,Human,0,2008,0
+GU245693.2,aichivirus B3,,Aichivirus B,Kobuvirus,6,716402,5.85515679,Hungary,Europe,Ovis aries,Ungulate,0,2009,0
+GU292559.1,Kobuvirus pig/JY-2010a/CHN,Y-1-CHI,Aichivirus C,Kobuvirus,6,716402,5.85515679,China,Asia,Sus scrofa,Pig,0,2010,0
+JF755427.1,aichivirus A3,,Aichivirus A,Kobuvirus,6,716402,5.85515679,USA,North America,Peromyscus crinitus,Rodent,0,2010,0
+JN088541.1,Canine kobuvirus US-PC0082,,Aichivirus A,Kobuvirus,6,716402,5.85515679,USA,North America,Canis lupus familiaris,Canine,0,2010,0
+JQ898342.1,Kobuvirus sewage Kathmandu,KoV-SewKTM,Aichivirus A,Kobuvirus,6,716402,5.85515679,Nepal,Asia,Homo sapiens,Human,0,2009,0
+JQ911763.1,Canine kobuvirus CH-1,,Aichivirus A,Kobuvirus,6,716402,5.85515679,China,Asia,Canis lupus familiaris,Canine,0,2011,0
+KC161964.1,Canine kobuvirus,,Canine kobuvirus,Kobuvirus,6,716402,5.85515679,United Kingdom,Europe,Canis lupus familiaris,Canine,0,2008,0
+KF793927.1,aichivirus C2,12Q108,Aichivirus C,Kobuvirus,6,716402,5.85515679,South Korea,Asia,Capra hircus,Ungulate,0,2012,0
+KF831027.1,aichivirus A4,,Aichivirus A,Kobuvirus,6,716402,5.85515679,South Korea,Asia,Feliformia,Feline,0,2011,0
+KF924623.1,Canine kobuvirus,12D049,Canine kobuvirus,Kobuvirus,6,716402,5.85515679,South Korea,Asia,Canis lupus familiaris,Canine,0,2012,0
+KJ641691.1,aichivirus F2,BtMf-PicoV-2/GD2012,Aichivirus F,Kobuvirus,6,716402,5.85515679,China,Asia,Miniopterus fuliginosus,Bat,1,2012,0
+KJ934637.1,aichivirus A5,,Aichivirus A,Kobuvirus,6,716402,5.85515679,Hungary,Europe,Coracias garrulus,Bird,0,2011,0
+KJ958930.1,Feline kobuvirus,12D240,Aichivirus A,Kobuvirus,6,716402,5.85515679,South Korea,Asia,Feliformia,Feline,0,2012,0
+KM068048.1,Canine kobuvirus 1,DD2,Aichivirus A,Kobuvirus,6,716402,5.85515679,Tanzania,Africa,Canis lupus familiaris,Canine,0,2003,0
+KM091960.1,Feline kobuvirus,,Aichivirus A,Kobuvirus,6,716402,5.85515679,Italy,Europe,Felis catus,Feline,0,2013,0
+KP144318.1,Porcine kobuvirus JS-01-CHN/2013/China,,Aichivirus C,Kobuvirus,6,716402,5.85515679,China,Asia,Sus scrofa domesticus,Pig,0,2013,0
+KY407744.1,Bovine kobuvirus,,Aichivirus B,Kobuvirus,6,716402,5.85515679,Egypt,Africa,Bos taurus,Ungulate,0,2014,0
+KY855436.1,Marmot kobuvirus,,Marmot kobuvirus,Kobuvirus,6,716402,5.85515679,China,Asia,Marmota himalayana,Rodent,0,2013,0
+LC721036.1,Feline kobuvirus,Y-1,Kobuvirus aichi,Kobuvirus,6,716402,5.85515679,Japan,Asia,Felis catus,Feline,0,2019,0
+MK671314.1,Feline kobuvirus,FKV/18CC0503,Aichivirus A,Kobuvirus,6,716402,5.85515679,China,Asia,Felis catus,Feline,0,2018,0
+MN116647.1,Aichivirus A,,Aichivirus A,Kobuvirus,6,716402,5.85515679,Hungary,Europe,Rattus norvegicus,Rodent,0,2018,0
+MN336260.1,Bovine kobuvirus,,Aichivirus B,Kobuvirus,6,716402,5.85515679,USA,North America,Bos taurus,Ungulate,0,2019,0
+MN337880.1,Canine kobuvirus,,Canine kobuvirus,Kobuvirus,6,716402,5.85515679,Germany,Europe,Vulpes vulpes,Canine,0,2016,0
+MN604700.1,Caprine kobuvirus,MN1/2018,Aichivirus C,Kobuvirus,6,716402,5.85515679,USA,North America,Caprine,Ungulate,0,2017,0
+MT766372.1,Kobuvirus sp.,CHN/XJ/env/2018/ht8-ctg1,Kobuvirus sp.,Kobuvirus,6,716402,5.85515679,China,Asia,Homo sapiens,Human,0,2018,0
+MW296158.1,Ovine kobuvirus,SKoV-China/SWUN/AB18/2019,Ovine kobuvirus,Kobuvirus,6,716402,5.85515679,China,Asia,Ovis aries,Ungulate,0,2019,0
+MW605074.1,Bovine kobuvirus,,Aichivirus B,Kobuvirus,6,716402,5.85515679,Canada,North America,Bos taurus,Ungulate,0,2021,0
+NC_001918.1,Aichi virus 1,A846/88,Aichivirus A,Kobuvirus,6,716402,5.85515679,Japan,Asia,Homo sapiens,Human,0,1998,0
+NC_004421.1,Kobuvirus bejaponia,,Kobuvirus bejaponia,Kobuvirus,6,716402,5.85515679,Japan,Asia,Bos taurus,Ungulate,0,2003,0
+NC_011829.1,Porcine kobuvirus swine/S-1-HUN/2007/Hungary,,Aichivirus C,Kobuvirus,6,716402,5.85515679,Hungary,Europe,Sus scrofa,Pig,0,2007,0
+NC_015936.1,Mouse kobuvirus M-5/USA/2010,,Mouse kobuvirus M-5/USA/2010,Kobuvirus,6,716402,5.85515679,USA,North America,Peromyscus crinitus,Rodent,0,2010,0
+NC_016769.1,Porcine kobuvirus SH-W-CHN/2010/China,SH-W-CHN/2010/China,Aichivirus C,Kobuvirus,6,716402,5.85515679,China,Asia,Sus scrofa,Pig,0,2010,0
+NC_023422.1,Caprine kobuvirus,12Q108,Aichivirus C,Kobuvirus,6,716402,5.85515679,South Korea,Asia,Capra hircus,Ungulate,0,2012,0
+NC_026314.1,rabbit kobuvirus,Berlin/Jan2011/0572,Aichivirus E,Kobuvirus,6,716402,5.85515679,Germany,Europe,Rattus norvegicus,Rodent,0,2011,0
+NC_027054.1,Porcine kobuvirus,JS-02a-CHN/2014/China,Aichivirus C,Kobuvirus,6,716402,5.85515679,China,Asia,Sus scrofa,Pig,0,2014,0
+NC_027918.1,Kobuvirus cattle/Kagoshima-2-24-KoV/2015/JPN,,Aichivirus D,Kobuvirus,6,716402,5.85515679,Japan,Asia,Bos taurus,Ungulate,0,2015,0
+NC_027919.1,Kobuvirus cattle/Kagoshima-1-22-KoV/2014/JPN,,Aichivirus D,Kobuvirus,6,716402,5.85515679,Japan,Asia,Bos taurus,Ungulate,0,2014,0
+NC_034971.1,Canine kobuvirus,SMCD-59,Canine kobuvirus,Kobuvirus,6,716402,5.85515679,China,Asia,Canis lupus familiaris,Canine,0,2015,0
+OK019998.1,Bovine kobuvirus,HNLD2019,Kobuvirus bejaponia,Kobuvirus,6,716402,5.85515679,China,Asia,Bos taurus,Ungulate,0,2019,0
+OM140655.1,Marmot kobuvirus,,Marmot kobuvirus,Kobuvirus,6,716402,5.85515679,China,Asia,Marmota caudata,Rodent,0,2016,0
+ON595848.1,Feline kobuvirus,FPV-1,Aichivirus A,Kobuvirus,6,716402,5.85515679,Australia,Australia,Felis catus,Feline,0,2017,0
+ON730709.1,Bovine kobuvirus,,Kobuvirus bejaponia,Kobuvirus,6,716402,5.85515679,China,Asia,Bos taurus,Ungulate,0,2021,0
+OP093966.1,Canine kobuvirus,PK02,Canine kobuvirus,Kobuvirus,6,716402,5.85515679,Brazil,South America,Canis lupus familiaris,Canine,0,2019,0
+OP094599.1,Bamboo rat kobuvirus,B45M02,Bamboo rat kobuvirus,Kobuvirus,6,716402,5.85515679,China,Asia,Rhizomys pruinosus,Rodent,0,2019,0
+OP255993.1,aichivirus A1,,Kobuvirus aichi,Kobuvirus,6,716402,5.85515679,Netherlands,Europe,Homo sapiens,Human,0,2018,0
+OP287812.1,Eidolon dupreanum kobuvirus,FEC145,Eidolon dupreanum kobuvirus,Kobuvirus,6,716402,5.85515679,Madagascar,Africa,Eidolon dupreanum,Bat,1,2018,0
+OP776109.1,Kobuvirus dekago,BKV/Yak/SCDF77/2021/CHN,Kobuvirus dekago,Kobuvirus,6,716402,5.85515679,China,Asia,Bos grunniens,Ungulate,0,2021,0
+OP920760.1,Capreolus pygargus kobuvirus,CpKoV/XK/CHN/2021,Capreolus pygargus kobuvirus,Kobuvirus,6,716402,5.85515679,China,Asia,Capreolus pygargus,Ungulate,0,2021,0
+OQ121963.1,aichivirus A1,hu/C8_Seoul_02/2019,Kobuvirus aichi,Kobuvirus,6,716402,5.85515679,South Korea,Asia,Homo sapiens,Human,0,2019,0
+OQ363763.1,Kobuvirus aichi,GX/B45M0208/2019,Kobuvirus aichi,Kobuvirus,6,716402,5.85515679,China,Asia,Rhizomys pruinosus,Rodent,0,2019,0
+OQ758029.1,Kobuvirus sp.,,Kobuvirus sp.,Kobuvirus,6,716402,5.85515679,Hungary,Europe,Capra hircus,Ungulate,0,2020,0
+OQ818322,Eidolon dupreanum kobuvirus,KEL318,Eidolon dupreanum kobuvirus,Kobuvirus,6,716402,5.85515679,Madagascar,Africa,Eidolon dupreanum,Bat,1,2019,0
+OR682616.1,Caprine kobuvirus,Caprine/SWUN/F1/2022,Aichivirus C,Kobuvirus,6,716402,5.85515679,China,Asia,Capra hircus,Ungulate,0,2022,0
+OR951211.1,Bat kobuvirus,GX2018,Bat kobuvirus,Kobuvirus,6,716402,5.85515679,China,Asia,Scotophilus kuhlii,Bat,1,2018,0
+OR951280.1,Aichivirus F,GD2017_210_473,Aichivirus F,Kobuvirus,6,716402,5.85515679,China,Asia,Myotis ricketti,Bat,1,2017,0
+PP766456,Eidolon dupreanum kobuvirus,KEL86,Eidolon dupreanum kobuvirus,Kobuvirus,6,716402,5.85515679,Madagascar,Africa,Eidolon dupreanum,Bat,1,2014,1
+NC_033818.1,Kunsagivirus B,,Kunsagivirus B,Kunsagivirus,1,1478,3.169674434,Cameroon,Africa,Eidolon helvum,Bat,1,2013,0
+NC_034206.1,kunsagivirus C1,baboon/M27-KuV/1986/TAN,Kunsagivirus C,Kunsagivirus,1,1478,3.169674434,Tanzania,Africa,Papio cynocephalus,Non-human primate,0,1986,0
+NC_038317.1,Kunsagivirus A,,Kunsagivirus A,Kunsagivirus,1,1478,3.169674434,Hungary,Europe,Coracias garrulus,Bird,0,2011,0
+OQ818317,Eidolon dupreanum kunsagivirus,KEL148,Eidolon dupreanum kunsagivirus,Kunsagivirus,1,1478,3.169674434,Madagascar,Africa,Eidolon dupreanum,Bat,1,2018,1
+KU871313.1,Canine picornavirus,,Mischivirus D,Mischivirus,1,39092,4.59208789,United Arab Emirates,Asia,Canis,Canine,0,2013,0
+MG888045.1,Mischivirus B,,Mischivirus B,Mischivirus,1,39092,4.59208789,Algeria,Africa,Miniopterus,Bat,1,2017,0
+NC_016964.1,Canine picornavirus,325,Mischivirus D,Mischivirus,1,39092,4.59208789,Hong Kong,Asia,Canis lupus familiaris,Canine,0,2008,0
+NC_026470.1,mischivirus C1,PREDICT-06105,Mischivirus C,Mischivirus,1,39092,4.59208789,Democratic Republic of the Congo,Africa,Macronycteris gigas,Bat,1,2013,0
+NC_034381.1,mischivirus A1,,Mischivirus A,Mischivirus,1,39092,4.59208789,China,Asia,Miniopterus schreibersii,Bat,1,2010,0
+NC_043072.1,Bat picornavirus BatPV/V1/13 Hun,,Mischivirus B,Mischivirus,1,39092,4.59208789,Hungary,Europe,Miniopterus schreibersii,Bat,1,2013,0
+NC_075428.1,Canine picornavirus,A128thr,Mischivirus D,Mischivirus,1,39092,4.59208789,USA,North America,Canis lupus familiaris,Canine,0,1968,0
+OQ818316,Pteropus rufus mischivirus,AMB150,Pteropus rufus mischivirus,Mischivirus,1,39092,4.59208789,Madagascar,Africa,Pteropus rufus,Bat,1,2018,1
+KJ821019.1,Sapelovirus A,KS04105,Sapelovirus A,Sapelovirus,11,4116,3.614475366,South Korea,Asia,Sus scrofa,Pig,0,2004,0
+KX574284.1,Sapelovirus A,,Sapelovirus A,Sapelovirus,11,4116,3.614475366,USA,North America,Sus scrofa,Pig,0,2015,0
+KY855433.1,Marmot sapelovirus 2,,Marmot sapelovirus 2,Sapelovirus,11,4116,3.614475366,China,Asia,Marmota himalayana,Rodent,0,2013,0
+LC326556.1,Sapelovirus A,,Sapelovirus A,Sapelovirus,11,4116,3.614475366,Japan,Asia,Sus scrofa,Pig,0,2009,0
+LC386162.1,Sapelovirus-like porcine picornavirus Japan,,Sapelovirus-like porcine picornavirus Japan,Sapelovirus,11,4116,3.614475366,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC503602.1,Sapelovirus B,,Sapelovirus B,Sapelovirus,11,4116,3.614475366,Cambodia,Asia,Macaca fascicularis,Non-human primate,0,2017,0
+LT900497.1,Sapelovirus A,PSV/GER/L00798-K11_14-02/2014,Sapelovirus A,Sapelovirus,11,4116,3.614475366,Germany,Europe,Sus scrofa,Pig,0,2014,0
+MK521918.1,Tasmanian devil-associated sapelovirus,wukalina/Tasmania/Sarcophilus_harrisii/2017/DN125220,Tasmanian devil-associated sapelovirus,Sapelovirus,11,4116,3.614475366,Australia,Australia,Sarcophilus harrisii,Marsupial,0,2017,0
+MN807752.1,Sapelovirus A,,Sapelovirus A,Sapelovirus,11,4116,3.614475366,Hungary,Europe,Sus scrofa domesticus,Pig,0,2013,0
+MN836683.1,Sapelovirus A,SwPSV75BO2012,Sapelovirus A,Sapelovirus,11,4116,3.614475366,Italy,Europe,Sus scrofa,Pig,0,2012,0
+NC_003987.1,porcine sapelovirus 1,,Sapelovirus A,Sapelovirus,11,4116,3.614475366,Germany,Europe,Sus scrofa,Pig,0,2001,0
+NC_004451.1,Simian sapelovirus 1,,Sapelovirus B,Sapelovirus,11,4116,3.614475366,USA,North America,Siimiformes,Non-human primate,0,2001,0
+NC_033820.1,Bat sapelovirus,,Bat sapelovirus,Sapelovirus,11,4116,3.614475366,Cameroon,Africa,Eidolon helvum,Bat,1,2013,0
+NC_040605.1,Marmot sapelovirus 1,,Marmot sapelovirus 1,Sapelovirus,11,4116,3.614475366,China,Asia,Marmota himalayana,Rodent,0,2013,0
+OQ818320,Eidolon dupreanum sapelovirus 1,KEL233,Eidolon dupreanum sapelovirus 1,Sapelovirus,11,4116,3.614475366,Madagascar,Africa,Eidolon dupreanum,Bat,1,2018,1
+OQ818321,Eidolon dupreanum sapelovirus 2,KEL272,Eidolon dupreanum sapelovirus 2,Sapelovirus,11,4116,3.614475366,Madagascar,Africa,Eidolon dupreanum,Bat,1,2019,1
+OQ818329,Rousettus madagascariensis sapelovirus 1,MIZ243,Rousettus madagascariensis sapelovirus 1,Sapelovirus,11,4116,3.614475366,Madagascar,Africa,Rousettus madagascariensis,Bat,1,2018,1
+OQ818344,Eidolon dupreanum sapelovirus 1,KEL298,Eidolon dupreanum sapelovirus 1,Sapelovirus,11,4116,3.614475366,Madagascar,Africa,Eidolon dupreanum,Bat,1,2019,1
+OR951325.1,Pteropodidae bat sapelovirus,YN2017_252_13203,Pteropodidae bat sapelovirus,Sapelovirus,11,4116,3.614475366,China,Asia,Eonycteris spelaea,Bat,1,2017,0
+OR951332.1,Pteropodidae bat sapelovirus,YN2016,Pteropodidae bat sapelovirus,Sapelovirus,11,4116,3.614475366,China,Asia,Rousettus leschenaultii,Bat,1,2016,0
+PP711911.1,Rousettus bat sapelovirus,10A/Kenya/BAT22/2015,Rousettus bat sapelovirus,Sapelovirus,11,4116,3.614475366,Kenya,Africa,Rousettus aegypticus,Bat,1,2015,0
+PP711921.1,Eidolon bat sapelovirus,18A/Kenya/BAT509/2015,Eidolon bat sapelovirus,Sapelovirus,11,4116,3.614475366,Kenya,Africa,Eidolon helvum,Bat,1,2015,0
+PP711943.1,Eidolon bat sapelovirus,6A/Kenya/BAT606/2015,Eidolon bat sapelovirus,Sapelovirus,11,4116,3.614475366,Kenya,Africa,Eidolon helvum,Bat,1,2015,0
+PP842133.1,Sapelovirus A,,Sapelovirus A,Sapelovirus,11,4116,3.614475366,China,Asia,Sus scrofa,Pig,0,2023,0
+AB522390.3,Sapovirus Hu/D1714-B/2008/JPN,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Homo sapiens,Human,0,2008,0
+AB522397.2,Sapovirus D1737-A/Jun2008/JPN,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Homo sapiens,Human,0,2008,0
+AB614356.1,Sapovirus Hu/GI.2/BR-DF01/BRA/2009,Hu/GI.2/BR-DF01/BRA/2009,Sapporo virus,Sapovirus,14,97373,4.988438551,Brazil,South America,Homo sapiens,Human,0,2009,0
+AB623037.2,Sapovirus Hu/OH08021/2008/JP,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Homo sapiens,Human,0,2008,0
+AB630068.3,Sapovirus Hu/20082029/2008/JP,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Homo sapiens,Human,0,2008,0
+AB689845.2,Sapovirus Hu/Kumamoto129/Jun2010/JPN,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Homo sapiens,Human,0,2010,0
+AB689846.2,Sapovirus Hu/Kumamoto130/Jul2010/JPN,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Homo sapiens,Human,0,2010,0
+AY237419.2,Sapovirus Mc2,,Sapporo virus,Sapovirus,14,97373,4.988438551,Thailand,Asia,Homo sapiens,Human,0,2002,0
+AY237422.3,Sapovirus Mc114,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Homo sapiens,Human,0,2003,0
+AY646853.2,Sapovirus NongKhai-50/Thailand,,Sapporo virus,Sapovirus,14,97373,4.988438551,Thailand,Asia,Homo sapiens,Human,0,2012,0
+AY646854.2,Sapovirus Chanthaburi-74/Thailand,,Sapporo virus,Sapovirus,14,97373,4.988438551,Thailand,Asia,Homo sapiens,Human,0,2004,0
+AY646855.2,Sapovirus SaKaeo-15/Thailand,,Sapporo virus,Sapovirus,14,97373,4.988438551,Thailand,Asia,Homo sapiens,Human,0,2005,0
+AY646856.2,Nongkhai virus,,Sapporo virus,Sapovirus,14,97373,4.988438551,Thailand,Asia,Homo sapiens,Human,0,2006,0
+AY974192.2,Sapovirus Po/OH-JJ681/2000/US,Po/OH-JJ681/2000/US,Sapporo virus,Sapovirus,14,97373,4.988438551,USA,North America,Sus scrofa,Pig,0,2000,0
+DQ058829.1,Ehime virus,Ehime1107,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Homo sapiens,Human,0,2005,0
+FJ387164.1,Sapovirus pig/sav1/2008/CHN,Ch-sw-sav1,Sapporo virus,Sapovirus,14,97373,4.988438551,China,Asia,Sus scrofa,Pig,0,2008,0
+HM002617.1,Sapovirus Hu/GI/Sapporo/MT-2010/1982,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Homo sapiens,Human,0,1982,0
+JX993277.1,Sapovirus Hu/G1/BE-HPI01/DE/2012,BE-HPI01,Sapporo virus,Sapovirus,14,97373,4.988438551,Germany,Europe,Homo sapiens,Human,0,2012,0
+KF204570.1,Sapovirus pig/Gansu/CH430/2012/CHN,CH430,Sapporo virus,Sapovirus,14,97373,4.988438551,China,Asia,Sus scrofa,Pig,0,2012,0
+KJ508818.1,Sapovirus pig/GVI/OH-JJ674/2000/US,,Sapporo virus,Sapovirus,14,97373,4.988438551,USA,North America,Sus scrofa,Pig,0,2000,0
+KP067444.1,Sapovirus GII,,Sapporo virus,Sapovirus,14,97373,4.988438551,Philippines,Asia,Homo sapiens,Human,0,2012,0
+KP298674.1,Sapovirus Hu/GI.1/Seoul/ROK62/2013/KOR,,Sapporo virus,Sapovirus,14,97373,4.988438551,South Korea,Asia,Homo sapiens,Human,0,2013,0
+KT327081.1,Sapovirus Hu/G1/Zhejiang1/China/2014,Hu/G1/Zhejiang1/China/2014,Sapporo virus,Sapovirus,14,97373,4.988438551,China,Asia,Homo sapiens,Human,0,2014,0
+KX000383.1,Sapovirus GV/WG194D-1,,Sapporo virus,Sapovirus,14,97373,4.988438551,USA,North America,Sus scrofa,Pig,0,2009,0
+KX000384.1,Sapovirus GVII/RV0042,,Sapporo virus,Sapovirus,14,97373,4.988438551,USA,North America,Sus scrofa,Pig,0,2011,0
+KX274477.1,Sapovirus GII.4,116006,Sapporo virus,Sapovirus,14,97373,4.988438551,Brazil,South America,Homo sapiens,Human,0,2011,0
+KX431437.1,Sapporo virus,Hu/GV/0003/Sollentuna/2016/SWE,Sapporo virus,Sapovirus,14,97373,4.988438551,Sweden,Europe,Homo sapiens,Human,0,2016,0
+KX759618.1,Bat sapovirus,Bat-SaV/Limbe25/CAM/2014,Bat sapovirus,Sapovirus,14,97373,4.988438551,Cameroon,Africa,Eidolon helvum,Bat,1,2014,0
+KX759619.1,Bat sapovirus,Bat-SaV/Lysoka36/CAM/2014,Bat sapovirus,Sapovirus,14,97373,4.988438551,Cameroon,Africa,Eidolon helvum,Bat,1,2014,0
+KX759620.1,Bat sapovirus,Bat-SaV/Limbe65/CAM/2014,Bat sapovirus,Sapovirus,14,97373,4.988438551,Cameroon,Africa,Eidolon helvum,Bat,1,2014,0
+KX759621.1,Bat sapovirus,Bat-SaV/Limbe899a/CAM/2014,Bat sapovirus,Sapovirus,14,97373,4.988438551,Cameroon,Africa,Eidolon helvum,Bat,1,2014,0
+KX759622.1,Bat sapovirus,Bat-SaV/Limbe899b/CAM/2014,Bat sapovirus,Sapovirus,14,97373,4.988438551,Cameroon,Africa,Eidolon helvum,Bat,1,2014,0
+KX980412.1,Sapovirus Hu/GI/Hunan/China/2016,Hu/GI/Hunan/China/2016,Sapporo virus,Sapovirus,14,97373,4.988438551,China,Asia,Homo sapiens,Human,0,2016,0
+LC190463.1,Sapovirus Hu/GII/JP/2010/Kashiwa1,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Homo sapiens,Human,0,2010,0
+LC215874.1,Sapovirus GIII/MoI2-1-1,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC215875.1,Sapovirus GIII/Ishi-Im1-3,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC215876.1,Sapovirus GIII/Ishi-Im3-2,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC215877.1,Sapovirus GIII/Ishi-Kah3,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC215878.1,Sapovirus GIII/Ishi-Im7-1,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC215879.1,Sapovirus GIII/Ishi-Kah6,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2016,0
+LC215880.1,Sapovirus GIII/HgYa1-1,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2016,0
+LC215881.1,Sapovirus GIII/HgYa2-1,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2016,0
+LC215882.1,Sapovirus GIII/HgYa2-2,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2016,0
+LC215883.1,Sapovirus GIII/HgTa1,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2016,0
+LC215884.1,Sapovirus GIII/HgTa3-1,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2016,0
+LC215885.1,Sapovirus GV/HkKa2-1,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC215886.1,Sapovirus GVI/HgOg2-4,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC215887.1,Sapovirus GVI/Ishi-Im7-2,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2016,0
+LC215888.1,Sapovirus GVI/Ishi-Im9,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2016,0
+LC215889.1,Sapovirus GVII/HgTa2-1,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC215890.1,Sapovirus GVII/HgTa2-2-1,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC215891.1,Sapovirus GVII/MoI2-1-2,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC215892.1,Sapovirus GVII/Ishi-Im1-2,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC215893.1,Sapovirus GVII/Ishi-Im1-4,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC215894.1,Sapovirus GVII/Ishi-Im3-1,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC215895.1,Sapovirus GVIII/Ishi-Im1-1,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC215896.2,Sapovirus GX/HgTa2,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2016,0
+LC215897.2,Sapovirus GX/HgTa3-2,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2016,0
+LC215898.1,Sapovirus GXI/HgTa2-2-2,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC215899.2,Sapovirus GXI/Ishi-Im7-3,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2016,0
+LC215900.1,Sapovirus GX/Ishi-Im7-4,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2016,0
+LC215901.1,Sapovirus GXI/HgYa1-2,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2016,0
+LC215902.1,Sapovirus GXI/HgYa1-3,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2016,0
+LC380411.1,Sapovirus Hu/GI.6/Nichinan/FP05284/2005/JPN,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Homo sapiens,Human,0,2005,0
+LC469052.1,Porcine sapovirus,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2018,0
+LC483441.1,Sapovirus GVI,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2018,0
+LC671561.1,Sapovirus GI.1,AH20,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Homo sapiens,Human,0,2020,0
+LC715150.1,Sapovirus GII,GII.3-AK11-P1,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Homo sapiens,Human,0,2022,0
+LC715151.1,Sapovirus GI,GI.1-AK20-P1,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Homo sapiens,Human,0,2020,0
+MF766258.1,Sapovirus GVII,Po/SH1703/China/2017,Sapporo virus,Sapovirus,14,97373,4.988438551,China,Asia,Sus scrofa,Pig,0,2017,0
+MF944258.1,Sapovirus sp.,,Sapovirus sp.,Sapovirus,14,97373,4.988438551,China,Asia,Homo sapiens,Human,0,2015,0
+MG515473.1,Sapovirus GII,,Sapporo virus,Sapovirus,14,97373,4.988438551,China,Asia,Homo sapiens,Human,0,2015,0
+MH003837.1,Sapovirus rat/S4-82,,Sapovirus rat/S4-82,Sapovirus,14,97373,4.988438551,China,Asia,Rattus norvegicus,Rodent,0,2016,0
+MK111630.1,Sapovirus GI.1,Hu/Guangzhou/GZ2014-L078/CHN/2014,Sapporo virus,Sapovirus,14,97373,4.988438551,China,Asia,Homo sapiens,Human,0,2014,0
+MK250983.1,Sapovirus GI,Hu/BRA/2015/GI.2/TO-65,Sapporo virus,Sapovirus,14,97373,4.988438551,Brazil,South America,Homo sapiens,Human,0,2015,0
+MK599471.1,Sapovirus GII.8,Hu/Guangzhou/GZ2014-L231/CHN/2014,Sapporo virus,Sapovirus,14,97373,4.988438551,China,Asia,Homo sapiens,Human,0,2014,0
+MK962337.1,Porcine sapovirus,,Sapporo virus,Sapovirus,14,97373,4.988438551,Spain,Europe,Sus scrofa,Pig,0,2017,0
+MN102395.1,Sapovirus GIV.1,,Sapporo virus,Sapovirus,14,97373,4.988438551,Taiwan,Asia,Homo sapiens,Human,0,2008,0
+MN102397.1,Sapovirus GI.2,,Sapporo virus,Sapovirus,14,97373,4.988438551,Taiwan,Asia,Homo sapiens,Human,0,2009,0
+MN102403.1,Sapovirus GII.5,,Sapporo virus,Sapovirus,14,97373,4.988438551,Taiwan,Asia,Homo sapiens,Human,0,2008,0
+MN102407.1,Sapovirus GII.8,,Sapporo virus,Sapovirus,14,97373,4.988438551,Taiwan,Asia,Homo sapiens,Human,0,2014,0
+MN102408.1,Sapovirus GII.8,,Sapporo virus,Sapovirus,14,97373,4.988438551,Taiwan,Asia,Homo sapiens,Human,0,2014,0
+MN509083.1,Sapovirus GI.6,,Sapporo virus,Sapovirus,14,97373,4.988438551,USA,North America,Homo sapiens,Human,0,2016,0
+MW316743.1,Porcine sapovirus,,Sapporo virus,Sapovirus,14,97373,4.988438551,USA,North America,Sus scrofa,Pig,0,2019,0
+MZ488272.1,Sapovirus GII,G19_13.5_JUN17,Sapporo virus,Sapovirus,14,97373,4.988438551,Mexico,South America,Homo sapiens,Human,0,2017,0
+MZ576278.1,Sapovirus Sapozj-9,,Sapovirus Sapozj-9,Sapovirus,14,97373,4.988438551,China,Asia,Homo sapiens,Human,0,2016,0
+NC_000940.1,Cowden I virus,,Sapporo virus,Sapovirus,14,97373,4.988438551,USA,North America,Homo sapiens,Human,0,1999,0
+NC_006554.1,Sapovirus C12,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Sus scrofa,Pig,0,2004,0
+NC_010624.1,Sapovirus Mc10,,Sapporo virus,Sapovirus,14,97373,4.988438551,Thailand,Asia,Homo sapiens,Human,0,2003,0
+NC_017936.1,Bat sapovirus TLC58/HK,,Bat sapovirus TLC58/HK,Sapovirus,14,97373,4.988438551,Hong Kong,Asia,Chiroptera,Bat,1,2001,0
+NC_033776.1,Bat sapovirus,Bat-SaV/Limbe65/CAM/2014,Bat sapovirus,Sapovirus,14,97373,4.988438551,Cameroon,Africa,Eidolon helvum,Bat,1,2014,0
+NC_075724.1,Sapovirus Hu/GI/Sapporo/MT-2010/1982,,Sapporo virus,Sapovirus,14,97373,4.988438551,Japan,Asia,Homo sapiens,Human,0,1982,0
+OK484997.1,Sapovirus GV,,Sapporo virus,Sapovirus,14,97373,4.988438551,China,Asia,Sus scrofa,Pig,0,2020,0
+OK484998.1,Sapovirus GIII,,Sapporo virus,Sapovirus,14,97373,4.988438551,China,Asia,Sus scrofa,Pig,0,2020,0
+OP255973.1,Sapovirus GI,,Sapporo virus,Sapovirus,14,97373,4.988438551,Netherlands,Europe,Homo sapiens,Human,0,2016,0
+OP963623.1,Bat sapovirus BtSY2,,Bat sapovirus BtSY2,Sapovirus,14,97373,4.988438551,China,Asia,Rousettus leschenaultii,Bat,1,2017,0
+OQ709197.1,Bat sapovirus WD3,BtSaV/RlWD03,Bat sapovirus WD3,Sapovirus,14,97373,4.988438551,China,Asia,Rousettus leschenaultii,Bat,1,2018,0
+OQ818319,Eidolon dupreanum sapovirus 1,KEL166,Eidolon dupreanum sapovirus 1,Sapovirus,14,97373,4.988438551,Madagascar,Africa,Eidolon dupreanum,Bat,1,2018,1
+OR517473.1,Sapovirus sp.,Hu/NI/2017/GI.2/CNDR695,Sapovirus sp.,Sapovirus,14,97373,4.988438551,Nicaragua,South America,Homo sapiens,Human,0,2017,0
+OR672554.1,Sapovirus GI,RC-22152,Sapporo virus,Sapovirus,14,97373,4.988438551,China,Asia,Homo sapiens,Human,0,2022,0
+OR837774.1,Sapovirus sp.,SaV/A14/AFP01/NGR/2020/S01,Sapovirus sp.,Sapovirus,14,97373,4.988438551,Nigeria,Africa,Homo sapiens,Human,0,2020,0
+PP105600.1,Sapovirus GX,,Sapporo virus,Sapovirus,14,97373,4.988438551,Hungary,Europe,Canis aureus,Canine,0,2020,0
+PP388958.1,Porcine enteric sapovirus,SHCM Mega2023,Sapporo virus,Sapovirus,14,97373,4.988438551,China,Asia,Sus scrofa,Pig,0,2023,0
+PP712001.1,Rousettus bat calicivirus,16A/Kenya/BAT2/2015,Rousettus bat calicivirus,Sapovirus,14,97373,4.988438551,Kenya,Africa,Rousettus aegypticus,Bat,1,2015,0
+PP712004.1,Rousettus bat calicivirus,10B/Kenya/BAT12/2015,Rousettus bat calicivirus,Sapovirus,14,97373,4.988438551,Kenya,Africa,Rousettus aegypticus,Bat,1,2015,0
+PP712008.1,Rousettus bat calicivirus,13A/Kenya/BAT2797/2015,Rousettus bat calicivirus,Sapovirus,14,97373,4.988438551,Kenya,Africa,Rousettus aegypticus,Bat,1,2015,0
+PP712015.1,Rousettus bat calicivirus,1A/Kenya/BAT18/2015,Rousettus bat calicivirus,Sapovirus,14,97373,4.988438551,Kenya,Africa,Rousettus aegypticus,Bat,1,2015,0
+PP766459,Eidolon dupreanum sapovirus 1,KEL168,Eidolon dupreanum sapovirus 1,Sapovirus,14,97373,4.988438551,Madagascar,Africa,Eidolon dupreanum,Bat,1,2018,1
+PP766460,Eidolon dupreanum sapovirus 4,KEL207,Eidolon dupreanum sapovirus 4,Sapovirus,14,97373,4.988438551,Madagascar,Africa,Eidolon dupreanum,Bat,1,2018,1
+JQ975417.1,teschovirus A4,10BJ02,Teschovirus A,Teschovirus,3,174039,5.240646579,China,Asia,Sus scrofa,Pig,0,2010,0
+KC757344.1,teschovirus A8,Fuyu/2009/2,Teschovirus A,Teschovirus,3,174039,5.240646579,China,Asia,Sus scrofa,Pig,0,2009,0
+LC386152.1,teschovirus A1,,Teschovirus A,Teschovirus,3,174039,5.240646579,Japan,Asia,Sus scrofa,Pig,0,2016,0
+LC386154.1,Porcine teschovirus 15,,Porcine teschovirus 15,Teschovirus,3,174039,5.240646579,Japan,Asia,Sus scrofa,Pig,0,2015,0
+LC386158.1,Porcine teschovirus 16,,Porcine teschovirus 16,Teschovirus,3,174039,5.240646579,Japan,Asia,Sus scrofa,Pig,0,2015,0
+MF967586.1,teschovirus A1,,Teschovirus A,Teschovirus,3,174039,5.240646579,China,Asia,Sus scrofa,Pig,0,2016,0
+NC_075980.1,Teschovirus A,HuN41,Teschovirus A,Teschovirus,3,174039,5.240646579,China,Asia,Sus scrofa,Pig,0,2017,0
+OQ818318,Eidolon dupreanum teschovirus 1,KEL164,Eidolon dupreanum teschovirus 1,Teschovirus,3,174039,5.240646579,Madagascar,Africa,Eidolon dupreanum,Bat,1,2018,1
+OQ818323,Rousettus madagascariensis teschovirus 1,MIZ190,Rousettus madagascariensis teschovirus 1,Teschovirus,3,174039,5.240646579,Madagascar,Africa,Rousettus madagascariensis,Bat,1,2018,1
+OQ818324,Rousettus madagascariensis teschovirus 2,MIZ205,Rousettus madagascariensis teschovirus 2,Teschovirus,3,174039,5.240646579,Madagascar,Africa,Rousettus madagascariensis,Bat,1,2018,1
+OR951324.1,Pteropodidae bat teschovirus,YN2017,Pteropodidae bat teschovirus,Teschovirus,3,174039,5.240646579,China,Asia,Eonycteris spelaea,Bat,1,2017,0
+OR951333.1,Pteropodidae bat teschovirus,YN2016_267_11102,Pteropodidae bat teschovirus,Teschovirus,3,174039,5.240646579,China,Asia,Rousettus leschenaultii,Bat,1,2016,0
+PP711934.1,Rousettus bat teschovirus,29A/Kenya/BAT3/2015,Rousettus bat teschovirus,Teschovirus,3,174039,5.240646579,Kenya,Africa,Rousettus aegyptiacus,Bat,1,2015,0
+PP711948.1,Rousettus bat teschovirus,31A/Uganda/UV8/2018,Rousettus bat teschovirus,Teschovirus,3,174039,5.240646579,Uganda,Africa,Rousettus aegyptiacus,Bat,1,2018,0
+PP711909.1,Rousettus bat picornavirus,25A/Uganda/UR47/2018,Rousettus bat picornavirus,Unclassified bat picornavirus,8,2996,3.476541809,Uganda,Africa,Rousettus aegypticus,Bat,1,2018,0
+PP711912.1,Rousettus bat picornavirus,8A/Uganda/UGR5/2019,Rousettus bat picornavirus,Unclassified bat picornavirus,8,2996,3.476541809,Uganda,Africa,Rousettus aegypticus,Bat,1,2019,0
+PP711913.1,Rousettus bat picornavirus,11B/Kenya/BAT1828/2015,Rousettus bat picornavirus,Unclassified bat picornavirus,8,2996,3.476541809,Kenya,Africa,Rousettus aegypticus,Bat,1,2015,0
+PP711928.1,Rousettus bat picornavirus,24A/Uganda/UR13/2018,Rousettus bat picornavirus,Unclassified bat picornavirus,8,2996,3.476541809,Uganda,Africa,Rousettus aegypticus,Bat,1,2018,0
+PP711930.1,Rousettus bat picornavirus,25C/Kenya/BAT6/2015,Rousettus bat picornavirus,Unclassified bat picornavirus,8,2996,3.476541809,Kenya,Africa,Rousettus aegypticus,Bat,1,2015,0
+PP711945.1,Rousettus bat picornavirus,8A/Uganda/UGR5/2019,Rousettus bat picornavirus,Unclassified bat picornavirus,8,2996,3.476541809,Uganda,Africa,Rousettus aegypticus,Bat,1,2019,0
+PP711946.1,Chaerephon bat picornavirus,9A/Kenya/BAT1462/2015,Chaerephon bat picornavirus,Unclassified bat picornavirus,8,2996,3.476541809,Kenya,Africa,Chaerephon leucogaster,Bat,1,2015,0
+PP745912.1,Bat picornavirus 7,243_61024,Bat picornavirus 7,Unclassified bat picornavirus,8,2996,3.476541809,China,Asia,Taphozous melanopogon,Bat,1,2017,0
+PP746000.1,Bat picornavirus BtSY4,357_7225,Bat picornavirus BtSY4,Unclassified bat picornavirus,8,2996,3.476541809,China,Asia,Rhinolophus sinicus,Bat,1,2021,0
+OQ818325,Rousettus madagascariensis picornavirus 1,MIZ214,Rousettus madagascariensis picornavirus 1,Unclassified bat picornavirus,8,2996,3.476541809,Madagascar,Africa,Rousettus madagascariensis,Bat,1,2018,1
+OQ818328,Rousettus madagascariensis picornavirus 1,MIZ240,Rousettus madagascariensis picornavirus 1,Unclassified bat picornavirus,8,2996,3.476541809,Madagascar,Africa,Rousettus madagascariensis,Bat,1,2018,1
+PP766469,Rousettus madagascariensis picornavirus 3,MIZ405.1,Rousettus madagascariensis picornavirus 3,Unclassified bat picornavirus,8,2996,3.476541809,Madagascar,Africa,Rousettus madagascariensis,Bat,1,2019,1
