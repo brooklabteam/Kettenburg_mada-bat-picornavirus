@@ -1,0 +1,6 @@
+Accession,Organism_Name,Isolate,Species,Genus,Country,source,Host,Collection_Date,novel
+NC_038317.1,Kunsagivirus A,,Kunsagivirus A,Kunsagivirus,Hungary,Coracias garrulus,0,2011,0
+NC_034206.1,kunsagivirus C1,baboon/M27-KuV/1986/TAN,Kunsagivirus C,Kunsagivirus,Tanzania,Papio cynocephalus,0,1986,0
+NC_033818.1,Kunsagivirus B,,Kunsagivirus B,Kunsagivirus,Cameroon,Eidolon helvum,1,2013,0
+NC_001547.1,Sindbis virus,,Sindbis virus,Alphavirus,USA,Cell culture,0,1981,0
+OQ818317,Eidolon dupreanum kunsagivirus,KEL148,Eidolon dupreanum kunsagivirus,Kunsagivirus,Madagascar,Eidolon dupreanum,1,2018,1

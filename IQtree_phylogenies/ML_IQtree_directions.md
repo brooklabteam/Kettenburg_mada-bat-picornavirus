@@ -115,17 +115,16 @@ bin/iqtree -s .fasta -bb 1000
 The best models for the phylogenetic trees are losted below:
 
 ```
-Best model and threads for bat picornavirus all genomes:  
-Best model and threads for caliciviridae refseq all genomes: 
-Best model and threads for cardiovirus all genomes: 
-Best model and threads for hepatovirus all genomes:  
-Best model and threads for kobuvirus all genomes: 
-Best model and threads for kunsagivirus all genomes:  
-Best model and threads for mischivirus all genomes: 
-Best model and threads for sapelovirus all genomes: 
-Best model and threads for sapovirus all genomes: 
-Best model and threads for teschovirus all genomes: 
-Best model and threads for polymerase summary tree: 
+Best model for bat picornavirus all genomes:  
+Best model for cardiovirus all genomes: 
+Best model for hepatovirus all genomes:  
+Best model for kobuvirus all genomes: 
+Best model for kunsagivirus all genomes: TIM2e+R2
+Best model for mischivirus all genomes: 
+Best model for sapelovirus all genomes: 
+Best model for sapovirus all genomes: 
+Best model for teschovirus all genomes: 
+Best model for polymerase summary tree: 
 ```
 ---
 
