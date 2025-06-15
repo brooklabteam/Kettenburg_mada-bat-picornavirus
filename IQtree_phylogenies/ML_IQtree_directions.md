@@ -120,7 +120,7 @@ Best model for cardiovirus all genomes:
 Best model for hepatovirus all genomes:  
 Best model for kobuvirus all genomes: 
 Best model for kunsagivirus all genomes: TIM2e+R2
-Best model for mischivirus all genomes: 
+Best model for mischivirus all genomes: GTR+F+R4
 Best model for sapelovirus all genomes: 
 Best model for sapovirus all genomes: 
 Best model for teschovirus all genomes: 
