@@ -117,12 +117,12 @@ The best models for the phylogenetic trees are losted below:
 ```
 Best model for bat picornavirus all genomes: GTR+F+R5
 Best model for cardiovirus all genomes: TIM2+F+R10
-Best model for hepatovirus all genomes:  
-Best model for kobuvirus all genomes: 
+Best model for hepatovirus all genomes: GTR+F+I+G4
+Best model for kobuvirus all genomes: GTR+F+R10
 Best model for kunsagivirus all genomes: TIM2e+R2
 Best model for mischivirus all genomes: GTR+F+R4
 Best model for sapelovirus all genomes: TIM2+F+R10
-Best model for sapovirus all genomes: 
+Best model for sapovirus all genomes: GTR+F+R10
 Best model for teschovirus all genomes: TIM2+F+R9
 Best model for polymerase summary tree: 
 ```
