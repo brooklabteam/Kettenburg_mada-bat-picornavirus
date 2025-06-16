@@ -124,7 +124,7 @@ Best model for mischivirus all genomes: GTR+F+R4
 Best model for sapelovirus all genomes: TIM2+F+R10
 Best model for sapovirus all genomes: GTR+F+R10
 Best model for teschovirus all genomes: TIM2+F+R9
-Best model for polymerase summary tree: 
+Best model for polymerase summary tree: TIM2+F+R10
 ```
 ---
 
