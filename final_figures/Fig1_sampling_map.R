@@ -268,7 +268,7 @@ p4_pos
 
 
 ##Add a plot showing the shared number of viruses in population during each sampling session
-dat <- read.csv(file = paste0(homewd,"/metadata/demo_data_indiv_pos_heatmap_species.csv"), header = T, stringsAsFactors = F)
+dat <- read.csv(file = paste0(homewd,"/metadata/demo_data_indiv_pos_heatmap_genus.csv"), header = T, stringsAsFactors = F)
 head(dat)
 names(dat)
 
@@ -277,15 +277,18 @@ dat$genus <- factor(dat$genus, levels = c("Cardio.","Hepato.","Kobu.","Kunsagi."
                                           "Sapelo.","Tescho.", "Sapo."))   
 dat$virus <- factor(dat$virus, levels = c("Eidolon dupreanum cardiovirus", "Eidolon dupreanum hepatovirus", "Eidolon dupreanum kobuvirus", "Eidolon dupreanum kobuvirus 2",
                                           "Eidolon dupreanum kunsagivirus", "Pteropus rufus mischivirus", "Rousettus madagascariensis picornavirus 1", "Rousettus madagascariensis picornavirus 2",
-                                          "Rousettus madagascariensis picornavirus 3", "Eidolon dupreanum sapelovirus 1","Eidolon dupreanum sapelovirus 2", "Rousettus madagascariensis sapelovirus 1",
+                                          "Rousettus madagascariensis picornavirus 3","Rousettus madagascariensis picornavirus 4", "Eidolon dupreanum sapelovirus 1","Eidolon dupreanum sapelovirus 2", "Rousettus madagascariensis sapelovirus 1",
                                           "Eidolon dupreanum teschovirus 1","Rousettus madagascariensis teschovirus 1","Rousettus madagascariensis teschovirus 2","Eidolon dupreanum sapovirus 1",
                                           "Eidolon dupreanum sapovirus 2", "Eidolon dupreanum sapovirus 3", "Eidolon dupreanum sapovirus 4", "Rousettus madagascariensis sapovirus 1",
-                                          "Rousettus madagascariensis sapovirus 2", "Rousettus madagascariensis sapovirus 3"))   
+                                          "Rousettus madagascariensis sapovirus 2", "Rousettus madagascariensis sapovirus 3", "Rousettus madagascariensis sapovirus 4"))   
 
 #pick colors for virus genera
-genuscolz<- c("Cardio."="#F8766D","Hepato."="#D89000","Kobu."="#A3A500","Kunsagi."="#39B600","Mischi."="#00BF7D",
-              "Sapelo."="#00BFC4","Sapo."="#00B0F6","Tescho."="#E76BF3","Bat picorna."="#9590FF",
-              "Alpha."="black")
+# genuscolz<- c("Cardio."="#F8766D","Hepato."="#D89000","Kobu."="#A3A500","Kunsagi."="#39B600","Mischi."="#00BF7D",
+#               "Sapelo."="#00BFC4","Sapo."="#00B0F6","Tescho."="#E76BF3","Bat picorna."="#9590FF",
+#               "Alpha."="black")
+genuscolz<- c("Cardiovirus"="#F8766D","Hepatovirus"="#D89000","Kobuvirus"="#A3A500","Kunsagivirus"="#39B600","Mischivirus"="#00BF7D",
+              "Sapelovirus"="#00BFC4","Sapovirus"="#00B0F6","Teschovirus"="#E76BF3","Bat picornavirus"="#9590FF",
+              "Alphavirus"="black")
 
 library(scales)
 hex_codes2 <- hue_pal()(30)      
@@ -293,10 +296,10 @@ show_col(hex_codes2)
 
 viruscolz<-c("Eidolon dupreanum cardiovirus"="#F8766D", "Eidolon dupreanum hepatovirus"="#D89000", "Eidolon dupreanum kobuvirus"="#A3A500", "Eidolon dupreanum kobuvirus 2"="#A3A560",
              "Eidolon dupreanum kunsagivirus"="#39B600", "Pteropus rufus mischivirus"="#00BF7D", "Rousettus madagascariensis picornavirus 1"="#9590FF", "Rousettus madagascariensis picornavirus 2"="#B983FF",
-             "Rousettus madagascariensis picornavirus 3"="mediumpurple4", "Eidolon dupreanum sapelovirus 1"="aquamarine1","Eidolon dupreanum sapelovirus 2"="aquamarine3", "Rousettus madagascariensis sapelovirus 1"="aquamarine4",
+             "Rousettus madagascariensis picornavirus 3"="mediumpurple4", "Rousettus madagascariensis picornavirus 4"="thistle4","Eidolon dupreanum sapelovirus 1"="aquamarine1","Eidolon dupreanum sapelovirus 2"="aquamarine3", "Rousettus madagascariensis sapelovirus 1"="aquamarine4",
              "Eidolon dupreanum teschovirus 1"="palevioletred1","Rousettus madagascariensis teschovirus 1"="palevioletred3","Rousettus madagascariensis teschovirus 2"="palevioletred4","Eidolon dupreanum sapovirus 1"="lightskyblue1",
              "Eidolon dupreanum sapovirus 3"="lightskyblue3", "Eidolon dupreanum sapovirus 4"="lightskyblue4", "Rousettus madagascariensis sapovirus 1"="#619CFF",
-             "Rousettus madagascariensis sapovirus 2"="royalblue3", "Rousettus madagascariensis sapovirus 3"="royalblue4")
+             "Rousettus madagascariensis sapovirus 2"="royalblue3", "Rousettus madagascariensis sapovirus 3"="royalblue4", "Rousettus madagascariensis sapovirus 4"="navy")
 
 
 dat$bat_species<-factor(dat$bat_species, levels=c("Pteropus rufus","Eidolon dupreanum", "Rousettus madagascariensis"))
@@ -309,26 +312,60 @@ dat<-subset(dat, bat_species!="Pteropus rufus")
 library(ggh4x)
 
 #virus and genus together
-p4<-ggplot(dat) +
-  geom_bar(aes(x = sampling_date, y = num_virus, fill = virus),
+# p4<-ggplot(dat) +
+#   geom_bar(aes(x = sampling_date, y = num_virus, fill = virus),
+#            position = "stack",
+#            stat = "identity") +
+#   #facet_nested(roost_site+genus~., scales="free", space="free")+
+#   facet_nested(genus~roost_site, scales="free", space="free",
+#                 nest_line = element_line(color="white"), solo_line = TRUE)+
+#   scale_fill_manual(values=viruscolz)+
+#   
+#   labs(
+#     x = "Sampling date",
+#     y= "Number of sequences",
+#     fill="Virus species",
+#     title="")+
+#   theme_linedraw()+
+#   scale_y_continuous(n.breaks = 2)+
+#   guides(fill = guide_legend(ncol = 1))+
+#   theme(plot.margin = margin(0, 1, 0, 30, "pt"),
+#         plot.background = element_blank(),
+#         panel.grid.major = element_blank(),
+#         panel.grid.minor = element_blank(),
+#         axis.text.y = element_text(size=10),
+#         #axis.text.x = element_text(size=10),
+#         axis.text.x = element_text(angle = 90, size=10),
+#         legend.text = element_text(size=8, face="italic"),
+#         legend.title = element_text(size=9),
+#         legend.position = "right")
+# 
+# p4
+
+
+p5<-ggplot(dat,aes(x = sampling_date, y = num_genus, fill = genus_full, label=num_virus)) +
+  geom_bar(
            position = "stack",
            stat = "identity") +
-  #facet_nested(roost_site+genus~., scales="free", space="free")+
-  facet_nested(genus~roost_site, scales="free", space="free",
-                nest_line = element_line(color="white"), solo_line = TRUE)+
-  scale_fill_manual(values=viruscolz)+
+  #geom_text(size = 3, position = position_stack(vjust = 0.5))+
+  facet_nested(.~roost_site, scales="free", space="free",
+               nest_line = element_line(color="white"), solo_line = TRUE)+
+  scale_fill_manual(values=genuscolz)+
   
   labs(
     x = "Sampling date",
-    y= "Number of sequences",
-    fill="Virus species",
+    y= "Number of unique viral species per genus",
+    fill="Virus genus",
     title="")+
   theme_linedraw()+
-  scale_y_continuous(n.breaks = 2)+
+  scale_y_continuous(n.breaks = 4)+
+  guides(fill = guide_legend(ncol = 1))+
   theme(plot.margin = margin(0, 1, 0, 30, "pt"),
         plot.background = element_blank(),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
+        axis.title.x = element_text(color="black", size=12),
+        axis.title.y = element_text(color="black", size=12),
         axis.text.y = element_text(size=10),
         #axis.text.x = element_text(size=10),
         axis.text.x = element_text(angle = 90, size=10),
@@ -336,7 +373,7 @@ p4<-ggplot(dat) +
         legend.title = element_text(size=9),
         legend.position = "right")
 
-p4
+p5
 
 ###stats for comparing diversity between the two sampling sites: 
 
@@ -412,8 +449,8 @@ Hutcheson_t_test(
 library(cowplot)
 library(ggplotify)
 
-Fig1.2<-plot_grid(p4_pos, p4, labels=c("A","B"),
-                rel_widths = c(2,2.5), rel_heights = c(2,1),
+Fig1.2<-plot_grid(p4_pos, p5, labels=c("A","B"),
+                rel_widths = c(2,2), rel_heights = c(2,1),
                 ncol=2, align="hv", axis="l", label_size = 23)
 Fig1.2
 Fig1.2<-as.ggplot(Fig1.2)
