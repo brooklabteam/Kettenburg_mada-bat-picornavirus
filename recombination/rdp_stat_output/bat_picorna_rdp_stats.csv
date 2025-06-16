@@ -1,0 +1,47 @@
+,,,Breakpoint Positions
+,,In Alignment, ,In Recombinant Sequence, ,Relative to HQ595345.1,, , , , , , Detection Methods
+Recombination Event Number, Number In .RDP File, Begin, End,Begin, End,Begin, End, Recombinant Sequence(s), Minor Parental Sequence(s), Major Parental Sequence(s), RDP, GENECONV, Bootscan, Maxchi, Chimaera, SiSscan,PhylPro, LARD, 3Seq
+ 1 ,1, 8230, 3601, 7062, 2586, 7535, 3127,^KJ641699.1,Unknown (KJ641690.1),KJ641687.1, 3.3697659256534E-04,NS, 1.31878185315803E-02, 1.40254256932613E-05, 5.56698627837705E-07, 3.14928705192431E-11,NS,NS, 1.21395571565097E-05,
+
+ 2 ,2~, 8312, 200, 7748, 115, 7617, 0,^PP711946,PP711930,Unknown (PP711912), 1.68441473460874E-05, 9.72905422786809E-03,NS,NS,NS, 3.17470861007935E-05,NS,NS, 7.60262110065935E-03,
+ 2,,,,,,,,,PP711909,
+
+ 3 ,3~, 274, 350, 109, 184, 0, 21,^OP963617.1,PP711945,Unknown (OQ818328), 2.94561788647389E-05,NS,NS, 8.75158898859685E-03, 3.52260804338256E-03,NS,NS,NS, 9.28911217908979E-03,
+ 3,,,,,,,,,PP711930,Unknown(OQ818325)
+ 3,,,,,,,,,PP711912,
+ 3,,,,,,,,,PP711913,
+
+ 4 ,4~, 8096, 200, 7547, 104, 7413, 0,^PV788825,PP711912,Unknown (PP711909), 3.22735863970839E-05,NS,NS, 1.9594426605551E-04, 3.49790437275121E-04, 2.10574990808354E-02,NS,NS, 3.73280503316588E-02,
+ 4,,,,,,,,,PP711913,Unknown(PP711930)
+
+ 5 ,5~, 503, 714, 400, 607, 166, 375,PV788825,PP711946,PP711945,NS,NS,NS, 4.13548279459239E-05,NS, 5.42435602185579E-19,NS,NS,NS,
+ 5,,,,,,,,PP766469,,
+
+ 6 ,12~, 4734, 4902, 4336, 4504, 4129, 4297,^PP711946,PP746000,PV788825, 2.01569851589308E-03,NS,NS,NS,NS,NS,NS,NS, 2.41445795192035E-02,
+ 6,,,,,,,,,,PP766469
+
+ 7 ,15~, 848, 962, 509, 608, 509, 608,^HQ595345.1,OP963617.1,PV788825,NS,NS,NS, 3.4345884981013E-03,NS, 2.3277985524216E-05,NS,NS,NS,
+ 7,,,,,,,,NC_015934.1[T],,PP766469
+ 7,,,,,,,,KJ641693.1,,
+ 7,,,,,,,,OQ363775.1,,
+ 7,,,,,,,,OQ363764.1[P],,
+
+ 8 ,16~, 1073, 1241, 363, 528, 719, 884,^KJ641687.1,OQ363764.1,Unknown (PP711945),NS,NS,NS, 2.08907121741353E-03, 9.61161070987593E-06, 2.50676422505415E-39,NS,NS,NS,
+
+ 9 ,20~, 992, 1341, 814, 1160, 638, 984,^PV788825,PP711913,Unknown (PP711930), 7.90747025801383E-03,NS, 2.19526240681252E-02, 1.05950238646865E-02, 3.87328861043032E-04, 7.57268752271651E-07,NS,NS, 4.32661608720508E-02,
+ 9,,,,,,,,PP766469[P],,Unknown(PP711909)
+
+ 10 ,38~, 7066, 7240, 6624, 6798, 6386, 6560,^OQ363775.1,KJ641699.1,PP711928, 4.77493811533857E-02,NS, 4.12457477938911E-02,NS,NS,NS,NS,NS,NS,
+ 10,,,,,,,,KJ641693.1[T],,
+
+Table Key:
+~            = It is possible that this apparent recombination signal could have been caused by an evolutionary
+               process other than recombination.
+*            = The actual breakpoint position is undetermined (it was most likely overprinted by a subsequent 
+               recombination event).
+^            = The recombinant sequence may have been misidentified (one of the identified parents might be the recombinant)
+Minor Parent = Parent contributing the smaller fraction of sequence.
+Major Parent = Parent contributing the larger fraction of sequence.
+Unknown      = Only one parent and a recombinant need be in the alignment for a recombination event to be detectable.
+               The sequence listed as unknown was used to infer the existance of a missing parental sequence.
+NS           = No significant P-value was recorded for this recombination event using this method.
