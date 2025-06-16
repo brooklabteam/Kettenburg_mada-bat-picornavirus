@@ -1,4 +1,4 @@
-Accession,Organism_Name,Isolate,Species,Genus,num_genus_novel_contigs,num_genus_novel_reads,num_genus_novel_reads_log,Country,region,source,host_class,Host,Collection_Date,Seq_type
+Accession,Organism_Name,Isolate,Species,Genus,num_genus_novel_contigs,num_genus_novel_reads,num_genus_novel_reads_log,Country,region,source,host_class,Host,Collection_Date,novel
 AB084788.1,Aichivirus B,,Aichivirus B,Kobuvirus,6,716402,5.85515679,Japan,Asia,Bos taurus,Ungulate,0,2002,0
 AB522390.3,Sapovirus Hu/D1714-B/2008/JPN,,Sapporo virus,Sapovirus,15,116114,5.064884586,Japan,Asia,Homo sapiens,Human,0,2008,0
 AB522397.2,Sapovirus D1737-A/Jun2008/JPN,,Sapporo virus,Sapovirus,15,116114,5.064884586,Japan,Asia,Homo sapiens,Human,0,2008,0
