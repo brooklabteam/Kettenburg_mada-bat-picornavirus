@@ -1,6 +1,6 @@
 molecule,start,end,mid,gene,type
-Bat picornavirus,1,631,316,5'UTR,full
-Bat picornavirus,8233,8552,8150,3'UTR,full
+Bat picornavirus,1,616,316,5'UTR,full
+Bat picornavirus,8125,8398,8150,3'UTR,full
 Hepatovirus,1,805,350,5'UTR,full
 Hepatovirus,7762,7917,7600,3'UTR,full
 Kobuvirus,1,762,381.5,5'UTR,full

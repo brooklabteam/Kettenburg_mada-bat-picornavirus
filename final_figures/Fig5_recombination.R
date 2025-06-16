@@ -48,28 +48,52 @@ colz2=c("5'UTR"="cornflowerblue", "L"="white","VP4"="white", "VP2"="white", "VP0
         "Polyprotein"="black",
         "Minor structural protein"="black","3'UTR"="cornflowerblue")
 
-
-
 #Plot map and BLAST together plots
 
 #Subset map data by virus
+map_batpicornavirus<-subset(map,molecule=="Bat picornavirus")
 map_hepatovirus<-subset(map,molecule=="Hepatovirus")
-map_kobuvirus<-subset(map,molecule=="Kobuvirus")
 map_sapovirus<-subset(map,molecule=="Sapovirus")
 map_sapelovirus<-subset(map,molecule=="Sapelovirus")
 map_teschovirus<-subset(map,molecule=="Teschovirus")
 
+map_batpicornavirus_pep<-subset(map_pep,molecule=="Bat picornavirus")
 map_hepatovirus_pep<-subset(map_pep,molecule=="Hepatovirus")
 map_sapovirus_pep<-subset(map_pep,molecule=="Sapovirus")
 map_sapelovirus_pep<-subset(map_pep,molecule=="Sapelovirus")
 map_teschovirus_pep<-subset(map_pep,molecule=="Teschovirus")
 
+map_batpicornavirus_feat<-subset(map_feat,molecule=="Bat picornavirus")
 map_hepatovirus_feat<-subset(map_feat,molecule=="Hepatovirus")
 map_sapovirus_feat<-subset(map_feat,molecule=="Sapovirus")
 map_sapelovirus_feat<-subset(map_feat,molecule=="Sapelovirus")
 map_teschovirus_feat<-subset(map_feat,molecule=="Teschovirus")
 
 #gene maps
+map_batpicorna<-ggplot(map_batpicornavirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
+  geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
+                  arrowhead_height = grid::unit(4, "mm"),
+                  arrow_body_height = grid::unit(4, "mm")) +
+  geom_subgene_arrow(data = map_batpicornavirus_pep, mapping=aes(xmin = from, xmax = to, y = molecule, fill=gene,
+                                                             xsubmin=from, xsubmax=to), color="black",
+                     arrowhead_width = grid::unit(3, "mm"),
+                     arrowhead_height = grid::unit(4, "mm"),
+                     arrow_body_height = grid::unit(4, "mm"))+
+  geom_text(data=map_batpicornavirus_feat,mapping=aes(x = mid, y = 1.5, label = gene), size=4) +
+  scale_fill_manual(values=colz2)+
+  theme_genes()+
+  scale_x_continuous(limits=c(0,8398),expand=c(0,0))+
+  theme(legend.position = "none")+
+  theme(plot.margin = unit(c(0,0,0,0), "cm"),
+        axis.text.y = element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.x = element_blank(),
+        axis.title.x = element_blank(),
+        axis.line.x = element_blank())+
+  xlab("Genome position") + ylab("")
+map_batpicorna
+
+
 map_hepato<-ggplot(map_hepatovirus, aes(xmin = start, xmax = end, y = molecule, fill=gene)) +
   geom_gene_arrow(arrowhead_width = grid::unit(3, "mm"),
                   arrowhead_height = grid::unit(4, "mm"),
@@ -722,6 +746,138 @@ tescho_nt<-as.ggplot(tescho_nt)
 tescho_nt
 
 
+#batpicornavirus
+#Start with no clades - PV788825 as reference
+batpicornavirus_nt_map <- read.csv(file = "batpicorna_PV788825_view.csv", header = T, stringsAsFactors = F) #Amino acid
+head(batpicornavirus_nt_map)
+
+#move to long
+long.sim_nt <- melt(batpicornavirus_nt_map, id.vars = c("Pointer"), measure.vars = c("PP711909...PP711912","PP711909...PV788825",
+                                                                                 "PP711912...PV788825"))
+
+unique(long.sim_nt$variable)
+
+long.sim_nt$variable <- as.character(long.sim_nt$variable)
+
+names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
+
+long.sim_nt$accession[long.sim_nt$accession == "PP711909...PP711912"] <- "Rousettus bat picornavirus 25A/Uganda/UR47/2018: PP711909 (major parent) - Rousettus bat picornavirus 11A/Uganda/UV28/2018: PP711912 (minor parent)"
+long.sim_nt$accession[long.sim_nt$accession == "PP711909...PV788825"] <- "Rousettus bat picornavirus 25A/Uganda/UR47/2018: PP711909 (major parent) - R. madagascariensis bat picornavirus 4: PV788825* (recombinant)"
+long.sim_nt$accession[long.sim_nt$accession == "PP711912...PV788825"] <- "Rousettus bat picornavirus 11A/Uganda/UV28/2018: PP711912 (minor parent) - R. madagascariensis bat picornavirus 4: PV788825* (recombinant)"
+
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Rousettus bat picornavirus 25A/Uganda/UR47/2018: PP711909 (major parent) - Rousettus bat picornavirus 11A/Uganda/UV28/2018: PP711912 (minor parent)",
+                                                                  "Rousettus bat picornavirus 25A/Uganda/UR47/2018: PP711909 (major parent) - R. madagascariensis bat picornavirus 4: PV788825* (recombinant)",
+                                                                  "Rousettus bat picornavirus 11A/Uganda/UV28/2018: PP711912 (minor parent) - R. madagascariensis bat picornavirus 4: PV788825* (recombinant)"))
+
+#and plot
+long.sim_nt$value[long.sim_nt$value<0] <- 0
+long.sim_nt$value <- long.sim_nt$value/100
+
+#plot nucleotide
+title<-expression(paste(italic("Potential recombinant - R. madagascariensis bat picornavirus 4: PV788825*")))
+
+batpicorna_map_clade_nt1 <- ggplot(long.sim_nt) + 
+  annotate("rect", xmin=1, xmax=104, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  annotate("rect", xmin=7547, xmax=8398, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=Pointer, y=value, color=accession), size=1) +
+  theme(panel.background = element_rect("white"),
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Bootstrap support")+xlab("Genome position")+
+  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
+        strip.background = element_rect(fill="white"), 
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_blank(),
+        legend.key.height= unit(3.5, 'mm'),
+        legend.key.width= unit(3.5, 'mm'),
+        legend.background =element_rect(fill = alpha("white", 0)),
+        axis.text = element_text(size=12), axis.title = element_text(size=12),
+        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
+  geom_hline(yintercept=0.69, linetype='dashed', col = 'black')+
+  #scale_color_manual(values=colz2) + 
+  scale_fill_distiller()+
+  ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
+  scale_x_continuous(expand=c(0,0))+
+  scale_y_continuous(limits=c(0,1), expand=c(0,0))
+
+batpicorna_map_clade_nt1
+
+#put gene map with bootscan
+batpicorna_clade_nt1<-batpicorna_map_clade_nt1/map_batpicorna+plot_layout(nrow=2,  heights = c(1, 0.2))
+batpicorna_clade_nt1
+
+batpicorna_clade_nt1<-as.ggplot(batpicorna_clade_nt1)
+batpicorna_clade_nt1
+
+#Second version of recombinant
+batpicornavirus_nt_map <- read.csv(file = "batpicorna_PV788825_view2.csv", header = T, stringsAsFactors = F) #Amino acid
+head(batpicornavirus_nt_map)
+
+#move to long
+long.sim_nt <- melt(batpicornavirus_nt_map, id.vars = c("Pointer"), measure.vars = c("PP711930...PP711913","PP711930...PV788825",
+                                                                                     "PP711913...PV788825"))
+
+unique(long.sim_nt$variable)
+
+long.sim_nt$variable <- as.character(long.sim_nt$variable)
+
+names(long.sim_nt)[names(long.sim_nt)=="variable"] <- "accession"
+
+long.sim_nt$accession[long.sim_nt$accession == "PP711930...PP711913"] <- "Rousettus bat picornavirus 25C/Kenya/BAT6/2015: PP711930 (major parent) - Rousettus bat picornavirus 11B/Kenya/BAT1828/2015: PP711913 (minor parent)"
+long.sim_nt$accession[long.sim_nt$accession == "PP711930...PV788825"] <- "Rousettus bat picornavirus 25C/Kenya/BAT6/2015: PP711930 (major parent) - R. madagascariensis bat picornavirus 4: PV788825* (recombinant)"
+long.sim_nt$accession[long.sim_nt$accession == "PP711913...PV788825"] <- "Rousettus bat picornavirus 11B/Kenya/BAT1828/2015: PP711913 (minor parent) - R. madagascariensis bat picornavirus 4: PV788825* (recombinant)"
+
+long.sim_nt$accession <- factor(long.sim_nt$accession, levels = c("Rousettus bat picornavirus 25C/Kenya/BAT6/2015: PP711930 (major parent) - Rousettus bat picornavirus 11B/Kenya/BAT1828/2015: PP711913 (minor parent)",
+                                                                  "Rousettus bat picornavirus 25C/Kenya/BAT6/2015: PP711930 (major parent) - R. madagascariensis bat picornavirus 4: PV788825* (recombinant)",
+                                                                  "Rousettus bat picornavirus 11B/Kenya/BAT1828/2015: PP711913 (minor parent) - R. madagascariensis bat picornavirus 4: PV788825* (recombinant)"))
+
+#and plot
+long.sim_nt$value[long.sim_nt$value<0] <- 0
+long.sim_nt$value <- long.sim_nt$value/100
+
+#plot nucleotide
+title<-expression(paste(italic("Potential recombinant - R. madagascariensis bat picornavirus 4: PV788825*")))
+
+batpicorna_map_clade_nt2 <- ggplot(long.sim_nt) + 
+  annotate("rect", xmin=1050, xmax=1300, ymin=0, ymax=1, alpha=0.6,  fill="azure4")+
+  geom_line(aes(x=Pointer, y=value, color=accession), size=1) +
+  theme(panel.background = element_rect("white"),
+        panel.border = element_rect(linetype = "solid", fill=NA)) + ylab("% Bootstrap support")+xlab("Genome position")+
+  theme(panel.grid = element_blank(), strip.text = element_text(face="italic", size=12),
+        strip.background = element_rect(fill="white"), 
+        legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
+        legend.justification = "left",
+        legend.text = element_text(face="italic", size = 8),
+        legend.title = element_blank(),
+        legend.key.height= unit(3.5, 'mm'),
+        legend.key.width= unit(3.5, 'mm'),
+        legend.background =element_rect(fill = alpha("white", 0)),
+        axis.text = element_text(size=12), axis.title = element_text(size=12),
+        plot.margin = unit(c(0,0.5,1,0.5), "cm"),
+        plot.title = element_text(size = 14, face = "bold")) +
+  guides(colour = guide_legend(nrow = 3))+
+  scale_color_manual(values=colzpalette) + 
+  geom_hline(yintercept=0.69, linetype='dashed', col = 'black')+
+  #scale_color_manual(values=colz2) + 
+  scale_fill_distiller()+
+  ggtitle(title)+
+  coord_cartesian(ylim=c(0,1.02))+
+  scale_x_continuous(expand=c(0,0))+
+  scale_y_continuous(limits=c(0,1), expand=c(0,0))
+
+batpicorna_map_clade_nt2
+
+#put gene map with bootscan
+batpicorna_clade_nt2<-batpicorna_map_clade_nt2/map_batpicorna+plot_layout(nrow=2,  heights = c(1, 0.2))
+batpicorna_clade_nt2
+
+batpicorna_clade_nt2<-as.ggplot(batpicorna_clade_nt2)
+batpicorna_clade_nt2
+
 
 #To plot figure 4
 fig4<-plot_grid(sapelo_clade_nt1,tescho_nt,
@@ -731,8 +887,8 @@ fig4
 
 
 #To plot supplementary for everything else
-recombination_supp<-plot_grid(hepato_clade_nt,sapelo_clade_nt2,tescho_clade_nt1, tescho_clade_nt2,
-                           ncol=2,
+recombination_supp<-plot_grid(batpicorna_clade_nt1, hepato_clade_nt,sapelo_clade_nt2,tescho_clade_nt1, tescho_clade_nt2,
+                           ncol=3,
                            labels="AUTO", label_size = 23, align = "hv", axis="b")
 recombination_supp
 
@@ -740,7 +896,7 @@ recombination_supp
 # save figs
 homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
 
-ggsave(file = paste0(homewd, "/final_figures/Fig4_recombination.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/Fig5_recombination.pdf"),
        plot = fig4,
        units="mm",  
        width=100, 
@@ -751,8 +907,8 @@ ggsave(file = paste0(homewd, "/final_figures/Fig4_recombination.pdf"),
 ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig5_recombination.pdf"),
        plot = recombination_supp,
        units="mm",  
-       width=100, 
-       height=80, 
+       width=200, 
+       height=100, 
        scale=4, 
        dpi=300)
 
