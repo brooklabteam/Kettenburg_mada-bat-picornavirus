@@ -25,10 +25,10 @@ library(patchwork)
 ##########################################################################################################
 ##Set working directory
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
-setwd(paste0(homewd,"/raxml_trees/master_phylo_fig"))
+setwd(paste0(homewd,"/IQtree_phylogenies/master_phylo_fig"))
 
 #load the tree and root it
-tree <-  read.tree("circ.raxml.supportFBP") 
+tree <-  read.tree("polymerase_summary_align.fasta.treefile") 
 rooted.tree <- root(tree, which(tree$tip.label == "NC_001547.1"))
 #take a quick look in base R
 plot(rooted.tree)
@@ -45,8 +45,8 @@ head(dat)
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #293
-length(tree$tip.label) #293
+nrow(dat) #296
+length(tree$tip.label) #296
 
 #check subgroup names
 unique(dat$Genus)
@@ -201,13 +201,13 @@ p1 <- ggtree(rooted.tree, layout="fan", size=0.5) %<+% tree.dat +
         legend.position = c(0.52,0.07),
         legend.margin = margin(0,0,0,0),
         legend.box.margin=margin(-10,-10,-10,-10),
-        legend.text = element_text(size=9),
-        legend.title = element_text(size=9),
+        legend.text = element_text(size=10),
+        legend.title = element_text(size=10),
         legend.key = element_rect(fill = "transparent"),
         legend.key.size = unit(0.25, "cm"),
         legend.direction = "vertical",
         legend.box = "horizontal") +
-  xlim(c(0,15)) 
+  xlim(c(0,9)) 
 p1
 
 library(scales)
@@ -220,15 +220,15 @@ p1
 
 #add clade labels
 p1.1 <- p1 +
-  geom_cladelabel(node = 302, label = 'italic(Kobuvirus)', parse=TRUE,offset=3, offset.text=0.4, fontsize=3, angle=320, hjust=0,align = TRUE, color="#A3A500") +
-  geom_cladelabel(node = 472, label = "italic(Kunsagivirus)", parse=TRUE, offset=3, offset.text=0.4,  fontsize=3, angle=50,hjust=0.5,align = TRUE, color="#39B600") +
-  geom_cladelabel(node = 531, label = "italic(Cardiovirus)", parse=TRUE,offset=3, offset.text=0.4,  fontsize=3, angle=30,hjust=0.5,align = TRUE, color="#F8766D") +
-  geom_cladelabel(node = 556, label = "italic(Mischivirus)",parse=TRUE,offset=3, offset.text=0.4,  fontsize=3,angle=12,hjust=0.6,align = TRUE, color="#00BF7F") +
-  geom_cladelabel(node = 517, label = "italic(Teschovirus)",parse=TRUE,offset=3, offset.text=0.4,  fontsize=3,angle=356,hjust=0.3,align = TRUE, color="#E76BF3") +
-  geom_cladelabel(node = 329, label = "italic(Hepatovirus)",parse=TRUE,offset=3, offset.text=0.4,  fontsize=3,angle=73,hjust=0.4,align = TRUE, color="#D89000") +
-  geom_cladelabel(node = 481, label = "italic(Sapelovirus)",parse=TRUE,offset=3, offset.text=0.4,  fontsize=3,angle=335,hjust=0.4,align = TRUE, color="#00BFC4") +
-  geom_cladelabel(node = 500, label = "italic(Bat_picornavirus)",parse=TRUE,offset=3, offset.text=0.4, angle=310,hjust=0.5, fontsize=3,align = TRUE, color="#9590FF") +
-  geom_cladelabel(node = 363, label = "italic(Sapovirus)",parse=TRUE,offset=3, offset.text=0.4,angle=45, fontsize=3,align = TRUE,hjust=1, color="#00B0F6")
+  geom_cladelabel(node = 403, label = 'italic(Kobuvirus)', parse=TRUE,offset=2.5, offset.text=0.4, fontsize=4, angle=310, hjust=0.6,align = TRUE, color="#A3A500") +
+  geom_cladelabel(node = 461, label = "italic(Kunsagivirus)", parse=TRUE, offset=2.5, offset.text=0.4,  fontsize=4, angle=90,hjust=0.5,align = TRUE, color="#39B600") +
+  geom_cladelabel(node = 299, label = "italic(Cardiovirus)", parse=TRUE,offset=2.5, offset.text=0.4,  fontsize=4, angle=40,hjust=01,align = TRUE, color="#F8766D") +
+  geom_cladelabel(node = 297, label = "italic(Mischivirus)",parse=TRUE,offset=2.5, offset.text=0.4,  fontsize=4,angle=14,hjust=0.8,align = TRUE, color="#00BF7F") +
+  geom_cladelabel(node = 572, label = "italic(Teschovirus)",parse=TRUE,offset=2.5, offset.text=0.4,  fontsize=4,angle=356,hjust=0.3,align = TRUE, color="#E76BF3") +
+  geom_cladelabel(node = 366, label = "italic(Hepatovirus)",parse=TRUE,offset=2.5, offset.text=0.4,  fontsize=4,angle=65,hjust=0.4,align = TRUE, color="#D89000") +
+  geom_cladelabel(node = 328, label = "italic(Sapelovirus)",parse=TRUE,offset=2.5, offset.text=0.4,  fontsize=4,angle=330,hjust=0.3,align = TRUE, color="#00BFC4") +
+  geom_cladelabel(node = 353, label = "italic(Bat_picornavirus)",parse=TRUE,offset=2.5, offset.text=0.4, angle=304,hjust=0.3, fontsize=4,align = TRUE, color="#9590FF") +
+  geom_cladelabel(node = 463, label = "italic(Sapovirus)",parse=TRUE,offset=2.5, offset.text=0.4,angle=45, fontsize=4,align = TRUE,hjust=1, color="#00B0F6")
 p1.1
 
 ##Add contig/read metadata
@@ -240,7 +240,7 @@ p2<-p1.1+geom_fruit(#data=contig,
                   geom=geom_tile,
                   mapping=aes(fill=Novel_contigs),
                   pwidth=1,
-                  offset=0.1) + 
+                  offset=0.15) + 
                 #scale_fill_viridis(option="G", name="Novel\ncontigs", direction = -1)
                   scale_fill_gradient(low="peachpuff1", high="orangered3")
                   
@@ -254,14 +254,14 @@ p3<-p2+new_scale_fill()+
   geom=geom_tile,
   mapping=aes(fill=Novel_reads_log10),
   pwidth=1,
-  offset=0.09)+ 
+  offset=0.15)+ 
   scale_fill_gradient(low="lightblue1", high="royalblue2")+
   #scale_fill_viridis(option="B", name="Novel\nreads (log10)", direction = -1) +
  theme(
                  #legend.direction = "none",
                  legend.margin = margin(c(0,0,0,0)),
-                 legend.text = element_text(size=9),
-                 legend.title = element_text(size=9),
+                 legend.text = element_text(size=10),
+                 legend.title = element_text(size=10),
                  legend.key.size = unit(0.3, "cm"),
        plot.margin = unit(c(0, 0, 0, 0), 
                           "cm"))
@@ -276,24 +276,24 @@ base<-p3+new_scale_fill()+
     geom=geom_tile,
     mapping=aes(fill=Seq_type),
     width=0.5,
-    offset=0.06)  + 
+    offset=0.1)  + 
   guides(fill = guide_legend(order=2))+
   scale_fill_manual(values=c("Novel seq"="gold2","Reference seq"="grey88"), name="Seq type")+
   theme(
     #legend.direction = "none",
-    legend.text = element_text(size=9),
-    legend.title = element_text(size=9),
+    legend.text = element_text(size=10),
+    legend.title = element_text(size=10),
     legend.key.size = unit(0.3, "cm"),
     plot.margin = unit(c(0, 0, 0, 0), 
                        "cm"))
 base
 
 #homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
-ggsave(file = paste0(homewd, "/final_figures/Fig2_summary_phylogeny.png"),
+ggsave(file = paste0(homewd, "/final_figures/Fig2_summary_phylogeny.pdf"),
        plot= base,
        units="mm",  
-       width=100, 
-       height=90, 
+       width=120, 
+       height=120, 
        scale=2, 
        dpi=500)
 
