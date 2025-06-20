@@ -498,6 +498,7 @@ mischi <- p2.1  %<+% p2.2dat +
         legend.direction = "vertical",
         legend.text = element_text(size=12),
         legend.title = element_text(size=12),
+        plot.margin = margin(0,0,0,0),
         legend.key.size = unit(0.3, "cm"))
 mischi
 
@@ -711,6 +712,7 @@ sapelo <- p3  %<+% p3.dat +
         legend.direction = "horizontal",
         legend.text = element_text(size=9),
         legend.title = element_text(size=9),
+        plot.margin = margin(0,0,0,0),
         legend.key.size = unit(0.3, "cm"))
 sapelo
 
@@ -750,7 +752,8 @@ unique(dat$Species)
 dat$Species <- factor(dat$Species, levels = c("Bat faecal sapovirus","Bat sapovirus", "Bat sapovirus TLC34/HK", "Bat sapovirus TLC39/HK" ,"Bat sapovirus TLC58/HK",
                                               "Bat sapovirus WD3",  
                                               "Eidolon dupreanum sapovirus 1",   
-                                              "Eidolon dupreanum sapovirus 2","Rousettus bat calicivirus","Rousettus madagascariensis sapovirus 2","Sapovirus sp.",  
+                                              "Eidolon dupreanum sapovirus 2","Rousettus bat calicivirus","Rousettus madagascariensis sapovirus 2",
+                                              "Rousettus madagascariensis sapovirus 4","Sapovirus sp.",  
                                               "Sapovirus Sapozj-9", "Sapovirus rat/S4-82", "Sapporo virus",    
                                               "Sindbis virus"))   
 
@@ -854,7 +857,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.2, "cm")) +
-  xlim(c(0,9))
+  xlim(c(0,18))
 
 p1
 
@@ -872,6 +875,7 @@ p1.1 <- p1  %<+% p0.dat +
   #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
   theme(legend.position = "bottom",
         legend.direction = "vertical",
+        plot.margin = margin(0,0,0,0),
         legend.text = element_text(size=12),
         legend.title = element_text(size=12),
         legend.key.size = unit(0.3, "cm"))
@@ -901,6 +905,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,12))+
   geom_cladelabel(node = 278, label = "Human and swine-hosted Sapporo viruses (collapsed clade)",offset=0.1, fontsize=3, color="black")+
+  geom_cladelabel(node = 246, label = "Hipposideros, Taphozous, and Rhinolophus bat-hosted sapoviruses (collapsed clade)",offset=0.1, fontsize=3, color="black")+
   geom_cladelabel(node = 260, label = "Myotis bat-hosted sapoviruses (collapsed clade)",offset=0.1, fontsize=3, color="black")
 
 p2
@@ -910,7 +915,8 @@ p2.1
 
 #collapse the labeled clades
 p3<-collapse(p2.1, 278)+geom_point2(aes(subset=(node==278)), size=3, shape=22, fill="white")
-p4<-collapse(p3, 260)+geom_point2(aes(subset=(node==260)), size=3, shape=22, fill="white")
+p4.1<-collapse(p3, 260)+geom_point2(aes(subset=(node==260)), size=3, shape=22, fill="white")
+p4<-collapse(p4.1, 246)+geom_point2(aes(subset=(node==246)), size=3, shape=22, fill="white")
 p4
 
 
@@ -928,6 +934,7 @@ sapo <- p4  %<+% p4.dat +
         legend.direction = "horizontal",
         legend.text = element_text(size=9),
         legend.title = element_text(size=9),
+        plot.margin = margin(0,0,0,0),
         legend.key.size = unit(0.3, "cm"))
 sapo
 
@@ -1129,6 +1136,7 @@ kunsagi <- p2  %<+% p2.dat +
         legend.direction = "horizontal",
         legend.text = element_text(size=9),
         legend.title = element_text(size=9),
+        plot.margin = margin(0,0,0,0),
         legend.key.size = unit(0.3, "cm"))
 kunsagi
 
@@ -1324,7 +1332,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
   geom_cladelabel(node = 330, label = "Bovine-hosted Aichivirus B viruses (collapsed clade)", offset=0.1,fontsize=3, color="black") +
   geom_cladelabel(node = 353, label = "Bovine-hosted Aichivirus C/D viruses", offset=0.05,fontsize=3, color="black") +
   geom_cladelabel(node = 194, label = "Canine, feline, and murine-hosted kobuviruses (collapsed clade)", offset=0.1,fontsize=3, color="black") +
-  geom_cladelabel(node = 225, label = "Bat (Scotophilus and Rhinolophus)-hosted kobuvirused (collapsed clade)", offset=0.1,fontsize=3, color="black") +
+  geom_cladelabel(node = 225, label = "Bat (Scotophilus and Rhinolophus)-hosted kobuviruses (collapsed clade)", offset=0.1,fontsize=3, color="black") +
   geom_cladelabel(node = 187, label = "Human-hosted Aichivirus A (collapsed clade)", offset=0.1,fontsize=3, color="black") +
   geom_cladelabel(node = 256, label = "Bat (Myotis and Miniopterus)-hosted Aichivirus F (collapsed clade)", offset=0.1,fontsize=3, color="black")
   
@@ -1357,6 +1365,7 @@ kobu <- p8  %<+% p8.dat +
         legend.direction = "vertical",
         legend.text = element_text(size=12),
         legend.title = element_text(size=12),
+        plot.margin = margin(0,0,0,0),
         legend.key.size = unit(0.3, "cm"))
 kobu
 
@@ -1573,6 +1582,7 @@ hepato <- p3  %<+% p3.dat +
         legend.direction = "vertical",
         legend.text = element_text(size=12),
         legend.title = element_text(size=12),
+        plot.margin = margin(0,0,0,0),
         legend.key.size = unit(0.3, "cm"))
 hepato
 
@@ -1777,6 +1787,7 @@ batpicorna <- p5  %<+% p5.dat +
         legend.direction = "vertical",
         legend.text = element_text(size=12),
         legend.title = element_text(size=12),
+        plot.margin = margin(0,0,0,0),
         legend.key.size = unit(0.3, "cm"))
 batpicorna
 
@@ -1917,7 +1928,7 @@ p1 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.2, "cm")) +
-  xlim(c(0,8))
+  xlim(c(0,13))
 
 p1
 
@@ -1935,6 +1946,7 @@ p1.1 <- p1  %<+% p0.dat +
   #guides(fill_continuous = guide_legend(order = 2),col = guide_legend(order = 1))+
   theme(legend.position = "none",
         legend.direction = "vertical",
+        plot.margin = margin(0,100,0,0),
         legend.text = element_text(size=12),
         legend.title = element_text(size=12),
         legend.key.size = unit(0.3, "cm"))
@@ -1962,7 +1974,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
         legend.direction = "vertical",
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
-  xlim(c(0,10))+
+  xlim(c(0,19))+
   geom_cladelabel(node = 50, label = "Porcine-hosted Teschovirus A, Porcine teschoviruses 15 and 16 (collapsed clades)",offset=0.1, fontsize=3, color="black")
 p2
 
@@ -1987,6 +1999,7 @@ tescho <- p3  %<+% p3.dat +
         legend.direction = "horizontal",
         legend.text = element_text(size=12),
         legend.title = element_text(size=12),
+        plot.margin = margin(0,0,0,0),
         legend.key.size = unit(0.3, "cm"))
 tescho
 
@@ -2202,6 +2215,7 @@ cardio <- p5  %<+% p5.dat +
         legend.direction = "vertical",
         legend.text = element_text(size=12),
         legend.title = element_text(size=12),
+        plot.margin = margin(0,0,0,0),
         legend.key.size = unit(0.3, "cm"))
 cardio
 
@@ -2265,4 +2279,33 @@ ggsave(file = paste0(homewd, "/final_figures/Fig3_indiv_phylogenies.pdf"),
        height=200, 
        scale=2, 
        dpi=500)
+
+##############################################################################################
+#Put smaller phylogenies with large phylogeny
+
+grid1<-plot_grid(base,cardio,hepato,kobu,kunsagi, labels=c("A","B","C","D","E"),
+                      rel_widths = c(4,1,1,1,1), rel_heights = c(4,1,1.2,1.2,0.6),
+                      ncol=1, align="hv", axis="l", label_size = 23)
+grid1
+grid1<-as.ggplot(grid1)
+
+grid2<-plot_grid(mischi,batpicorna, sapelo, tescho,sapo, labels=c("F","G","H","I","J"),
+                 rel_widths = c(1,1,1,1,1), rel_heights = c(0.9,1,1.2,0.8,1.4),
+                 ncol=1, align="hv", axis="l", label_size = 23)
+grid2
+grid2<-as.ggplot(grid2)
+
+finalgrid<-plot_grid(grid1, grid2, labels=c("",""),
+                 rel_widths=c(1,1), rel_heights = c(1,1),
+                 ncol=2,align="hv", axis="l", label_size = 23)
+finalgrid
+
+ggsave(file = paste0(homewd, "/final_figures/FigX_all_phylogenies.pdf"),
+       plot= finalgrid,
+       units="mm",  
+       width=500, 
+       height=400, 
+       scale=1, 
+       dpi=500)
+
 
