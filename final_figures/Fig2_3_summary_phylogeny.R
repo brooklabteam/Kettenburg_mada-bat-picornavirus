@@ -304,7 +304,7 @@ ggsave(file = paste0(homewd, "/final_figures/Fig2_summary_phylogeny.pdf"),
 
 #mischi
 #load the tree and root it
-tree <-  read.tree("mischi.raxml.supportFBP") 
+tree <-  read.tree("mischi_align.fasta.treefile") 
 rooted.tree <- root(tree, which(tree$tip.label == "NC_001547.1"))
 #take a quick look in base R
 plot(rooted.tree)
@@ -478,7 +478,7 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
 p2
 
 #flip nodes around to show ancestral states
-p2.1<-p2%>%ggtree::rotate(20)
+p2.1<-p2%>%ggtree::rotate(19)
 p2.1
 
 # p2.2<-p2.1%>%ggtree::rotate(18)
@@ -505,7 +505,7 @@ mischi
 
 #sapelo
 #load the tree and root it
-tree <-  read.tree("sapelo.raxml.supportFBP") 
+tree <-  read.tree("sapelo_align.fasta.treefile") 
 rooted.tree <- root(tree, which(tree$tip.label == "NC_001547.1"))
 #take a quick look in base R
 plot(rooted.tree)
@@ -521,8 +521,8 @@ head(dat)
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #57
-length(tree$tip.label) #57
+nrow(dat) #60
+length(tree$tip.label) #60
 
 #check subgroup names
 unique(dat$Species)
@@ -684,16 +684,18 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
         legend.text = element_text(size=9), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,10))+
-  geom_cladelabel(node = 78, label = "Swine-hosted sapelovirus A (collapsed clade)",offset=0.1, fontsize=3, color="black")
+  geom_cladelabel(node = 73, label = "Swine-hosted sapelovirus A (collapsed clade)",offset=0.1, fontsize=3, color="black")
 p2
 
 p2.1<-p2%>%ggtree::rotate(60)
 p2.1
 
-#collapse the labeled clades
-p3<-collapse(p2.1, 78)+geom_point2(aes(subset=(node==78)), size=3, shape=22, fill="white")
-p3
+p2.1<-p2.1%>%ggtree::rotate(71)
+p2.1
 
+#collapse the labeled clades
+p3<-collapse(p2.1, 73)+geom_point2(aes(subset=(node==73)), size=3, shape=22, fill="white")
+p3
 
 ##add bootstrap values to this tree
 p3.dat <- p3$data
@@ -716,7 +718,7 @@ sapelo
 
 #sapo
 #load the tree and root it
-tree <-  read.tree("sapo.raxml.supportFBP") 
+tree <-  read.tree("sapo_align.fasta.treefile") 
 rooted.tree <- root(tree, which(tree$tip.label == "NC_001547.1"))
 #take a quick look in base R
 plot(rooted.tree)
@@ -732,8 +734,8 @@ head(dat)
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #222
-length(tree$tip.label) #222
+nrow(dat) #223
+length(tree$tip.label) #223
 
 #check subgroup names
 unique(dat$Species)
@@ -898,17 +900,17 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,12))+
-  geom_cladelabel(node = 276, label = "Human and swine-hosted Sapporo viruses (collapsed clade)",offset=0.1, fontsize=3, color="black")+
-  geom_cladelabel(node = 245, label = "Myotis bat-hosted sapoviruses (collapsed clade)",offset=0.1, fontsize=3, color="black")
+  geom_cladelabel(node = 278, label = "Human and swine-hosted Sapporo viruses (collapsed clade)",offset=0.1, fontsize=3, color="black")+
+  geom_cladelabel(node = 260, label = "Myotis bat-hosted sapoviruses (collapsed clade)",offset=0.1, fontsize=3, color="black")
 
 p2
 
-p2.1<-p2%>%ggtree::rotate(243)
+p2.1<-p2%>%ggtree::rotate(244)
 p2.1
 
 #collapse the labeled clades
-p3<-collapse(p2.1, 276)+geom_point2(aes(subset=(node==276)), size=3, shape=22, fill="white")
-p4<-collapse(p3, 245)+geom_point2(aes(subset=(node==245)), size=3, shape=22, fill="white")
+p3<-collapse(p2.1, 278)+geom_point2(aes(subset=(node==278)), size=3, shape=22, fill="white")
+p4<-collapse(p3, 260)+geom_point2(aes(subset=(node==260)), size=3, shape=22, fill="white")
 p4
 
 
@@ -933,7 +935,7 @@ sapo
 
 #kunsagi
 #load the tree and root it
-tree <-  read.tree("kunsagi.raxml.supportFBP") 
+tree <-  read.tree("kunsagi_align.fasta.treefile") 
 rooted.tree <- root(tree, which(tree$tip.label == "NC_001547.1"))
 #take a quick look in base R
 plot(rooted.tree)
@@ -1134,7 +1136,7 @@ kunsagi
 
 #kobu
 #load the tree and root it
-tree <-  read.tree("kobu.raxml.supportFBP") 
+tree <-  read.tree("kobu_align.fasta.treefile") 
 rooted.tree <- root(tree, which(tree$tip.label == "NC_001547.1"))
 #take a quick look in base R
 plot(rooted.tree)
@@ -1154,7 +1156,7 @@ setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
 nrow(dat) #183
-length(tree$tip.label) #182
+length(tree$tip.label) #183
 
 #check subgroup names
 unique(dat$Species)
@@ -1363,7 +1365,7 @@ kobu
 
 #hepato
 #load the tree and root it
-tree <-  read.tree("hepato.raxml.supportFBP") 
+tree <-  read.tree("hepato_align.fasta.treefile") 
 rooted.tree <- root(tree, which(tree$tip.label == "NC_001547.1"))
 #take a quick look in base R
 plot(rooted.tree)
@@ -1540,26 +1542,23 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,9))+
-  geom_cladelabel(node = 185, label = "Human-hosted hepatovirus A (collapsed clade)",offset=0.1, fontsize=3, color="black") +
-  geom_cladelabel(node = 218, label = "Rodent,opposum, and marmot-hosted hepatovirus A, D, and F (collapsed clade)",offset=0.1, fontsize=3, color="black") +
-  geom_cladelabel(node = 204, label = "Bat (Hipposideros)-hosted hepatoviruses (collapsed clade)",offset=0.1, fontsize=3, color="black") +
-  geom_cladelabel(node = 197, label = "Hedgehog-hosted hepatovirus H (collapsed clade)",offset=0.1, fontsize=3, color="black")
+  geom_cladelabel(node = 216, label = "Human-hosted hepatovirus A (collapsed clade)",offset=0.1, fontsize=3, color="black") +
+  geom_cladelabel(node = 220, label = "Rodent,opposum, and marmot-hosted hepatovirus A, D, and F (collapsed clade)",offset=0.1, fontsize=3, color="black") +
+  geom_cladelabel(node = 239, label = "Bat (Hipposideros)-hosted hepatoviruses (collapsed clade)",offset=0.1, fontsize=3, color="black") +
+  geom_cladelabel(node = 233, label = "Hedgehog-hosted hepatovirus H (collapsed clade)",offset=0.1, fontsize=3, color="black")
 p2
 
 p2.1<-p2%>%ggtree::rotate(129)
 p2.1
 
-p2.2<-p2.1%>%ggtree::rotate(190)
+p2.2<-p2.1%>%ggtree::rotate(226)
 p2.2
 
-p2.3<-p2.2%>%ggtree::rotate(194)
-p2.3
-
 #collapse the labeled clades
-p3.1<-collapse(p2.3, 185)+geom_point2(aes(subset=(node==185)), size=4, shape=22, fill="white")
-p3.2<-collapse(p3.1, 218)+geom_point2(aes(subset=(node==218)), size=4, shape=22, fill="white")
-p3.3<-collapse(p3.2, 204)+geom_point2(aes(subset=(node==204)), size=4, shape=22, fill="white")
-p3<-collapse(p3.3, 197)+geom_point2(aes(subset=(node==197)), size=4, shape=22, fill="white")
+p3.1<-collapse(p2.1, 216)+geom_point2(aes(subset=(node==216)), size=4, shape=22, fill="white")
+p3.2<-collapse(p3.1, 220)+geom_point2(aes(subset=(node==220)), size=4, shape=22, fill="white")
+p3.3<-collapse(p3.2, 239)+geom_point2(aes(subset=(node==239)), size=4, shape=22, fill="white")
+p3<-collapse(p3.3, 233)+geom_point2(aes(subset=(node==233)), size=4, shape=22, fill="white")
 p3
 
 ##add bootstrap values to this tree
@@ -1583,7 +1582,7 @@ hepato
 
 #bat picorna
 #load the tree and root it
-tree <-  read.tree("batpicorna.raxml.supportFBP") 
+tree <-  read.tree("bat_picorna_align.fasta.treefile") 
 rooted.tree <- root(tree, which(tree$tip.label == "NC_001547.1"))
 #take a quick look in base R
 plot(rooted.tree)
@@ -1599,15 +1598,15 @@ head(dat)
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #39
-length(tree$tip.label) #39
+nrow(dat) #40
+length(tree$tip.label) #40
 
 #check subgroup names
 unique(dat$Species)
 
 #pick order for the labels
 dat$Species <- factor(dat$Species, levels = c("Bat picornavirus BtSY4","Bat picornavirus 7","Chaerephon bat picornavirus","Shanbavirus A", "Rousettus bat picornavirus","Rousettus madagascariensis picornavirus 1", "Rousettus madagascariensis picornavirus 3",
-                                              "Sindbis virus"))   
+                                              "Rousettus madagascariensis picornavirus 4","Sindbis virus"))   
 
 dat$novel <- as.factor(dat$novel)
 
@@ -1754,18 +1753,16 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,8))+
-  geom_cladelabel(node = 45, label = "Shanbavirus A (collapsed)",offset=0.1, fontsize=3, color="black")+
-  geom_cladelabel(node = 48, label = "Shanbavirus A (collapsed)",offset=0.1, fontsize=3, color="black")+
-  geom_cladelabel(node = 70, label = "Shanbavirus A (collapsed)",offset=0.1, fontsize=3, color="black")
+  geom_cladelabel(node = 46, label = "Shanbavirus A (collapsed)",offset=0.1, fontsize=3, color="black")+
+  geom_cladelabel(node = 48, label = "Shanbavirus A (collapsed)",offset=0.1, fontsize=3, color="black")
 p2
 
-p2.1<-p2%>%ggtree::rotate(58)
+p2.1<-p2%>%ggtree::rotate(56)
 p2.1
 
 #collapse the labeled clades
-p3<-collapse(p2.1, 45)+geom_point2(aes(subset=(node==45)), size=4, shape=22, fill="white")
-p4<-collapse(p3, 48)+geom_point2(aes(subset=(node==48)), size=4, shape=22, fill="white")
-p5<-collapse(p4, 70)+geom_point2(aes(subset=(node==70)), size=4, shape=22, fill="white")
+p3<-collapse(p2.1, 46)+geom_point2(aes(subset=(node==46)), size=4, shape=22, fill="white")
+p5<-collapse(p3, 48)+geom_point2(aes(subset=(node==48)), size=4, shape=22, fill="white")
 p5
 
 ##add bootstrap values to this tree
@@ -1789,7 +1786,7 @@ batpicorna
 
 #tescho
 #load the tree and root it
-tree <-  read.tree("tescho.raxml.supportFBP") 
+tree <-  read.tree("tescho_align.fasta.treefile") 
 rooted.tree <- root(tree, which(tree$tip.label == "NC_001547.1"))
 #take a quick look in base R
 plot(rooted.tree)
@@ -1805,8 +1802,8 @@ head(dat)
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
 setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #38
-length(tree$tip.label) #38
+nrow(dat) #39
+length(tree$tip.label) #39
 
 #check subgroup names
 unique(dat$Species)
@@ -1968,14 +1965,14 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,10))+
-  geom_cladelabel(node = 51, label = "Porcine-hosted Teschovirus A, Porcine teschoviruses 15 and 16 (collapsed clades)",offset=0.1, fontsize=3, color="black")
+  geom_cladelabel(node = 50, label = "Porcine-hosted Teschovirus A, Porcine teschoviruses 15 and 16 (collapsed clades)",offset=0.1, fontsize=3, color="black")
 p2
 
-p2.1<-p2%>%ggtree::rotate(38)
+p2.1<-p2%>%ggtree::rotate(39)
 p2.1
 
 #collapse the labeled clades
-p3<-collapse(p2.1, 51)+geom_point2(aes(subset=(node==51)), size=4, shape=22, fill="white")
+p3<-collapse(p2.1, 50)+geom_point2(aes(subset=(node==50)), size=4, shape=22, fill="white")
 p3
 
 ##add bootstrap values to this tree
@@ -1999,7 +1996,7 @@ tescho
 
 #cardio
 #load the tree and root it
-tree <-  read.tree("cardio.raxml.supportFBP") 
+tree <-  read.tree("cardio_align.fasta.treefile") 
 rooted.tree <- root(tree, which(tree$tip.label == "NC_001547.1"))
 #take a quick look in base R
 plot(rooted.tree)
@@ -2178,19 +2175,19 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,8))+
-  geom_cladelabel(node = 95, label = "Human-hosted Cardiovirus A (collapsed clades)",offset=0.1, fontsize=3, color="black") +
-  geom_cladelabel(node = 107, label = "Marmot and rodent-hosted Cardiovirus E/F (collapsed clades)", offset=0.1,fontsize=3, color="black") +
-  geom_cladelabel(node = 109, label = "Human and rodent-hosted Cardiovirus B/D (collapsed clades)", offset=0.1, fontsize=3, color="black")
+  geom_cladelabel(node = 102, label = "Human-hosted Cardiovirus A (collapsed clades)",offset=0.1, fontsize=3, color="black") +
+  geom_cladelabel(node = 96, label = "Marmot and rodent-hosted Cardiovirus E/F (collapsed clades)", offset=0.1,fontsize=3, color="black") +
+  geom_cladelabel(node = 80, label = "Human and rodent-hosted Cardiovirus B/D (collapsed clades)", offset=0.1, fontsize=3, color="black")
 p2
 
-#flip clades
-p2.1<-p2%>%ggtree::rotate(98)
-p2.1
+# #flip clades
+# p2.1<-p2%>%ggtree::rotate(98)
+# p2.1
 
 #collapse the labeled clades
-p3<-collapse(p2.1, 95)+geom_point2(aes(subset=(node==95)), size=4, shape=22, fill="white")
-p4<-collapse(p3, 107)+geom_point2(aes(subset=(node==107)), size=4, shape=22, fill="white")
-p5<-collapse(p4, 109)+geom_point2(aes(subset=(node==109)), size=4, shape=22, fill="white")
+p3<-collapse(p2, 102)+geom_point2(aes(subset=(node==102)), size=4, shape=22, fill="white")
+p4<-collapse(p3, 96)+geom_point2(aes(subset=(node==96)), size=4, shape=22, fill="white")
+p5<-collapse(p4, 80)+geom_point2(aes(subset=(node==80)), size=4, shape=22, fill="white")
 p5
 
 ##add bootstrap values to this tree
