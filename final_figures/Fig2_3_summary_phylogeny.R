@@ -2224,13 +2224,13 @@ tescho #smaller
 
 #Plot final figure with plot_grid version 1
 small_grid<-plot_grid(cardio,hepato,kobu,kunsagi,mischi, labels=c("A","B","C","D","E"),
-                      rel_widths = c(1,1,1,1), rel_heights = c(0.6,1,0.8,0.3,0.9),
+                      rel_widths = c(1,1,1,1), rel_heights = c(0.3,0.5,0.4,0.15,0.4),
                       ncol=1, align="hv", axis="l", label_size = 23)
 small_grid
 small_grid<-as.ggplot(small_grid)
 
 phylo_grid<-plot_grid(batpicorna, sapelo, tescho,sapo, labels=c("F","G","H","I"),
-                      rel_widths = c(1,1,1,1), rel_heights = c(1.4,1.2,1,2),
+                      rel_widths = c(1,1,1,1), rel_heights = c(1.2,1.4,1.1,2),
                       ncol=1, align="hv", axis="l", label_size = 23)
 phylo_grid
 phylo_grid<-as.ggplot(phylo_grid)
@@ -2245,9 +2245,6 @@ phylo_grid<-as.ggplot(phylo_grid)
 #                  rel_widths=c(1,1), rel_heights = c(1,1),
 #                  ncol=2,align="hv", axis="l", label_size = 23)
 # final
-
-
-
 
 final<-plot_grid(small_grid, phylo_grid, labels=c("",""),
                  rel_widths=c(1,1), rel_heights = c(1,1),
@@ -2264,7 +2261,7 @@ final
 ggsave(file = paste0(homewd, "/final_figures/Fig3_indiv_phylogenies.pdf"),
        plot= final,
        units="mm",  
-       width=230, 
+       width=250, 
        height=200, 
        scale=2, 
        dpi=500)
