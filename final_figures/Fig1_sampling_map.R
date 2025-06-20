@@ -257,13 +257,13 @@ p4_pos <- p2b+
 
 p4_pos
 
-# ggsave(file = paste0(homewd, "/final_figures/Fig1_sampling_map_only.pdf"),
-#        plot = p4_pos,
-#        units="mm",
-#        width=60,
-#        height=60,
-#        scale=3,
-#        dpi=300)
+ggsave(file = paste0(homewd, "/final_figures/supplemental/SfigX_sampling_map_only.pdf"),
+       plot = p4_pos,
+       units="mm",
+       width=60,
+       height=60,
+       scale=3,
+       dpi=300)
 
 
 
@@ -343,7 +343,7 @@ library(ggh4x)
 # p4
 
 
-p5<-ggplot(dat,aes(x = sampling_date, y = num_genus, fill = genus_full, label=num_virus)) +
+sampling<-ggplot(dat,aes(x = sampling_date, y = num_genus, fill = genus_full, label=num_virus)) +
   geom_bar(
            position = "stack",
            stat = "identity") +
@@ -373,7 +373,7 @@ p5<-ggplot(dat,aes(x = sampling_date, y = num_genus, fill = genus_full, label=nu
         legend.title = element_text(size=9),
         legend.position = "right")
 
-p5
+sampling
 
 ###stats for comparing diversity between the two sampling sites: 
 
@@ -449,7 +449,7 @@ Hutcheson_t_test(
 library(cowplot)
 library(ggplotify)
 
-Fig1.2<-plot_grid(p4_pos, p5, labels=c("A","B"),
+Fig1.2<-plot_grid(p4_pos, sampling, labels=c("A","B"),
                 rel_widths = c(2,2), rel_heights = c(2,1),
                 ncol=2, align="hv", axis="l", label_size = 23)
 Fig1.2
