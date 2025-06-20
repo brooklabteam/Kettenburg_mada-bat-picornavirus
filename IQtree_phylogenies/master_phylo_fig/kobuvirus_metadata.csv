@@ -156,6 +156,7 @@ OQ363763.1,Aichivirus A,GX/B45M0208/2019,Aichivirus A,Kobuvirus,China,Rhizomys p
 OQ595081.1,Porcine kobuvirus,,Aichivirus C,Kobuvirus,Croatia,Sus scrofa,0,2017,0
 OQ758029.1,Kobuvirus sp.,,Kobuvirus sp.,Kobuvirus,Hungary,Capra hircus,0,2020,0
 OQ808805.1,Caprine kobuvirus,CKoV-China/GCCDC14/2019,Aichivirus C,Kobuvirus,China,Capra hircus,0,2019,0
+OQ818322.1,Eidolon dupreanum kobuvirus,KEL318,Eidolon dupreanum kobuvirus,Kobuvirus,Madagascar,Eidolon dupreanum,1,2019,0
 OR682616.1,Caprine kobuvirus,Caprine/SWUN/F1/2022,Aichivirus C,Kobuvirus,China,Capra hircus,0,2022,0
 OR682617.1,Caprine kobuvirus,Caprine/SWUN/F2/2022,Aichivirus C,Kobuvirus,China,Capra hircus,0,2022,0
 OR867088.1,Kobuvirus sp.,MSJDC22/7654,Kobuvirus sp.,Kobuvirus,China,Miniopterus schreibersii,1,2022,0
@@ -178,7 +179,6 @@ OR951348.1,Aichivirus F,GD2016,Aichivirus F,Kobuvirus,China,Myotis fimbriatus,1,
 OR951363.1,Bat kobuvirus,LN2020,Bat kobuvirus,Kobuvirus,China,Rhinolophus ferrumequinum,1,2020,0
 OR951364.1,Bat kobuvirus,LN2020_328_33437,Bat kobuvirus,Kobuvirus,China,Rhinolophus ferrumequinum,1,2020,0
 OR951365.1,Bat kobuvirus,LN2020_329_62009,Bat kobuvirus,Kobuvirus,China,Rhinolophus ferrumequinum,1,2020,0
-OQ818322,Eidolon dupreanum kobuvirus,KEL318,Eidolon dupreanum kobuvirus,Kobuvirus,Madagascar,Eidolon dupreanum,1,2019,0
 PP766449,Eidolon dupreanum kobuvirus,ANG22,Eidolon dupreanum kobuvirus,Kobuvirus,Madagascar,Eidolon dupreanum,1,2013,1
-PP766456,Eidolon dupreanum kobuvirus,KEL86,Eidolon dupreanum kobuvirus,Kobuvirus,Madagascar,Eidolon dupreanum,1,2014,1
 PP766451,Eidolon dupreanum kobuvirus,ANGB110.1,Eidolon dupreanum kobuvirus,Kobuvirus,Madagascar,Eidolon dupreanum,1,2015,1
+PP766456,Eidolon dupreanum kobuvirus,KEL86,Eidolon dupreanum kobuvirus,Kobuvirus,Madagascar,Eidolon dupreanum,1,2014,1

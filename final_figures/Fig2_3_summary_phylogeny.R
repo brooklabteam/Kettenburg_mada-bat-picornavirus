@@ -1191,11 +1191,11 @@ dat$new_label <- NA
 
 #all components with values:
 dat$new_label[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)] <- paste(dat$Accession[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                             dat$Species[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                             #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|", 
-                                                                                                             dat$source[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                             dat$Country[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                             dat$Collection_Date[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)])
+                                                                                       dat$Species[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
+                                                                                       #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|", 
+                                                                                       dat$source[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
+                                                                                       dat$Country[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
+                                                                                       dat$Collection_Date[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)])
 
 #and if there is an NA just drop it
 
@@ -1209,20 +1209,20 @@ dat$new_label[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)] <-
 # 
 #and source only:
 dat$new_label[!is.na(dat$Accession) &is.na(dat$source) &!is.na(dat$Country)] <- paste(dat$Accession[!is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|", 
-                                                                                                            dat$Species[!is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|", 
-                                                                                                            #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|", 
-                                                                                                            #dat$source[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                            dat$Country[!is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                            dat$Collection_Date[!is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)])
+                                                                                      dat$Species[!is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|", 
+                                                                                      #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|", 
+                                                                                      #dat$source[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
+                                                                                      dat$Country[!is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
+                                                                                      dat$Collection_Date[!is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)])
 
 
 #and Country only
 dat$new_label[!is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)] <- paste(dat$Accession[!is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
-                                                                                                             dat$Species[!is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
-                                                                                                             #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
-                                                                                                             dat$source[!is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|",
-                                                                                                             #dat$Country[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                             dat$Collection_Date[!is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)])
+                                                                                       dat$Species[!is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
+                                                                                       #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
+                                                                                       dat$source[!is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|",
+                                                                                       #dat$Country[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
+                                                                                       dat$Collection_Date[!is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)])
 
 
 #look at dat$new_label
@@ -1320,29 +1320,27 @@ p2 <- ggtree(rooted.tree) %<+% tree.dat + geom_tippoint(aes(color=Host, shape=Ho
         legend.text = element_text(size=12), 
         legend.key.size = unit(0.3, "cm")) +
   xlim(c(0,10))+
-  geom_cladelabel(node = 296, label = "Porcine and caprine-hosted Aichivirus C viruses (collapsed clade)",offset=0.1, fontsize=3, color="black") +
-  geom_cladelabel(node = 273, label = "Bovine-hosted Aichivirus B viruses (collapsed clade)", offset=0.1,fontsize=3, color="black") +
-  #geom_cladelabel(node = 241, label = "Aichivirus A (collapsed)", offset=0.05,fontsize=3, color="black") +
-  geom_cladelabel(node = 255, label = "Human-hosted Aichivirus A (collapsed clade)", offset=0.1,fontsize=3, color="black") +
-  geom_cladelabel(node = 198, label = "Bat (Scotophilus and Rhinolophus)-hosted kobuvirused (collapsed clade)", offset=0.1,fontsize=3, color="black") +
-  geom_cladelabel(node = 225, label = "Canine, feline, and murine-hosted kobuviruses (collapsed clade)", offset=0.1,fontsize=3, color="black") +
-  geom_cladelabel(node = 185, label = "Bat (Myotis and Miniopterus)-hosted Aichivirus F (collapsed clade)", offset=0.1,fontsize=3, color="black") +
-  geom_cladelabel(node = 264, label = "Bovine-hosted Aichivirus D viruses (collapsed clade)", offset=0.1,fontsize=3, color="black")
+  geom_cladelabel(node = 266, label = "Porcine and caprine-hosted Aichivirus C viruses (collapsed clade)",offset=0.1, fontsize=3, color="black") +
+  geom_cladelabel(node = 330, label = "Bovine-hosted Aichivirus B viruses (collapsed clade)", offset=0.1,fontsize=3, color="black") +
+  geom_cladelabel(node = 353, label = "Bovine-hosted Aichivirus C/D viruses", offset=0.05,fontsize=3, color="black") +
+  geom_cladelabel(node = 194, label = "Canine, feline, and murine-hosted kobuviruses (collapsed clade)", offset=0.1,fontsize=3, color="black") +
+  geom_cladelabel(node = 225, label = "Bat (Scotophilus and Rhinolophus)-hosted kobuvirused (collapsed clade)", offset=0.1,fontsize=3, color="black") +
+  geom_cladelabel(node = 187, label = "Human-hosted Aichivirus A (collapsed clade)", offset=0.1,fontsize=3, color="black") +
+  geom_cladelabel(node = 256, label = "Bat (Myotis and Miniopterus)-hosted Aichivirus F (collapsed clade)", offset=0.1,fontsize=3, color="black")
   
 p2
 
-p2.1<-p2%>%ggtree::rotate(193)
+p2.1<-p2%>%ggtree::rotate(182)
 p2.1
 
 #collapse the labeled clades
-p3<-collapse(p2.1, 296)+geom_point2(aes(subset=(node==296)), size=3, shape=22, fill="white")
-p4<-collapse(p3, 273)+geom_point2(aes(subset=(node==273)), size=3, shape=22, fill="white")
-#p5<-collapse(p4, 241)+geom_point2(aes(subset=(node==241)), size=3, shape=22, fill="white")
-p6<-collapse(p4, 255)+geom_point2(aes(subset=(node==255)), size=3, shape=22, fill="white")
-p7<-collapse(p6, 198)+geom_point2(aes(subset=(node==198)), size=3, shape=22, fill="white")
-p8.1<-collapse(p7, 225)+geom_point2(aes(subset=(node==225)), size=3, shape=22, fill="white")
-p8.2<-collapse(p8.1, 185)+geom_point2(aes(subset=(node==185)), size=3, shape=22, fill="white")
-p8<-collapse(p8.2, 264)+geom_point2(aes(subset=(node==264)), size=3, shape=22, fill="white")
+p3<-collapse(p2.1, 266)+geom_point2(aes(subset=(node==266)), size=3, shape=22, fill="white")
+p4<-collapse(p3, 330)+geom_point2(aes(subset=(node==330)), size=3, shape=22, fill="white")
+p5<-collapse(p4, 353)+geom_point2(aes(subset=(node==353)), size=3, shape=22, fill="white")
+p6<-collapse(p5, 187)+geom_point2(aes(subset=(node==187)), size=3, shape=22, fill="white")
+p7<-collapse(p6, 225)+geom_point2(aes(subset=(node==225)), size=3, shape=22, fill="white")
+p8.1<-collapse(p7, 194)+geom_point2(aes(subset=(node==194)), size=3, shape=22, fill="white")
+p8<-collapse(p8.1, 256)+geom_point2(aes(subset=(node==256)), size=3, shape=22, fill="white")
 p8
 
 ##add bootstrap values to this tree
