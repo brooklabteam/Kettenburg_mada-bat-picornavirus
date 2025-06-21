@@ -38,7 +38,7 @@ library(reshape)
 #####################################################################
 # Set wd to data on this computer. Also ID homewd, assuming that 
 # Mada-GIS is cloned to the same series of sub-folders
-homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
+homewd = "/Users/gwenddolenkettenburg/Desktop/developer/Kettenburg_mada-bat-picornavirus" 
 #should be wherever "Mada_bat_picorna" is stored on your home computer
 #basewd = paste(strsplit(homewd, "/")[[1]][1:6], collapse = "/")
 #Cara had the above command as basewd but it did not work for me and kept going into the Mada_bat_picorna folder
@@ -257,7 +257,7 @@ p4_pos <- p2b+
 
 p4_pos
 
-ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig1_sampling_map_only.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig1_sampling_map_only.png"),
        plot = p4_pos,
        units="mm",
        width=60,
