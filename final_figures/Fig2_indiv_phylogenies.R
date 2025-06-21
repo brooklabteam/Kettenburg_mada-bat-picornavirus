@@ -1,5 +1,4 @@
-#This script is for figure 2, which is a master phylogeny using all the viral genera identified for the 
-#RDRP gene to create an infographic, then additional genus specific phylogenies to go with it. 
+#This script is for figure 2, which is individual phylogenies for each genus for which I have novel squences
 
 rm(list=ls())
 
@@ -19,288 +18,10 @@ library(ggplotify)
 library(patchwork)
 
 ###packages loaded
-
-
-#all tree code
 ##########################################################################################################
 ##Set working directory
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
 setwd(paste0(homewd,"/IQtree_phylogenies/master_phylo_fig"))
-
-#load the tree and root it
-tree <-  read.tree("polymerase_summary_align.fasta.treefile") 
-rooted.tree <- root(tree, which(tree$tip.label == "NC_001547.1"))
-#take a quick look in base R
-plot(rooted.tree)
-
-#Remove root from displaying, still calculates changes correctly without it
-rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
-
-#load tree data prepared from elsewhere
-dat <- read.csv(("polymerase_summary_metadata_circ.csv"), header = T, stringsAsFactors = F)
-
-head(dat)
-
-#check that your metadata matches your tree data
-setdiff(rooted.tree$tip.label, dat$tip_label)
-#check for duplicates
-setdiff(dat$tip_label, rooted.tree$tip.label) #no duplicates
-nrow(dat) #296
-length(tree$tip.label) #296
-
-#check subgroup names
-unique(dat$Genus)
-
-#pick order for the labels
-dat$Genus <- factor(dat$Genus, levels = c("Cardiovirus","Hepatovirus","Kobuvirus","Kunsagivirus","Mischivirus",
-                                          "Sapelovirus","Sapovirus","Teschovirus","Unclassified bat picornavirus",
-                                          "Alphavirus"))   
-#pick colors for virus genera
-genuscolz<- c("Cardiovirus"="#F8766D","Hepatovirus"="#D89000","Kobuvirus"="#A3A500","Kunsagivirus"="#39B600","Mischivirus"="#00BF7F",
-              "Sapelovirus"="#00BFC4","Sapovirus"="#00B0F6","Teschovirus"="#E76BF3","Unclassified bat picornavirus"="#9590FF",
-              "Alphavirus"="black")
-
-#take a glance
-p <- ggtree(rooted.tree) %<+% dat + geom_tippoint(aes(color=Genus)) +
-  geom_tiplab(size=2) + geom_nodelab(size=1) +
-  scale_color_manual(values=genuscolz) + 
-  theme(legend.position = "none", legend.title = element_blank())
-p #looks great
-
-#now get new tip labels
-dat$old_tip_label <- dat$tip_label
-dat$new_label <- NA
-
-#now check that you don't have NAs and blanks throughout the component parts of the name
-#you also can edit the original csv file to replace these blanks if you can find the correct info
-
-dat$Isolate  #some are blank, so convert those to NA
-dat$Isolate[dat$Isolate==""] <- NA
-dat$Accession #all good
-
-dat$source
-dat$source[dat$source==""] <- NA
-dat$Country #some are blank, so convert those to NA
-dat$Country[dat$Country==""] <- NA
-dat$Collection_Date #these are messy, some are years and some are full dates. I just want years, will manually fix
-
-
-#now, select the name based on what components are present for each sample
-
-#all components with values:
-dat$new_label[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)] <- paste(dat$Accession[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                             dat$Genus[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                             #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|", 
-                                                                                                             dat$source[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                             dat$Country[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                             dat$Collection_Date[!is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)])
-
-#and if there is an NA just drop it
-
-#here NA in Isolate only:
-# dat$new_label[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)] <- paste(dat$Accession[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|", 
-#                                                                                                             dat$Genus[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|", 
-#                                                                                                             #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|", 
-#                                                                                                             dat$source[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
-#                                                                                                             dat$Country[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
-#                                                                                                             dat$Collection_Date[is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)])
-# 
-#and source only:
-dat$new_label[!is.na(dat$Accession) &is.na(dat$source) &!is.na(dat$Country)] <- paste(dat$Accession[!is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|", 
-                                                                                                            dat$Genus[!is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|", 
-                                                                                                            #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|", 
-                                                                                                            #dat$source[!is.na(dat$Isolate) & !is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                            dat$Country[!is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                            dat$Collection_Date[!is.na(dat$Accession) & is.na(dat$source) &!is.na(dat$Country)])
-
-
-#and Country only
-dat$new_label[!is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)] <- paste(dat$Accession[ !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
-                                                                                                             dat$Genus[!is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
-                                                                                                             #dat$Isolate[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|", 
-                                                                                                             dat$source[!is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)], "|",
-                                                                                                             #dat$Country[!is.na(dat$Isolate) & !is.na(dat$Accession) &!is.na(dat$source) &!is.na(dat$Country)], "|",
-                                                                                                             dat$Collection_Date[!is.na(dat$Accession) &!is.na(dat$source) & is.na(dat$Country)])
-
-
-#look at dat$new_label
-dat$new_label #they all look great
-
-#make sure to sort in order
-colnames(dat)[colnames(dat)=="Accession"]="old_tip_label"
-tree.dat <- data.frame(old_tip_label=rooted.tree$tip.label, num =1:length(rooted.tree$tip.label))
-head(tree.dat)
-head(dat)
-tree.dat <- merge(tree.dat, dat, by = "old_tip_label", all.x = F, sort = F)
-
-names(tree.dat)
-
-tree.dat$tip_label <- tree.dat$new_label
-
-#making separate datasets for heatmaps to go next to tree
-extra<-data.frame(id=tree.dat$tip_label,Novel_contigs=tree.dat$num_genus_novel_contigs,
-                  Novel_reads_log10=tree.dat$num_genus_novel_reads_log,Region=tree.dat$region,
-                  Host_class=tree.dat$host_class)
-#rownames(extra) <- rooted.tree$tip.label
-
-contig<-data.frame(id=tree.dat$tip_label,Novel_contigs=tree.dat$num_genus_novel_contigs)
-#rownames(contig) <- rooted.tree$tip.label
-
-reads<-data.frame(id=tree.dat$tip_label,Novel_reads_log10=tree.dat$num_genus_novel_reads_log)
-#rownames(reads) <- rooted.tree$tip.label
-
-region<-data.frame(id=tree.dat$tip_label,Region=tree.dat$region)
-#rownames(region) <- rooted.tree$tip.label
-
-host<-data.frame(id=tree.dat$tip_label,Host_class=tree.dat$host_class)
-#rownames(host) <- rooted.tree$tip.label
-
-novel<-data.frame(id=tree.dat$tip_label,Seq_type=tree.dat$Seq_type)
-#rownames(novel) <- rooted.tree$tip.label
-
-#make real tree.dat file for putting the tip points on the tree
-tree.dat <- dplyr::select(tree.dat, tip_label, Isolate, Host, source, Country, Collection_Date, Genus, Seq_type, old_tip_label)
-
-rooted.tree$tip.label <- tree.dat$tip_label
-
-head(tree.dat)
-#verify that the old labels match the new
-
-cbind(tree.dat$old_tip_label, rooted.tree$tip.label)
-
-#check out the labels
-tree.dat$tip_label#all look good
-
-#assign some stuff for shapes
-tree.dat$Host[tree.dat$Host==0] <- "Non-bat host"
-tree.dat$Host[tree.dat$Host==1] <- "Bat host"
-tree.dat$Host <- as.factor(tree.dat$Host)
-tree.dat$Seq_type[tree.dat$Seq_type==0] <- "Reference seq"
-tree.dat$Seq_type[tree.dat$Seq_type==1] <- "Novel seq"
-tree.dat$Seq_type<-as.factor(tree.dat$Seq_type)
-novel$Seq_type[novel$Seq_type==0] <- "Reference seq"
-novel$Seq_type[novel$Seq_type==1] <- "Novel seq"
-#novel$Seq_type<-as.factor(novel$Seq_type)
-
-shapez = c("Bat host" =  17, "Non-bat host" = 19, "Reference seq"=19,"Novel seq"=17)
-colz2 = c('1' =  "yellow", '0' = "white")
-
-circ<-ggtree(rooted.tree, layout="circular")
-
-##Get the clade numbers so we can label
-ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
-
-##base tree
-p1 <- ggtree(rooted.tree, layout="fan", size=0.5) %<+% tree.dat +
-  geom_tippoint(aes(color=Genus, shape=Host), size=2,stroke=0,show.legend = T) +
-  #scale_color_manual(values=genuscolz)+
-  scale_shape_manual(values=shapez) +
-  guides(colour = "none", shape = guide_legend(order = 1))+
-  theme(#legend.position = c(0.5,0.59), #keep this one in case we want the legend within the plot
-        #legend.position = c(0.97,0.59), #right side
-        legend.position = c(0.52,0.07),
-        legend.margin = margin(0,0,0,0),
-        legend.box.margin=margin(-10,-10,-10,-10),
-        legend.text = element_text(size=10),
-        legend.title = element_text(size=10),
-        legend.key = element_rect(fill = "transparent"),
-        legend.key.size = unit(0.25, "cm"),
-        legend.direction = "vertical",
-        legend.box = "horizontal") +
-  xlim(c(0,9)) 
-p1
-
-library(scales)
-hex_codes2 <- hue_pal()(10)      
-show_col(hex_codes2)
-
-#rotate tree a bit
-p1<-rotate_tree(p1, 30)
-p1
-
-#add clade labels
-p1.1 <- p1 +
-  geom_cladelabel(node = 403, label = 'italic(Kobuvirus)', parse=TRUE,offset=2.5, offset.text=0.4, fontsize=4, angle=310, hjust=0.6,align = TRUE, color="#A3A500") +
-  geom_cladelabel(node = 461, label = "italic(Kunsagivirus)", parse=TRUE, offset=2.5, offset.text=0.4,  fontsize=4, angle=90,hjust=0.5,align = TRUE, color="#39B600") +
-  geom_cladelabel(node = 299, label = "italic(Cardiovirus)", parse=TRUE,offset=2.5, offset.text=0.4,  fontsize=4, angle=40,hjust=01,align = TRUE, color="#F8766D") +
-  geom_cladelabel(node = 297, label = "italic(Mischivirus)",parse=TRUE,offset=2.5, offset.text=0.4,  fontsize=4,angle=14,hjust=0.8,align = TRUE, color="#00BF7F") +
-  geom_cladelabel(node = 572, label = "italic(Teschovirus)",parse=TRUE,offset=2.5, offset.text=0.4,  fontsize=4,angle=356,hjust=0.3,align = TRUE, color="#E76BF3") +
-  geom_cladelabel(node = 366, label = "italic(Hepatovirus)",parse=TRUE,offset=2.5, offset.text=0.4,  fontsize=4,angle=65,hjust=0.4,align = TRUE, color="#D89000") +
-  geom_cladelabel(node = 328, label = "italic(Sapelovirus)",parse=TRUE,offset=2.5, offset.text=0.4,  fontsize=4,angle=330,hjust=0.3,align = TRUE, color="#00BFC4") +
-  geom_cladelabel(node = 353, label = "italic(Bat_picornavirus)",parse=TRUE,offset=2.5, offset.text=0.4, angle=304,hjust=0.3, fontsize=4,align = TRUE, color="#9590FF") +
-  geom_cladelabel(node = 463, label = "italic(Sapovirus)",parse=TRUE,offset=2.5, offset.text=0.4,angle=45, fontsize=4,align = TRUE,hjust=1, color="#00B0F6")
-p1.1
-
-##Add contig/read metadata
-#attach various metadata to p1
-p1.1 <- p1.1 %<+% contig
-
-#pop contig data on top of the tree
-p2<-p1.1+geom_fruit(#data=contig,
-                  geom=geom_tile,
-                  mapping=aes(fill=Novel_contigs),
-                  pwidth=1,
-                  offset=0.15) + 
-                #scale_fill_viridis(option="G", name="Novel\ncontigs", direction = -1)
-                  scale_fill_gradient(low="peachpuff1", high="orangered3")
-                  
-p2
-
-#attach various metadata to p2
-p2<-p2 %<+% reads
-
-p3<-p2+new_scale_fill()+
-  geom_fruit(#data=reads,
-  geom=geom_tile,
-  mapping=aes(fill=Novel_reads_log10),
-  pwidth=1,
-  offset=0.15)+ 
-  scale_fill_gradient(low="lightblue1", high="royalblue2")+
-  #scale_fill_viridis(option="B", name="Novel\nreads (log10)", direction = -1) +
- theme(
-                 #legend.direction = "none",
-                 legend.margin = margin(c(0,0,0,0)),
-                 legend.text = element_text(size=10),
-                 legend.title = element_text(size=10),
-                 legend.key.size = unit(0.3, "cm"),
-       plot.margin = unit(c(0, 0, 0, 0), 
-                          "cm"))
-p3
-
-
-#attach various metadata to p3
-#p3<-p3 %<+% novel
-
-base<-p3+new_scale_fill()+
-  geom_fruit(#data=reads,
-    geom=geom_tile,
-    mapping=aes(fill=Seq_type),
-    width=0.5,
-    offset=0.1)  + 
-  guides(fill = guide_legend(order=2))+
-  scale_fill_manual(values=c("Novel seq"="gold2","Reference seq"="grey88"), name="Seq type")+
-  theme(
-    #legend.direction = "none",
-    legend.text = element_text(size=10),
-    legend.title = element_text(size=10),
-    legend.key.size = unit(0.3, "cm"),
-    plot.margin = unit(c(0, 0, 0, 0), 
-                       "cm"))
-base
-
-#homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
-ggsave(file = paste0(homewd, "/final_figures/Fig2_summary_phylogeny.pdf"),
-       plot= base,
-       units="mm",  
-       width=120, 
-       height=120, 
-       scale=2, 
-       dpi=500)
-
-
-
-
-###Now make figure 3
 
 #mischi
 #load the tree and root it
@@ -2224,7 +1945,6 @@ cardio
 ##############################################################################################
 
 #putting all the images together
-base #base figure
 batpicorna 
 cardio #smaller
 hepato 
@@ -2249,63 +1969,16 @@ phylo_grid<-plot_grid(batpicorna, sapelo, tescho,sapo, labels=c("F","G","H","I")
 phylo_grid
 phylo_grid<-as.ggplot(phylo_grid)
 
-# leftside<-plot_grid(base, small_grid, labels=c("A",""),
-#                rel_widths=c(2,1), rel_heights=c(1,1),
-#                ncol=1, align="h", axis="l", label_size=23)
-# leftside
-# leftside<-as.ggplot(leftside)
-
-# final<-plot_grid(leftside, phylo_grid, labels=c("",""),
-#                  rel_widths=c(1,1), rel_heights = c(1,1),
-#                  ncol=2,align="hv", axis="l", label_size = 23)
-# final
-
 final<-plot_grid(small_grid, phylo_grid, labels=c("",""),
                  rel_widths=c(1,1), rel_heights = c(1,1),
                  ncol=2,align="hv", axis="l", label_size = 23)
 final
 
-# phylo_grid<-plot_grid(cardio,hepato,kobu,kunsagi,mischi, batpicorna, sapelo, tescho,sapo, labels=c("A","B","C","D","E","F","G","H","I"),
-#                       rel_widths = c(1,1,1,1,1,1,1,1), rel_heights = c(0.6,1,1,0.3,0.9,1,1,0.6,1.7),
-#                       ncol=2, align="hv", axis="l", label_size = 23)
-# phylo_grid
-# phylo_grid<-as.ggplot(phylo_grid)
-
 #homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
-ggsave(file = paste0(homewd, "/final_figures/Fig3_indiv_phylogenies.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/Fig2_indiv_phylogenies.pdf"),
        plot= final,
        units="mm",  
        width=250, 
        height=170, 
        scale=2, 
        dpi=500)
-
-##############################################################################################
-#Put smaller phylogenies with large phylogeny
-
-grid1<-plot_grid(base,cardio,hepato,kobu,kunsagi, labels=c("A","B","C","D","E"),
-                      rel_widths = c(4,1,1,1,1), rel_heights = c(4,1,1.2,1.2,0.6),
-                      ncol=1, align="hv", axis="l", label_size = 23)
-grid1
-grid1<-as.ggplot(grid1)
-
-grid2<-plot_grid(mischi,batpicorna, sapelo, tescho,sapo, labels=c("F","G","H","I","J"),
-                 rel_widths = c(1,1,1,1,1), rel_heights = c(0.9,1,1.2,0.8,1.4),
-                 ncol=1, align="hv", axis="l", label_size = 23)
-grid2
-grid2<-as.ggplot(grid2)
-
-finalgrid<-plot_grid(grid1, grid2, labels=c("",""),
-                 rel_widths=c(1,1), rel_heights = c(1,1),
-                 ncol=2,align="hv", axis="l", label_size = 23)
-finalgrid
-
-ggsave(file = paste0(homewd, "/final_figures/FigX_all_phylogenies.pdf"),
-       plot= finalgrid,
-       units="mm",  
-       width=500, 
-       height=400, 
-       scale=1, 
-       dpi=500)
-
-

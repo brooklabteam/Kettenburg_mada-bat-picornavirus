@@ -896,7 +896,7 @@ recombination_supp
 # save figs
 homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
 
-ggsave(file = paste0(homewd, "/final_figures/Fig5_recombination.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/Fig4_recombination.pdf"),
        plot = fig4,
        units="mm",  
        width=100, 
@@ -904,7 +904,7 @@ ggsave(file = paste0(homewd, "/final_figures/Fig5_recombination.pdf"),
        scale=4, 
        dpi=300)
 
-ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig5_recombination.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig6_recombination.pdf"),
        plot = recombination_supp,
        units="mm",  
        width=200, 

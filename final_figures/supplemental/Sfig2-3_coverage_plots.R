@@ -159,7 +159,7 @@ homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus"
 
 
 #ggsave(file = paste0(homewd, "/figures/full_coverage_rpm.pdf"),
-ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig1_full_coverage_plot.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig2_full_coverage_plot.pdf"),
        plot= full,
        units="mm",  
        width=200, 
@@ -167,7 +167,7 @@ ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig1_full_coverage_pl
        scale=2, 
        dpi=500)
 
-ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig2_partial_coverage_plot.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig3_partial_coverage_plot.pdf"),
        plot= partial,
        units="mm",  
        width=220, 

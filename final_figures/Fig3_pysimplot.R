@@ -1449,7 +1449,7 @@ amino_supp
 
 homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
 
-ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig4_nucleotide_pysimplot.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig5_nucleotide_pysimplot.pdf"),
        plot = nucleotide_supp,
        units="mm",  
        width=150, 
@@ -1465,7 +1465,7 @@ ggsave(file = paste0(homewd, "/final_figures/Fig3_pysimplot.pdf"),
        scale=4, 
        dpi=300)
 
-ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig3_amino_pysimplot.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig4_amino_pysimplot.pdf"),
        plot = amino_supp,
        units="mm",  
        width=100, 
