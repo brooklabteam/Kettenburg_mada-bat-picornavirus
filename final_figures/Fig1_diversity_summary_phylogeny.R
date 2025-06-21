@@ -20,6 +20,7 @@ library(ggplotify)
 library(patchwork)
 
 ###packages loaded
+homewd= "/Users/gwenddolenkettenburg/Desktop/developer/Kettenburg_mada-bat-picornavirus/"
 
 ##Add a plot showing the shared number of viruses in population during each sampling session
 dat <- read.csv(file = paste0(homewd,"/metadata/demo_data_indiv_pos_heatmap_genus.csv"), header = T, stringsAsFactors = F)
@@ -204,7 +205,7 @@ Hutcheson_t_test(
 
 #all tree code
 ##Set working directory
-homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
+homewd= "/Users/gwenddolenkettenburg/Desktop/developer/Kettenburg_mada-bat-picornavirus/"
 setwd(paste0(homewd,"/IQtree_phylogenies/master_phylo_fig"))
 
 #load the tree and root it
@@ -474,7 +475,7 @@ library(cowplot)
 library(ggplotify)
 
 Fig1.2<-plot_grid(sampling, base, labels=c("A","B"),
-                  rel_widths = c(2,2), rel_heights = c(2,1),
+                  rel_widths = c(1.5,2), rel_heights = c(1,3),
                   ncol=2, align="hv", axis="l", label_size = 23)
 Fig1.2
 Fig1.2<-as.ggplot(Fig1.2)
@@ -483,7 +484,7 @@ ggsave(file = paste0(homewd, "/final_figures/Fig1_diversity_summary_phylogeny.pd
        plot = Fig1.2,
        units="mm",  
        width=130, 
-       height=70, 
+       height=60, 
        scale=3, 
        dpi=300)
 
