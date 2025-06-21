@@ -14,9 +14,7 @@ Files for genome annotation and characterization are [here](https://github.com/b
 
 Metadata files are [here](https://github.com/brooklabteam/mada-bat-picornavirus/tree/main/metadata)
 
-ModelTest output is [here](https://github.com/brooklabteam/mada-bat-picornavirus/tree/main/modeltest)
-
-RAxML trees are linked [here](https://github.com/brooklabteam/mada-bat-picornavirus/tree/main/raxml_trees)
+IQtree trees and logs are linked [here](https://github.com/brooklabteam/mada-bat-picornavirus/tree/main/IQtree_phylogenies)
 
 Files and scripts for mapping reads is [here](https://github.com/brooklabteam/mada-bat-picornavirus/tree/main/read_mapping)
 
