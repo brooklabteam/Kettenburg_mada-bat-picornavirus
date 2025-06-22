@@ -474,8 +474,8 @@ base
 library(cowplot)
 library(ggplotify)
 
-Fig1.2<-plot_grid(sampling, base, labels=c("A","B"),
-                  rel_widths = c(1.5,2), rel_heights = c(1,3),
+Fig1.2<-plot_grid(base, sampling, labels=c("A","B"),
+                  rel_widths = c(2,1.5), rel_heights = c(3,1),
                   ncol=2, align="hv", axis="l", label_size = 23)
 Fig1.2
 Fig1.2<-as.ggplot(Fig1.2)
