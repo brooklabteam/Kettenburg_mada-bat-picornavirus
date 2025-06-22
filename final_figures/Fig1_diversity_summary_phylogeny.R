@@ -130,79 +130,6 @@ sampling<-ggplot(dat,aes(x = sampling_date, y = num_genus, fill = genus_full, la
 
 sampling
 
-###stats for comparing diversity between the two sampling sites: 
-
-#raw species and genus richness between the two sites
-
-dat.sum<-ddply(dat,.(roost_site, genus,virus, sampling_date), summarise, N=length(pos))
-dat.sum.virus<-ddply(dat,.(roost_site, virus, sampling_date), summarise, N=length(virus))
-dat.sum.genus<-ddply(dat,.(roost_site, genus, sampling_date), summarise, N=length(genus))
-
-length(unique(dat$virus[dat$roost_site=="Angavokely"])) #11
-length(unique(dat$virus[dat$roost_site=="Maromizaha"])) #9
-length(unique(dat$genus[dat$roost_site=="Angavokely"])) #7
-length(unique(dat$genus[dat$roost_site=="Maromizaha"])) #4
-
-#look at shannon diversity
-library(vegan)
-library(ecolTest)
-library(divo)
-
-shan.ang.virus <- diversity(dat.sum.virus$N[dat.sum.virus$roost_site=="Angavokely"], index="shannon") #2.944
-shan.ang.genus <- diversity(dat.sum.genus$N[dat.sum.genus$roost_site=="Angavokely"], index="shannon") #2.798
-shan.mar.virus <-  diversity(dat.sum.virus$N[dat.sum.virus$roost_site=="Maromizaha"], index="shannon") #2.303
-shan.mar.genus <-  diversity(dat.sum.genus$N[dat.sum.genus$roost_site=="Maromizaha"], index="shannon") #2.264
-
-#try by sampling date instead of site which there were multiple viruses in one samplign date
-shan.genus <- diversity(dat.sum.genus$N, index="shannon") #3.224
-shan.virus <-  diversity(dat.sum.virus$N, index="shannon") #3.367
-shan.genus.2014.12.17 <- diversity(dat.sum.genus$N[dat.sum.genus$sampling_date=="2014-12-17"], index="shannon") #0.693
-shan.virus.2014.12.17 <- diversity(dat.sum.virus$N[dat.sum.virus$sampling_date=="2014-12-17"], index="shannon") #0.693
-shan.genus.2018.2.15 <- diversity(dat.sum.genus$N[dat.sum.genus$sampling_date=="2018-02-15"], index="shannon") #1.386
-shan.virus.2018.2.15 <- diversity(dat.sum.virus$N[dat.sum.virus$sampling_date=="2018-02-15"], index="shannon") #1.386
-shan.genus.2018.4.10 <- diversity(dat.sum.genus$N[dat.sum.genus$sampling_date=="2018-04-10"], index="shannon") #0
-shan.virus.2018.4.10 <- diversity(dat.sum.virus$N[dat.sum.virus$sampling_date=="2018-04-10"], index="shannon") #0.693
-shan.genus.2018.7.29 <- diversity(dat.sum.genus$N[dat.sum.genus$sampling_date=="2018-07-29"], index="shannon") #0.636
-shan.virus.2018.7.29 <- diversity(dat.sum.virus$N[dat.sum.virus$sampling_date=="2018-07-29"], index="shannon") #1.098
-shan.genus.2018.9.11 <- diversity(dat.sum.genus$N[dat.sum.genus$sampling_date=="2018-09-11"], index="shannon") #1.098
-shan.virus.2018.9.11 <- diversity(dat.sum.virus$N[dat.sum.virus$sampling_date=="2018-09-11"], index="shannon") #1.098
-shan.genus.2019.1.6 <- diversity(dat.sum.genus$N[dat.sum.genus$sampling_date=="2019-01-06"], index="shannon") #0
-shan.virus.2019.1.6 <- diversity(dat.sum.virus$N[dat.sum.virus$sampling_date=="2019-01-06"], index="shannon") #0.693
-shan.genus.2019.4.9 <- diversity(dat.sum.genus$N[dat.sum.genus$sampling_date=="2019-04-09"], index="shannon") #0.693
-shan.virus.2019.4.9 <- diversity(dat.sum.virus$N[dat.sum.virus$sampling_date=="2019-04-09"], index="shannon") #0.693
-
-#plot the two
-dat.diversity.genus <- cbind.data.frame(roost_site=c("Angavokely", "Maromizaha"), shannon=c(shan.ang.genus, shan.mar.genus))
-dat.diversity.virus <- cbind.data.frame(roost_site=c("Angavokely", "Maromizaha"), shannon=c(shan.ang.virus, shan.mar.virus))
-dat.diversity.genus.date <- cbind.data.frame(sampling_date=c("2014-12-17", "2018-02-15", "2018-04-10", "2018-07-29", "2018-09-11","2019-01-06","2019-04-09"), 
-                                             shannon=c(shan.genus.2014.12.17, shan.genus.2018.2.15, shan.genus.2018.4.10, shan.genus.2018.7.29,
-                                                       shan.genus.2018.9.11,shan.genus.2019.1.6,shan.genus.2019.4.9))
-dat.diversity.virus.date <- cbind.data.frame(sampling_date=c("2014-12-17", "2018-02-15", "2018-04-10", "2018-07-29", "2018-09-11","2019-01-06","2019-04-09"), 
-                                             shannon=c(shan.virus.2014.12.17, shan.virus.2018.2.15, shan.virus.2018.4.10, shan.virus.2018.7.29,
-                                                       shan.virus.2018.9.11,shan.virus.2019.1.6,shan.virus.2019.4.9))
-
-library(ggsignif)
-
-#compare diversity between regions
-Hutcheson_t_test(
-  x= dat.sum.virus$N[dat.sum.virus$roost_site=="Angavokely"],
-  y= dat.sum.virus$N[dat.sum.virus$roost_site=="Maromizaha"],
-  shannon.base = exp(1),
-  alternative = "less",
-  difference = 0)
-#p-value NA, Hutcheson t-statistic = Inf, df = NaN, p-value = NA
-
-Hutcheson_t_test(
-  x= dat.sum.genus$N[dat.sum.genus$roost_site=="Angavokely"],
-  y= dat.sum.genus$N[dat.sum.genus$roost_site=="Maromizaha"],
-  shannon.base = exp(1),
-  alternative = "less",
-  difference = 0)
-#p-value 1, Hutcheson t-statistic = 5.8194, df = 20.672, p-value = 1
-
-
-
-
 #all tree code
 ##Set working directory
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/Kettenburg_mada-bat-picornavirus/"
@@ -364,7 +291,7 @@ novel$Seq_type[novel$Seq_type==1] <- "Novel seq"
 #novel$Seq_type<-as.factor(novel$Seq_type)
 
 shapez = c("Bat host" =  17, "Non-bat host" = 19, "Reference seq"=19,"Novel seq"=17)
-colz2 = c('1' =  "yellow", '0' = "white")
+colz2 = c('1' =  "tomato1", '0' = "white")
 
 circ<-ggtree(rooted.tree, layout="circular")
 
@@ -379,7 +306,7 @@ p1 <- ggtree(rooted.tree, layout="fan", size=0.5) %<+% tree.dat +
   guides(colour = "none", shape = guide_legend(order = 1))+
   theme(#legend.position = c(0.5,0.59), #keep this one in case we want the legend within the plot
         #legend.position = c(0.97,0.59), #right side
-        legend.position = c(0.52,0.07),
+        legend.position = c(0.52,0),
         legend.margin = margin(0,0,0,0),
         legend.box.margin=margin(-10,-10,-10,-10),
         legend.text = element_text(size=10),
@@ -414,29 +341,35 @@ p1.1
 
 ##Add contig/read metadata
 #attach various metadata to p1
-p1.1 <- p1.1 %<+% contig
+p1.1 <- p1.1 %<+% region
 
 #pop contig data on top of the tree
+colz3 = c('Africa' =  "#0F6FC6", 'Asia' = "#009DD9", "Australia"="#0BD0D9","Europe"="#10CF9B",
+          "North America"="#7CCA62","South America"="#A5C249")
 p2<-p1.1+geom_fruit(#data=contig,
                   geom=geom_tile,
-                  mapping=aes(fill=Novel_contigs),
+                  mapping=aes(fill=Region),
                   pwidth=1,
-                  offset=0.15) + 
-                #scale_fill_viridis(option="G", name="Novel\ncontigs", direction = -1)
-                  scale_fill_gradient(low="peachpuff1", high="orangered3")
+                  offset=0.15)+
+                  scale_fill_manual(values=colz3)
+                  #scale_fill_gradient(low="peachpuff1", high="orangered3")
                   
 p2
 
 #attach various metadata to p2
-p2<-p2 %<+% reads
+p2<-p2 %<+% host
 
+colz4 = c('Bat' =  "#DE9ED6", 'Bird' = "#A55194", "Canine"="#7B4173","Elephant"="#CE6DBD",
+          "Feline"="#E7969C","Hedgehog"="#D6616B","Human"="#AD494A","Lab strain"="black","Marsupial"="#843C39",
+          "Non-human primate"="#E7CB94","Pig"="#E7BA52","Rodent"="#BD9E39","Shrew"="#7375B5","Ungulate"="#9C9EDE")
 p3<-p2+new_scale_fill()+
   geom_fruit(#data=reads,
   geom=geom_tile,
-  mapping=aes(fill=Novel_reads_log10),
+  mapping=aes(fill=Host_class),
   pwidth=1,
   offset=0.15)+ 
-  scale_fill_gradient(low="lightblue1", high="royalblue2")+
+  scale_fill_manual(values=colz4)+
+  #scale_fill_gradient(low="lightblue1", high="royalblue2")+
   #scale_fill_viridis(option="B", name="Novel\nreads (log10)", direction = -1) +
  theme(
                  #legend.direction = "none",
@@ -459,7 +392,7 @@ base<-p3+new_scale_fill()+
     width=0.5,
     offset=0.1)  + 
   guides(fill = guide_legend(order=2))+
-  scale_fill_manual(values=c("Novel seq"="gold2","Reference seq"="grey88"), name="Seq type")+
+  scale_fill_manual(values=c("Novel seq"="tomato1","Reference seq"="grey88"), name="Seq type")+
   theme(
     #legend.direction = "none",
     legend.text = element_text(size=10),
@@ -474,8 +407,14 @@ base
 library(cowplot)
 library(ggplotify)
 
-Fig1.2<-plot_grid(base, sampling, labels=c("A","B"),
-                  rel_widths = c(2,1.5), rel_heights = c(3,1),
+Fig1.1<-plot_grid(base, NULL, labels=c("",""),
+                  rel_widths = c(1,1), rel_heights = c(3,0.5),
+                  ncol=1, align="hv", axis="l", label_size = 23)
+Fig1.1
+Fig1.2<-as.ggplot(Fig1.2)
+
+Fig1.2<-plot_grid(Fig1.1, sampling, labels=c("A","B"),
+                  rel_widths = c(2.5,1.5), rel_heights = c(3,1),
                   ncol=2, align="hv", axis="l", label_size = 23)
 Fig1.2
 Fig1.2<-as.ggplot(Fig1.2)
@@ -484,7 +423,7 @@ ggsave(file = paste0(homewd, "/final_figures/Fig1_diversity_summary_phylogeny.pd
        plot = Fig1.2,
        units="mm",  
        width=130, 
-       height=60, 
+       height=70, 
        scale=3, 
        dpi=300)
 
