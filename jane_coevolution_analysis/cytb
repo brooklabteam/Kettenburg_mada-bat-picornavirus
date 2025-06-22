@@ -1,0 +1,4 @@
+#NEXUS
+begin trees;
+	tree tree_1 = [&R] ((Eidolon_helvum_cytb:0.187278,((((Cynopterus_sphinx_cytb:0.133392,Eidolon_dupreanum_cytb:0.1828):0.025422,(Pteropus_poliocephalus_cytb:0.040067,Pteropus_rufus_cytb:0.072559):0.05304):0.011437,(Eonycteris_spelaea_cytb:0.134625,((Rousettus_aegyptiacus_cytb:0.031771,Rousettus_leschenaultii_cytb:0.047197):0.010763,Rousettus_madagascariensis_cytb:0.027722):0.103496):0.02849):0.049071,((Rhinolophus_hipposideros_cytb:0.08842,Rhinolophus_sinicus_cytb:0.079493):0.138023,(Miniopterus_fuliginosus_cytb:0.239251,(Chaerephon_leucogaster_cytb:0.213117,(Myotis_ricketti_cytb:0.178726,Taphozous_melanopogon_cytb:0.352928):0.046697):0.022708):0.067197):0.051925):0.097675):0.294039,Homo_sapiens_cytb:0.294039);
+end;
