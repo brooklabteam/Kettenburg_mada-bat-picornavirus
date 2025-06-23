@@ -1,0 +1,11 @@
+Accession,full_name,Organism_Name,Isolate,Species,Genus,Country,region,source,host_class,Host,Collection_Date,Seq_type
+NC_001547.1,NC_001547.1_Sindbis_virus,Sindbis virus,,Sindbis virus,Alphavirus,USA,North America,Cell culture,Lab strain,0,1981,0
+PP711909.1,PP711909.1_Rousettus_bat_picornavirus_Uganda_Rousettus_aegypticus,Rousettus bat picornavirus,25A/Uganda/UR47/2018,Rousettus bat picornavirus,Unclassified bat picornavirus,Uganda,Africa,Rousettus aegypticus,Bat,1,2018,0
+PP711912.1,PP711912.1_Rousettus_bat_picornavirus_Uganda_Rousettus_aegypticus,Rousettus bat picornavirus,8A/Uganda/UGR5/2019,Rousettus bat picornavirus,Unclassified bat picornavirus,Uganda,Africa,Rousettus aegypticus,Bat,1,2019,0
+PP711913.1,PP711913.1_Rousettus_bat_picornavirus_Kenya_Rousettus_aegypticus,Rousettus bat picornavirus,11B/Kenya/BAT1828/2015,Rousettus bat picornavirus,Unclassified bat picornavirus,Kenya,Africa,Rousettus aegypticus,Bat,1,2015,0
+PP711928.1,PP711928.1_Rousettus_bat_picornavirus_Uganda_Rousettus_aegypticus,Rousettus bat picornavirus,24A/Uganda/UR13/2018,Rousettus bat picornavirus,Unclassified bat picornavirus,Uganda,Africa,Rousettus aegypticus,Bat,1,2018,0
+PP711930.1,PP711930.1_Rousettus_bat_picornavirus_Kenya_Rousettus_aegypticus,Rousettus bat picornavirus,25C/Kenya/BAT6/2015,Rousettus bat picornavirus,Unclassified bat picornavirus,Kenya,Africa,Rousettus aegypticus,Bat,1,2015,0
+PP711945.1,PP711945.1_Rousettus_bat_picornavirus_Uganda_Rousettus_aegypticus,Rousettus bat picornavirus,8A/Uganda/UGR5/2019,Rousettus bat picornavirus,Unclassified bat picornavirus,Uganda,Africa,Rousettus aegypticus,Bat,1,2019,0
+PP711946.1,PP711946.1_Chaerephon_bat_picornavirus_Kenya_Chaerephon_leucogaster,Chaerephon bat picornavirus,9A/Kenya/BAT1462/2015,Chaerephon bat picornavirus,Unclassified bat picornavirus,Kenya,Africa,Chaerephon leucogaster,Bat,1,2015,0
+PP745912.1,PP745912.1_Bat_picornavirus_7_China_Taphozous_melanopogon,Bat picornavirus 7,243_61024,Bat picornavirus 7,Unclassified bat picornavirus,China,Asia,Taphozous melanopogon,Bat,1,2017,0
+PP746000.1,PP746000.1_Bat picornavirus_BtSY4_China_Rhinolophus_sinicus,Bat picornavirus BtSY4,357_7225,Bat picornavirus BtSY4,Unclassified bat picornavirus,China,Asia,Rhinolophus sinicus,Bat,1,2021,0

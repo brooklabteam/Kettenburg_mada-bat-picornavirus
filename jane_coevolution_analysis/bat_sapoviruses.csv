@@ -1,0 +1,20 @@
+Accession,full_name,Organism_Name,Isolate,Species,Genus,Country,region,source,host_class,Host,Collection_Date,Seq_type
+KX759618.1,KX759618.1_Bat sapovirus_Cameroon_Eidolon_helvum,Bat sapovirus,Bat-SaV/Limbe25/CAM/2014,Bat sapovirus,Sapovirus,Cameroon,Africa,Eidolon helvum,Bat,1,2014,0
+KX759619.1,KX759619.1_Bat sapovirus_Cameroon_Eidolon_helvum,Bat sapovirus,Bat-SaV/Lysoka36/CAM/2014,Bat sapovirus,Sapovirus,Cameroon,Africa,Eidolon helvum,Bat,1,2014,0
+KX759620.1,KX759620.1_Bat sapovirus_Cameroon_Eidolon_helvum,Bat sapovirus,Bat-SaV/Limbe65/CAM/2014,Bat sapovirus,Sapovirus,Cameroon,Africa,Eidolon helvum,Bat,1,2014,0
+KX759621.1,KX759621.1_Bat sapovirus_Cameroon_Eidolon_helvum,Bat sapovirus,Bat-SaV/Limbe899a/CAM/2014,Bat sapovirus,Sapovirus,Cameroon,Africa,Eidolon helvum,Bat,1,2014,0
+KX759622.1,KX759622.1_Bat sapovirus_Cameroon_Eidolon_helvum,Bat sapovirus,Bat-SaV/Limbe899b/CAM/2014,Bat sapovirus,Sapovirus,Cameroon,Africa,Eidolon helvum,Bat,1,2014,0
+KX759623.1,KX759623.1_Bat sapovirus_Cameroon_Eidolon_helvum,Bat sapovirus,Bat-SaV/Limbe900/CAM/2014,Bat sapovirus,Sapovirus,Cameroon,Africa,Eidolon helvum,Bat,1,2014,0
+NC_001547.1,NC_001547.1_Sindbis_virus,Sindbis virus,,Sindbis virus,Alphavirus,USA,North America,Cell culture,Lab strain,0,1981,0
+NC_017936.1,NC_017936.1_Bat_sapovirus_Hong_Kong_Hipposideros_pomona,Bat sapovirus TLC58/HK,,Bat sapovirus TLC58/HK,Sapovirus,Hong Kong,Asia,Hipposideros pomona,Bat,1,2001,0
+NC_033776.1,NC_033776.1_Bat sapovirus_Cameroon_Eidolon_helvum,Bat sapovirus,Bat-SaV/Limbe65/CAM/2014,Bat sapovirus,Sapovirus,Cameroon,Africa,Eidolon helvum,Bat,1,2014,0
+ON872527.1,ON872527.1_Bat_faecal_sapovirus_Australia_Pteropus_poliocephalus,Bat faecal sapovirus,Ad02/aus/1,Bat faecal sapovirus,Sapovirus,Australia,Australia,Pteropus poliocephalus,Bat,1,2019,0
+OP963622.1,OP963622.1_Bat_sapovirus_China_Cynopterus_sphinx,Bat sapovirus BtSY1,,Bat sapovirus,Sapovirus,China,Asia,Cynopterus sphinx,Bat,1,2016,0
+OP963623.1,OP963623.1_Bat_sapovirus_China_Rousettus_leschenaultii,Bat sapovirus BtSY2,,Bat sapovirus BtSY2,Sapovirus,China,Asia,Rousettus leschenaultii,Bat,1,2017,0
+OQ709197.1,OQ709197.1_Bat_sapovirus_China_Rousettus_leschenaultii,Bat sapovirus WD3,BtSaV/RlWD03,Bat sapovirus WD3,Sapovirus,China,Asia,Rousettus leschenaultii,Bat,1,2018,0
+OR951138.1,OR951138.1_Bat sapovirus_China_Eonycteris_spelaea,Bat sapovirus,YN2017,Bat sapovirus,Sapovirus,China,Asia,Eonycteris spelaea,Bat,1,2017,0
+OR951145.1,OR951145.1_Bat_sapovirus_China_Rousettus_leschenaultii,Bat sapovirus,Pool-266,Bat sapovirus,Sapovirus,China,Asia,Rousettus leschenaultii,Bat,1,2016,0
+PP712001.1,PP712001.1_Rousettus_bat_calicivirus_Kenya_Rousettus aegypticus,Rousettus bat calicivirus,16A/Kenya/BAT2/2015,Rousettus bat calicivirus,Sapovirus,Kenya,Africa,Rousettus aegypticus,Bat,1,2015,0
+PP712004.1,PP712004.1_Rousettus_bat_calicivirus_Kenya_Rousettus aegypticus,Rousettus bat calicivirus,10B/Kenya/BAT12/2015,Rousettus bat calicivirus,Sapovirus,Kenya,Africa,Rousettus aegypticus,Bat,1,2015,0
+PP712008.1,PP712008.1_Rousettus_bat_calicivirus_Kenya_Rousettus aegypticus,Rousettus bat calicivirus,13A/Kenya/BAT2797/2015,Rousettus bat calicivirus,Sapovirus,Kenya,Africa,Rousettus aegypticus,Bat,1,2015,0
+PP712015.1,PP712015.1_Rousettus_bat_calicivirus_Kenya_Rousettus aegypticus,Rousettus bat calicivirus,1A/Kenya/BAT18/2015,Rousettus bat calicivirus,Sapovirus,Kenya,Africa,Rousettus aegypticus,Bat,1,2015,0

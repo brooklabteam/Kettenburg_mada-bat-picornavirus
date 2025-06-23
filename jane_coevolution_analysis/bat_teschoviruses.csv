@@ -1,0 +1,9 @@
+Accession,full_name,Organism_Name,Isolate,Species,Genus,Country,region,source,host_class,Host,Collection_Date,Seq_type
+KX420938.1,KX420938.1_Teschovirus_sp_Saudi_Arabia_Eidolon_helvum,Teschovirus sp.,KSA412,Teschovirus sp.,Teschovirus,Saudi Arabia,Asia,Eidolon helvum,Bat,1,2012,0
+NC_001547.1,NC_001547.1_Sindbis_virus,Sindbis virus,,Sindbis virus,Alphavirus,USA,North America,Cell culture,Lab strain,0,1981,0
+OR951324.1,OR951324.1_Pteropodidae_bat_teschovirus_China_Eonycteris_spelaea,Pteropodidae bat teschovirus,YN2017,Pteropodidae bat teschovirus,Teschovirus,China,Asia,Eonycteris spelaea,Bat,1,2017,0
+OR951333.1,OR951333.1_Pteropodidae_bat_teschovirus_China_Rousettus_leschenaultii,Pteropodidae bat teschovirus,YN2016_267_11102,Pteropodidae bat teschovirus,Teschovirus,China,Asia,Rousettus leschenaultii,Bat,1,2016,0
+OR951334.1,OR951334.1_Pteropodidae_bat_teschovirus_China_Rousettus_leschenaultii,Pteropodidae bat teschovirus,YN2016_267_16979,Pteropodidae bat teschovirus,Teschovirus,China,Asia,Rousettus leschenaultii,Bat,1,2016,0
+OR951335.1,OR951335.1_Pteropodidae_bat_teschovirus_China_Rousettus_leschenaultii,Pteropodidae bat teschovirus,YN2017,Pteropodidae bat teschovirus,Teschovirus,China,Asia,Rousettus leschenaultii,Bat,1,2017,0
+PP711934.1,PP711934.1_Rousettus_bat_teschovirus_Kenya_Rousettus_aegyptiacus,Rousettus bat teschovirus,29A/Kenya/BAT3/2015,Rousettus bat teschovirus,Teschovirus,Kenya,Africa,Rousettus aegyptiacus,Bat,1,2015,0
+PP711948.1,PP711948.1_Rousettus_bat_teschovirus_Uganda_Rousettus_aegyptiacus,Rousettus bat teschovirus,31A/Uganda/UV8/2018,Rousettus bat teschovirus,Teschovirus,Uganda,Africa,Rousettus aegyptiacus,Bat,1,2018,0
