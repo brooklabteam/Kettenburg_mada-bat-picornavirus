@@ -20,7 +20,7 @@ library(patchwork)
 ###packages loaded
 ##########################################################################################################
 ##Set working directory
-homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
+homewd= "/Users/gwenddolenkettenburg/Desktop/developer/Kettenburg_mada-bat-picornavirus/"
 setwd(paste0(homewd,"/IQtree_phylogenies/master_phylo_fig"))
 
 #mischi
@@ -32,6 +32,11 @@ plot(rooted.tree)
 
 #Remove root from displaying, still calculates changes correctly without it
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
+
+#compute distance between each taxa
+dist.mat<-cophenetic.phylo(rooted.tree)
+dist.mat<-dist.mat / max(dist.mat)
+write.csv(dist.mat, "dist.mat.csv")
 
 #load tree data prepared from elsewhere
 dat <- read.csv(("mischivirus_metadata.csv"), header = T, stringsAsFactors = F)
@@ -234,6 +239,11 @@ plot(rooted.tree)
 
 #Remove root from displaying, still calculates changes correctly without it
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
+
+#compute distance between each taxa
+dist.mat<-cophenetic.phylo(rooted.tree)
+dist.mat<-dist.mat / max(dist.mat)
+write.csv(dist.mat, "dist.mat.csv")
 
 #load tree data prepared from elsewhere
 dat <- read.csv(("sapelovirus_metadata.csv"), header = T, stringsAsFactors = F)
@@ -448,6 +458,11 @@ plot(rooted.tree)
 
 #Remove root from displaying, still calculates changes correctly without it
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
+
+#compute distance between each taxa
+dist.mat<-cophenetic.phylo(rooted.tree)
+dist.mat<-dist.mat / max(dist.mat)
+write.csv(dist.mat, "dist.mat.csv")
 
 #load tree data prepared from elsewhere
 dat <- read.csv(("sapovirus_metadata.csv"), header = T, stringsAsFactors = F)
@@ -675,6 +690,11 @@ head(dat)
 #Remove root from displaying, still calculates changes correctly without it
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
 
+#compute distance between each taxa
+dist.mat<-cophenetic.phylo(rooted.tree)
+dist.mat<-dist.mat / max(dist.mat)
+write.csv(dist.mat, "dist.mat.csv")
+
 #check that your metadata matches your tree data
 setdiff(rooted.tree$tip.label, dat$tip_label)
 #check for duplicates
@@ -875,6 +895,11 @@ rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
 
 #Remove rabbit kobuvirus from displaying
 rooted.tree<-drop.tip(rooted.tree, "NC_026314.1")
+
+#compute distance between each taxa
+dist.mat<-cophenetic.phylo(rooted.tree)
+dist.mat<-dist.mat / max(dist.mat)
+write.csv(dist.mat, "dist.mat.csv")
 
 #load tree data prepared from elsewhere
 dat <- read.csv(("kobuvirus_metadata.csv"), header = T, stringsAsFactors = F)
@@ -1101,6 +1126,11 @@ plot(rooted.tree)
 #Remove root from displaying, still calculates changes correctly without it
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
 
+#compute distance between each taxa
+dist.mat<-cophenetic.phylo(rooted.tree)
+dist.mat<-dist.mat / max(dist.mat)
+write.csv(dist.mat, "dist.mat.csv")
+
 #load tree data prepared from elsewhere
 dat <- read.csv(("hepatovirus_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
@@ -1319,6 +1349,11 @@ plot(rooted.tree)
 #Remove root from displaying, still calculates changes correctly without it
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
 
+#compute distance between each taxa
+dist.mat<-cophenetic.phylo(rooted.tree)
+dist.mat<-dist.mat / max(dist.mat)
+write.csv(dist.mat, "dist.mat.csv")
+
 #load tree data prepared from elsewhere
 dat <- read.csv(("bat_picornavirus_metadata.csv"), header = T, stringsAsFactors = F)
 head(dat)
@@ -1523,6 +1558,11 @@ plot(rooted.tree)
 
 #Remove root from displaying, still calculates changes correctly without it
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
+
+#compute distance between each taxa
+dist.mat<-cophenetic.phylo(rooted.tree)
+dist.mat<-dist.mat / max(dist.mat)
+write.csv(dist.mat, "dist.mat.csv")
 
 #load tree data prepared from elsewhere
 dat <- read.csv(("teschovirus_metadata.csv"), header = T, stringsAsFactors = F)
@@ -1735,6 +1775,11 @@ plot(rooted.tree)
 
 #Remove root from displaying, still calculates changes correctly without it
 rooted.tree<-drop.tip(rooted.tree, "NC_001547.1")
+
+#compute distance between each taxa
+dist.mat<-cophenetic.phylo(rooted.tree)
+dist.mat<-dist.mat / max(dist.mat)
+write.csv(dist.mat, "dist.mat.csv")
 
 #load tree data prepared from elsewhere
 dat <- read.csv(("cardiovirus_metadata_all.csv"), header = T, stringsAsFactors = F)
