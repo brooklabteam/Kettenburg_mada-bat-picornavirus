@@ -1,0 +1,21 @@
+#nexus
+begin host;
+tree host = (Sorex_araneus_cytb,(Tupaia_belangeri_chinensis_cytb,(((Artibeus_planirostris_cytb,Eptesicus_fuscus_cytb),Miniopterus_manavi_cytb),((Hipposideros_armiger_cytb,Hipposideros_larvatus_cytb),(Eidolon_dupreanum_cytb,Eidolon_helvum_cytb)))));
+endblock;
+begin parasite;
+tree parasite = (KT452661.1_shrew_hepatovirus_Germany_Sorex_araneus,(NC_038313.1_bat_hepatovirus_Madagascar_Miniopterus_manavi,(OM302498.1_e_fuscus_USA_Eptesicus_fuscus,((MG559674.1_hepatovirus_sp_China_Hipposideros_armiger,OR951271.1_hipposideros_bat_hepatovirus_China_Hipposideros_larvatus),(OR367421.1_hepatovirus_sp_Brazil_Artibeus_planirostris,(NC_028981.1_Tupaia_hepatovirus_A_China_Tupaia_belangeri_chinensis,(NC_028366.1_Hepatovirus_H2_Ghana_Eidolon_helvum,(PP766455_E_dupreanum_hepatovirus_Madagascar_Eidolon_dupreanum,(PP766457_E_dupreanum_hepatovirus_Madagascar_Eidolon_dupreanum,OQ818337_E_dupreanum_hepatovirus_Madagascar_Eidolon_dupreanum)))))))));
+endblock;
+begin distribution;
+Range
+	KT452661.1_shrew_hepatovirus_Germany_Sorex_araneus : Sorex_araneus_cytb,
+	MG559674.1_hepatovirus_sp_China_Hipposideros_armiger : Hipposideros_armiger_cytb,
+	NC_028366.1_Hepatovirus_H2_Ghana_Eidolon_helvum : Eidolon_helvum_cytb,
+	NC_028981.1_Tupaia_hepatovirus_A_China_Tupaia_belangeri_chinensis : Tupaia_belangeri_chinensis_cytb,
+	NC_038313.1_bat_hepatovirus_Madagascar_Miniopterus_manavi : Miniopterus_manavi_cytb,
+	OM302498.1_e_fuscus_USA_Eptesicus_fuscus : Eptesicus_fuscus_cytb,
+	OQ818337_E_dupreanum_hepatovirus_Madagascar_Eidolon_dupreanum : Eidolon_dupreanum_cytb,
+	OR367421.1_hepatovirus_sp_Brazil_Artibeus_planirostris : Artibeus_planirostris_cytb,
+	OR951271.1_hipposideros_bat_hepatovirus_China_Hipposideros_larvatus : Hipposideros_larvatus_cytb,
+	PP766455_E_dupreanum_hepatovirus_Madagascar_Eidolon_dupreanum : Eidolon_dupreanum_cytb,
+	PP766457_E_dupreanum_hepatovirus_Madagascar_Eidolon_dupreanum : Eidolon_dupreanum_cytb;
+endblock;
