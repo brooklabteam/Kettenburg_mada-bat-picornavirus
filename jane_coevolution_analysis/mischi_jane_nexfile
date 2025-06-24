@@ -1,6 +1,6 @@
 #nexus
 begin host;
-tree host = (Canis_lupus_familiaris_cytb,(Pteropus_rufus_cytb,(Macronycteris_gigas_cytb,(Miniopterus_pusillus_cytb,Miniopterus_shreibersii_cytb))));
+tree host = (Canis_lupus_familiaris_cytb,(Pteropus_rufus_cytb,(Macronycteris_gigas_cytb,(Miniopterus_pusillus_cytb, Miniopterus_shreibersii_cytb))));
 endblock;
 begin parasite;
 tree parasite = ((NC_075428.1_Mischivirus_D_USA_Canis_lupus_familiaris,(NC_026470.1_Mischivirus_C_DRC_Macronycteris_gigas,OQ818316_P_rufus_mischivirus_Madagascar_Pteropus_rufus)),(OR951306.1_Bat_mischivirus_5_China_Miniopterus_pusillus,(NC_043072.1_Mischivirus_B_Algeria_Miniopterus_schreibersii,((OR951299.1_Mischivirus_A_China_Miniopterus_pusillus,(NC_034381.1_Mischivirus_A_China_Miniopterus_shreibersii,OR867092.1_Mischivirus_sp_China_Miniopterus_schreibersii)),(OR951342.1_Bat_mischivirus_4_China_Miniopterus_schreibersii,(OR951362.1_Bat_mischivirus_4_China_Miniopterus_schreibersii,(OR951339.1_Bat_mischivirus_4_China_Miniopterus_schreibersii,OR951347.1_Bat_mischivirus_4_China_Miniopterus_schreibersii)))))));
@@ -9,15 +9,15 @@ begin distribution;
 Range
 	NC_026470.1_Mischivirus_C_DRC_Macronycteris_gigas : Macronycteris_gigas_cytb,
 	NC_034381.1_Mischivirus_A_China_Miniopterus_shreibersii : Miniopterus_shreibersii_cytb,
-	NC_043072.1_Mischivirus_B_Algeria_Miniopterus_schreibersii : Miniopterus_schreibersii_cytb,
+	NC_043072.1_Mischivirus_B_Algeria_Miniopterus_schreibersii : Miniopterus_shreibersii_cytb,
 	NC_075428.1_Mischivirus_D_USA_Canis_lupus_familiaris : Canis_lupus_familiaris_cytb,
 	OQ818316_P_rufus_mischivirus_Madagascar_Pteropus_rufus : Pteropus_rufus_cytb,
 	OR867092.1_Mischivirus_sp_China_Miniopterus_schreibersii : Miniopterus_shreibersii_cytb,
 	OR951299.1_Mischivirus_A_China_Miniopterus_pusillus : Miniopterus_pusillus_cytb,
 	OR951306.1_Bat_mischivirus_5_China_Miniopterus_pusillus : Miniopterus_pusillus_cytb,
-	OR951339.1_Bat_mischivirus_4_China_Miniopterus_schreibersii : Miniopterus_schreibersii_cytb,
-	OR951342.1_Bat_mischivirus_4_China_Miniopterus_schreibersii : Miniopterus_schreibersii_cytb,
-	OR951347.1_Bat_mischivirus_4_China_Miniopterus_schreibersii : Miniopterus_schreibersii_cytb,
-	OR951362.1_Bat_mischivirus_4_China_Miniopterus_schreibersii : Miniopterus_schreibersii_cytb;
+	OR951339.1_Bat_mischivirus_4_China_Miniopterus_schreibersii : Miniopterus_shreibersii_cytb,
+	OR951342.1_Bat_mischivirus_4_China_Miniopterus_schreibersii : Miniopterus_shreibersii_cytb,
+	OR951347.1_Bat_mischivirus_4_China_Miniopterus_schreibersii : Miniopterus_shreibersii_cytb,
+	OR951362.1_Bat_mischivirus_4_China_Miniopterus_schreibersii : Miniopterus_shreibersii_cytb;
 
 endblock;
