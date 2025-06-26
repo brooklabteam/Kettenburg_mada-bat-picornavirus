@@ -18,6 +18,8 @@ IQtree trees and logs are linked [here](https://github.com/brooklabteam/mada-bat
 
 Files and scripts for mapping reads is [here](https://github.com/brooklabteam/mada-bat-picornavirus/tree/main/read_mapping)
 
+Jane co-phylogenetic analysis files and output are [here](https://github.com/brooklabteam/Kettenburg_mada-bat-picornavirus/tree/main/jane_coevolution_analysis)
+
 RDP4 recombination analysis files are [here](https://github.com/brooklabteam/mada-bat-picornavirus/tree/main/recombination)
 
 Files to make a sampling map and summary files are [here](https://github.com/brooklabteam/mada-bat-picornavirus/tree/main/sampling_map)
