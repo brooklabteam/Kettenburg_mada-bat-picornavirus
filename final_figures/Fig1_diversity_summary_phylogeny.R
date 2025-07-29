@@ -103,7 +103,7 @@ sampling<-ggplot(dat,aes(x = sampling_date, y = num_genus, fill = genus_full, la
     position = "stack",
     stat = "identity") +
   #geom_text(size = 3, position = position_stack(vjust = 0.5))+
-  facet_nested(.~roost_site, scales="free", space="free",
+  facet_nested(.~bat_species, scales="free", space="free",
                nest_line = element_line(color="white"), solo_line = TRUE)+
   scale_fill_manual(values=genuscolz)+
   
@@ -125,6 +125,7 @@ sampling<-ggplot(dat,aes(x = sampling_date, y = num_genus, fill = genus_full, la
         #axis.text.x = element_text(size=10),
         axis.text.x = element_text(angle = 90, size=10),
         legend.text = element_text(size=8, face="italic"),
+        strip.text.x = element_text(size=10, face="italic"),
         legend.title = element_text(size=9),
         legend.position = "right")
 
@@ -283,6 +284,7 @@ tree.dat$tip_label#all look good
 tree.dat$Host[tree.dat$Host==0] <- "Non-bat host"
 tree.dat$Host[tree.dat$Host==1] <- "Bat host"
 tree.dat$Host <- as.factor(tree.dat$Host)
+
 tree.dat$Seq_type[tree.dat$Seq_type==0] <- "Reference seq"
 tree.dat$Seq_type[tree.dat$Seq_type==1] <- "Novel seq"
 tree.dat$Seq_type<-as.factor(tree.dat$Seq_type)
@@ -411,15 +413,15 @@ Fig1.1<-plot_grid(base, NULL, labels=c("",""),
                   rel_widths = c(1,1), rel_heights = c(3,0.5),
                   ncol=1, align="hv", axis="l", label_size = 23)
 Fig1.1
-Fig1.2<-as.ggplot(Fig1.2)
+Fig1.2<-as.ggplot(Fig1.1)
 
 Fig1.2<-plot_grid(Fig1.1, sampling, labels=c("A","B"),
-                  rel_widths = c(2.5,1.5), rel_heights = c(3,1),
+                  rel_widths = c(2.5,2.7), rel_heights = c(3,1),
                   ncol=2, align="hv", axis="l", label_size = 23)
 Fig1.2
 Fig1.2<-as.ggplot(Fig1.2)
 
-ggsave(file = paste0(homewd, "/final_figures/Fig1_diversity_summary_phylogeny.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/Fig1_diversity_summary_phylogeny.png"),
        plot = Fig1.2,
        units="mm",  
        width=130, 
