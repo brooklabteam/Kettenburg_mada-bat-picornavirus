@@ -21,8 +21,10 @@ library(patchwork)
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/Kettenburg_mada-bat-picornavirus/"
 setwd(paste0(homewd,"/tanglegram"))
 
-tr1 <- read.tree("bat_sapelo_hosts_align_fasttree.newick")
-tr2 <- read.tree("batsapelo_fullname_align_fasttree.newick")
+#Bat picorna tanglegram
+
+tr1 <- read.tree("batpicorna_hosts.newick")
+tr2 <- read.tree("batpicorna_fullname_align_fasttree.newick")
 
 assoc<-cbind(c("E_helvum","E_dupreanum", "E_dupreanum","R_madagascariensis","E_spelaea",
                "E_spelaea","E_spelaea","R_leschenaultii","R_aegyptiacus","E_helvum","E_helvum"),
