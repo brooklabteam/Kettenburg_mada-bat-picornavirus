@@ -7,6 +7,7 @@ library(ggnewscale)
 #install.packages('gdata')
 library(gdata)
 library(phylotools)
+
 library(phytools)
 library(phylobase)
 library(cowplot)
@@ -86,6 +87,9 @@ assoc<-cbind(c("R_aegyptiacus",
 batpicorna<-cophylo(tr1,tr2,assoc,rotate=TRUE)
 plot(batpicorna, fsize=0.6, gap=2)
 
+pdf(file="batpicorna_tangle.pdf",height=3,width=9)
+plot(batpicorna)
+dev.off()
 
 #Bat sapelo tanglegram
 
@@ -142,7 +146,9 @@ assoc<-cbind(c("E_helvum",
 sapelo<-cophylo(tr1,tr2,assoc,rotate=TRUE)
 plot(sapelo,fsize=0.55)
 
-
+pdf(file="sapelo_tangle.pdf",height=2.5,width=9)
+plot(sapelo)
+dev.off()
 
 #Bat sapo tanglegram
 
@@ -244,6 +250,10 @@ assoc<-cbind(c("C_sphinx",
 sapo<-cophylo(tr1,tr2,assoc,rotate=TRUE)
 plot(sapo,fsize=0.55)
 
+pdf(file="sapo_tangle.pdf",height=5,width=9)
+plot(sapo)
+dev.off()
+
 #Bat tescho tanglegram
 
 tr1 <- read.tree("tescho_hosts_short.newick")
@@ -300,6 +310,9 @@ assoc<-cbind(c("R_leschenaultii" ,
 tescho<-cophylo(tr1,tr2,assoc,rotate=TRUE)
 plot(tescho,fsize=0.55)
 
+pdf(file="tescho_tangle.pdf",height=3,width=9)
+plot(tescho)
+dev.off()
 
 #hepato tanglegram
 
@@ -357,6 +370,9 @@ assoc<-cbind(c("S_araneus" ,
 hepato<-cophylo(tr1,tr2,assoc,rotate=TRUE)
 plot(hepato,fsize=0.55)
 
+pdf(file="hepato_tangle.pdf",height=3,width=9)
+plot(hepato)
+dev.off()
 
 #mischi tanglegram
 
@@ -418,7 +434,25 @@ assoc<-cbind(c("C_lupus",
 mischi<-cophylo(tr1,tr2,assoc,rotate=TRUE)
 plot(mischi,fsize=0.55)
 
+pdf(file="mischi_tangle.pdf",height=3,width=9)
+plot(mischi)
+dev.off()
 
+#put together
+
+# final<-plot_grid(hepato, mischi,batpicorna, sapelo, tescho, sapo, labels=c("A","B", "C","D","E","F"),
+#                 rel_widths=c(1,1), rel_heights = c(1,1),
+#                 ncol=2,align="hv", axis="l", label_size = 23)
+# final
+# 
+# #homewd= "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/"
+# ggsave(file = paste0(homewd, "/final_figures/Fig4_tanglegrams.pdf"),
+#        plot= final,
+#        units="mm",  
+#        width=250, 
+#        height=170, 
+#        scale=2, 
+#        dpi=500)
 
 
 
