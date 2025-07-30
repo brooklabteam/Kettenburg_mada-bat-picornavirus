@@ -7,17 +7,17 @@ tree parasite = ((NC_075428.1_Mischivirus_D_USA_Canis_lupus_familiaris,(NC_02647
 endblock;
 begin distribution;
 Range
-	NC_026470.1_Mischivirus_C_DRC_Macronycteris_gigas : Macronycteris_gigas,
-	NC_034381.1_Mischivirus_A_China_Miniopterus_shreibersii : Miniopterus_shreibersii,
-	NC_043072.1_Mischivirus_B_Algeria_Miniopterus_schreibersii : Miniopterus_shreibersii,
-	NC_075428.1_Mischivirus_D_USA_Canis_lupus_familiaris : Canis_lupus_familiaris,
+	NC_026470.1_Mischivirus_C_DRC_Macronycteris_gigas : Hipposideros_gigas,
+	NC_034381.1_Mischivirus_A_China_Miniopterus_shreibersii : Miniopterus_schreibersii,
+	NC_043072.1_Mischivirus_B_Algeria_Miniopterus_schreibersii : Miniopterus_schreibersii,
+	NC_075428.1_Mischivirus_D_USA_Canis_lupus_familiaris : Canis_lupus,
 	OQ818316_P_rufus_mischivirus_Madagascar_Pteropus_rufus : Pteropus_rufus,
-	OR867092.1_Mischivirus_sp_China_Miniopterus_schreibersii : Miniopterus_shreibersii,
+	OR867092.1_Mischivirus_sp_China_Miniopterus_schreibersii : Miniopterus_schreibersii,
 	OR951299.1_Mischivirus_A_China_Miniopterus_pusillus : Miniopterus_pusillus,
 	OR951306.1_Bat_mischivirus_5_China_Miniopterus_pusillus : Miniopterus_pusillus,
-	OR951339.1_Bat_mischivirus_4_China_Miniopterus_schreibersii : Miniopterus_shreibersii,
-	OR951342.1_Bat_mischivirus_4_China_Miniopterus_schreibersii : Miniopterus_shreibersii,
-	OR951347.1_Bat_mischivirus_4_China_Miniopterus_schreibersii : Miniopterus_shreibersii,
-	OR951362.1_Bat_mischivirus_4_China_Miniopterus_schreibersii : Miniopterus_shreibersii;
+	OR951339.1_Bat_mischivirus_4_China_Miniopterus_schreibersii : Miniopterus_schreibersii,
+	OR951342.1_Bat_mischivirus_4_China_Miniopterus_schreibersii : Miniopterus_schreibersii,
+	OR951347.1_Bat_mischivirus_4_China_Miniopterus_schreibersii : Miniopterus_schreibersii,
+	OR951362.1_Bat_mischivirus_4_China_Miniopterus_schreibersii : Miniopterus_schreibersii;
 
 endblock;
