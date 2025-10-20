@@ -97,7 +97,6 @@ library(ggh4x)
 # 
 # p4
 
-
 sampling<-ggplot(dat,aes(x = sampling_date, y = num_genus, fill = genus_full, label=num_virus)) +
   geom_bar(
     position = "stack",
@@ -115,6 +114,7 @@ sampling<-ggplot(dat,aes(x = sampling_date, y = num_genus, fill = genus_full, la
   theme_linedraw()+
   scale_y_continuous(n.breaks = 4)+
   guides(fill = guide_legend(ncol = 1))+
+  annotate("text", x="2018-02-15", y=5.2, label="*Lactation")+
   theme(plot.margin = margin(0, 1, 0, 30, "pt"),
         plot.background = element_blank(),
         panel.grid.major = element_blank(),
@@ -127,9 +127,101 @@ sampling<-ggplot(dat,aes(x = sampling_date, y = num_genus, fill = genus_full, la
         legend.text = element_text(size=8, face="italic"),
         strip.text.x = element_text(size=10, face="italic"),
         legend.title = element_text(size=9),
-        legend.position = "right")
+        legend.position = c(0.5,0.7))
 
 sampling
+
+sampling.ed<-ggplot(subset(dat, bat_species=="Eidolon dupreanum"),aes(x = sampling_date, y = num_genus, fill = genus_full, label=num_virus)) +
+  geom_bar(
+    position = "stack",
+    stat = "identity") +
+  #geom_text(size = 3, position = position_stack(vjust = 0.5))+
+  facet_nested(.~bat_species, scales="free", space="free",
+               nest_line = element_line(color="white"), solo_line = TRUE)+
+  scale_fill_manual(values=genuscolz)+
+  
+  labs(
+    x = "Sampling date",
+    y= "Number of unique viral species per genus",
+    fill="Virus genus",
+    title="")+
+  theme_linedraw()+
+  scale_y_continuous(n.breaks = 4)+
+  guides(fill = guide_legend(ncol = 1))+
+  annotate("text", x="2013-11-24", y=1.2, label="Gest.")+ 
+  annotate("text", x="2014-12-17", y=2.2, label="Lact.")+
+  annotate("text", x="2015-06-23", y=1.2, label="Dry")+
+  annotate("text", x="2016-01-08", y=1.2, label="Lact.")+
+  annotate("text", x="2018-02-15", y=5.2, label="Lact.")+
+  annotate("text", x="2018-07-27", y=1.2, label="Dry")+
+  annotate("text", x="2019-01-06", y=2.2, label="Lact.")+
+  annotate("text", x="2019-02-06", y=1.2, label="Lact.")+
+  annotate("text", x="2019-08-24", y=1.2, label="Dry")+
+  theme(plot.margin = margin(0, -20, 0, 0, "pt"),
+        plot.background = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.title.x = element_text(color="black", size=12),
+        axis.title.y = element_text(color="black", size=12),
+        axis.text.y = element_text(size=10),
+        #axis.text.x = element_text(size=10),
+        axis.text.x = element_text(angle = 90, size=10),
+        legend.text = element_text(size=8, face="italic"),
+        strip.text.x = element_text(size=10, face="italic"),
+        legend.title = element_text(size=9),
+        legend.position = c(0.75,0.72))
+
+sampling.ed
+
+sampling.rm<-ggplot(subset(dat, bat_species=="Rousettus madagascariensis"),aes(x = sampling_date, y = num_genus, fill = genus_full, label=num_virus)) +
+  geom_bar(
+    position = "stack",
+    stat = "identity") +
+  #geom_text(size = 3, position = position_stack(vjust = 0.5))+
+  facet_nested(.~bat_species, scales="free", space="free",
+               nest_line = element_line(color="white"), solo_line = TRUE)+
+  scale_fill_manual(values=genuscolz)+
+  
+  labs(
+    x = "Sampling date",
+    y= "Number of unique viral species per genus",
+    fill="Virus genus",
+    title="")+
+  theme_linedraw()+
+  scale_y_continuous(n.breaks = 4)+
+  guides(fill = guide_legend(ncol = 1))+
+  annotate("text", x="2018-07-29", y=4.2, label="Dry")+
+  annotate("text", x="2018-09-11", y=5.2, label="Gest.")+
+  annotate("text", x="2019-02-01", y=1.2, label="Lact.")+
+  theme(plot.margin = margin(0, 5, 0, 0, "pt"),
+        plot.background = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.title.x = element_text(color="black", size=12),
+        axis.title.y = element_blank(),
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        #axis.text.x = element_text(size=10),
+        axis.text.x = element_text(angle = 90, size=10),
+        legend.text = element_text(size=8, face="italic"),
+        strip.text.x = element_text(size=10, face="italic"),
+        legend.title = element_text(size=9),
+        legend.position = "none")
+
+sampling.rm
+
+
+##Put the map and both summary figs together
+library(cowplot)
+library(ggplotify)
+
+partB<-plot_grid(sampling.ed, sampling.rm, labels=c("",""),
+                  rel_widths = c(1,0.7), rel_heights = c(1,1),
+                  ncol=2, align="hv", axis="l", label_size = 23)
+partB
+partB<-as.ggplot(partB)
+
+
 
 #all tree code
 ##Set working directory
@@ -301,7 +393,7 @@ circ<-ggtree(rooted.tree, layout="circular")
 ggtree(rooted.tree) + geom_text(aes(label=node), hjust=-.3)
 
 ##base tree
-p1 <- ggtree(rooted.tree, layout="fan", size=0.5) %<+% tree.dat +
+p1 <- ggtree(rooted.tree, layout="circular", size=0.5) %<+% tree.dat +
   geom_tippoint(aes(color=Genus, shape=Host), size=2,stroke=0,show.legend = T) +
   #scale_color_manual(values=genuscolz)+
   scale_shape_manual(values=shapez) +
@@ -310,7 +402,7 @@ p1 <- ggtree(rooted.tree, layout="fan", size=0.5) %<+% tree.dat +
         #legend.position = c(0.97,0.59), #right side
         legend.position = c(0.52,0),
         legend.margin = margin(0,0,0,0),
-        legend.box.margin=margin(-10,-10,-10,-10),
+        legend.box.margin=margin(-50,-10,-10,-10),
         legend.text = element_text(size=10),
         legend.title = element_text(size=10),
         legend.key = element_rect(fill = "transparent"),
@@ -353,8 +445,7 @@ p2<-p1.1+geom_fruit(#data=contig,
                   mapping=aes(fill=Region),
                   pwidth=1,
                   offset=0.15)+
-                  scale_fill_manual(values=colz3)
-                  #scale_fill_gradient(low="peachpuff1", high="orangered3")
+                  scale_fill_manual(values=colz3)                  #scale_fill_gradient(low="peachpuff1", high="orangered3")
                   
 p2
 
@@ -371,6 +462,7 @@ p3<-p2+new_scale_fill()+
   pwidth=1,
   offset=0.15)+ 
   scale_fill_manual(values=colz4)+
+  guides(fill = guide_legend(ncol = 2))+
   #scale_fill_gradient(low="lightblue1", high="royalblue2")+
   #scale_fill_viridis(option="B", name="Novel\nreads (log10)", direction = -1) +
  theme(
@@ -400,7 +492,7 @@ base<-p3+new_scale_fill()+
     legend.text = element_text(size=10),
     legend.title = element_text(size=10),
     legend.key.size = unit(0.3, "cm"),
-    plot.margin = unit(c(0, 0, 0, 0), 
+    plot.margin = unit(c(-1, -1, 2, -1), 
                        "cm"))
 base
 
@@ -408,26 +500,32 @@ base
 ##Put the map and both summary figs together
 library(cowplot)
 library(ggplotify)
+library(patchwork)
 
-Fig1.1<-plot_grid(base, NULL, labels=c("",""),
-                  rel_widths = c(1,1), rel_heights = c(3,0.5),
-                  ncol=1, align="hv", axis="l", label_size = 23)
-Fig1.1
-Fig1.2<-as.ggplot(Fig1.1)
 
-Fig1.2<-plot_grid(Fig1.1, sampling, labels=c("A","B"),
-                  rel_widths = c(2.5,2.7), rel_heights = c(3,1),
+dummy<-plot.new +theme(plot.margin = unit(c(0, -50, 0, -50), 
+                     "cm"))
+
+Fig1.3<-plot_grid(base, partB, labels=c("A","B"),label_x = c(0,-0.1),
+                  rel_widths = c(1.2,1), rel_heights = c(5,1),
                   ncol=2, align="hv", axis="l", label_size = 23)
-Fig1.2
-Fig1.2<-as.ggplot(Fig1.2)
+Fig1.3
 
-ggsave(file = paste0(homewd, "/final_figures/Fig1_diversity_summary_phylogeny.png"),
-       plot = Fig1.2,
+# Fig1.4<-base+partB + plot_layout(widths = c(2, 1))
+# Fig1.4
+# 
+# Fig1.5<-Fig1.4+plot_annotation(tag_levels = list(c('A','B'))) & theme(plot.tag = element_text(size=23, face="bold"))
+# Fig1.5
+
+
+ggsave(file = paste0(homewd, "/final_figures/Fig1_diversity_summary_phylogeny_revision.png"),
+       plot = Fig1.3,
        units="mm",  
-       width=130, 
-       height=70, 
-       scale=3, 
-       dpi=300)
+       bg="white",
+       width=170, 
+       height=100, 
+       scale=2, 
+       dpi=500)
 
 
 
