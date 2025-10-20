@@ -16,8 +16,8 @@ library(ggplotify)
 #This is to make a figure of the representative PySimPlots with their matching genome plots
 
 ##First make the genome plots
-homewd="/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/PySimPlot/"
-setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/gene_maps")
+homewd="/Users/gwenddolenkettenburg/Desktop/developer/Kettenburg_mada-bat-picornavirus/PySimPlot/"
+setwd("~/Desktop/developer/Kettenburg_mada-bat-picornavirus/PySimPlot/gene_maps")
 
 #Load the gene data
 map <- read.csv("pysimplot_alignment_genes.csv", header = T, stringsAsFactors = F)
@@ -346,7 +346,7 @@ map_sapo
 
 
 ##Now get the plots for the PySimPlot, just the map_BLAST ones, there will be a separate PDF file with the table of African bat picorna similarities
-setwd("~/Desktop/developer/mada-bat-picornavirus/PySimPlot/output")
+setwd("~/Desktop/developer/Kettenburg_mada-bat-picornavirus/PySimPlot/output")
 
 #colzpalette<-c("#F8766D","#C49A00","#53B400","#A58AFF","#00B6EB","darkorange1","#FB61D7")
 colzpalette<-c("#3B9AB2","#EBCC2A","#F21A00","darkslategray2","darkorange1","firebrick4", "black")
@@ -397,7 +397,7 @@ batpicorna_map_nt <- ggplot(long.sim_nt) +
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
+        legend.text = element_text(face="italic", size = 10),
         legend.title = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
@@ -465,7 +465,7 @@ batpicorna_map_aa <- ggplot(long.sim_aa) +
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
+        legend.text = element_text(face="italic", size = 10),
         legend.title = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
@@ -530,7 +530,7 @@ hepato_map_nt <- ggplot(long.sim_nt) +
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
+        legend.text = element_text(face="italic", size = 10),
         legend.title = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
@@ -592,7 +592,7 @@ hepatovirus_map_aa <- ggplot(long.sim_aa) +
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
+        legend.text = element_text(face="italic", size = 10),
         legend.title = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
@@ -653,7 +653,7 @@ kobu_map_nt <- ggplot(long.sim_nt) + geom_line(aes(x=pointer, y=value, color=acc
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
+        legend.text = element_text(face="italic", size = 10),
         legend.title = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
@@ -714,7 +714,7 @@ kobuvirus_map_aa <- ggplot(long.sim_aa) +
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
+        legend.text = element_text(face="italic", size = 10),
         legend.title = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
@@ -778,7 +778,7 @@ kunsagi_map_nt <- ggplot(long.sim_nt) +
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
+        legend.text = element_text(face="italic", size = 10),
         legend.title = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
@@ -837,7 +837,7 @@ kunsagivirus_map_aa <- ggplot(long.sim_aa) +
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
+        legend.text = element_text(face="italic", size = 10),
         legend.title = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
@@ -904,7 +904,7 @@ mischi_map_nt <- ggplot(long.sim_nt) +
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
+        legend.text = element_text(face="italic", size = 10),
         legend.title = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
@@ -966,7 +966,7 @@ mischivirus_map_aa <- ggplot(long.sim_aa) +
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
+        legend.text = element_text(face="italic", size = 10),
         legend.title = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
@@ -1038,7 +1038,7 @@ sapelo_map_nt <- ggplot(long.sim_nt) +
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
+        legend.text = element_text(face="italic", size = 10),
         legend.title = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
@@ -1105,7 +1105,7 @@ sapelovirus_full_map_aa <- ggplot(long.sim_aa) +
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
+        legend.text = element_text(face="italic", size = 10),
         legend.title = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
@@ -1177,7 +1177,7 @@ tescho_map_nt <- ggplot(long.sim_nt) +
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
+        legend.text = element_text(face="italic", size = 10),
         legend.title = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
@@ -1245,7 +1245,7 @@ teschovirus_map_aa <- ggplot(long.sim_aa) +
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
+        legend.text = element_text(face="italic", size = 10),
         legend.title = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
@@ -1320,7 +1320,7 @@ sapo_map_nt <- ggplot(long.sim_nt) +
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
+        legend.text = element_text(face="italic", size = 10),
         legend.title = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
@@ -1390,7 +1390,7 @@ sapovirus_map_aa <- ggplot(long.sim_aa) +
         strip.background = element_rect(fill="white"), 
         legend.position="top", legend.direction = "horizontal",legend.margin=margin(),
         legend.justification = "left",
-        legend.text = element_text(face="italic", size = 8),
+        legend.text = element_text(face="italic", size = 10),
         legend.title = element_blank(),
         legend.key.height= unit(3.5, 'mm'),
         legend.key.width= unit(3.5, 'mm'),
@@ -1446,32 +1446,30 @@ amino_supp
 
 
 # save figs
-
-homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
-
-ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig5_nucleotide_pysimplot.pdf"),
+homewd = "/Users/gwenddolenkettenburg/Desktop/developer/Kettenburg_mada-bat-picornavirus" 
+ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig5_nucleotide_pysimplot_revision.png"),
        plot = nucleotide_supp,
        units="mm",  
        width=150, 
        height=110, 
        scale=4, 
-       dpi=300)
+       dpi=500)
 
-ggsave(file = paste0(homewd, "/final_figures/Fig3_pysimplot.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/Fig3_pysimplot_revision.png"),
        plot = fig3,
        units="mm",  
        width=150, 
        height=80, 
        scale=4, 
-       dpi=300)
+       dpi=500)
 
-ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig4_amino_pysimplot.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig4_amino_pysimplot_revision.png"),
        plot = amino_supp,
        units="mm",  
        width=100, 
        height=40, 
        scale=4, 
-       dpi=300)
+       dpi=500)
 
 
 
