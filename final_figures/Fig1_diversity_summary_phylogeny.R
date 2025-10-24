@@ -148,7 +148,7 @@ sampling.ed<-ggplot(subset(dat, bat_species=="Eidolon dupreanum"),aes(x = sampli
   theme_linedraw()+
   scale_y_continuous(n.breaks = 4)+
   guides(fill = guide_legend(ncol = 1))+
-  annotate("text", x="2013-11-24", y=1.2, label="Gest.")+ 
+  annotate("text", x="2013-11-24", y=1.2, label="Lact.")+ 
   annotate("text", x="2014-12-17", y=2.2, label="Lact.")+
   annotate("text", x="2015-06-23", y=1.2, label="Dry")+
   annotate("text", x="2016-01-08", y=1.2, label="Lact.")+
@@ -169,7 +169,8 @@ sampling.ed<-ggplot(subset(dat, bat_species=="Eidolon dupreanum"),aes(x = sampli
         legend.text = element_text(size=8, face="italic"),
         strip.text.x = element_text(size=10, face="italic"),
         legend.title = element_text(size=9),
-        legend.position = c(0.75,0.72))
+        legend.position = c(0.815,0.79),
+        legend.background = element_rect(linetype = 1, size = 0.2, colour = 1))
 
 sampling.ed
 
