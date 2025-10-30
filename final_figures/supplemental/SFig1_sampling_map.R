@@ -257,10 +257,11 @@ p4_pos <- p2b+
 
 p4_pos
 
-ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig1_sampling_map_only.png"),
+ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig1_sampling_map_only.jpeg"),
        plot = p4_pos,
        units="mm",
        width=60,
        height=60,
        scale=3,
        dpi=300)
+

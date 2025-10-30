@@ -2053,10 +2053,11 @@ final<-plot_grid(small_grid, phylo_grid, labels=c("",""),
 final
 
 homewd= "/Users/gwenddolenkettenburg/Desktop/developer/Kettenburg_mada-bat-picornavirus/"
-ggsave(file = paste0(homewd, "/final_figures/Fig2_indiv_phylogenies_revision.png"),
+ggsave(file = paste0(homewd, "/final_figures/Fig2_indiv_phylogenies_revision.jpeg"),
        plot= final,
        units="mm",  
        width=270, 
        height=170, 
        scale=2, 
        dpi=700)
+

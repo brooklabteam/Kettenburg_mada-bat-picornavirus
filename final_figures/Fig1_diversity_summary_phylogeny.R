@@ -519,7 +519,7 @@ Fig1.3
 # Fig1.5
 
 
-ggsave(file = paste0(homewd, "/final_figures/Fig1_diversity_summary_phylogeny_revision.png"),
+ggsave(file = paste0(homewd, "/final_figures/Fig1_diversity_summary_phylogeny_revision.jpeg"),
        plot = Fig1.3,
        units="mm",  
        bg="white",

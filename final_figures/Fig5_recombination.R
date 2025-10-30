@@ -16,8 +16,8 @@ library(ggplotify)
 #This is to make a figure of the representative bootscan figures from recombination detection program with their matching genome plots
 
 ##First make the genome plots
-homewd="/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/recombination/"
-setwd("~/Desktop/developer/mada-bat-picornavirus/recombination/gene_maps")
+homewd="/Users/gwenddolenkettenburg/Desktop/developer/Kettenburg_mada-bat-picornavirus/recombination/"
+setwd("~/Desktop/developer/Kettenburg_mada-bat-picornavirus/recombination/gene_maps")
 
 #Load the gene data
 map <- read.csv("bootscan_alignment_genes.csv", header = T, stringsAsFactors = F)
@@ -210,7 +210,7 @@ map_sapo<-ggplot(map_sapovirus, aes(xmin = start, xmax = end, y = molecule, fill
 map_sapo
 
 ##Now get the plots for the bootscan
-setwd("~/Desktop/developer/mada-bat-picornavirus/recombination/rdp_bootscan_csv_to_plot")
+setwd("~/Desktop/developer/Kettenburg_mada-bat-picornavirus/recombination/rdp_bootscan_csv_to_plot")
 
 #colzpalette<-c("#F8766D","#C49A00","#53B400","#A58AFF","#00B6EB","darkorange1","#FB61D7")
 colzpalette<-c("#3B9AB2","#EBCC2A","#F21A00")
@@ -894,9 +894,9 @@ recombination_supp
 
 
 # save figs
-homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
+homewd = "/Users/gwenddolenkettenburg/Desktop/developer/Kettenburg_mada-bat-picornavirus" 
 
-ggsave(file = paste0(homewd, "/final_figures/Fig4_recombination.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/Fig4_recombination.jpeg"),
        plot = fig4,
        units="mm",  
        width=100, 
@@ -904,7 +904,7 @@ ggsave(file = paste0(homewd, "/final_figures/Fig4_recombination.pdf"),
        scale=4, 
        dpi=300)
 
-ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig6_recombination.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig6_recombination.jpeg"),
        plot = recombination_supp,
        units="mm",  
        width=200, 

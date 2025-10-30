@@ -13,7 +13,7 @@ library(cowplot)
 library(patchwork)
 library(ggh4x)
 
-homewd="/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus/read_mapping/"
+homewd="/Users/gwenddolenkettenburg/Desktop/developer/Kettenburg_mada-bat-picornavirus/read_mapping/"
 setwd(paste0(homewd))
 
 dat <- read.csv(file= "all_genome_coverage.csv", header = T, stringsAsFactors = F) #load data
@@ -155,11 +155,11 @@ partial
 
 
 # save figs
-homewd = "/Users/gwenddolenkettenburg/Desktop/developer/mada-bat-picornavirus" 
+homewd = "/Users/gwenddolenkettenburg/Desktop/developer/Kettenburg_mada-bat-picornavirus" 
 
 
 #ggsave(file = paste0(homewd, "/figures/full_coverage_rpm.pdf"),
-ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig2_full_coverage_plot.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig2_full_coverage_plot.jpeg"),
        plot= full,
        units="mm",  
        width=200, 
@@ -167,7 +167,7 @@ ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig2_full_coverage_pl
        scale=2, 
        dpi=500)
 
-ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig3_partial_coverage_plot.pdf"),
+ggsave(file = paste0(homewd, "/final_figures/supplemental/Sfig3_partial_coverage_plot.jpeg"),
        plot= partial,
        units="mm",  
        width=220, 
